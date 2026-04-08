@@ -1,0 +1,661 @@
+{
+  "updatedAt": "2026-04-08",
+  "rankings": {
+    "rich": [
+      {
+        "rank": 1,
+        "prev": 1,
+        "name": "일론 머스크",
+        "value": "2,510억 달러",
+        "detail": "테슬라, 스페이스X, xAI. AI 붐으로 자산 재상승.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 2,
+        "prev": 2,
+        "name": "베르나르 아르노",
+        "value": "1,910억 달러",
+        "detail": "LVMH 회장. 명품 제국의 왕.",
+        "flag": "🇫🇷"
+      },
+      {
+        "rank": 3,
+        "prev": 4,
+        "name": "제프 베이조스",
+        "value": "1,830억 달러",
+        "detail": "아마존 창업자. 블루 오리진.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 4,
+        "prev": 3,
+        "name": "마크 저커버그",
+        "value": "1,760억 달러",
+        "detail": "메타의 AI 전환 성공.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 5,
+        "prev": 6,
+        "name": "래리 엘리슨",
+        "value": "1,560억 달러",
+        "detail": "오라클 창업자. 클라우드 성장.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 6,
+        "prev": 5,
+        "name": "워런 버핏",
+        "value": "1,420억 달러",
+        "detail": "버크셔 해서웨이. 95세에도 현역.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 7,
+        "prev": 8,
+        "name": "빌 게이츠",
+        "value": "1,280억 달러",
+        "detail": "기부에도 불구하고 자산 증가세.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 8,
+        "prev": 7,
+        "name": "스티브 발머",
+        "value": "1,210억 달러",
+        "detail": "전 MS CEO. LA 클리퍼스 구단주.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 9,
+        "prev": 9,
+        "name": "무케시 암바니",
+        "value": "1,160억 달러",
+        "detail": "인도 최대 재벌, 릴라이언스 그룹.",
+        "flag": "🇮🇳"
+      },
+      {
+        "rank": 10,
+        "prev": 11,
+        "name": "래리 페이지",
+        "value": "1,140억 달러",
+        "detail": "구글 공동 창업자.",
+        "flag": "🇺🇸"
+      }
+    ],
+    "rich-kr": [
+      {
+        "rank": 1,
+        "prev": 1,
+        "name": "이재용",
+        "value": "13조 원",
+        "detail": "삼성전자 회장. 반도체 슈퍼사이클.",
+        "flag": "🇰🇷"
+      },
+      {
+        "rank": 2,
+        "prev": 2,
+        "name": "김범수",
+        "value": "10조 원",
+        "detail": "카카오 창업자.",
+        "flag": "🇰🇷"
+      },
+      {
+        "rank": 3,
+        "prev": 3,
+        "name": "서정진",
+        "value": "9.5조 원",
+        "detail": "셀트리온 회장. 바이오 산업.",
+        "flag": "🇰🇷"
+      },
+      {
+        "rank": 4,
+        "prev": 5,
+        "name": "이해진",
+        "value": "8조 원",
+        "detail": "네이버 창업자. 글로벌 AI 투자.",
+        "flag": "🇰🇷"
+      },
+      {
+        "rank": 5,
+        "prev": 4,
+        "name": "정의선",
+        "value": "7.5조 원",
+        "detail": "현대차그룹 회장. 전기차 전환.",
+        "flag": "🇰🇷"
+      },
+      {
+        "rank": 6,
+        "prev": 6,
+        "name": "홍라희",
+        "value": "6.8조 원",
+        "detail": "삼성 일가. 리움미술관.",
+        "flag": "🇰🇷"
+      },
+      {
+        "rank": 7,
+        "prev": 8,
+        "name": "권혁빈",
+        "value": "6.2조 원",
+        "detail": "스마일게이트 대표. 크로스파이어.",
+        "flag": "🇰🇷"
+      },
+      {
+        "rank": 8,
+        "prev": 7,
+        "name": "김택진",
+        "value": "5.8조 원",
+        "detail": "NCSoft 대표. 리니지 시리즈.",
+        "flag": "🇰🇷"
+      },
+      {
+        "rank": 9,
+        "prev": 9,
+        "name": "방시혁",
+        "value": "5.2조 원",
+        "detail": "하이브 의장. BTS 프로듀서.",
+        "flag": "🇰🇷"
+      },
+      {
+        "rank": 10,
+        "prev": 10,
+        "name": "이서현",
+        "value": "4.8조 원",
+        "detail": "삼성 일가. 삼성물산.",
+        "flag": "🇰🇷"
+      }
+    ],
+    "market-cap-global": [
+      {
+        "rank": 1,
+        "prev": 1,
+        "name": "애플",
+        "value": "3.4조 달러",
+        "detail": "iPhone + 서비스 매출 성장. 시총 최초 3조 달러 돌파.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 2,
+        "prev": 3,
+        "name": "엔비디아",
+        "value": "3.1조 달러",
+        "detail": "AI GPU 독점. AI 붐의 최대 수혜.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 3,
+        "prev": 2,
+        "name": "마이크로소프트",
+        "value": "3.0조 달러",
+        "detail": "Azure + Copilot AI.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 4,
+        "prev": 4,
+        "name": "아마존",
+        "value": "2.1조 달러",
+        "detail": "AWS + 이커머스.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 5,
+        "prev": 5,
+        "name": "알파벳(구글)",
+        "value": "2.0조 달러",
+        "detail": "검색 + 클라우드 + AI.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 6,
+        "prev": 6,
+        "name": "메타",
+        "value": "1.5조 달러",
+        "detail": "인스타그램 + AI 투자.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 7,
+        "prev": 8,
+        "name": "TSMC",
+        "value": "9,500억 달러",
+        "detail": "세계 최대 파운드리. AI칩 수혜.",
+        "flag": "🇹🇼"
+      },
+      {
+        "rank": 8,
+        "prev": 7,
+        "name": "버크셔 해서웨이",
+        "value": "8,800억 달러",
+        "detail": "워런 버핏의 투자 회사.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 9,
+        "prev": 10,
+        "name": "일라이 릴리",
+        "value": "8,200억 달러",
+        "detail": "비만치료제 위고비 경쟁. 제약 1위.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 10,
+        "prev": 9,
+        "name": "테슬라",
+        "value": "7,800억 달러",
+        "detail": "전기차 + AI 로보틱스.",
+        "flag": "🇺🇸"
+      }
+    ],
+    "market-cap-kospi": [
+      {
+        "rank": 1,
+        "prev": 1,
+        "name": "삼성전자",
+        "value": "420조 원",
+        "detail": "반도체 + 스마트폰. 한국 시총 1위.",
+        "flag": "🇰🇷"
+      },
+      {
+        "rank": 2,
+        "prev": 2,
+        "name": "SK하이닉스",
+        "value": "180조 원",
+        "detail": "HBM(고대역폭메모리) AI 수혜.",
+        "flag": "🇰🇷"
+      },
+      {
+        "rank": 3,
+        "prev": 3,
+        "name": "LG에너지솔루션",
+        "value": "95조 원",
+        "detail": "2차전지 글로벌 2위.",
+        "flag": "🇰🇷"
+      },
+      {
+        "rank": 4,
+        "prev": 4,
+        "name": "삼성바이오로직스",
+        "value": "65조 원",
+        "detail": "바이오 CDMO 세계 1위.",
+        "flag": "🇰🇷"
+      },
+      {
+        "rank": 5,
+        "prev": 6,
+        "name": "현대차",
+        "value": "55조 원",
+        "detail": "전기차 + 수소차 전환.",
+        "flag": "🇰🇷"
+      },
+      {
+        "rank": 6,
+        "prev": 5,
+        "name": "기아",
+        "value": "42조 원",
+        "detail": "EV6·EV9 글로벌 히트.",
+        "flag": "🇰🇷"
+      },
+      {
+        "rank": 7,
+        "prev": 7,
+        "name": "NAVER",
+        "value": "38조 원",
+        "detail": "검색 + AI + 커머스.",
+        "flag": "🇰🇷"
+      },
+      {
+        "rank": 8,
+        "prev": 9,
+        "name": "셀트리온",
+        "value": "35조 원",
+        "detail": "바이오시밀러 글로벌 리더.",
+        "flag": "🇰🇷"
+      },
+      {
+        "rank": 9,
+        "prev": 8,
+        "name": "POSCO홀딩스",
+        "value": "28조 원",
+        "detail": "철강 + 2차전지 소재.",
+        "flag": "🇰🇷"
+      },
+      {
+        "rank": 10,
+        "prev": 10,
+        "name": "카카오",
+        "value": "25조 원",
+        "detail": "플랫폼 + 엔터테인먼트.",
+        "flag": "🇰🇷"
+      }
+    ],
+    "gdp": [
+      {
+        "rank": 1,
+        "prev": 1,
+        "name": "미국",
+        "value": "28.8조 달러",
+        "detail": "United States. 2024년 World Bank 기준.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 2,
+        "prev": 2,
+        "name": "중국",
+        "value": "18.7조 달러",
+        "detail": "China. 2024년 World Bank 기준.",
+        "flag": "🇨🇳"
+      },
+      {
+        "rank": 3,
+        "prev": 3,
+        "name": "독일",
+        "value": "4.7조 달러",
+        "detail": "Germany. 2024년 World Bank 기준.",
+        "flag": "🇩🇪"
+      },
+      {
+        "rank": 4,
+        "prev": 4,
+        "name": "일본",
+        "value": "4.0조 달러",
+        "detail": "Japan. 2024년 World Bank 기준.",
+        "flag": "🇯🇵"
+      },
+      {
+        "rank": 5,
+        "prev": 5,
+        "name": "인도",
+        "value": "3.9조 달러",
+        "detail": "India. 2024년 World Bank 기준.",
+        "flag": "🇮🇳"
+      },
+      {
+        "rank": 6,
+        "prev": 6,
+        "name": "영국",
+        "value": "3.7조 달러",
+        "detail": "United Kingdom. 2024년 World Bank 기준.",
+        "flag": "🇬🇧"
+      },
+      {
+        "rank": 7,
+        "prev": 7,
+        "name": "프랑스",
+        "value": "3.2조 달러",
+        "detail": "France. 2024년 World Bank 기준.",
+        "flag": "🇫🇷"
+      },
+      {
+        "rank": 8,
+        "prev": 8,
+        "name": "이탈리아",
+        "value": "2.4조 달러",
+        "detail": "Italy. 2024년 World Bank 기준.",
+        "flag": "🇮🇹"
+      },
+      {
+        "rank": 9,
+        "prev": 10,
+        "name": "캐나다",
+        "value": "2.2조 달러",
+        "detail": "Canada. 2024년 World Bank 기준.",
+        "flag": "🇨🇦"
+      },
+      {
+        "rank": 10,
+        "prev": 9,
+        "name": "브라질",
+        "value": "2.2조 달러",
+        "detail": "Brazil. 2024년 World Bank 기준.",
+        "flag": "🇧🇷"
+      }
+    ],
+    "gdp-per-capita": [
+      {
+        "rank": 1,
+        "prev": 1,
+        "name": "모나코",
+        "value": "28만 8,000달러",
+        "detail": "Monaco. 2024년 World Bank 기준.",
+        "flag": "🇲🇨"
+      },
+      {
+        "rank": 2,
+        "prev": 4,
+        "name": "버뮤다",
+        "value": "14만 3,000달러",
+        "detail": "Bermuda. 2024년 World Bank 기준.",
+        "flag": "🇧🇲"
+      },
+      {
+        "rank": 3,
+        "prev": 3,
+        "name": "룩셈부르크",
+        "value": "13만 8,000달러",
+        "detail": "Luxembourg. 2024년 World Bank 기준.",
+        "flag": "🇱🇺"
+      },
+      {
+        "rank": 4,
+        "prev": 5,
+        "name": "아일랜드",
+        "value": "11만 3,000달러",
+        "detail": "Ireland. 2024년 World Bank 기준.",
+        "flag": "🇮🇪"
+      },
+      {
+        "rank": 5,
+        "prev": 6,
+        "name": "스위스",
+        "value": "10만 4,000달러",
+        "detail": "Switzerland. 2024년 World Bank 기준.",
+        "flag": "🇨🇭"
+      },
+      {
+        "rank": 6,
+        "prev": 9,
+        "name": "싱가포르",
+        "value": "9만 1,000달러",
+        "detail": "Singapore. 2024년 World Bank 기준.",
+        "flag": "🇸🇬"
+      },
+      {
+        "rank": 7,
+        "prev": 8,
+        "name": "노르웨이",
+        "value": "8만 7,000달러",
+        "detail": "Norway. 2024년 World Bank 기준.",
+        "flag": "🇳🇴"
+      },
+      {
+        "rank": 8,
+        "prev": 10,
+        "name": "아이슬란드",
+        "value": "8만 6,000달러",
+        "detail": "Iceland. 2024년 World Bank 기준.",
+        "flag": "🇮🇸"
+      },
+      {
+        "rank": 9,
+        "prev": 12,
+        "name": "미국",
+        "value": "8만 5,000달러",
+        "detail": "United States. 2024년 World Bank 기준.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 10,
+        "prev": 11,
+        "name": "카타르",
+        "value": "7만 7,000달러",
+        "detail": "Qatar. 2024년 World Bank 기준.",
+        "flag": "🇶🇦"
+      }
+    ],
+    "ceo-salary": [
+      {
+        "rank": 1,
+        "prev": 1,
+        "name": "일론 머스크 (테슬라)",
+        "value": "560억 달러",
+        "detail": "스톡옵션 포함. 역사상 최대 CEO 보상 패키지.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 2,
+        "prev": 3,
+        "name": "팀 쿡 (애플)",
+        "value": "6,300만 달러",
+        "detail": "기본급 + 성과 보너스 + RSU.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 3,
+        "prev": 2,
+        "name": "순다르 피차이 (알파벳)",
+        "value": "2억 2600만 달러",
+        "detail": "구글·유튜브 총괄.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 4,
+        "prev": 4,
+        "name": "사티아 나델라 (MS)",
+        "value": "5,500만 달러",
+        "detail": "클라우드+AI 전환 주도.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 5,
+        "prev": 6,
+        "name": "앤디 재시 (아마존)",
+        "value": "2,900만 달러",
+        "detail": "AWS 출신. 아마존 CEO 2대.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 6,
+        "prev": 5,
+        "name": "밥 아이거 (디즈니)",
+        "value": "3,150만 달러",
+        "detail": "디즈니 복귀 CEO.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 7,
+        "prev": 7,
+        "name": "제이미 다이먼 (JP모건)",
+        "value": "3,600만 달러",
+        "detail": "월가 최고의 뱅커.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 8,
+        "prev": 8,
+        "name": "리사 수 (AMD)",
+        "value": "3,020만 달러",
+        "detail": "AMD를 살린 CEO. AI칩 시장 도전.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 9,
+        "prev": 9,
+        "name": "젠슨 황 (엔비디아)",
+        "value": "3,400만 달러",
+        "detail": "AI 시대의 아이콘. 스톡옵션 별도.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 10,
+        "prev": 10,
+        "name": "메리 바라 (GM)",
+        "value": "2,900만 달러",
+        "detail": "자동차 업계 최초 여성 CEO.",
+        "flag": "🇺🇸"
+      }
+    ],
+    "unicorn": [
+      {
+        "rank": 1,
+        "prev": 1,
+        "name": "SpaceX",
+        "value": "1,800억 달러",
+        "detail": "일론 머스크의 우주 기업. 스타링크 수익화.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 2,
+        "prev": 2,
+        "name": "ByteDance",
+        "value": "2,250억 달러",
+        "detail": "틱톡 모회사. 중국 최대 유니콘.",
+        "flag": "🇨🇳"
+      },
+      {
+        "rank": 3,
+        "prev": 4,
+        "name": "Stripe",
+        "value": "650억 달러",
+        "detail": "온라인 결제 인프라. 핀테크 선두.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 4,
+        "prev": 3,
+        "name": "OpenAI",
+        "value": "800억 달러",
+        "detail": "ChatGPT 개발사. AI 혁명의 중심.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 5,
+        "prev": 5,
+        "name": "Shein",
+        "value": "660억 달러",
+        "detail": "울트라 패스트 패션. 글로벌 확장.",
+        "flag": "🇨🇳"
+      },
+      {
+        "rank": 6,
+        "prev": 7,
+        "name": "Revolut",
+        "value": "330억 달러",
+        "detail": "디지털 뱅킹. 유럽 핀테크 최대.",
+        "flag": "🇬🇧"
+      },
+      {
+        "rank": 7,
+        "prev": 6,
+        "name": "Databricks",
+        "value": "430억 달러",
+        "detail": "데이터+AI 플랫폼.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 8,
+        "prev": 8,
+        "name": "Canva",
+        "value": "260억 달러",
+        "detail": "디자인 민주화. 호주 유니콘.",
+        "flag": "🇦🇺"
+      },
+      {
+        "rank": 9,
+        "prev": 9,
+        "name": "Anthropic",
+        "value": "180억 달러",
+        "detail": "Claude AI 개발사.",
+        "flag": "🇺🇸"
+      },
+      {
+        "rank": 10,
+        "prev": 10,
+        "name": "Discord",
+        "value": "150억 달러",
+        "detail": "게이머 커뮤니티 → 범용 메신저.",
+        "flag": "🇺🇸"
+      }
+    ]
+  }
+}

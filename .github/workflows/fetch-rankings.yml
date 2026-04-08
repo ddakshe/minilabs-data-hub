@@ -44,12 +44,12 @@ jobs:
       - name: Check for changes
         id: diff
         run: |
-          if git diff --quiet -- rankings/rankings.json; then
+          if git diff --quiet -- rankings/; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No changes — skipping commit."
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
-            git --no-pager diff --stat rankings/rankings.json
+            git --no-pager diff --stat rankings/
           fi
 
       - name: Commit & push
@@ -66,7 +66,7 @@ jobs:
             MSG="chore(rankings): weekly refresh ($DATE_KST)"
           fi
 
-          git add rankings/rankings.json
+          git add rankings/
           git commit -m "$MSG"
           git push
 

@@ -1,0 +1,803 @@
+{
+  "updatedAt": "2026-04-08",
+  "groups": [
+    {
+      "id": "male-sports",
+      "label": "남자 스포츠",
+      "emoji": "🏃‍♂️"
+    },
+    {
+      "id": "female-sports",
+      "label": "여자 스포츠",
+      "emoji": "🏃‍♀️"
+    },
+    {
+      "id": "football",
+      "label": "축구",
+      "emoji": "⚽"
+    },
+    {
+      "id": "ball-league",
+      "label": "농구·야구",
+      "emoji": "🏀"
+    },
+    {
+      "id": "ent",
+      "label": "엔터테인먼트",
+      "emoji": "🎤"
+    },
+    {
+      "id": "economy",
+      "label": "경제",
+      "emoji": "💰"
+    },
+    {
+      "id": "world",
+      "label": "세상·지리",
+      "emoji": "🏙️"
+    },
+    {
+      "id": "misc",
+      "label": "기타",
+      "emoji": "🏆"
+    }
+  ],
+  "categories": [
+    {
+      "id": "tennis-rank",
+      "groupId": "male-sports",
+      "label": "테니스 (ATP)",
+      "emoji": "🎾",
+      "color": "#00C896",
+      "subtitle": "ATP 남자 단식 세계 랭킹",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "야닉 신네르",
+        "value": "11,830점",
+        "flag": "🇮🇹"
+      }
+    },
+    {
+      "id": "tennis-earn",
+      "groupId": "male-sports",
+      "label": "테니스 수입",
+      "emoji": "💵",
+      "color": "#10B981",
+      "subtitle": "테니스 선수 연간 수입",
+      "updatedAt": "2026-03-15",
+      "top": {
+        "name": "카를로스 알카라스",
+        "value": "5,200만 달러",
+        "flag": "🇪🇸"
+      }
+    },
+    {
+      "id": "golf-rank",
+      "groupId": "male-sports",
+      "label": "골프 (OWGR)",
+      "emoji": "⛳",
+      "color": "#16A34A",
+      "subtitle": "세계 골프 랭킹 (OWGR)",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "스코티 셰플러",
+        "value": "12.80점",
+        "flag": "🇺🇸"
+      }
+    },
+    {
+      "id": "golf-earn",
+      "groupId": "male-sports",
+      "label": "골프 수입",
+      "emoji": "💰",
+      "color": "#22C55E",
+      "subtitle": "골프 선수 연간 수입",
+      "updatedAt": "2026-03-15",
+      "top": {
+        "name": "존 람",
+        "value": "2억 1800만 달러",
+        "flag": "🇪🇸"
+      }
+    },
+    {
+      "id": "f1-driver",
+      "groupId": "male-sports",
+      "label": "F1 드라이버",
+      "emoji": "🏎️",
+      "color": "#DC2626",
+      "subtitle": "F1 드라이버 챔피언십",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "막스 페르스타펜",
+        "value": "575점",
+        "flag": "🇳🇱"
+      }
+    },
+    {
+      "id": "f1-team",
+      "groupId": "male-sports",
+      "label": "F1 팀",
+      "emoji": "🏎️",
+      "color": "#EF4444",
+      "subtitle": "F1 컨스트럭터 챔피언십",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "레드불 레이싱",
+        "value": "860점",
+        "flag": "🇦🇹"
+      }
+    },
+    {
+      "id": "boxing-p4p",
+      "groupId": "male-sports",
+      "label": "복싱 P4P",
+      "emoji": "🥊",
+      "color": "#9A3412",
+      "subtitle": "복싱 파운드 포 파운드 랭킹",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "올렉산드르 우시크",
+        "value": "무패 챔피언",
+        "flag": "🇺🇦"
+      }
+    },
+    {
+      "id": "ufc-p4p",
+      "groupId": "male-sports",
+      "label": "UFC P4P",
+      "emoji": "🥋",
+      "color": "#78350F",
+      "subtitle": "UFC 파운드 포 파운드 랭킹",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "이슬람 마카체프",
+        "value": "라이트급 챔피언",
+        "flag": "🇷🇺"
+      }
+    },
+    {
+      "id": "chess",
+      "groupId": "male-sports",
+      "label": "체스 FIDE",
+      "emoji": "♟️",
+      "color": "#374151",
+      "subtitle": "FIDE 체스 세계 랭킹",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "마그누스 칼센",
+        "value": "2839점",
+        "flag": "🇳🇴"
+      }
+    },
+    {
+      "id": "marathon",
+      "groupId": "male-sports",
+      "label": "마라톤 기록",
+      "emoji": "🏃",
+      "color": "#0891B2",
+      "subtitle": "마라톤 역대 최고 기록",
+      "updatedAt": "2026-01-01",
+      "top": {
+        "name": "켈빈 킵텀",
+        "value": "2:00:35",
+        "flag": "🇰🇪"
+      }
+    },
+    {
+      "id": "tennis-women",
+      "groupId": "female-sports",
+      "label": "테니스 (WTA)",
+      "emoji": "🎾",
+      "color": "#059669",
+      "subtitle": "WTA 여자 단식 세계 랭킹",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "이가 시비옹테크",
+        "value": "10,885점",
+        "flag": "🇵🇱"
+      }
+    },
+    {
+      "id": "golf-women",
+      "groupId": "female-sports",
+      "label": "골프 (LPGA)",
+      "emoji": "⛳",
+      "color": "#15803D",
+      "subtitle": "LPGA 여자 골프 세계 랭킹",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "넬리 코르다",
+        "value": "9.45점",
+        "flag": "🇺🇸"
+      }
+    },
+    {
+      "id": "football-women",
+      "groupId": "female-sports",
+      "label": "축구 (FIFA 여자)",
+      "emoji": "⚽",
+      "color": "#7C3AED",
+      "subtitle": "FIFA 여자 국가대표 랭킹",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "미국",
+        "value": "2090.03점",
+        "flag": "🇺🇸"
+      }
+    },
+    {
+      "id": "football-team",
+      "groupId": "football",
+      "label": "FIFA 랭킹",
+      "emoji": "⚽",
+      "color": "#3182F6",
+      "subtitle": "FIFA 남자 국가대표 랭킹",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "아르헨티나",
+        "value": "1886.16점",
+        "flag": "🇦🇷"
+      }
+    },
+    {
+      "id": "football-salary",
+      "groupId": "football",
+      "label": "선수 연봉",
+      "emoji": "⚽",
+      "color": "#2563EB",
+      "subtitle": "축구 선수 연간 수입",
+      "updatedAt": "2026-03-15",
+      "top": {
+        "name": "크리스티아누 호날두",
+        "value": "2억 6천만 달러",
+        "flag": "🇵🇹"
+      }
+    },
+    {
+      "id": "uefa-club",
+      "groupId": "football",
+      "label": "UEFA 클럽",
+      "emoji": "⚽",
+      "color": "#1D4ED8",
+      "subtitle": "UEFA 클럽 계수 랭킹",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "맨체스터 시티",
+        "value": "134.000점",
+        "flag": "🇬🇧"
+      }
+    },
+    {
+      "id": "epl",
+      "groupId": "football",
+      "label": "EPL",
+      "emoji": "⚽",
+      "color": "#4F46E5",
+      "subtitle": "잉글리시 프리미어 리그",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "아스널",
+        "value": "82점",
+        "flag": "🇬🇧"
+      }
+    },
+    {
+      "id": "laliga",
+      "groupId": "football",
+      "label": "라리가",
+      "emoji": "⚽",
+      "color": "#6D28D9",
+      "subtitle": "스페인 라리가",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "레알 마드리드",
+        "value": "85점",
+        "flag": "🇪🇸"
+      }
+    },
+    {
+      "id": "kleague",
+      "groupId": "football",
+      "label": "K리그",
+      "emoji": "⚽",
+      "color": "#BE185D",
+      "subtitle": "K리그 1 순위",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "울산 HD",
+        "value": "62점",
+        "flag": "🏆"
+      }
+    },
+    {
+      "id": "nba-team",
+      "groupId": "ball-league",
+      "label": "NBA 팀",
+      "emoji": "🏀",
+      "color": "#F97316",
+      "subtitle": "NBA 팀 전력 순위",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "보스턴 셀틱스",
+        "value": "62승 20패",
+        "flag": "🏆"
+      }
+    },
+    {
+      "id": "nba-salary",
+      "groupId": "ball-league",
+      "label": "NBA 연봉",
+      "emoji": "🏀",
+      "color": "#EA580C",
+      "subtitle": "NBA 선수 연봉",
+      "updatedAt": "2026-03-15",
+      "top": {
+        "name": "스테픈 커리",
+        "value": "5,580만 달러",
+        "flag": "🇺🇸"
+      }
+    },
+    {
+      "id": "mlb-team",
+      "groupId": "ball-league",
+      "label": "MLB 팀",
+      "emoji": "⚾",
+      "color": "#DC2626",
+      "subtitle": "MLB 팀 전력 순위",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "LA 다저스",
+        "value": "100승 62패",
+        "flag": "⚾"
+      }
+    },
+    {
+      "id": "mlb-salary",
+      "groupId": "ball-league",
+      "label": "MLB 연봉",
+      "emoji": "⚾",
+      "color": "#B91C1C",
+      "subtitle": "MLB 선수 연봉",
+      "updatedAt": "2026-03-15",
+      "top": {
+        "name": "오타니 쇼헤이",
+        "value": "7,000만 달러",
+        "flag": "🇯🇵"
+      }
+    },
+    {
+      "id": "kbo",
+      "groupId": "ball-league",
+      "label": "KBO",
+      "emoji": "⚾",
+      "color": "#E11D48",
+      "subtitle": "KBO 리그 순위",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "LG 트윈스",
+        "value": "78승 56패",
+        "flag": "🏆"
+      }
+    },
+    {
+      "id": "billboard",
+      "groupId": "ent",
+      "label": "빌보드 1위",
+      "emoji": "🎵",
+      "color": "#EC4899",
+      "subtitle": "빌보드 Hot 100 역대 1위 최다",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "The Beatles",
+        "value": "20곡",
+        "flag": "🇬🇧"
+      }
+    },
+    {
+      "id": "spotify",
+      "groupId": "ent",
+      "label": "스포티파이",
+      "emoji": "🎧",
+      "color": "#22C55E",
+      "subtitle": "스포티파이 월간 청취자",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "The Weeknd",
+        "value": "1억 1500만",
+        "flag": "🇨🇦"
+      }
+    },
+    {
+      "id": "youtube-subs",
+      "groupId": "ent",
+      "label": "유튜브 구독자",
+      "emoji": "📺",
+      "color": "#EF4444",
+      "subtitle": "유튜브 채널 구독자 수",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "T-Series",
+        "value": "2억 7000만",
+        "flag": "🇮🇳"
+      }
+    },
+    {
+      "id": "instagram",
+      "groupId": "ent",
+      "label": "인스타 팔로워",
+      "emoji": "📸",
+      "color": "#D946EF",
+      "subtitle": "인스타그램 팔로워 수",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "Cristiano Ronaldo",
+        "value": "6억 3000만",
+        "flag": "🇵🇹"
+      }
+    },
+    {
+      "id": "tiktok",
+      "groupId": "ent",
+      "label": "틱톡 팔로워",
+      "emoji": "🎵",
+      "color": "#0EA5E9",
+      "subtitle": "틱톡 팔로워 수",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "Khaby Lame",
+        "value": "1억 6200만",
+        "flag": "🇮🇹"
+      }
+    },
+    {
+      "id": "netflix",
+      "groupId": "ent",
+      "label": "넷플릭스 역대",
+      "emoji": "🎬",
+      "color": "#B91C1C",
+      "subtitle": "넷플릭스 역대 시청 시간",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "오징어 게임 시즌1",
+        "value": "16억 5000만 시간",
+        "flag": "🇰🇷"
+      }
+    },
+    {
+      "id": "box-office-global",
+      "groupId": "ent",
+      "label": "글로벌 흥행",
+      "emoji": "🎬",
+      "color": "#F59E0B",
+      "subtitle": "역대 글로벌 흥행 영화",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "아바타",
+        "value": "29.2억 달러",
+        "flag": "🇺🇸"
+      }
+    },
+    {
+      "id": "box-office-kr",
+      "groupId": "ent",
+      "label": "한국 흥행",
+      "emoji": "🎬",
+      "color": "#F97316",
+      "subtitle": "역대 한국 흥행 영화 (관객수)",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "명량",
+        "value": "1761만 명",
+        "flag": "🇰🇷"
+      }
+    },
+    {
+      "id": "kdrama",
+      "groupId": "ent",
+      "label": "K-드라마",
+      "emoji": "📺",
+      "color": "#A855F7",
+      "subtitle": "K-드라마 역대 시청률",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "사랑의 불시착",
+        "value": "21.7%",
+        "flag": "🇰🇷"
+      }
+    },
+    {
+      "id": "oscar",
+      "groupId": "ent",
+      "label": "아카데미상",
+      "emoji": "🏆",
+      "color": "#CA8A04",
+      "subtitle": "아카데미상 최다 수상 영화",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "벤허 (1959)",
+        "value": "11개",
+        "flag": "🇺🇸"
+      }
+    },
+    {
+      "id": "rich",
+      "groupId": "economy",
+      "label": "세계 부자",
+      "emoji": "💎",
+      "color": "#F5A623",
+      "subtitle": "세계 부자 순위 (자산 기준)",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "일론 머스크",
+        "value": "2,510억 달러",
+        "flag": "🇺🇸"
+      }
+    },
+    {
+      "id": "rich-kr",
+      "groupId": "economy",
+      "label": "한국 부자",
+      "emoji": "💎",
+      "color": "#EAB308",
+      "subtitle": "한국 부자 순위",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "이재용",
+        "value": "13조 원",
+        "flag": "🇰🇷"
+      }
+    },
+    {
+      "id": "market-cap-global",
+      "groupId": "economy",
+      "label": "글로벌 시총",
+      "emoji": "📈",
+      "color": "#059669",
+      "subtitle": "글로벌 시가총액 순위",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "애플",
+        "value": "3.4조 달러",
+        "flag": "🇺🇸"
+      }
+    },
+    {
+      "id": "market-cap-kospi",
+      "groupId": "economy",
+      "label": "KOSPI 시총",
+      "emoji": "📈",
+      "color": "#10B981",
+      "subtitle": "KOSPI 시가총액 순위",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "삼성전자",
+        "value": "420조 원",
+        "flag": "🇰🇷"
+      }
+    },
+    {
+      "id": "gdp",
+      "groupId": "economy",
+      "label": "GDP",
+      "emoji": "🌐",
+      "color": "#0284C7",
+      "subtitle": "국가 GDP 순위",
+      "updatedAt": "2026-04-08",
+      "top": {
+        "name": "미국",
+        "value": "28.8조 달러",
+        "flag": "🇺🇸"
+      }
+    },
+    {
+      "id": "gdp-per-capita",
+      "groupId": "economy",
+      "label": "1인당 GDP",
+      "emoji": "🌐",
+      "color": "#0369A1",
+      "subtitle": "1인당 GDP 순위",
+      "updatedAt": "2026-04-08",
+      "top": {
+        "name": "모나코",
+        "value": "28만 8,000달러",
+        "flag": "🇲🇨"
+      }
+    },
+    {
+      "id": "ceo-salary",
+      "groupId": "economy",
+      "label": "CEO 연봉",
+      "emoji": "👔",
+      "color": "#7C3AED",
+      "subtitle": "글로벌 CEO 연봉",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "일론 머스크 (테슬라)",
+        "value": "560억 달러",
+        "flag": "🇺🇸"
+      }
+    },
+    {
+      "id": "unicorn",
+      "groupId": "economy",
+      "label": "유니콘 기업",
+      "emoji": "🦄",
+      "color": "#A855F7",
+      "subtitle": "유니콘 기업 가치",
+      "updatedAt": "2026-04-01",
+      "top": {
+        "name": "SpaceX",
+        "value": "1,800억 달러",
+        "flag": "🇺🇸"
+      }
+    },
+    {
+      "id": "building",
+      "groupId": "world",
+      "label": "초고층 빌딩",
+      "emoji": "🏙️",
+      "color": "#8B5CF6",
+      "subtitle": "세계 최고층 빌딩",
+      "updatedAt": "2026-01-01",
+      "top": {
+        "name": "부르즈 할리파",
+        "value": "828m · 163층",
+        "flag": "🇦🇪"
+      }
+    },
+    {
+      "id": "mountain",
+      "groupId": "world",
+      "label": "최고 산",
+      "emoji": "⛰️",
+      "color": "#6D28D9",
+      "subtitle": "세계 최고봉",
+      "updatedAt": "2026-01-01",
+      "top": {
+        "name": "에베레스트",
+        "value": "8,849m",
+        "flag": "🇳🇵"
+      }
+    },
+    {
+      "id": "river",
+      "groupId": "world",
+      "label": "최장 강",
+      "emoji": "🌊",
+      "color": "#0EA5E9",
+      "subtitle": "세계에서 가장 긴 강",
+      "updatedAt": "2026-01-01",
+      "top": {
+        "name": "나일강",
+        "value": "6,650km",
+        "flag": "🇪🇬"
+      }
+    },
+    {
+      "id": "lake",
+      "groupId": "world",
+      "label": "최대 호수",
+      "emoji": "💧",
+      "color": "#06B6D4",
+      "subtitle": "세계에서 가장 큰 호수",
+      "updatedAt": "2026-01-01",
+      "top": {
+        "name": "카스피해",
+        "value": "371,000km²",
+        "flag": "🇰🇿"
+      }
+    },
+    {
+      "id": "bridge",
+      "groupId": "world",
+      "label": "최장 다리",
+      "emoji": "🌉",
+      "color": "#7E22CE",
+      "subtitle": "세계에서 가장 긴 다리",
+      "updatedAt": "2026-01-01",
+      "top": {
+        "name": "단양-쿤산 대교",
+        "value": "164.8km",
+        "flag": "🇨🇳"
+      }
+    },
+    {
+      "id": "population",
+      "groupId": "world",
+      "label": "인구 순",
+      "emoji": "👥",
+      "color": "#F59E0B",
+      "subtitle": "인구가 가장 많은 나라",
+      "updatedAt": "2026-04-08",
+      "top": {
+        "name": "인도",
+        "value": "14억 5,093만",
+        "flag": "🇮🇳"
+      }
+    },
+    {
+      "id": "area",
+      "groupId": "world",
+      "label": "면적 순",
+      "emoji": "🗺️",
+      "color": "#84CC16",
+      "subtitle": "면적이 가장 넓은 나라",
+      "updatedAt": "2026-01-01",
+      "top": {
+        "name": "러시아",
+        "value": "1,710만 km²",
+        "flag": "🇷🇺"
+      }
+    },
+    {
+      "id": "tourist-city",
+      "groupId": "world",
+      "label": "관광 도시",
+      "emoji": "✈️",
+      "color": "#14B8A6",
+      "subtitle": "방문객이 가장 많은 도시",
+      "updatedAt": "2026-01-01",
+      "top": {
+        "name": "방콕",
+        "value": "2,650만 명",
+        "flag": "🇹🇭"
+      }
+    },
+    {
+      "id": "olympic",
+      "groupId": "misc",
+      "label": "올림픽 금메달",
+      "emoji": "🥇",
+      "color": "#CA8A04",
+      "subtitle": "역대 올림픽 금메달 국가별",
+      "updatedAt": "2026-01-01",
+      "top": {
+        "name": "미국",
+        "value": "1,061개",
+        "flag": "🇺🇸"
+      }
+    },
+    {
+      "id": "nobel",
+      "groupId": "misc",
+      "label": "노벨상",
+      "emoji": "🏅",
+      "color": "#D97706",
+      "subtitle": "노벨상 수상 국가별",
+      "updatedAt": "2026-01-01",
+      "top": {
+        "name": "미국",
+        "value": "403명",
+        "flag": "🇺🇸"
+      }
+    },
+    {
+      "id": "fastest-car",
+      "groupId": "misc",
+      "label": "최고속 자동차",
+      "emoji": "🚗",
+      "color": "#DC2626",
+      "subtitle": "세계에서 가장 빠른 양산차",
+      "updatedAt": "2026-01-01",
+      "top": {
+        "name": "Bugatti Chiron Super Sport",
+        "value": "490km/h",
+        "flag": "🇫🇷"
+      }
+    },
+    {
+      "id": "expensive-painting",
+      "groupId": "misc",
+      "label": "비싼 그림",
+      "emoji": "🎨",
+      "color": "#9333EA",
+      "subtitle": "역대 가장 비싸게 팔린 그림",
+      "updatedAt": "2026-01-01",
+      "top": {
+        "name": "살바토르 문디 (레오나르도 다빈치)",
+        "value": "4억 5030만 달러",
+        "flag": "🇮🇹"
+      }
+    }
+  ]
+}
