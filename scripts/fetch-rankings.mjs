@@ -82,7 +82,7 @@ async function main() {
   seed.updatedAt = today
 
   // 출력
-  const json = JSON.stringify(seed)
+  const json = JSON.stringify(seed, null, 2) + '\n'
   await fs.writeFile(OUTPUT_PATH, json, 'utf-8')
 
   const sizeKB = (Buffer.byteLength(json) / 1024).toFixed(1)
