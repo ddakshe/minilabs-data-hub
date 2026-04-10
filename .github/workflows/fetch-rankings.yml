@@ -34,6 +34,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Install Playwright Chromium
+        run: npx playwright install chromium --with-deps
+
       - name: Show trigger context
         run: |
           echo "Event       : ${{ github.event_name }}"
@@ -41,8 +44,11 @@ jobs:
           date -u "+UTC: %Y-%m-%d %H:%M:%S"
           TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
 
-      - name: Fetch rankings data
+      - name: Fetch rankings (cheerio/API)
         run: node scripts/fetch-rankings.mjs
+
+      - name: Fetch rankings (Playwright)
+        run: node scripts/fetch-rankings-pw.mjs || echo "⚠️ Playwright 일부 실패 — cheerio 데이터 유지"
 
       - name: Check for changes
         id: diff
