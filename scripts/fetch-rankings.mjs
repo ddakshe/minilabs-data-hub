@@ -12,6 +12,7 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import * as cheerio from 'cheerio'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const SEED_PATH = path.resolve(__dirname, '../rankings/seed.json')
@@ -133,9 +134,328 @@ function buildRanking(data, count, formatValue, detailSuffix) {
   })
 }
 
+// ───────────────────────── F1 (Jolpica-F1 / ex-Ergast) ─────────────────────────
+//
+// 무료·무인증 JSON API. Ergast의 공식 후계자.
+// 드라이버/컨스트럭터 포인트는 레이스 종료 직후 반영.
+// 응답 구조는 레거시 XML 스타일이라 깊게 타고 들어가야 함.
+
+const F1_API_BASE = 'https://api.jolpi.ca/ergast/f1'
+
+// 국적(형용사형) → ISO2 국가 코드
+// Jolpica는 "Italian", "British", "Monegasque" 등 형용사를 줌.
+const NATIONALITY_TO_ISO2 = {
+  Italian: 'IT', British: 'GB', German: 'DE', Dutch: 'NL',
+  Spanish: 'ES', French: 'FR', Monegasque: 'MC', Australian: 'AU',
+  Finnish: 'FI', Mexican: 'MX', Canadian: 'CA', Japanese: 'JP',
+  Thai: 'TH', 'New Zealander': 'NZ', Danish: 'DK', Swiss: 'CH',
+  Polish: 'PL', Russian: 'RU', Brazilian: 'BR', Argentine: 'AR',
+  American: 'US', Chinese: 'CN', Swedish: 'SE', Austrian: 'AT',
+  Belgian: 'BE', Hungarian: 'HU', Korean: 'KR', Indian: 'IN',
+  Indonesian: 'ID', Malaysian: 'MY', Portuguese: 'PT',
+  Venezuelan: 'VE', Colombian: 'CO', Irish: 'IE', Norwegian: 'NO',
+}
+
+// 팀 → 본사 국가 ISO2 (constructor standings용)
+const F1_TEAM_ISO2 = {
+  mercedes: 'DE', ferrari: 'IT', red_bull: 'AT', mclaren: 'GB',
+  alpine: 'FR', aston_martin: 'GB', williams: 'GB', haas: 'US',
+  rb: 'IT', alphatauri: 'IT', toro_rosso: 'IT',
+  audi: 'DE', sauber: 'CH', alfa: 'CH',
+  cadillac: 'US',
+}
+
+// 드라이버 driverId → 한글 이름 (주요 현역 + 일부 레전드)
+// 없으면 Driver.familyName 그대로 사용 (폴백).
+const F1_DRIVER_KR = {
+  antonelli: '안드레아 키미 안토넬리', russell: '조지 러셀',
+  leclerc: '샤를 르클레르', hamilton: '루이스 해밀턴',
+  norris: '란도 노리스', piastri: '오스카 피아스트리',
+  bearman: '올리버 베어먼', gasly: '피에르 가슬리',
+  max_verstappen: '막스 페르스타펜', lawson: '리암 로슨',
+  arvid_lindblad: '아르비드 린드블라드', hadjar: '이자크 아자르',
+  bortoleto: '가브리엘 보르톨레토', sainz: '카를로스 사인스',
+  ocon: '에스테반 오콘', colapinto: '프랑코 콜라핀토',
+  hulkenberg: '니코 휠켄베르크', albon: '알렉산더 알본',
+  bottas: '발테리 보타스', perez: '세르히오 페레스',
+  alonso: '페르난도 알론소', stroll: '랜스 스트롤',
+  ricciardo: '다니엘 리카르도', tsunoda: '유키 츠노다',
+  zhou: '저우관위',
+}
+
+// 팀 constructorId → 한글 이름
+const F1_TEAM_KR = {
+  mercedes: '메르세데스', ferrari: '페라리', red_bull: '레드불',
+  mclaren: '맥라렌', alpine: '알파인', aston_martin: '애스턴 마틴',
+  williams: '윌리엄스', haas: '하스', rb: 'RB', audi: '아우디',
+  cadillac: '캐딜락', sauber: '자우버', alphatauri: '알파타우리',
+}
+
+async function fetchF1Standings(type, season = 'current', round = null) {
+  // type: 'driver' | 'constructor'
+  const path = round == null
+    ? `${season}/${type}Standings/`
+    : `${season}/${round}/${type}Standings/`
+  const url = `${F1_API_BASE}/${path}`
+  const res = await fetch(url, {
+    headers: {
+      Accept: 'application/json',
+      'User-Agent': 'minilabs-data-hub/1.0 (+https://github.com/ddakshe/minilabs-data-hub)',
+    },
+  })
+  if (!res.ok) throw new Error(`F1 API HTTP ${res.status}: ${url}`)
+  const json = await res.json()
+  const list = json?.MRData?.StandingsTable?.StandingsLists?.[0]
+  if (!list) throw new Error(`F1 API: empty standings list (${url})`)
+  return {
+    season: list.season,
+    round: Number(list.round),
+    drivers: list.DriverStandings || [],
+    constructors: list.ConstructorStandings || [],
+  }
+}
+
+async function fetchF1Previous(type, season, currentRound) {
+  // 이전 라운드 순위 조회 — prev 필드 계산용.
+  // round 1이면 이전 없음 → null 반환.
+  if (currentRound <= 1) return null
+  try {
+    return await fetchF1Standings(type, season, currentRound - 1)
+  } catch (err) {
+    console.warn(`    (prev round unavailable: ${err.message})`)
+    return null
+  }
+}
+
+async function scrapeF1Drivers() {
+  const current = await fetchF1Standings('driver')
+  const prev = await fetchF1Previous('driver', current.season, current.round)
+
+  const prevRankById = new Map()
+  if (prev) {
+    for (const d of prev.drivers) {
+      prevRankById.set(d.Driver.driverId, Number(d.position))
+    }
+  }
+
+  return current.drivers.slice(0, 10).map((d) => {
+    const rank = Number(d.position)
+    const driverId = d.Driver.driverId
+    const iso2 = NATIONALITY_TO_ISO2[d.Driver.nationality] || null
+    const nameKr = F1_DRIVER_KR[driverId] || `${d.Driver.givenName} ${d.Driver.familyName}`
+    const team = d.Constructors?.[0]
+    const teamKr = team ? (F1_TEAM_KR[team.constructorId] || team.name) : '-'
+    const wins = Number(d.wins)
+    const countryKr = iso2 ? krName(iso2, d.Driver.nationality) : d.Driver.nationality
+    return {
+      rank,
+      prev: prevRankById.get(driverId) ?? rank,
+      name: nameKr,
+      value: `${d.points}점`,
+      detail: `${countryKr} · ${teamKr} · ${wins}승. ${current.season} 시즌 R${current.round}.`,
+      flag: iso2 ? countryFlag(iso2) : '🏁',
+      ...(iso2 === 'KR' && { highlight: true }),
+    }
+  })
+}
+
+async function scrapeF1Teams() {
+  const current = await fetchF1Standings('constructor')
+  const prev = await fetchF1Previous('constructor', current.season, current.round)
+
+  const prevRankById = new Map()
+  if (prev) {
+    for (const c of prev.constructors) {
+      prevRankById.set(c.Constructor.constructorId, Number(c.position))
+    }
+  }
+
+  return current.constructors.slice(0, 10).map((c) => {
+    const rank = Number(c.position)
+    const id = c.Constructor.constructorId
+    const iso2 = F1_TEAM_ISO2[id] || NATIONALITY_TO_ISO2[c.Constructor.nationality] || null
+    const nameKr = F1_TEAM_KR[id] || c.Constructor.name
+    const countryKr = iso2 ? krName(iso2, c.Constructor.nationality) : c.Constructor.nationality
+    return {
+      rank,
+      prev: prevRankById.get(id) ?? rank,
+      name: nameKr,
+      value: `${c.points}점`,
+      detail: `${countryKr} · ${c.wins}승. ${current.season} 시즌 R${current.round}.`,
+      flag: iso2 ? countryFlag(iso2) : '🏁',
+      ...(iso2 === 'KR' && { highlight: true }),
+    }
+  })
+}
+
+// ───────────────────────── Wikipedia (cheerio) ─────────────────────────
+//
+// 공통: MediaWiki parse API로 HTML을 가져와 cheerio로 파싱.
+// en.wikipedia.org는 User-Agent를 요구함.
+
+const WIKI_UA = 'minilabs-data-hub/1.0 (+https://github.com/ddakshe/minilabs-data-hub)'
+
+async function fetchWikiHtml(page, section) {
+  const url = `https://en.wikipedia.org/w/api.php?action=parse&page=${encodeURIComponent(page)}&prop=text&section=${section}&format=json`
+  const res = await fetch(url, { headers: { 'User-Agent': WIKI_UA } })
+  if (!res.ok) throw new Error(`Wikipedia API HTTP ${res.status}: ${page}`)
+  const json = await res.json()
+  if (json.error) throw new Error(`Wikipedia: ${json.error.info}`)
+  return cheerio.load(json.parse.text['*'])
+}
+
+// IOC 코드 / 영문 국가명 → ISO2 (올림픽·노벨용)
+const IOC_TO_ISO2 = {
+  USA: 'US', URS: 'RU', CHN: 'CN', GER: 'DE', GBR: 'GB', FRA: 'FR',
+  ITA: 'IT', NOR: 'NO', SWE: 'SE', JPN: 'JP', RUS: 'RU', GDR: 'DE',
+  AUS: 'AU', HUN: 'HU', KOR: 'KR', CUB: 'CU', ROU: 'RO', NED: 'NL',
+  CAN: 'CA', BRA: 'BR', ESP: 'ES', FIN: 'FI', DEN: 'DK', NZL: 'NZ',
+  SUI: 'CH', AUT: 'AT', CRO: 'HR', POL: 'PL', CZE: 'CZ', BEL: 'BE',
+  RSA: 'ZA', ETH: 'ET', KEN: 'KE', JAM: 'JA', PRK: 'KP', IRI: 'IR',
+  TUR: 'TR', UKR: 'UA', TPE: 'TW', IND: 'IN', BLR: 'BY', GRE: 'GR',
+  ARG: 'AR', MEX: 'MX', COL: 'CO', THA: 'TH',
+}
+
+const ENNAME_TO_ISO2 = {
+  'United States': 'US', 'United Kingdom': 'GB', 'Soviet Union': 'RU',
+  China: 'CN', Germany: 'DE', 'Great Britain': 'GB', France: 'FR',
+  Italy: 'IT', Norway: 'NO', Sweden: 'SE', Japan: 'JP', Russia: 'RU',
+  'East Germany': 'DE', Australia: 'AU', Hungary: 'HU', 'South Korea': 'KR',
+  Cuba: 'CU', Romania: 'RO', Netherlands: 'NL', Canada: 'CA', Brazil: 'BR',
+  Spain: 'ES', Finland: 'FI', Denmark: 'DK', Switzerland: 'CH',
+  Austria: 'AT', Poland: 'PL', 'Czech Republic': 'CZ', Belgium: 'BE',
+  'South Africa': 'ZA', Kenya: 'KE', Ethiopia: 'ET', India: 'IN',
+  'New Zealand': 'NZ', 'North Korea': 'KP', Turkey: 'TR', Ukraine: 'UA',
+  Taiwan: 'TW', Thailand: 'TH', Argentina: 'AR', Mexico: 'MX', Iran: 'IR',
+  Croatia: 'HR', Greece: 'GR', Ireland: 'IE', Portugal: 'PT', Israel: 'IL',
+  'Unified Team': 'RU',
+}
+
+function resolveISO2(name) {
+  // 1) IOC 코드 추출 시도 (예: "[USA]")
+  const iocMatch = name.match(/\[([A-Z]{3})\]/)
+  if (iocMatch && IOC_TO_ISO2[iocMatch[1]]) return IOC_TO_ISO2[iocMatch[1]]
+  // 2) 영문 국가명 매칭
+  const clean = name.replace(/\[.*?\]/g, '').trim()
+  return ENNAME_TO_ISO2[clean] || null
+}
+
+// ── 올림픽 역대 금메달 ──
+async function scrapeOlympic() {
+  const $ = await fetchWikiHtml('All-time_Olympic_Games_medal_table', 1)
+  const rows = []
+  $('table.wikitable tr').each(function (i) {
+    if (i < 2) return // 헤더 2줄
+    const cells = $(this).find('td, th')
+    if (cells.length < 16) return
+    const rawTeam = $(cells[0]).text().trim()
+    const team = rawTeam.replace(/\[.*?\]/g, '').trim()
+    if (team.startsWith('Total')) return
+    const gold = parseInt($(cells[12]).text().replace(/,/g, '')) || 0
+    const total = parseInt($(cells[15]).text().replace(/,/g, '')) || 0
+    if (gold <= 0) return
+    const iso2 = resolveISO2(rawTeam)
+    rows.push({ team, gold, total, iso2 })
+  })
+  rows.sort((a, b) => b.gold - a.gold || b.total - a.total)
+  return rows.slice(0, 10).map((r, i) => ({
+    rank: i + 1,
+    prev: i + 1,
+    name: r.iso2 ? krName(r.iso2, r.team) : r.team,
+    value: `금 ${r.gold.toLocaleString('ko-KR')}개`,
+    detail: `총 메달 ${r.total.toLocaleString('ko-KR')}개. Wikipedia 기준.`,
+    flag: r.iso2 ? countryFlag(r.iso2) : '🏳️',
+    ...(r.iso2 === 'KR' && { highlight: true }),
+  }))
+}
+
+// ── 글로벌 역대 박스오피스 ──
+async function scrapeBoxOfficeGlobal() {
+  const $ = await fetchWikiHtml('List_of_highest-grossing_films', 1)
+  const rows = []
+  $('table.wikitable tr').each(function (i) {
+    if (i < 1) return
+    const cells = $(this).find('td, th')
+    if (cells.length < 5) return
+    const rankText = $(cells[0]).text().trim()
+    const rank = parseInt(rankText)
+    if (!rank || rank > 10) return
+    // title is in a `th` cell (scope="row") or cells[2]
+    const title = $(cells[2]).text().trim().replace(/^'+|'+$/g, '')
+    const grossText = $(cells[3]).text().trim()
+    const grossMatch = grossText.match(/\$([\d,]+)/)
+    const gross = grossMatch ? parseInt(grossMatch[1].replace(/,/g, '')) : 0
+    const year = parseInt($(cells[4]).text().trim()) || 0
+    rows.push({ rank, title, gross, year })
+  })
+  rows.sort((a, b) => a.rank - b.rank)
+  return rows.slice(0, 10).map((r) => ({
+    rank: r.rank,
+    prev: r.rank,
+    name: r.title,
+    value: `$${(r.gross / 1e9).toFixed(1)}B`,
+    detail: `${r.year}년. 월드와이드 흥행 수익. Box Office Mojo 기준.`,
+    flag: '🎬',
+  }))
+}
+
+// ── 노벨상 수상 국가별 ──
+async function scrapeNobel() {
+  // 한국어 위키의 "노벨상 수상자 목록" 대신 영문 위키 사용 (더 정확)
+  const $ = await fetchWikiHtml('List_of_countries_by_Nobel_laureates_per_capita', 0)
+  // 이 페이지 대신 절대 수로 정렬된 "List of Nobel laureates by country" 사용
+  // 해당 페이지는 단순 국가별 수상자 수 목록
+  throw new Error('nobel: needs different Wikipedia page — skipping for now')
+}
+
+// 노벨상은 복잡한 페이지라서 직접 "List of Nobel laureates by country" 의 도입부 표를 쓴다
+async function scrapeNobelByCountry() {
+  const $ = await fetchWikiHtml('List_of_Nobel_laureates_by_country', 0)
+  // 이 페이지는 국가별 섹션이라 표가 없다. 대안: top-level 통계 표가 있는 페이지 사용.
+  // 대안: "Nobel Prize" 메인 문서의 국가별 표
+  // 실질적으로 수치 테이블이 없으므로 이 스크래퍼는 후순위.
+  throw new Error('nobel: structured table not found — skipping')
+}
+
+// ── 한국 역대 박스오피스 (관객수 기준) ──
+async function scrapeBoxOfficeKr() {
+  const $ = await fetchWikiHtml('List_of_highest-grossing_films_in_South_Korea', 2)
+  const rows = []
+  $('table.wikitable tr').each(function (i) {
+    if (i < 1) return
+    const cells = $(this).find('td, th')
+    if (cells.length < 7) return
+    const rank = parseInt($(cells[0]).text().trim())
+    if (!rank || rank > 10) return
+    const titleKr = $(cells[2]).text().trim()
+    const titleEn = $(cells[1]).text().trim()
+    const admissions = parseInt($(cells[5]).text().replace(/,/g, '')) || 0
+    const year = parseInt($(cells[6]).text().trim()) || 0
+    const director = $(cells[3]).text().trim()
+    rows.push({ rank, titleKr, titleEn, admissions, year, director })
+  })
+  rows.sort((a, b) => a.rank - b.rank)
+  return rows.slice(0, 10).map((r) => ({
+    rank: r.rank,
+    prev: r.rank,
+    name: r.titleKr || r.titleEn,
+    value: `${(r.admissions / 1e4).toFixed(0)}만 명`,
+    detail: `${r.year}년 · 감독 ${r.director}. 전국 관객수 기준.`,
+    flag: '🇰🇷',
+  }))
+}
+
+// ───────────────────────── external source modules ─────────────────────────
+
+import { entScrapers } from './sources/ent-scrapers.mjs'
+import { geoScrapers } from './sources/geo-scrapers.mjs'
+import { sportsScrapers } from './sources/sports-scrapers.mjs'
+import { leagueScrapers } from './sources/league-scrapers.mjs'
+
 // ───────────────────────── scrapers ─────────────────────────
 
 const scrapers = {
+  // World Bank API (3)
   async gdp() {
     return buildRanking(await fetchWorldBank('NY.GDP.MKTP.CD'), 10, fmtTrillionUSD, 'World Bank 기준.')
   },
@@ -145,6 +465,18 @@ const scrapers = {
   async population() {
     return buildRanking(await fetchWorldBank('SP.POP.TOTL'), 10, fmtPopulation, '기준 추정치.')
   },
+  // F1 API (2)
+  'f1-driver': scrapeF1Drivers,
+  'f1-team': scrapeF1Teams,
+  // Wikipedia inline (3)
+  olympic: scrapeOlympic,
+  'box-office-global': scrapeBoxOfficeGlobal,
+  'box-office-kr': scrapeBoxOfficeKr,
+  // External modules — 실패 시 throw → seed 유지
+  ...entScrapers,
+  ...geoScrapers,
+  ...sportsScrapers,
+  ...leagueScrapers,
 }
 
 // ───────────────────────── main ─────────────────────────

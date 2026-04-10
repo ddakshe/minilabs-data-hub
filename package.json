@@ -1,5 +1,8 @@
 {
   "name": "minilabs-data-hub",
   "private": true,
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "cheerio": "^1.2.0"
+  }
 }

@@ -2,7 +2,7 @@ name: Fetch Rankings
 
 on:
   schedule:
-    - cron: '0 10 * * 1' # 매주 월요일 10:00 UTC (한국 19:00)
+    - cron: '0 19 * * *' # 매일 19:00 UTC (한국 04:00 새벽)
   workflow_dispatch:
     inputs:
       reason:
@@ -30,6 +30,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
 
       - name: Show trigger context
         run: |
@@ -63,7 +66,7 @@ jobs:
           if [ "$TRIGGER" = "workflow_dispatch" ]; then
             MSG="chore(rankings): manual refresh ($DATE_KST)"
           else
-            MSG="chore(rankings): weekly refresh ($DATE_KST)"
+            MSG="chore(rankings): daily refresh ($DATE_KST)"
           fi
 
           git add rankings/
