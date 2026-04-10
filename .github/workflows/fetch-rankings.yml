@@ -45,10 +45,10 @@ jobs:
           TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
 
       - name: Fetch rankings (cheerio/API)
-        run: node scripts/fetch-rankings.mjs
+        run: node scripts/fetch-rankings.mjs || echo "⚠️ cheerio 일부 실패 — seed 데이터 유지"
 
       - name: Fetch rankings (Playwright)
-        run: node scripts/fetch-rankings-pw.mjs || echo "⚠️ Playwright 일부 실패 — cheerio 데이터 유지"
+        run: node scripts/fetch-rankings-pw.mjs || echo "⚠️ Playwright 일부 실패 — 기존 데이터 유지"
 
       - name: Check for changes
         id: diff
