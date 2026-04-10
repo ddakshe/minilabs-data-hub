@@ -454,8 +454,15 @@ import { leagueScrapers } from './sources/league-scrapers.mjs'
 
 // ───────────────────────── scrapers ─────────────────────────
 
-const scrapers = {
-  // World Bank API (3)
+// daily: 매일 변동 (리그 순위, F1)
+const DAILY_SCRAPERS = {
+  'f1-driver': scrapeF1Drivers,
+  'f1-team': scrapeF1Teams,
+  ...leagueScrapers, // epl, laliga, nba-team, mlb-team
+}
+
+// weekly: 주 1회면 충분 (경제, 역대 기록, SNS, 스포츠 랭킹 등)
+const WEEKLY_SCRAPERS = {
   async gdp() {
     return buildRanking(await fetchWorldBank('NY.GDP.MKTP.CD'), 10, fmtTrillionUSD, 'World Bank 기준.')
   },
@@ -465,34 +472,39 @@ const scrapers = {
   async population() {
     return buildRanking(await fetchWorldBank('SP.POP.TOTL'), 10, fmtPopulation, '기준 추정치.')
   },
-  // F1 API (2)
-  'f1-driver': scrapeF1Drivers,
-  'f1-team': scrapeF1Teams,
-  // Wikipedia inline (3)
   olympic: scrapeOlympic,
   'box-office-global': scrapeBoxOfficeGlobal,
   'box-office-kr': scrapeBoxOfficeKr,
-  // External modules — 실패 시 throw → seed 유지
   ...entScrapers,
   ...geoScrapers,
   ...sportsScrapers,
-  ...leagueScrapers,
 }
+
+const scrapers = { ...DAILY_SCRAPERS, ...WEEKLY_SCRAPERS }
 
 // ───────────────────────── main ─────────────────────────
 
 async function main() {
+  const args = process.argv.slice(2)
   const seed = JSON.parse(await fs.readFile(SEED_PATH, 'utf-8'))
   const today = new Date().toISOString().split('T')[0]
-  const scraperIds = Object.keys(scrapers)
 
-  console.log(`▶ Rankings update (${seed.categories.length} categories, ${scraperIds.length} scrapers)\n`)
+  let toRun
+  if (args.includes('--daily')) {
+    toRun = Object.entries(DAILY_SCRAPERS)
+  } else if (args.includes('--weekly')) {
+    toRun = Object.entries(WEEKLY_SCRAPERS)
+  } else {
+    toRun = Object.entries(scrapers)
+  }
+
+  console.log(`▶ Rankings update (${seed.categories.length} categories, ${toRun.length} scrapers${args[0] ? ' [' + args[0] + ']' : ''})\n`)
 
   // 1) 스크래퍼 실행 → seed 데이터 업데이트
   let updated = 0
   let failed = 0
 
-  for (const [catId, scraper] of Object.entries(scrapers)) {
+  for (const [catId, scraper] of toRun) {
     try {
       const items = await scraper()
       if (Array.isArray(items) && items.length > 0) {

@@ -1,14 +1,14 @@
-name: "Fetch Rankings (Daily)"
+name: "Fetch Rankings (Weekly)"
 
 on:
   schedule:
-    - cron: '0 22 * * *' # 매일 22:00 UTC = KST 07:00
+    - cron: '0 19 * * 1' # 매주 월요일 19:00 UTC = KST 화요일 04:00
   workflow_dispatch:
     inputs:
       reason:
         description: '실행 이유'
         required: false
-        default: 'manual daily'
+        default: 'manual weekly'
 
 permissions:
   contents: write
@@ -39,16 +39,16 @@ jobs:
 
       - name: Show trigger context
         run: |
-          echo "Mode        : DAILY"
+          echo "Mode        : WEEKLY"
           echo "Event       : ${{ github.event_name }}"
           echo "Reason      : ${{ github.event.inputs.reason || '(scheduled)' }}"
           TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
 
-      - name: Fetch rankings — cheerio (daily)
-        run: node scripts/fetch-rankings.mjs --daily || echo "⚠️ cheerio 일부 실패"
+      - name: Fetch rankings — cheerio (weekly)
+        run: node scripts/fetch-rankings.mjs --weekly || echo "⚠️ cheerio 일부 실패"
 
-      - name: Fetch rankings — Playwright (daily)
-        run: node scripts/fetch-rankings-pw.mjs --daily || echo "⚠️ Playwright 일부 실패"
+      - name: Fetch rankings — Playwright (weekly)
+        run: node scripts/fetch-rankings-pw.mjs --weekly || echo "⚠️ Playwright 일부 실패"
 
       - name: Check for changes
         id: diff
@@ -68,14 +68,14 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
           git add rankings/
-          git commit -m "chore(rankings): daily refresh ($DATE_KST)"
+          git commit -m "chore(rankings): weekly refresh ($DATE_KST)"
           git push
 
       - name: Summary
         if: always()
         run: |
           {
-            echo "## Daily Rankings Summary"
+            echo "## Weekly Rankings Summary"
             echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
             echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
           } >> "$GITHUB_STEP_SUMMARY"

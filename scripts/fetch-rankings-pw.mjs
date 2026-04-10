@@ -396,32 +396,45 @@ async function scrapeKlpga(page) {
 
 // ───────────────────────── registry ─────────────────────────
 
-const scrapers = {
+// daily: 매일 변동하는 데이터 (리그 순위, 시총)
+// weekly: 주 1회면 충분한 데이터 (연봉, 상금, 부자 등)
+const DAILY = {
   kleague: scrapeKleague,
   kbo: scrapeKbo,
   'market-cap-kospi': scrapeMarketCapKospi,
+  'nba-salary': scrapeNbaSalary,
+  'mlb-salary': scrapeMlbSalary,
+}
+
+const WEEKLY = {
   rich: scrapeForbesBillionaires,
   'ceo-salary': scrapeCeoSalary,
   'golf-earn': scrapeGolfEarn,
   'tennis-earn': scrapeTennisEarn,
   'golf-women': scrapeKlpga,
-  'nba-salary': scrapeNbaSalary,
-  'mlb-salary': scrapeMlbSalary,
   'football-salary': scrapeFootballSalary,
 }
+
+const scrapers = { ...DAILY, ...WEEKLY }
 
 // ───────────────────────── main ─────────────────────────
 
 async function main() {
   const args = process.argv.slice(2)
-  const filterIds = args.length > 0 ? args : null
 
   const seed = JSON.parse(await fs.readFile(SEED_PATH, 'utf-8'))
   const today = new Date().toISOString().split('T')[0]
 
-  const toRun = filterIds
-    ? Object.entries(scrapers).filter(([id]) => filterIds.includes(id))
-    : Object.entries(scrapers)
+  let toRun
+  if (args.includes('--daily')) {
+    toRun = Object.entries(DAILY)
+  } else if (args.includes('--weekly')) {
+    toRun = Object.entries(WEEKLY)
+  } else if (args.length > 0 && !args[0].startsWith('--')) {
+    toRun = Object.entries(scrapers).filter(([id]) => args.includes(id))
+  } else {
+    toRun = Object.entries(scrapers)
+  }
 
   console.log(`▶ Playwright 스크래핑 (${toRun.length}개 카테고리)\n`)
 
