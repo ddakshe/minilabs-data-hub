@@ -451,6 +451,7 @@ import { entScrapers } from './sources/ent-scrapers.mjs'
 import { geoScrapers } from './sources/geo-scrapers.mjs'
 import { sportsScrapers } from './sources/sports-scrapers.mjs'
 import { leagueScrapers } from './sources/league-scrapers.mjs'
+import { recordsScrapers, darkScrapers } from './sources/records-scrapers.mjs'
 
 // ───────────────────────── scrapers ─────────────────────────
 
@@ -478,6 +479,8 @@ const WEEKLY_SCRAPERS = {
   ...entScrapers,
   ...geoScrapers,
   ...sportsScrapers,
+  ...recordsScrapers,
+  ...darkScrapers,
 }
 
 const scrapers = { ...DAILY_SCRAPERS, ...WEEKLY_SCRAPERS }
