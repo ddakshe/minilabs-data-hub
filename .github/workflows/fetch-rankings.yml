@@ -71,6 +71,18 @@ jobs:
           git commit -m "chore(rankings): daily refresh ($DATE_KST)"
           git push
 
+      - name: Purge jsDelivr CDN cache
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          sleep 10
+          BASE="https://purge.jsdelivr.net/gh/ddakshe/minilabs-data-hub@main/rankings"
+          for f in rankings/*.json; do
+            name=$(basename "$f")
+            echo "Purging $name..."
+            curl -s -o /dev/null -w "  %{http_code}\n" "$BASE/$name"
+          done
+          echo "✓ jsDelivr cache purged"
+
       - name: Summary
         if: always()
         run: |
