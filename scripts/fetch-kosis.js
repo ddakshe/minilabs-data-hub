@@ -1,8 +1,10 @@
 // KOSIS Open API → korea-stats/stats.json
 //
 // Usage:
-//   node --env-file=.env.local scripts/fetch-kosis.js
 //   KOSIS_API_KEY=xxx node scripts/fetch-kosis.js
+//
+// 이 스크립트는 minilabs-data-hub의 GitHub Actions cron(06:00 KST)에서 실행되어
+// korea-stats-mini 앱이 jsdelivr CDN으로 소비하는 stats.json을 생성한다.
 //
 // Produces a time-series stats.json:
 //   - 월별 지표: 최근 36개월 history
@@ -442,6 +444,209 @@ const indicators = [
         newEstPrdCnt: String(YEARLY_HISTORY + 1),
       })
       return scalarWithHistory(rows, YEARLY_HISTORY)
+    },
+  },
+
+  // ─── v0.2 추가 ───
+  {
+    id: 'soc_suicide',
+    category: 'health',
+    title: '자살률',
+    unit: '명',
+    decimals: 1,
+    frequency: 'Y',
+    source: '통계청 사망원인통계 (인구 10만명당)',
+    async fetchValue() {
+      const rows = await kosis({
+        orgId: '101',
+        tblId: 'DT_1YL21121E',
+        objL1: '0',
+        objL2: '00',
+        itmId: 'T4',
+        prdSe: 'Y',
+        newEstPrdCnt: String(YEARLY_HISTORY + 1),
+      })
+      return scalarWithHistory(rows, YEARLY_HISTORY)
+    },
+  },
+
+  {
+    id: 'soc_youth_unemp',
+    category: 'society',
+    title: '청년 실업률',
+    unit: '%',
+    decimals: 1,
+    frequency: 'M',
+    source: '통계청 경제활동인구조사 (15~29세)',
+    async fetchValue() {
+      const rows = await kosis({
+        orgId: '101',
+        tblId: 'DT_1DA7102S',
+        objL1: '0',
+        objL2: '75',
+        itmId: 'T80',
+        prdSe: 'M',
+        newEstPrdCnt: String(MONTHLY_HISTORY + 1),
+      })
+      return scalarWithHistory(rows, MONTHLY_HISTORY)
+    },
+  },
+
+  {
+    id: 'eco_export',
+    category: 'economy',
+    title: '수출액',
+    unit: '백만$',
+    frequency: 'M',
+    source: '통계청 시도별 수출입 현황',
+    async fetchValue() {
+      const rows = await kosis({
+        orgId: '101',
+        tblId: 'DT_1YL6901',
+        objL1: '00',
+        itmId: 'T10',
+        prdSe: 'M',
+        newEstPrdCnt: String(MONTHLY_HISTORY + 1),
+      })
+      const r = scalarWithHistory(rows, MONTHLY_HISTORY)
+      r.value = Math.round(r.value)
+      r.history = r.history.map((h) => ({ ...h, value: Math.round(h.value) }))
+      return r
+    },
+  },
+
+  {
+    id: 'soc_car',
+    category: 'society',
+    title: '자동차 등록대수',
+    unit: '대',
+    frequency: 'Y',
+    source: '국토교통부 자동차등록현황',
+    async fetchValue() {
+      const rows = await kosis({
+        orgId: '116',
+        tblId: 'DT_MLTM_1244',
+        objL1: '13102871003A.01',
+        objL2: '13102871003B.0005',
+        itmId: '13103871003T1',
+        prdSe: 'Y',
+        newEstPrdCnt: String(YEARLY_HISTORY + 1),
+      })
+      return scalarWithHistory(rows, YEARLY_HISTORY)
+    },
+  },
+
+  {
+    id: 'pop_foreigner',
+    category: 'population',
+    title: '체류 외국인',
+    unit: '명',
+    frequency: 'Y',
+    source: '법무부 출입국·외국인정책 통계',
+    async fetchValue() {
+      const rows = await kosis({
+        orgId: '111',
+        tblId: 'DT_1B040A6',
+        objL1: 'AAC000',
+        objL2: '13102870964B.0',
+        objL3: 'AAB000',
+        itmId: '13103870964T1',
+        prdSe: 'Y',
+        newEstPrdCnt: String(YEARLY_HISTORY + 1),
+      })
+      return scalarWithHistory(rows, YEARLY_HISTORY)
+    },
+  },
+
+  // ─── v0.3 추가 ─── (DT_1B8000G 인구동향 테이블에서 3개 수확)
+  {
+    id: 'pop_birth',
+    category: 'population',
+    title: '출생아 수',
+    unit: '명',
+    frequency: 'M',
+    source: '통계청 인구동향조사',
+    async fetchValue() {
+      const rows = await kosis({
+        orgId: '101',
+        tblId: 'DT_1B8000G',
+        objL1: '00',
+        objL2: '10',
+        itmId: 'T1',
+        prdSe: 'M',
+        newEstPrdCnt: String(MONTHLY_HISTORY + 1),
+      })
+      return scalarWithHistory(rows, MONTHLY_HISTORY)
+    },
+  },
+
+  {
+    id: 'soc_marriage',
+    category: 'society',
+    title: '혼인 건수',
+    unit: '건',
+    frequency: 'M',
+    source: '통계청 인구동향조사',
+    async fetchValue() {
+      const rows = await kosis({
+        orgId: '101',
+        tblId: 'DT_1B8000G',
+        objL1: '00',
+        objL2: '20',
+        itmId: 'T1',
+        prdSe: 'M',
+        newEstPrdCnt: String(MONTHLY_HISTORY + 1),
+      })
+      return scalarWithHistory(rows, MONTHLY_HISTORY)
+    },
+  },
+
+  {
+    id: 'soc_divorce',
+    category: 'society',
+    title: '이혼 건수',
+    unit: '건',
+    frequency: 'M',
+    source: '통계청 인구동향조사',
+    async fetchValue() {
+      const rows = await kosis({
+        orgId: '101',
+        tblId: 'DT_1B8000G',
+        objL1: '00',
+        objL2: '30',
+        itmId: 'T1',
+        prdSe: 'M',
+        newEstPrdCnt: String(MONTHLY_HISTORY + 1),
+      })
+      return scalarWithHistory(rows, MONTHLY_HISTORY)
+    },
+  },
+
+  {
+    id: 'soc_apartment',
+    category: 'society',
+    title: '아파트 매매가격지수',
+    unit: 'pt',
+    decimals: 1,
+    frequency: 'M',
+    source: '한국부동산원 전국주택가격동향',
+    async fetchValue() {
+      const rows = await kosis({
+        orgId: '101',
+        tblId: 'DT_1YL20162E',
+        objL1: 'a0',
+        objL2: '01',
+        itmId: 'sales',
+        prdSe: 'M',
+        newEstPrdCnt: String(MONTHLY_HISTORY + 1),
+      })
+      const r = scalarWithHistory(rows, MONTHLY_HISTORY)
+      r.value = Math.round(r.value * 10) / 10
+      r.history = r.history.map((h) => ({
+        ...h,
+        value: Math.round(h.value * 10) / 10,
+      }))
+      return r
     },
   },
 ]
