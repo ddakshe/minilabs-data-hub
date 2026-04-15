@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-14",
+  "updatedAt": "2026-04-15",
   "source": "KOSIS Open API",
   "categories": [
     {
@@ -574,18 +574,14 @@
       "id": "soc_unemp",
       "category": "society",
       "title": "실업률",
-      "value": 3.4,
+      "value": 3,
       "unit": "%",
-      "changePct": 6.2,
+      "changePct": -3.2,
       "decimals": 1,
       "frequency": "M",
       "source": "통계청 경제활동인구조사",
-      "period": "2026.02",
+      "period": "2026.03",
       "history": [
-        {
-          "prd": "202303",
-          "value": 2.9
-        },
         {
           "prd": "202304",
           "value": 2.8
@@ -725,6 +721,10 @@
         {
           "prd": "202602",
           "value": 3.4
+        },
+        {
+          "prd": "202603",
+          "value": 3
         }
       ]
     },
@@ -1221,18 +1221,14 @@
       "id": "soc_youth_unemp",
       "category": "society",
       "title": "청년 실업률",
-      "value": 7.7,
+      "value": 7.6,
       "unit": "%",
-      "changePct": 10,
+      "changePct": 1.3,
       "decimals": 1,
       "frequency": "M",
       "source": "통계청 경제활동인구조사 (15~29세)",
-      "period": "2026.02",
+      "period": "2026.03",
       "history": [
-        {
-          "prd": "202303",
-          "value": 7.1
-        },
         {
           "prd": "202304",
           "value": 6.4
@@ -1372,6 +1368,10 @@
         {
           "prd": "202602",
           "value": 7.7
+        },
+        {
+          "prd": "202603",
+          "value": 7.6
         }
       ]
     },
