@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-15",
+  "updatedAt": "2026-04-16",
   "source": "KOSIS Open API",
   "categories": [
     {
@@ -25,18 +25,18 @@
   ],
   "issues": [
     {
+      "id": "i_eco_export",
+      "emoji": "📈",
+      "title": "수출액 · 36개월 최고",
+      "description": "2026.03 기준",
+      "category": "economy"
+    },
+    {
       "id": "i_hea_smoke",
       "emoji": "📉",
       "title": "현재 흡연율 · 10년 최저",
       "description": "2024년 기준",
       "category": "health"
-    },
-    {
-      "id": "i_pop_birth",
-      "emoji": "📈",
-      "title": "출생아 수 · 36개월 최고",
-      "description": "2026.01 기준",
-      "category": "population"
     }
   ],
   "stats": [
@@ -890,12 +890,12 @@
       "id": "soc_crime",
       "category": "society",
       "title": "5대 강력범죄",
-      "value": 73212,
+      "value": 72911,
       "unit": "건",
-      "changePct": 0,
+      "changePct": 1113.8,
       "frequency": "M",
       "source": "경찰청 범죄통계",
-      "period": "2025.04",
+      "period": "2026.01",
       "history": [
         {
           "prd": "202301",
@@ -944,6 +944,10 @@
         {
           "prd": "202504",
           "value": 6176
+        },
+        {
+          "prd": "202601",
+          "value": 5706
         }
       ]
     },
@@ -1379,17 +1383,13 @@
       "id": "eco_export",
       "category": "economy",
       "title": "수출액",
-      "value": 67310,
+      "value": 86627,
       "unit": "백만$",
-      "changePct": 28.7,
+      "changePct": 49.2,
       "frequency": "M",
       "source": "통계청 시도별 수출입 현황",
-      "period": "2026.02",
+      "period": "2026.03",
       "history": [
-        {
-          "prd": "202303",
-          "value": 54882
-        },
         {
           "prd": "202304",
           "value": 49431
@@ -1524,11 +1524,15 @@
         },
         {
           "prd": "202601",
-          "value": 65813
+          "value": 65829
         },
         {
           "prd": "202602",
-          "value": 67310
+          "value": 67415
+        },
+        {
+          "prd": "202603",
+          "value": 86627
         }
       ]
     },
