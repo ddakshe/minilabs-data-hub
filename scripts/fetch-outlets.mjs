@@ -51,7 +51,7 @@ function inferType(title = '') {
   if (/팝업|pop.?up/i.test(title)) return 'popup'
   if (/전시|갤러리|아트|art|exhibition/i.test(title)) return 'exhibition'
   if (/추가.?할인|extra|쿠폰|포인트/i.test(title)) return 'discount'
-  if (/세일|sale|기획전|특가|시즌|할인/i.test(title)) return 'sale'
+  if (/세일|sale|기획전|특가|시즌|할인|promotion|festa|week/i.test(title)) return 'sale'
   return 'etc'
 }
 
@@ -116,29 +116,34 @@ async function scrapeHyundaiBranch(page, branchCd) {
 }
 
 // ───────────────────────── 신세계 지점별 스크래퍼 ─────────────────────────
-// https://www.premiumoutlets.co.kr/rpage/shopping-info/event/01
+// https://www.premiumoutlets.co.kr/rpage/shopping-info/news/01#special (쇼핑뉴스 탭)
 
 async function scrapeShinsegaeBranch(page, storeCode) {
-  const url = `https://www.premiumoutlets.co.kr/rpage/shopping-info/event/${storeCode}`
+  const url = `https://www.premiumoutlets.co.kr/rpage/shopping-info/news/${storeCode}`
   await page.goto(url, { waitUntil: 'networkidle', timeout: 30000 })
-  // Vue.js 렌더링 대기
   await page.waitForTimeout(1500)
 
+  // 쇼핑뉴스 탭 클릭 (hash가 #special로 바뀜)
+  try {
+    const tab = page.locator('li').filter({ hasText: /^쇼핑뉴스$/ }).first()
+    if (await tab.count() > 0) {
+      await tab.click()
+      await page.waitForTimeout(800)
+    }
+  } catch { /* 탭 없으면 현재 탭 그대로 */ }
+
   const items = await page.evaluate(() => {
-    const cards = document.querySelectorAll(
-      '[class*="event-item"], [class*="eventItem"], [class*="event_item"], .list-item, li'
-    )
+    // 쇼핑뉴스 카드: .list-item 클래스
+    const cards = document.querySelectorAll('.list-item')
     const out = []
     for (const card of cards) {
-      const titleEl = card.querySelector('[class*="title"], [class*="tit"], h3, h4, strong, p')
-      const dateEl = card.querySelector('[class*="date"], [class*="period"], [class*="term"], span')
+      const titleEl = card.querySelector('p, strong, [class*="tit"], [class*="title"]')
+      const dateEl = card.querySelector('span, [class*="date"], [class*="period"]')
       if (!titleEl) continue
       const title = titleEl.innerText?.trim()
       const period = dateEl?.innerText?.trim() || ''
-      if (title && title.length > 3 && !/진행중인|없습니다/.test(title)) {
-        out.push({ title, period })
-      }
-      if (out.length >= 8) break
+      if (title && title.length > 3) out.push({ title, period })
+      if (out.length >= 10) break
     }
     return out
   })
