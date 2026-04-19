@@ -133,7 +133,7 @@ async function scrapeShinsegaeBranch(page, storeCode) {
   } catch { /* 탭 없으면 현재 탭 그대로 */ }
 
   const items = await page.evaluate(() => {
-    // 쇼핑뉴스 카드: .list-item 클래스
+    const BASE = 'https://www.premiumoutlets.co.kr'
     const cards = document.querySelectorAll('.list-item')
     const out = []
     for (const card of cards) {
@@ -142,19 +142,21 @@ async function scrapeShinsegaeBranch(page, storeCode) {
       if (!titleEl) continue
       const title = titleEl.innerText?.trim()
       const period = dateEl?.innerText?.trim() || ''
-      if (title && title.length > 3) out.push({ title, period })
+      const href = card.querySelector('a[href]')?.getAttribute('href') || ''
+      const url = href && href.startsWith('/') ? BASE + href : (href || null)
+      if (title && title.length > 3) out.push({ title, period, url })
       if (out.length >= 10) break
     }
     return out
   })
 
-  return items.map(({ title, period }) => {
+  return items.map(({ title, period, url }) => {
     const [startRaw, endRaw] = period.split(/~|–/)
     const startDate = parseKoreanDate(startRaw?.trim()) || todayKST()
     const endDate = parseKoreanDate(endRaw?.trim())
     const dl = daysLeft(endDate)
     if (dl !== null && dl < 0) return null
-    return { type: inferType(title), title, startDate, endDate, daysLeft: dl }
+    return { type: inferType(title), title, startDate, endDate, daysLeft: dl, ...(url ? { url } : {}) }
   }).filter(Boolean)
 }
 
