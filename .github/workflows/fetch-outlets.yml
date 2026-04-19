@@ -1,0 +1,93 @@
+name: Fetch outlet events
+
+on:
+  schedule:
+    - cron: '0 20 * * *'   # 매일 05:00 KST (UTC 20:00 전날)
+  workflow_dispatch:
+    inputs:
+      chain:
+        description: '특정 체인만 실행 (lotte/shinsegae/hyundai/mario — 비우면 전체)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-outlets
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium --with-deps
+
+      - name: Show trigger context
+        run: |
+          echo "Event : ${{ github.event_name }}"
+          echo "Chain : ${{ github.event.inputs.chain || '(all)' }}"
+          date -u "+UTC: %Y-%m-%d %H:%M:%S"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      - name: Fetch outlet data
+        run: |
+          CHAIN="${{ github.event.inputs.chain }}"
+          if [ -n "$CHAIN" ]; then
+            node scripts/fetch-outlets.mjs "$CHAIN"
+          else
+            node scripts/fetch-outlets.mjs
+          fi
+
+      - name: Check for changes
+        id: diff
+        run: |
+          if git diff --quiet -- outlets/outlets.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes — skipping commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --stat outlets/outlets.json
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
+          TRIGGER="${{ github.event_name }}"
+          if [ "$TRIGGER" = "workflow_dispatch" ]; then
+            MSG="chore(outlets): manual refresh ($DATE_KST)"
+          else
+            MSG="chore(outlets): daily refresh ($DATE_KST)"
+          fi
+
+          git add outlets/outlets.json
+          git commit -m "$MSG"
+          git push
+
+      - name: Summary
+        run: |
+          echo "### 아울렛 데이터 갱신" >> "$GITHUB_STEP_SUMMARY"
+          CHANGED="${{ steps.diff.outputs.changed }}"
+          if [ "$CHANGED" = "true" ]; then
+            echo "✅ outlets.json 업데이트 완료" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "ℹ️ 변경사항 없음 (이전 데이터 유지)" >> "$GITHUB_STEP_SUMMARY"
+          fi
