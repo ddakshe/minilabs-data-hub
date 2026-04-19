@@ -61,50 +61,55 @@ function inferType(title = '') {
 async function scrapeHyundaiBranch(page, branchCd) {
   const url = `https://www.ehyundai.com/newPortal/SN/SN_0101000.do?branchCd=${branchCd}`
   await page.goto(url, { waitUntil: 'networkidle', timeout: 30000 })
+  await page.waitForTimeout(1500)
 
-  // 탭별로 데이터 수집 (사은행사, 문화이벤트, 쇼핑뉴스)
-  const TAB_SELECTORS = [
-    { selector: '#giftTab, [href*="giftTab"], button:has-text("사은행사")', type: 'sale' },
-    { selector: '#cultureTab, [href*="cultureTab"], button:has-text("문화이벤트")', type: 'exhibition' },
-    { selector: '#eventTab, [href*="eventTab"], button:has-text("쇼핑뉴스")', type: 'etc' },
-  ]
+  // 이벤트는 goDetail JS 호출을 href로 가진 <a> 태그로 렌더링됨
+  const items = await page.evaluate(() => {
+    const anchors = document.querySelectorAll('a[href*="goDetail"]')
+    const seen = new Set()
+    const out = []
+
+    for (const a of anchors) {
+      const raw = a.innerText?.trim()
+      if (!raw || raw.length < 3) continue
+
+      // "제목\n기간\n날짜범위\n장소\n위치" 형태 파싱
+      const lines = raw.split('\n').map(l => l.trim()).filter(Boolean)
+      const periodIdx = lines.indexOf('기간')
+      const placeIdx = lines.indexOf('장소')
+
+      const titleLines = lines.slice(0, periodIdx >= 0 ? periodIdx : (placeIdx >= 0 ? placeIdx : lines.length))
+      const title = titleLines.join(' ').replace(/\s+/g, ' ').trim()
+      const period = periodIdx >= 0 ? (lines[periodIdx + 1] || '') : ''
+
+      if (!title || title.length < 2) continue
+      if (seen.has(title)) continue
+      seen.add(title)
+
+      // href에서 eventId 추출: goDetail('branchCd', 'eventId', ...)
+      const match = a.href?.match(/goDetail\(['"]([^'"]+)['"]\s*,\s*['"]([^'"]+)['"]/)
+      const eventId = match?.[2] || ''
+      const eventType = a.href?.match(/,\s*['"](\w+)['"]\s*\)/)?.[1] || 'event'
+
+      out.push({ title, period, eventId, eventType })
+      if (out.length >= 10) break
+    }
+    return out
+  })
 
   const results = []
+  for (const { title, period, eventId, eventType } of items) {
+    const [startRaw, endRaw] = period.split(/~|–/)
+    const startDate = parseKoreanDate(startRaw?.trim()) || todayKST()
+    const endDate = parseKoreanDate(endRaw?.trim())
+    const dl = daysLeft(endDate)
+    if (dl !== null && dl < 0) continue
 
-  for (const { selector, type } of TAB_SELECTORS) {
-    try {
-      const tab = page.locator(selector).first()
-      if (await tab.count() > 0) {
-        await tab.click()
-        await page.waitForTimeout(800)
-      }
-    } catch { /* 탭 없으면 스킵 */ }
+    const url = eventId
+      ? `https://www.ehyundai.com/newPortal/SN/SN_0101010.do?branchCd=${branchCd}&eventNo=${eventId}&eventGubun=${eventType}`
+      : undefined
 
-    const items = await page.evaluate(() => {
-      const cards = document.querySelectorAll(
-        '.event_list li, .eventList li, [class*="event"] li, [class*="list_event"] li'
-      )
-      const out = []
-      for (const card of cards) {
-        const titleEl = card.querySelector('[class*="tit"], [class*="title"], strong, p, dt')
-        const dateEl = card.querySelector('[class*="date"], [class*="period"], [class*="term"], dd, span')
-        if (!titleEl) continue
-        const title = titleEl.innerText?.trim()
-        const period = dateEl?.innerText?.trim() || ''
-        if (title && title.length > 2) out.push({ title, period })
-        if (out.length >= 5) break
-      }
-      return out
-    })
-
-    for (const { title, period } of items) {
-      const [startRaw, endRaw] = period.split(/~|–/)
-      const startDate = parseKoreanDate(startRaw?.trim()) || todayKST()
-      const endDate = parseKoreanDate(endRaw?.trim())
-      const dl = daysLeft(endDate)
-      if (dl !== null && dl < 0) continue
-      results.push({ type: inferType(title), title, startDate, endDate, daysLeft: dl })
-    }
+    results.push({ type: inferType(title), title, startDate, endDate, daysLeft: dl, ...(url ? { url } : {}) })
   }
 
   return results
