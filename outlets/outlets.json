@@ -15,9 +15,22 @@
     },
     "kakaoMapUrl": "https://map.kakao.com/link/search/신세계프리미엄아울렛%20여주점",
     "naverMapUrl": "https://map.naver.com/v5/search/신세계프리미엄아울렛%20여주점",
-    "events": [],
-    "hotBrands": [],
-    "updatedAt": null
+    "events": [
+      {
+        "title": "봄 시즌 프리미엄 세일",
+        "startDate": "2026-04-10",
+        "endDate": "2026-04-30",
+        "daysLeft": 11
+      },
+      {
+        "title": "명품 브랜드 특별 기획전",
+        "startDate": "2026-04-15",
+        "endDate": "2026-05-11",
+        "daysLeft": 22
+      }
+    ],
+    "hotBrands": ["구찌", "프라다", "버버리", "생로랑", "발렌시아가", "토리버치"],
+    "updatedAt": "2026-04-19"
   },
   {
     "id": "lotte-dongbusan",
@@ -35,9 +48,16 @@
     },
     "kakaoMapUrl": "https://map.kakao.com/link/search/롯데프리미엄아울렛%20동부산점",
     "naverMapUrl": "https://map.naver.com/v5/search/롯데프리미엄아울렛%20동부산점",
-    "events": [],
-    "hotBrands": [],
-    "updatedAt": null
+    "events": [
+      {
+        "title": "동부산 봄 대축제 세일",
+        "startDate": "2026-04-18",
+        "endDate": "2026-04-21",
+        "daysLeft": 2
+      }
+    ],
+    "hotBrands": ["나이키", "아디다스", "뉴발란스", "폴로", "타미힐피거"],
+    "updatedAt": "2026-04-19"
   },
   {
     "id": "hyundai-gimpo",
@@ -55,9 +75,16 @@
     },
     "kakaoMapUrl": "https://map.kakao.com/link/search/현대프리미엄아울렛%20김포점",
     "naverMapUrl": "https://map.naver.com/v5/search/현대프리미엄아울렛%20김포점",
-    "events": [],
-    "hotBrands": [],
-    "updatedAt": null
+    "events": [
+      {
+        "title": "김포 스프링 패밀리 세일",
+        "startDate": "2026-04-05",
+        "endDate": "2026-05-04",
+        "daysLeft": 15
+      }
+    ],
+    "hotBrands": ["폴로 랄프로렌", "타미힐피거", "캘빈클라인", "MCM", "코치"],
+    "updatedAt": "2026-04-19"
   },
   {
     "id": "lotte-seoul-station",
