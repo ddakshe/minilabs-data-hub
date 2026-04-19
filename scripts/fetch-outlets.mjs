@@ -190,34 +190,40 @@ async function scrapeLotte(page) {
 }
 
 // ───────────────────────── 마리오 스크래퍼 ─────────────────────────
+// http://www.mariooutlet.co.kr/Event/Shopping
 
 async function scrapeMario(page) {
-  await page.goto('https://www.marioroutlet.com/event/list', { waitUntil: 'networkidle', timeout: 30000 })
-  await page.waitForSelector('body', { timeout: 10000 })
+  await page.goto('http://www.mariooutlet.co.kr/Event/Shopping', { waitUntil: 'networkidle', timeout: 30000 })
+  await page.waitForSelector('ul.saleInfo', { timeout: 10000 })
 
   const items = await page.evaluate(() => {
+    const BASE = 'http://www.mariooutlet.co.kr'
+    const seen = new Set()
     const results = []
-    const cards = document.querySelectorAll('li, article, [class*="event"]')
-    for (const card of cards) {
-      const titleEl = card.querySelector('[class*="tit"], strong, h3')
-      const dateEl = card.querySelector('[class*="date"], [class*="period"], span')
+    const cards = document.querySelectorAll('ul.saleInfo li')
+    for (const li of cards) {
+      const titleEl = li.querySelector('strong')
+      const dateEl = li.querySelector('span')
       if (!titleEl) continue
       const title = titleEl.innerText?.trim()
+      if (!title || seen.has(title)) continue
+      seen.add(title)
       const period = dateEl?.innerText?.trim() || ''
-      if (title && title.length > 3 && /세일|이벤트|할인|기획|팝업|전시/.test(title + period))
-        results.push({ title, period })
-      if (results.length >= 8) break
+      const href = li.querySelector('a')?.getAttribute('href') || ''
+      const url = href ? BASE + href : null
+      results.push({ title, period, url })
+      if (results.length >= 10) break
     }
     return results
   })
 
-  return items.map(({ title, period }) => {
-    const [startRaw, endRaw] = period.split(/~|–/)
+  return items.map(({ title, period, url }) => {
+    const [startRaw, endRaw] = period.split('~')
     const startDate = parseKoreanDate(startRaw?.trim()) || todayKST()
     const endDate = parseKoreanDate(endRaw?.trim())
     const dl = daysLeft(endDate)
     if (dl !== null && dl < 0) return null
-    return { type: inferType(title), title, startDate, endDate, daysLeft: dl }
+    return { type: inferType(title), title, startDate, endDate, daysLeft: dl, url }
   }).filter(Boolean)
 }
 
