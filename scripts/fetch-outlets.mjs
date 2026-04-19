@@ -187,9 +187,10 @@ async function scrapeLotteBranch(page, cstrCd) {
       // "4.17(금) ~ 4.19(일)" 패턴 날짜 찾기
       const period = lines.find(l => /\d+[./]\d+/.test(l) && /~|–/.test(l)) || ''
 
-      const a = li.querySelector('a[href]')
-      const href = a?.getAttribute('href') || ''
-      const url = href && !href.startsWith('javascript') ? base + href : null
+      // goCntsLink('C00903', 'SNM...') → /shpgnews/shpgnewsDetail?shpgNewsNo=SNM...
+      const onclick = li.querySelector('a')?.getAttribute('onclick') || ''
+      const m = onclick.match(/goCntsLink\(['"]([^'"]+)['"]\s*,\s*['"]([^'"]+)['"]/)
+      const url = m ? `https://www.lotteshopping.com/shpgnews/shpgnewsDetail?shpgNewsNo=${m[2]}` : null
 
       out.push({ title, period, url })
       if (out.length >= 10) break
