@@ -158,34 +158,50 @@ async function scrapeShinsegaeBranch(page, storeCode) {
   }).filter(Boolean)
 }
 
-// ───────────────────────── 롯데 공통 스크래퍼 ─────────────────────────
+// ───────────────────────── 롯데 지점별 스크래퍼 ─────────────────────────
+// https://www.lotteshopping.com/shopnow/cntsList?cstrCd=0352
 
-async function scrapeLotte(page) {
-  await page.goto('https://www.lotteshopping.com/outlet', { waitUntil: 'networkidle', timeout: 30000 })
-  await page.waitForSelector('body', { timeout: 10000 })
+async function scrapeLotteBranch(page, cstrCd) {
+  const url = `https://www.lotteshopping.com/shopnow/cntsList?cstrCd=${cstrCd}`
+  await page.goto(url, { waitUntil: 'networkidle', timeout: 30000 })
+  await page.waitForTimeout(2000)
 
-  const items = await page.evaluate(() => {
-    const results = []
-    const cards = document.querySelectorAll('[class*="event"], [class*="promotion"], [class*="sale"]')
-    for (const card of cards) {
-      const titleEl = card.querySelector('strong, h2, h3, [class*="title"], [class*="tit"]')
-      const periodEl = card.querySelector('[class*="period"], [class*="date"], time')
-      if (!titleEl) continue
-      const title = titleEl.innerText?.trim()
-      const period = periodEl?.innerText?.trim() || ''
-      if (title && title.length > 2) results.push({ title, period })
-      if (results.length >= 10) break
+  const BASE = 'https://www.lotteshopping.com'
+  const items = await page.evaluate((base) => {
+    const BADGES = new Set(['쇼핑뉴스', '사은', '문화/이벤트', '문화', '이벤트'])
+    const seen = new Set()
+    const out = []
+
+    for (const li of document.querySelectorAll('li.content-item')) {
+      const lines = (li.innerText || '').split('\n').map(l => l.trim()).filter(Boolean)
+      if (lines.length < 2) continue
+
+      // 첫 줄이 배지면 제거
+      const start = BADGES.has(lines[0]) ? 1 : 0
+      const title = lines[start] || ''
+      if (!title || title.length < 2 || seen.has(title)) continue
+      seen.add(title)
+
+      // "4.17(금) ~ 4.19(일)" 패턴 날짜 찾기
+      const period = lines.find(l => /\d+[./]\d+/.test(l) && /~|–/.test(l)) || ''
+
+      const a = li.querySelector('a[href]')
+      const href = a?.getAttribute('href') || ''
+      const url = href && !href.startsWith('javascript') ? base + href : null
+
+      out.push({ title, period, url })
+      if (out.length >= 10) break
     }
-    return results
-  })
+    return out
+  }, BASE)
 
-  return items.map(({ title, period }) => {
-    const [startRaw, endRaw] = period.split(/~|–|-(?=\s*\d)/)
+  return items.map(({ title, period, url }) => {
+    const [startRaw, endRaw] = period.split(/~|–/)
     const startDate = parseKoreanDate(startRaw?.trim()) || todayKST()
     const endDate = parseKoreanDate(endRaw?.trim())
     const dl = daysLeft(endDate)
     if (dl !== null && dl < 0) return null
-    return { type: inferType(title), title, startDate, endDate, daysLeft: dl }
+    return { type: inferType(title), title, startDate, endDate, daysLeft: dl, ...(url ? { url } : {}) }
   }).filter(Boolean)
 }
 
@@ -280,20 +296,22 @@ async function main() {
       await page.close()
     }
 
-    // ── 롯데: 체인 공통 ──
+    // ── 롯데: 지점별 개별 스크래핑 ──
     if (shouldRun('lotte')) {
-      console.log('\n▶ 롯데 스크래핑 시작...')
+      console.log('\n▶ 롯데 지점별 스크래핑 시작...')
+      const lotteOutlets = outlets.filter(o => o.chain === 'lotte' && o.cstrCd)
       const page = await browser.newPage()
-      try {
-        const events = await scrapeLotte(page)
-        console.log(`  이벤트 ${events.length}건`)
-        for (const o of outlets.filter(o => o.chain === 'lotte')) {
-          outletMap[o.id].events = events
-          outletMap[o.id].updatedAt = today
+      for (const outlet of lotteOutlets) {
+        try {
+          console.log(`  ${outlet.name} (${outlet.cstrCd})...`)
+          const events = await scrapeLotteBranch(page, outlet.cstrCd)
+          console.log(`    → 이벤트 ${events.length}건`)
+          outletMap[outlet.id].events = events
+          outletMap[outlet.id].updatedAt = today
           anyUpdated = true
+        } catch (err) {
+          console.error(`    ✗ ${outlet.name} 실패:`, err.message)
         }
-      } catch (err) {
-        console.error('  ✗ 롯데 실패:', err.message)
       }
       await page.close()
     }
