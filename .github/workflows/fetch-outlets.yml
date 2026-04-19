@@ -3,7 +3,6 @@ name: Fetch outlet events
 on:
   schedule:
     - cron: '0 0 * * *'    # 매일 09:00 KST (UTC 00:00)
-    - cron: '0 12 * * *'   # 매일 21:00 KST (UTC 12:00)
   workflow_dispatch:
     inputs:
       chain:
