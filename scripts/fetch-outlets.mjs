@@ -133,24 +133,27 @@ async function scrapeShinsegaeBranch(page, storeCode) {
   } catch { /* 탭 없으면 현재 탭 그대로 */ }
 
   const items = await page.evaluate(() => {
-    const BASE = 'https://www.premiumoutlets.co.kr'
     const cards = document.querySelectorAll('.list-item')
     const out = []
     for (const card of cards) {
-      const titleEl = card.querySelector('p, strong, [class*="tit"], [class*="title"]')
-      const dateEl = card.querySelector('span, [class*="date"], [class*="period"]')
+      const titleEl = card.querySelector('.title-text, [class*="tit"], [class*="title"], strong, p')
+      const dateEl = card.querySelector('.date-text, [class*="date"], [class*="period"], span')
       if (!titleEl) continue
       const title = titleEl.innerText?.trim()
       const period = dateEl?.innerText?.trim() || ''
-      const href = card.querySelector('a[href]')?.getAttribute('href') || ''
-      const url = href && href.startsWith('/') ? BASE + href : (href || null)
-      if (title && title.length > 3) out.push({ title, period, url })
+      const imgSrc = card.querySelector('img')?.getAttribute('src') || ''
+      if (title && title.length > 3) out.push({ title, period, imgSrc })
       if (out.length >= 10) break
     }
     return out
   })
 
-  return items.map(({ title, period, url }) => {
+  const BASE = 'https://www.premiumoutlets.co.kr'
+  return items.map(({ title, period, imgSrc }) => {
+    const idMatch = imgSrc.match(/\/board\/(\d+)\//)
+    const url = idMatch
+      ? `${BASE}/rpage/shopping-info/news/special-detail/${storeCode}/${idMatch[1]}`
+      : null
     const [startRaw, endRaw] = period.split(/~|–/)
     const startDate = parseKoreanDate(startRaw?.trim()) || todayKST()
     const endDate = parseKoreanDate(endRaw?.trim())
