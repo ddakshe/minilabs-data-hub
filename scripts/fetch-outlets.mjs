@@ -1,11 +1,13 @@
 // 전국 아울렛 이벤트·핫브랜드 스크래퍼 (Playwright)
 //
 // Usage:
-//   node scripts/fetch-outlets.mjs          # 전체 체인 실행
-//   node scripts/fetch-outlets.mjs lotte    # 특정 체인만
+//   node scripts/fetch-outlets.mjs              # 전체 실행
+//   node scripts/fetch-outlets.mjs hyundai      # 현대만
+//   node scripts/fetch-outlets.mjs shinsegae    # 신세계만
 //
-// 각 체인의 이벤트 페이지를 매일 긁어서 outlets/outlets.json 갱신.
-// 정적 메타(아울렛명·주소·지도링크)는 건드리지 않고 events/hotBrands/updatedAt만 덮어씀.
+// 현대(ehyundai.com), 신세계(premiumoutlets.co.kr)는 지점별 개별 스크래핑.
+// 롯데·마리오는 체인 공통 이벤트 페이지 스크래핑.
+// 정적 메타(아울렛명·주소 등)는 건드리지 않고 events/hotBrands/updatedAt만 덮어씀.
 
 import fs from 'node:fs/promises'
 import path from 'node:path'
@@ -15,7 +17,7 @@ import { chromium } from 'playwright'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const OUTPUT_PATH = path.resolve(__dirname, '../outlets/outlets.json')
 
-const TARGET_CHAIN = process.argv[2] || null // 'lotte' | 'shinsegae' | 'hyundai' | 'mario' | 'nc' | null
+const TARGET_CHAIN = process.argv[2] || null
 
 // ───────────────────────── 날짜 헬퍼 ─────────────────────────
 
@@ -27,19 +29,15 @@ function daysLeft(endDateStr) {
   if (!endDateStr) return null
   const today = new Date(todayKST())
   const end = new Date(endDateStr)
-  const diff = Math.ceil((end - today) / (1000 * 60 * 60 * 24))
-  return diff >= 0 ? diff : -1 // -1 = 종료됨
+  const diff = Math.ceil((end - today) / 86_400_000)
+  return diff >= 0 ? diff : -1
 }
 
-// 한국어 날짜 문자열 → YYYY-MM-DD
-// "2026.04.30", "2026-04-30", "04/30" 등 여러 형식 지원
 function parseKoreanDate(str) {
   if (!str) return null
   const s = str.trim()
-  // YYYY.MM.DD or YYYY-MM-DD
   const m1 = s.match(/(\d{4})[.\-\/](\d{1,2})[.\-\/](\d{1,2})/)
   if (m1) return `${m1[1]}-${m1[2].padStart(2, '0')}-${m1[3].padStart(2, '0')}`
-  // MM.DD → 올해 기준
   const m2 = s.match(/(\d{1,2})[.\-\/](\d{1,2})/)
   if (m2) {
     const year = todayKST().slice(0, 4)
@@ -48,29 +46,120 @@ function parseKoreanDate(str) {
   return null
 }
 
-// ───────────────────────── 체인별 스크래퍼 ─────────────────────────
+// 이벤트 제목 → type 추론
+function inferType(title = '') {
+  if (/팝업|pop.?up/i.test(title)) return 'popup'
+  if (/전시|갤러리|아트|art|exhibition/i.test(title)) return 'exhibition'
+  if (/추가.?할인|extra|쿠폰|포인트/i.test(title)) return 'discount'
+  if (/세일|sale|기획전|특가|시즌|할인/i.test(title)) return 'sale'
+  return 'etc'
+}
 
-// 롯데아울렛 — lotteshopping.com/outlet 이벤트 목록
-async function scrapeLotte(page) {
-  await page.goto('https://www.lotteshopping.com/outlet', {
-    waitUntil: 'networkidle',
-    timeout: 30000,
+// ───────────────────────── 현대 지점별 스크래퍼 ─────────────────────────
+// https://www.ehyundai.com/newPortal/SN/SN_0101000.do?branchCd=B00172000
+
+async function scrapeHyundaiBranch(page, branchCd) {
+  const url = `https://www.ehyundai.com/newPortal/SN/SN_0101000.do?branchCd=${branchCd}`
+  await page.goto(url, { waitUntil: 'networkidle', timeout: 30000 })
+
+  // 탭별로 데이터 수집 (사은행사, 문화이벤트, 쇼핑뉴스)
+  const TAB_SELECTORS = [
+    { selector: '#giftTab, [href*="giftTab"], button:has-text("사은행사")', type: 'sale' },
+    { selector: '#cultureTab, [href*="cultureTab"], button:has-text("문화이벤트")', type: 'exhibition' },
+    { selector: '#eventTab, [href*="eventTab"], button:has-text("쇼핑뉴스")', type: 'etc' },
+  ]
+
+  const results = []
+
+  for (const { selector, type } of TAB_SELECTORS) {
+    try {
+      const tab = page.locator(selector).first()
+      if (await tab.count() > 0) {
+        await tab.click()
+        await page.waitForTimeout(800)
+      }
+    } catch { /* 탭 없으면 스킵 */ }
+
+    const items = await page.evaluate(() => {
+      const cards = document.querySelectorAll(
+        '.event_list li, .eventList li, [class*="event"] li, [class*="list_event"] li'
+      )
+      const out = []
+      for (const card of cards) {
+        const titleEl = card.querySelector('[class*="tit"], [class*="title"], strong, p, dt')
+        const dateEl = card.querySelector('[class*="date"], [class*="period"], [class*="term"], dd, span')
+        if (!titleEl) continue
+        const title = titleEl.innerText?.trim()
+        const period = dateEl?.innerText?.trim() || ''
+        if (title && title.length > 2) out.push({ title, period })
+        if (out.length >= 5) break
+      }
+      return out
+    })
+
+    for (const { title, period } of items) {
+      const [startRaw, endRaw] = period.split(/~|–/)
+      const startDate = parseKoreanDate(startRaw?.trim()) || todayKST()
+      const endDate = parseKoreanDate(endRaw?.trim())
+      const dl = daysLeft(endDate)
+      if (dl !== null && dl < 0) continue
+      results.push({ type: inferType(title), title, startDate, endDate, daysLeft: dl })
+    }
+  }
+
+  return results
+}
+
+// ───────────────────────── 신세계 지점별 스크래퍼 ─────────────────────────
+// https://www.premiumoutlets.co.kr/rpage/shopping-info/event/01
+
+async function scrapeShinsegaeBranch(page, storeCode) {
+  const url = `https://www.premiumoutlets.co.kr/rpage/shopping-info/event/${storeCode}`
+  await page.goto(url, { waitUntil: 'networkidle', timeout: 30000 })
+  // Vue.js 렌더링 대기
+  await page.waitForTimeout(1500)
+
+  const items = await page.evaluate(() => {
+    const cards = document.querySelectorAll(
+      '[class*="event-item"], [class*="eventItem"], [class*="event_item"], .list-item, li'
+    )
+    const out = []
+    for (const card of cards) {
+      const titleEl = card.querySelector('[class*="title"], [class*="tit"], h3, h4, strong, p')
+      const dateEl = card.querySelector('[class*="date"], [class*="period"], [class*="term"], span')
+      if (!titleEl) continue
+      const title = titleEl.innerText?.trim()
+      const period = dateEl?.innerText?.trim() || ''
+      if (title && title.length > 3 && !/진행중인|없습니다/.test(title)) {
+        out.push({ title, period })
+      }
+      if (out.length >= 8) break
+    }
+    return out
   })
 
-  // 이벤트/기획전 섹션 탐색
+  return items.map(({ title, period }) => {
+    const [startRaw, endRaw] = period.split(/~|–/)
+    const startDate = parseKoreanDate(startRaw?.trim()) || todayKST()
+    const endDate = parseKoreanDate(endRaw?.trim())
+    const dl = daysLeft(endDate)
+    if (dl !== null && dl < 0) return null
+    return { type: inferType(title), title, startDate, endDate, daysLeft: dl }
+  }).filter(Boolean)
+}
+
+// ───────────────────────── 롯데 공통 스크래퍼 ─────────────────────────
+
+async function scrapeLotte(page) {
+  await page.goto('https://www.lotteshopping.com/outlet', { waitUntil: 'networkidle', timeout: 30000 })
   await page.waitForSelector('body', { timeout: 10000 })
 
-  const events = await page.evaluate(() => {
+  const items = await page.evaluate(() => {
     const results = []
-    // 이벤트 카드 공통 패턴: 제목, 기간 텍스트 포함 요소 찾기
-    const cards = document.querySelectorAll(
-      '[class*="event"], [class*="promotion"], [class*="banner"], [class*="sale"]',
-    )
+    const cards = document.querySelectorAll('[class*="event"], [class*="promotion"], [class*="sale"]')
     for (const card of cards) {
       const titleEl = card.querySelector('strong, h2, h3, [class*="title"], [class*="tit"]')
-      const periodEl = card.querySelector(
-        '[class*="period"], [class*="date"], [class*="term"], time',
-      )
+      const periodEl = card.querySelector('[class*="period"], [class*="date"], time')
       if (!titleEl) continue
       const title = titleEl.innerText?.trim()
       const period = periodEl?.innerText?.trim() || ''
@@ -80,98 +169,23 @@ async function scrapeLotte(page) {
     return results
   })
 
-  const today = todayKST()
-  return events.map(({ title, period }) => {
-    // "2026.04.01 ~ 2026.04.30" 형식 파싱
+  return items.map(({ title, period }) => {
     const [startRaw, endRaw] = period.split(/~|–|-(?=\s*\d)/)
-    const startDate = parseKoreanDate(startRaw?.trim()) || today
+    const startDate = parseKoreanDate(startRaw?.trim()) || todayKST()
     const endDate = parseKoreanDate(endRaw?.trim())
-    return {
-      title,
-      startDate,
-      endDate,
-      daysLeft: daysLeft(endDate),
-    }
-  }).filter(e => e.daysLeft === null || e.daysLeft >= 0)
+    const dl = daysLeft(endDate)
+    if (dl !== null && dl < 0) return null
+    return { type: inferType(title), title, startDate, endDate, daysLeft: dl }
+  }).filter(Boolean)
 }
 
-// 신세계아울렛 — shinsegaeoutlet.com 이벤트
-async function scrapeShinsegae(page) {
-  await page.goto('https://www.shinsegaeoutlet.com/event/ongoing', {
-    waitUntil: 'networkidle',
-    timeout: 30000,
-  })
-  await page.waitForSelector('body', { timeout: 10000 })
+// ───────────────────────── 마리오 스크래퍼 ─────────────────────────
 
-  const events = await page.evaluate(() => {
-    const results = []
-    const cards = document.querySelectorAll(
-      'li[class*="event"], article[class*="event"], [class*="eventItem"], [class*="event-item"]',
-    )
-    for (const card of cards) {
-      const titleEl = card.querySelector('[class*="title"], [class*="tit"], strong, h2, h3')
-      const dateEl = card.querySelector('[class*="date"], [class*="period"], time')
-      if (!titleEl) continue
-      const title = titleEl.innerText?.trim()
-      const period = dateEl?.innerText?.trim() || ''
-      if (title && title.length > 2) results.push({ title, period })
-      if (results.length >= 10) break
-    }
-    return results
-  })
-
-  const today = todayKST()
-  return events.map(({ title, period }) => {
-    const [startRaw, endRaw] = period.split(/~|–/)
-    const startDate = parseKoreanDate(startRaw?.trim()) || today
-    const endDate = parseKoreanDate(endRaw?.trim())
-    return { title, startDate, endDate, daysLeft: daysLeft(endDate) }
-  }).filter(e => e.daysLeft === null || e.daysLeft >= 0)
-}
-
-// 현대아울렛 — thehyundai.com/outlet 이벤트
-async function scrapeHyundai(page) {
-  await page.goto('https://www.thehyundai.com/front/hout/eventList.do', {
-    waitUntil: 'networkidle',
-    timeout: 30000,
-  })
-  await page.waitForSelector('body', { timeout: 10000 })
-
-  const events = await page.evaluate(() => {
-    const results = []
-    const cards = document.querySelectorAll(
-      '[class*="event_list"] li, [class*="eventList"] li, [class*="event-item"]',
-    )
-    for (const card of cards) {
-      const titleEl = card.querySelector('[class*="tit"], [class*="title"], strong, p')
-      const dateEl = card.querySelector('[class*="date"], [class*="period"], span')
-      if (!titleEl) continue
-      const title = titleEl.innerText?.trim()
-      const period = dateEl?.innerText?.trim() || ''
-      if (title && title.length > 2) results.push({ title, period })
-      if (results.length >= 10) break
-    }
-    return results
-  })
-
-  const today = todayKST()
-  return events.map(({ title, period }) => {
-    const [startRaw, endRaw] = period.split(/~|–/)
-    const startDate = parseKoreanDate(startRaw?.trim()) || today
-    const endDate = parseKoreanDate(endRaw?.trim())
-    return { title, startDate, endDate, daysLeft: daysLeft(endDate) }
-  }).filter(e => e.daysLeft === null || e.daysLeft >= 0)
-}
-
-// 마리오아울렛 — marioroutlet.com 이벤트
 async function scrapeMario(page) {
-  await page.goto('https://www.marioroutlet.com/event/list', {
-    waitUntil: 'networkidle',
-    timeout: 30000,
-  })
+  await page.goto('https://www.marioroutlet.com/event/list', { waitUntil: 'networkidle', timeout: 30000 })
   await page.waitForSelector('body', { timeout: 10000 })
 
-  const events = await page.evaluate(() => {
+  const items = await page.evaluate(() => {
     const results = []
     const cards = document.querySelectorAll('li, article, [class*="event"]')
     for (const card of cards) {
@@ -180,76 +194,21 @@ async function scrapeMario(page) {
       if (!titleEl) continue
       const title = titleEl.innerText?.trim()
       const period = dateEl?.innerText?.trim() || ''
-      if (title && title.length > 3 && /세일|이벤트|할인|기획/.test(title + period))
+      if (title && title.length > 3 && /세일|이벤트|할인|기획|팝업|전시/.test(title + period))
         results.push({ title, period })
       if (results.length >= 8) break
     }
     return results
   })
 
-  const today = todayKST()
-  return events.map(({ title, period }) => {
+  return items.map(({ title, period }) => {
     const [startRaw, endRaw] = period.split(/~|–/)
-    const startDate = parseKoreanDate(startRaw?.trim()) || today
+    const startDate = parseKoreanDate(startRaw?.trim()) || todayKST()
     const endDate = parseKoreanDate(endRaw?.trim())
-    return { title, startDate, endDate, daysLeft: daysLeft(endDate) }
-  }).filter(e => e.daysLeft === null || e.daysLeft >= 0)
-}
-
-// ───────────────────────── 핫브랜드 추출 공통 로직 ─────────────────────────
-// 각 사이트의 "브랜드관" 또는 "주요 브랜드" 섹션에서 브랜드명 수집
-
-async function scrapeHotBrands(page, url) {
-  try {
-    await page.goto(url, { waitUntil: 'networkidle', timeout: 30000 })
-    const brands = await page.evaluate(() => {
-      const brandEls = document.querySelectorAll(
-        '[class*="brand"] a, [class*="brand"] li, [class*="Brand"] a',
-      )
-      const names = new Set()
-      for (const el of brandEls) {
-        const name = el.innerText?.trim().replace(/\s+/g, ' ')
-        if (name && name.length >= 2 && name.length <= 30 && !/[<>]/.test(name)) {
-          names.add(name)
-        }
-        if (names.size >= 20) break
-      }
-      return [...names]
-    })
-    return brands
-  } catch {
-    return []
-  }
-}
-
-// ───────────────────────── 체인 설정 ─────────────────────────
-
-const CHAINS = {
-  lotte: {
-    scrapeEvents: scrapeLotte,
-    brandUrl: 'https://www.lotteshopping.com/outlet/brand',
-    outletIds: ['lotte-seoul-station', 'lotte-gimpo', 'lotte-gwangmyeong', 'lotte-icheon', 'lotte-dongbusan'],
-  },
-  shinsegae: {
-    scrapeEvents: scrapeShinsegae,
-    brandUrl: 'https://www.shinsegaeoutlet.com/brand',
-    outletIds: ['shinsegae-yeoju', 'shinsegae-siheung', 'shinsegae-paju', 'shinsegae-busan-centum'],
-  },
-  hyundai: {
-    scrapeEvents: scrapeHyundai,
-    brandUrl: 'https://www.thehyundai.com/front/hout/brandList.do',
-    outletIds: ['hyundai-gimpo', 'hyundai-spaceone', 'hyundai-dongdaemun'],
-  },
-  mario: {
-    scrapeEvents: scrapeMario,
-    brandUrl: 'https://www.marioroutlet.com/brand',
-    outletIds: ['mario'],
-  },
-  nc: {
-    scrapeEvents: null, // NC는 Playwright 대신 별도 처리 (봇 차단 강함)
-    brandUrl: null,
-    outletIds: ['nc-gangnam'],
-  },
+    const dl = daysLeft(endDate)
+    if (dl !== null && dl < 0) return null
+    return { type: inferType(title), title, startDate, endDate, daysLeft: dl }
+  }).filter(Boolean)
 }
 
 // ───────────────────────── 메인 ─────────────────────────
@@ -262,47 +221,86 @@ async function main() {
   const today = todayKST()
   let anyUpdated = false
 
-  const chainsToRun = TARGET_CHAIN
-    ? { [TARGET_CHAIN]: CHAINS[TARGET_CHAIN] }
-    : CHAINS
+  const shouldRun = (chain) => !TARGET_CHAIN || TARGET_CHAIN === chain
 
-  for (const [chainName, config] of Object.entries(chainsToRun)) {
-    if (!config.scrapeEvents) {
-      console.log(`⚠ ${chainName}: 스크래퍼 미구현, 스킵`)
-      continue
-    }
-
-    console.log(`\n▶ ${chainName} 스크래핑 시작...`)
-    const page = await browser.newPage()
-    page.setDefaultTimeout(30000)
-
-    try {
-      // 이벤트 수집 (체인 단위 — 지점 공통)
-      const events = await config.scrapeEvents(page)
-      console.log(`  이벤트 ${events.length}건 수집`)
-
-      // 핫브랜드 수집
-      const hotBrands = config.brandUrl
-        ? await scrapeHotBrands(page, config.brandUrl)
-        : []
-      console.log(`  브랜드 ${hotBrands.length}건 수집`)
-
-      // 해당 체인 모든 지점에 동일하게 적용
-      for (const id of config.outletIds) {
-        if (!outletMap[id]) continue
-        outletMap[id].events = events
-        outletMap[id].hotBrands = hotBrands
-        outletMap[id].updatedAt = today
-        anyUpdated = true
+  try {
+    // ── 현대: 지점별 개별 스크래핑 ──
+    if (shouldRun('hyundai')) {
+      console.log('\n▶ 현대 지점별 스크래핑 시작...')
+      const hyundaiOutlets = outlets.filter(o => o.chain === 'hyundai' && o.branchCd)
+      const page = await browser.newPage()
+      for (const outlet of hyundaiOutlets) {
+        try {
+          console.log(`  ${outlet.name} (${outlet.branchCd})...`)
+          const events = await scrapeHyundaiBranch(page, outlet.branchCd)
+          console.log(`    → 이벤트 ${events.length}건`)
+          outletMap[outlet.id].events = events
+          outletMap[outlet.id].updatedAt = today
+          anyUpdated = true
+        } catch (err) {
+          console.error(`    ✗ ${outlet.name} 실패:`, err.message)
+        }
       }
-    } catch (err) {
-      console.error(`  ✗ ${chainName} 실패:`, err.message)
-    } finally {
       await page.close()
     }
-  }
 
-  await browser.close()
+    // ── 신세계: 지점별 개별 스크래핑 ──
+    if (shouldRun('shinsegae')) {
+      console.log('\n▶ 신세계 지점별 스크래핑 시작...')
+      const ssOutlets = outlets.filter(o => o.chain === 'shinsegae' && o.storeCode)
+      const page = await browser.newPage()
+      for (const outlet of ssOutlets) {
+        try {
+          console.log(`  ${outlet.name} (${outlet.storeCode})...`)
+          const events = await scrapeShinsegaeBranch(page, outlet.storeCode)
+          console.log(`    → 이벤트 ${events.length}건`)
+          outletMap[outlet.id].events = events
+          outletMap[outlet.id].updatedAt = today
+          anyUpdated = true
+        } catch (err) {
+          console.error(`    ✗ ${outlet.name} 실패:`, err.message)
+        }
+      }
+      await page.close()
+    }
+
+    // ── 롯데: 체인 공통 ──
+    if (shouldRun('lotte')) {
+      console.log('\n▶ 롯데 스크래핑 시작...')
+      const page = await browser.newPage()
+      try {
+        const events = await scrapeLotte(page)
+        console.log(`  이벤트 ${events.length}건`)
+        for (const o of outlets.filter(o => o.chain === 'lotte')) {
+          outletMap[o.id].events = events
+          outletMap[o.id].updatedAt = today
+          anyUpdated = true
+        }
+      } catch (err) {
+        console.error('  ✗ 롯데 실패:', err.message)
+      }
+      await page.close()
+    }
+
+    // ── 마리오: 단일 지점 ──
+    if (shouldRun('mario')) {
+      console.log('\n▶ 마리오 스크래핑 시작...')
+      const page = await browser.newPage()
+      try {
+        const events = await scrapeMario(page)
+        console.log(`  이벤트 ${events.length}건`)
+        outletMap['mario'].events = events
+        outletMap['mario'].updatedAt = today
+        anyUpdated = true
+      } catch (err) {
+        console.error('  ✗ 마리오 실패:', err.message)
+      }
+      await page.close()
+    }
+
+  } finally {
+    await browser.close()
+  }
 
   if (anyUpdated) {
     const result = outlets.map(o => outletMap[o.id] ?? o)
