@@ -106,7 +106,7 @@ async function scrapeHyundaiBranch(page, branchCd) {
     if (dl !== null && dl < 0) continue
 
     const url = eventId
-      ? `https://www.ehyundai.com/newPortal/SN/SN_0101010.do?branchCd=${branchCd}&eventNo=${eventId}&eventGubun=${eventType}`
+      ? `https://www.ehyundai.com/mobile/SN/SN_0201000.do?category=${eventType}&branchCd=${branchCd}&evntCrdCd=${eventId}`
       : undefined
 
     results.push({ type: inferType(title), title, startDate, endDate, daysLeft: dl, ...(url ? { url } : {}) })
