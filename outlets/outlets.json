@@ -17,16 +17,25 @@
     "naverMapUrl": "https://map.naver.com/v5/search/신세계프리미엄아울렛%20여주점",
     "events": [
       {
+        "type": "sale",
         "title": "봄 시즌 프리미엄 세일",
         "startDate": "2026-04-10",
         "endDate": "2026-04-30",
         "daysLeft": 11
       },
       {
-        "title": "명품 브랜드 특별 기획전",
-        "startDate": "2026-04-15",
-        "endDate": "2026-05-11",
-        "daysLeft": 22
+        "type": "exhibition",
+        "title": "현대 미술 기획전 《봄의 정원》",
+        "startDate": "2026-04-01",
+        "endDate": "2026-05-31",
+        "daysLeft": 42
+      },
+      {
+        "type": "popup",
+        "title": "아크네 스튜디오 팝업 스토어",
+        "startDate": "2026-04-18",
+        "endDate": "2026-04-27",
+        "daysLeft": 8
       }
     ],
     "hotBrands": ["구찌", "프라다", "버버리", "생로랑", "발렌시아가", "토리버치"],
@@ -50,10 +59,18 @@
     "naverMapUrl": "https://map.naver.com/v5/search/롯데프리미엄아울렛%20동부산점",
     "events": [
       {
+        "type": "sale",
         "title": "동부산 봄 대축제 세일",
         "startDate": "2026-04-18",
         "endDate": "2026-04-21",
         "daysLeft": 2
+      },
+      {
+        "type": "discount",
+        "title": "워터파크 패키지 추가 10% 할인",
+        "startDate": "2026-04-01",
+        "endDate": "2026-05-31",
+        "daysLeft": 42
       }
     ],
     "hotBrands": ["나이키", "아디다스", "뉴발란스", "폴로", "타미힐피거"],
@@ -77,10 +94,18 @@
     "naverMapUrl": "https://map.naver.com/v5/search/현대프리미엄아울렛%20김포점",
     "events": [
       {
+        "type": "sale",
         "title": "김포 스프링 패밀리 세일",
         "startDate": "2026-04-05",
         "endDate": "2026-05-04",
         "daysLeft": 15
+      },
+      {
+        "type": "popup",
+        "title": "MLB 키즈 팝업 스토어",
+        "startDate": "2026-04-19",
+        "endDate": "2026-05-05",
+        "daysLeft": 16
       }
     ],
     "hotBrands": ["폴로 랄프로렌", "타미힐피거", "캘빈클라인", "MCM", "코치"],
