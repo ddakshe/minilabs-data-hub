@@ -1,0 +1,80 @@
+name: Fetch outlet brands (Weekly)
+
+on:
+  schedule:
+    - cron: '0 20 * * 0'  # 매주 일요일 05:00 KST (UTC 20:00 토요일)
+  workflow_dispatch:
+    inputs:
+      chain:
+        description: '체인 필터 (hyundai / shinsegae / lotte / 비워두면 전체)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-brands
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install chromium --with-deps
+
+      - name: Show trigger context
+        run: |
+          echo "Event  : ${{ github.event_name }}"
+          echo "Chain  : ${{ github.event.inputs.chain || '(all)' }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      - name: Fetch brand data
+        run: |
+          CHAIN="${{ github.event.inputs.chain }}"
+          if [ -n "$CHAIN" ]; then
+            node scripts/fetch-brands.mjs "$CHAIN"
+          else
+            node scripts/fetch-brands.mjs
+          fi
+
+      - name: Check for changes
+        id: diff
+        run: |
+          if git diff --quiet -- outlets/outlets.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes — skipping commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --stat outlets/outlets.json
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
+          git add outlets/outlets.json
+          git commit -m "chore(brands): weekly refresh ($DATE_KST)"
+          git push
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "### Brand fetch complete" >> $GITHUB_STEP_SUMMARY
+          TZ=Asia/Seoul date "+%Y-%m-%d %H:%M KST" >> $GITHUB_STEP_SUMMARY
