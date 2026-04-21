@@ -164,16 +164,17 @@ async function scrapeShinsegaeBranch(page, storeCode) {
 }
 
 // ───────────────────────── 롯데 지점별 스크래퍼 ─────────────────────────
-// https://www.lotteshopping.com/shopnow/cntsList?cstrCd=0352
+// https://www.lotteshopping.com/contents/shpgInfo?cstrCd=0352&cntsTpCd=C00903
 
 async function scrapeLotteBranch(page, cstrCd) {
-  const url = `https://www.lotteshopping.com/shopnow/cntsList?cstrCd=${cstrCd}`
+  const url = `https://www.lotteshopping.com/contents/shpgInfo?cstrCd=${cstrCd}&cntsTpCd=C00903`
   await page.goto(url, { waitUntil: 'networkidle', timeout: 30000 })
   await page.waitForTimeout(2000)
 
   const BASE = 'https://www.lotteshopping.com'
   const items = await page.evaluate((base) => {
-    const BADGES = new Set(['쇼핑뉴스', '사은', '문화/이벤트', '문화', '이벤트'])
+    const BADGE_SET = new Set(['쇼핑뉴스', '사은', '문화/이벤트', '문화', '이벤트'])
+    const isBadge = (s) => BADGE_SET.has(s) || /^D-\d+$/.test(s)
     const seen = new Set()
     const out = []
 
@@ -181,8 +182,8 @@ async function scrapeLotteBranch(page, cstrCd) {
       const lines = (li.innerText || '').split('\n').map(l => l.trim()).filter(Boolean)
       if (lines.length < 2) continue
 
-      // 첫 줄이 배지면 제거
-      const start = BADGES.has(lines[0]) ? 1 : 0
+      // 첫 줄이 배지(D-X 포함)면 제거
+      const start = isBadge(lines[0]) ? 1 : 0
       const title = lines[start] || ''
       if (!title || title.length < 2 || seen.has(title)) continue
       seen.add(title)
