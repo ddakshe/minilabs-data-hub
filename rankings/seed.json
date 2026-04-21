@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-20",
+  "updatedAt": "2026-04-21",
   "groups": [
     {
       "id": "male-sports",
@@ -97,7 +97,7 @@
       "emoji": "🏎️",
       "color": "#DC2626",
       "subtitle": "F1 드라이버 챔피언십",
-      "updatedAt": "2026-04-20"
+      "updatedAt": "2026-04-21"
     },
     {
       "id": "f1-team",
@@ -106,7 +106,7 @@
       "emoji": "🏎️",
       "color": "#EF4444",
       "subtitle": "F1 컨스트럭터 챔피언십",
-      "updatedAt": "2026-04-20"
+      "updatedAt": "2026-04-21"
     },
     {
       "id": "boxing-p4p",
@@ -205,7 +205,7 @@
       "emoji": "⚽",
       "color": "#4F46E5",
       "subtitle": "잉글리시 프리미어 리그",
-      "updatedAt": "2026-04-20"
+      "updatedAt": "2026-04-21"
     },
     {
       "id": "laliga",
@@ -214,7 +214,7 @@
       "emoji": "⚽",
       "color": "#6D28D9",
       "subtitle": "스페인 라리가",
-      "updatedAt": "2026-04-20"
+      "updatedAt": "2026-04-21"
     },
     {
       "id": "kleague",
@@ -223,7 +223,7 @@
       "emoji": "⚽",
       "color": "#BE185D",
       "subtitle": "K리그 1 순위",
-      "updatedAt": "2026-04-20"
+      "updatedAt": "2026-04-21"
     },
     {
       "id": "nba-team",
@@ -232,7 +232,7 @@
       "emoji": "🏀",
       "color": "#F97316",
       "subtitle": "NBA 팀 전력 순위",
-      "updatedAt": "2026-04-20"
+      "updatedAt": "2026-04-21"
     },
     {
       "id": "nba-salary",
@@ -241,7 +241,7 @@
       "emoji": "🏀",
       "color": "#EA580C",
       "subtitle": "NBA 선수 연봉",
-      "updatedAt": "2026-04-20"
+      "updatedAt": "2026-04-21"
     },
     {
       "id": "mlb-team",
@@ -250,7 +250,7 @@
       "emoji": "⚾",
       "color": "#DC2626",
       "subtitle": "MLB 팀 전력 순위",
-      "updatedAt": "2026-04-20"
+      "updatedAt": "2026-04-21"
     },
     {
       "id": "mlb-salary",
@@ -259,7 +259,7 @@
       "emoji": "⚾",
       "color": "#B91C1C",
       "subtitle": "MLB 선수 연봉",
-      "updatedAt": "2026-04-20"
+      "updatedAt": "2026-04-21"
     },
     {
       "id": "kbo",
@@ -268,7 +268,7 @@
       "emoji": "⚾",
       "color": "#E11D48",
       "subtitle": "KBO 리그 순위",
-      "updatedAt": "2026-04-20"
+      "updatedAt": "2026-04-21"
     },
     {
       "id": "billboard",
@@ -394,7 +394,7 @@
       "emoji": "📈",
       "color": "#10B981",
       "subtitle": "KOSPI 시가총액 순위",
-      "updatedAt": "2026-04-20"
+      "updatedAt": "2026-04-21"
     },
     {
       "id": "gdp",
@@ -1863,15 +1863,24 @@
       {
         "rank": 6,
         "prev": 6,
-        "name": "첼시",
-        "value": "승점 48pts",
-        "detail": "13승 9무 11패. 2025 시즌.",
+        "name": "브라이턴",
+        "value": "승점 50pts",
+        "detail": "13승 11무 10패. 2025 시즌.",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "highlight": false
       },
       {
         "rank": 7,
         "prev": 7,
+        "name": "첼시",
+        "value": "승점 48pts",
+        "detail": "13승 9무 12패. 2025 시즌.",
+        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+        "highlight": false
+      },
+      {
+        "rank": 8,
+        "prev": 8,
         "name": "브렌트포드",
         "value": "승점 48pts",
         "detail": "13승 9무 11패. 2025 시즌.",
@@ -1879,20 +1888,11 @@
         "highlight": false
       },
       {
-        "rank": 8,
-        "prev": 8,
+        "rank": 9,
+        "prev": 9,
         "name": "AFC Bournemouth",
         "value": "승점 48pts",
         "detail": "11승 15무 7패. 2025 시즌.",
-        "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-        "highlight": false
-      },
-      {
-        "rank": 9,
-        "prev": 9,
-        "name": "브라이턴",
-        "value": "승점 47pts",
-        "detail": "12승 11무 10패. 2025 시즌.",
         "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
         "highlight": false
       },
@@ -2010,8 +2010,8 @@
         "rank": 2,
         "prev": 2,
         "name": "레알 마드리드",
-        "value": "승점 70pts",
-        "detail": "22승 4무 5패. 2025 시즌.",
+        "value": "승점 73pts",
+        "detail": "23승 4무 5패. 2025 시즌.",
         "flag": "🇪🇸",
         "highlight": false
       },
@@ -2037,8 +2037,8 @@
         "rank": 5,
         "prev": 5,
         "name": "레알 베티스",
-        "value": "승점 46pts",
-        "detail": "11승 13무 7패. 2025 시즌.",
+        "value": "승점 49pts",
+        "detail": "12승 13무 7패. 2025 시즌.",
         "flag": "🇪🇸",
         "highlight": false
       },
@@ -2072,18 +2072,18 @@
       {
         "rank": 9,
         "prev": 9,
-        "name": "오사수나",
-        "value": "승점 39pts",
-        "detail": "10승 9무 12패. 2025 시즌.",
+        "name": "아틀레틱 빌바오",
+        "value": "승점 41pts",
+        "detail": "12승 5무 15패. 2025 시즌.",
         "flag": "🇪🇸",
         "highlight": false
       },
       {
         "rank": 10,
         "prev": 10,
-        "name": "에스파뇰",
-        "value": "승점 38pts",
-        "detail": "10승 8무 13패. 2025 시즌.",
+        "name": "오사수나",
+        "value": "승점 39pts",
+        "detail": "10승 9무 13패. 2025 시즌.",
         "flag": "🇪🇸",
         "highlight": false
       },
@@ -2092,43 +2092,43 @@
         "prev": 11,
         "name": "지로나",
         "value": "승점 38pts",
-        "detail": "9승 11무 11패. 2025 시즌.",
+        "detail": "9승 11무 12패. 2025 시즌.",
         "flag": "🇪🇸",
         "highlight": false
       },
       {
         "rank": 12,
         "prev": 12,
-        "name": "아틀레틱 빌바오",
+        "name": "에스파뇰",
         "value": "승점 38pts",
-        "detail": "11승 5무 15패. 2025 시즌.",
+        "detail": "10승 8무 13패. 2025 시즌.",
         "flag": "🇪🇸",
         "highlight": false
       },
       {
         "rank": 13,
         "prev": 13,
-        "name": "라요 바예카노",
-        "value": "승점 35pts",
-        "detail": "8승 11무 12패. 2025 시즌.",
+        "name": "발렌시아",
+        "value": "승점 36pts",
+        "detail": "9승 9무 14패. 2025 시즌.",
         "flag": "🇪🇸",
         "highlight": false
       },
       {
         "rank": 14,
         "prev": 14,
-        "name": "발렌시아",
+        "name": "마요르카",
         "value": "승점 35pts",
-        "detail": "9승 8무 14패. 2025 시즌.",
+        "detail": "9승 8무 15패. 2025 시즌.",
         "flag": "🇪🇸",
         "highlight": false
       },
       {
         "rank": 15,
         "prev": 15,
-        "name": "마요르카",
-        "value": "승점 34pts",
-        "detail": "9승 7무 15패. 2025 시즌.",
+        "name": "라요 바예카노",
+        "value": "승점 35pts",
+        "detail": "8승 11무 12패. 2025 시즌.",
         "flag": "🇪🇸",
         "highlight": false
       },
@@ -2146,7 +2146,7 @@
         "prev": 17,
         "name": "알라베스",
         "value": "승점 33pts",
-        "detail": "8승 9무 14패. 2025 시즌.",
+        "detail": "8승 9무 15패. 2025 시즌.",
         "flag": "🇪🇸",
         "highlight": false
       },
@@ -2537,8 +2537,8 @@
         "rank": 1,
         "prev": 1,
         "name": "LA 다저스",
-        "value": "15승 6패",
-        "detail": "승률 0.714. 2026 시즌.",
+        "value": "16승 6패",
+        "detail": "승률 0.727. 2026 시즌.",
         "flag": "⚾",
         "highlight": false
       },
@@ -2546,8 +2546,8 @@
         "rank": 2,
         "prev": 2,
         "name": "애틀랜타 브레이브스",
-        "value": "15승 7패",
-        "detail": "승률 0.682. 2026 시즌.",
+        "value": "16승 7패",
+        "detail": "승률 0.696. 2026 시즌.",
         "flag": "⚾",
         "highlight": false
       },
@@ -2564,24 +2564,24 @@
         "rank": 4,
         "prev": 4,
         "name": "신시내티 레즈",
-        "value": "14승 8패",
-        "detail": "승률 0.636. 2026 시즌.",
+        "value": "15승 8패",
+        "detail": "승률 0.652. 2026 시즌.",
         "flag": "⚾",
         "highlight": false
       },
       {
         "rank": 5,
         "prev": 5,
-        "name": "세인트루이스 카디널스",
-        "value": "13승 8패",
-        "detail": "승률 0.619. 2026 시즌.",
+        "name": "뉴욕 양키스",
+        "value": "13승 9패",
+        "detail": "승률 0.591. 2026 시즌.",
         "flag": "⚾",
         "highlight": false
       },
       {
         "rank": 6,
         "prev": 6,
-        "name": "뉴욕 양키스",
+        "name": "피츠버그 파이리츠",
         "value": "13승 9패",
         "detail": "승률 0.591. 2026 시즌.",
         "flag": "⚾",
@@ -2599,7 +2599,7 @@
       {
         "rank": 8,
         "prev": 8,
-        "name": "피츠버그 파이리츠",
+        "name": "세인트루이스 카디널스",
         "value": "13승 9패",
         "detail": "승률 0.591. 2026 시즌.",
         "flag": "⚾",
@@ -2608,25 +2608,25 @@
       {
         "rank": 9,
         "prev": 9,
-        "name": "클리블랜드 가디언스",
-        "value": "13승 10패",
-        "detail": "승률 0.565. 2026 시즌.",
+        "name": "시카고 컵스",
+        "value": "13승 9패",
+        "detail": "승률 0.591. 2026 시즌.",
         "flag": "⚾",
         "highlight": false
       },
       {
         "rank": 10,
         "prev": 10,
-        "name": "탬파베이 레이스",
-        "value": "12승 9패",
-        "detail": "승률 0.571. 2026 시즌.",
+        "name": "클리블랜드 가디언스",
+        "value": "13승 11패",
+        "detail": "승률 0.542. 2026 시즌.",
         "flag": "⚾",
         "highlight": false
       },
       {
         "rank": 11,
         "prev": 11,
-        "name": "시카고 컵스",
+        "name": "밀워키 브루어스",
         "value": "12승 9패",
         "detail": "승률 0.571. 2026 시즌.",
         "flag": "⚾",
@@ -2635,16 +2635,16 @@
       {
         "rank": 12,
         "prev": 12,
-        "name": "밀워키 브루어스",
-        "value": "12승 9패",
-        "detail": "승률 0.571. 2026 시즌.",
+        "name": "탬파베이 레이스",
+        "value": "12승 10패",
+        "detail": "승률 0.545. 2026 시즌.",
         "flag": "⚾",
         "highlight": false
       },
       {
         "rank": 13,
         "prev": 13,
-        "name": "디트로이트 타이거스",
+        "name": "Athletics",
         "value": "12승 11패",
         "detail": "승률 0.522. 2026 시즌.",
         "flag": "⚾",
@@ -2653,16 +2653,16 @@
       {
         "rank": 14,
         "prev": 14,
-        "name": "텍사스 레인저스",
-        "value": "11승 11패",
-        "detail": "승률 0.500. 2026 시즌.",
+        "name": "디트로이트 타이거스",
+        "value": "12승 11패",
+        "detail": "승률 0.522. 2026 시즌.",
         "flag": "⚾",
         "highlight": false
       },
       {
         "rank": 15,
         "prev": 15,
-        "name": "Athletics",
+        "name": "텍사스 레인저스",
         "value": "11승 11패",
         "detail": "승률 0.500. 2026 시즌.",
         "flag": "⚾",
@@ -2680,7 +2680,7 @@
       {
         "rank": 17,
         "prev": 17,
-        "name": "LA 에인절스",
+        "name": "볼티모어 오리올스",
         "value": "11승 12패",
         "detail": "승률 0.478. 2026 시즌.",
         "flag": "⚾",
@@ -2689,18 +2689,18 @@
       {
         "rank": 18,
         "prev": 18,
-        "name": "볼티모어 오리올스",
-        "value": "10승 12패",
-        "detail": "승률 0.455. 2026 시즌.",
+        "name": "마이애미 말린스",
+        "value": "11승 12패",
+        "detail": "승률 0.478. 2026 시즌.",
         "flag": "⚾",
         "highlight": false
       },
       {
         "rank": 19,
         "prev": 19,
-        "name": "마이애미 말린스",
-        "value": "10승 12패",
-        "detail": "승률 0.455. 2026 시즌.",
+        "name": "LA 에인절스",
+        "value": "11승 13패",
+        "detail": "승률 0.458. 2026 시즌.",
         "flag": "⚾",
         "highlight": false
       },
@@ -2708,8 +2708,8 @@
         "rank": 20,
         "prev": 20,
         "name": "워싱턴 내셔널스",
-        "value": "10승 12패",
-        "detail": "승률 0.455. 2026 시즌.",
+        "value": "10승 13패",
+        "detail": "승률 0.435. 2026 시즌.",
         "flag": "⚾",
         "highlight": false
       },
@@ -2717,15 +2717,15 @@
         "rank": 21,
         "prev": 21,
         "name": "시애틀 매리너스",
-        "value": "10승 13패",
-        "detail": "승률 0.435. 2026 시즌.",
+        "value": "10승 14패",
+        "detail": "승률 0.417. 2026 시즌.",
         "flag": "⚾",
         "highlight": false
       },
       {
         "rank": 22,
         "prev": 22,
-        "name": "보스턴 레드삭스",
+        "name": "토론토 블루제이스",
         "value": "9승 13패",
         "detail": "승률 0.409. 2026 시즌.",
         "flag": "⚾",
@@ -2734,7 +2734,7 @@
       {
         "rank": 23,
         "prev": 23,
-        "name": "콜로라도 로키스",
+        "name": "보스턴 레드삭스",
         "value": "9승 13패",
         "detail": "승률 0.409. 2026 시즌.",
         "flag": "⚾",
@@ -2752,18 +2752,18 @@
       {
         "rank": 25,
         "prev": 25,
-        "name": "토론토 블루제이스",
-        "value": "8승 13패",
-        "detail": "승률 0.381. 2026 시즌.",
+        "name": "콜로라도 로키스",
+        "value": "9승 14패",
+        "detail": "승률 0.391. 2026 시즌.",
         "flag": "⚾",
         "highlight": false
       },
       {
         "rank": 26,
         "prev": 26,
-        "name": "필라델피아 필리스",
-        "value": "8승 13패",
-        "detail": "승률 0.381. 2026 시즌.",
+        "name": "휴스턴 애스트로스",
+        "value": "9승 15패",
+        "detail": "승률 0.375. 2026 시즌.",
         "flag": "⚾",
         "highlight": false
       },
@@ -2779,16 +2779,16 @@
       {
         "rank": 28,
         "prev": 28,
-        "name": "휴스턴 애스트로스",
-        "value": "8승 15패",
-        "detail": "승률 0.348. 2026 시즌.",
+        "name": "필라델피아 필리스",
+        "value": "8승 14패",
+        "detail": "승률 0.364. 2026 시즌.",
         "flag": "⚾",
         "highlight": false
       },
       {
         "rank": 29,
         "prev": 29,
-        "name": "캔자스시티 로열스",
+        "name": "뉴욕 메츠",
         "value": "7승 15패",
         "detail": "승률 0.318. 2026 시즌.",
         "flag": "⚾",
@@ -2797,9 +2797,9 @@
       {
         "rank": 30,
         "prev": 30,
-        "name": "뉴욕 메츠",
-        "value": "7승 15패",
-        "detail": "승률 0.318. 2026 시즌.",
+        "name": "캔자스시티 로열스",
+        "value": "7승 16패",
+        "detail": "승률 0.304. 2026 시즌.",
         "flag": "⚾",
         "highlight": false
       }
@@ -2890,15 +2890,15 @@
       {
         "rank": 1,
         "prev": 1,
-        "name": "삼성",
-        "value": "12승 5패 (0.706)",
-        "detail": "18경기 1무. KBO 정규시즌.",
+        "name": "KT",
+        "value": "14승 6패 (0.700)",
+        "detail": "20경기 0무. KBO 정규시즌.",
         "flag": "🇰🇷"
       },
       {
         "rank": 2,
         "prev": 2,
-        "name": "KT",
+        "name": "LG",
         "value": "13승 6패 (0.684)",
         "detail": "19경기 0무. KBO 정규시즌.",
         "flag": "🇰🇷"
@@ -2906,65 +2906,65 @@
       {
         "rank": 3,
         "prev": 3,
-        "name": "LG",
+        "name": "삼성",
         "value": "12승 6패 (0.667)",
-        "detail": "18경기 0무. KBO 정규시즌.",
+        "detail": "19경기 1무. KBO 정규시즌.",
         "flag": "🇰🇷"
       },
       {
         "rank": 4,
         "prev": 4,
         "name": "SSG",
-        "value": "10승 8패 (0.556)",
-        "detail": "18경기 0무. KBO 정규시즌.",
+        "value": "11승 8패 (0.579)",
+        "detail": "19경기 0무. KBO 정규시즌.",
         "flag": "🇰🇷"
       },
       {
         "rank": 5,
         "prev": 5,
         "name": "KIA",
-        "value": "10승 9패 (0.526)",
-        "detail": "19경기 0무. KBO 정규시즌.",
+        "value": "10승 10패 (0.500)",
+        "detail": "20경기 0무. KBO 정규시즌.",
         "flag": "🇰🇷"
       },
       {
         "rank": 6,
         "prev": 6,
         "name": "한화",
-        "value": "8승 10패 (0.444)",
-        "detail": "18경기 0무. KBO 정규시즌.",
+        "value": "8승 11패 (0.421)",
+        "detail": "19경기 0무. KBO 정규시즌.",
         "flag": "🇰🇷"
       },
       {
         "rank": 6,
         "prev": 6,
         "name": "NC",
-        "value": "8승 10패 (0.444)",
-        "detail": "18경기 0무. KBO 정규시즌.",
+        "value": "8승 11패 (0.421)",
+        "detail": "19경기 0무. KBO 정규시즌.",
         "flag": "🇰🇷"
       },
       {
-        "rank": 8,
-        "prev": 8,
+        "rank": 6,
+        "prev": 6,
         "name": "두산",
-        "value": "7승 11패 (0.389)",
-        "detail": "19경기 1무. KBO 정규시즌.",
+        "value": "8승 11패 (0.421)",
+        "detail": "20경기 1무. KBO 정규시즌.",
         "flag": "🇰🇷"
       },
       {
         "rank": 9,
         "prev": 9,
         "name": "롯데",
-        "value": "6승 12패 (0.333)",
-        "detail": "18경기 0무. KBO 정규시즌.",
+        "value": "6승 13패 (0.316)",
+        "detail": "19경기 0무. KBO 정규시즌.",
         "flag": "🇰🇷"
       },
       {
         "rank": 10,
         "prev": 10,
         "name": "키움",
-        "value": "5승 14패 (0.263)",
-        "detail": "19경기 0무. KBO 정규시즌.",
+        "value": "6승 14패 (0.300)",
+        "detail": "20경기 0무. KBO 정규시즌.",
         "flag": "🇰🇷"
       }
     ],
@@ -2973,8 +2973,8 @@
         "rank": 1,
         "prev": 1,
         "name": "서울",
-        "value": "승점 19",
-        "detail": "8경기 6승 1무 1패 (득실 11). K리그.",
+        "value": "승점 22",
+        "detail": "9경기 7승 1무 1패 (득실 14). K리그.",
         "flag": "🇰🇷"
       },
       {
@@ -2988,30 +2988,30 @@
       {
         "rank": 3,
         "prev": 3,
-        "name": "전북",
-        "value": "승점 12",
-        "detail": "8경기 3승 3무 2패 (득실 2). K리그.",
+        "name": "강원",
+        "value": "승점 13",
+        "detail": "9경기 3승 4무 2패 (득실 5). K리그.",
         "flag": "🇰🇷"
       },
       {
         "rank": 4,
         "prev": 4,
-        "name": "강원",
-        "value": "승점 10",
-        "detail": "8경기 2승 4무 2패 (득실 2). K리그.",
+        "name": "전북",
+        "value": "승점 12",
+        "detail": "9경기 3승 3무 3패 (득실 1). K리그.",
         "flag": "🇰🇷"
       },
       {
         "rank": 5,
         "prev": 5,
-        "name": "부천",
-        "value": "승점 10",
-        "detail": "8경기 2승 4무 2패 (득실 0). K리그.",
+        "name": "인천",
+        "value": "승점 11",
+        "detail": "9경기 3승 2무 4패 (득실 -2). K리그.",
         "flag": "🇰🇷"
       },
       {
-        "rank": 5,
-        "prev": 5,
+        "rank": 6,
+        "prev": 6,
         "name": "안양",
         "value": "승점 10",
         "detail": "8경기 2승 4무 2패 (득실 0). K리그.",
@@ -3020,33 +3020,33 @@
       {
         "rank": 7,
         "prev": 7,
+        "name": "부천",
+        "value": "승점 10",
+        "detail": "9경기 2승 4무 3패 (득실 -3). K리그.",
+        "flag": "🇰🇷"
+      },
+      {
+        "rank": 8,
+        "prev": 8,
         "name": "제주",
         "value": "승점 9",
         "detail": "8경기 2승 3무 3패 (득실 -1). K리그.",
         "flag": "🇰🇷"
       },
       {
-        "rank": 7,
-        "prev": 7,
+        "rank": 8,
+        "prev": 8,
         "name": "대전",
         "value": "승점 9",
         "detail": "8경기 2승 3무 3패 (득실 -1). K리그.",
         "flag": "🇰🇷"
       },
       {
-        "rank": 9,
-        "prev": 9,
+        "rank": 10,
+        "prev": 10,
         "name": "포항",
         "value": "승점 9",
         "detail": "8경기 2승 3무 3패 (득실 -2). K리그.",
-        "flag": "🇰🇷"
-      },
-      {
-        "rank": 10,
-        "prev": 10,
-        "name": "인천",
-        "value": "승점 8",
-        "detail": "8경기 2승 2무 4패 (득실 -3). K리그.",
         "flag": "🇰🇷"
       }
     ],
@@ -4097,80 +4097,80 @@
         "rank": 1,
         "prev": 1,
         "name": "삼성전자",
-        "value": "12,540,268백만",
-        "detail": "현재가 214,500원. 다음 금융 기준.",
+        "value": "12,803,350백만",
+        "detail": "현재가 219,000원. 다음 금융 기준.",
         "flag": "🇰🇷"
       },
       {
         "rank": 2,
         "prev": 2,
         "name": "SK하이닉스",
-        "value": "8,310,110백만",
-        "detail": "현재가 1,166,000원. 다음 금융 기준.",
+        "value": "8,723,477백만",
+        "detail": "현재가 1,224,000원. 다음 금융 기준.",
         "flag": "🇰🇷"
       },
       {
         "rank": 3,
         "prev": 3,
         "name": "삼성전자우",
-        "value": "1,174,671백만",
-        "detail": "현재가 146,400원. 다음 금융 기준.",
+        "value": "1,206,766백만",
+        "detail": "현재가 150,400원. 다음 금융 기준.",
         "flag": "🇰🇷"
       },
       {
         "rank": 4,
         "prev": 4,
-        "name": "현대차",
-        "value": "1,079,073백만",
-        "detail": "현재가 527,000원. 다음 금융 기준.",
+        "name": "LG에너지솔루션",
+        "value": "1,118,520백만",
+        "detail": "현재가 478,000원. 다음 금융 기준.",
         "flag": "🇰🇷"
       },
       {
         "rank": 5,
         "prev": 5,
-        "name": "LG에너지솔루션",
-        "value": "1,003,860백만",
-        "detail": "현재가 429,000원. 다음 금융 기준.",
+        "name": "현대차",
+        "value": "1,117,977백만",
+        "detail": "현재가 546,000원. 다음 금융 기준.",
         "flag": "🇰🇷"
       },
       {
         "rank": 6,
         "prev": 6,
         "name": "SK스퀘어",
-        "value": "925,028백만",
-        "detail": "현재가 701,000원. 다음 금융 기준.",
+        "value": "947,461백만",
+        "detail": "현재가 718,000원. 다음 금융 기준.",
         "flag": "🇰🇷"
       },
       {
         "rank": 7,
         "prev": 7,
-        "name": "삼성바이오로직스",
-        "value": "742,970백만",
-        "detail": "현재가 1,605,000원. 다음 금융 기준.",
+        "name": "두산에너빌리티",
+        "value": "741,129백만",
+        "detail": "현재가 115,700원. 다음 금융 기준.",
         "flag": "🇰🇷"
       },
       {
         "rank": 8,
         "prev": 8,
-        "name": "한화에어로스페이스",
-        "value": "734,778백만",
-        "detail": "현재가 1,425,000원. 다음 금융 기준.",
+        "name": "삼성바이오로직스",
+        "value": "735,100백만",
+        "detail": "현재가 1,588,000원. 다음 금융 기준.",
         "flag": "🇰🇷"
       },
       {
         "rank": 9,
         "prev": 9,
-        "name": "두산에너빌리티",
-        "value": "711,023백만",
-        "detail": "현재가 111,000원. 다음 금융 기준.",
+        "name": "한화에어로스페이스",
+        "value": "717,247백만",
+        "detail": "현재가 1,391,000원. 다음 금융 기준.",
         "flag": "🇰🇷"
       },
       {
         "rank": 10,
         "prev": 10,
         "name": "기아",
-        "value": "614,510백만",
-        "detail": "현재가 157,400원. 다음 금융 기준.",
+        "value": "624,661백만",
+        "detail": "현재가 160,000원. 다음 금융 기준.",
         "flag": "🇰🇷"
       }
     ],
