@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-04-21",
+  "updatedAt": "2026-04-22",
   "source": "KOSIS Open API",
   "categories": [
     {
@@ -32,11 +32,11 @@
       "category": "economy"
     },
     {
-      "id": "i_hea_smoke",
+      "id": "i_soc_divorce",
       "emoji": "📉",
-      "title": "현재 흡연율 · 10년 최저",
-      "description": "2024년 기준",
-      "category": "health"
+      "title": "이혼 건수 · 36개월 최저",
+      "description": "2026.02 기준",
+      "category": "society"
     }
   ],
   "stats": [
@@ -732,18 +732,14 @@
       "id": "soc_house",
       "category": "society",
       "title": "전세가격지수",
-      "value": 100.2,
+      "value": 100.5,
       "unit": "pt",
-      "changePct": 1.5,
+      "changePct": 1.7,
       "decimals": 1,
       "frequency": "M",
       "source": "한국부동산원 전국주택가격동향",
-      "period": "2026.02",
+      "period": "2026.03",
       "history": [
-        {
-          "prd": "202303",
-          "value": 97.5
-        },
         {
           "prd": "202304",
           "value": 96.9
@@ -883,6 +879,10 @@
         {
           "prd": "202602",
           "value": 100.2
+        },
+        {
+          "prd": "202603",
+          "value": 100.5
         }
       ]
     },
@@ -1646,17 +1646,13 @@
       "id": "pop_birth",
       "category": "population",
       "title": "출생아 수",
-      "value": 26916,
+      "value": 22898,
       "unit": "명",
-      "changePct": 11.7,
+      "changePct": 13.6,
       "frequency": "M",
       "source": "통계청 인구동향조사",
-      "period": "2026.01",
+      "period": "2026.02",
       "history": [
-        {
-          "prd": "202302",
-          "value": 20012
-        },
         {
           "prd": "202303",
           "value": 21193
@@ -1796,6 +1792,10 @@
         {
           "prd": "202601",
           "value": 26916
+        },
+        {
+          "prd": "202602",
+          "value": 22898
         }
       ]
     },
@@ -1803,17 +1803,13 @@
       "id": "soc_marriage",
       "category": "society",
       "title": "혼인 건수",
-      "value": 22640,
+      "value": 18557,
       "unit": "건",
-      "changePct": 12.4,
+      "changePct": -4.2,
       "frequency": "M",
       "source": "통계청 인구동향조사",
-      "period": "2026.01",
+      "period": "2026.02",
       "history": [
-        {
-          "prd": "202302",
-          "value": 17845
-        },
         {
           "prd": "202303",
           "value": 18190
@@ -1953,6 +1949,10 @@
         {
           "prd": "202601",
           "value": 22640
+        },
+        {
+          "prd": "202602",
+          "value": 18557
         }
       ]
     },
@@ -1960,17 +1960,13 @@
       "id": "soc_divorce",
       "category": "society",
       "title": "이혼 건수",
-      "value": 7208,
+      "value": 6197,
       "unit": "건",
-      "changePct": 4.2,
+      "changePct": -15.6,
       "frequency": "M",
       "source": "통계청 인구동향조사",
-      "period": "2026.01",
+      "period": "2026.02",
       "history": [
-        {
-          "prd": "202302",
-          "value": 7226
-        },
         {
           "prd": "202303",
           "value": 8255
@@ -2110,6 +2106,10 @@
         {
           "prd": "202601",
           "value": 7208
+        },
+        {
+          "prd": "202602",
+          "value": 6197
         }
       ]
     },
