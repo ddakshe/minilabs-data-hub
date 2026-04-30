@@ -1,0 +1,80 @@
+name: "Fetch Subway Congestion (Quarterly)"
+
+on:
+  schedule:
+    - cron: '0 0 1 1,4,7,10 *' # 분기마다 1일 00:00 UTC
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: '실행 이유'
+        required: false
+        default: 'manual'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-subway-congestion
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch congestion data
+        env:
+          SEOUL_API_KEY: ${{ secrets.SEOUL_API_KEY }}
+        run: |
+          node - << 'EOF'
+          import fs from 'node:fs/promises';
+
+          const KEY = process.env.SEOUL_API_KEY;
+          if (!KEY) { console.error('SEOUL_API_KEY not set'); process.exit(1); }
+
+          const SERVICE = 'subwConfusion';
+          const PAGE = 1000;
+
+          async function fetchPage(start, end) {
+            const url = `http://openapi.seoul.go.kr:8088/${KEY}/json/${SERVICE}/${start}/${end}/`;
+            const res = await fetch(url);
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            const json = await res.json();
+            const body = json[SERVICE];
+            if (body?.RESULT?.CODE && body.RESULT.CODE !== 'INFO-000')
+              throw new Error(`${body.RESULT.CODE}: ${body.RESULT.MESSAGE}`);
+            return body;
+          }
+
+          const first = await fetchPage(1, PAGE);
+          const total = first.list_total_count;
+          console.log(`total rows: ${total}`);
+
+          const rows = [...first.row];
+          for (let start = PAGE + 1; start <= total; start += PAGE) {
+            const end = Math.min(start + PAGE - 1, total);
+            console.log(`fetching ${start}~${end}`);
+            rows.push(...(await fetchPage(start, end)).row);
+          }
+
+          await fs.mkdir('subway-congestion', { recursive: true });
+          await fs.writeFile('subway-congestion/congestion.json', JSON.stringify(rows));
+          console.log(`wrote ${rows.length} rows`);
+          EOF
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add subway-congestion/congestion.json
+          git diff --staged --quiet || git commit -m "chore: update subway congestion data"
+          git push
