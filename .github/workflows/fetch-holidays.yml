@@ -49,12 +49,13 @@ jobs:
       - name: Check for changes
         id: diff
         run: |
-          if git diff --quiet -- holidays/; then
+          git add holidays/
+          if git diff --cached --quiet -- holidays/; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No changes — skipping commit."
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
-            git --no-pager diff --stat holidays/
+            git --no-pager diff --cached --stat holidays/
           fi
 
       - name: Commit & push
@@ -71,7 +72,6 @@ jobs:
             MSG="chore(holidays): refresh ($DATE_KST)"
           fi
 
-          git add holidays/
           git commit -m "$MSG"
           git push
 
