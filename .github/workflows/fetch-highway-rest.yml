@@ -1,0 +1,68 @@
+name: Fetch Highway Rest Areas
+
+on:
+  schedule:
+    - cron: '0 21 1 * *'  # 매월 1일 06:00 KST
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: '실행 이유'
+        required: false
+        default: 'manual refresh'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-highway-rest
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Show trigger context
+        run: |
+          echo "Event: ${{ github.event_name }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      - name: Fetch highway rest data
+        env:
+          EX_API_KEY: ${{ secrets.EX_API_KEY }}
+        run: |
+          if [ -z "$EX_API_KEY" ]; then
+            echo "::error::EX_API_KEY secret is not set."
+            exit 1
+          fi
+          node scripts/fetch-highway-rest.mjs
+
+      - name: Check for changes
+        id: diff
+        run: |
+          if git diff --quiet -- highway-rest/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --stat highway-rest/
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
+          git add highway-rest/
+          git commit -m "chore(highway-rest): monthly refresh ($DATE_KST)"
+          git push

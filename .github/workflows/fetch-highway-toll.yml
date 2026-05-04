@@ -1,0 +1,51 @@
+name: Fetch Highway Toll Stations
+
+on:
+  schedule:
+    - cron: '0 21 1 * *'  # 매월 1일 06:00 KST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-highway-toll
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch highway toll data
+        env:
+          EX_API_KEY: ${{ secrets.EX_API_KEY }}
+        run: node scripts/fetch-highway-toll.mjs
+
+      - name: Check for changes
+        id: diff
+        run: |
+          if git diff --quiet -- highway-toll/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --stat highway-toll/
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add highway-toll/
+          git commit -m "chore(highway-toll): monthly refresh ($(TZ=Asia/Seoul date '+%Y-%m-%d'))"
+          git push
