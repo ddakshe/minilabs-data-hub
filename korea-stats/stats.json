@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-05",
+  "updatedAt": "2026-05-06",
   "source": "KOSIS Open API",
   "categories": [
     {
@@ -44,17 +44,13 @@
       "id": "pop_total",
       "category": "population",
       "title": "총인구",
-      "value": 51101371,
+      "value": 51097986,
       "unit": "명",
       "changePct": -0.2,
       "frequency": "M",
       "source": "통계청 주민등록인구",
-      "period": "2026.03",
+      "period": "2026.04",
       "history": [
-        {
-          "prd": "202304",
-          "value": 51408155
-        },
         {
           "prd": "202305",
           "value": 51400521
@@ -194,6 +190,10 @@
         {
           "prd": "202603",
           "value": 51101371
+        },
+        {
+          "prd": "202604",
+          "value": 51097986
         }
       ]
     },
@@ -416,18 +416,14 @@
       "id": "eco_cpi",
       "category": "economy",
       "title": "소비자물가 상승률",
-      "value": 2.2,
+      "value": 2.6,
       "unit": "%",
-      "changePct": 0.2,
+      "changePct": 0.4,
       "decimals": 1,
       "frequency": "M",
       "source": "통계청 소비자물가조사",
-      "period": "2026.03",
+      "period": "2026.04",
       "history": [
-        {
-          "prd": "202304",
-          "value": 3.7
-        },
         {
           "prd": "202305",
           "value": 3.4
@@ -567,6 +563,10 @@
         {
           "prd": "202603",
           "value": 2.2
+        },
+        {
+          "prd": "202604",
+          "value": 2.6
         }
       ]
     },
