@@ -2,7 +2,7 @@ name: Fetch lifelong learning courses
 
 on:
   schedule:
-    - cron: '0 20 1 1,4,7,10 *'  # 분기별 1일 05:00 KST
+    - cron: '0 20 1 * *'  # 매월 1일 05:00 KST
   workflow_dispatch:
     inputs:
       reason:
