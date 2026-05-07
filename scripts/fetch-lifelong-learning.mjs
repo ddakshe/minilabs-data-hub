@@ -104,20 +104,34 @@ async function fetchAll() {
 
     const body = json?.response?.body;
     if (!body) {
-      console.warn('응답 body 없음, 종료');
+      console.warn('응답 body 없음:', JSON.stringify(json).slice(0, 300));
       break;
     }
 
     if (totalCount === null) {
       totalCount = Number(body.totalCount ?? 0);
       console.log(`  총 ${totalCount}개 항목`);
+      // 첫 페이지 응답 구조 디버그
+      console.log('  body keys:', Object.keys(body));
+      console.log('  items type:', typeof body.items, '/ value head:', JSON.stringify(body.items)?.slice(0, 200));
     }
 
-    const items = body?.items?.item;
-    if (!items) break;
+    // items가 빈 문자열("")이거나 null인 경우 처리
+    const rawItems = body?.items;
+    if (!rawItems || rawItems === '' || typeof rawItems === 'string') {
+      console.warn('  items 없음 또는 빈 문자열 — 페이지 종료');
+      break;
+    }
+
+    const items = rawItems.item;
+    if (!items) {
+      console.warn('  items.item 없음');
+      break;
+    }
 
     const list = Array.isArray(items) ? items : [items];
     allCourses.push(...list);
+    console.log(`  page ${pageNo}: ${list.length}개 수집 (누적 ${allCourses.length}개)`);
 
     const fetched = (pageNo - 1) * PAGE_SIZE + list.length;
     if (fetched >= totalCount || list.length < PAGE_SIZE) break;
