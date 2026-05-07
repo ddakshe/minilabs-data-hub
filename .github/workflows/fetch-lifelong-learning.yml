@@ -51,12 +51,13 @@ jobs:
       - name: Check for changes
         id: diff
         run: |
-          if git diff --quiet -- lifelong-learning/courses.json; then
+          git add lifelong-learning/
+          if git diff --cached --quiet -- lifelong-learning/; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No changes — skipping commit."
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
-            git --no-pager diff --stat lifelong-learning/courses.json
+            git --no-pager diff --cached --stat lifelong-learning/
           fi
 
       - name: Commit & push
@@ -73,7 +74,6 @@ jobs:
             MSG="chore(lifelong-learning): quarterly refresh ($DATE_KST)"
           fi
 
-          git add lifelong-learning/
           git commit -m "$MSG"
           git push
 
