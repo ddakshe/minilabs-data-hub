@@ -116,20 +116,22 @@ async function fetchAll() {
       console.log('  items type:', typeof body.items, '/ value head:', JSON.stringify(body.items)?.slice(0, 200));
     }
 
-    // items가 빈 문자열("")이거나 null인 경우 처리
     const rawItems = body?.items;
     if (!rawItems || rawItems === '' || typeof rawItems === 'string') {
-      console.warn('  items 없음 또는 빈 문자열 — 페이지 종료');
+      console.warn('  items 없음 — 페이지 종료');
       break;
     }
 
-    const items = rawItems.item;
-    if (!items) {
-      console.warn('  items.item 없음');
+    // API에 따라 items가 배열이거나 { item: [...] } 구조일 수 있음
+    let list;
+    if (Array.isArray(rawItems)) {
+      list = rawItems;
+    } else if (rawItems.item) {
+      list = Array.isArray(rawItems.item) ? rawItems.item : [rawItems.item];
+    } else {
+      console.warn('  items 파싱 실패:', JSON.stringify(rawItems).slice(0, 100));
       break;
     }
-
-    const list = Array.isArray(items) ? items : [items];
     allCourses.push(...list);
     console.log(`  page ${pageNo}: ${list.length}개 수집 (누적 ${allCourses.length}개)`);
 
