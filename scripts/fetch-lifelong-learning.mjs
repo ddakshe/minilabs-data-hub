@@ -72,17 +72,25 @@ function parseRegion(course) {
   return { sido, sigungu };
 }
 
-async function fetchPage(pageNo) {
-  const url = new URL(ENDPOINT);
-  url.searchParams.set('serviceKey', key);
-  url.searchParams.set('numOfRows', String(PAGE_SIZE));
-  url.searchParams.set('pageNo', String(pageNo));
-  url.searchParams.set('type', 'json');
+// searchParams.set은 key를 다시 인코딩해서 이중 인코딩 문제가 생길 수 있음.
+// 인코딩 키를 URL에 직접 삽입한다.
+const isEncoded = key.includes('%');
+const encodedKey = isEncoded ? key : encodeURIComponent(key);
 
-  const res = await fetch(url.toString());
-  if (!res.ok) throw new Error(`페이지 ${pageNo} fetch 실패: ${res.status}`);
-  const json = await res.json();
-  return json;
+async function fetchPage(pageNo, retries = 3) {
+  const url = `${ENDPOINT}?serviceKey=${encodedKey}&numOfRows=${PAGE_SIZE}&pageNo=${pageNo}&type=json`;
+
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return await res.json();
+    } catch (err) {
+      if (attempt === retries) throw new Error(`페이지 ${pageNo} fetch 실패 (${retries}회 시도): ${err.message}`);
+      console.warn(`  재시도 ${attempt}/${retries}... (${err.message})`);
+      await new Promise((r) => setTimeout(r, 2000 * attempt));
+    }
+  }
 }
 
 async function fetchAll() {
