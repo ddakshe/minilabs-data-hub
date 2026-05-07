@@ -25,8 +25,8 @@ if (!key) {
 }
 
 function isFree(course) {
-  const cost = course.lctreCost;
-  return !cost || cost === '0' || cost.trim() === '' || cost === '무료';
+  const cost = String(course.lctreCost ?? '').trim();
+  return !cost || cost === '0' || cost === '무료';
 }
 
 function parseRegion(course) {
@@ -147,12 +147,10 @@ async function fetchAll() {
 console.log('전국평생학습강좌 데이터 수집 시작...');
 const all = await fetchAll();
 console.log(`수집 완료: 총 ${all.length}개`);
+console.log(`무료: ${all.filter(isFree).length}개 / 유료: ${all.filter(c => !isFree(c)).length}개`);
 
-const free = all.filter(isFree);
-console.log(`무료 강좌: ${free.length}개`);
-
-// 시도/시군구 파싱 및 저장
-const courses = free.map((c) => ({ ...c, ...parseRegion(c) }));
+// 시도/시군구 파싱 및 저장 (전체 강좌, 무료 필터 제거)
+const courses = all.map((c) => ({ ...c, ...parseRegion(c) }));
 
 // by-region 중첩 객체 생성
 const byRegion = {};
