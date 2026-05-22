@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-21",
+  "updatedAt": "2026-05-22",
   "source": "KOSIS Open API",
   "categories": [
     {
@@ -25,18 +25,18 @@
   ],
   "issues": [
     {
-      "id": "i_eco_export",
-      "emoji": "📈",
-      "title": "수출액 · 36개월 최고",
-      "description": "2026.03 기준",
-      "category": "economy"
-    },
-    {
       "id": "i_soc_divorce",
       "emoji": "📉",
       "title": "이혼 건수 · 36개월 최저",
       "description": "2026.02 기준",
       "category": "society"
+    },
+    {
+      "id": "i_hea_smoke",
+      "emoji": "📉",
+      "title": "현재 흡연율 · 10년 최저",
+      "description": "2024년 기준",
+      "category": "health"
     }
   ],
   "stats": [
@@ -732,18 +732,14 @@
       "id": "soc_house",
       "category": "society",
       "title": "전세가격지수",
-      "value": 100.5,
+      "value": 100.8,
       "unit": "pt",
-      "changePct": 1.7,
+      "changePct": 2,
       "decimals": 1,
       "frequency": "M",
       "source": "한국부동산원 전국주택가격동향",
-      "period": "2026.03",
+      "period": "2026.04",
       "history": [
-        {
-          "prd": "202304",
-          "value": 96.9
-        },
         {
           "prd": "202305",
           "value": 96.6
@@ -883,6 +879,10 @@
         {
           "prd": "202603",
           "value": 100.5
+        },
+        {
+          "prd": "202604",
+          "value": 100.8
         }
       ]
     },
@@ -1383,17 +1383,13 @@
       "id": "eco_export",
       "category": "economy",
       "title": "수출액",
-      "value": 86627,
+      "value": 85867,
       "unit": "백만$",
-      "changePct": 49.2,
+      "changePct": 48,
       "frequency": "M",
       "source": "통계청 시도별 수출입 현황",
-      "period": "2026.03",
+      "period": "2026.04",
       "history": [
-        {
-          "prd": "202304",
-          "value": 49431
-        },
         {
           "prd": "202305",
           "value": 52054
@@ -1524,15 +1520,19 @@
         },
         {
           "prd": "202601",
-          "value": 65829
+          "value": 65842
         },
         {
           "prd": "202602",
-          "value": 67415
+          "value": 67558
         },
         {
           "prd": "202603",
-          "value": 86627
+          "value": 87211
+        },
+        {
+          "prd": "202604",
+          "value": 85867
         }
       ]
     },
