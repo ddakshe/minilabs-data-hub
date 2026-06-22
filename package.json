@@ -2,6 +2,9 @@
   "name": "minilabs-data-hub",
   "private": true,
   "type": "module",
+  "scripts": {
+    "fetch:kamis": "node scripts/fetch-kamis.mjs"
+  },
   "dependencies": {
     "cheerio": "^1.2.0",
     "playwright": "^1.59.1"
