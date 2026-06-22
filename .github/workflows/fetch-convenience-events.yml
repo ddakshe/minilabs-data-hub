@@ -2,7 +2,7 @@ name: Fetch convenience-store events
 
 on:
   schedule:
-    - cron: '0 0 * * *'    # 매일 09:00 KST (UTC 00:00)
+    - cron: '0 0 1,15 * *'    # 매월 1일·15일 09:00 KST (행사는 월 단위라 매일 불필요)
   workflow_dispatch:
     inputs:
       chain:

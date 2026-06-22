@@ -32,7 +32,7 @@ function todayKST() {
 }
 
 // 텍스트 GET/POST + 지수 백오프 재시도
-async function http(url, { method = 'GET', headers = {}, body, retries = 3, timeoutMs = 30000 } = {}) {
+async function http(url, { method = 'GET', headers = {}, body, retries = 4, timeoutMs = 60000 } = {}) {
   let lastErr
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
@@ -253,7 +253,9 @@ function categorize(name) {
 const SOURCES = [
   ['cu', 'CU', scrapeCU],
   ['gs25', 'GS25', scrapeGS25],
-  ['seven', '7-ELEVEN', scrapeSeven],
+  // 세븐일레븐(www.7-eleven.co.kr)은 GitHub Actions 해외/데이터센터 IP를 연결 단계에서 차단(fetch failed).
+  // CU·GS25는 해외 IP 허용. 한국 IP 경로(프록시 등)가 생기면 아래 줄 주석 해제로 재활성화.
+  // ['seven', '7-ELEVEN', scrapeSeven],
 ]
 
 async function readExisting() {
@@ -265,47 +267,51 @@ async function readExisting() {
 }
 
 async function main() {
-  const products = []
+  // 기존 데이터를 체인별로 모아둔다 — 실패/미실행 체인은 직전 데이터를 그대로 유지(증발 방지).
+  const existing = await readExisting()
+  const prevByChain = {}
+  if (existing?.products) for (const p of existing.products) (prevByChain[p.chain] ||= []).push(p)
+
+  const byChain = {}
   const counts = {}
 
   for (const [key, name, fn] of SOURCES) {
-    if (TARGET && TARGET !== key) continue
+    if (TARGET && TARGET !== key) {
+      byChain[name] = prevByChain[name] || []
+      counts[name] = `유지(${byChain[name].length})`
+      continue
+    }
     try {
       const items = await fn()
-      products.push(...items)
+      for (const p of items) p.category = categorize(p.name)
+      byChain[name] = items
       counts[name] = items.length
       console.log(`✓ ${name}: ${items.length}개`)
     } catch (err) {
-      counts[name] = `ERROR: ${err.message}`
-      console.error(`✗ ${name}: ${err.message}`)
+      // 실패 시 직전 데이터 유지 (해외 IP 차단 등 일시/지속 실패에도 라이브 데이터 보존)
+      const prev = prevByChain[name] || []
+      byChain[name] = prev
+      counts[name] = `실패→직전유지(${prev.length}): ${err.message}`
+      console.error(`✗ ${name}: ${err.message} → 직전 ${prev.length}개 유지`)
     }
   }
 
-  for (const p of products) p.category = categorize(p.name)
+  const merged = SOURCES.flatMap(([, name]) => byChain[name] || [])
 
-  // 특정 체인만 돌린 경우 기존 다른 체인 데이터를 보존
-  const existing = await readExisting()
-  let merged = products
-  if (TARGET && existing?.products) {
-    const targetChain = SOURCES.find((s) => s[0] === TARGET)?.[1]
-    const kept = existing.products.filter((p) => p.chain !== targetChain)
-    merged = [...kept, ...products]
-  }
-
-  // products가 동일하면(가격/구성 변화 없음) 커밋 노이즈 방지를 위해 쓰지 않음
-  const prevProducts = JSON.stringify(existing?.products ?? null)
-  if (prevProducts === JSON.stringify(merged)) {
+  // 동일하면 커밋 노이즈 방지를 위해 쓰지 않음
+  if (JSON.stringify(existing?.products ?? null) === JSON.stringify(merged)) {
     console.log('\n변경사항 없음 — 저장 생략')
     return
   }
 
-  const payload = { updatedAt: todayKST(), counts, products: merged }
+  const today = todayKST()
+  const payload = { updatedAt: today, month: today.slice(0, 7), counts, products: merged }
   await fs.mkdir(path.dirname(OUTPUT_PATH), { recursive: true })
   await fs.writeFile(OUTPUT_PATH, JSON.stringify(payload, null, 2), 'utf-8')
 
   const byType = {}
   for (const p of merged) byType[p.eventType] = (byType[p.eventType] || 0) + 1
-  console.log(`\n✓ products.json 저장 완료 (${payload.updatedAt}) — 총 ${merged.length}개`, byType)
+  console.log(`\n✓ products.json 저장 완료 (${today}) — 총 ${merged.length}개`, byType)
 }
 
 main().catch((err) => {
