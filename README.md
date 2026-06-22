@@ -15,6 +15,8 @@ subway-arcade/             ← 지하상가 임대정보 (서울교통공사, �
   meta.json                # 원본 파일 식별(seq, modified) — 변경 감지용
 holidays/                  ← holiday-pto-mini 앱용 (KASI, 월 1회 diff 감지)
   holidays.json            # 현재 연도부터 +2년치 공휴일·대체공휴일
+convenience-events/        ← convenience-events-mini 앱용 (편의점 3사 행사, 매일)
+  products.json            # CU·GS25·세븐일레븐 1+1/2+1/증정/할인 (5천여건, 가격·카테고리 포함)
 ```
 
 ## 사용 방법
@@ -27,6 +29,7 @@ https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/subway-congesti
 https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/subway-arcade/arcade.json
 https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/subway-arcade/stats.json
 https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/holidays/holidays.json
+https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/convenience-events/products.json
 ```
 
 ## 데이터 갱신

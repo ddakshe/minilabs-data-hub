@@ -1,0 +1,90 @@
+name: Fetch convenience-store events
+
+on:
+  schedule:
+    - cron: '0 0 * * *'    # 매일 09:00 KST (UTC 00:00)
+  workflow_dispatch:
+    inputs:
+      chain:
+        description: '특정 체인만 실행 (cu/gs25/seven — 비우면 전체)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-convenience-events
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # 이 스크래퍼는 내장 fetch만 사용 — playwright/cheerio 불필요.
+      # 의존성 설치 없이 바로 실행한다.
+
+      - name: Show trigger context
+        run: |
+          echo "Event : ${{ github.event_name }}"
+          echo "Chain : ${{ github.event.inputs.chain || '(all)' }}"
+          date -u "+UTC: %Y-%m-%d %H:%M:%S"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      - name: Fetch convenience-store data
+        run: |
+          CHAIN="${{ github.event.inputs.chain }}"
+          if [ -n "$CHAIN" ]; then
+            node scripts/fetch-convenience-events.mjs "$CHAIN"
+          else
+            node scripts/fetch-convenience-events.mjs
+          fi
+
+      - name: Check for changes
+        id: diff
+        run: |
+          if git diff --quiet -- convenience-events/products.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes — skipping commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --stat convenience-events/products.json
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
+          TRIGGER="${{ github.event_name }}"
+          if [ "$TRIGGER" = "workflow_dispatch" ]; then
+            MSG="chore(convenience-events): manual refresh ($DATE_KST)"
+          else
+            MSG="chore(convenience-events): daily refresh ($DATE_KST)"
+          fi
+
+          git add convenience-events/products.json
+          git commit -m "$MSG"
+          git push
+
+      - name: Summary
+        run: |
+          echo "### 편의점 행사 데이터 갱신" >> "$GITHUB_STEP_SUMMARY"
+          CHANGED="${{ steps.diff.outputs.changed }}"
+          if [ "$CHANGED" = "true" ]; then
+            echo "✅ convenience-events/products.json 업데이트 완료" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "ℹ️ 변경사항 없음 (이전 데이터 유지)" >> "$GITHUB_STEP_SUMMARY"
+          fi
