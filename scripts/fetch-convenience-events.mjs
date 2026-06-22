@@ -1,11 +1,12 @@
 // 편의점 3사(CU·GS25·세븐일레븐) 이달의 행사상품(1+1/2+1/증정/할인) 스크래퍼.
 // convenience-events-mini 앱용. fetch만 사용(playwright 불필요).
 //
-// Usage:
-//   node scripts/fetch-convenience-events.mjs           # 전체
-//   node scripts/fetch-convenience-events.mjs cu         # CU만
-//   node scripts/fetch-convenience-events.mjs gs25       # GS25만
-//   node scripts/fetch-convenience-events.mjs seven      # 세븐일레븐만
+// Usage (인자=긁을 체인 콤마목록, 생략=전체. 안 긁는 체인은 기존 데이터 유지):
+//   node scripts/fetch-convenience-events.mjs            # 전체(cu,gs25,seven) — 로컬(한국 IP)용
+//   node scripts/fetch-convenience-events.mjs cu,gs25    # CU+GS25만 — GitHub Actions(해외 IP)용, 세븐 보존
+//   node scripts/fetch-convenience-events.mjs seven      # 세븐만
+//
+// 하이브리드 운영: GitHub Action은 cu,gs25(세븐은 해외 IP 차단)·로컬 launchd는 전체(세븐 포함).
 //
 // 비공식 내부 AJAX 역공학. 사이트 구조가 바뀌면 해당 체인 파서만 깨진다.
 //   CU    : POST /event/plusAjax.do (무인증, HTML)
@@ -18,7 +19,10 @@ import { fileURLToPath } from 'node:url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const OUTPUT_PATH = path.resolve(__dirname, '../convenience-events/products.json')
-const TARGET = process.argv[2] || null
+// 긁을 체인 키 집합. 생략 시 null = 전체. 목록에 없는 체인은 기존 데이터 유지.
+const ONLY = process.argv[2]
+  ? new Set(process.argv[2].split(',').map((s) => s.trim()).filter(Boolean))
+  : null
 
 // ───────────────────────── 공용 헬퍼 ─────────────────────────
 
@@ -253,9 +257,9 @@ function categorize(name) {
 const SOURCES = [
   ['cu', 'CU', scrapeCU],
   ['gs25', 'GS25', scrapeGS25],
-  // 세븐일레븐(www.7-eleven.co.kr)은 GitHub Actions 해외/데이터센터 IP를 연결 단계에서 차단(fetch failed).
-  // CU·GS25는 해외 IP 허용. 한국 IP 경로(프록시 등)가 생기면 아래 줄 주석 해제로 재활성화.
-  // ['seven', '7-ELEVEN', scrapeSeven],
+  // 세븐일레븐: 한국 IP(로컬)에선 정상, GitHub Actions 해외 IP에선 TCP 연결 차단(UND_ERR_CONNECT_TIMEOUT).
+  // 따라서 로컬 실행에서만 갱신되고, GitHub Action(cu,gs25)에선 직전 데이터가 유지된다.
+  ['seven', '7-ELEVEN', scrapeSeven],
 ]
 
 async function readExisting() {
@@ -276,7 +280,7 @@ async function main() {
   const counts = {}
 
   for (const [key, name, fn] of SOURCES) {
-    if (TARGET && TARGET !== key) {
+    if (ONLY && !ONLY.has(key)) {
       byChain[name] = prevByChain[name] || []
       counts[name] = `유지(${byChain[name].length})`
       continue
