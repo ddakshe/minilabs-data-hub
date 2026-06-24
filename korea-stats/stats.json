@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-18",
+  "updatedAt": "2026-06-24",
   "source": "KOSIS Open API",
   "categories": [
     {
@@ -25,16 +25,16 @@
   ],
   "issues": [
     {
+      "id": "i_eco_export",
+      "emoji": "📈",
+      "title": "수출액 · 36개월 최고",
+      "description": "2026.05 기준",
+      "category": "economy"
+    },
+    {
       "id": "i_hea_smoke",
       "emoji": "📉",
       "title": "현재 흡연율 · 10년 최저",
-      "description": "2024년 기준",
-      "category": "health"
-    },
-    {
-      "id": "i_soc_suicide",
-      "emoji": "📈",
-      "title": "자살률 · 10년 최고",
       "description": "2024년 기준",
       "category": "health"
     }
@@ -732,18 +732,14 @@
       "id": "soc_house",
       "category": "society",
       "title": "전세가격지수",
-      "value": 100.8,
+      "value": 101.2,
       "unit": "pt",
-      "changePct": 2,
+      "changePct": 2.4,
       "decimals": 1,
       "frequency": "M",
       "source": "한국부동산원 전국주택가격동향",
-      "period": "2026.04",
+      "period": "2026.05",
       "history": [
-        {
-          "prd": "202305",
-          "value": 96.6
-        },
         {
           "prd": "202306",
           "value": 96.4
@@ -883,6 +879,10 @@
         {
           "prd": "202604",
           "value": 100.8
+        },
+        {
+          "prd": "202605",
+          "value": 101.2
         }
       ]
     },
@@ -1383,17 +1383,13 @@
       "id": "eco_export",
       "category": "economy",
       "title": "수출액",
-      "value": 85867,
+      "value": 87821,
       "unit": "백만$",
-      "changePct": 48,
+      "changePct": 53.4,
       "frequency": "M",
       "source": "통계청 시도별 수출입 현황",
-      "period": "2026.04",
+      "period": "2026.05",
       "history": [
-        {
-          "prd": "202305",
-          "value": 52054
-        },
         {
           "prd": "202306",
           "value": 54298
@@ -1520,19 +1516,23 @@
         },
         {
           "prd": "202601",
-          "value": 65842
+          "value": 65835
         },
         {
           "prd": "202602",
-          "value": 67558
+          "value": 67654
         },
         {
           "prd": "202603",
-          "value": 87211
+          "value": 87321
         },
         {
           "prd": "202604",
-          "value": 85867
+          "value": 85830
+        },
+        {
+          "prd": "202605",
+          "value": 87821
         }
       ]
     },
@@ -1646,17 +1646,13 @@
       "id": "pop_birth",
       "category": "population",
       "title": "출생아 수",
-      "value": 25200,
+      "value": 24521,
       "unit": "명",
-      "changePct": 19.4,
+      "changePct": 18,
       "frequency": "M",
       "source": "통계청 인구동향조사",
-      "period": "2026.03",
+      "period": "2026.04",
       "history": [
-        {
-          "prd": "202304",
-          "value": 18515
-        },
         {
           "prd": "202305",
           "value": 19047
@@ -1796,6 +1792,10 @@
         {
           "prd": "202603",
           "value": 25200
+        },
+        {
+          "prd": "202604",
+          "value": 24521
         }
       ]
     },
@@ -1803,17 +1803,13 @@
       "id": "soc_marriage",
       "category": "society",
       "title": "혼인 건수",
-      "value": 21112,
+      "value": 20622,
       "unit": "건",
-      "changePct": 10.1,
+      "changePct": 9,
       "frequency": "M",
       "source": "통계청 인구동향조사",
-      "period": "2026.03",
+      "period": "2026.04",
       "history": [
-        {
-          "prd": "202304",
-          "value": 14474
-        },
         {
           "prd": "202305",
           "value": 17211
@@ -1953,6 +1949,10 @@
         {
           "prd": "202603",
           "value": 21112
+        },
+        {
+          "prd": "202604",
+          "value": 20622
         }
       ]
     },
@@ -1960,17 +1960,13 @@
       "id": "soc_divorce",
       "category": "society",
       "title": "이혼 건수",
-      "value": 7884,
+      "value": 7829,
       "unit": "건",
-      "changePct": 9.4,
+      "changePct": 7.3,
       "frequency": "M",
       "source": "통계청 인구동향조사",
-      "period": "2026.03",
+      "period": "2026.04",
       "history": [
-        {
-          "prd": "202304",
-          "value": 7288
-        },
         {
           "prd": "202305",
           "value": 8393
@@ -2110,6 +2106,10 @@
         {
           "prd": "202603",
           "value": 7884
+        },
+        {
+          "prd": "202604",
+          "value": 7829
         }
       ]
     },
