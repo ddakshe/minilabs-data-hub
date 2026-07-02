@@ -1,17 +1,18 @@
-// 편의점 3사(CU·GS25·세븐일레븐) 이달의 행사상품(1+1/2+1/증정/할인) 스크래퍼.
+// 편의점 4사(CU·GS25·이마트24·세븐일레븐) 이달의 행사상품(1+1/2+1/증정/할인) 스크래퍼.
 // convenience-events-mini 앱용. fetch만 사용(playwright 불필요).
 //
 // Usage (인자=긁을 체인 콤마목록, 생략=전체. 안 긁는 체인은 기존 데이터 유지):
-//   node scripts/fetch-convenience-events.mjs            # 전체(cu,gs25,seven) — 로컬(한국 IP)용
-//   node scripts/fetch-convenience-events.mjs cu,gs25    # CU+GS25만 — GitHub Actions(해외 IP)용, 세븐 보존
-//   node scripts/fetch-convenience-events.mjs seven      # 세븐만
+//   node scripts/fetch-convenience-events.mjs                 # 전체(cu,gs25,emart24,seven) — 로컬(한국 IP)용
+//   node scripts/fetch-convenience-events.mjs cu,gs25,emart24 # 세븐 제외 — GitHub Actions(해외 IP)용, 세븐 보존
+//   node scripts/fetch-convenience-events.mjs seven          # 세븐만
 //
-// 하이브리드 운영: GitHub Action은 cu,gs25(세븐은 해외 IP 차단)·로컬 launchd는 전체(세븐 포함).
+// 하이브리드 운영: GitHub Action은 cu,gs25,emart24(세븐은 해외 IP 차단)·로컬 launchd는 전체(세븐 포함).
 //
-// 비공식 내부 AJAX 역공학. 사이트 구조가 바뀌면 해당 체인 파서만 깨진다.
-//   CU    : POST /event/plusAjax.do (무인증, HTML)
-//   GS25  : 페이지 GET→CSRF+쿠키 → POST /event-goods-search (이중 인코딩 JSON)
-//   세븐  : PC POST /product/listMoreAjax.asp (intCurrentPage 무시→intPageSize가 총개수)
+// 비공식 내부 AJAX/HTML 역공학. 사이트 구조가 바뀌면 해당 체인 파서만 깨진다.
+//   CU     : POST /event/plusAjax.do (무인증, HTML)
+//   GS25   : 페이지 GET→CSRF+쿠키 → POST /event-goods-search (이중 인코딩 JSON)
+//   이마트24: GET /goods/event?page=N (서버렌더 HTML, 뱃지 class로 유형 판별)
+//   세븐   : PC POST /product/listMoreAjax.asp (intCurrentPage 무시→intPageSize가 총개수)
 
 import fs from 'node:fs/promises'
 import path from 'node:path'
@@ -226,6 +227,41 @@ async function scrapeSeven({ pageSize = 3000 } = {}) {
   return out.filter((p) => (seen.has(p.id) ? false : seen.add(p.id)))
 }
 
+// ───────────────────────── 이마트24 ─────────────────────────
+// /goods/event 페이지네이션(page=N, 20개/페이지). 상품 뱃지 class로 행사유형 판별.
+// 세일→할인으로 통일. 이미지는 절대경로(msave...), 기본이미지(productPlaceHolder)는 제외.
+const E24_BASE = 'https://emart24.co.kr/goods/event'
+const E24_TYPE = { onepl: '1+1', twopl: '2+1', threepl: '3+1', sale: '할인' }
+
+function parseE24Block(block) {
+  const cls = block.match(/class="(onepl|twopl|threepl|sale)[^"]*floatR/)?.[1]
+  const eventType = E24_TYPE[cls]
+  const name = decode(block.match(/<div class="itemtitle">[\s\S]*?<a[^>]*>([^<]+)<\/a>/)?.[1])
+  const price = toPrice(block.match(/class="price"[^>]*>\s*([\d,]+)\s*원/)?.[1])
+  let img = block.match(/<div class="itemSpImg">[\s\S]*?<img[^>]*\ssrc="([^"]+)"/)?.[1] || ''
+  if (img.includes('productPlaceHolder')) img = ''
+  if (!eventType || !name) return null
+  const barcode = img.match(/\/(\d{8,})\.\w+$/i)?.[1]
+  return { id: `emart24-${barcode || name}`, chain: 'EMART24', name, price, eventType, image: img, category: null }
+}
+
+async function scrapeEmart24({ maxPages = 200 } = {}) {
+  const out = []
+  const seen = new Set()
+  for (let page = 1; page <= maxPages; page++) {
+    const { status, text } = await http(
+      `${E24_BASE}?search=&category_seq=&base_category_seq=&align=&page=${page}`
+    )
+    if (status !== 200) throw new Error(`emart24 HTTP ${status} (page ${page})`)
+    const parsed = text.split('<div class="itemWrap">').slice(1).map(parseE24Block).filter(Boolean)
+    if (parsed.length === 0) break
+    let fresh = 0
+    for (const p of parsed) if (!seen.has(p.id)) (seen.add(p.id), out.push(p), fresh++)
+    if (fresh === 0) break // 마지막 페이지 이후 같은 내용 반복 방지
+  }
+  return out
+}
+
 // ───────────────────────── 카테고리 자동분류 ─────────────────────────
 // 상품명 키워드 기반(위에서부터 우선). 추가 스크래핑 없음.
 
@@ -257,8 +293,9 @@ function categorize(name) {
 const SOURCES = [
   ['cu', 'CU', scrapeCU],
   ['gs25', 'GS25', scrapeGS25],
+  ['emart24', 'EMART24', scrapeEmart24],
   // 세븐일레븐: 한국 IP(로컬)에선 정상, GitHub Actions 해외 IP에선 TCP 연결 차단(UND_ERR_CONNECT_TIMEOUT).
-  // 따라서 로컬 실행에서만 갱신되고, GitHub Action(cu,gs25)에선 직전 데이터가 유지된다.
+  // 따라서 로컬 실행에서만 갱신되고, GitHub Action(cu,gs25,emart24)에선 직전 데이터가 유지된다.
   ['seven', '7-ELEVEN', scrapeSeven],
 ]
 

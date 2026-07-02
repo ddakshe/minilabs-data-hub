@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       chain:
-        description: '긁을 체인 콤마목록 (비우면 cu,gs25 — 세븐은 해외 IP 차단이라 로컬에서만)'
+        description: '긁을 체인 콤마목록 (비우면 cu,gs25,emart24 — 세븐은 해외 IP 차단이라 로컬에서만)'
         required: false
         default: ''
 
@@ -45,9 +45,9 @@ jobs:
 
       - name: Fetch convenience-store data
         run: |
-          # 기본은 cu,gs25 (세븐일레븐은 해외 IP 차단 → 로컬 launchd가 담당, 여기선 기존 데이터 유지)
+          # 기본은 cu,gs25,emart24 (세븐일레븐은 해외 IP 차단 → 로컬 launchd가 담당, 여기선 기존 데이터 유지)
           CHAIN="${{ github.event.inputs.chain }}"
-          node scripts/fetch-convenience-events.mjs "${CHAIN:-cu,gs25}"
+          node scripts/fetch-convenience-events.mjs "${CHAIN:-cu,gs25,emart24}"
 
       - name: Check for changes
         id: diff
