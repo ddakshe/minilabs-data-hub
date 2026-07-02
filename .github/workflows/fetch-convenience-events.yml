@@ -2,7 +2,9 @@ name: Fetch convenience-store events
 
 on:
   schedule:
-    - cron: '0 0 1,15 * *'    # 매월 1일·15일 09:00 KST (행사는 월 단위라 매일 불필요)
+    - cron: '0 0 * * 4'    # 매주 목요일 09:00 KST. CU·GS25만 담당.
+                           # (세븐 포함 3사 전부는 로컬 launchd가 매주 월요일 10:00에 처리 →
+                           #  Action을 목요일로 두어 CU·GS25를 주 2회(월·목)로 분산 갱신)
   workflow_dispatch:
     inputs:
       chain:
@@ -69,7 +71,7 @@ jobs:
           if [ "$TRIGGER" = "workflow_dispatch" ]; then
             MSG="chore(convenience-events): manual refresh ($DATE_KST)"
           else
-            MSG="chore(convenience-events): daily refresh ($DATE_KST)"
+            MSG="chore(convenience-events): weekly refresh ($DATE_KST)"
           fi
 
           git add convenience-events/products.json
