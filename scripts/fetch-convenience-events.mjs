@@ -231,10 +231,11 @@ async function scrapeSeven({ pageSize = 3000 } = {}) {
 // /goods/event 페이지네이션(page=N, 20개/페이지). 상품 뱃지 class로 행사유형 판별.
 // 세일→할인으로 통일. 이미지는 절대경로(msave...), 기본이미지(productPlaceHolder)는 제외.
 const E24_BASE = 'https://emart24.co.kr/goods/event'
-const E24_TYPE = { onepl: '1+1', twopl: '2+1', threepl: '3+1', sale: '할인' }
+// 뱃지 class → 행사유형. 세일→할인 통일. gola=골라담기(이마트24 고유).
+const E24_TYPE = { onepl: '1+1', twopl: '2+1', tripl: '3+1', sale: '할인', gola: '골라담기' }
 
 function parseE24Block(block) {
-  const cls = block.match(/class="(onepl|twopl|threepl|sale)[^"]*floatR/)?.[1]
+  const cls = block.match(/class="(onepl|twopl|tripl|sale|gola)[^"]*floatR/)?.[1]
   const eventType = E24_TYPE[cls]
   const name = decode(block.match(/<div class="itemtitle">[\s\S]*?<a[^>]*>([^<]+)<\/a>/)?.[1])
   const price = toPrice(block.match(/class="price"[^>]*>\s*([\d,]+)\s*원/)?.[1])
@@ -253,11 +254,14 @@ async function scrapeEmart24({ maxPages = 200 } = {}) {
       `${E24_BASE}?search=&category_seq=&base_category_seq=&align=&page=${page}`
     )
     if (status !== 200) throw new Error(`emart24 HTTP ${status} (page ${page})`)
-    const parsed = text.split('<div class="itemWrap">').slice(1).map(parseE24Block).filter(Boolean)
-    if (parsed.length === 0) break
+    const blocks = text.split('<div class="itemWrap">').slice(1)
+    if (blocks.length === 0) break // 상품 없는 페이지 = 진짜 끝
+    const parsed = blocks.map(parseE24Block).filter(Boolean)
     let fresh = 0
     for (const p of parsed) if (!seen.has(p.id)) (seen.add(p.id), out.push(p), fresh++)
-    if (fresh === 0) break // 마지막 페이지 이후 같은 내용 반복 방지
+    // 매핑된 상품이 있는데 전부 중복이면 마지막 페이지 반복 → 종료.
+    // (매핑 안 되는 유형만 있는 페이지는 건너뛰고 계속 진행)
+    if (parsed.length > 0 && fresh === 0) break
   }
   return out
 }
