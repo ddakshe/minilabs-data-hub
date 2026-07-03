@@ -161,6 +161,13 @@ async function fetchMegaboxNowPlaying(browser) {
 // 무비차트 = data.dspScrdispMovctTab.dspScrdispMovctDtlList[].movctSearchResDtoList (가장 큰 탭 사용).
 const EVENT_RE =
   /라이브뷰잉|live\s*viewing|팬콘서트|팬미팅|fan\s*meet|meet[\s-]?up|콘서트|KBO|올스타|리그\s*-|내한공연/i;
+// CGV 등급코드(cratgClsCd) → 등급명. CGV+롯데 교차검증으로 역산. 미매핑/빈값은 null.
+const CGV_GRADE = {
+  "01": "청소년관람불가",
+  "02": "15세이상관람가",
+  "03": "12세이상관람가",
+  "04": "전체관람가",
+};
 async function fetchCgvNowPlaying(browser) {
   const ctx = await browser.newContext({ userAgent: UA, locale: "ko-KR" });
   const page = await ctx.newPage();
@@ -199,7 +206,7 @@ async function fetchCgvNowPlaying(browser) {
     openDt: toIso(m.realOpenYmd || m.rlsYmd),
     poster:
       m.imgPath && m.img320Fnm ? httpsUrl("https://cdn.cgv.co.kr" + m.imgPath + m.img320Fnm) : "",
-    gradeChain: null,
+    gradeChain: CGV_GRADE[m.cratgClsCd] ?? null,
     bookingRate: Number.isFinite(Number(m.atktRate)) ? Number(m.atktRate) : null,
     plotChain: null,
   }));
