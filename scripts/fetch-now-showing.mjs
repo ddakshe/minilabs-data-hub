@@ -453,18 +453,27 @@ async function main() {
     });
   }
 
+  // 표시 필터: 성인물(청소년관람불가) + 포스터 없는 것 제외 (카드 UI 품질).
+  // ⚠ 개봉예정의 포스터 없는 정상 신작(예: 명탐정 코난)도 빠짐 — 후속에 체인 예매목록에서 포스터 확보하면 복구 가능.
+  const displayable = (m) => m.grade !== "청소년관람불가" && !!m.poster;
+  const nowShow = nowShowing.filter(displayable);
+  const upcome = upcoming.filter(displayable);
+  console.log(
+    `· 표시필터(성인/무포스터 제외): 상영중 ${nowShowing.length}→${nowShow.length}, 개봉예정 ${upcoming.length}→${upcome.length}`,
+  );
+
   const payload = {
     updatedAt: toIso(ymd(today)),
-    counts: { nowShowing: nowShowing.length, upcoming: upcoming.length },
-    nowShowing,
-    upcoming,
+    counts: { nowShowing: nowShow.length, upcoming: upcome.length },
+    nowShowing: nowShow,
+    upcoming: upcome,
   };
   const body = JSON.stringify(payload, null, 2);
 
   const outDir = resolve(ROOT, "now-showing");
   mkdirSync(outDir, { recursive: true });
   writeFileSync(resolve(outDir, "movies.json"), body, "utf-8");
-  console.log(`✓ now-showing/movies.json  (상영중 ${nowShowing.length}, 개봉예정 ${upcoming.length})`);
+  console.log(`✓ now-showing/movies.json  (상영중 ${nowShow.length}, 개봉예정 ${upcome.length})`);
 
   const appDir = resolve(ROOT, "../now-showing-mini");
   if (existsSync(appDir)) {
