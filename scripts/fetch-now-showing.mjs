@@ -156,12 +156,61 @@ async function fetchMegaboxNowPlaying(browser) {
     }));
 }
 
+// ── CGV 현재상영작 (playwright: 홈 로드 시 무비차트 API 응답 인터셉트) ──
+// 신규 cgv.co.kr(SPA)는 api.cgv.co.kr 호출에 브라우저 세션 필요(직접 curl은 403/401).
+// 무비차트 = data.dspScrdispMovctTab.dspScrdispMovctDtlList[].movctSearchResDtoList (가장 큰 탭 사용).
+const EVENT_RE =
+  /라이브뷰잉|live\s*viewing|팬콘서트|팬미팅|fan\s*meet|meet[\s-]?up|콘서트|KBO|올스타|리그\s*-|내한공연/i;
+async function fetchCgvNowPlaying(browser) {
+  const ctx = await browser.newContext({ userAgent: UA, locale: "ko-KR" });
+  const page = await ctx.newPage();
+  let movies = null;
+  page.on("response", async (res) => {
+    if (!res.url().includes("api.cgv.co.kr") || res.status() !== 200) return;
+    if (!(res.headers()["content-type"] || "").includes("json")) return;
+    try {
+      const j = await res.json();
+      const tabs = j?.data?.dspScrdispMovctTab?.dspScrdispMovctDtlList;
+      if (!Array.isArray(tabs)) return;
+      let best = [];
+      for (const t of tabs) {
+        const l = t?.movctSearchResDtoList;
+        if (Array.isArray(l) && l.length > best.length) best = l;
+      }
+      if (best.length) movies = best; // 가장 큰 무비차트 탭
+    } catch {}
+  });
+  try {
+    await page.goto("https://cgv.co.kr/", { waitUntil: "networkidle", timeout: 40000 });
+    await page.waitForTimeout(3000);
+  } finally {
+    await ctx.close();
+  }
+  const list = movies ?? [];
+  const films = list.filter((m) => !EVENT_RE.test(m.movNm || "")); // 라이브뷰잉/콘서트/중계 제외
+  if (list.length - films.length > 0) {
+    console.log(`  (CGV: 이벤트/중계 ${list.length - films.length}편 제외)`);
+  }
+  return films.map((m) => ({
+    source: "cgv",
+    kofCd: null, // CGV도 KOBIS 코드 미제공 → 제목+연도 매칭
+    title: m.movNm,
+    titleEn: "",
+    openDt: toIso(m.realOpenYmd || m.rlsYmd),
+    poster:
+      m.imgPath && m.img320Fnm ? httpsUrl("https://cdn.cgv.co.kr" + m.imgPath + m.img320Fnm) : "",
+    gradeChain: null,
+    bookingRate: Number.isFinite(Number(m.atktRate)) ? Number(m.atktRate) : null,
+    plotChain: null,
+  }));
+}
+
 // ── 체인 항목 병합 (dedup 키 = 정규화제목 + 개봉연도). 포스터 우선순위 = 수집 순서(롯데>메가>CGV) ──
 function mergeChains(items) {
   const map = new Map();
   for (const it of items) {
-    const year = String(it.openDt ?? "").slice(0, 4);
-    const key = `${normTitle(it.title)}|${year}`;
+    // 키 = 정규화 제목만. (재개봉작은 체인마다 개봉연도가 원작/재개봉으로 달라 연도를 키에 넣으면 중복 발생)
+    const key = normTitle(it.title);
     if (!map.has(key)) {
       map.set(key, {
         source: it.source,
@@ -310,7 +359,13 @@ async function main() {
     } catch (e) {
       console.warn(`  ⚠ 메가박스 실패: ${e.message}`);
     }
-    // 증분3: CGV 추가 예정
+    try {
+      const cg = await fetchCgvNowPlaying(browser);
+      chainItems.push(...cg);
+      console.log(`  CGV ${cg.length}편`);
+    } catch (e) {
+      console.warn(`  ⚠ CGV 실패: ${e.message}`);
+    }
   } finally {
     await browser.close();
   }
@@ -320,11 +375,13 @@ async function main() {
     process.exit(1);
   }
   const merged = mergeChains(chainItems);
-  console.log(`  병합 후 ${merged.length}편 (체인 union)`);
+  // 이벤트/공연/중계 전역 제외 (콘서트·라이브뷰잉·팬미팅·스포츠 — 어느 체인發이든)
+  const spine = merged.filter((m) => !EVENT_RE.test(m.title));
+  console.log(`  병합 ${merged.length}편 → 이벤트 ${merged.length - spine.length}편 제외 → 상영중 ${spine.length}편`);
 
   console.log("· 상영중 보강(KOBIS 상세 + KMDb)…");
   const nowShowing = [];
-  for (const s of merged) {
+  for (const s of spine) {
     const info = await fetchInfo(s.kofCd); // kofCd 없으면 {} 반환
     if (s.kofCd) await sleep(60);
     const km = await enrichKmdb({ title: s.title, openDt: s.openDt });

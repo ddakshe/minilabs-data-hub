@@ -97,7 +97,8 @@
 
 1. **롯데 스파인** (가장 깨끗): 롯데 현재상영 → 스파인, KOFMovieCd로 KOBIS 조인, KMDb 줄거리, 신규 스키마. 산출·검증. ✅ **완료** (37편, 포스터 100%)
 2. **메가박스 추가**: playwright AJAX 인터셉트, 제목+개봉연도 dedup 병합, `imgPathNm` 포스터. ✅ **완료** (병합 46편, 포스터 100%, 제목중복 0). 단 기본 페이지 상위 ~20편만 로드(페이징 미구현).
-3. **CGV 추가**: ⏸ **보류**. 신규 cgv.co.kr(SPA)는 movie JSON API/DOM 카드가 단순 인터셉트로 안 잡힘(봇방어·감춰진 라우트 추정). 네트워크 탭 기반 리버스엔지니어링 필요 → 후속. 대형 개봉작은 롯데+메가로 이미 커버되므로 순증 효과 낮음.
+3. **CGV 추가**: ✅ **완료**. cgv.co.kr 홈 로드 시 `api.cgv.co.kr`의 무비차트 응답(`data.dspScrdispMovctTab.dspScrdispMovctDtlList[].movctSearchResDtoList`, 가장 큰 탭) 인터셉트. 포스터=`https://cdn.cgv.co.kr{imgPath}{img320Fnm}`, 예매율=`atktRate`. 직접 curl은 403/401(WAF·세션) → playwright 세션 인터셉트만 동작. 라이브뷰잉/콘서트/팬미팅/스포츠중계는 이벤트 정규식(`EVENT_RE`)으로 제외. **최종 3체인 76편, 포스터 100%, 중복 0.**
+   - 병합키를 `정규화(제목)+연도`→`정규화(제목)`으로 변경(재개봉작이 체인마다 원작/재개봉 연도가 달라 중복 발생하던 것 해결).
 4. **워크플로우 playwright 대응**: `npm ci` + `npx playwright install chromium --with-deps` 스텝 추가(fetch-outlets 패턴). ✅ **완료**.
 
 각 단계는 독립적으로 동작·검증 가능(현재 1+2+4 완료, 3은 후속).
