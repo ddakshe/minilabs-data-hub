@@ -112,6 +112,7 @@ async function fetchLotteNowPlaying() {
     openDt: toIso(String(m.ReleaseDate).slice(0, 10)),
     poster: httpsUrl(m.PosterURL),
     gradeChain: m.ViewGradeNameKR || null, // 축약형("전체"/"15") — KOBIS 상세 등급 우선, 폴백용
+    genreChain: m.MovieGenreNameKR || null,
     bookingRate: Number.isFinite(Number(m.BookingRate)) ? Number(m.BookingRate) : null,
   }));
 }
@@ -151,6 +152,7 @@ async function fetchMegaboxNowPlaying(browser) {
       openDt: toIso(m.rfilmDeReal),
       poster: m.imgPathNm ? httpsUrl("https://img.megabox.co.kr" + m.imgPathNm) : "",
       gradeChain: m.admisClassNm || null,
+      genreChain: null, // 메가박스 목록 응답엔 장르 없음
       bookingRate: Number.isFinite(Number(m.boxoBokdRt)) ? Number(m.boxoBokdRt) : null,
       plotChain: cleanText(m.movieSynopCn) || null,
     }));
@@ -207,6 +209,7 @@ async function fetchCgvNowPlaying(browser) {
     poster:
       m.imgPath && m.img320Fnm ? httpsUrl("https://cdn.cgv.co.kr" + m.imgPath + m.img320Fnm) : "",
     gradeChain: CGV_GRADE[m.cratgClsCd] ?? null,
+    genreChain: m.genr || null,
     bookingRate: Number.isFinite(Number(m.atktRate)) ? Number(m.atktRate) : null,
     plotChain: null,
   }));
@@ -227,6 +230,7 @@ function mergeChains(items) {
         openDt: it.openDt ?? "",
         poster: it.poster ?? "",
         gradeChain: it.gradeChain ?? null,
+        genreChain: it.genreChain ?? null,
         bookingRate: it.bookingRate ?? null,
         plotChain: it.plotChain ?? null,
         availableAt: [it.source],
@@ -238,6 +242,7 @@ function mergeChains(items) {
       if (!u.poster && it.poster) u.poster = it.poster; // 먼저 수집된 체인 포스터 우선
       if (!u.titleEn && it.titleEn) u.titleEn = it.titleEn;
       if (!u.gradeChain && it.gradeChain) u.gradeChain = it.gradeChain;
+      if (!u.genreChain && it.genreChain) u.genreChain = it.genreChain;
       if (!u.plotChain && it.plotChain) u.plotChain = it.plotChain;
       if (it.bookingRate != null) u.bookingRate = Math.max(u.bookingRate ?? 0, it.bookingRate);
     }
@@ -382,9 +387,14 @@ async function main() {
     process.exit(1);
   }
   const merged = mergeChains(chainItems);
-  // 이벤트/공연/중계 전역 제외 (콘서트·라이브뷰잉·팬미팅·스포츠 — 어느 체인發이든)
-  const spine = merged.filter((m) => !EVENT_RE.test(m.title));
-  console.log(`  병합 ${merged.length}편 → 이벤트 ${merged.length - spine.length}편 제외 → 상영중 ${spine.length}편`);
+  // 제외: ① 이벤트/공연/중계(콘서트·라이브뷰잉·팬미팅·스포츠) ② 미래 개봉작(체인 예매중/선개봉 — "지금 상영중"이 아님)
+  const todayIso = toIso(ymd(today));
+  const evt = merged.filter((m) => EVENT_RE.test(m.title)).length;
+  const spine = merged.filter((m) => !EVENT_RE.test(m.title) && (!m.openDt || m.openDt <= todayIso));
+  const future = merged.length - evt - spine.length;
+  console.log(
+    `  병합 ${merged.length}편 → 이벤트 ${evt} + 미래개봉 ${future} 제외 → 상영중 ${spine.length}편`,
+  );
 
   console.log("· 상영중 보강(KOBIS 상세 + KMDb)…");
   const nowShowing = [];
@@ -398,7 +408,7 @@ async function main() {
       title: s.title,
       titleEn: s.titleEn,
       openDt: s.openDt,
-      genre: info.genre ?? null,
+      genre: info.genre ?? s.genreChain ?? null,
       runtime: info.runtime ?? null,
       grade: info.grade ?? s.gradeChain ?? null,
       nation: info.nation ?? null,
