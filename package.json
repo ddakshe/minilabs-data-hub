@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "fetch:kamis": "node scripts/fetch-kamis.mjs"
+    "fetch:kamis": "node scripts/fetch-kamis.mjs",
+    "fetch:now-showing": "node scripts/fetch-now-showing.mjs"
   },
   "dependencies": {
     "cheerio": "^1.2.0",

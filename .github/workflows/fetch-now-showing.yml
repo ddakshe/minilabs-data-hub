@@ -1,0 +1,93 @@
+name: Fetch now-showing movies
+
+on:
+  schedule:
+    - cron: '30 0 * * *'  # 매일 09:30 KST (KOBIS 전일 박스오피스 게시 후)
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: '실행 이유 (로그에만 기록, 선택)'
+        required: false
+        default: 'manual refresh'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-now-showing
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Show trigger context
+        run: |
+          echo "Event       : ${{ github.event_name }}"
+          echo "Reason      : ${{ github.event.inputs.reason || '(scheduled)' }}"
+          date -u "+UTC: %Y-%m-%d %H:%M:%S"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      - name: Fetch now-showing movies
+        env:
+          KOBIS_KEY: ${{ secrets.KOBIS_KEY }}
+          KMDB_KEY: ${{ secrets.KMDB_KEY }}   # 미설정 시 KOBIS-only 로 동작(포스터/줄거리 공란)
+        run: |
+          if [ -z "$KOBIS_KEY" ]; then
+            echo "::error::KOBIS_KEY secret 미설정."
+            exit 1
+          fi
+          if [ -z "$KMDB_KEY" ]; then
+            echo "::warning::KMDB_KEY 미설정 — KOBIS-only 로 생성(포스터/줄거리 공란)."
+          fi
+          node scripts/fetch-now-showing.mjs
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git add now-showing/
+          if git diff --cached --quiet -- now-showing/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes — skipping commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --cached --stat now-showing/
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
+          TRIGGER="${{ github.event_name }}"
+          if [ "$TRIGGER" = "workflow_dispatch" ]; then
+            MSG="chore(now-showing): manual refresh ($DATE_KST)"
+          else
+            MSG="chore(now-showing): daily refresh ($DATE_KST)"
+          fi
+
+          git commit -m "$MSG"
+          git push
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## now-showing Fetch Summary"
+            echo ""
+            echo "- Trigger: \`${{ github.event_name }}\`"
+            echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
+            echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+          } >> "$GITHUB_STEP_SUMMARY"
