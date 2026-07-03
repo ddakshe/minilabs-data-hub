@@ -12,6 +12,7 @@
 import { writeFileSync, mkdirSync, existsSync, readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { chromium } from "playwright"; // 메가박스/CGV(봇차단·동적로딩)용
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
@@ -113,6 +114,79 @@ async function fetchLotteNowPlaying() {
     gradeChain: m.ViewGradeNameKR || null, // 축약형("전체"/"15") — KOBIS 상세 등급 우선, 폴백용
     bookingRate: Number.isFinite(Number(m.BookingRate)) ? Number(m.BookingRate) : null,
   }));
+}
+
+// ── 메가박스 현재상영작 (playwright AJAX 인터셉트) ──
+// ⚠ 기본 /movie 페이지는 상위 ~20편만 로드(recordCountPerPage). 대부분 롯데와 겹치므로 net-new는 소수.
+async function fetchMegaboxNowPlaying(browser) {
+  const ctx = await browser.newContext({ userAgent: UA, locale: "ko-KR" });
+  const page = await ctx.newPage();
+  let cap = null;
+  page.on("response", async (res) => {
+    const u = res.url();
+    if (u.includes("Movie") && u.includes(".do") && res.request().method() === "POST") {
+      try {
+        const j = await res.json();
+        if (j && j.movieList) cap = j;
+      } catch {}
+    }
+  });
+  try {
+    await page.goto("https://www.megabox.co.kr/movie", { waitUntil: "networkidle", timeout: 30000 });
+    await page.waitForTimeout(2000);
+  } finally {
+    await ctx.close();
+  }
+  const list = cap?.movieList ?? [];
+  if (list.length && list[0]?.totCnt > list.length) {
+    console.log(`  (메가박스: 전체 ${list[0].totCnt}편 중 ${list.length}편만 로드 — 페이징 미구현, 후속 개선 여지)`);
+  }
+  return list
+    .filter((m) => m.movieStatNm === "상영중" || m.rfilmAt === "Y")
+    .map((m) => ({
+      source: "megabox",
+      kofCd: null, // 메가박스는 KOBIS 코드 미제공 → 제목+연도 매칭
+      title: m.movieNm,
+      titleEn: "",
+      openDt: toIso(m.rfilmDeReal),
+      poster: m.imgPathNm ? httpsUrl("https://img.megabox.co.kr" + m.imgPathNm) : "",
+      gradeChain: m.admisClassNm || null,
+      bookingRate: Number.isFinite(Number(m.boxoBokdRt)) ? Number(m.boxoBokdRt) : null,
+      plotChain: cleanText(m.movieSynopCn) || null,
+    }));
+}
+
+// ── 체인 항목 병합 (dedup 키 = 정규화제목 + 개봉연도). 포스터 우선순위 = 수집 순서(롯데>메가>CGV) ──
+function mergeChains(items) {
+  const map = new Map();
+  for (const it of items) {
+    const year = String(it.openDt ?? "").slice(0, 4);
+    const key = `${normTitle(it.title)}|${year}`;
+    if (!map.has(key)) {
+      map.set(key, {
+        source: it.source,
+        kofCd: it.kofCd ?? null,
+        title: it.title,
+        titleEn: it.titleEn ?? "",
+        openDt: it.openDt ?? "",
+        poster: it.poster ?? "",
+        gradeChain: it.gradeChain ?? null,
+        bookingRate: it.bookingRate ?? null,
+        plotChain: it.plotChain ?? null,
+        availableAt: [it.source],
+      });
+    } else {
+      const u = map.get(key);
+      if (!u.availableAt.includes(it.source)) u.availableAt.push(it.source);
+      if (!u.kofCd && it.kofCd) u.kofCd = it.kofCd;
+      if (!u.poster && it.poster) u.poster = it.poster; // 먼저 수집된 체인 포스터 우선
+      if (!u.titleEn && it.titleEn) u.titleEn = it.titleEn;
+      if (!u.gradeChain && it.gradeChain) u.gradeChain = it.gradeChain;
+      if (!u.plotChain && it.plotChain) u.plotChain = it.plotChain;
+      if (it.bookingRate != null) u.bookingRate = Math.max(u.bookingRate ?? 0, it.bookingRate);
+    }
+  }
+  return [...map.values()];
 }
 
 // ── KOBIS: 어제 박스오피스 → movieCd 맵 ──
@@ -217,16 +291,42 @@ async function main() {
   const box = await fetchBoxOffice();
   console.log(`  박스오피스 ${box.size}편`);
 
-  // ── 지금 상영중: 롯데 스파인 ──
-  console.log("· 롯데시네마 현재상영 조회…");
-  const lotte = await fetchLotteNowPlaying();
-  console.log(`  롯데 현재상영 ${lotte.length}편`);
+  // ── 지금 상영중: 극장 체인 현재상영작 합집합 (롯데 + 메가박스 [+ CGV]) ──
+  console.log("· 극장 체인 현재상영 조회…");
+  const chainItems = [];
+  try {
+    const l = await fetchLotteNowPlaying();
+    chainItems.push(...l);
+    console.log(`  롯데 ${l.length}편`);
+  } catch (e) {
+    console.warn(`  ⚠ 롯데 실패: ${e.message}`);
+  }
+  const browser = await chromium.launch({ headless: true });
+  try {
+    try {
+      const mb = await fetchMegaboxNowPlaying(browser);
+      chainItems.push(...mb);
+      console.log(`  메가박스 ${mb.length}편`);
+    } catch (e) {
+      console.warn(`  ⚠ 메가박스 실패: ${e.message}`);
+    }
+    // 증분3: CGV 추가 예정
+  } finally {
+    await browser.close();
+  }
+
+  if (chainItems.length === 0) {
+    console.error("모든 체인 실패 — 산출물 보존(덮어쓰기 안 함).");
+    process.exit(1);
+  }
+  const merged = mergeChains(chainItems);
+  console.log(`  병합 후 ${merged.length}편 (체인 union)`);
 
   console.log("· 상영중 보강(KOBIS 상세 + KMDb)…");
   const nowShowing = [];
-  for (const s of lotte) {
-    const info = await fetchInfo(s.kofCd);
-    await sleep(60);
+  for (const s of merged) {
+    const info = await fetchInfo(s.kofCd); // kofCd 없으면 {} 반환
+    if (s.kofCd) await sleep(60);
     const km = await enrichKmdb({ title: s.title, openDt: s.openDt });
     if (KMDB_KEY) await sleep(60);
     nowShowing.push({
@@ -241,12 +341,12 @@ async function main() {
       directors: info.directors ?? [],
       actors: info.actors ?? [],
       poster: s.poster || km.poster || "", // 체인 포스터 우선 → KMDb 보조
-      plot: km.plot ?? "",
+      plot: km.plot || s.plotChain || "", // KMDb 우선 → 체인(메가박스 시놉시스) 폴백
       keywords: km.keywords ?? null,
       kmdbId: km.kmdbId ?? null,
       boxOffice: s.kofCd ? box.get(s.kofCd) ?? null : null,
       bookingRate: s.bookingRate,
-      availableAt: [s.source],
+      availableAt: s.availableAt,
     });
   }
   // 정렬: 박스오피스 진입작(순위 asc) 먼저 → 예매율 desc
