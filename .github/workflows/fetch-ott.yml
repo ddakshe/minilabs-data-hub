@@ -1,0 +1,82 @@
+name: Fetch OTT rankings
+
+on:
+  schedule:
+    - cron: '0 0 * * 3,4'  # 수·목 09:00 KST (넷플릭스 주간 갱신은 화요일 US → 수/목 KST 사이 반영)
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: '실행 이유 (로그에만 기록, 선택)'
+        required: false
+        default: 'manual refresh'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-ott
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Show trigger context
+        run: |
+          echo "Event       : ${{ github.event_name }}"
+          echo "Reason      : ${{ github.event.inputs.reason || '(scheduled)' }}"
+          date -u "+UTC: %Y-%m-%d %H:%M:%S"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      - name: Fetch OTT rankings
+        run: node scripts/fetch-ott.mjs
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git add ott/
+          if git diff --cached --quiet -- ott/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes — skipping commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --cached --stat ott/
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
+          TRIGGER="${{ github.event_name }}"
+          if [ "$TRIGGER" = "workflow_dispatch" ]; then
+            MSG="chore(ott): manual refresh ($DATE_KST)"
+          else
+            MSG="chore(ott): weekly refresh ($DATE_KST)"
+          fi
+
+          git commit -m "$MSG"
+          git push
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## OTT Fetch Summary"
+            echo ""
+            echo "- Trigger: \`${{ github.event_name }}\`"
+            echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
+            echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+          } >> "$GITHUB_STEP_SUMMARY"
