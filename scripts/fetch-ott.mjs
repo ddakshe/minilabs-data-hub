@@ -124,8 +124,15 @@ async function buildLaftel() {
   console.log("▶ 라프텔 인기 랭킹 조회…");
   const arr = await fetchJson(LAFTEL_RANKING, {
     Accept: "application/json, text/plain, */*",
+    "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
     Origin: "https://laftel.net",
     Referer: "https://laftel.net/",
+    "sec-ch-ua": '"Chromium";v="120", "Not(A:Brand";v="24", "Google Chrome";v="120"',
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": '"macOS"',
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-site",
   });
   if (!Array.isArray(arr) || arr.length === 0) throw new Error("랭킹 배열이 비었습니다");
 
@@ -156,7 +163,11 @@ async function buildTving() {
   // 주의: 이 경로는 HTTP 404를 반환하지만 body의 __NEXT_DATA__ 에는 랭킹이 들어있음(Next.js soft-404).
   // 따라서 상태코드로 판단하지 않고 body를 파싱한다.
   const res = await fetch(TVING_RANKING_PAGE, {
-    headers: { "User-Agent": UA, Accept: "text/html,application/xhtml+xml" },
+    headers: {
+      "User-Agent": UA,
+      Accept: "text/html,application/xhtml+xml",
+      "Accept-Language": "ko-KR,ko;q=0.9",
+    },
   });
   const html = await res.text();
   const m = html.match(/<script id="__NEXT_DATA__" type="application\/json">([\s\S]*?)<\/script>/);
