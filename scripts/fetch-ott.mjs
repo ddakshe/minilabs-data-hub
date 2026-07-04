@@ -26,6 +26,8 @@ const LAFTEL_RANKING = "https://api.laftel.net/api/home/v1/recommend/ranking/?ty
 const TVING_RANKING_PAGE = "https://www.tving.com/ranking";
 // 디즈니+ 한국 랜딩. __NEXT_DATA__ 에 "오늘 한국의 TOP 10" 슬라이더(TopRankedCard)가 SSR됨.
 const DISNEY_PAGE = "https://www.disneyplus.com/ko-kr";
+// 쿠팡플레이 랜딩. __NEXT_DATA__ props.pageProps.top20Rail 에 "이번 주 TOP 20" 랭킹 SSR됨.
+const COUPANG_PAGE = "https://www.coupangplay.com/";
 const disneyPoster = (imageId) =>
   `https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/${imageId}/scale?width=400&format=webp`;
 // 웨이브 오늘의 Top20 (웹 공개 apikey, 익명 credential=none)
@@ -278,6 +280,42 @@ async function buildDisney() {
   };
 }
 
+// ── 쿠팡플레이: 이번 주 TOP 10 ──
+// 랜딩 __NEXT_DATA__ props.pageProps.top20Rail.data 에서 social "이번 주 랭킹 N위" 파싱.
+async function buildCoupang() {
+  console.log("▶ 쿠팡플레이 랜딩 조회…");
+  const html = await fetchText(COUPANG_PAGE);
+  const m = html.match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/);
+  if (!m) throw new Error("__NEXT_DATA__ 를 찾지 못함");
+  const rail = JSON.parse(m[1])?.props?.pageProps?.top20Rail?.data ?? [];
+  if (rail.length === 0) throw new Error("top20Rail 을 찾지 못함");
+
+  const items = [];
+  for (const it of rail) {
+    const rk = (it.social || "").match(/이번 주 랭킹 (\d+)위/);
+    if (!rk || Number(rk[1]) > 10) continue;
+    items.push({
+      rank: Number(rk[1]),
+      title: it.title,
+      poster: it.images?.poster_url || undefined,
+      watchUrl: `https://www.coupangplay.com/content/${it.id}`,
+    });
+  }
+  items.sort((a, b) => a.rank - b.rank);
+  if (items.length === 0) throw new Error("이번 주 랭킹 항목 없음");
+
+  return {
+    service: "coupang",
+    serviceName: "쿠팡플레이",
+    brandColor: "#D6173A",
+    updatedAt: todayKST(),
+    estimated: false,
+    layout: "grid",
+    subscribeUrl: "https://www.coupangplay.com/",
+    groups: [{ label: "이번 주 TOP 10", items }],
+  };
+}
+
 // 기존 산출과 동일하면 저장 생략(변경 노이즈 방지). 반환: 저장했는지 여부.
 function writeIfChanged(path, body) {
   if (existsSync(path) && readFileSync(path, "utf-8") === body) {
@@ -327,6 +365,7 @@ async function main() {
     ["웨이브", buildWavve],
     ["티빙", buildTving],
     ["디즈니+", buildDisney],
+    ["쿠팡플레이", buildCoupang],
   ];
   let failed = 0;
   for (const [name, builder] of services) failed += await runService(name, builder);
