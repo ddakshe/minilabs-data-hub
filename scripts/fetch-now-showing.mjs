@@ -114,6 +114,7 @@ async function fetchLotteNowPlaying() {
     gradeChain: m.ViewGradeNameKR || null, // 축약형("전체"/"15") — KOBIS 상세 등급 우선, 폴백용
     genreChain: m.MovieGenreNameKR || null,
     bookingRate: Number.isFinite(Number(m.BookingRate)) ? Number(m.BookingRate) : null,
+    code: m.RepresentationMovieCode ? String(m.RepresentationMovieCode) : null, // 예매 링크용
   }));
 }
 
@@ -155,6 +156,7 @@ async function fetchMegaboxNowPlaying(browser) {
       genreChain: null, // 메가박스 목록 응답엔 장르 없음
       bookingRate: Number.isFinite(Number(m.boxoBokdRt)) ? Number(m.boxoBokdRt) : null,
       plotChain: cleanText(m.movieSynopCn) || null,
+      code: m.rpstMovieNo ? String(m.rpstMovieNo) : null, // 예매 링크용
     }));
 }
 
@@ -169,6 +171,11 @@ const CGV_GRADE = {
   "02": "15세이상관람가",
   "03": "12세이상관람가",
   "04": "전체관람가",
+};
+// 체인별 예매/상세 페이지 URL (영화코드 → URL). CGV는 신SPA 딥링크 미확정으로 제외(앱은 네이버 예매 catch-all로 보완).
+const BOOKING_URL = {
+  lotte: (c) => `https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|${c}`,
+  megabox: (c) => `https://www.megabox.co.kr/movie-detail?rpstMovieNo=${c}`,
 };
 async function fetchCgvNowPlaying(browser) {
   const ctx = await browser.newContext({ userAgent: UA, locale: "ko-KR" });
@@ -212,6 +219,7 @@ async function fetchCgvNowPlaying(browser) {
     genreChain: m.genr || null,
     bookingRate: Number.isFinite(Number(m.atktRate)) ? Number(m.atktRate) : null,
     plotChain: null,
+    code: m.movNo ? String(m.movNo) : null, // 예매 링크용(현재 CGV 딥링크 URL 미확정 — 저장만)
   }));
 }
 
@@ -233,11 +241,13 @@ function mergeChains(items) {
         genreChain: it.genreChain ?? null,
         bookingRate: it.bookingRate ?? null,
         plotChain: it.plotChain ?? null,
+        bookingCodes: it.code ? { [it.source]: it.code } : {},
         availableAt: [it.source],
       });
     } else {
       const u = map.get(key);
       if (!u.availableAt.includes(it.source)) u.availableAt.push(it.source);
+      if (it.code) u.bookingCodes[it.source] = it.code;
       if (!u.kofCd && it.kofCd) u.kofCd = it.kofCd;
       if (!u.poster && it.poster) u.poster = it.poster; // 먼저 수집된 체인 포스터 우선
       if (!u.titleEn && it.titleEn) u.titleEn = it.titleEn;
@@ -403,6 +413,10 @@ async function main() {
     if (s.kofCd) await sleep(60);
     const km = await enrichKmdb({ title: s.title, openDt: s.openDt });
     if (KMDB_KEY) await sleep(60);
+    const booking = {};
+    for (const [src, code] of Object.entries(s.bookingCodes ?? {})) {
+      if (code && BOOKING_URL[src]) booking[src] = BOOKING_URL[src](code);
+    }
     nowShowing.push({
       movieCd: s.kofCd,
       title: s.title,
@@ -421,6 +435,7 @@ async function main() {
       boxOffice: s.kofCd ? box.get(s.kofCd) ?? null : null,
       bookingRate: s.bookingRate,
       availableAt: s.availableAt,
+      booking, // { lotte?: url, megabox?: url } — 상영 체인 예매 링크
     });
   }
   // 정렬: 박스오피스 진입작(순위 asc) 먼저 → 예매율 desc
