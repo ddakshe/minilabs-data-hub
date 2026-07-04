@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-07-03",
+  "updatedAt": "2026-07-04",
   "counts": {
-    "nowShowing": 55,
-    "upcoming": 21
+    "nowShowing": 57,
+    "upcoming": 20
   },
   "nowShowing": [
     {
@@ -30,12 +30,13 @@
       "boxOffice": {
         "rank": 1,
         "rankInten": 0,
-        "audiCnt": 50720,
-        "audiAcc": 482857
+        "audiCnt": 91445,
+        "audiAcc": 574302
       },
-      "bookingRate": 17.51,
+      "bookingRate": 16.11,
       "availableAt": [
         "lotte",
+        "megabox",
         "cgv"
       ]
     },
@@ -64,12 +65,13 @@
       "boxOffice": {
         "rank": 2,
         "rankInten": 0,
-        "audiCnt": 45353,
-        "audiAcc": 1789458
+        "audiCnt": 72727,
+        "audiAcc": 1862185
       },
-      "bookingRate": 34.6,
+      "bookingRate": 34.55,
       "availableAt": [
         "lotte",
+        "megabox",
         "cgv"
       ]
     },
@@ -99,13 +101,14 @@
       "kmdbId": "K-40712",
       "boxOffice": {
         "rank": 3,
-        "rankInten": 1,
-        "audiCnt": 13012,
-        "audiAcc": 5771236
+        "rankInten": 0,
+        "audiCnt": 19058,
+        "audiAcc": 5790293
       },
-      "bookingRate": 3.49,
+      "bookingRate": 4.21,
       "availableAt": [
         "lotte",
+        "megabox",
         "cgv"
       ]
     },
@@ -135,13 +138,14 @@
       "kmdbId": "F-66700",
       "boxOffice": {
         "rank": 4,
-        "rankInten": -1,
-        "audiCnt": 10360,
-        "audiAcc": 31762
+        "rankInten": 0,
+        "audiCnt": 10570,
+        "audiAcc": 42332
       },
-      "bookingRate": 4.24,
+      "bookingRate": 8.6,
       "availableAt": [
         "lotte",
+        "megabox",
         "cgv"
       ]
     },
@@ -169,13 +173,47 @@
       "kmdbId": "K-41242",
       "boxOffice": {
         "rank": 5,
-        "rankInten": 1,
-        "audiCnt": 6987,
-        "audiAcc": 1268375
+        "rankInten": 0,
+        "audiCnt": 8944,
+        "audiAcc": 1277319
       },
-      "bookingRate": 2.78,
+      "bookingRate": 3.15,
       "availableAt": [
         "lotte",
+        "megabox",
+        "cgv"
+      ]
+    },
+    {
+      "movieCd": "20263030",
+      "title": "백룸",
+      "titleEn": "백룸",
+      "openDt": "2026-05-27",
+      "genre": "공포(호러), 스릴러",
+      "runtime": 110,
+      "grade": "15세이상관람가",
+      "nation": "미국",
+      "directors": [
+        "케인 파슨스"
+      ],
+      "actors": [
+        "치웨텔 에지오포",
+        "레나테 레인스베"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202605/24314_103_1.jpg",
+      "plot": "시작은 호기심이었다그곳은 대체 무엇인가?낯설지만 익숙한 세계출구도 입구도 찾을 수 없다당신도 입장하시겠습니까?",
+      "keywords": null,
+      "kmdbId": "F-67403",
+      "boxOffice": {
+        "rank": 6,
+        "rankInten": 1,
+        "audiCnt": 6085,
+        "audiAcc": 1178095
+      },
+      "bookingRate": 1.8,
+      "availableAt": [
+        "lotte",
+        "megabox",
         "cgv"
       ]
     },
@@ -201,46 +239,15 @@
       "keywords": null,
       "kmdbId": "F-67599",
       "boxOffice": {
-        "rank": 6,
-        "rankInten": -1,
-        "audiCnt": 6288,
-        "audiAcc": 14871
-      },
-      "bookingRate": 1.39,
-      "availableAt": [
-        "lotte"
-      ]
-    },
-    {
-      "movieCd": "20263030",
-      "title": "백룸",
-      "titleEn": "백룸",
-      "openDt": "2026-05-27",
-      "genre": "공포(호러), 스릴러",
-      "runtime": 110,
-      "grade": "15세이상관람가",
-      "nation": "미국",
-      "directors": [
-        "케인 파슨스"
-      ],
-      "actors": [
-        "치웨텔 에지오포",
-        "레나테 레인스베"
-      ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202605/24314_103_1.jpg",
-      "plot": "시작은 호기심이었다그곳은 대체 무엇인가?낯설지만 익숙한 세계출구도 입구도 찾을 수 없다당신도 입장하시겠습니까?",
-      "keywords": null,
-      "kmdbId": "F-67403",
-      "boxOffice": {
         "rank": 7,
-        "rankInten": 2,
-        "audiCnt": 3843,
-        "audiAcc": 1172010
+        "rankInten": -1,
+        "audiCnt": 5656,
+        "audiAcc": 20527
       },
-      "bookingRate": 0.94,
+      "bookingRate": 3.5,
       "availableAt": [
         "lotte",
-        "cgv"
+        "megabox"
       ]
     },
     {
@@ -268,11 +275,11 @@
       "kmdbId": "F-67608",
       "boxOffice": {
         "rank": 8,
-        "rankInten": -1,
-        "audiCnt": 3157,
-        "audiAcc": 10679
+        "rankInten": 0,
+        "audiCnt": 5371,
+        "audiAcc": 16050
       },
-      "bookingRate": 14.98,
+      "bookingRate": 11.98,
       "availableAt": [
         "lotte"
       ]
@@ -299,14 +306,57 @@
       "keywords": null,
       "kmdbId": "F-66318",
       "boxOffice": {
-        "rank": 10,
-        "rankInten": 0,
-        "audiCnt": 2567,
-        "audiAcc": 129954
+        "rank": 9,
+        "rankInten": 1,
+        "audiCnt": 2555,
+        "audiAcc": 132509
       },
-      "bookingRate": 0.36,
+      "bookingRate": 0.8,
       "availableAt": [
         "lotte",
+        "megabox",
+        "cgv"
+      ]
+    },
+    {
+      "movieCd": null,
+      "title": "짝사랑 세계",
+      "titleEn": "",
+      "openDt": "2026-06-24",
+      "genre": null,
+      "runtime": null,
+      "grade": "12세이상관람가",
+      "nation": null,
+      "directors": [],
+      "actors": [],
+      "poster": "https://img.megabox.co.kr/SharedImg/2026/06/09/BA0PyCuFSgpUx1vgcvapO5SUmkyqjxS7.jpg",
+      "plot": "세상을 알기 전 어린 나이에 세상과 이별한 미사키(히로세 스즈), 유카(스기사키 하나), 사쿠라(키요하라 카야)는 12년째 남들과 다름없는 보통의 하루를 보내고 있다.하지만 사람들과 닿을 수 없기에 전하지 못한 마음과 묻지 못한 말이 자꾸만 쌓여간다.어느 날, 라디오에서 흘러나온 메시지.보고 싶은 이에게 마음을 전하면 다시 세상으로 돌아갈 수 있다?사랑하지만 닿을 수 없는 세계전하고 싶지만 말할 수 없는 마음어쩌면 짝사랑일까?",
+      "keywords": null,
+      "kmdbId": "F-66454",
+      "boxOffice": null,
+      "bookingRate": 4.2,
+      "availableAt": [
+        "megabox"
+      ]
+    },
+    {
+      "movieCd": null,
+      "title": "블리치 천년혈전 편-화진담",
+      "titleEn": "",
+      "openDt": "2026-07-04",
+      "genre": "애니메이션",
+      "runtime": null,
+      "grade": "15세이상관람가",
+      "nation": null,
+      "directors": [],
+      "actors": [],
+      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001308/30001308_320.jpg",
+      "plot": "사신과 퀸시― 천 년에 걸친 혈전. 그 끝에 멸망의 미래가 보일지라도―.영왕궁에 다가서는 유하바하를 맞이하는 왕속특무 0번대.그러나 퀸시의 왕과 그 친위대는 0번대의 처절한 만해마저 무너뜨리고, 마침내 영왕 대내리에 침입한다.효스베 이치베에게서 영왕 수호를 맡은 쿠로사키 이치고 일행.하지만 유하바하의 계략에 의해, 이치고는 자신의 검으로 영왕을 베고 만다.영왕의 죽음― 그것은 곧 삼계의 붕괴를 의미한다.각 세계에 ‘왜곡’이 발행하고, 멸망의 징조가 세계를 뒤덮기 시작한다.호정 13대는 퀸시 잔당과 손을 잡고 영왕궁으로 향한다.하지만 영왕궁은 이미 ‘반덴라이히’의 손에 넘어가 ‘바벨트’로 모습을 바꾸고 있었다.사신들을 비웃듯 하늘 높이 솟아오른 성에서 친위대가 기다린다.‘바벨트’ 곳곳에서 호정 13대와 친위대의 격전이 펼쳐진다.이치고는 우류의 진의를 깨닫고, 서로를 믿는 동료로서 세계를 지키겠다는 결의를 다시 한번 다진다.‘전지전능(The Almighty)’을 뛰어넘은 존재가 된 유하바하.삼계의 존망을 건 처절한 싸움은 마침내 종말을 향해 나아간다.혼돈의 재앙을 넘어선 곳에 기다리는 것은 절망인가, 희망인가.",
+      "keywords": "만화원작",
+      "kmdbId": "F-67880",
+      "boxOffice": null,
+      "bookingRate": 2.62,
+      "availableAt": [
         "cgv"
       ]
     },
@@ -326,7 +376,7 @@
       "keywords": null,
       "kmdbId": "F-67776",
       "boxOffice": null,
-      "bookingRate": 1.81,
+      "bookingRate": 1.88,
       "availableAt": [
         "cgv"
       ]
@@ -347,7 +397,7 @@
       "keywords": null,
       "kmdbId": "F-67754",
       "boxOffice": null,
-      "bookingRate": 1.32,
+      "bookingRate": 1.16,
       "availableAt": [
         "cgv"
       ]
@@ -368,7 +418,7 @@
       "keywords": null,
       "kmdbId": "F-67599",
       "boxOffice": null,
-      "bookingRate": 0.94,
+      "bookingRate": 0.95,
       "availableAt": [
         "cgv"
       ]
@@ -398,9 +448,30 @@
       "keywords": null,
       "kmdbId": null,
       "boxOffice": null,
-      "bookingRate": 0.86,
+      "bookingRate": 0.9,
       "availableAt": [
         "lotte"
+      ]
+    },
+    {
+      "movieCd": null,
+      "title": "볼텍션 퍼스트 라이브 : 다이나믹 볼트",
+      "titleEn": "",
+      "openDt": "2026-06-27",
+      "genre": null,
+      "runtime": null,
+      "grade": "전체관람가",
+      "nation": null,
+      "directors": [],
+      "actors": [],
+      "poster": "https://img.megabox.co.kr/SharedImg/2026/06/12/LqK4iNi0P4KQqZqeVmk3ct6IZs9jJBeb.jpg",
+      "plot": "최고의 댄스 보컬 그룹을 목표로 하는 니지산지 소속 VOLTACTION의 첫 오프라인 라이브! 최고의 댄스 보컬 그룹을 향해 나아가는 니지산지 소속 VOLTACTION의 첫 단독 공연",
+      "keywords": null,
+      "kmdbId": null,
+      "boxOffice": null,
+      "bookingRate": 0.8,
+      "availableAt": [
+        "megabox"
       ]
     },
     {
@@ -419,8 +490,62 @@
       "keywords": null,
       "kmdbId": "K-41590",
       "boxOffice": null,
-      "bookingRate": 0.82,
+      "bookingRate": 0.8,
       "availableAt": [
+        "cgv"
+      ]
+    },
+    {
+      "movieCd": null,
+      "title": "훌라 걸스",
+      "titleEn": "",
+      "openDt": "2026-07-01",
+      "genre": "드라마",
+      "runtime": null,
+      "grade": "12세이상관람가",
+      "nation": null,
+      "directors": [],
+      "actors": [],
+      "poster": "https://img.megabox.co.kr/SharedImg/2026/06/19/cngClmgzHO7Pe8zSRtrKp7ngrUHf149E.jpg",
+      "plot": "",
+      "keywords": null,
+      "kmdbId": null,
+      "boxOffice": null,
+      "bookingRate": 0.7,
+      "availableAt": [
+        "megabox",
+        "cgv"
+      ]
+    },
+    {
+      "movieCd": "20259626",
+      "title": "마이클",
+      "titleEn": "마이클",
+      "openDt": "2026-05-13",
+      "genre": "드라마",
+      "runtime": 127,
+      "grade": "12세이상관람가",
+      "nation": "미국",
+      "directors": [
+        "안톤 후쿠아"
+      ],
+      "actors": [
+        "자파 잭슨",
+        "니아 롱",
+        "로라 해리어",
+        "줄리아노 크루 발디",
+        "마일즈 텔러",
+        "콜먼 도밍고"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202605/23654_103_1.jpg",
+      "plot": "보헤미안 랩소디 제작진과 팝의 황제 ‘마이클 잭슨’의 만남!2026년 그의 발끝에서 전설이 다시 시작된다!어린 나이에 형제들과 ‘잭슨 파이브’ 그룹의 막내로 데뷔하자마자 음악적 천재성과 스타성으로 주목을 받은 ‘마이클 잭슨’.전세계적인 스타로 성공하지만, 그는 가족에 대한 책임감과 자신의 음악적 정체성 사이에서 고민에 빠지게 된다.천재적인 뮤지션에서 시대를 초월한 아이콘이 되기까지, 그의 무대를 극장에서 확인하라!",
+      "keywords": null,
+      "kmdbId": "F-65300",
+      "boxOffice": null,
+      "bookingRate": 0.6,
+      "availableAt": [
+        "lotte",
+        "megabox",
         "cgv"
       ]
     },
@@ -440,29 +565,30 @@
       "keywords": null,
       "kmdbId": "F-35528",
       "boxOffice": null,
-      "bookingRate": 0.51,
+      "bookingRate": 0.52,
       "availableAt": [
         "cgv"
       ]
     },
     {
       "movieCd": null,
-      "title": "훌라 걸스",
+      "title": "만달로리안과 그로구",
       "titleEn": "",
-      "openDt": "2007-03-01",
-      "genre": "드라마",
+      "openDt": "2026-05-27",
+      "genre": "액션, 어드벤처",
       "runtime": null,
       "grade": "12세이상관람가",
       "nation": null,
       "directors": [],
       "actors": [],
-      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/000037/37863/37863_320.jpg",
-      "plot": "폐광을 앞둔 탄광촌, 마을을 살릴 유일한 돌파구는 관광객을 유치하기 위한 ‘하와이안 센터’?!친구를 따라 얼떨결에 하와이안 센터의 핵심인 훌라 댄스 팀에 들어가게 된 키미코는 자신도 모르는 사이 춤에 점점 빠져들고, 처음으로 더 넓은 세상을 꿈꾸기 시작한다.검은 탄가루뿐이던 마을에서 훌라 걸스의 빛나는 열정은 조금씩 모두의 삶을 바꿔가는데…",
-      "keywords": "탄광마을, 관광, 개발, 하와이, 훌라춤",
-      "kmdbId": "F-13178",
+      "poster": "https://img.megabox.co.kr/SharedImg/2026/06/02/xPQMG40iupHzzx1B0hlOkGsXybuxeNsH.jpg",
+      "plot": "우주 최강 듀오 '딘 자린'과 '그로구'가 선사하는 환상의 팀워크5월 27일, 은하계의 운명을 건 거대한 임무가 시작된다! 최고의 전사이자 현상금 사냥꾼인 '딘 자린'(페드로 파스칼)과 그의 유일무이한 파트너 '그로구'는 신 공화국의 장교 '워드 대령'(시고니 위버)으로부터 비밀 임무를 제안받고 우주를 넘나드는 위험한 여정에 나선다. 누구의 도움도 기대할 수 없는 상황 속에서, '딘 자린'은 '그로구'가 스스로를 지킬 수 있도록 훈련하고 '그로구'는 '딘 자린'과 호흡을 맞추며 점차 성장해간다. 전쟁을 막기 위한 은밀한 작전을 이어가던 중 둘은 예측하지 못한 위기에 휘말리고 '그로구'는 '딘 자린'을 지키기 위해 잠재된 힘을 각성하게 되는데... 혼자가 아닌 둘일 때, 진짜 포스가 깨어난다!",
+      "keywords": null,
+      "kmdbId": "F-64856",
       "boxOffice": null,
       "bookingRate": 0.4,
       "availableAt": [
+        "megabox",
         "cgv"
       ]
     },
@@ -488,9 +614,10 @@
       "keywords": null,
       "kmdbId": "K-40077",
       "boxOffice": null,
-      "bookingRate": 0.38,
+      "bookingRate": 0.35,
       "availableAt": [
         "lotte",
+        "megabox",
         "cgv"
       ]
     },
@@ -510,30 +637,9 @@
       "keywords": null,
       "kmdbId": "K-41557",
       "boxOffice": null,
-      "bookingRate": 0.37,
+      "bookingRate": 0.32,
       "availableAt": [
         "lotte"
-      ]
-    },
-    {
-      "movieCd": null,
-      "title": "만달로리안과 그로구",
-      "titleEn": "",
-      "openDt": "2026-05-27",
-      "genre": "액션, 어드벤처",
-      "runtime": null,
-      "grade": "12세이상관람가",
-      "nation": null,
-      "directors": [],
-      "actors": [],
-      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001210/30001210_320.jpg",
-      "plot": "우주 최강 듀오 '딘 자린'과 '그로구'가 선사하는 환상의 팀워크5월 27일, 은하계의 운명을 건 거대한 임무가 시작된다! 최고의 전사이자 현상금 사냥꾼인 '딘 자린'(페드로 파스칼)과 그의 유일무이한 파트너 '그로구'는 신 공화국의 장교 '워드 대령'(시고니 위버)으로부터 비밀 임무를 제안받고 우주를 넘나드는 위험한 여정에 나선다. 누구의 도움도 기대할 수 없는 상황 속에서, '딘 자린'은 '그로구'가 스스로를 지킬 수 있도록 훈련하고 '그로구'는 '딘 자린'과 호흡을 맞추며 점차 성장해간다. 전쟁을 막기 위한 은밀한 작전을 이어가던 중 둘은 예측하지 못한 위기에 휘말리고 '그로구'는 '딘 자린'을 지키기 위해 잠재된 힘을 각성하게 되는데... 혼자가 아닌 둘일 때, 진짜 포스가 깨어난다!",
-      "keywords": null,
-      "kmdbId": "F-64856",
-      "boxOffice": null,
-      "bookingRate": 0.29,
-      "availableAt": [
-        "cgv"
       ]
     },
     {
@@ -558,6 +664,37 @@
       ]
     },
     {
+      "movieCd": "20250655",
+      "title": "디스클로저 데이",
+      "titleEn": "디스클로저 데이",
+      "openDt": "2026-06-10",
+      "genre": "SF, 미스터리",
+      "runtime": 145,
+      "grade": "12세이상관람가",
+      "nation": "미국",
+      "directors": [
+        "스티븐 스필버그"
+      ],
+      "actors": [
+        "에밀리 블런트",
+        "조쉬 오코너",
+        "콜린 퍼스",
+        "이브 휴슨",
+        "콜먼 도밍고"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202606/23843_103_1.jpg",
+      "plot": "영화계의 살아있는 전설스티븐 스필버그 감독의 SF 신작 우리가 혼자가 아니라는 사실을 알게 된다면,누군가가 그것을 증명한다면,그게 당신을 두렵게 하나요?진실은 80억 인류 모두의 것입니다.",
+      "keywords": null,
+      "kmdbId": "F-66389",
+      "boxOffice": null,
+      "bookingRate": 0.2,
+      "availableAt": [
+        "lotte",
+        "megabox",
+        "cgv"
+      ]
+    },
+    {
       "movieCd": "20261782",
       "title": "프로젝트 헤일메리",
       "titleEn": "프로젝트 헤일메리",
@@ -578,7 +715,7 @@
       "keywords": "베스트셀러원작,소설원작",
       "kmdbId": "F-66052",
       "boxOffice": null,
-      "bookingRate": 0.18,
+      "bookingRate": 0.16,
       "availableAt": [
         "lotte",
         "cgv"
@@ -609,7 +746,7 @@
       "keywords": null,
       "kmdbId": null,
       "boxOffice": null,
-      "bookingRate": 0.17,
+      "bookingRate": 0.16,
       "availableAt": [
         "lotte",
         "cgv"
@@ -681,39 +818,8 @@
       "keywords": null,
       "kmdbId": "F-57307",
       "boxOffice": null,
-      "bookingRate": 0.12,
+      "bookingRate": 0.11,
       "availableAt": [
-        "cgv"
-      ]
-    },
-    {
-      "movieCd": "20259626",
-      "title": "마이클",
-      "titleEn": "마이클",
-      "openDt": "2026-05-13",
-      "genre": "드라마",
-      "runtime": 127,
-      "grade": "12세이상관람가",
-      "nation": "미국",
-      "directors": [
-        "안톤 후쿠아"
-      ],
-      "actors": [
-        "자파 잭슨",
-        "니아 롱",
-        "로라 해리어",
-        "줄리아노 크루 발디",
-        "마일즈 텔러",
-        "콜먼 도밍고"
-      ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202605/23654_103_1.jpg",
-      "plot": "보헤미안 랩소디 제작진과 팝의 황제 ‘마이클 잭슨’의 만남!2026년 그의 발끝에서 전설이 다시 시작된다!어린 나이에 형제들과 ‘잭슨 파이브’ 그룹의 막내로 데뷔하자마자 음악적 천재성과 스타성으로 주목을 받은 ‘마이클 잭슨’.전세계적인 스타로 성공하지만, 그는 가족에 대한 책임감과 자신의 음악적 정체성 사이에서 고민에 빠지게 된다.천재적인 뮤지션에서 시대를 초월한 아이콘이 되기까지, 그의 무대를 극장에서 확인하라!",
-      "keywords": null,
-      "kmdbId": "F-65300",
-      "boxOffice": null,
-      "bookingRate": 0.09,
-      "availableAt": [
-        "lotte",
         "cgv"
       ]
     },
@@ -764,58 +870,24 @@
       ]
     },
     {
-      "movieCd": "20261766",
+      "movieCd": null,
       "title": "상자 속의 양",
-      "titleEn": "상자 속의 양",
+      "titleEn": "",
       "openDt": "2026-06-10",
       "genre": "드라마, SF",
-      "runtime": 126,
+      "runtime": null,
       "grade": "12세이상관람가",
-      "nation": "일본",
-      "directors": [
-        "고레에다 히로카즈"
-      ],
-      "actors": [
-        "아야세 하루카",
-        "다이고"
-      ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202606/24345_103_1.jpg",
+      "nation": null,
+      "directors": [],
+      "actors": [],
+      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001201/30001201_320.jpg",
       "plot": "나 7세. 휴머노이드 로봇. 어느 날, 엄마 아빠가 생겼다.7세 설정으로 태어난 나는 나와 똑같이 생긴 아이를 사고로 잃은 집에 입양되어 행복한 나날을 보내는 중이다.엄마라 부르는 여자, 아저씨라 부르는 남자가 있는 따뜻한 2층 집에서 계속 사랑받으며 살 수 있을까?우리 둘만 남은 가족 어느 날, 죽은 그 아이와 똑같은 아이에게 다시 사랑할 수 있을까?",
       "keywords": null,
       "kmdbId": "F-66385",
       "boxOffice": null,
       "bookingRate": 0.05,
       "availableAt": [
-        "lotte",
         "cgv"
-      ]
-    },
-    {
-      "movieCd": "20259791",
-      "title": "악마는 프라다를 입는다 2",
-      "titleEn": "악마는 프라다를 입는다 2",
-      "openDt": "2026-04-29",
-      "genre": "드라마",
-      "runtime": 118,
-      "grade": "12세이상관람가",
-      "nation": "미국",
-      "directors": [
-        "데이빗 프랭클"
-      ],
-      "actors": [
-        "메릴 스트립",
-        "앤 해서웨이",
-        "에밀리 블런트",
-        "스탠리 투치"
-      ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202604/24136_103_1.jpg",
-      "plot": "메릴 스트립, 앤 해서웨이, 에밀리 블런트, 스탠리 투치전 세계를 열광시킨 ‘런웨이’ 전설들의 귀환! 전 세계 트렌드를 주도해 온 전설적인 패션 매거진 ‘런웨이’가 급변하는 미디어 시장 속에서 예기치 못한 위기에 직면한다. ‘런웨이’를 지켜내려는 편집장 ‘미란다’와 20년 만에 신임 기획 에디터로 당당히 돌아온 ‘앤디’그리고 이제는 럭셔리 브랜드 임원이 되어 다시 나타난 ‘에밀리’까지더 화려하고, 치열해진 뉴욕 패션계에서 주도권을 차지하기 위해 벌이는 이들의 새로운 이야기가 펼쳐진다!",
-      "keywords": null,
-      "kmdbId": "F-65696",
-      "boxOffice": null,
-      "bookingRate": 0.04,
-      "availableAt": [
-        "lotte"
       ]
     },
     {
@@ -851,47 +923,51 @@
     },
     {
       "movieCd": null,
-      "title": "신사-악귀의 속삭임",
+      "title": "고 녀석 맛나겠다",
       "titleEn": "",
-      "openDt": "2026-06-17",
-      "genre": "공포(호러), 미스터리",
+      "openDt": "2022-05-05",
+      "genre": "애니메이션",
       "runtime": null,
-      "grade": "15세이상관람가",
+      "grade": "전체관람가",
       "nation": null,
       "directors": [],
       "actors": [],
-      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001221/30001221_320.jpg",
-      "plot": "고베의 산속에 자리한 폐신사에서, 한일 문화교류 프로젝트에 참가했던 대학생들이 실종되고 매니저 ‘유미’(공성하)는 기이한 공포에 휘말리게 된다.한국에서 알 수 없는 악몽에 시달리고 있는 박수무당 ‘명진’(김재중)은 대학 후배 ‘유미’의 전화를 받고 고베로 향하고, 사건을 파헤치기 위해 폐신사로 향하는데...",
+      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/000085/85856/85856_320.jpg",
+      "plot": "",
       "keywords": null,
-      "kmdbId": "K-37015",
+      "kmdbId": null,
       "boxOffice": null,
-      "bookingRate": 0.04,
+      "bookingRate": 0.03,
       "availableAt": [
         "cgv"
       ]
     },
     {
-      "movieCd": "20253327",
-      "title": "어느 파리 택배기사의 48시간",
-      "titleEn": "어느 파리 택배기사의 48시간",
-      "openDt": "2026-06-17",
+      "movieCd": "20259791",
+      "title": "악마는 프라다를 입는다 2",
+      "titleEn": "악마는 프라다를 입는다 2",
+      "openDt": "2026-04-29",
       "genre": "드라마",
-      "runtime": 93,
+      "runtime": 118,
       "grade": "12세이상관람가",
-      "nation": "프랑스",
+      "nation": "미국",
       "directors": [
-        "보리스 로즈킨"
+        "데이빗 프랭클"
       ],
-      "actors": [],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202606/24374_103_1.jpg",
-      "plot": "파리에서 자전거로 음식 배달 일을 하는 아프리카 기니 출신 난민 ‘술레이만’.합법적 거주권을 얻기 위한 망명 심사가 이틀 앞으로 다가왔지만, 난민이자 배달 노동자로서 그의 하루하루는 외줄타기처럼 아슬아슬하다.그는 늘 시간과 돈에 쫓긴다.난민 브로커에게 줄 돈을 마련하기 위해 오늘도 그는 파리를 달린다.",
+      "actors": [
+        "메릴 스트립",
+        "앤 해서웨이",
+        "에밀리 블런트",
+        "스탠리 투치"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202604/24136_103_1.jpg",
+      "plot": "메릴 스트립, 앤 해서웨이, 에밀리 블런트, 스탠리 투치전 세계를 열광시킨 ‘런웨이’ 전설들의 귀환! 전 세계 트렌드를 주도해 온 전설적인 패션 매거진 ‘런웨이’가 급변하는 미디어 시장 속에서 예기치 못한 위기에 직면한다. ‘런웨이’를 지켜내려는 편집장 ‘미란다’와 20년 만에 신임 기획 에디터로 당당히 돌아온 ‘앤디’그리고 이제는 럭셔리 브랜드 임원이 되어 다시 나타난 ‘에밀리’까지더 화려하고, 치열해진 뉴욕 패션계에서 주도권을 차지하기 위해 벌이는 이들의 새로운 이야기가 펼쳐진다!",
       "keywords": null,
-      "kmdbId": "F-61187",
+      "kmdbId": "F-65696",
       "boxOffice": null,
-      "bookingRate": 0.03,
+      "bookingRate": 0.02,
       "availableAt": [
-        "lotte",
-        "cgv"
+        "lotte"
       ]
     },
     {
@@ -926,28 +1002,22 @@
       ]
     },
     {
-      "movieCd": "20250655",
-      "title": "디스클로저 데이",
-      "titleEn": "디스클로저 데이",
-      "openDt": "2026-06-10",
-      "genre": "SF, 미스터리",
-      "runtime": 145,
+      "movieCd": "20253327",
+      "title": "어느 파리 택배기사의 48시간",
+      "titleEn": "어느 파리 택배기사의 48시간",
+      "openDt": "2026-06-17",
+      "genre": "드라마",
+      "runtime": 93,
       "grade": "12세이상관람가",
-      "nation": "미국",
+      "nation": "프랑스",
       "directors": [
-        "스티븐 스필버그"
+        "보리스 로즈킨"
       ],
-      "actors": [
-        "에밀리 블런트",
-        "조쉬 오코너",
-        "콜린 퍼스",
-        "이브 휴슨",
-        "콜먼 도밍고"
-      ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202606/23843_103_1.jpg",
-      "plot": "영화계의 살아있는 전설스티븐 스필버그 감독의 SF 신작 우리가 혼자가 아니라는 사실을 알게 된다면,누군가가 그것을 증명한다면,그게 당신을 두렵게 하나요?진실은 80억 인류 모두의 것입니다.",
+      "actors": [],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202606/24374_103_1.jpg",
+      "plot": "파리에서 자전거로 음식 배달 일을 하는 아프리카 기니 출신 난민 ‘술레이만’.합법적 거주권을 얻기 위한 망명 심사가 이틀 앞으로 다가왔지만, 난민이자 배달 노동자로서 그의 하루하루는 외줄타기처럼 아슬아슬하다.그는 늘 시간과 돈에 쫓긴다.난민 브로커에게 줄 돈을 마련하기 위해 오늘도 그는 파리를 달린다.",
       "keywords": null,
-      "kmdbId": "F-66389",
+      "kmdbId": "F-61187",
       "boxOffice": null,
       "bookingRate": 0.02,
       "availableAt": [
@@ -957,40 +1027,19 @@
     },
     {
       "movieCd": null,
-      "title": "고 녀석 맛나겠다",
+      "title": "신사-악귀의 속삭임",
       "titleEn": "",
-      "openDt": "2022-05-05",
-      "genre": "애니메이션",
+      "openDt": "2026-06-17",
+      "genre": "공포(호러), 미스터리",
       "runtime": null,
-      "grade": "전체관람가",
+      "grade": "15세이상관람가",
       "nation": null,
       "directors": [],
       "actors": [],
-      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/000085/85856/85856_320.jpg",
-      "plot": "",
+      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001221/30001221_320.jpg",
+      "plot": "고베의 산속에 자리한 폐신사에서, 한일 문화교류 프로젝트에 참가했던 대학생들이 실종되고 매니저 ‘유미’(공성하)는 기이한 공포에 휘말리게 된다.한국에서 알 수 없는 악몽에 시달리고 있는 박수무당 ‘명진’(김재중)은 대학 후배 ‘유미’의 전화를 받고 고베로 향하고, 사건을 파헤치기 위해 폐신사로 향하는데...",
       "keywords": null,
-      "kmdbId": null,
-      "boxOffice": null,
-      "bookingRate": 0.02,
-      "availableAt": [
-        "cgv"
-      ]
-    },
-    {
-      "movieCd": null,
-      "title": "사무라이 타임슬리퍼",
-      "titleEn": "",
-      "openDt": "2026-06-24",
-      "genre": "드라마",
-      "runtime": null,
-      "grade": "12세이상관람가",
-      "nation": null,
-      "directors": [],
-      "actors": [],
-      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001225/30001225_320.jpg",
-      "plot": "나는 에도 시대를 살아가던 사무라이였다.칼을 들고 명예를 지키며 살아가던 중, 결투 도중 번개를 맞고 눈을 떠보니..이곳은 영화 촬영현장?!말 대신 철로 달리는 마차가 거리를 가득 메우고, 사람들은 이해할 수 없는 물건을 들고 살아간다.검 하나로 살아온 나에게, 이 시대는 낯설기만 하다.갈 곳 없이 방황하던 중, 나는 ‘사무라이’가 등장하는 한 현장에 들어서게 된다.그러나 그곳의 사무라이들은 모두 가짜였고, 결투는 연기였다.진짜 사무라이였던 나는 어느새 엑스트라 배우가 되고, 영화 속 사무라이가 되어 참수전문 배우를 연기하며 새로운 삶을 시작하게 된다.“이 또한… 운명이라면 따르리라.”",
-      "keywords": null,
-      "kmdbId": "F-67660",
+      "kmdbId": "K-37015",
       "boxOffice": null,
       "bookingRate": 0.02,
       "availableAt": [
@@ -1120,6 +1169,27 @@
       "plot": "지금이야말로 오아라이 여고의 진가를 보여줄 때!중요한 존재인 아귀팀을 초반에 잃고 전례 없는 위기에 빠진 오아라이 여고 전차도 팀.이에 케이조쿠 고교는 불시에 공격하며 포위망을 좁혀 온다.한편, 쿠로모리미네 여고와 세인트 글로리아나 여고의 전투도 숨 막히는 격전이 벌어지는데…동계 무한궤도배 준결승전,과연 결승전 진출팀은 누가 될 것인가!",
       "keywords": null,
       "kmdbId": "F-60018",
+      "boxOffice": null,
+      "bookingRate": 0.01,
+      "availableAt": [
+        "cgv"
+      ]
+    },
+    {
+      "movieCd": null,
+      "title": "사무라이 타임슬리퍼",
+      "titleEn": "",
+      "openDt": "2026-06-24",
+      "genre": "드라마",
+      "runtime": null,
+      "grade": "12세이상관람가",
+      "nation": null,
+      "directors": [],
+      "actors": [],
+      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001225/30001225_320.jpg",
+      "plot": "나는 에도 시대를 살아가던 사무라이였다.칼을 들고 명예를 지키며 살아가던 중, 결투 도중 번개를 맞고 눈을 떠보니..이곳은 영화 촬영현장?!말 대신 철로 달리는 마차가 거리를 가득 메우고, 사람들은 이해할 수 없는 물건을 들고 살아간다.검 하나로 살아온 나에게, 이 시대는 낯설기만 하다.갈 곳 없이 방황하던 중, 나는 ‘사무라이’가 등장하는 한 현장에 들어서게 된다.그러나 그곳의 사무라이들은 모두 가짜였고, 결투는 연기였다.진짜 사무라이였던 나는 어느새 엑스트라 배우가 되고, 영화 속 사무라이가 되어 참수전문 배우를 연기하며 새로운 삶을 시작하게 된다.“이 또한… 운명이라면 따르리라.”",
+      "keywords": null,
+      "kmdbId": "F-67660",
       "boxOffice": null,
       "bookingRate": 0.01,
       "availableAt": [
@@ -1315,27 +1385,6 @@
       ]
     },
     {
-      "movieCd": "20263162",
-      "title": "그림자 내각",
-      "titleEn": "그림자 내각",
-      "openDt": "2026-06-25",
-      "genre": "다큐멘터리, 드라마",
-      "runtime": 98,
-      "grade": "12세이상관람가",
-      "nation": "한국",
-      "directors": [],
-      "actors": [],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202605/24234_103_1.jpg",
-      "plot": "1979년 10월 16일, 유신정권을 종식한 부마 민주항쟁에서부터 시작하여 10.26 박정희 서거, 12.12 전두환의 군사반란, 2024년 12.3 윤석열의 내란으로 이어지는 대한민국의 과거부터 현재에 이르기까지 내란의 실체와 청산하지 못한 과거사를 추적하는 정치 다큐드라마로 군사반란과 내란을 어떻게 구조적으로 준비하였는지를 탐사한다. 그리고 전두환의 정적제거, 윤석열의 정적제거 실체를 추적하여 내란을 준비하는 과정을 낱낱이 파헤치고, 그 동조세력들의 실상을 추적한다. 또한 양극화의 뉴미디어와 국론분열 세력의 실체 및 독재권력으로 조성한 전두환, 노태우의 비자금 등을 집중 탐사하며, 전두환의 비자금이 내란 정권에 미친 영향과 과거 군사반란과 현재의 내란에 얽혀 있는 권력 주변의 검은 커넥션을 파헤친 작품이다.",
-      "keywords": null,
-      "kmdbId": "A-13964",
-      "boxOffice": null,
-      "bookingRate": 0,
-      "availableAt": [
-        "lotte"
-      ]
-    },
-    {
       "movieCd": null,
       "title": "걸즈 앤 판처 최종장",
       "titleEn": "",
@@ -1442,51 +1491,6 @@
     }
   ],
   "upcoming": [
-    {
-      "movieCd": "20245063",
-      "title": "희망의 발견, 알래스카에서",
-      "titleEn": "Looking for Hope, in Alaska",
-      "openDt": "2026-07-04",
-      "genre": "다큐멘터리",
-      "runtime": 98,
-      "grade": "전체관람가",
-      "nation": "한국",
-      "directors": [
-        "정형민"
-      ],
-      "actors": [],
-      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/40/tn_DPA002440.jpg",
-      "plot": "4년 전, 나는 남동 알래스카의 최북단 마을인 야쿠타트를 방문했다. 그곳에서 클링깃 곱사연어 씨족의 원로인 기니낙 아저씨를 따라 원시의 숲과 바다를 누비고 다녔다. 2023년 가을, 다시 야쿠타트를 찾았다. 나는 그들이 꿈꾸는 아름다운 세상에 대해 기록하기 시작했다. 절망뿐이라 생각했던 그 땅에서 희망의 꽃이 피어나고 있었다.",
-      "keywords": null,
-      "kmdbId": "A-13158",
-      "boxOffice": null,
-      "bookingRate": null,
-      "availableAt": []
-    },
-    {
-      "movieCd": "20264718",
-      "title": "블리치 천년혈전 편 : 화진담",
-      "titleEn": "BLEACH: Thousand-Year Blood War - The Calamity",
-      "openDt": "2026-07-04",
-      "genre": "애니메이션, 액션, 판타지",
-      "runtime": 67,
-      "grade": "15세이상관람가",
-      "nation": "일본",
-      "directors": [
-        "타구치 토모히사"
-      ],
-      "actors": [
-        "모리타 마사카즈",
-        "스기야마 노리아키"
-      ],
-      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/45/tn_DPF033355.jpg",
-      "plot": "사신과 퀸시― 천 년에 걸친 혈전. 그 끝에 멸망의 미래가 보일지라도―.영왕궁에 다가서는 유하바하를 맞이하는 왕속특무 0번대.그러나 퀸시의 왕과 그 친위대는 0번대의 처절한 만해마저 무너뜨리고, 마침내 영왕 대내리에 침입한다.효스베 이치베에게서 영왕 수호를 맡은 쿠로사키 이치고 일행.하지만 유하바하의 계략에 의해, 이치고는 자신의 검으로 영왕을 베고 만다.영왕의 죽음― 그것은 곧 삼계의 붕괴를 의미한다.각 세계에 ‘왜곡’이 발행하고, 멸망의 징조가 세계를 뒤덮기 시작한다.호정 13대는 퀸시 잔당과 손을 잡고 영왕궁으로 향한다.하지만 영왕궁은 이미 ‘반덴라이히’의 손에 넘어가 ‘바벨트’로 모습을 바꾸고 있었다.사신들을 비웃듯 하늘 높이 솟아오른 성에서 친위대가 기다린다.‘바벨트’ 곳곳에서 호정 13대와 친위대의 격전이 펼쳐진다.이치고는 우류의 진의를 깨닫고, 서로를 믿는 동료로서 세계를 지키겠다는 결의를 다시 한번 다진다.‘전지전능(The Almighty)’을 뛰어넘은 존재가 된 유하바하.삼계의 존망을 건 처절한 싸움은 마침내 종말을 향해 나아간다.혼돈의 재앙을 넘어선 곳에 기다리는 것은 절망인가, 희망인가.",
-      "keywords": "만화원작",
-      "kmdbId": "F-67880",
-      "boxOffice": null,
-      "bookingRate": null,
-      "availableAt": []
-    },
     {
       "movieCd": "20259946",
       "title": "모아나",
@@ -1672,7 +1676,7 @@
         "피에르 꼬팽"
       ],
       "actors": [],
-      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/40/tn_DPF033213.jpg",
+      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/48/tn_DPF033536.jpg",
       "plot": "전 세계를 사로잡은 ‘미니언즈’ 유니버스의 완전히 새로운 이야기세계 최고의 무비스타가 되어 돌아 온 ‘미니언즈’, 몬스터와 손잡았다?!",
       "keywords": null,
       "kmdbId": "F-66406",
@@ -1878,10 +1882,29 @@
         "김수훈"
       ],
       "actors": [],
-      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/40/tn_DPK025623.jpg",
+      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/48/tn_DPK026057.jpg",
       "plot": "고래가 품은 보석의 비밀을 찾아 바다로 떠난 로미와 하츄핑의 기적 같은 모험을 그린 판타지 애니메이션",
       "keywords": null,
       "kmdbId": "K-41066",
+      "boxOffice": null,
+      "bookingRate": null,
+      "availableAt": []
+    },
+    {
+      "movieCd": "20264635",
+      "title": "명탐정 코난: 하이웨이의 타천사",
+      "titleEn": "Detective Conan the Movie: Fallen Angel of the Highway",
+      "openDt": "2026-08-12",
+      "genre": "애니메이션",
+      "runtime": 109,
+      "grade": "12세이상관람가",
+      "nation": "일본",
+      "directors": [],
+      "actors": [],
+      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/48/tn_DPF033534.jpg",
+      "plot": "‘모터 사이클 페스티벌’이 열리는 요코하마로 향하던 코난 일행은 폭주하는 검은 오토바이 사건에 휘말리고 범인을 쫓던 ‘바람의 여신’ 가나가와현경 교통기동대 하기와라 치하야 경부보와 재회한다.경찰의 추적을 모두 뿌리친 폭주 오토바이는 도쿄 시내에도 출물하고, 연쇄적으로 사상자가 발생한다.이러한 가운데 최첨단 AI 기술을 탑재한 싸이카 ‘엔젤’과 폭주 오토바이가 매우 유사하다는 점이 밝혀지고, 이 정체불명의 존재를 ‘루시퍼’라고 명명, 점차 포위망을 좁혀간다.한편, 사건을 쫓던 치하야는 문득 7년 전 11월 7일, 폭탄을 해체하다 순직한 남동생 하기와라 켄지와,그의 죽음으로부터 4년 후 11월 7일, 같은 범인을 쫓다가 순직한 켄지의 친구이자 동료 마츠다 진페이에 대한 기억이 떠오르는데….도시를 위협하는 ‘루시퍼’에 맞서 ‘바람의 여신’ 치하야와 코난의 질주가 시작된다!바람의 여신, 엔젤 VS 어둠의 타락천사, 루시퍼초고속으로 질주하는 극한의 레이스 스타트!",
+      "keywords": "만화원작",
+      "kmdbId": "F-67882",
       "boxOffice": null,
       "bookingRate": null,
       "availableAt": []
