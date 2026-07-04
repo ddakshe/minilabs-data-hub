@@ -310,14 +310,20 @@ async function runService(name, builder) {
 }
 
 async function main() {
+  const services = [
+    ["넷플릭스", buildNetflix],
+    ["라프텔", buildLaftel],
+    ["웨이브", buildWavve],
+    ["티빙", buildTving],
+    ["디즈니+", buildDisney],
+  ];
   let failed = 0;
-  failed += await runService("넷플릭스", buildNetflix);
-  failed += await runService("라프텔", buildLaftel);
-  failed += await runService("웨이브", buildWavve);
-  failed += await runService("티빙", buildTving);
-  failed += await runService("디즈니+", buildDisney);
+  for (const [name, builder] of services) failed += await runService(name, builder);
 
-  if (failed > 0) throw new Error(`${failed}개 서비스 실패`);
+  const ok = services.length - failed;
+  console.log(`── ${ok}/${services.length} 성공, ${failed} 실패`);
+  // 성공한 서비스는 이미 저장됨(실패 서비스는 기존 JSON 유지). 전부 실패한 경우만 job 실패.
+  if (ok === 0) throw new Error("모든 서비스 실패");
 }
 
 main().catch((e) => {
