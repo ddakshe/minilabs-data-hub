@@ -209,19 +209,39 @@ function parseSvBlock(block, fallbackLabel) {
 
 async function scrapeSeven({ pageSize = 3000 } = {}) {
   const out = []
+  // ASP 세션 쿠키를 먼저 확보한다. 세션 없이 연속 대용량 요청하면 간헐적으로 302로 튕긴다.
+  let cookie = ''
+  try {
+    const seed = await http(SV_REFERER, { headers: { Referer: SV_ORIGIN }, timeoutMs: 30000 })
+    cookie = collectCookies(seed.headers)
+  } catch {
+    /* 시드 실패해도 탭 요청은 진행 */
+  }
+
   for (const tab of SV_TABS) {
-    const { status, text } = await http(SV_ENDPOINT, {
-      method: 'POST',
-      headers: {
-        'X-Requested-With': 'XMLHttpRequest',
-        'Content-Type': 'application/x-www-form-urlencoded',
-        Referer: SV_REFERER,
-      },
-      body: `intPageSize=${pageSize}&intCurrentPage=1&pTab=${tab.pTab}&pCd=`,
-    })
-    if (status !== 200) throw new Error(`7-Eleven HTTP ${status} (pTab ${tab.pTab})`)
-    const blocks = text.split('<li>').slice(1)
+    let res
+    // 탭당 3000건 단일 요청이 최근 ~60~117s까지 늘어 타임아웃 경계 + 간헐 302 → 타임아웃 확대 + 재시도.
+    for (let attempt = 0; attempt < 3; attempt++) {
+      res = await http(SV_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'X-Requested-With': 'XMLHttpRequest',
+          'Content-Type': 'application/x-www-form-urlencoded',
+          Referer: SV_REFERER,
+          ...(cookie ? { Cookie: cookie } : {}),
+        },
+        body: `intPageSize=${pageSize}&intCurrentPage=1&pTab=${tab.pTab}&pCd=`,
+        timeoutMs: 180000,
+      })
+      const setCookie = collectCookies(res.headers)
+      if (setCookie) cookie = setCookie
+      if (res.status === 200) break
+      await sleep(2000 * (attempt + 1)) // 302 등 → 잠깐 쉬고 재시도
+    }
+    if (res.status !== 200) throw new Error(`7-Eleven HTTP ${res.status} (pTab ${tab.pTab})`)
+    const blocks = res.text.split('<li>').slice(1)
     out.push(...blocks.map((b) => parseSvBlock(b, tab.label)).filter(Boolean))
+    await sleep(1500) // 탭 사이 간격 — 연속 대용량 요청에 대한 서버 방어 완화
   }
   const seen = new Set()
   return out.filter((p) => (seen.has(p.id) ? false : seen.add(p.id)))
