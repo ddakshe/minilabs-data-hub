@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-07-16",
+  "updatedAt": "2026-07-17",
   "counts": {
-    "nowShowing": 35,
-    "upcoming": 20
+    "nowShowing": 36,
+    "upcoming": 22
   },
   "nowShowing": [
     {
@@ -31,11 +31,11 @@
       "kmdbId": "K-40120",
       "boxOffice": {
         "rank": 1,
-        "rankInten": 7,
-        "audiCnt": 333911,
-        "audiAcc": 351269
+        "rankInten": 0,
+        "audiCnt": 274449,
+        "audiAcc": 625712
       },
-      "bookingRate": 77.9,
+      "bookingRate": 67.1,
       "availableAt": [
         "lotte",
         "megabox"
@@ -65,10 +65,10 @@
       "boxOffice": {
         "rank": 2,
         "rankInten": 0,
-        "audiCnt": 31727,
-        "audiAcc": 35564
+        "audiCnt": 30647,
+        "audiAcc": 66209
       },
-      "bookingRate": 8.13,
+      "bookingRate": 9.46,
       "availableAt": [
         "lotte"
       ],
@@ -98,11 +98,11 @@
       "kmdbId": "F-65915",
       "boxOffice": {
         "rank": 3,
-        "rankInten": -2,
-        "audiCnt": 13021,
-        "audiAcc": 579536
+        "rankInten": 0,
+        "audiCnt": 19026,
+        "audiAcc": 598562
       },
-      "bookingRate": 4.83,
+      "bookingRate": 6.9,
       "availableAt": [
         "lotte",
         "megabox"
@@ -137,11 +137,11 @@
       "kmdbId": "K-41443",
       "boxOffice": {
         "rank": 4,
-        "rankInten": -2,
-        "audiCnt": 11859,
-        "audiAcc": 1338903
+        "rankInten": 0,
+        "audiCnt": 16757,
+        "audiAcc": 1355660
       },
-      "bookingRate": 1.85,
+      "bookingRate": 2.73,
       "availableAt": [
         "lotte",
         "megabox"
@@ -175,11 +175,11 @@
       "kmdbId": "F-65546",
       "boxOffice": {
         "rank": 5,
-        "rankInten": -2,
-        "audiCnt": 8518,
-        "audiAcc": 2623712
+        "rankInten": 0,
+        "audiCnt": 11751,
+        "audiAcc": 2635463
       },
-      "bookingRate": 2.53,
+      "bookingRate": 3.8,
       "availableAt": [
         "lotte",
         "megabox"
@@ -216,11 +216,11 @@
       "kmdbId": "F-67404",
       "boxOffice": {
         "rank": 6,
-        "rankInten": -1,
-        "audiCnt": 3976,
-        "audiAcc": 90556
+        "rankInten": 0,
+        "audiCnt": 4642,
+        "audiAcc": 95198
       },
-      "bookingRate": 2.85,
+      "bookingRate": 3.46,
       "availableAt": [
         "lotte",
         "megabox"
@@ -228,84 +228,6 @@
       "booking": {
         "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24214",
         "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26022100"
-      }
-    },
-    {
-      "movieCd": "20263530",
-      "title": "마티 슈프림",
-      "titleEn": "마티 슈프림",
-      "openDt": "2026-07-01",
-      "genre": "드라마",
-      "runtime": 149,
-      "grade": "15세이상관람가",
-      "nation": "미국",
-      "directors": [
-        "조쉬 사프디"
-      ],
-      "actors": [
-        "티모시 샬라메",
-        "기네스 팰트로우",
-        "오데사 아지온",
-        "타일러 더 크리에이터",
-        "아벨 페라라",
-        "케빈 오리어리"
-      ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202607/24420_103_1.jpg",
-      "plot": "어떤 대가를 치르더라도반드시 가장 높은 곳으로!탁구로 인생 역전을 꿈꾸는 마티 마우저는 굴욕적인 패배 후 누구도 무시할 수 없는 성공을 손에 넣기로 결심한다.최고가 되기 위해 모든 것을 걸고 지옥까지 질주하는 마티 마우저의 꿈은 이루어질 수 있을까?",
-      "keywords": null,
-      "kmdbId": "F-66700",
-      "boxOffice": {
-        "rank": 7,
-        "rankInten": -1,
-        "audiCnt": 1386,
-        "audiAcc": 109555
-      },
-      "bookingRate": 0.5,
-      "availableAt": [
-        "lotte",
-        "megabox"
-      ],
-      "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24420",
-        "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26034300"
-      }
-    },
-    {
-      "movieCd": "20248252",
-      "title": "와일드 씽",
-      "titleEn": "와일드 씽",
-      "openDt": "2026-06-03",
-      "genre": "코미디",
-      "runtime": 107,
-      "grade": "12세이상관람가",
-      "nation": "한국",
-      "directors": [
-        "손재곤"
-      ],
-      "actors": [
-        "강동원",
-        "엄태구",
-        "박지현",
-        "오정세",
-        "안현호",
-        "최동구"
-      ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202606/24235_103_1.jpg",
-      "plot": "‘댄스머신’ 황현우 △ ‘절대매력’ 변도미 △ ‘폭풍래퍼’ 구상구“우리는 트라이앵글입니다!”한때 가요계를 휩쓸었지만 예기치 못한 사건에 휘말려 하루아침에 해체된 3인조 혼성 댄스 그룹 ‘트라이앵글’.20년 만에 리더 현우에게 재기의 발판이 될 ‘트라이앵글’ 공연 제안이 들어오고, 인생의 마지막 기회를 잡기 위해 멤버들을 찾아 나선다.“전쟁이 터져도, 오늘 우리는 무대에 서는 거야!”생계형 방송인이 된 현우, 재벌가 며느리가 된 도미, 솔로 앨범으로 빚더미에 앉은 상구까지세 사람은 다시 모여 공연장으로 향하지만, 과거 ‘트라이앵글’의 라이벌 발라드 왕자 성곤과 악연으로 얽힌 전소속사 박대표까지 나타나며 상황은 점점 걷잡을 수 없이 꼬여가는데…",
-      "keywords": null,
-      "kmdbId": "K-41242",
-      "boxOffice": {
-        "rank": 8,
-        "rankInten": -1,
-        "audiCnt": 1205,
-        "audiAcc": 1338812
-      },
-      "bookingRate": 0.1,
-      "availableAt": [
-        "lotte"
-      ],
-      "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24235"
       }
     },
     {
@@ -333,12 +255,12 @@
       "keywords": null,
       "kmdbId": "K-40712",
       "boxOffice": {
-        "rank": 9,
-        "rankInten": -5,
-        "audiCnt": 1122,
-        "audiAcc": 5927524
+        "rank": 7,
+        "rankInten": 2,
+        "audiCnt": 2069,
+        "audiAcc": 5929593
       },
-      "bookingRate": 1.4,
+      "bookingRate": 1.3,
       "availableAt": [
         "lotte",
         "megabox"
@@ -346,6 +268,84 @@
       "booking": {
         "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24110",
         "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26017500"
+      }
+    },
+    {
+      "movieCd": "20263530",
+      "title": "마티 슈프림",
+      "titleEn": "마티 슈프림",
+      "openDt": "2026-07-01",
+      "genre": "드라마",
+      "runtime": 149,
+      "grade": "15세이상관람가",
+      "nation": "미국",
+      "directors": [
+        "조쉬 사프디"
+      ],
+      "actors": [
+        "티모시 샬라메",
+        "기네스 팰트로우",
+        "오데사 아지온",
+        "타일러 더 크리에이터",
+        "아벨 페라라",
+        "케빈 오리어리"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202607/24420_103_1.jpg",
+      "plot": "어떤 대가를 치르더라도반드시 가장 높은 곳으로!탁구로 인생 역전을 꿈꾸는 마티 마우저는 굴욕적인 패배 후 누구도 무시할 수 없는 성공을 손에 넣기로 결심한다.최고가 되기 위해 모든 것을 걸고 지옥까지 질주하는 마티 마우저의 꿈은 이루어질 수 있을까?",
+      "keywords": null,
+      "kmdbId": "F-66700",
+      "boxOffice": {
+        "rank": 8,
+        "rankInten": -1,
+        "audiCnt": 1678,
+        "audiAcc": 111233
+      },
+      "bookingRate": 0.3,
+      "availableAt": [
+        "lotte",
+        "megabox"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24420",
+        "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26034300"
+      }
+    },
+    {
+      "movieCd": "20242837",
+      "title": "왕과 사는 남자",
+      "titleEn": "왕과 사는 남자",
+      "openDt": "2026-02-04",
+      "genre": "사극, 드라마",
+      "runtime": 116,
+      "grade": "12세이상관람가",
+      "nation": "한국",
+      "directors": [
+        "장항준"
+      ],
+      "actors": [
+        "유해진",
+        "박지훈",
+        "유지태",
+        "전미도",
+        "김민",
+        "이준혁"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202602/23816_103_1.jpg",
+      "plot": "“나는 이제 어디로 갑니까…” 계유정난이 조선을 뒤흔들고 어린 왕 이홍위는 왕위에서 쫓겨나 유배길에 오른다.“무슨 수를 쓰더라도 그 대감을 우리 광천골로 오게 해야지”한편, 강원도 영월 산골 마을 광천골의 촌장 엄흥도는 먹고 살기 힘든 마을 사람들을 위해 청령포를 유배지로 만들기 위해 노력한다. 그러나 촌장이 부푼 꿈으로 맞이한 이는 왕위에서 쫓겨난 이홍위였다. 유배지를 지키는 보수주인으로서 그의 모든 일상을 감시해야만 하는 촌장은 삶의 의지를 잃어버린 이홍위가 점점 신경 쓰이는데… 1457년 청령포, 역사가 지우려 했던 이야기 왕과 사는 남자",
+      "keywords": null,
+      "kmdbId": "K-40652",
+      "boxOffice": {
+        "rank": 9,
+        "rankInten": 8,
+        "audiCnt": 662,
+        "audiAcc": 16912665
+      },
+      "bookingRate": 0,
+      "availableAt": [
+        "lotte"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|23816"
       }
     },
     {
@@ -364,7 +364,7 @@
       "keywords": null,
       "kmdbId": null,
       "boxOffice": null,
-      "bookingRate": 8.1,
+      "bookingRate": 10.8,
       "availableAt": [
         "megabox"
       ],
@@ -396,7 +396,7 @@
       "keywords": null,
       "kmdbId": "F-67608",
       "boxOffice": null,
-      "bookingRate": 0.69,
+      "bookingRate": 1.16,
       "availableAt": [
         "lotte"
       ],
@@ -450,6 +450,39 @@
       ],
       "booking": {
         "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26028800"
+      }
+    },
+    {
+      "movieCd": "20248252",
+      "title": "와일드 씽",
+      "titleEn": "와일드 씽",
+      "openDt": "2026-06-03",
+      "genre": "코미디",
+      "runtime": 107,
+      "grade": "12세이상관람가",
+      "nation": "한국",
+      "directors": [
+        "손재곤"
+      ],
+      "actors": [
+        "강동원",
+        "엄태구",
+        "박지현",
+        "오정세",
+        "안현호",
+        "최동구"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202606/24235_103_1.jpg",
+      "plot": "‘댄스머신’ 황현우 △ ‘절대매력’ 변도미 △ ‘폭풍래퍼’ 구상구“우리는 트라이앵글입니다!”한때 가요계를 휩쓸었지만 예기치 못한 사건에 휘말려 하루아침에 해체된 3인조 혼성 댄스 그룹 ‘트라이앵글’.20년 만에 리더 현우에게 재기의 발판이 될 ‘트라이앵글’ 공연 제안이 들어오고, 인생의 마지막 기회를 잡기 위해 멤버들을 찾아 나선다.“전쟁이 터져도, 오늘 우리는 무대에 서는 거야!”생계형 방송인이 된 현우, 재벌가 며느리가 된 도미, 솔로 앨범으로 빚더미에 앉은 상구까지세 사람은 다시 모여 공연장으로 향하지만, 과거 ‘트라이앵글’의 라이벌 발라드 왕자 성곤과 악연으로 얽힌 전소속사 박대표까지 나타나며 상황은 점점 걷잡을 수 없이 꼬여가는데…",
+      "keywords": null,
+      "kmdbId": "K-41242",
+      "boxOffice": null,
+      "bookingRate": 0.15,
+      "availableAt": [
+        "lotte"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24235"
       }
     },
     {
@@ -584,12 +617,42 @@
       "keywords": null,
       "kmdbId": null,
       "boxOffice": null,
-      "bookingRate": 0.05,
+      "bookingRate": 0.04,
       "availableAt": [
         "lotte"
       ],
       "booking": {
         "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|21544"
+      }
+    },
+    {
+      "movieCd": "20243358",
+      "title": "지구 최후의 여자",
+      "titleEn": "지구 최후의 여자",
+      "openDt": "2026-07-15",
+      "genre": "드라마, 코미디",
+      "runtime": 84,
+      "grade": "15세이상관람가",
+      "nation": "한국",
+      "directors": [
+        "이종민",
+        "염문경"
+      ],
+      "actors": [
+        "염문경",
+        "이종민"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202607/24525_103_1.jpg",
+      "plot": "영화교양수업을 듣는 파랑머리의 무뚝뚝한 여자, 구한아. 어쩐지 남자에 대한 분노로 가득한 그녀의 시나리오에 아무도 진심으로 피드백해주지 않는데. 단 한 사람, 장편 입봉을 꿈꾸는 감독 지망생 남자 송철만이 천연덕스레 말을 건다. “근데요, 그 영화 남혐 아닌가요?” 자신의 시나리오가 지원사업 당선이 안되는 게 ‘여성영화 가산점’을 받지 못해서라 판단하는 철은, 어이없게도 한아에게 팀플레이를 제안하는데...!",
+      "keywords": null,
+      "kmdbId": "K-37183",
+      "boxOffice": null,
+      "bookingRate": 0.04,
+      "availableAt": [
+        "lotte"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24525"
       }
     },
     {
@@ -617,14 +680,12 @@
       "keywords": "성장영화,청춘,실화바탕,여성,인권,노동,사회",
       "kmdbId": "K-41546",
       "boxOffice": null,
-      "bookingRate": 0.03,
+      "bookingRate": 0.04,
       "availableAt": [
-        "lotte",
-        "megabox"
+        "lotte"
       ],
       "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24447",
-        "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26034100"
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24447"
       }
     },
     {
@@ -715,36 +776,6 @@
       }
     },
     {
-      "movieCd": "20243358",
-      "title": "지구 최후의 여자",
-      "titleEn": "지구 최후의 여자",
-      "openDt": "2026-07-15",
-      "genre": "드라마, 코미디",
-      "runtime": 84,
-      "grade": "15세이상관람가",
-      "nation": "한국",
-      "directors": [
-        "이종민",
-        "염문경"
-      ],
-      "actors": [
-        "염문경",
-        "이종민"
-      ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202607/24525_103_1.jpg",
-      "plot": "영화교양수업을 듣는 파랑머리의 무뚝뚝한 여자, 구한아. 어쩐지 남자에 대한 분노로 가득한 그녀의 시나리오에 아무도 진심으로 피드백해주지 않는데. 단 한 사람, 장편 입봉을 꿈꾸는 감독 지망생 남자 송철만이 천연덕스레 말을 건다. “근데요, 그 영화 남혐 아닌가요?” 자신의 시나리오가 지원사업 당선이 안되는 게 ‘여성영화 가산점’을 받지 못해서라 판단하는 철은, 어이없게도 한아에게 팀플레이를 제안하는데...!",
-      "keywords": null,
-      "kmdbId": "K-37183",
-      "boxOffice": null,
-      "bookingRate": 0.01,
-      "availableAt": [
-        "lotte"
-      ],
-      "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24525"
-      }
-    },
-    {
       "movieCd": "20264056",
       "title": "그린랜드 2: 마이그레이션",
       "titleEn": "그린랜드 2: 마이그레이션",
@@ -802,6 +833,34 @@
       ],
       "booking": {
         "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24439"
+      }
+    },
+    {
+      "movieCd": "20262154",
+      "title": "비발디와 나",
+      "titleEn": "비발디와 나",
+      "openDt": "2026-04-29",
+      "genre": "드라마",
+      "runtime": 110,
+      "grade": "12세이상관람가",
+      "nation": "이탈리아",
+      "directors": [
+        "다미아노 미키엘레토"
+      ],
+      "actors": [
+        "미켈레 리온디노"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202604/24093_103_1.jpg",
+      "plot": "“음악엔 목적이 없지만, 모든 걸 할 수 있어”18세기 초 베네치아, 뛰어난 오케스트라로 명성 높은 피에타 고아원,화려한 명성과 달리, 소녀들은 얼굴도, 이름도 숨긴 채 연주해야 한다.그녀들이 세상 밖으로 나갈 수 있는 유일한 방법은 결혼이다.스무 살의 천재 바이올리니스트 체칠리아는 새로 부임한 음악 교사 비발디를 만나게 되고,그의 음악은 고요했던 그녀의 세계에 새로운 숨을 불어넣는다.",
+      "keywords": null,
+      "kmdbId": "F-66558",
+      "boxOffice": null,
+      "bookingRate": 0,
+      "availableAt": [
+        "lotte"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24093"
       }
     },
     {
@@ -923,39 +982,6 @@
       }
     },
     {
-      "movieCd": "20242837",
-      "title": "왕과 사는 남자",
-      "titleEn": "왕과 사는 남자",
-      "openDt": "2026-02-04",
-      "genre": "사극, 드라마",
-      "runtime": 116,
-      "grade": "12세이상관람가",
-      "nation": "한국",
-      "directors": [
-        "장항준"
-      ],
-      "actors": [
-        "유해진",
-        "박지훈",
-        "유지태",
-        "전미도",
-        "김민",
-        "이준혁"
-      ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202602/23816_103_1.jpg",
-      "plot": "“나는 이제 어디로 갑니까…” 계유정난이 조선을 뒤흔들고 어린 왕 이홍위는 왕위에서 쫓겨나 유배길에 오른다.“무슨 수를 쓰더라도 그 대감을 우리 광천골로 오게 해야지”한편, 강원도 영월 산골 마을 광천골의 촌장 엄흥도는 먹고 살기 힘든 마을 사람들을 위해 청령포를 유배지로 만들기 위해 노력한다. 그러나 촌장이 부푼 꿈으로 맞이한 이는 왕위에서 쫓겨난 이홍위였다. 유배지를 지키는 보수주인으로서 그의 모든 일상을 감시해야만 하는 촌장은 삶의 의지를 잃어버린 이홍위가 점점 신경 쓰이는데… 1457년 청령포, 역사가 지우려 했던 이야기 왕과 사는 남자",
-      "keywords": null,
-      "kmdbId": "K-40652",
-      "boxOffice": null,
-      "bookingRate": 0,
-      "availableAt": [
-        "lotte"
-      ],
-      "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|23816"
-      }
-    },
-    {
       "movieCd": "20247161",
       "title": "충충충",
       "titleEn": "충충충",
@@ -986,6 +1012,33 @@
       ],
       "booking": {
         "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24402"
+      }
+    },
+    {
+      "movieCd": "20262202",
+      "title": "침묵의 친구",
+      "titleEn": "침묵의 친구",
+      "openDt": "2026-04-15",
+      "genre": "드라마",
+      "runtime": 147,
+      "grade": "15세이상관람가",
+      "nation": "독일",
+      "directors": [],
+      "actors": [
+        "양조위",
+        "레아 세이두"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202604/24099_103_1.jpg",
+      "plot": "독일 대학의 한 식물원에는 1832년부터 인간을 바라보며 뿌리내린 장엄한 한 그루의 은행나무가 서있다.1908년 대학 최초의 여학생1972년 식물과 사랑을 동시에 키우는 청년2020년 고독한 신경과학자한 세기가 넘는 시간 동안 이 은행나무는 세 사람들의 삶 속으로 고요히 가지를 뻗어 하나로 연결되기 시작한다.",
+      "keywords": "사사로운영화리스트",
+      "kmdbId": "F-64735",
+      "boxOffice": null,
+      "bookingRate": 0,
+      "availableAt": [
+        "lotte"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24099"
       }
     },
     {
@@ -1052,30 +1105,6 @@
       ],
       "booking": {
         "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24215"
-      }
-    },
-    {
-      "movieCd": null,
-      "title": "경멸",
-      "titleEn": "",
-      "openDt": "2026-07-15",
-      "genre": null,
-      "runtime": null,
-      "grade": "15세이상관람가",
-      "nation": null,
-      "directors": [],
-      "actors": [],
-      "poster": "https://img.megabox.co.kr/SharedImg/2026/07/09/ntXiE2oNmE54XHJmimpuP8l8nlcsFxXb.jpg",
-      "plot": "미국 제작자와 독일 감독 프리츠 랑(본인 직접 실명 연기), 프랑스 작가인 폴 자발(미셸 피콜리), 그리고 그의 아내 카미유 자발(브리지트 바르도), 그리고 이 넷의 언어소통을 가능하게 해주는 프란체스카 (조르지아 몰)등이 영화 '오디세이'를 만드는 과정에서 겪게되는 피상적 인간관계들간의 갈등과 영화를 바라보는 시각들의 충돌들. 폴 자발은 새 영화 '오디세이'의 작가로 제작자 프로코시(잭 팰런스)에게 고용된다. 폴이 그의 아내 카미유를 프로코시와 드라이브하게 한 후 폴 자신은 택시를 타고 늦게 도착했기 때문에, 카미유는 그의 남편 폴이 제작자에게 더 많은 돈을 받기위해 아내인 자기를 제작자에게 '선물로 제공'했다고 믿고 관계는 깨어지기 시작한다. 이후 사람들간의 의사소통의 부재와 은밀하게 증폭되던 갈등은 결국 파국으로 정리가 된다.",
-      "keywords": null,
-      "kmdbId": "F-10560",
-      "boxOffice": null,
-      "bookingRate": 0,
-      "availableAt": [
-        "megabox"
-      ],
-      "booking": {
-        "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26045900"
       }
     },
     {
@@ -1245,8 +1274,8 @@
       "titleEn": "Spider-Man: Brand New Day",
       "openDt": "2026-07-29",
       "genre": "액션, 어드벤처, 판타지",
-      "runtime": null,
-      "grade": null,
+      "runtime": 144,
+      "grade": "12세이상관람가",
       "nation": "미국",
       "directors": [
         "데스틴 다니엘 크리튼"
@@ -1260,7 +1289,7 @@
         "트라멜 틸먼"
       ],
       "poster": "https://file.koreafilm.or.kr/thm/02/99/19/48/tn_DPF033548.jpg",
-      "plot": "“기억 못 하겠지만 우린 알던 사이예요”세상이 잊어버린 친절한 이웃, ‘스파이더맨’ 컴백!스파이더맨의 ‘브랜드 뉴 데이’를 목격하라!",
+      "plot": "세상 모두에게 잊힌 피터 파커그의 정체를 기억하는 역대급 빌런의 등장시리즈 사상 가장 통제할 수 없는 대결이 시작된다!4년 전 소중한 사람들을 지키기 위해 모두의 기억에서 사라진 ‘피터 파커’.친절한 이웃 ‘스파이더맨’으로서 뉴욕을 지키며 고독한 삶을 살아가던 ‘피터’는어느 날, 예상치 못한 DNA 변이로 인해 통제 불가능한 힘에 사로잡히고 그의 진짜 정체를 알고 있는 적까지 마주하게 된다.타인의 의식을 조종하는 정체불명의 존재로 인해 모두가 ‘피터’를 노리는 적이 될 수 있는 혼란 속에서 ‘피터’는 다시 위협에 빠진 ‘MJ’와 모두를 지키기 위해 ‘스파이더맨’으로 그들 앞에 서게 되는데...올여름, 극장가를 강타할 최고 블록버스터의 귀환!'스파이더맨'의 새로운 날을 확인하라!",
       "keywords": null,
       "kmdbId": "F-66840",
       "boxOffice": null,
@@ -1453,29 +1482,55 @@
       "availableAt": []
     },
     {
-      "movieCd": "20248529",
-      "title": "수련",
-      "titleEn": "Water Lilies",
+      "movieCd": "20264080",
+      "title": "워페어",
+      "titleEn": "Warfare",
       "openDt": "2026-08-19",
-      "genre": "드라마",
-      "runtime": 118,
+      "genre": "액션, 드라마, 전쟁",
+      "runtime": 95,
+      "grade": "15세이상관람가",
+      "nation": "미국",
+      "directors": [
+        "알렉스 가랜드"
+      ],
+      "actors": [
+        "조셉 퀸",
+        "찰스 멜튼",
+        "코스모 자비스",
+        "윌 폴터",
+        "테일러 존 스미스",
+        "노아 센티네오"
+      ],
+      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/48/tn_DPF033566.jpg",
+      "plot": "2006년 이라크 전쟁, 라마디전투 직후의 긴박한 상황. 네이비 실 '알파 원' 분대는 감시 및 정찰 임무를 위해 이라크의 한 민가 가옥을 거점으로 점령한다. 하지만 평온함도 잠시, 예상치 못한 적의 기습과 매복으로 인해 분대원들은 퇴로가 차단된 채 고립된다.부상당한 동료를 구출하고 적진을 탈출하기 위해 사투를 벌이는 대원들. 영화는 실제 사건을 바탕으로, 이들이 겪는 혼돈과 공포의 시간을 영화 속 시간과 실제 상영 시간이 일치하는 실시간 방식으로 생생하게 그려낸다.",
+      "keywords": null,
+      "kmdbId": "F-67206",
+      "boxOffice": null,
+      "bookingRate": null,
+      "availableAt": []
+    },
+    {
+      "movieCd": "20245451",
+      "title": "리틀 드리머즈",
+      "titleEn": "Little Dreamerz",
+      "openDt": "2026-08-19",
+      "genre": "드라마, 판타지",
+      "runtime": 96,
       "grade": "12세이상관람가",
       "nation": "한국",
       "directors": [
-        "이찬호"
+        "이광호"
       ],
       "actors": [
-        "이홍연",
-        "최은서",
-        "이승연",
-        "박인철",
-        "홍정호",
-        "서나경"
+        "유희제",
+        "김세원",
+        "김예은",
+        "방태원"
       ],
-      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/48/tn_DPK026067.jpg",
-      "plot": "여배우를 꿈꾸는 효원은 고등학교를 중퇴한 은서와 함께 가출을 하여 서울역에 도착한다.은서는 생활비를 벌기 위해 아르바이트를 하고 효원은 극단의 오디션을 보며 여배우가 되기를 꿈꾼다. 미래에 대한 각자의 희망으로 한껏 들뜬 그녀들이다.효원은 극단의 단원이 되기 위해서 주연 배우 수연에게 연기 레슨을 받기 시작한다.은서는 효원의 레슨비가 급해지자 허름한 식당에서 일을 하기 시작한다.수연은 효원에게 가르친다. 연기란, 타인의 고통을 온전히 이해하고 표현하는 것이라고...하지만 효원은 은서의 고통을 이해하지 못한다. 은서 또한 마찬가지다.그녀들에게 삶은 의문투성이이다.",
+      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/49/tn_DPK026121.jpg",
+      "plot": "5천 만원의 행운을 안겨준 꿈. 세탁기 속으로 사라진 내 눈에만 보이는 아이.야구를 그만두고 인생의 막다른 길에 선 백수 '건우'와 갈 곳 없이 방황하던 사춘기 소녀 '미나'는 꿈속에서만 만날 수 있는 아이 '요섭'을 따라 현실과 묘하게 닮은 이상한 세계로 발을 들인다.올여름, 가장 낯설고 엉뚱한 상상에서 시작되는 기묘한 청춘 판타지!",
       "keywords": null,
-      "kmdbId": "K-37780",
+      "kmdbId": "K-35558",
       "boxOffice": null,
       "bookingRate": null,
       "availableAt": []
@@ -1509,29 +1564,56 @@
       "availableAt": []
     },
     {
-      "movieCd": "20264080",
-      "title": "워페어",
-      "titleEn": "Warfare",
+      "movieCd": "20248529",
+      "title": "수련",
+      "titleEn": "Water Lilies",
       "openDt": "2026-08-19",
-      "genre": "액션, 드라마, 전쟁",
-      "runtime": 95,
-      "grade": "15세이상관람가",
-      "nation": "미국",
+      "genre": "드라마",
+      "runtime": 118,
+      "grade": "12세이상관람가",
+      "nation": "한국",
       "directors": [
-        "알렉스 가랜드"
+        "이찬호"
       ],
       "actors": [
-        "조셉 퀸",
-        "찰스 멜튼",
-        "코스모 자비스",
-        "윌 폴터",
-        "테일러 존 스미스",
-        "노아 센티네오"
+        "이홍연",
+        "최은서",
+        "이승연",
+        "박인철",
+        "홍정호",
+        "서나경"
       ],
-      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/48/tn_DPF033566.jpg",
-      "plot": "2006년 이라크 전쟁, 라마디전투 직후의 긴박한 상황. 네이비 실 '알파 원' 분대는 감시 및 정찰 임무를 위해 이라크의 한 민가 가옥을 거점으로 점령한다. 하지만 평온함도 잠시, 예상치 못한 적의 기습과 매복으로 인해 분대원들은 퇴로가 차단된 채 고립된다.부상당한 동료를 구출하고 적진을 탈출하기 위해 사투를 벌이는 대원들. 영화는 실제 사건을 바탕으로, 이들이 겪는 혼돈과 공포의 시간을 영화 속 시간과 실제 상영 시간이 일치하는 실시간 방식으로 생생하게 그려낸다.",
+      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/48/tn_DPK026067.jpg",
+      "plot": "여배우를 꿈꾸는 효원은 고등학교를 중퇴한 은서와 함께 가출을 하여 서울역에 도착한다.은서는 생활비를 벌기 위해 아르바이트를 하고 효원은 극단의 오디션을 보며 여배우가 되기를 꿈꾼다. 미래에 대한 각자의 희망으로 한껏 들뜬 그녀들이다.효원은 극단의 단원이 되기 위해서 주연 배우 수연에게 연기 레슨을 받기 시작한다.은서는 효원의 레슨비가 급해지자 허름한 식당에서 일을 하기 시작한다.수연은 효원에게 가르친다. 연기란, 타인의 고통을 온전히 이해하고 표현하는 것이라고...하지만 효원은 은서의 고통을 이해하지 못한다. 은서 또한 마찬가지다.그녀들에게 삶은 의문투성이이다.",
       "keywords": null,
-      "kmdbId": "F-67206",
+      "kmdbId": "K-37780",
+      "boxOffice": null,
+      "bookingRate": null,
+      "availableAt": []
+    },
+    {
+      "movieCd": "20247458",
+      "title": "경주기행",
+      "titleEn": "The Journey to Gyeongju",
+      "openDt": "2026-08-26",
+      "genre": "드라마, 범죄",
+      "runtime": 110,
+      "grade": "15세이상관람가",
+      "nation": "한국",
+      "directors": [
+        "김미조"
+      ],
+      "actors": [
+        "이정은",
+        "공효진",
+        "박소담",
+        "이연",
+        "변요한"
+      ],
+      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/50/tn_DPK026179.jpg",
+      "plot": "엄마 ‘옥실’(이정은)과 세 딸 ‘장주’(공효진), ‘영주’(박소담), ‘동주’(이연)는 8년 전 수학여행을 떠난 이후 다시는 돌아오지 못한 막내 ‘경주’의 생일을 맞아 단체 티셔츠까지 맞춰 입고 경주로 가족여행을 떠난다.얼핏 단란하고 화목한 가족여행처럼 보이지만, 봉고차 트렁크에는 낯선 한 남자가 실려 있는데…여행은 알리바이, 목적은 복수확실하게 계획한대로죽이는 가족여행이 시작된다",
+      "keywords": null,
+      "kmdbId": "K-41153",
       "boxOffice": null,
       "bookingRate": null,
       "availableAt": []
