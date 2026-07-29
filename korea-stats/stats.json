@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-27",
+  "updatedAt": "2026-07-29",
   "source": "KOSIS Open API",
   "categories": [
     {
@@ -1597,17 +1597,13 @@
       "id": "pop_foreigner",
       "category": "population",
       "title": "체류 외국인",
-      "value": 2650783,
+      "value": 2783247,
       "unit": "명",
-      "changePct": 5.7,
+      "changePct": 5,
       "frequency": "Y",
       "source": "법무부 출입국·외국인정책 통계",
-      "period": "2024년",
+      "period": "2025년",
       "history": [
-        {
-          "prd": "2015",
-          "value": 1899519
-        },
         {
           "prd": "2016",
           "value": 2049441
@@ -1643,6 +1639,10 @@
         {
           "prd": "2024",
           "value": 2650783
+        },
+        {
+          "prd": "2025",
+          "value": 2783247
         }
       ]
     },
@@ -1650,17 +1650,13 @@
       "id": "pop_birth",
       "category": "population",
       "title": "출생아 수",
-      "value": 24521,
+      "value": 23160,
       "unit": "명",
-      "changePct": 18,
+      "changePct": 13.6,
       "frequency": "M",
       "source": "통계청 인구동향조사",
-      "period": "2026.04",
+      "period": "2026.05",
       "history": [
-        {
-          "prd": "202305",
-          "value": 19047
-        },
         {
           "prd": "202306",
           "value": 18585
@@ -1800,6 +1796,10 @@
         {
           "prd": "202604",
           "value": 24521
+        },
+        {
+          "prd": "202605",
+          "value": 23160
         }
       ]
     },
@@ -1807,17 +1807,13 @@
       "id": "soc_marriage",
       "category": "society",
       "title": "혼인 건수",
-      "value": 20622,
+      "value": 20368,
       "unit": "건",
-      "changePct": 9,
+      "changePct": -6.4,
       "frequency": "M",
       "source": "통계청 인구동향조사",
-      "period": "2026.04",
+      "period": "2026.05",
       "history": [
-        {
-          "prd": "202305",
-          "value": 17211
-        },
         {
           "prd": "202306",
           "value": 16052
@@ -1957,6 +1953,10 @@
         {
           "prd": "202604",
           "value": 20622
+        },
+        {
+          "prd": "202605",
+          "value": 20368
         }
       ]
     },
@@ -1964,17 +1964,13 @@
       "id": "soc_divorce",
       "category": "society",
       "title": "이혼 건수",
-      "value": 7829,
+      "value": 7122,
       "unit": "건",
-      "changePct": 7.3,
+      "changePct": -3.9,
       "frequency": "M",
       "source": "통계청 인구동향조사",
-      "period": "2026.04",
+      "period": "2026.05",
       "history": [
-        {
-          "prd": "202305",
-          "value": 8393
-        },
         {
           "prd": "202306",
           "value": 7789
@@ -2114,6 +2110,10 @@
         {
           "prd": "202604",
           "value": 7829
+        },
+        {
+          "prd": "202605",
+          "value": 7122
         }
       ]
     },
