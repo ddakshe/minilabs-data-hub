@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-29",
+  "updatedAt": "2026-07-30",
   "source": "KOSIS Open API",
   "categories": [
     {
@@ -732,18 +732,14 @@
       "id": "soc_house",
       "category": "society",
       "title": "전세가격지수",
-      "value": 101.2,
+      "value": 101.6,
       "unit": "pt",
-      "changePct": 2.4,
+      "changePct": 2.7,
       "decimals": 1,
       "frequency": "M",
       "source": "한국부동산원 전국주택가격동향",
-      "period": "2026.05",
+      "period": "2026.06",
       "history": [
-        {
-          "prd": "202306",
-          "value": 96.4
-        },
         {
           "prd": "202307",
           "value": 96.4
@@ -883,6 +879,10 @@
         {
           "prd": "202605",
           "value": 101.2
+        },
+        {
+          "prd": "202606",
+          "value": 101.6
         }
       ]
     },
