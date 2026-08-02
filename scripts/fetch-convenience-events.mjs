@@ -183,8 +183,16 @@ async function scrapeGS25({ maxPages = 200 } = {}) {
 }
 
 // ───────────────────────── 세븐일레븐 ─────────────────────────
-// PC 목록(이름·가격 인라인). intCurrentPage 무시 → intPageSize 크게 한방.
-// pTab: 1=1+1, 2=2+1, 3=증정, 4=할인. 이미지는 일부만(상대경로).
+// PC 목록(이름·가격 인라인). pTab: 1=1+1, 2=2+1, 3=증정, 4=할인. 이미지는 일부만(상대경로).
+//
+// 페이지 파라미터는 intCurrentPage가 아니라 intCurrPage다(presentList.asp의 $.ajax 참고).
+// 예전엔 틀린 이름을 보내 서버가 무시 → "페이지네이션 불가"로 오해하고 intPageSize=3000 한방으로 긁었다.
+// 그 방식의 문제 두 가지:
+//   1) 서버가 항목당 ~0.13s를 쓰는데 ASP 스크립트 타임아웃이 ~120s → 1000건 넘는 탭(2+1: 1064건)은
+//      매번 302 → /500.asp 로 튕겼다.
+//   2) 페이지 미지정 시 서버가 초기 렌더분 13건을 건너뛴 위치부터 반환 → 성공한 탭도 앞 13건이 누락,
+//      2건짜리 증정 탭은 통째로 0건이 됐다.
+// → 올바른 이름으로 잘게 페이징한다. page=1은 초기 렌더분 13건만, page>=2는 그 뒤로 SV_PAGE_SIZE씩.
 
 const SV_ENDPOINT = 'https://www.7-eleven.co.kr/product/listMoreAjax.asp'
 const SV_REFERER = 'https://www.7-eleven.co.kr/product/presentList.asp'
@@ -195,6 +203,12 @@ const SV_TABS = [
   { pTab: '3', label: '증정' },
   { pTab: '4', label: '할인' },
 ]
+// 항목당 ~0.13s → 300건 ≈ 40s. 서버 타임아웃(~120s)까지 3배 여유.
+const SV_PAGE_SIZE = 300
+// page=1이 반환하는 초기 렌더분 개수(presentList.asp의 intPageSize 기본값).
+const SV_FIRST_PAGE_COUNT = 13
+// 종료조건이 어긋나도 무한루프하지 않도록. 300*40 = 12000건까지 커버.
+const SV_MAX_PAGES = 40
 
 function parseSvBlock(block, fallbackLabel) {
   const id = block.match(/fncGoView\('([^']+)'\)/)?.[1]
@@ -207,42 +221,95 @@ function parseSvBlock(block, fallbackLabel) {
   return { id: `seven-${id}`, chain: '7-ELEVEN', name, price, eventType, image: rel ? SV_ORIGIN + rel : '', category: null }
 }
 
-async function scrapeSeven({ pageSize = 3000 } = {}) {
+// 탭 목록 페이지의 intTotalCount = 그 탭의 총 상품 수. 종료조건 겸 수집 누락 검증용.
+async function svTotalCount(pTab, cookie) {
+  try {
+    const res = await http(`${SV_REFERER}?pTab=${pTab}`, {
+      headers: { Referer: SV_ORIGIN, ...(cookie ? { Cookie: cookie } : {}) },
+      timeoutMs: 30000,
+    })
+    const n = Number(res.text.match(/intTotalCount\s*=\s*"(\d+)"/)?.[1])
+    return Number.isFinite(n) ? n : null
+  } catch {
+    return null // 못 읽어도 짧은 페이지로 종료 판정 가능
+  }
+}
+
+async function svFetchPage(pTab, page, cookieRef) {
+  let res
+  for (let attempt = 0; attempt < 3; attempt++) {
+    res = await http(SV_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'X-Requested-With': 'XMLHttpRequest',
+        'Content-Type': 'application/x-www-form-urlencoded',
+        Referer: SV_REFERER,
+        ...(cookieRef.value ? { Cookie: cookieRef.value } : {}),
+      },
+      body: `intPageSize=${SV_PAGE_SIZE}&intCurrPage=${page}&pTab=${pTab}&cateCd1=&cateCd2=&cateCd3=&pCd=`,
+      timeoutMs: 120000,
+    })
+    const setCookie = collectCookies(res.headers)
+    if (setCookie) cookieRef.value = setCookie
+    if (res.status === 200) return res
+    await sleep(2000 * (attempt + 1)) // 302(→/500.asp) 등 → 잠깐 쉬고 재시도
+  }
+  throw new Error(`7-Eleven HTTP ${res.status} (pTab ${pTab} page ${page})`)
+}
+
+async function scrapeSeven() {
   const out = []
-  // ASP 세션 쿠키를 먼저 확보한다. 세션 없이 연속 대용량 요청하면 간헐적으로 302로 튕긴다.
-  let cookie = ''
+  // ASP 세션 쿠키를 먼저 확보한다. 세션 없이 연속 요청하면 간헐적으로 302로 튕긴다.
+  const cookieRef = { value: '' }
   try {
     const seed = await http(SV_REFERER, { headers: { Referer: SV_ORIGIN }, timeoutMs: 30000 })
-    cookie = collectCookies(seed.headers)
+    cookieRef.value = collectCookies(seed.headers)
   } catch {
     /* 시드 실패해도 탭 요청은 진행 */
   }
 
   for (const tab of SV_TABS) {
-    let res
-    // 탭당 3000건 단일 요청이 최근 ~60~117s까지 늘어 타임아웃 경계 + 간헐 302 → 타임아웃 확대 + 재시도.
-    for (let attempt = 0; attempt < 3; attempt++) {
-      res = await http(SV_ENDPOINT, {
-        method: 'POST',
-        headers: {
-          'X-Requested-With': 'XMLHttpRequest',
-          'Content-Type': 'application/x-www-form-urlencoded',
-          Referer: SV_REFERER,
-          ...(cookie ? { Cookie: cookie } : {}),
-        },
-        body: `intPageSize=${pageSize}&intCurrentPage=1&pTab=${tab.pTab}&pCd=`,
-        timeoutMs: 180000,
-      })
-      const setCookie = collectCookies(res.headers)
-      if (setCookie) cookie = setCookie
-      if (res.status === 200) break
-      await sleep(2000 * (attempt + 1)) // 302 등 → 잠깐 쉬고 재시도
+    const total = await svTotalCount(tab.pTab, cookieRef.value)
+    const seen = new Set()
+    const items = []
+
+    for (let page = 1; page <= SV_MAX_PAGES; page++) {
+      const res = await svFetchPage(tab.pTab, page, cookieRef)
+      const parsed = res.text
+        .split('<li>')
+        .slice(1)
+        .map((b) => parseSvBlock(b, tab.label))
+        .filter(Boolean)
+
+      let added = 0
+      for (const p of parsed) {
+        if (seen.has(p.id)) continue
+        seen.add(p.id)
+        items.push(p)
+        added++
+      }
+
+      // page=1은 초기 렌더분(13건)만 주는 특수 케이스 → 짧다고 끝으로 판정하면 안 된다.
+      if (page === 1) {
+        if (total !== null && total <= SV_FIRST_PAGE_COUNT) break
+        await sleep(800)
+        continue
+      }
+      if (added === 0) break // 새 항목 없음 = 끝
+      if (total !== null && items.length >= total) break
+      if (parsed.length < SV_PAGE_SIZE) break // 마지막 페이지
+      await sleep(800) // 연속 대용량 요청에 대한 서버 방어 완화
     }
-    if (res.status !== 200) throw new Error(`7-Eleven HTTP ${res.status} (pTab ${tab.pTab})`)
-    const blocks = res.text.split('<li>').slice(1)
-    out.push(...blocks.map((b) => parseSvBlock(b, tab.label)).filter(Boolean))
-    await sleep(1500) // 탭 사이 간격 — 연속 대용량 요청에 대한 서버 방어 완화
+
+    // intTotalCount는 사이트 자체 집계라 실제 노출 건수와 몇 건 어긋난다(할인 탭: 540 표기 / 536 노출).
+    // 그런 상시 오차로 경고가 울면 무뎌지므로, 2% 넘게 빌 때만 = 진짜 중도 절단일 때만 알린다.
+    if (total !== null && items.length < total * 0.98) {
+      console.warn(`  ⚠ 7-ELEVEN ${tab.label}: ${items.length}/${total}개만 수집 — 중도 절단 의심`)
+    }
+    out.push(...items)
+    await sleep(1500) // 탭 사이 간격
   }
+
   const seen = new Set()
   return out.filter((p) => (seen.has(p.id) ? false : seen.add(p.id)))
 }

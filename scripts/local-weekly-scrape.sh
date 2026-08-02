@@ -26,4 +26,15 @@ if git diff --quiet -- convenience-events/products.json; then
 fi
 git add convenience-events/products.json
 git commit -m "chore(convenience-events): local weekly refresh ($(TZ=Asia/Seoul date '+%Y-%m-%d'))"
-git push origin main && echo "✓ push 완료" || { echo "push 실패"; exit 1; }
+# 스크랩에 수 분이 걸려 그 사이 다른 잡이 push했을 수 있다 → rebase 후 재시도.
+for attempt in 1 2 3; do
+  if git push origin main; then
+    echo "✓ push 완료 (시도 $attempt)"
+    exit 0
+  fi
+  echo "push 거부됨 (시도 $attempt) — rebase 후 재시도"
+  git pull --rebase --autostash origin main || { echo "rebase 실패 — 중단"; exit 1; }
+  sleep 5
+done
+echo "push 실패 — 3회 시도 모두 거부"
+exit 1
