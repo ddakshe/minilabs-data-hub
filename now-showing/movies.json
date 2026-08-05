@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-08-04",
+  "updatedAt": "2026-08-05",
   "counts": {
-    "nowShowing": 39,
-    "upcoming": 21
+    "nowShowing": 38,
+    "upcoming": 17
   },
   "nowShowing": [
     {
@@ -32,10 +32,10 @@
       "boxOffice": {
         "rank": 1,
         "rankInten": 0,
-        "audiCnt": 401788,
-        "audiAcc": 3785914
+        "audiCnt": 348262,
+        "audiAcc": 4134162
       },
-      "bookingRate": 38.47,
+      "bookingRate": 34.6,
       "availableAt": [
         "lotte",
         "megabox"
@@ -72,10 +72,10 @@
       "boxOffice": {
         "rank": 2,
         "rankInten": 0,
-        "audiCnt": 63927,
-        "audiAcc": 4174474
+        "audiCnt": 61228,
+        "audiAcc": 4235700
       },
-      "bookingRate": 7.8,
+      "bookingRate": 5.9,
       "availableAt": [
         "lotte",
         "megabox"
@@ -105,10 +105,10 @@
       "boxOffice": {
         "rank": 3,
         "rankInten": 0,
-        "audiCnt": 12454,
-        "audiAcc": 726394
+        "audiCnt": 12339,
+        "audiAcc": 738733
       },
-      "bookingRate": 0.74,
+      "bookingRate": 0.3,
       "availableAt": [
         "lotte"
       ],
@@ -140,11 +140,11 @@
       "kmdbId": "F-65546",
       "boxOffice": {
         "rank": 4,
-        "rankInten": 1,
-        "audiCnt": 7454,
-        "audiAcc": 2919664
+        "rankInten": 0,
+        "audiCnt": 7890,
+        "audiAcc": 2927554
       },
-      "bookingRate": 0.56,
+      "bookingRate": 0.27,
       "availableAt": [
         "lotte",
         "megabox"
@@ -176,11 +176,11 @@
       "kmdbId": "F-65915",
       "boxOffice": {
         "rank": 5,
-        "rankInten": -1,
-        "audiCnt": 6986,
-        "audiAcc": 1006933
+        "rankInten": 0,
+        "audiCnt": 6864,
+        "audiAcc": 1013797
       },
-      "bookingRate": 0.31,
+      "bookingRate": 0.1,
       "availableAt": [
         "lotte",
         "megabox"
@@ -188,37 +188,6 @@
       "booking": {
         "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24464",
         "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26035600"
-      }
-    },
-    {
-      "movieCd": "20264148",
-      "title": "어떻게 해야 했을까?",
-      "titleEn": "어떻게 해야 했을까?",
-      "openDt": "2026-07-29",
-      "genre": "다큐멘터리",
-      "runtime": 101,
-      "grade": "12세이상관람가",
-      "nation": "일본",
-      "directors": [],
-      "actors": [],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202607/24625_103_1.jpg",
-      "plot": "“20년 간 기록된, 가장 사적이고 충격적인 가족의 초상 스물넷, 다정하고 촉망받던 누나에게 조현병 증상이 나타난다.부모님은 병원 대신 현관문에 자물쇠를 채우는 것을 택한다.그렇게 닫힌 문 안에서, 가족은 20여 년간 서로에게 침묵했다.더는 외면할 수 없었던 남동생은 카메라를 들고 그 침묵 속으로 들어간다.누나에게, 부모에게, 그리고 자기 자신에게 묻기 위해.그리고 끝내 우리에게 묻는다.“어떻게 해야 했을까?",
-      "keywords": null,
-      "kmdbId": "B-12274",
-      "boxOffice": {
-        "rank": 6,
-        "rankInten": 2,
-        "audiCnt": 3147,
-        "audiAcc": 27155
-      },
-      "bookingRate": 0.6,
-      "availableAt": [
-        "lotte",
-        "megabox"
-      ],
-      "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24625",
-        "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26045500"
       }
     },
     {
@@ -247,12 +216,12 @@
       "keywords": null,
       "kmdbId": "F-67404",
       "boxOffice": {
-        "rank": 7,
-        "rankInten": 0,
-        "audiCnt": 3085,
-        "audiAcc": 266434
+        "rank": 6,
+        "rankInten": 1,
+        "audiCnt": 3059,
+        "audiAcc": 269493
       },
-      "bookingRate": 0.51,
+      "bookingRate": 0.24,
       "availableAt": [
         "lotte",
         "megabox"
@@ -260,6 +229,37 @@
       "booking": {
         "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24214",
         "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26022100"
+      }
+    },
+    {
+      "movieCd": "20264148",
+      "title": "어떻게 해야 했을까?",
+      "titleEn": "어떻게 해야 했을까?",
+      "openDt": "2026-07-29",
+      "genre": "다큐멘터리",
+      "runtime": 101,
+      "grade": "12세이상관람가",
+      "nation": "일본",
+      "directors": [],
+      "actors": [],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202607/24625_103_1.jpg",
+      "plot": "“20년 간 기록된, 가장 사적이고 충격적인 가족의 초상 스물넷, 다정하고 촉망받던 누나에게 조현병 증상이 나타난다.부모님은 병원 대신 현관문에 자물쇠를 채우는 것을 택한다.그렇게 닫힌 문 안에서, 가족은 20여 년간 서로에게 침묵했다.더는 외면할 수 없었던 남동생은 카메라를 들고 그 침묵 속으로 들어간다.누나에게, 부모에게, 그리고 자기 자신에게 묻기 위해.그리고 끝내 우리에게 묻는다.“어떻게 해야 했을까?",
+      "keywords": null,
+      "kmdbId": "B-12274",
+      "boxOffice": {
+        "rank": 7,
+        "rankInten": -1,
+        "audiCnt": 2991,
+        "audiAcc": 30146
+      },
+      "bookingRate": 0.3,
+      "availableAt": [
+        "lotte",
+        "megabox"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24625",
+        "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26045500"
       }
     },
     {
@@ -287,51 +287,89 @@
       "kmdbId": "K-41443",
       "boxOffice": {
         "rank": 8,
-        "rankInten": 1,
-        "audiCnt": 1489,
-        "audiAcc": 1538866
+        "rankInten": 0,
+        "audiCnt": 1369,
+        "audiAcc": 1540233
       },
-      "bookingRate": 0.1,
+      "bookingRate": 0.02,
       "availableAt": [
-        "lotte",
-        "megabox"
+        "lotte"
       ],
       "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24385",
-        "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26030200"
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24385"
       }
     },
     {
-      "movieCd": "20264665",
-      "title": "드림 애니멀즈: 더무비",
-      "titleEn": "드림 애니멀즈: 더무비",
-      "openDt": "2026-07-24",
-      "genre": "애니메이션",
-      "runtime": 90,
-      "grade": "전체관람가",
-      "nation": "일본",
+      "movieCd": "20250654",
+      "title": "오디세이",
+      "titleEn": "오디세이",
+      "openDt": "2026-08-05",
+      "genre": "액션, 드라마, 어드벤처",
+      "runtime": 172,
+      "grade": "15세이상관람가",
+      "nation": "미국",
       "directors": [
-        "타케키요 히토시"
+        "크리스토퍼 놀란"
       ],
-      "actors": [],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202607/24533_103_1.jpg",
-      "plot": "과자세계가 없어진다고?!귀여움으로 무장한 녀석들의 대책 없는 모험이 시작된다!과자와 인간이 사이좋게 지내는 ‘스위츠랜드’의 슈퍼스타 ‘드림 애니멀즈’.천상의 목소리 ‘페가수스’가 합류한 ‘드림 애니멀즈’는 월드투어를 성황리에 마친다.하지만 돌아온 ‘스위츠랜드’는 과자를 전부 없애고 세계 정복을 노리는 무시무시한 솜사탕 악당 ‘킹고튼’에게 점령당해 있는데...!과연 전투력 제로! 귀여움으로 무장한 ‘드림 애니멀즈’는 절체절명의 위기를 극복하고 과자세계를 구할 수 있을까?",
-      "keywords": "3D애니메이션",
-      "kmdbId": "F-67864",
+      "actors": [
+        "맷 데이먼",
+        "톰 홀랜드",
+        "앤 해서웨이",
+        "로버트 패틴슨",
+        "젠데이아 콜먼",
+        "샤를리즈 테론"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202607/24128_103_1.jpg",
+      "plot": "이 시대 영화계 최고의 거장 크리스토퍼 놀란 감독의 새로운 신화인류 최고의 고전 [오디세이아]가 스크린에 펼쳐진다!10년간 이어진 트로이 전쟁을 승리로 이끈 영웅 '오디세우스'(맷 데이먼)는 왕의 부재를 틈타 침탈과 권력 다툼이 벌어진 왕국에서 그를 기다리고 있는 아내 '페넬로페'(앤 해서웨이)와 아들 '텔레마코스'(톰 홀랜드)에게 돌아가기 위한 여정에 나선다.그러나 신들의 분노를 산 그의 귀환 앞에는 거대한 폭풍과 괴물들, 그리고 거스를 수 없는 운명의 시련이 기다리고 있는데… 누구도 나의 귀향을 막을 수 없어. 신들조차도",
+      "keywords": null,
+      "kmdbId": "F-66388",
       "boxOffice": {
         "rank": 9,
         "rankInten": 1,
-        "audiCnt": 845,
-        "audiAcc": 42841
+        "audiCnt": 1065,
+        "audiAcc": 2367
       },
-      "bookingRate": 0.03,
+      "bookingRate": 44.2,
       "availableAt": [
         "lotte",
         "megabox"
       ],
       "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24533",
-        "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26042200"
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24128",
+        "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26018900"
+      }
+    },
+    {
+      "movieCd": "20262381",
+      "title": "사랑의 하츄핑: 고래보석의 전설",
+      "titleEn": "사랑의 하츄핑: 고래보석의 전설",
+      "openDt": "2026-08-05",
+      "genre": "애니메이션",
+      "runtime": 105,
+      "grade": "전체관람가",
+      "nation": "한국",
+      "directors": [
+        "김수훈"
+      ],
+      "actors": [],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202608/24440_103_1.jpg",
+      "plot": "바다 너머, 가장 큰 사랑이 기다린다!이번엔, 반드시 구할거야!하츄핑과 단짝이 된 로미는 행복한 나날을 보내고 있지만 하고 싶은 일과 해야만 하는 일 사이에 매번 엄마(벨리타)와 의견이 달라 다투게 되고…그러던 어느 날, 바다를 뒤흔드는 사건과 함께 엄마는 흔적도 없이 바닷속으로 사라진다.한 마디 사과도, 한 번의 포옹도 건네지 못한 채 엄마를 잃은 로미.처음 만나는 바다 앞에서 단짝 하츄핑, 바다소년 카이트, 세 마리의 티니핑들과 함께 용기를 내보는데…찬란한 바다 도시, 거대한 심해 생명체들과 맞서야 하는 이들.마침내 로미는 엄마가 한 번도 들려준 적 없던 비밀을 마주하게 된다.",
+      "keywords": null,
+      "kmdbId": "K-41066",
+      "boxOffice": {
+        "rank": 10,
+        "rankInten": 0,
+        "audiCnt": 916,
+        "audiAcc": 27410
+      },
+      "bookingRate": 13.55,
+      "availableAt": [
+        "lotte",
+        "megabox"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24440",
+        "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26034700"
       }
     },
     {
@@ -350,7 +388,7 @@
       "keywords": null,
       "kmdbId": null,
       "boxOffice": null,
-      "bookingRate": 0.7,
+      "bookingRate": 0.3,
       "availableAt": [
         "megabox"
       ],
@@ -407,62 +445,6 @@
       }
     },
     {
-      "movieCd": null,
-      "title": "프로젝트 헤일메리",
-      "titleEn": "",
-      "openDt": "2026-03-18",
-      "genre": null,
-      "runtime": null,
-      "grade": "12세이상관람가",
-      "nation": null,
-      "directors": [],
-      "actors": [],
-      "poster": "https://img.megabox.co.kr/SharedImg/2026/04/01/kK1sBdBdb6A5nvVQPkROk1Perq17aHp4.jpg",
-      "plot": "죽어가는 태양, 종말 위기에 놓인 지구인류의 운명을 건 단 하나의 미션그의 마지막 임무가 시작된다!눈을 떠보니 아득한 우주의 한가운데에서 깨어난 중학교 과학교사 ‘그레이스’는 희미한 기억 속에서 자신이 죽어가는 태양으로부터 지구와 인류를 살릴 마지막 희망으로 이곳에 왔다는 사실을 알게 된다.잃어버린 기억으로 인해 모든 것이 혼란스러운 상황에서 ‘그레이스’는 우연히 우주 한복판에서 같은 목적으로 온 뜻밖의 존재 ‘로키’를 만나게 되고 ‘그레이스’와 ‘로키’는 각 두 행성의 운명을 건 마지막 미션을 수행하러 떠나게 되는데…",
-      "keywords": "베스트셀러원작,소설원작",
-      "kmdbId": "F-66052",
-      "boxOffice": null,
-      "bookingRate": 0.1,
-      "availableAt": [
-        "megabox"
-      ],
-      "booking": {
-        "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26013700"
-      }
-    },
-    {
-      "movieCd": "20264027",
-      "title": "극장판 도라에몽: 신 진구의 해저비밀성",
-      "titleEn": "극장판 도라에몽: 신 진구의 해저비밀성",
-      "openDt": "2026-07-01",
-      "genre": "애니메이션",
-      "runtime": 101,
-      "grade": "전체관람가",
-      "nation": "일본",
-      "directors": [
-        "야지마 테츠오"
-      ],
-      "actors": [
-        "윤아영",
-        "김정아",
-        "조현정",
-        "이현주",
-        "최낙윤"
-      ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202607/24379_103_1.jpg",
-      "plot": "이번 여름방학은 바닷속 캠핑이다!숨이 멎을 듯한 놀라움이 가득한 두근두근 해저 대모험!여름방학 캠핑 장소를 두고 의견이 갈린 진구와 친구들은 도라에몽의 제안으로 바다 한가운데로 여행을 떠나기로 한다.도라에몽의 비밀도구 ‘수중 버기’와 ‘적응총’을 사용해 다양한 해양 생물도 만나고 바비큐도 하며 즐거운 시간을 보내던 중, 수상한 침몰선과 미스터리한 소년 ‘엘’과 만난다.신비로운 해저 도시 ‘무대륙’에서는 육지인들을 싫어해 쉽게 마음을 열지 않는데…그때, 수수께끼의 ‘귀암성’이 활동을 시작했다는 긴급한 소식이 전해지고 육지와 바다 모두가 위험에 처하고 만다!소중한 우정을 가슴에 품고, 지구의 운명을 건 환상적인 모험이 지금 시작된다!",
-      "keywords": null,
-      "kmdbId": "F-67608",
-      "boxOffice": null,
-      "bookingRate": 0.09,
-      "availableAt": [
-        "lotte"
-      ],
-      "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24379"
-      }
-    },
-    {
       "movieCd": "20236493",
       "title": "지느러미",
       "titleEn": "지느러미",
@@ -496,29 +478,35 @@
       }
     },
     {
-      "movieCd": "20264753",
-      "title": "호컴",
-      "titleEn": "호컴",
-      "openDt": "2026-07-22",
-      "genre": "공포(호러)",
-      "runtime": 107,
-      "grade": "15세이상관람가",
-      "nation": "미국",
-      "directors": [],
-      "actors": [
-        "아담 스콧"
+      "movieCd": "20264027",
+      "title": "극장판 도라에몽: 신 진구의 해저비밀성",
+      "titleEn": "극장판 도라에몽: 신 진구의 해저비밀성",
+      "openDt": "2026-07-01",
+      "genre": "애니메이션",
+      "runtime": 101,
+      "grade": "전체관람가",
+      "nation": "일본",
+      "directors": [
+        "야지마 테츠오"
       ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202607/24575_103_1.jpg",
-      "plot": "베스트셀러 작가 '옴'은 돌아가신 부모의 유골을 안치하기 위해 아일랜드의 외딴 호텔을 찾는다.그 호텔에는 절대 열어서는 안 되는 객실이 있다.사람들을 지하실로 끌고 내려간다는 마녀 때문에 봉인된 객실, '허니문 스위트 룸'.괴담을 대수롭지 않게 여긴 옴은 호텔에 머무를수록 정체를 알 수 없는 환영과 기이한 사건들을 겪기 시작한다.그러던 할로윈 밤, 호텔 직원 피오나가 흔적도 없이 사라진다.그녀의 실종을 추적하던 옴은 마침내 봉인된 허니문 스위트 룸의 문을 열게 되고, 그 안에서 괴담보다 더 끔찍한 진실과 마주한다.문이 열리는 순간, 죽은 자들이 깨어난다!",
+      "actors": [
+        "윤아영",
+        "김정아",
+        "조현정",
+        "이현주",
+        "최낙윤"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202607/24379_103_1.jpg",
+      "plot": "이번 여름방학은 바닷속 캠핑이다!숨이 멎을 듯한 놀라움이 가득한 두근두근 해저 대모험!여름방학 캠핑 장소를 두고 의견이 갈린 진구와 친구들은 도라에몽의 제안으로 바다 한가운데로 여행을 떠나기로 한다.도라에몽의 비밀도구 ‘수중 버기’와 ‘적응총’을 사용해 다양한 해양 생물도 만나고 바비큐도 하며 즐거운 시간을 보내던 중, 수상한 침몰선과 미스터리한 소년 ‘엘’과 만난다.신비로운 해저 도시 ‘무대륙’에서는 육지인들을 싫어해 쉽게 마음을 열지 않는데…그때, 수수께끼의 ‘귀암성’이 활동을 시작했다는 긴급한 소식이 전해지고 육지와 바다 모두가 위험에 처하고 만다!소중한 우정을 가슴에 품고, 지구의 운명을 건 환상적인 모험이 지금 시작된다!",
       "keywords": null,
-      "kmdbId": "F-67936",
+      "kmdbId": "F-67608",
       "boxOffice": null,
-      "bookingRate": 0.04,
+      "bookingRate": 0.03,
       "availableAt": [
         "lotte"
       ],
       "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24575"
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24379"
       }
     },
     {
@@ -555,36 +543,33 @@
       }
     },
     {
-      "movieCd": "20263530",
-      "title": "마티 슈프림",
-      "titleEn": "마티 슈프림",
-      "openDt": "2026-07-01",
+      "movieCd": "20148709",
+      "title": "경멸",
+      "titleEn": "경멸",
+      "openDt": "2026-07-15",
       "genre": "드라마",
-      "runtime": 149,
+      "runtime": 103,
       "grade": "15세이상관람가",
-      "nation": "미국",
+      "nation": "이탈리아",
       "directors": [
-        "조쉬 사프디"
+        "장 뤽 고다르"
       ],
       "actors": [
-        "티모시 샬라메",
-        "기네스 팰트로우",
-        "오데사 아지온",
-        "타일러 더 크리에이터",
-        "아벨 페라라",
-        "케빈 오리어리"
+        "브리지트 바르도",
+        "미셸 피콜리",
+        "잭 팰런스"
       ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202607/24420_103_1.jpg",
-      "plot": "어떤 대가를 치르더라도반드시 가장 높은 곳으로!탁구로 인생 역전을 꿈꾸는 마티 마우저는 굴욕적인 패배 후 누구도 무시할 수 없는 성공을 손에 넣기로 결심한다.최고가 되기 위해 모든 것을 걸고 지옥까지 질주하는 마티 마우저의 꿈은 이루어질 수 있을까?",
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202607/24734_103_1.jpg",
+      "plot": "미국 제작자와 독일 감독 프리츠 랑(본인 직접 실명 연기), 프랑스 작가인 폴 자발(미셸 피콜리), 그리고 그의 아내 카미유 자발(브리지트 바르도), 그리고 이 넷의 언어소통을 가능하게 해주는 프란체스카 (조르지아 몰)등이 영화 '오디세이'를 만드는 과정에서 겪게되는 피상적 인간관계들간의 갈등과 영화를 바라보는 시각들의 충돌들. 폴 자발은 새 영화 '오디세이'의 작가로 제작자 프로코시(잭 팰런스)에게 고용된다. 폴이 그의 아내 카미유를 프로코시와 드라이브하게 한 후 폴 자신은 택시를 타고 늦게 도착했기 때문에, 카미유는 그의 남편 폴이 제작자에게 더 많은 돈을 받기위해 아내인 자기를 제작자에게 '선물로 제공'했다고 믿고 관계는 깨어지기 시작한다. 이후 사람들간의 의사소통의 부재와 은밀하게 증폭되던 갈등은 결국 파국으로 정리가 된다.",
       "keywords": null,
-      "kmdbId": "F-66700",
+      "kmdbId": "F-10560",
       "boxOffice": null,
       "bookingRate": 0.01,
       "availableAt": [
         "lotte"
       ],
       "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24420"
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24734"
       }
     },
     {
@@ -614,64 +599,29 @@
       }
     },
     {
-      "movieCd": "20259551",
-      "title": "파리의 사생활",
-      "titleEn": "파리의 사생활",
-      "openDt": "2026-07-15",
-      "genre": "드라마",
-      "runtime": 102,
+      "movieCd": "20264753",
+      "title": "호컴",
+      "titleEn": "호컴",
+      "openDt": "2026-07-22",
+      "genre": "공포(호러)",
+      "runtime": 107,
       "grade": "15세이상관람가",
-      "nation": "영국",
-      "directors": [
-        "레베카 즐로토브스키"
-      ],
+      "nation": "미국",
+      "directors": [],
       "actors": [
-        "조디 포스터",
-        "비르지니 에피라",
-        "마티유 아말릭",
-        "다니엘 오떼유"
+        "아담 스콧"
       ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202607/24465_103_1.jpg",
-      "plot": "파리에 사는 정신과 의사 릴리안(조디 포스터)은 9년 간 담당한 환자 폴라(비르지니 에피라)가 죽었다는 소식을 듣고 충격에 빠진다.그날 이후, 알 수 없는 이유로 계속해서 눈물이 흐르고 안과 의사인 전남편에 이어 궁여지책으로 최면술사를 찾는다.최면술사는 릴리안에게 예상치 못한 이야기를 들려주고, 그녀는 폴라의 죽음을 직접 파헤쳐 보겠다고 결심하는데...의심과 죄책감 사이,릴리안의 세계가 뒤집힌다!",
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202607/24575_103_1.jpg",
+      "plot": "베스트셀러 작가 '옴'은 돌아가신 부모의 유골을 안치하기 위해 아일랜드의 외딴 호텔을 찾는다.그 호텔에는 절대 열어서는 안 되는 객실이 있다.사람들을 지하실로 끌고 내려간다는 마녀 때문에 봉인된 객실, '허니문 스위트 룸'.괴담을 대수롭지 않게 여긴 옴은 호텔에 머무를수록 정체를 알 수 없는 환영과 기이한 사건들을 겪기 시작한다.그러던 할로윈 밤, 호텔 직원 피오나가 흔적도 없이 사라진다.그녀의 실종을 추적하던 옴은 마침내 봉인된 허니문 스위트 룸의 문을 열게 되고, 그 안에서 괴담보다 더 끔찍한 진실과 마주한다.문이 열리는 순간, 죽은 자들이 깨어난다!",
       "keywords": null,
-      "kmdbId": "F-66392",
+      "kmdbId": "F-67936",
       "boxOffice": null,
       "bookingRate": 0.01,
       "availableAt": [
         "lotte"
       ],
       "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24465"
-      }
-    },
-    {
-      "movieCd": "20148709",
-      "title": "경멸",
-      "titleEn": "경멸",
-      "openDt": "2026-07-15",
-      "genre": "드라마",
-      "runtime": 103,
-      "grade": "15세이상관람가",
-      "nation": "이탈리아",
-      "directors": [
-        "장 뤽 고다르"
-      ],
-      "actors": [
-        "브리지트 바르도",
-        "미셸 피콜리",
-        "잭 팰런스"
-      ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202607/24734_103_1.jpg",
-      "plot": "미국 제작자와 독일 감독 프리츠 랑(본인 직접 실명 연기), 프랑스 작가인 폴 자발(미셸 피콜리), 그리고 그의 아내 카미유 자발(브리지트 바르도), 그리고 이 넷의 언어소통을 가능하게 해주는 프란체스카 (조르지아 몰)등이 영화 '오디세이'를 만드는 과정에서 겪게되는 피상적 인간관계들간의 갈등과 영화를 바라보는 시각들의 충돌들. 폴 자발은 새 영화 '오디세이'의 작가로 제작자 프로코시(잭 팰런스)에게 고용된다. 폴이 그의 아내 카미유를 프로코시와 드라이브하게 한 후 폴 자신은 택시를 타고 늦게 도착했기 때문에, 카미유는 그의 남편 폴이 제작자에게 더 많은 돈을 받기위해 아내인 자기를 제작자에게 '선물로 제공'했다고 믿고 관계는 깨어지기 시작한다. 이후 사람들간의 의사소통의 부재와 은밀하게 증폭되던 갈등은 결국 파국으로 정리가 된다.",
-      "keywords": null,
-      "kmdbId": "F-10560",
-      "boxOffice": null,
-      "bookingRate": 0,
-      "availableAt": [
-        "lotte"
-      ],
-      "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24734"
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24575"
       }
     },
     {
@@ -708,36 +658,29 @@
       }
     },
     {
-      "movieCd": "20259626",
-      "title": "마이클",
-      "titleEn": "마이클",
-      "openDt": "2026-05-13",
-      "genre": "드라마",
-      "runtime": 127,
-      "grade": "12세이상관람가",
-      "nation": "미국",
+      "movieCd": "20264665",
+      "title": "드림 애니멀즈: 더무비",
+      "titleEn": "드림 애니멀즈: 더무비",
+      "openDt": "2026-07-24",
+      "genre": "애니메이션",
+      "runtime": 90,
+      "grade": "전체관람가",
+      "nation": "일본",
       "directors": [
-        "안톤 후쿠아"
+        "타케키요 히토시"
       ],
-      "actors": [
-        "자파 잭슨",
-        "니아 롱",
-        "로라 해리어",
-        "줄리아노 크루 발디",
-        "마일즈 텔러",
-        "콜먼 도밍고"
-      ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202605/23654_103_1.jpg",
-      "plot": "보헤미안 랩소디 제작진과 팝의 황제 ‘마이클 잭슨’의 만남!2026년 그의 발끝에서 전설이 다시 시작된다!어린 나이에 형제들과 ‘잭슨 파이브’ 그룹의 막내로 데뷔하자마자 음악적 천재성과 스타성으로 주목을 받은 ‘마이클 잭슨’.전세계적인 스타로 성공하지만, 그는 가족에 대한 책임감과 자신의 음악적 정체성 사이에서 고민에 빠지게 된다.천재적인 뮤지션에서 시대를 초월한 아이콘이 되기까지, 그의 무대를 극장에서 확인하라!",
-      "keywords": null,
-      "kmdbId": "F-65300",
+      "actors": [],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202607/24533_103_1.jpg",
+      "plot": "과자세계가 없어진다고?!귀여움으로 무장한 녀석들의 대책 없는 모험이 시작된다!과자와 인간이 사이좋게 지내는 ‘스위츠랜드’의 슈퍼스타 ‘드림 애니멀즈’.천상의 목소리 ‘페가수스’가 합류한 ‘드림 애니멀즈’는 월드투어를 성황리에 마친다.하지만 돌아온 ‘스위츠랜드’는 과자를 전부 없애고 세계 정복을 노리는 무시무시한 솜사탕 악당 ‘킹고튼’에게 점령당해 있는데...!과연 전투력 제로! 귀여움으로 무장한 ‘드림 애니멀즈’는 절체절명의 위기를 극복하고 과자세계를 구할 수 있을까?",
+      "keywords": "3D애니메이션",
+      "kmdbId": "F-67864",
       "boxOffice": null,
       "bookingRate": 0,
       "availableAt": [
         "lotte"
       ],
       "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|23654"
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24533"
       }
     },
     {
@@ -877,32 +820,6 @@
       }
     },
     {
-      "movieCd": "20253327",
-      "title": "어느 파리 택배기사의 48시간",
-      "titleEn": "어느 파리 택배기사의 48시간",
-      "openDt": "2026-06-17",
-      "genre": "드라마",
-      "runtime": 93,
-      "grade": "12세이상관람가",
-      "nation": "프랑스",
-      "directors": [
-        "보리스 로즈킨"
-      ],
-      "actors": [],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202606/24374_103_1.jpg",
-      "plot": "파리에서 자전거로 음식 배달 일을 하는 아프리카 기니 출신 난민 ‘술레이만’.합법적 거주권을 얻기 위한 망명 심사가 이틀 앞으로 다가왔지만, 난민이자 배달 노동자로서 그의 하루하루는 외줄타기처럼 아슬아슬하다.그는 늘 시간과 돈에 쫓긴다.난민 브로커에게 줄 돈을 마련하기 위해 오늘도 그는 파리를 달린다.",
-      "keywords": null,
-      "kmdbId": "F-61187",
-      "boxOffice": null,
-      "bookingRate": 0,
-      "availableAt": [
-        "lotte"
-      ],
-      "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24374"
-      }
-    },
-    {
       "movieCd": "20242837",
       "title": "왕과 사는 남자",
       "titleEn": "왕과 사는 남자",
@@ -963,6 +880,37 @@
       ],
       "booking": {
         "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24525"
+      }
+    },
+    {
+      "movieCd": "20259551",
+      "title": "파리의 사생활",
+      "titleEn": "파리의 사생활",
+      "openDt": "2026-07-15",
+      "genre": "드라마",
+      "runtime": 102,
+      "grade": "15세이상관람가",
+      "nation": "영국",
+      "directors": [
+        "레베카 즐로토브스키"
+      ],
+      "actors": [
+        "조디 포스터",
+        "비르지니 에피라",
+        "마티유 아말릭",
+        "다니엘 오떼유"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202607/24465_103_1.jpg",
+      "plot": "파리에 사는 정신과 의사 릴리안(조디 포스터)은 9년 간 담당한 환자 폴라(비르지니 에피라)가 죽었다는 소식을 듣고 충격에 빠진다.그날 이후, 알 수 없는 이유로 계속해서 눈물이 흐르고 안과 의사인 전남편에 이어 궁여지책으로 최면술사를 찾는다.최면술사는 릴리안에게 예상치 못한 이야기를 들려주고, 그녀는 폴라의 죽음을 직접 파헤쳐 보겠다고 결심하는데...의심과 죄책감 사이,릴리안의 세계가 뒤집힌다!",
+      "keywords": null,
+      "kmdbId": "F-66392",
+      "boxOffice": null,
+      "bookingRate": 0,
+      "availableAt": [
+        "lotte"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24465"
       }
     },
     {
@@ -1056,6 +1004,30 @@
     },
     {
       "movieCd": null,
+      "title": "프로젝트 헤일메리",
+      "titleEn": "",
+      "openDt": "2026-03-18",
+      "genre": null,
+      "runtime": null,
+      "grade": "12세이상관람가",
+      "nation": null,
+      "directors": [],
+      "actors": [],
+      "poster": "https://img.megabox.co.kr/SharedImg/2026/04/01/kK1sBdBdb6A5nvVQPkROk1Perq17aHp4.jpg",
+      "plot": "죽어가는 태양, 종말 위기에 놓인 지구인류의 운명을 건 단 하나의 미션그의 마지막 임무가 시작된다!눈을 떠보니 아득한 우주의 한가운데에서 깨어난 중학교 과학교사 ‘그레이스’는 희미한 기억 속에서 자신이 죽어가는 태양으로부터 지구와 인류를 살릴 마지막 희망으로 이곳에 왔다는 사실을 알게 된다.잃어버린 기억으로 인해 모든 것이 혼란스러운 상황에서 ‘그레이스’는 우연히 우주 한복판에서 같은 목적으로 온 뜻밖의 존재 ‘로키’를 만나게 되고 ‘그레이스’와 ‘로키’는 각 두 행성의 운명을 건 마지막 미션을 수행하러 떠나게 되는데…",
+      "keywords": "베스트셀러원작,소설원작",
+      "kmdbId": "F-66052",
+      "boxOffice": null,
+      "bookingRate": 0,
+      "availableAt": [
+        "megabox"
+      ],
+      "booking": {
+        "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26013700"
+      }
+    },
+    {
+      "movieCd": null,
       "title": "날씨의 아이",
       "titleEn": "",
       "openDt": "2025-09-17",
@@ -1129,7 +1101,7 @@
       "openDt": "2026-08-00",
       "genre": "공포(호러), 스릴러",
       "runtime": null,
-      "grade": null,
+      "grade": "15세이상관람가",
       "nation": null,
       "directors": [],
       "actors": [],
@@ -1168,79 +1140,6 @@
     }
   ],
   "upcoming": [
-    {
-      "movieCd": "20234716",
-      "title": "지난 여름",
-      "titleEn": "Last Summer",
-      "openDt": "2026-08-05",
-      "genre": "드라마",
-      "runtime": 75,
-      "grade": "12세이상관람가",
-      "nation": "한국",
-      "directors": [
-        "최승우"
-      ],
-      "actors": [
-        "문영동",
-        "김민혁"
-      ],
-      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/51/tn_DPK026225.jpg",
-      "plot": "농번기를 맞이한 늦봄의 작은 농촌 마을에 민우와 아버지, 할머니가 함께 사는 한 가족이 있다. 민우는 매일 아침 면사무소에 출근하고, 아버지와 농부들은 모를 심는다.민우의 친구, 성훈은 아버지의 축사 운영을 돕는다.",
-      "keywords": null,
-      "kmdbId": "K-35425",
-      "boxOffice": null,
-      "bookingRate": null,
-      "availableAt": []
-    },
-    {
-      "movieCd": "20262381",
-      "title": "사랑의 하츄핑: 고래보석의 전설",
-      "titleEn": "",
-      "openDt": "2026-08-05",
-      "genre": "애니메이션",
-      "runtime": 105,
-      "grade": "전체관람가",
-      "nation": "한국",
-      "directors": [
-        "김수훈"
-      ],
-      "actors": [],
-      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/48/tn_DPK026057.jpg",
-      "plot": "고래가 품은 보석의 비밀을 찾아 바다로 떠난 로미와 하츄핑의 기적 같은 모험을 그린 판타지 애니메이션",
-      "keywords": null,
-      "kmdbId": "K-41066",
-      "boxOffice": null,
-      "bookingRate": null,
-      "availableAt": []
-    },
-    {
-      "movieCd": "20250654",
-      "title": "오디세이",
-      "titleEn": "The Odyssey",
-      "openDt": "2026-08-05",
-      "genre": "액션, 드라마, 어드벤처",
-      "runtime": 172,
-      "grade": "15세이상관람가",
-      "nation": "미국",
-      "directors": [
-        "크리스토퍼 놀란"
-      ],
-      "actors": [
-        "맷 데이먼",
-        "톰 홀랜드",
-        "앤 해서웨이",
-        "로버트 패틴슨",
-        "젠데이아 콜먼",
-        "샤를리즈 테론"
-      ],
-      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/49/tn_DPF033591.jpg",
-      "plot": "이 시대 영화계 최고의 거장 크리스토퍼 놀란 감독의 새로운 신화인류 최고의 고전 [오디세이아]가 스크린에 펼쳐진다!10년간 이어진 트로이 전쟁을 승리로 이끈 영웅 '오디세우스'(맷 데이먼)는 왕의 부재를 틈타 침탈과 권력 다툼이 벌어진 왕국에서 그를 기다리고 있는 아내 '페넬로페'(앤 해서웨이)와 아들 '텔레마코스'(톰 홀랜드)에게 돌아가기 위한 여정에 나선다.그러나 신들의 분노를 산 그의 귀환 앞에는 거대한 폭풍과 괴물들, 그리고 거스를 수 없는 운명의 시련이 기다리고 있는데… 누구도 나의 귀향을 막을 수 없어. 신들조차도",
-      "keywords": null,
-      "kmdbId": "F-66388",
-      "boxOffice": null,
-      "bookingRate": null,
-      "availableAt": []
-    },
     {
       "movieCd": "20264635",
       "title": "명탐정 코난: 하이웨이의 타천사",
@@ -1495,6 +1394,58 @@
       "availableAt": []
     },
     {
+      "movieCd": "20264715",
+      "title": "드라큘라: 러브 테일",
+      "titleEn": "Dracula: A Love Tale",
+      "openDt": "2026-08-26",
+      "genre": "판타지, 멜로/로맨스, 공포(호러)",
+      "runtime": 128,
+      "grade": "15세이상관람가",
+      "nation": "프랑스",
+      "directors": [
+        "뤽 베송"
+      ],
+      "actors": [
+        "케일럽 랜드리 존스",
+        "크리스토프 왈츠",
+        "조이 블루"
+      ],
+      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/49/tn_DPF033596.jpg",
+      "plot": "그녀를 위해, 신을 버렸다15세기, 전쟁으로 연인을 잃은 남자.신을 버린 저주로 불멸의 드라큘라가 되고 그녀를 되찾기 위해 세상을 떠돈다.400년의 기다림.죽음도, 시간도, 신의 저주도 끝내 막지 못한 운명을 다시 만나는데…뤽 베송의 ‘다크 판타지 로맨스’가 온다",
+      "keywords": "소설원작",
+      "kmdbId": "F-67937",
+      "boxOffice": null,
+      "bookingRate": null,
+      "availableAt": []
+    },
+    {
+      "movieCd": "20250203",
+      "title": "트루먼의 사랑",
+      "titleEn": "The Love of Truman",
+      "openDt": "2026-08-26",
+      "genre": "SF, 멜로/로맨스",
+      "runtime": 146,
+      "grade": "12세이상관람가",
+      "nation": "한국",
+      "directors": [
+        "김덕중"
+      ],
+      "actors": [
+        "배유람",
+        "이주우",
+        "김신비",
+        "강진아",
+        "태이서"
+      ],
+      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/52/tn_DPK026246.jpg",
+      "plot": "당신도 트루먼인가요?속기사 지연은 어느 날부터 세상이 멈추는 이상 현상을 목격한다.‘에러’가 발생하면 모두가 하던 행동을 멈추고 굳어버리지만, 트루먼인 지연만은 그 세계에 종속되지 않고 자유롭게 움직일 수 있다.혼자가 아니라는 걸 확인하고 싶었던 지연은 또다른 트루먼을 찾아 헤매다 현식과 문성을 만난다.셋은 이 거짓 세계의 바깥을 향해 함께 떠나려 하지만, 지연을 사이에 두고 두 남자 사이에 균열이 생기기 시작하는데…",
+      "keywords": null,
+      "kmdbId": "K-40105",
+      "boxOffice": null,
+      "bookingRate": null,
+      "availableAt": []
+    },
+    {
       "movieCd": "20265388",
       "title": "고스트밴드",
       "titleEn": "",
@@ -1509,8 +1460,8 @@
       "actors": [
         "김연우",
         "엄상현",
-        "김보나",
         "이용신",
+        "김보나",
         "심규혁",
         "박지윤"
       ],
@@ -1550,6 +1501,30 @@
       "availableAt": []
     },
     {
+      "movieCd": "20264557",
+      "title": "오크 스트리트의 마지막 날",
+      "titleEn": "THE END OF OAK STREET",
+      "openDt": "2026-08-26",
+      "genre": "액션, 어드벤처, 미스터리, SF, 스릴러",
+      "runtime": 99,
+      "grade": "12세이상관람가",
+      "nation": "미국",
+      "directors": [
+        "데이빗 로버트 밋첼"
+      ],
+      "actors": [
+        "앤 해서웨이",
+        "이완 맥그리거"
+      ],
+      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/52/tn_DPF033676.jpg",
+      "plot": "우리 동네가 공룡들의 사냥터가 되었다!목표는 단 하나, 무조건 살아남아라!1982년, 평화롭던 ‘오크 스트리트’ 마을이 하루아침에 통째로 선사시대로 옮겨졌다.익숙했던 집과 골목은 순식간에 공룡들의 사냥터로 변하고, 육지와 하늘, 물속까지 점령한 거대 포식자들의 무차별 공격이 시작된다!과연 ‘플랫’ 가족은 무사히 살아남아 원래의 일상으로 돌아갈 수 있을까?",
+      "keywords": null,
+      "kmdbId": "F-67938",
+      "boxOffice": null,
+      "bookingRate": null,
+      "availableAt": []
+    },
+    {
       "movieCd": "20265505",
       "title": "터치드 콘서트 [하이라이트 포] : 더 무비",
       "titleEn": "",
@@ -1572,81 +1547,6 @@
       "availableAt": []
     },
     {
-      "movieCd": "20250203",
-      "title": "트루먼의 사랑",
-      "titleEn": "The Love of Truman",
-      "openDt": "2026-08-26",
-      "genre": "SF, 멜로/로맨스",
-      "runtime": 146,
-      "grade": "12세이상관람가",
-      "nation": "한국",
-      "directors": [
-        "김덕중"
-      ],
-      "actors": [
-        "배유람",
-        "이주우",
-        "김신비",
-        "강진아",
-        "태이서"
-      ],
-      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/52/tn_DPK026246.jpg",
-      "plot": "당신도 트루먼인가요?속기사 지연은 어느 날부터 세상이 멈추는 이상 현상을 목격한다.‘에러’가 발생하면 모두가 하던 행동을 멈추고 굳어버리지만, 트루먼인 지연만은 그 세계에 종속되지 않고 자유롭게 움직일 수 있다.혼자가 아니라는 걸 확인하고 싶었던 지연은 또다른 트루먼을 찾아 헤매다 현식과 문성을 만난다.셋은 이 거짓 세계의 바깥을 향해 함께 떠나려 하지만, 지연을 사이에 두고 두 남자 사이에 균열이 생기기 시작하는데…",
-      "keywords": null,
-      "kmdbId": "K-40105",
-      "boxOffice": null,
-      "bookingRate": null,
-      "availableAt": []
-    },
-    {
-      "movieCd": "20264557",
-      "title": "오크 스트리트의 마지막 날",
-      "titleEn": "THE END OF OAK STREET",
-      "openDt": "2026-08-26",
-      "genre": "액션, 어드벤처, 미스터리, SF, 스릴러",
-      "runtime": 99,
-      "grade": "12세이상관람가",
-      "nation": "미국",
-      "directors": [
-        "데이빗 로버트 밋첼"
-      ],
-      "actors": [
-        "앤 해서웨이",
-        "이완 맥그리거"
-      ],
-      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/51/tn_DPF033634.jpg",
-      "plot": "우리 동네가 공룡들의 사냥터가 되었다!목표는 단 하나, 무조건 살아남아라!1982년, 평화롭던 ‘오크 스트리트’ 마을이 하루아침에 통째로 선사시대로 옮겨졌다.익숙했던 집과 골목은 순식간에 공룡들의 사냥터로 변하고, 육지와 하늘, 물속까지 점령한 거대 포식자들의 무차별 공격이 시작된다!과연 ‘플랫’ 가족은 무사히 살아남아 원래의 일상으로 돌아갈 수 있을까?",
-      "keywords": null,
-      "kmdbId": "F-67938",
-      "boxOffice": null,
-      "bookingRate": null,
-      "availableAt": []
-    },
-    {
-      "movieCd": "20264715",
-      "title": "드라큘라: 러브 테일",
-      "titleEn": "Dracula: A Love Tale",
-      "openDt": "2026-08-26",
-      "genre": "판타지, 멜로/로맨스, 공포(호러)",
-      "runtime": 128,
-      "grade": "15세이상관람가",
-      "nation": "프랑스",
-      "directors": [
-        "뤽 베송"
-      ],
-      "actors": [
-        "케일럽 랜드리 존스",
-        "크리스토프 왈츠"
-      ],
-      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/49/tn_DPF033596.jpg",
-      "plot": "그녀를 위해, 신을 버렸다15세기, 전쟁으로 연인을 잃은 남자.신을 버린 저주로 불멸의 드라큘라가 되고 그녀를 되찾기 위해 세상을 떠돈다.400년의 기다림.죽음도, 시간도, 신의 저주도 끝내 막지 못한 운명을 다시 만나는데…뤽 베송의 ‘다크 판타지 로맨스’가 온다",
-      "keywords": "소설원작",
-      "kmdbId": "F-67937",
-      "boxOffice": null,
-      "bookingRate": null,
-      "availableAt": []
-    },
-    {
       "movieCd": "20255509",
       "title": "사진의 얼굴",
       "titleEn": "A Portrait of Photograhy",
@@ -1663,32 +1563,6 @@
       "plot": "일본의 보도 사진작가 구와바라 시세이가 한국행 비행기에 오른다. 1964년, 27세의 청년 시절 처음으로 한국을 방문한 이래로 시세이는 60년간 청계천, 기지촌, 월남 파병, 민주화 운동 등 한국 근현대사의 격동 현장을 기록해 왔다. 이제 노인이 된 그는 어쩌면 마지막이 될지도 모른다는 마음으로 다시 한국을 찾는다. 그에게는 꼭 다시 밟아야 할 장소들과 반드시 만나야 할 사람들이 있다. 영화는 사진작가의 발자취를 따라 현장을 찾는다.",
       "keywords": null,
       "kmdbId": "A-13955",
-      "boxOffice": null,
-      "bookingRate": null,
-      "availableAt": []
-    },
-    {
-      "movieCd": "20249080",
-      "title": "캐리어를 끄는 소녀",
-      "titleEn": "Sua's Home",
-      "openDt": "2026-09-02",
-      "genre": "드라마",
-      "runtime": 106,
-      "grade": "12세이상관람가",
-      "nation": "한국",
-      "directors": [
-        "윤심경"
-      ],
-      "actors": [
-        "최명빈",
-        "문승아",
-        "김태훈",
-        "유다인"
-      ],
-      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/52/tn_DPK026232.jpg",
-      "plot": "양부모에게 버려져 갈 곳 없는 열다섯 살 소녀 영선은 테니스 훈련 파트너로 만난 수아의 집에서 잠시 지내게 된다. 수아 집에서 오래 오래 살고 싶은 영선은 가족이 되기 위해 노력하지만, 수아와 가족들은 그런 영선이 부담스럽다.",
-      "keywords": "가족,꿈,빈곤,가난,성장,청춘,스포츠,아동,여성,우정",
-      "kmdbId": "K-39070",
       "boxOffice": null,
       "bookingRate": null,
       "availableAt": []
