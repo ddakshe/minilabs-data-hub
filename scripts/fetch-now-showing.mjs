@@ -46,10 +46,25 @@ const MAX_SOON = 24;
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-async function getJson(url, opts) {
-  const res = await fetch(url, opts);
-  if (!res.ok) throw new Error(`HTTP ${res.status} — ${url}`);
-  return res.json();
+// KOBIS는 해외 IP(GitHub 러너)에서 TLS 연결이 자주 10초 타임아웃에 걸린다.
+// 재시도가 없으면 이 산발적 실패 하나가 워크플로 전체를 죽인다(실측 실패율 ~50%).
+// 지수 백오프로 3회까지 시도한다.
+async function getJson(url, opts, { retries = 3, baseDelay = 2000 } = {}) {
+  let lastErr;
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      const res = await fetch(url, { signal: AbortSignal.timeout(20000), ...opts });
+      if (!res.ok) throw new Error(`HTTP ${res.status} — ${url}`);
+      return await res.json();
+    } catch (err) {
+      lastErr = err;
+      if (attempt === retries) break;
+      const wait = baseDelay * 2 ** (attempt - 1);
+      console.warn(`  ! 재시도 ${attempt}/${retries - 1} (${wait}ms 후): ${err.message ?? err}`);
+      await sleep(wait);
+    }
+  }
+  throw lastErr;
 }
 
 const ymd = (d) =>
