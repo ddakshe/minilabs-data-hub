@@ -1,0 +1,80 @@
+name: Fetch car deals
+
+on:
+  schedule:
+    # 매월 1일 09:00 KST — 제조사가 이달의 구매 혜택을 월초에 공개한다.
+    - cron: '0 0 1 * *'
+  workflow_dispatch:
+    inputs:
+      only:
+        description: '긁을 브랜드 콤마목록 (비우면 전체 어댑터). 예: kia,renault'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-car-deals
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # cheerio만 필요 (Playwright 브라우저는 받지 않는다).
+      - name: Install deps
+        run: npm ci
+
+      - name: Show trigger context
+        run: |
+          echo "Event : ${{ github.event_name }}"
+          echo "Only  : ${{ github.event.inputs.only || '(all adapters)' }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      - name: Fetch car deals
+        run: |
+          ONLY="${{ github.event.inputs.only }}"
+          node scripts/fetch-car-deals.mjs "$ONLY"
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git add car-deals/
+          if git diff --cached --quiet -- car-deals/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes — skipping commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --cached --stat car-deals/
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
+          git commit -m "chore(car-deals): monthly refresh ($DATE_KST)"
+          git push
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## 신차 할인 수집 결과"
+            echo ""
+            echo "- Trigger: \`${{ github.event_name }}\`"
+            echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
+            echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+          } >> "$GITHUB_STEP_SUMMARY"
