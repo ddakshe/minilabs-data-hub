@@ -14,7 +14,7 @@ import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { gzipSync } from 'node:zlib';
 
-import { TARGETS, loadApiKey, fetchPage } from './finlife.mjs';
+import { TARGETS, COMPANY_GROUPS, loadApiKey, fetchPage } from './finlife.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const OUT_FILE = resolve(ROOT, 'rate-lens/rates.json');
@@ -43,6 +43,37 @@ async function collect(target, apiKey) {
   }
 
   return { baseList, optionList, maxPage, totalCount };
+}
+
+/**
+ * 금융회사 개요를 fin_co_no 로 조회할 수 있게 모은다.
+ *
+ * 점포 지역이 특히 중요하다. 상품의 87%가 저축은행이고 대부분 지역 기반이라,
+ * 대구 사는 사람에게 서울·부산에만 점포가 있는 저축은행을 1위로 보여주는 것은
+ * 실질적으로 의미가 없다. 그 사실을 숨기지 않는다.
+ */
+async function collectCompanies(apiKey) {
+  const byCode = new Map();
+  for (const group of COMPANY_GROUPS) {
+    const result = await fetchPage('companySearch', group, 1, apiKey);
+    for (const b of result.baseList ?? []) {
+      byCode.set(b.fin_co_no, {
+        name: line(b.kor_co_nm) ?? '(회사명 없음)',
+        url: text(b.homp_url),
+        tel: text(b.cal_tel),
+        areas: [],
+      });
+    }
+    for (const o of result.optionList ?? []) {
+      // exis_yn === 'Y' 인 지역에만 점포가 있다
+      if (o.exis_yn !== 'Y') continue;
+      const c = byCode.get(o.fin_co_no);
+      const area = line(o.area_nm);
+      if (c && area && !c.areas.includes(area)) c.areas.push(area);
+    }
+    console.error(`  companySearch ${group} → ${result.baseList?.length ?? 0}개사`);
+  }
+  return byCode;
 }
 
 // ---------------------------------------------------------------------------
@@ -75,7 +106,7 @@ function rate(value) {
   return Number.isFinite(n) ? n : null;
 }
 
-function normalize(collected) {
+function normalize(collected, companyInfo) {
   const companies = [];
   const companyIndex = new Map();
   const products = [];
@@ -94,7 +125,15 @@ function normalize(collected) {
       const companyName = line(b.kor_co_nm) ?? '(회사명 없음)';
       if (!companyIndex.has(companyName)) {
         companyIndex.set(companyName, companies.length);
-        companies.push(companyName);
+        // 회사 개요는 fin_co_no 로 조인한다. 회사명은 표기가 흔들릴 수 있다.
+        const info = companyInfo.get(b.fin_co_no);
+        if (!info) warnings.push(`회사 개요 없음: ${b.fin_co_no} ${companyName}`);
+        companies.push({
+          name: companyName,
+          url: info?.url ?? null,
+          tel: info?.tel ?? null,
+          areas: info?.areas ?? [],
+        });
       }
       if (b.dcls_month) dclsMonths.add(String(b.dcls_month));
 
@@ -170,7 +209,12 @@ function report(snapshot, collected, warnings) {
   const lines = [];
 
   lines.push(`기준월: ${snapshot.dclsMonth}`);
-  lines.push(`회사 ${snapshot.companies.length} · 상품 ${products.length} · 금리행 ${rates.length}`);
+  const withUrl = snapshot.companies.filter((c) => c.url).length;
+  const withArea = snapshot.companies.filter((c) => c.areas.length > 0).length;
+  lines.push(
+    `회사 ${snapshot.companies.length} (홈페이지 ${withUrl} · 점포지역 ${withArea}) · ` +
+      `상품 ${products.length} · 금리행 ${rates.length}`,
+  );
   for (const { target, totalCount, baseList, maxPage } of collected) {
     const flag = baseList.length === totalCount ? '' : '  ← total_count 불일치!';
     lines.push(
@@ -206,6 +250,12 @@ function assertSane(snapshot, collected) {
   if (snapshot.rates.length < 2000) {
     throw new Error(`금리행이 비정상적으로 적습니다: ${snapshot.rates.length} (기대 4000+)`);
   }
+  // companySearch 가 조용히 실패하면 홈페이지·점포 지역이 통째로 비게 된다.
+  const withUrl = snapshot.companies.filter((c) => c.url).length;
+  if (withUrl < snapshot.companies.length * 0.9) {
+    throw new Error(`회사 홈페이지 정보가 비정상적으로 적습니다: ${withUrl}/${snapshot.companies.length}`);
+  }
+
   for (const { target, baseList, totalCount } of collected) {
     if (baseList.length !== totalCount) {
       throw new Error(
@@ -225,7 +275,10 @@ async function main() {
     collected.push({ target, ...(await collect(target, apiKey)) });
   }
 
-  const { snapshot, warnings } = normalize(collected);
+  console.error('금융회사 개요 수집 중...');
+  const companyInfo = await collectCompanies(apiKey);
+
+  const { snapshot, warnings } = normalize(collected, companyInfo);
   console.log(report(snapshot, collected, warnings));
   assertSane(snapshot, collected);
 

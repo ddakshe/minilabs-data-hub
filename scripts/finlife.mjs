@@ -19,6 +19,9 @@ export const TARGETS = [
   { endpoint: 'savingProductsSearch', type: 'saving', group: 'savings', topFinGrpNo: '030300' },
 ];
 
+/** 금융회사 개요(홈페이지·대표번호·지역별 점포). 권역당 1페이지면 전부 온다. */
+export const COMPANY_GROUPS = ['020000', '030300'];
+
 /**
  * finlife 응답은 mtrt_int / spcl_cnd 같은 장문 필드에 이스케이프되지 않은 생 개행(U+000A)을
  * 그대로 담아 보낸다. RFC 8259상 문자열 안의 제어문자는 반드시 이스케이프돼야 하므로
