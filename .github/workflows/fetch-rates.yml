@@ -1,0 +1,90 @@
+name: Fetch Rates
+
+# rate-lens-mini(금리 돋보기) 앱이 쓰는 예적금 금리 스냅샷.
+#
+# 매일 도는 이유: 공시 기준월(dcls_month)은 매월 20일경 한 번에 올라오지만,
+# 개별 금융회사의 정정 신고가 그 이후에도 거의 매일 붙는다. 같은 기준월 안에서도
+# 상품 수가 움직인다(저축은행 예금 393 → 392 관측). 월 1회로는 정정을 놓친다.
+# diff 감지가 있어 실제 커밋은 데이터가 바뀐 날에만 발생한다.
+
+on:
+  schedule:
+    - cron: '0 21 * * *'  # 매일 06:00 KST
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: '실행 이유 (로그에만 기록, 선택)'
+        required: false
+        default: 'manual refresh'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-rates
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Show trigger context
+        run: |
+          echo "Event  : ${{ github.event_name }}"
+          echo "Reason : ${{ github.event.inputs.reason || '(scheduled)' }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      # 의존성 없이 Node 내장 fetch 만 쓰므로 npm ci 를 생략한다.
+      - name: Fetch rates
+        env:
+          FINLIFE_API_KEY: ${{ secrets.FINLIFE_API_KEY }}
+        run: node scripts/fetch-rates.mjs
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git add rate-lens/
+          if git diff --cached --quiet -- rate-lens/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes — skipping commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --cached --stat rate-lens/
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            MSG="chore(rate-lens): manual refresh ($DATE_KST)"
+          else
+            MSG="chore(rate-lens): refresh ($DATE_KST)"
+          fi
+
+          git commit -m "$MSG"
+          git push
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Rates Fetch Summary"
+            echo ""
+            echo "- Trigger: \`${{ github.event_name }}\`"
+            echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
+            echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+          } >> "$GITHUB_STEP_SUMMARY"
