@@ -34,6 +34,16 @@ const ONLY = process.argv[2]
 const SHRINK_LIMIT = Number(process.env.SHRINK_LIMIT ?? 0.2)
 const ALLOW_SHRINK = process.env.ALLOW_SHRINK === '1'
 
+// 완결성 검증: GS25·이마트24는 응답에 자기 총 개수를 실어 보낸다
+// (GS25 pagination.totalNumberOfResults, 이마트24 totalCount).
+// 그 값에 못 미치게 수집됐다면 페이징이 조기 종료된 것이므로 실행을 실패시킨다.
+// 직전 대비 비율을 보는 SHRINK_LIMIT과 달리 이력이 필요 없고, 첫 실행에서 바로 잡힌다.
+// (2026-07-30 GS25가 708건일 때 사이트는 1665건이라고 답하고 있었다)
+class IncompleteError extends Error {}
+// 이마트24는 바코드 중복 제거분 때문에 totalCount와 몇 건 어긋난다(관측 2364 vs 2361 = 0.13%). 2% 여유.
+const E24_TOLERANCE = 0.02
+const ALLOW_INCOMPLETE = process.env.ALLOW_INCOMPLETE === '1'
+
 // ───────────────────────── 공용 헬퍼 ─────────────────────────
 
 const UA_DESKTOP =
@@ -146,10 +156,11 @@ const GS_TYPES = [
   { code: 'GIFT', label: '증정' },
 ]
 
+// 이중 인코딩 JSON. results뿐 아니라 pagination(총 개수)도 쓰므로 통째로 돌려준다.
 function parseGsBody(text) {
   let data = JSON.parse(text)
   if (typeof data === 'string') data = JSON.parse(data)
-  return data?.results ?? []
+  return data ?? {}
 }
 
 async function scrapeGS25({ maxPages = 200 } = {}) {
@@ -160,6 +171,9 @@ async function scrapeGS25({ maxPages = 200 } = {}) {
 
   const out = []
   for (const t of GS_TYPES) {
+    let expected = null // 이 유형의 총 개수(페이지1 응답이 알려준다)
+    let got = 0 // 서버가 실제로 돌려준 건수(중복 제거 전 — 상류 총계와 같은 기준)
+    let emptyRetry = 0
     for (let page = 1; page <= maxPages; page++) {
       const { status, text } = await http(GS_SEARCH, {
         method: 'POST',
@@ -172,8 +186,24 @@ async function scrapeGS25({ maxPages = 200 } = {}) {
         body: `CSRFToken=${token}&pageNum=${page}&pageSize=20&searchType=&searchWord=&parameterList=${t.code}`,
       })
       if (status !== 200) throw new Error(`GS25 HTTP ${status} (${t.code} p${page})`)
-      const results = parseGsBody(text)
-      if (!results.length) break
+      const body = parseGsBody(text)
+      const results = body.results ?? []
+      expected ??= body.pagination?.totalNumberOfResults ?? null
+      if (!results.length) {
+        // 아직 총 개수를 못 채웠는데 빈 응답이면 일시적일 수 있다 → 같은 페이지를 재시도한다.
+        // 예전엔 여기서 곧바로 break 해서, 빈 응답 한 번에 708/1665처럼 반쪽만 수집하고
+        // "성공"으로 끝났다(2026-07-30 사고).
+        if (expected != null && got < expected && emptyRetry < 2) {
+          emptyRetry++
+          console.warn(`  GS25 ${t.label} p${page} 빈 응답 — 재시도 ${emptyRetry}/2 (${got}/${expected})`)
+          page--
+          await sleep(1500)
+          continue
+        }
+        break
+      }
+      emptyRetry = 0
+      got += results.length
       for (const r of results) {
         out.push({
           id: `gs25-${r.attFileId || r.goodsNm}`,
@@ -185,6 +215,10 @@ async function scrapeGS25({ maxPages = 200 } = {}) {
           category: null,
         })
       }
+    }
+    // 상류가 말한 총 개수를 못 채웠으면 조기 종료다 — 반쪽 데이터를 커밋하지 않는다.
+    if (expected != null && got < expected) {
+      throw new IncompleteError(`GS25 ${t.label} ${got}/${expected}건만 수집(페이징 조기 종료)`)
     }
   }
   const seen = new Set()
@@ -345,11 +379,17 @@ function parseE24Block(block) {
 async function scrapeEmart24({ maxPages = 200 } = {}) {
   const out = []
   const seen = new Set()
+  let expected = null // 페이지1 HTML의 totalCount = 전체 행사상품 수
+  let dupRetry = 0
   for (let page = 1; page <= maxPages; page++) {
     const { status, text } = await http(
       `${E24_BASE}?search=&category_seq=&base_category_seq=&align=&page=${page}`
     )
     if (status !== 200) throw new Error(`emart24 HTTP ${status} (page ${page})`)
+    if (expected == null) {
+      const raw = text.match(/totalCount["'\s:=]+([\d,]+)/i)?.[1]
+      if (raw) expected = Number(raw.replace(/,/g, ''))
+    }
     const blocks = text.split('<div class="itemWrap">').slice(1)
     if (blocks.length === 0) break // 상품 없는 페이지 = 진짜 끝
     const parsed = blocks.map(parseE24Block).filter(Boolean)
@@ -357,7 +397,19 @@ async function scrapeEmart24({ maxPages = 200 } = {}) {
     for (const p of parsed) if (!seen.has(p.id)) (seen.add(p.id), out.push(p), fresh++)
     // 매핑된 상품이 있는데 전부 중복이면 마지막 페이지 반복 → 종료.
     // (매핑 안 되는 유형만 있는 페이지는 건너뛰고 계속 진행)
-    if (parsed.length > 0 && fresh === 0) break
+    if (parsed.length > 0 && fresh === 0) {
+      // 아직 총 개수를 못 채웠다면 서버가 같은 페이지를 되돌려준 일시적 현상일 수 있다 → 다음 페이지로 계속.
+      if (expected != null && out.length < expected && dupRetry < 2) {
+        dupRetry++
+        console.warn(`  이마트24 p${page} 전부 중복 — 다음 페이지로 계속 ${dupRetry}/2 (${out.length}/${expected})`)
+        continue
+      }
+      break
+    }
+  }
+  // 상류가 말한 총 개수에 크게 못 미치면 조기 종료다(중복 제거분만큼의 여유는 둔다).
+  if (expected != null && out.length < Math.floor(expected * (1 - E24_TOLERANCE))) {
+    throw new IncompleteError(`이마트24 ${out.length}/${expected}건만 수집(페이징 조기 종료)`)
   }
   return out
 }
@@ -415,7 +467,8 @@ async function main() {
 
   const byChain = {}
   const counts = {}
-  const shrunk = [] // 수집량이 급감한 체인 — 하나라도 있으면 저장하지 않고 실패시킨다
+  const shrunk = [] // 직전 대비 급감한 체인 (상대 검증)
+  const incomplete = [] // 상류 총계에 못 미친 체인 (절대 검증) — 둘 중 하나라도 있으면 저장하지 않는다
 
   for (const [key, name, fn] of SOURCES) {
     if (ONLY && !ONLY.has(key)) {
@@ -444,6 +497,9 @@ async function main() {
       byChain[name] = prev
       counts[name] = `실패→직전유지(${prev.length}): ${err.message}`
       console.error(`✗ ${name}: ${err.message} → 직전 ${prev.length}개 유지`)
+      // 단순 실패(네트워크·IP차단)는 직전 유지로 넘어가지만, 완결성 위반은 실행을 실패시킨다.
+      // 상류가 "1665건 있다"고 답했는데 708건만 받은 상황은 조용히 넘길 일이 아니다.
+      if (err instanceof IncompleteError) incomplete.push(`${name} — ${err.message}`)
     }
   }
 
@@ -452,6 +508,13 @@ async function main() {
   // 원인을 아무도 안 본다 — 조용한 반쪽 데이터가 3주를 간 게 정확히 그 실패 방식이었다.
   // 저장을 건너뛰면 라이브 데이터는 직전 정상본 그대로 유지되고(신선도만 한 주기 손해),
   // 실행은 빨간불로 남아 원인을 보게 된다. 주 2회(월·목) 주기라 회복도 빠르다.
+  if (incomplete.length && !ALLOW_INCOMPLETE) {
+    console.error('\n✗ 완결성 위반 — 상류가 알려준 총 개수를 못 채웠다. 저장을 건너뛰고 중단한다:')
+    for (const s of incomplete) console.error(`   - ${s}`)
+    console.error('  사이트 구조 변경이나 페이징 파라미터를 확인할 것.')
+    console.error('  상류 총계 쪽이 틀린 게 확실하면 ALLOW_INCOMPLETE=1 로 재실행한다.')
+    process.exit(1)
+  }
   if (shrunk.length && !ALLOW_SHRINK) {
     console.error('\n✗ 수집량 급감 — 저장을 건너뛰고 중단한다(직전 데이터 유지):')
     for (const s of shrunk) console.error(`   - ${s}`)
