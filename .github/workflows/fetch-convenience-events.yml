@@ -14,6 +14,7 @@ on:
 
 permissions:
   contents: write
+  issues: write   # 실패 시 알림 이슈 생성/갱신
 
 concurrency:
   group: fetch-convenience-events
@@ -91,6 +92,41 @@ jobs:
           done
           echo "push 실패 — 3회 시도 모두 거부"
           exit 1
+
+      # 실패해도 아무도 모르면 fail-closed는 "조용한 정지"가 된다.
+      # 같은 이슈에 코멘트를 쌓아 매주 새 이슈가 열리지 않게 한다.
+      - name: 실패 시 이슈 알림
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          TRIGGER: ${{ github.event_name }}
+        run: |
+          MARKER="편의점 데이터 갱신 실패"
+          BODY=$(cat <<BODY_END
+          편의점 행사 데이터 수집이 실패했습니다.
+
+          - 실행 로그: $RUN_URL
+          - 트리거: \`$TRIGGER\`
+          - 시각: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S') KST
+
+          라이브 데이터(\`convenience-events/products.json\`)는 **직전 정상본이 그대로 유지**됩니다.
+          앱에는 영향이 없고, 갱신만 멈춘 상태입니다.
+
+          로그에서 아래를 확인하세요.
+          - \`✗ 완결성 위반\` — 상류 총계에 못 미침(페이징 조기 종료 가능성)
+          - \`✗ 수집량 급감\` — 직전 대비 20% 이상 감소
+          - \`push 실패\` — 3회 rebase 재시도 후에도 거부됨
+          BODY_END
+          )
+          EXISTING=$(gh issue list --state open --limit 100 --json number,title \
+            --jq "[.[] | select(.title | contains(\"$MARKER\"))][0].number")
+          if [ -n "$EXISTING" ] && [ "$EXISTING" != "null" ]; then
+            gh issue comment "$EXISTING" --body "$BODY"
+            echo "기존 이슈 #$EXISTING 에 코멘트 추가"
+          else
+            gh issue create --title "🚨 $MARKER" --body "$BODY"
+          fi
 
       - name: Summary
         run: |
