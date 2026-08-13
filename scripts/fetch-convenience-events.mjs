@@ -469,6 +469,7 @@ async function main() {
   const counts = {}
   const shrunk = [] // 직전 대비 급감한 체인 (상대 검증)
   const incomplete = [] // 상류 총계에 못 미친 체인 (절대 검증) — 둘 중 하나라도 있으면 저장하지 않는다
+  const failed = [] // 통째로 실패한 체인 — 저장은 진행하되(다른 체인 갱신분 보존) 알린다
 
   for (const [key, name, fn] of SOURCES) {
     if (ONLY && !ONLY.has(key)) {
@@ -500,6 +501,7 @@ async function main() {
       // 단순 실패(네트워크·IP차단)는 직전 유지로 넘어가지만, 완결성 위반은 실행을 실패시킨다.
       // 상류가 "1665건 있다"고 답했는데 708건만 받은 상황은 조용히 넘길 일이 아니다.
       if (err instanceof IncompleteError) incomplete.push(`${name} — ${err.message}`)
+      else failed.push(`${name}: ${err.message}`.replace(/\s+/g, ' ').slice(0, 200))
     }
   }
 
@@ -524,6 +526,16 @@ async function main() {
   }
   if (shrunk.length && ALLOW_SHRINK) {
     console.warn('\n⚠ 급감했지만 ALLOW_SHRINK=1 이라 그대로 저장한다:', shrunk.join(', '))
+  }
+
+  // 체인 통째 실패는 저장을 막지 않는다 — 세븐일레븐이 딸꾹질할 때마다 CU·GS25·이마트24
+  // 갱신분까지 날리는 건 퇴보다. 대신 조용히 넘어가지 않도록 여기서 반드시 알린다.
+  // "변경사항 없음" 조기 return보다 앞에 둬야 한다 — 실패했는데 diff가 없는 경우가 실제로 있었다.
+  if (failed.length) {
+    for (const f of failed) console.log(`::warning title=체인 수집 실패::${f}`)
+    if (process.env.GITHUB_OUTPUT) {
+      await fs.appendFile(process.env.GITHUB_OUTPUT, `failed_chains=${failed.join(' | ')}\n`)
+    }
   }
 
   const merged = SOURCES.flatMap(([, name]) => byChain[name] || [])

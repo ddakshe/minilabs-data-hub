@@ -45,6 +45,7 @@ jobs:
           TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
 
       - name: Fetch convenience-store data
+        id: fetch
         run: |
           # 기본은 cu,gs25,emart24 (세븐일레븐은 해외 IP 차단 → 로컬 launchd가 담당, 여기선 기존 데이터 유지)
           CHAIN="${{ github.event.inputs.chain }}"
@@ -93,29 +94,42 @@ jobs:
           echo "push 실패 — 3회 시도 모두 거부"
           exit 1
 
+      # 두 가지를 모두 알린다.
+      #   (1) 잡 실패 — 완결성 위반·급감·push 거부 등으로 갱신이 멈춘 경우
+      #   (2) 잡은 성공했지만 일부 체인이 통째로 실패한 경우 (커밋은 됐고 그 체인만 직전 데이터)
       # 실패해도 아무도 모르면 fail-closed는 "조용한 정지"가 된다.
       # 같은 이슈에 코멘트를 쌓아 매주 새 이슈가 열리지 않게 한다.
-      - name: 실패 시 이슈 알림
-        if: failure()
+      - name: 이슈 알림
+        if: failure() || steps.fetch.outputs.failed_chains != ''
         env:
           GH_TOKEN: ${{ github.token }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           TRIGGER: ${{ github.event_name }}
+          FAILED_CHAINS: ${{ steps.fetch.outputs.failed_chains }}
+          JOB_STATUS: ${{ job.status }}
         run: |
           MARKER="편의점 데이터 갱신 실패"
+          if [ "$JOB_STATUS" = "failure" ]; then
+            HEADLINE="편의점 행사 데이터 **갱신이 중단**됐습니다."
+            IMPACT="라이브 데이터(\`convenience-events/products.json\`)는 **직전 정상본이 그대로 유지**됩니다. 앱에는 영향이 없고, 갱신만 멈춘 상태입니다."
+          else
+            HEADLINE="갱신은 됐지만 **일부 체인 수집이 실패**했습니다: \`$FAILED_CHAINS\`"
+            IMPACT="실패한 체인은 **직전 데이터가 유지**된 채로 커밋됐습니다. 나머지 체인은 정상 갱신됐고 앱에는 영향이 없습니다. 다음 주기에 자동 복구되며, 반복되면 해당 체인 파서를 확인하세요."
+          fi
           BODY=$(cat <<BODY_END
-          편의점 행사 데이터 수집이 실패했습니다.
+          $HEADLINE
 
           - 실행 로그: $RUN_URL
           - 트리거: \`$TRIGGER\`
+          - 잡 상태: \`$JOB_STATUS\`
           - 시각: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S') KST
 
-          라이브 데이터(\`convenience-events/products.json\`)는 **직전 정상본이 그대로 유지**됩니다.
-          앱에는 영향이 없고, 갱신만 멈춘 상태입니다.
+          $IMPACT
 
           로그에서 아래를 확인하세요.
           - \`✗ 완결성 위반\` — 상류 총계에 못 미침(페이징 조기 종료 가능성)
           - \`✗ 수집량 급감\` — 직전 대비 20% 이상 감소
+          - \`::warning title=체인 수집 실패\` — 체인 통째 실패(네트워크·차단 등)
           - \`push 실패\` — 3회 rebase 재시도 후에도 거부됨
           BODY_END
           )
