@@ -76,7 +76,21 @@ jobs:
 
           git add convenience-events/products.json
           git commit -m "$MSG"
-          git push
+
+          # 스크랩에 수 분이 걸려 그 사이 다른 워크플로가 main에 push했을 수 있다.
+          # concurrency 그룹은 이 워크플로끼리만 막아주므로 레포 단위 경합은 여기서 처리한다.
+          # (2026-07-09·2026-08-13 실행이 이 경합으로 실패했다 — local-weekly-scrape.sh와 동일한 재시도)
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              echo "✓ push 완료 (시도 $attempt)"
+              exit 0
+            fi
+            echo "push 거부됨 (시도 $attempt) — rebase 후 재시도"
+            git pull --rebase origin main || { echo "rebase 실패 — 중단"; exit 1; }
+            sleep 5
+          done
+          echo "push 실패 — 3회 시도 모두 거부"
+          exit 1
 
       - name: Summary
         run: |

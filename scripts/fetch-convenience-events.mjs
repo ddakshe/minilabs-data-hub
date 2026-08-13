@@ -25,6 +25,15 @@ const ONLY = process.argv[2]
   ? new Set(process.argv[2].split(',').map((s) => s.trim()).filter(Boolean))
   : null
 
+// 부분 수집 감지 임계치. 파서가 예외를 던지면 아래 catch가 직전 데이터로 막아주지만,
+// 페이징이 조용히 일찍 끝나 "성공했는데 절반만" 가져오는 경우는 그대로 통과했다:
+//   2026-07-14 이마트24 2262 → 1273 (-44%) — 3주간 반쪽 데이터가 라이브
+//   2026-07-30 GS25    1665 →  708 (-57%) — 나흘간 라이브 (Action은 초록불)
+// 정상 주간 변동은 5% 미만이라 20%를 이상 신호로 본다.
+// 실제로 줄어든 게 맞으면 ALLOW_SHRINK=1 로 한 번 통과시킨다.
+const SHRINK_LIMIT = Number(process.env.SHRINK_LIMIT ?? 0.2)
+const ALLOW_SHRINK = process.env.ALLOW_SHRINK === '1'
+
 // ───────────────────────── 공용 헬퍼 ─────────────────────────
 
 const UA_DESKTOP =
@@ -406,6 +415,7 @@ async function main() {
 
   const byChain = {}
   const counts = {}
+  const shrunk = [] // 수집량이 급감한 체인 — 하나라도 있으면 저장하지 않고 실패시킨다
 
   for (const [key, name, fn] of SOURCES) {
     if (ONLY && !ONLY.has(key)) {
@@ -418,7 +428,16 @@ async function main() {
       for (const p of items) p.category = categorize(p.name)
       byChain[name] = items
       counts[name] = items.length
-      console.log(`✓ ${name}: ${items.length}개`)
+      // 예외 없이 성공했어도 직전 대비 급감이면 부분 수집으로 간주한다.
+      // (직전이 0이면 신규 체인 추가이므로 비교 대상 없음)
+      const prevCount = (prevByChain[name] || []).length
+      const drop = prevCount > 0 ? 1 - items.length / prevCount : 0
+      if (drop > SHRINK_LIMIT) {
+        shrunk.push(`${name}: ${prevCount} → ${items.length} (-${Math.round(drop * 100)}%)`)
+        console.error(`⚠ ${name}: 직전 ${prevCount}개 대비 ${Math.round(drop * 100)}% 급감`)
+      } else {
+        console.log(`✓ ${name}: ${items.length}개`)
+      }
     } catch (err) {
       // 실패 시 직전 데이터 유지 (해외 IP 차단 등 일시/지속 실패에도 라이브 데이터 보존)
       const prev = prevByChain[name] || []
@@ -426,6 +445,22 @@ async function main() {
       counts[name] = `실패→직전유지(${prev.length}): ${err.message}`
       console.error(`✗ ${name}: ${err.message} → 직전 ${prev.length}개 유지`)
     }
+  }
+
+  // 급감한 체인이 있으면 아무것도 쓰지 않고 실패한다(fail closed).
+  // 급감분만 직전 데이터로 되돌려 저장할 수도 있지만, 그러면 실행이 초록불로 끝나
+  // 원인을 아무도 안 본다 — 조용한 반쪽 데이터가 3주를 간 게 정확히 그 실패 방식이었다.
+  // 저장을 건너뛰면 라이브 데이터는 직전 정상본 그대로 유지되고(신선도만 한 주기 손해),
+  // 실행은 빨간불로 남아 원인을 보게 된다. 주 2회(월·목) 주기라 회복도 빠르다.
+  if (shrunk.length && !ALLOW_SHRINK) {
+    console.error('\n✗ 수집량 급감 — 저장을 건너뛰고 중단한다(직전 데이터 유지):')
+    for (const s of shrunk) console.error(`   - ${s}`)
+    console.error('  사이트 구조 변경이나 페이징 종료조건을 먼저 확인할 것.')
+    console.error('  실제로 줄어든 게 맞으면 ALLOW_SHRINK=1 로 재실행한다.')
+    process.exit(1)
+  }
+  if (shrunk.length && ALLOW_SHRINK) {
+    console.warn('\n⚠ 급감했지만 ALLOW_SHRINK=1 이라 그대로 저장한다:', shrunk.join(', '))
   }
 
   const merged = SOURCES.flatMap(([, name]) => byChain[name] || [])
