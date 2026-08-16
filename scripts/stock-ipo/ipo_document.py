@@ -23,7 +23,7 @@ BASE = 'https://opendart.fss.or.kr/api'
 
 # 추출 로직이 바뀌면 올린다. 캐시에는 원문이 아니라 추출 결과만 담기므로
 # 로직 변경 시 다시 받아야 한다.
-EXTRACT_VERSION = 2
+EXTRACT_VERSION = 3
 
 
 def _load_cache():
@@ -78,6 +78,46 @@ def _lead(text, max_chars):
     if m and m.start() < 300:
         text = text[m.start():]
     return _sentences(text.strip(), max_chars)
+
+
+# 확정가는 [발행조건확정] 원문에만 있다.
+# "1주당 확정공모가액을 41,200원으로 결정하였습니다" 형태.
+_CONFIRMED = [
+    re.compile(r'확정공모가액을\s*([\d,]+)\s*원으로\s*결정'),
+    re.compile(r'1주당\s*확정공모가액[은는이가]\s*([\d,]+)\s*원'),
+]
+
+# 희망밴드. 최초·[기재정정] 신고서에 있다.
+# "희망공모가액인 30,000원~41,200원", "공모희망가 13,000원 ~ 16,000원"
+_BAND = [
+    re.compile(r'희망공모가액[인은는이]?\s*([\d,]+)\s*원\s*~\s*([\d,]+)\s*원'),
+    re.compile(r'공모희망가[액]?\s*([\d,]+)\s*원\s*~\s*([\d,]+)\s*원'),
+]
+
+
+def _flat(doc):
+    t = re.sub(r'<[^>]+>|&[a-zA-Z]+;|&#\d+;', ' ', doc)
+    return re.sub(r'\s+', ' ', t)
+
+
+def _confirmed_price(doc):
+    t = _flat(doc)
+    for pat in _CONFIRMED:
+        m = pat.search(t)
+        if m:
+            return parse_number(m.group(1))
+    return None
+
+
+def _price_band(doc):
+    t = _flat(doc)
+    for pat in _BAND:
+        m = pat.search(t)
+        if m:
+            lo, hi = parse_number(m.group(1)), parse_number(m.group(2))
+            if lo and hi and lo <= hi:
+                return lo, hi
+    return None, None
 
 
 def _total_shares(doc):
@@ -138,11 +178,15 @@ def fetch_document(key, rcept_no, cache=None):
         doc = blob.decode('utf-8', 'replace')
 
     overview = _section(doc, '1. 사업의 개요')
+    lo, hi = _price_band(doc)
     result = {
         'v': EXTRACT_VERSION,
         'businessSummary': _lead(_plain(overview) if overview else None, 300),
         'products': _products(doc),
         'totalShares': _total_shares(doc),
+        'bandLow': lo,
+        'bandHigh': hi,
+        'confirmedPrice': _confirmed_price(doc),
     }
     cache[rcept_no] = result
     _save_cache(cache)
@@ -162,12 +206,26 @@ def enrich(key, items):
             miss += 1
         doc = fetch_document(key, rn, cache) or {}
 
+        # 확정가는 [발행조건확정] 원문에만 있다. 없으면 아직 수요예측 전이다.
+        crn = it.get('confirmedRceptNo')
+        cdoc = fetch_document(key, crn, cache) if crn else None
+        price = (cdoc or {}).get('confirmedPrice')
+
+        it['offerPrice'] = price
+        # 원문에서 밴드를 못 읽으면 estkRs 의 slprc(=밴드 하한)로 대신한다
+        it['priceBandLow'] = doc.get('bandLow') or it.pop('bandLow', None)
+        it['priceBandHigh'] = doc.get('bandHigh')
+        it.pop('bandLow', None)
+        it.pop('confirmedRceptNo', None)
+
         total = doc.get('totalShares')
         sold = sum(s['sold'] or 0 for s in it.get('oldShareSales') or [])
         offered = it.get('shareCount') or 0
         # 상장 후 주식수 = 현재 발행분 + 신주(공모 물량에서 구주매출을 뺀 것)
         after = total + max(offered - sold, 0) if total else None
-        price = it.get('offerPrice')
+
+        # estkRs 의 slta 는 밴드 하한 기준이라 확정가와 어긋난다. 다시 계산한다
+        it['totalAmount'] = price * offered if price and offered else None
 
         it['businessSummary'] = doc.get('businessSummary')
         it['products'] = doc.get('products')

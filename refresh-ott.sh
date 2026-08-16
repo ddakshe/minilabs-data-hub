@@ -25,7 +25,7 @@ git commit -m "chore(ott): local refresh ($DATE_KST KST)"
 git push origin main
 
 echo "▶ jsDelivr 캐시 purge (즉시 반영)"
-for s in netflix disney tving wavve laftel; do
+for s in netflix disney tving wavve laftel coupang; do
   curl -s -o /dev/null "https://purge.jsdelivr.net/gh/ddakshe/minilabs-data-hub@main/ott/$s.json" || true
 done
 echo "✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)"

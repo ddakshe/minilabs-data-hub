@@ -1,0 +1,70 @@
+name: Fetch travel courses (Monthly)
+
+on:
+  schedule:
+    - cron: '0 20 1 * *'  # 매월 1일 05:00 KST (UTC 20:00)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-travel-courses
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Show trigger context
+        run: |
+          echo "Event: ${{ github.event_name }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      - name: Fetch travel course data
+        env:
+          KTO_API_KEY: ${{ secrets.KTO_API_KEY }}
+        run: node scripts/fetch-travel-courses.mjs
+
+      - name: Check for changes
+        id: diff
+        run: |
+          if git diff --quiet -- travel-courses/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes — skipping commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --stat travel-courses/
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
+          git add travel-courses/
+          git commit -m "chore(travel-courses): monthly refresh ($DATE_KST)"
+          git push
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "### Travel courses fetch complete" >> $GITHUB_STEP_SUMMARY
+          TZ=Asia/Seoul date "+%Y-%m-%d %H:%M KST" >> $GITHUB_STEP_SUMMARY
+          if [ -f travel-courses/index.json ]; then
+            echo "Total courses: $(cat travel-courses/index.json | node -e \"process.stdin|>(async s=>{let d='';for await(const c of s)d+=c;console.log(JSON.parse(d).totalCourses)})()\")" >> $GITHUB_STEP_SUMMARY
+          fi

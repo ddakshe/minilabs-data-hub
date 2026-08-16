@@ -3,6 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "fetch:coupang-facilities": "node scripts/fetch-coupang-facilities.mjs",
+    "fetch:coupang-facilities-nps": "node scripts/fetch-coupang-facilities-nps.mjs",
+    "fetch:coupang-camps": "node scripts/fetch-coupang-camps.mjs",
     "fetch:kamis": "node scripts/fetch-kamis.mjs",
     "fetch:now-showing": "node scripts/fetch-now-showing.mjs"
   },

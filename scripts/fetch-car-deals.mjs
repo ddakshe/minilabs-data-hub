@@ -147,8 +147,21 @@ async function kia() {
   const endsAt = endOfMonthKST()
   const items = []
 
+  // 카테고리 탭(EV / PBV / 승용 / RV / 택시&상용)과 .accordion__list가 순서대로 1:1 대응한다.
+  // 차종 요소 자체에는 카테고리 표시가 없어서 목록 인덱스로 역추적한다.
+  // 제조사 분류는 파워트레인·바디타입이 섞여 있으므로(RV에 SUV·미니밴·픽업이 함께) 원문 그대로 담는다.
+  const tabNames = $('.vehicis-cate__tablist .vehicis-cate__item')
+    .map((_, el) => clean($(el).text()))
+    .get()
+  const listCategory = new Map()
+  $('.accordion__list').each((i, list) => {
+    const name = tabNames[i]
+    if (name) listCategory.set(list, name)
+  })
+
   $('.buy_accordion_item').each((_, el) => {
     const $el = $(el)
+    const category = listCategory.get($el.closest('.accordion__list').get(0)) ?? null
     const model = clean($el.find('.buy_car_name').first().text())
     if (!model) return
 
@@ -184,6 +197,7 @@ async function kia() {
     items.push({
       brand: 'kia',
       model,
+      category,
       basePrice,
       benefits,
       conditionalBenefits,

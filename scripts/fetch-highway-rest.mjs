@@ -64,18 +64,9 @@ async function main() {
   const brands = await fetchAll('restBrandList');
   console.log(`  브랜드: ${brands.length}건`);
 
-  console.log('베스트푸드 수집 중...');
-  const foods = await fetchAll('restBestfoodList', { bestfoodyn: 'Y' });
-  console.log(`  베스트푸드: ${foods.length}건`);
-
-  console.log('추천메뉴 수집 중...');
-  const recommended = await fetchAll('restBestfoodList', { recommendyn: 'Y' });
-  console.log(`  추천메뉴: ${recommended.length}건`);
-
-  // 두 메뉴 합치고 중복 제거 (seq 키 기준)
-  const foodsMap = new Map();
-  [...foods, ...recommended].forEach(f => foodsMap.set(`${f.stdRestCd}_${f.seq}`, f));
-  const allFoods = [...foodsMap.values()];
+  console.log('전체 푸드메뉴 수집 중...');
+  const allFoods = await fetchAll('restBestfoodList');
+  console.log(`  전체 메뉴: ${allFoods.length}건`);
 
   const meta = {
     lastFetched: today,

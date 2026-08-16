@@ -87,11 +87,13 @@ async function newPage(browser) {
 async function hyundai(browser) {
   const page = await newPage(browser)
   try {
+    // networkidle은 이 페이지에서 간헐적으로 타임아웃난다(광고·추적 요청이 계속 뜬다).
+    // 대신 실제 데이터가 그려졌는지를 셀렉터로 확인한다.
     await page.goto('https://www.hyundai.com/kr/ko/e/vehicles/monthly-benefit', {
-      waitUntil: 'networkidle',
+      waitUntil: 'domcontentloaded',
       timeout: 60000,
     })
-    await page.waitForSelector('strong.point', { timeout: 30000 })
+    await page.waitForSelector('strong.point', { timeout: 45000 })
     await page.waitForTimeout(1500)
 
     const raw = await page.evaluate(() => {
@@ -130,6 +132,75 @@ async function hyundai(browser) {
         }
       })
     })
+
+    // 카테고리는 DOM 구조가 아니라 체크박스 필터로만 구분된다.
+    // 하나씩 켰다 끄며 어떤 차종이 남는지 보고 모델→카테고리 표를 만든다.
+    // (제조사 분류라 파워트레인·바디타입이 섞여 있다. 가공하지 않고 원문 그대로 담는다.)
+    const categoryOf = new Map()
+    const labels = page.locator('.category-checkbox label.el-checkbox')
+    const labelCount = await labels.count()
+
+    /**
+     * 체크된 항목을 전부 해제한다.
+     * 클릭 토글로 끄면 간헐적으로 실패해 다음 카테고리에 누적되고, 그러면
+     * SUV 차종이 MPV로 기록되는 식으로 조용히 어긋난다. 매번 상태를 확인해 지운다.
+     */
+    const isChecked = (i) =>
+      labels.nth(i).evaluate((el) => el.className.includes('is-checked'))
+
+    /**
+     * 이 페이지는 클릭이 한 번 걸러 먹히는 구간이 있다(첫 클릭이 삼켜지고 그다음이 먹는 식).
+     * 그래서 클릭 후 실제 체크 상태를 확인하고, 반영이 안 됐으면 다시 누른다.
+     */
+    // index 0은 "전체"다. 다른 카테고리를 모두 끄면 자동으로 다시 켜지므로 검증에서 제외한다.
+    const setOnly = async (target) => {
+      for (let attempt = 0; attempt < 4; attempt++) {
+        for (let k = 1; k < labelCount; k++) {
+          if (k !== target && (await isChecked(k))) {
+            await labels.nth(k).click({ timeout: 5000, force: true })
+            await page.waitForTimeout(250)
+          }
+        }
+        if (!(await isChecked(target))) {
+          await labels.nth(target).click({ timeout: 5000, force: true })
+          await page.waitForTimeout(700)
+        }
+        let otherOn = false
+        for (let k = 1; k < labelCount; k++) {
+          if (k !== target && (await isChecked(k))) otherOn = true
+        }
+        if ((await isChecked(target)) && !otherOn) return true
+      }
+      return false
+    }
+
+    for (let i = 0; i < labelCount; i++) {
+      const label = labels.nth(i)
+      const name = (await label.innerText()).replace(/\s+/g, ' ').trim()
+      if (!name || name === '전체') continue
+      try {
+        // 체크박스 라벨이 다른 요소에 겹쳐 있어 일반 클릭은 가로막힌다(force 필요).
+        if (!(await setOnly(i))) continue
+        await page.waitForTimeout(400)
+        const shown = await page.evaluate(() => {
+          const clean = (s) => (s || '').replace(/\s+/g, ' ').trim()
+          return [...document.querySelectorAll('li')]
+            .filter(
+              (li) =>
+                /최대할인/.test(li.textContent) &&
+                li.querySelector('strong.point') &&
+                li.offsetParent !== null
+            )
+            .map((li) => clean(li.querySelector('strong')?.textContent))
+        })
+        // 전체 목록이 그대로면 필터가 안 걸린 것 → 신뢰할 수 없으니 건너뛴다
+        if (shown.length > 0 && shown.length < raw.length) {
+          for (const m of shown) if (!categoryOf.has(m)) categoryOf.set(m, name)
+        }
+      } catch {
+        // 카테고리는 부가 정보다. 실패해도 혜택 수집을 막지 않는다.
+      }
+    }
 
     const endsAt = endOfMonthKST()
     const items = []
@@ -194,6 +265,7 @@ async function hyundai(browser) {
       items.push({
         brand: 'hyundai',
         model: r.model,
+        category: categoryOf.get(r.model) ?? null,
         basePrice,
         benefits,
         conditionalBenefits,

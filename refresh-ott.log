@@ -1,0 +1,2137 @@
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+이미 업데이트 상태입니다.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/disney.json
+✓ ../ott-rank/public/data/disney.json (로컬 dev 미러)
+✓ 디즈니+ 완료 (10편, 1개 그룹)
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (10편, 1개 그룹)
+── 6/6 성공, 0 실패
+▶ ott/ 변경 확인
+ ott/coupang.json | 30 ++++++++++++------------------
+ ott/tving.json   |  2 +-
+ 2 files changed, 13 insertions(+), 19 deletions(-)
+[main c6d4c9f] chore(ott): local refresh (2026-07-06 18:30 KST)
+ 2 files changed, 13 insertions(+), 19 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   e07b1ff..c6d4c9f  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   c6d4c9f..2e89857  main       -> origin/main
+업데이트 중 c6d4c9f..2e89857
+Created autostash: c68368b
+Fast-forward
+ kamis/kamis-latest.json     | 4101 ++++++++++++++++++++++---------------------
+ rankings/ball-league.json   |    2 +-
+ rankings/dark.json          |    2 +-
+ rankings/economy.json       |  164 +-
+ rankings/ent.json           |    4 +-
+ rankings/female-sports.json |   10 +-
+ rankings/football.json      |    2 +-
+ rankings/index.json         |   94 +-
+ rankings/male-sports.json   |   50 +-
+ rankings/misc.json          |    2 +-
+ rankings/records.json       |    2 +-
+ rankings/seed.json          |  338 ++--
+ rankings/world.json         |   44 +-
+ 13 files changed, 2460 insertions(+), 2355 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✓ ott/disney.json
+✓ ../ott-rank/public/data/disney.json (로컬 dev 미러)
+✓ 디즈니+ 완료 (10편, 1개 그룹)
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (10편, 1개 그룹)
+── 6/6 성공, 0 실패
+▶ ott/ 변경 확인
+ ott/coupang.json |  2 +-
+ ott/disney.json  | 46 ++++++++++++++++----------------
+ ott/laftel.json  | 80 ++++++++++++++++++++++++++++----------------------------
+ ott/tving.json   |  4 +--
+ ott/wavve.json   | 36 ++++++++++++-------------
+ 5 files changed, 84 insertions(+), 84 deletions(-)
+[main b2305c6] chore(ott): local refresh (2026-07-07 06:05 KST)
+ 5 files changed, 84 insertions(+), 84 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   2e89857..b2305c6  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   b2305c6..b4b5721  main       -> origin/main
+업데이트 중 b2305c6..b4b5721
+Created autostash: 1f8f392
+Fast-forward
+ kamis/kamis-latest.json   | 3747 +++++++++++++++++++++++----------------------
+ outlets/outlets.json      |  646 ++++----
+ rankings/ball-league.json |   80 +-
+ rankings/economy.json     |   40 +-
+ rankings/index.json       |   28 +-
+ rankings/seed.json        |  142 +-
+ 6 files changed, 2375 insertions(+), 2308 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+✓ ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✓ ott/disney.json
+✓ ../ott-rank/public/data/disney.json (로컬 dev 미러)
+✓ 디즈니+ 완료 (10편, 1개 그룹)
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (10편, 1개 그룹)
+── 6/6 성공, 0 실패
+▶ ott/ 변경 확인
+ ott/coupang.json | 16 +++++++--------
+ ott/disney.json  | 48 ++++++++++++++++++++++-----------------------
+ ott/laftel.json  | 60 ++++++++++++++++++++++++++++----------------------------
+ ott/netflix.json | 52 ++++++++++++++++++++++++------------------------
+ ott/tving.json   | 44 ++++++++++++++++++++---------------------
+ ott/wavve.json   | 42 +++++++++++++++++++--------------------
+ 6 files changed, 131 insertions(+), 131 deletions(-)
+[main cf0000a] chore(ott): local refresh (2026-07-08 06:12 KST)
+ 6 files changed, 131 insertions(+), 131 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   b4b5721..cf0000a  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   cf0000a..affa6dc  main       -> origin/main
+업데이트 중 cf0000a..affa6dc
+Created autostash: 06bca69
+Fast-forward
+ kamis/kamis-latest.json     | 4031 ++++++++++++++++++++++---------------------
+ korea-stats/stats.json      |    2 +-
+ outlets/outlets.json        |  752 ++++----
+ rankings/ball-league.json   |  124 +-
+ rankings/dark.json          |    2 +-
+ rankings/economy.json       |   42 +-
+ rankings/ent.json           |    2 +-
+ rankings/female-sports.json |    2 +-
+ rankings/football.json      |    2 +-
+ rankings/index.json         |   32 +-
+ rankings/male-sports.json   |    2 +-
+ rankings/misc.json          |    2 +-
+ rankings/records.json       |    2 +-
+ rankings/seed.json          |  186 +-
+ rankings/world.json         |    2 +-
+ 15 files changed, 2632 insertions(+), 2553 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✓ ott/disney.json
+✓ ../ott-rank/public/data/disney.json (로컬 dev 미러)
+✓ 디즈니+ 완료 (10편, 1개 그룹)
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (10편, 1개 그룹)
+── 6/6 성공, 0 실패
+▶ ott/ 변경 확인
+ ott/coupang.json | 14 +++++------
+ ott/disney.json  | 32 ++++++++++++------------
+ ott/laftel.json  | 74 ++++++++++++++++++++++++++++----------------------------
+ ott/tving.json   | 52 +++++++++++++++++++--------------------
+ ott/wavve.json   | 42 ++++++++++++++++----------------
+ 5 files changed, 107 insertions(+), 107 deletions(-)
+[main feb3a8c] chore(ott): local refresh (2026-07-09 06:01 KST)
+ 5 files changed, 107 insertions(+), 107 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   affa6dc..feb3a8c  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   feb3a8c..40359ea  main       -> origin/main
+업데이트 중 feb3a8c..40359ea
+Created autostash: 2705ddc
+Fast-forward
+ kamis/kamis-latest.json     | 4134 +++++++++++++++++++++----------------------
+ outlets/outlets.json        |  742 ++++----
+ rankings/ball-league.json   |  166 +-
+ rankings/dark.json          |    2 +-
+ rankings/economy.json       |   42 +-
+ rankings/ent.json           |    2 +-
+ rankings/female-sports.json |    2 +-
+ rankings/football.json      |    2 +-
+ rankings/index.json         |   32 +-
+ rankings/male-sports.json   |    2 +-
+ rankings/misc.json          |    2 +-
+ rankings/records.json       |    2 +-
+ rankings/seed.json          |  228 +--
+ rankings/world.json         |    2 +-
+ 14 files changed, 2651 insertions(+), 2709 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✓ ott/disney.json
+✓ ../ott-rank/public/data/disney.json (로컬 dev 미러)
+✓ 디즈니+ 완료 (10편, 1개 그룹)
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (10편, 1개 그룹)
+── 6/6 성공, 0 실패
+▶ ott/ 변경 확인
+ ott/coupang.json | 14 +++++------
+ ott/disney.json  | 38 ++++++++++++++---------------
+ ott/laftel.json  | 74 ++++++++++++++++++++++++++++----------------------------
+ ott/tving.json   | 38 ++++++++++++++---------------
+ ott/wavve.json   | 38 ++++++++++++++---------------
+ 5 files changed, 101 insertions(+), 101 deletions(-)
+[main 9c23537] chore(ott): local refresh (2026-07-10 06:04 KST)
+ 5 files changed, 101 insertions(+), 101 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   40359ea..9c23537  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   9c23537..3d9800d  main       -> origin/main
+업데이트 중 9c23537..3d9800d
+Created autostash: ea0f485
+Fast-forward
+ kamis/kamis-latest.json     | 4065 ++++++++++++++++++++++---------------------
+ outlets/outlets.json        | 1426 +++++++--------
+ rankings/ball-league.json   |  174 +-
+ rankings/dark.json          |    2 +-
+ rankings/economy.json       |   42 +-
+ rankings/ent.json           |    2 +-
+ rankings/female-sports.json |    2 +-
+ rankings/football.json      |    2 +-
+ rankings/index.json         |   32 +-
+ rankings/male-sports.json   |    2 +-
+ rankings/misc.json          |    2 +-
+ rankings/records.json       |    2 +-
+ rankings/seed.json          |  236 +--
+ rankings/world.json         |    2 +-
+ 14 files changed, 3026 insertions(+), 2965 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✓ ott/disney.json
+✓ ../ott-rank/public/data/disney.json (로컬 dev 미러)
+✓ 디즈니+ 완료 (10편, 1개 그룹)
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (10편, 1개 그룹)
+── 6/6 성공, 0 실패
+▶ ott/ 변경 확인
+ ott/coupang.json |  8 +++----
+ ott/disney.json  | 34 +++++++++++++-------------
+ ott/laftel.json  | 72 ++++++++++++++++++++++++++++----------------------------
+ ott/tving.json   | 44 +++++++++++++++++-----------------
+ ott/wavve.json   | 38 +++++++++++++++---------------
+ 5 files changed, 98 insertions(+), 98 deletions(-)
+[main cc57572] chore(ott): local refresh (2026-07-11 06:07 KST)
+ 5 files changed, 98 insertions(+), 98 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   3d9800d..cc57572  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   cc57572..d100582  main       -> origin/main
+업데이트 중 cc57572..d100582
+Created autostash: bdbc225
+Fast-forward
+ kamis/kamis-latest.json     | 1226 +++++++++++++++++++++----------------------
+ korea-stats/stats.json      |    2 +-
+ outlets/outlets.json        |  716 ++++++++++++-------------
+ rankings/ball-league.json   |   86 +--
+ rankings/dark.json          |    2 +-
+ rankings/economy.json       |   44 +-
+ rankings/ent.json           |    2 +-
+ rankings/female-sports.json |    2 +-
+ rankings/football.json      |    2 +-
+ rankings/index.json         |   26 +-
+ rankings/male-sports.json   |    2 +-
+ rankings/misc.json          |    2 +-
+ rankings/records.json       |    2 +-
+ rankings/seed.json          |  150 +++---
+ rankings/world.json         |    2 +-
+ 15 files changed, 1133 insertions(+), 1133 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✓ ott/disney.json
+✓ ../ott-rank/public/data/disney.json (로컬 dev 미러)
+✓ 디즈니+ 완료 (10편, 1개 그룹)
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (10편, 1개 그룹)
+── 6/6 성공, 0 실패
+▶ ott/ 변경 확인
+ ott/coupang.json | 14 +++++-----
+ ott/disney.json  | 24 ++++++++---------
+ ott/laftel.json  | 80 ++++++++++++++++++++++++++++----------------------------
+ ott/tving.json   | 44 +++++++++++++++----------------
+ ott/wavve.json   | 42 ++++++++++++++---------------
+ 5 files changed, 102 insertions(+), 102 deletions(-)
+[main 85e3aaf] chore(ott): local refresh (2026-07-12 06:00 KST)
+ 5 files changed, 102 insertions(+), 102 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   d100582..85e3aaf  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   85e3aaf..1ded979  main       -> origin/main
+업데이트 중 85e3aaf..1ded979
+Created autostash: dd03ee6
+Fast-forward
+ kamis/kamis-latest.json     | 1226 +++++++++++++++++++++----------------------
+ korea-stats/stats.json      |    2 +-
+ outlets/outlets.json        |  468 ++++++++---------
+ rankings/ball-league.json   |  130 ++---
+ rankings/dark.json          |    2 +-
+ rankings/economy.json       |    2 +-
+ rankings/ent.json           |    2 +-
+ rankings/female-sports.json |    2 +-
+ rankings/football.json      |   30 +-
+ rankings/index.json         |   26 +-
+ rankings/male-sports.json   |    2 +-
+ rankings/misc.json          |    2 +-
+ rankings/records.json       |    2 +-
+ rankings/seed.json          |  180 +++----
+ rankings/world.json         |    2 +-
+ 15 files changed, 1039 insertions(+), 1039 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✓ ott/disney.json
+✓ ../ott-rank/public/data/disney.json (로컬 dev 미러)
+✓ 디즈니+ 완료 (10편, 1개 그룹)
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (10편, 1개 그룹)
+── 6/6 성공, 0 실패
+▶ ott/ 변경 확인
+ ott/coupang.json | 22 ++++++++--------
+ ott/disney.json  | 38 ++++++++++++++--------------
+ ott/laftel.json  | 76 ++++++++++++++++++++++++++++----------------------------
+ ott/tving.json   | 58 +++++++++++++++++++++---------------------
+ ott/wavve.json   | 30 +++++++++++-----------
+ 5 files changed, 112 insertions(+), 112 deletions(-)
+[main 90955a8] chore(ott): local refresh (2026-07-13 06:42 KST)
+ 5 files changed, 112 insertions(+), 112 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   1ded979..90955a8  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   90955a8..890d288  main       -> origin/main
+업데이트 중 90955a8..890d288
+Created autostash: 185c35f
+Fast-forward
+ kamis/kamis-latest.json     | 4437 +++++++++++++++++++++----------------------
+ now-showing/movies.json     | 2156 ++++++++++-----------
+ outlets/outlets.json        |  576 +++---
+ rankings/ball-league.json   |  150 +-
+ rankings/dark.json          |    2 +-
+ rankings/economy.json       |    2 +-
+ rankings/ent.json           |   20 +-
+ rankings/female-sports.json |   54 +-
+ rankings/football.json      |   40 +-
+ rankings/index.json         |  104 +-
+ rankings/male-sports.json   |   69 +-
+ rankings/misc.json          |    2 +-
+ rankings/records.json       |    2 +-
+ rankings/seed.json          |  419 ++--
+ rankings/world.json         |    2 +-
+ 15 files changed, 3967 insertions(+), 4068 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✓ ott/disney.json
+✓ ../ott-rank/public/data/disney.json (로컬 dev 미러)
+✓ 디즈니+ 완료 (10편, 1개 그룹)
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (10편, 1개 그룹)
+── 6/6 성공, 0 실패
+▶ ott/ 변경 확인
+ ott/coupang.json | 36 ++++++++++++-------------
+ ott/disney.json  | 50 +++++++++++++++++-----------------
+ ott/laftel.json  | 82 +++++++++++++++++++++++++++-----------------------------
+ ott/tving.json   | 52 +++++++++++++++++------------------
+ ott/wavve.json   | 30 ++++++++++-----------
+ 5 files changed, 124 insertions(+), 126 deletions(-)
+[main e97b908] chore(ott): local refresh (2026-07-14 06:00 KST)
+ 5 files changed, 124 insertions(+), 126 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   890d288..e97b908  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+이미 업데이트 상태입니다.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+✓ ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✓ ott/disney.json
+✓ ../ott-rank/public/data/disney.json (로컬 dev 미러)
+✓ 디즈니+ 완료 (10편, 1개 그룹)
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (10편, 1개 그룹)
+── 6/6 성공, 0 실패
+▶ ott/ 변경 확인
+ ott/coupang.json | 42 +++++++++++++++----------------
+ ott/disney.json  | 34 ++++++++++++-------------
+ ott/laftel.json  | 76 ++++++++++++++++++++++++++++----------------------------
+ ott/netflix.json |  2 +-
+ ott/tving.json   | 54 ++++++++++++++++++++--------------------
+ ott/wavve.json   | 42 +++++++++++++++----------------
+ 6 files changed, 125 insertions(+), 125 deletions(-)
+[main 99fdf42] chore(ott): local refresh (2026-07-15 06:00 KST)
+ 6 files changed, 125 insertions(+), 125 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   6f4ae3f..99fdf42  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   99fdf42..2708b0e  main       -> origin/main
+Created autostash: e8426b3
+Rebasing (1/2)Rebasing (2/2)자동 스태시 적용.
+Successfully rebased and updated refs/heads/main.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✓ ott/disney.json
+✓ ../ott-rank/public/data/disney.json (로컬 dev 미러)
+✓ 디즈니+ 완료 (10편, 1개 그룹)
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (10편, 1개 그룹)
+── 6/6 성공, 0 실패
+▶ ott/ 변경 확인
+ ott/coupang.json | 26 ++++++++++----------
+ ott/disney.json  | 32 ++++++++++++------------
+ ott/laftel.json  | 74 ++++++++++++++++++++++++++++----------------------------
+ ott/tving.json   | 56 +++++++++++++++++++++---------------------
+ ott/wavve.json   | 38 ++++++++++++++---------------
+ 5 files changed, 113 insertions(+), 113 deletions(-)
+[main 81ed4ea] chore(ott): local refresh (2026-07-16 06:00 KST)
+ 5 files changed, 113 insertions(+), 113 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   2708b0e..81ed4ea  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   81ed4ea..6b57d1c  main       -> origin/main
+업데이트 중 81ed4ea..6b57d1c
+Created autostash: eecdfcc
+Fast-forward
+ convenience-events/products.json | 318 +----------------
+ now-showing/movies.json          | 755 ++++++++++++++++++++-------------------
+ rankings/ball-league.json        |   2 +-
+ rankings/dark.json               |   2 +-
+ rankings/economy.json            |  46 +--
+ rankings/ent.json                |   2 +-
+ rankings/female-sports.json      |   2 +-
+ rankings/football.json           |   2 +-
+ rankings/index.json              |  26 +-
+ rankings/male-sports.json        |   2 +-
+ rankings/misc.json               |   2 +-
+ rankings/records.json            |   2 +-
+ rankings/seed.json               |  68 ++--
+ rankings/world.json              |   2 +-
+ 14 files changed, 478 insertions(+), 753 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+✓ ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✓ ott/disney.json
+✓ ../ott-rank/public/data/disney.json (로컬 dev 미러)
+✓ 디즈니+ 완료 (10편, 1개 그룹)
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (9편, 1개 그룹)
+── 6/6 성공, 0 실패
+▶ ott/ 변경 확인
+ ott/coupang.json |  8 +-----
+ ott/disney.json  | 30 +++++++++++-----------
+ ott/laftel.json  | 76 +++++++++++++++++++++++++++++---------------------------
+ ott/netflix.json |  2 +-
+ ott/tving.json   | 38 ++++++++++++++--------------
+ ott/wavve.json   | 38 ++++++++++++++--------------
+ 6 files changed, 94 insertions(+), 98 deletions(-)
+[main 9f649a2] chore(ott): local refresh (2026-07-17 06:00 KST)
+ 6 files changed, 94 insertions(+), 98 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   6b57d1c..9f649a2  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   9f649a2..3b2add5  main       -> origin/main
+업데이트 중 9f649a2..3b2add5
+Created autostash: fd8cda9
+Fast-forward
+ now-showing/movies.json     |  524 ++++++++-------
+ outlets/outlets.json        | 1537 +++++++++++++++++++------------------------
+ rankings/ball-league.json   |   42 +-
+ rankings/dark.json          |    2 +-
+ rankings/economy.json       |   46 +-
+ rankings/ent.json           |    2 +-
+ rankings/female-sports.json |    2 +-
+ rankings/football.json      |    2 +-
+ rankings/index.json         |   28 +-
+ rankings/male-sports.json   |    2 +-
+ rankings/misc.json          |    2 +-
+ rankings/records.json       |    2 +-
+ rankings/seed.json          |  108 +--
+ rankings/world.json         |    2 +-
+ 14 files changed, 1115 insertions(+), 1186 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✓ ott/disney.json
+✓ ../ott-rank/public/data/disney.json (로컬 dev 미러)
+✓ 디즈니+ 완료 (10편, 1개 그룹)
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (10편, 1개 그룹)
+── 6/6 성공, 0 실패
+▶ ott/ 변경 확인
+ ott/coupang.json | 20 +++++++++------
+ ott/disney.json  | 44 ++++++++++++++++-----------------
+ ott/laftel.json  | 74 ++++++++++++++++++++++++++++----------------------------
+ ott/tving.json   | 52 +++++++++++++++++++--------------------
+ ott/wavve.json   | 42 ++++++++++++++++----------------
+ 5 files changed, 119 insertions(+), 113 deletions(-)
+[main b115b9e] chore(ott): local refresh (2026-07-18 06:00 KST)
+ 5 files changed, 119 insertions(+), 113 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   3b2add5..b115b9e  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   b115b9e..d77d97a  main       -> origin/main
+업데이트 중 b115b9e..d77d97a
+Created autostash: c17c835
+Fast-forward
+ now-showing/movies.json     | 589 ++++++++++++++++++++++--------------------
+ outlets/outlets.json        | 612 ++++++++++++++++++++++++++++----------------
+ rankings/ball-league.json   |  62 ++---
+ rankings/dark.json          |   2 +-
+ rankings/economy.json       |   2 +-
+ rankings/ent.json           |   2 +-
+ rankings/female-sports.json |   2 +-
+ rankings/football.json      |   2 +-
+ rankings/index.json         |  24 +-
+ rankings/male-sports.json   |   2 +-
+ rankings/misc.json          |   2 +-
+ rankings/records.json       |   2 +-
+ rankings/seed.json          |  84 +++---
+ rankings/world.json         |   2 +-
+ 14 files changed, 794 insertions(+), 595 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✓ ott/disney.json
+✓ ../ott-rank/public/data/disney.json (로컬 dev 미러)
+✓ 디즈니+ 완료 (10편, 1개 그룹)
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (10편, 1개 그룹)
+── 6/6 성공, 0 실패
+▶ ott/ 변경 확인
+ ott/coupang.json |  8 +++----
+ ott/disney.json  |  8 +++----
+ ott/laftel.json  | 66 ++++++++++++++++++++++++++++----------------------------
+ ott/tving.json   | 52 ++++++++++++++++++++++----------------------
+ ott/wavve.json   | 42 ++++++++++++++++++------------------
+ 5 files changed, 88 insertions(+), 88 deletions(-)
+[main 59cbe4d] chore(ott): local refresh (2026-07-19 06:00 KST)
+ 5 files changed, 88 insertions(+), 88 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   d77d97a..59cbe4d  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   59cbe4d..e1f27f9  main       -> origin/main
+업데이트 중 59cbe4d..e1f27f9
+Created autostash: c2e7df7
+Fast-forward
+ now-showing/movies.json     | 486 ++++++++++++++++++++++----------------------
+ outlets/outlets.json        | 336 +++++++++++++++---------------
+ rankings/ball-league.json   | 170 ++++++++--------
+ rankings/dark.json          |   2 +-
+ rankings/economy.json       |   2 +-
+ rankings/ent.json           |   2 +-
+ rankings/female-sports.json |   2 +-
+ rankings/football.json      |  50 ++---
+ rankings/index.json         |  28 +--
+ rankings/male-sports.json   |  46 ++---
+ rankings/misc.json          |   2 +-
+ rankings/records.json       |   2 +-
+ rankings/seed.json          | 284 +++++++++++++-------------
+ rankings/world.json         |   2 +-
+ 14 files changed, 707 insertions(+), 707 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✓ ott/disney.json
+✓ ../ott-rank/public/data/disney.json (로컬 dev 미러)
+✓ 디즈니+ 완료 (10편, 1개 그룹)
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (10편, 1개 그룹)
+── 6/6 성공, 0 실패
+▶ ott/ 변경 확인
+ ott/coupang.json | 14 +++++-----
+ ott/disney.json  | 26 +++++++++---------
+ ott/laftel.json  | 80 +++++++++++++++++++++++++++-----------------------------
+ ott/tving.json   | 48 +++++++++++++++++-----------------
+ ott/wavve.json   | 34 ++++++++++++------------
+ 5 files changed, 100 insertions(+), 102 deletions(-)
+[main f840d8c] chore(ott): local refresh (2026-07-20 06:04 KST)
+ 5 files changed, 100 insertions(+), 102 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   e1f27f9..f840d8c  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   0b20485..807e64f  main       -> origin/main
+업데이트 중 0b20485..807e64f
+Created autostash: 2a2e9bd
+Fast-forward
+ now-showing/movies.json     | 824 +++++++++++++++++++++-----------------------
+ outlets/outlets.json        | 788 +++++++++++++++++++++---------------------
+ rankings/ball-league.json   |   2 +-
+ rankings/dark.json          |  20 +-
+ rankings/economy.json       |   2 +-
+ rankings/ent.json           |  18 +-
+ rankings/female-sports.json |   2 +-
+ rankings/football.json      |  70 ++--
+ rankings/index.json         |  84 ++---
+ rankings/male-sports.json   |  47 +--
+ rankings/misc.json          |   2 +-
+ rankings/records.json       |   2 +-
+ rankings/seed.json          | 221 ++++++------
+ rankings/world.json         |   2 +-
+ 14 files changed, 1015 insertions(+), 1069 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✓ ott/disney.json
+✓ ../ott-rank/public/data/disney.json (로컬 dev 미러)
+✓ 디즈니+ 완료 (10편, 1개 그룹)
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (10편, 1개 그룹)
+── 6/6 성공, 0 실패
+▶ ott/ 변경 확인
+ ott/coupang.json |  2 +-
+ ott/disney.json  | 38 ++++++++++++-------------
+ ott/laftel.json  | 84 +++++++++++++++++++++++++++-----------------------------
+ ott/tving.json   | 56 ++++++++++++++++++-------------------
+ ott/wavve.json   | 42 ++++++++++++++--------------
+ 5 files changed, 110 insertions(+), 112 deletions(-)
+[main 07dd928] chore(ott): local refresh (2026-07-21 06:00 KST)
+ 5 files changed, 110 insertions(+), 112 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   807e64f..07dd928  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   07dd928..506ed37  main       -> origin/main
+업데이트 중 07dd928..506ed37
+Created autostash: 9a4da0e
+Fast-forward
+ now-showing/movies.json   | 743 ++++++++++++++++++++++----------------------
+ outlets/outlets.json      | 767 +++++++++++++++++++++++-----------------------
+ rankings/ball-league.json |  56 ++--
+ rankings/economy.json     |  44 +--
+ rankings/index.json       |  26 +-
+ rankings/seed.json        | 122 ++++----
+ 6 files changed, 872 insertions(+), 886 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+✓ ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✓ ott/disney.json
+✓ ../ott-rank/public/data/disney.json (로컬 dev 미러)
+✓ 디즈니+ 완료 (10편, 1개 그룹)
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (9편, 1개 그룹)
+── 6/6 성공, 0 실패
+▶ ott/ 변경 확인
+ ott/coupang.json | 36 ++++++++++-------------
+ ott/disney.json  | 30 +++++++++----------
+ ott/laftel.json  | 88 +++++++++++++++++++++++++++++---------------------------
+ ott/netflix.json | 56 ++++++++++++++++++------------------
+ ott/tving.json   | 52 ++++++++++++++++-----------------
+ ott/wavve.json   | 38 ++++++++++++------------
+ 6 files changed, 148 insertions(+), 152 deletions(-)
+[main 29b4bba] chore(ott): local refresh (2026-07-22 06:00 KST)
+ 6 files changed, 148 insertions(+), 152 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   506ed37..29b4bba  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   29b4bba..d8b2a5f  main       -> origin/main
+업데이트 중 29b4bba..d8b2a5f
+Created autostash: 2c83003
+Fast-forward
+ korea-stats/stats.json      |  40 +++--
+ outlets/outlets.json        | 393 ++++++++++++++++++++++----------------------
+ rankings/ball-league.json   | 170 +++++++++----------
+ rankings/dark.json          |   2 +-
+ rankings/economy.json       |  38 ++---
+ rankings/ent.json           |   2 +-
+ rankings/female-sports.json |   2 +-
+ rankings/football.json      |  30 ++--
+ rankings/index.json         |  30 ++--
+ rankings/male-sports.json   |   2 +-
+ rankings/misc.json          |   2 +-
+ rankings/records.json       |   2 +-
+ rankings/seed.json          | 256 ++++++++++++++---------------
+ rankings/world.json         |   2 +-
+ 14 files changed, 488 insertions(+), 483 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✓ ott/disney.json
+✓ ../ott-rank/public/data/disney.json (로컬 dev 미러)
+✓ 디즈니+ 완료 (10편, 1개 그룹)
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (10편, 1개 그룹)
+── 6/6 성공, 0 실패
+▶ ott/ 변경 확인
+ ott/coupang.json | 16 ++++++++----
+ ott/disney.json  | 44 ++++++++++++++++----------------
+ ott/laftel.json  | 76 ++++++++++++++++++++++++++++----------------------------
+ ott/tving.json   | 50 ++++++++++++++++++-------------------
+ ott/wavve.json   | 38 ++++++++++++++--------------
+ 5 files changed, 115 insertions(+), 109 deletions(-)
+[main 2a6ee13] chore(ott): local refresh (2026-07-23 06:00 KST)
+ 5 files changed, 115 insertions(+), 109 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   d8b2a5f..2a6ee13  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   2a6ee13..7169020  main       -> origin/main
+업데이트 중 2a6ee13..7169020
+Created autostash: dd3cd96
+Fast-forward
+ convenience-events/products.json | 276 ++++++---------------------------------
+ korea-stats/stats.json           |  28 ++--
+ rankings/ball-league.json        | 178 ++++++++++++-------------
+ rankings/dark.json               |   2 +-
+ rankings/economy.json            |  46 +++----
+ rankings/ent.json                |   2 +-
+ rankings/female-sports.json      |   2 +-
+ rankings/football.json           |  20 +--
+ rankings/index.json              |  34 ++---
+ rankings/male-sports.json        |   2 +-
+ rankings/misc.json               |   2 +-
+ rankings/records.json            |   2 +-
+ rankings/seed.json               | 262 ++++++++++++++++++-------------------
+ rankings/world.json              |   2 +-
+ 14 files changed, 330 insertions(+), 528 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✓ ott/disney.json
+✓ ../ott-rank/public/data/disney.json (로컬 dev 미러)
+✓ 디즈니+ 완료 (10편, 1개 그룹)
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (9편, 1개 그룹)
+── 6/6 성공, 0 실패
+▶ ott/ 변경 확인
+ ott/coupang.json | 32 +++++++++-------------
+ ott/disney.json  | 38 +++++++++++++-------------
+ ott/laftel.json  | 82 +++++++++++++++++++++++++++++---------------------------
+ ott/tving.json   | 28 +++++++++----------
+ ott/wavve.json   | 38 +++++++++++++-------------
+ 5 files changed, 107 insertions(+), 111 deletions(-)
+[main e00f87a] chore(ott): local refresh (2026-07-24 06:02 KST)
+ 5 files changed, 107 insertions(+), 111 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   7169020..e00f87a  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   e00f87a..0fd6ec9  main       -> origin/main
+업데이트 중 e00f87a..0fd6ec9
+Created autostash: 662a725
+Fast-forward
+ now-showing/movies.json     | 1084 +++++++++++++++++++++----------------------
+ outlets/outlets.json        |  884 +++++++++++++++++------------------
+ rankings/ball-league.json   |  126 ++---
+ rankings/dark.json          |    2 +-
+ rankings/economy.json       |   42 +-
+ rankings/ent.json           |    2 +-
+ rankings/female-sports.json |    2 +-
+ rankings/football.json      |    2 +-
+ rankings/index.json         |   30 +-
+ rankings/male-sports.json   |    2 +-
+ rankings/misc.json          |    2 +-
+ rankings/records.json       |    2 +-
+ rankings/seed.json          |  188 ++++----
+ rankings/world.json         |    2 +-
+ 14 files changed, 1171 insertions(+), 1199 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✓ ott/disney.json
+✓ ../ott-rank/public/data/disney.json (로컬 dev 미러)
+✓ 디즈니+ 완료 (10편, 1개 그룹)
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (10편, 1개 그룹)
+── 6/6 성공, 0 실패
+▶ ott/ 변경 확인
+ ott/coupang.json | 28 ++++++++++++---------
+ ott/disney.json  | 36 +++++++++++++--------------
+ ott/laftel.json  | 74 ++++++++++++++++++++++++++++----------------------------
+ ott/tving.json   | 56 +++++++++++++++++++++---------------------
+ ott/wavve.json   | 42 ++++++++++++++++----------------
+ 5 files changed, 121 insertions(+), 115 deletions(-)
+[main 758d653] chore(ott): local refresh (2026-07-25 06:15 KST)
+ 5 files changed, 121 insertions(+), 115 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   0fd6ec9..758d653  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   758d653..e65b343  main       -> origin/main
+업데이트 중 758d653..e65b343
+Created autostash: fcf2867
+Fast-forward
+ korea-stats/stats.json      |   2 +-
+ outlets/outlets.json        | 379 +++++++++++++++++++++++---------------------
+ rankings/ball-league.json   |  70 ++++----
+ rankings/dark.json          |   2 +-
+ rankings/economy.json       |  46 +++---
+ rankings/ent.json           |   2 +-
+ rankings/female-sports.json |   2 +-
+ rankings/football.json      |   2 +-
+ rankings/index.json         |  28 ++--
+ rankings/male-sports.json   |   2 +-
+ rankings/misc.json          |   2 +-
+ rankings/records.json       |   2 +-
+ rankings/seed.json          | 136 ++++++++--------
+ rankings/world.json         |   2 +-
+ 14 files changed, 347 insertions(+), 330 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✓ ott/disney.json
+✓ ../ott-rank/public/data/disney.json (로컬 dev 미러)
+✓ 디즈니+ 완료 (10편, 1개 그룹)
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (10편, 1개 그룹)
+── 6/6 성공, 0 실패
+▶ ott/ 변경 확인
+ ott/coupang.json | 26 ++++++++++----------
+ ott/disney.json  | 38 +++++++++++++++---------------
+ ott/laftel.json  | 72 ++++++++++++++++++++++++++++----------------------------
+ ott/tving.json   | 50 +++++++++++++++++++--------------------
+ ott/wavve.json   | 42 ++++++++++++++++-----------------
+ 5 files changed, 114 insertions(+), 114 deletions(-)
+[main 4057c62] chore(ott): local refresh (2026-07-26 06:02 KST)
+ 5 files changed, 114 insertions(+), 114 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   e65b343..4057c62  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   4057c62..c8509db  main       -> origin/main
+업데이트 중 4057c62..c8509db
+Created autostash: 71421f7
+Fast-forward
+ korea-stats/stats.json      |   2 +-
+ outlets/outlets.json        | 752 ++++++++++++++++++++++----------------------
+ rankings/ball-league.json   | 170 +++++-----
+ rankings/dark.json          |   2 +-
+ rankings/economy.json       |   2 +-
+ rankings/ent.json           |   2 +-
+ rankings/female-sports.json |   2 +-
+ rankings/football.json      |  24 +-
+ rankings/index.json         |  28 +-
+ rankings/male-sports.json   |  46 +--
+ rankings/misc.json          |   2 +-
+ rankings/records.json       |   2 +-
+ rankings/seed.json          | 258 +++++++--------
+ rankings/world.json         |   2 +-
+ 14 files changed, 647 insertions(+), 647 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✓ ott/disney.json
+✓ ../ott-rank/public/data/disney.json (로컬 dev 미러)
+✓ 디즈니+ 완료 (10편, 1개 그룹)
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (10편, 1개 그룹)
+── 6/6 성공, 0 실패
+▶ ott/ 변경 확인
+ ott/coupang.json | 26 +++++++++---------
+ ott/disney.json  | 16 ++++++------
+ ott/laftel.json  | 80 +++++++++++++++++++++++++++-----------------------------
+ ott/tving.json   | 62 +++++++++++++++++++++----------------------
+ ott/wavve.json   | 38 +++++++++++++--------------
+ 5 files changed, 110 insertions(+), 112 deletions(-)
+[main d8a13de] chore(ott): local refresh (2026-07-27 06:08 KST)
+ 5 files changed, 110 insertions(+), 112 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   c8509db..d8a13de  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   13ae163..dbd2c41  main       -> origin/main
+업데이트 중 13ae163..dbd2c41
+Created autostash: bb26b75
+Fast-forward
+ outlets/outlets.json        | 920 ++++++++++++++++++++++----------------------
+ rankings/ball-league.json   |   2 +-
+ rankings/dark.json          |  38 +-
+ rankings/economy.json       |   2 +-
+ rankings/ent.json           |  24 +-
+ rankings/female-sports.json |   2 +-
+ rankings/football.json      |   8 +-
+ rankings/index.json         |  78 ++--
+ rankings/male-sports.json   |  62 ++-
+ rankings/misc.json          |   2 +-
+ rankings/records.json       |   2 +-
+ rankings/seed.json          | 200 ++++++----
+ rankings/world.json         |   2 +-
+ 13 files changed, 718 insertions(+), 624 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✓ ott/disney.json
+✓ ../ott-rank/public/data/disney.json (로컬 dev 미러)
+✓ 디즈니+ 완료 (10편, 1개 그룹)
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (10편, 1개 그룹)
+── 6/6 성공, 0 실패
+▶ ott/ 변경 확인
+ ott/coupang.json | 36 ++++++++++++------------
+ ott/disney.json  | 32 ++++++++++-----------
+ ott/laftel.json  | 84 ++++++++++++++++++++++++++++----------------------------
+ ott/tving.json   | 52 +++++++++++++++++------------------
+ ott/wavve.json   | 34 +++++++++++------------
+ 5 files changed, 119 insertions(+), 119 deletions(-)
+[main 1b90e7b] chore(ott): local refresh (2026-07-28 06:57 KST)
+ 5 files changed, 119 insertions(+), 119 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   dbd2c41..1b90e7b  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   1b90e7b..1031718  main       -> origin/main
+업데이트 중 1b90e7b..1031718
+Created autostash: 376afe1
+Fast-forward
+ korea-stats/stats.json    |   2 +-
+ outlets/outlets.json      | 704 +++++++++++++++++++++++-----------------------
+ rankings/ball-league.json |  30 +-
+ rankings/economy.json     |  40 +--
+ rankings/index.json       |  24 +-
+ rankings/seed.json        |  92 +++---
+ 6 files changed, 446 insertions(+), 446 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+✓ ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✗ 디즈니+ 실패: TOP 10 슬라이더를 찾지 못함
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (10편, 1개 그룹)
+── 5/6 성공, 1 실패
+▶ ott/ 변경 확인
+ ott/coupang.json |  2 +-
+ ott/laftel.json  | 82 ++++++++++++++++++++++++++++----------------------------
+ ott/netflix.json | 32 +++++++++++-----------
+ ott/tving.json   |  4 +--
+ ott/wavve.json   | 42 ++++++++++++++---------------
+ 5 files changed, 81 insertions(+), 81 deletions(-)
+[main 0da07ff] chore(ott): local refresh (2026-07-29 06:00 KST)
+ 5 files changed, 81 insertions(+), 81 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   1031718..0da07ff  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+fatal: unable to access 'https://github.com/ddakshe/minilabs-data-hub.git/': Could not resolve host: github.com
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+fatal: unable to access 'https://github.com/ddakshe/minilabs-data-hub.git/': Could not resolve host: github.com
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+fatal: unable to access 'https://github.com/ddakshe/minilabs-data-hub.git/': Could not resolve host: github.com
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   0da07ff..c61ecaa  main       -> origin/main
+업데이트 중 0da07ff..c61ecaa
+Created autostash: 60c7c18
+Fast-forward
+ convenience-events/products.json |   15139 +-
+ korea-stats/stats.json           |      72 +-
+ lifelong-learning/by-region.json | 1085461 +++++++++++++++++------------------
+ lifelong-learning/courses.json   |  806301 +++++++++++++-------------
+ now-showing/movies.json          |    1740 +-
+ outlets/outlets.json             |    1564 +-
+ rankings/ball-league.json        |     198 +-
+ rankings/dark.json               |       2 +-
+ rankings/economy.json            |      42 +-
+ rankings/ent.json                |       2 +-
+ rankings/female-sports.json      |       2 +-
+ rankings/football.json           |       2 +-
+ rankings/index.json              |      30 +-
+ rankings/male-sports.json        |       2 +-
+ rankings/misc.json               |       2 +-
+ rankings/records.json            |       2 +-
+ rankings/seed.json               |     260 +-
+ rankings/world.json              |       2 +-
+ 18 files changed, 949487 insertions(+), 961336 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✗ 디즈니+ 실패: TOP 10 슬라이더를 찾지 못함
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (9편, 1개 그룹)
+── 5/6 성공, 1 실패
+▶ ott/ 변경 확인
+ ott/coupang.json | 16 ++++--------
+ ott/laftel.json  | 80 +++++++++++++++++++++++++++++---------------------------
+ ott/tving.json   | 62 +++++++++++++++++++++----------------------
+ ott/wavve.json   | 42 ++++++++++++++---------------
+ 4 files changed, 98 insertions(+), 102 deletions(-)
+[main fa5f166] chore(ott): local refresh (2026-08-02 06:28 KST)
+ 4 files changed, 98 insertions(+), 102 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   c61ecaa..fa5f166  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   fa5f166..c9b9cc4  main       -> origin/main
+업데이트 중 fa5f166..c9b9cc4
+Created autostash: 6ca8c14
+Fast-forward
+ holidays/holidays.json      |   8 +-
+ korea-stats/stats.json      |   2 +-
+ now-showing/movies.json     | 647 ++++++++++++++++++++------------------------
+ outlets/outlets.json        | 576 +++++++++++++++++++--------------------
+ rankings/ball-league.json   | 152 +++++------
+ rankings/dark.json          |   2 +-
+ rankings/economy.json       |   2 +-
+ rankings/ent.json           |   2 +-
+ rankings/female-sports.json |   2 +-
+ rankings/football.json      |  26 +-
+ rankings/index.json         |  32 +--
+ rankings/male-sports.json   |   2 +-
+ rankings/misc.json          |   2 +-
+ rankings/records.json       |   2 +-
+ rankings/seed.json          | 198 +++++++-------
+ rankings/world.json         |   2 +-
+ 16 files changed, 795 insertions(+), 862 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✗ 디즈니+ 실패: TOP 10 슬라이더를 찾지 못함
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (9편, 1개 그룹)
+── 5/6 성공, 1 실패
+▶ ott/ 변경 확인
+ ott/coupang.json | 36 +++++++++++++--------------
+ ott/laftel.json  | 76 +++++++++++++++++++++++++++-----------------------------
+ ott/tving.json   | 56 ++++++++++++++++++++---------------------
+ ott/wavve.json   | 40 ++++++++++++++---------------
+ 4 files changed, 103 insertions(+), 105 deletions(-)
+[main a96aee2] chore(ott): local refresh (2026-08-03 06:01 KST)
+ 4 files changed, 103 insertions(+), 105 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   c9b9cc4..a96aee2  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   c153820..048b22c  main       -> origin/main
+업데이트 중 c153820..048b22c
+Created autostash: 8defb80
+Fast-forward
+ now-showing/movies.json     | 1019 ++++++++++++-------------------------------
+ outlets/outlets.json        |  744 ++++++++++++++++---------------
+ rankings/ball-league.json   |    2 +-
+ rankings/dark.json          |    2 +-
+ rankings/economy.json       |    2 +-
+ rankings/ent.json           |   16 +-
+ rankings/female-sports.json |   12 +-
+ rankings/football.json      |    2 +-
+ rankings/index.json         |   78 ++--
+ rankings/male-sports.json   |   40 +-
+ rankings/misc.json          |    2 +-
+ rankings/records.json       |    4 +-
+ rankings/seed.json          |  138 +++---
+ rankings/world.json         |    2 +-
+ 14 files changed, 806 insertions(+), 1257 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✗ 디즈니+ 실패: TOP 10 슬라이더를 찾지 못함
+▶ 쿠팡플레이 랜딩 조회…
+✗ 쿠팡플레이 실패: fetch failed
+── 4/6 성공, 2 실패
+▶ ott/ 변경 확인
+ ott/laftel.json | 82 ++++++++++++++++++++++++++++-----------------------------
+ ott/tving.json  | 50 +++++++++++++++++------------------
+ ott/wavve.json  | 32 +++++++++++-----------
+ 3 files changed, 82 insertions(+), 82 deletions(-)
+[main be9bfe0] chore(ott): local refresh (2026-08-04 06:19 KST)
+ 3 files changed, 82 insertions(+), 82 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   048b22c..be9bfe0  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   be9bfe0..6f76b5e  main       -> origin/main
+업데이트 중 be9bfe0..6f76b5e
+Created autostash: 9491bc0
+Fast-forward
+ korea-stats/stats.json    |    2 +-
+ now-showing/movies.json   | 1009 +++++++++++++++++++++----------------
+ outlets/outlets.json      | 1216 +++++++++++----------------------------------
+ rankings/ball-league.json |   50 +-
+ rankings/economy.json     |   44 +-
+ rankings/index.json       |   26 +-
+ rankings/seed.json        |  116 ++---
+ 7 files changed, 982 insertions(+), 1481 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+✓ ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✗ 디즈니+ 실패: TOP 10 슬라이더를 찾지 못함
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (10편, 1개 그룹)
+── 5/6 성공, 1 실패
+▶ ott/ 변경 확인
+ ott/coupang.json | 32 +++++++++++++++----------
+ ott/laftel.json  | 72 ++++++++++++++++++++++++++++----------------------------
+ ott/netflix.json | 42 ++++++++++++++++-----------------
+ ott/tving.json   | 58 ++++++++++++++++++++++-----------------------
+ ott/wavve.json   | 38 +++++++++++++++---------------
+ 5 files changed, 124 insertions(+), 118 deletions(-)
+[main 781b17e] chore(ott): local refresh (2026-08-05 06:09 KST)
+ 5 files changed, 124 insertions(+), 118 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   6f76b5e..781b17e  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   781b17e..ab1a2a7  main       -> origin/main
+업데이트 중 781b17e..ab1a2a7
+Created autostash: cec7be7
+Fast-forward
+ korea-stats/stats.json      |   28 +-
+ now-showing/movies.json     |  766 ++++++++++++---------------
+ outlets/outlets.json        | 1214 +++++++++++++++++++++++++++++++++----------
+ rankings/ball-league.json   |  116 ++---
+ rankings/dark.json          |    2 +-
+ rankings/economy.json       |   42 +-
+ rankings/ent.json           |    2 +-
+ rankings/female-sports.json |    2 +-
+ rankings/football.json      |    2 +-
+ rankings/index.json         |   28 +-
+ rankings/male-sports.json   |    2 +-
+ rankings/misc.json          |    2 +-
+ rankings/records.json       |    2 +-
+ rankings/seed.json          |  178 +++----
+ rankings/world.json         |    2 +-
+ 15 files changed, 1455 insertions(+), 933 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✗ 디즈니+ 실패: TOP 10 슬라이더를 찾지 못함
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (10편, 1개 그룹)
+── 5/6 성공, 1 실패
+▶ ott/ 변경 확인
+ ott/coupang.json |  6 ++---
+ ott/laftel.json  | 82 +++++++++++++++++++++++++++++---------------------------
+ ott/tving.json   | 56 +++++++++++++++++++-------------------
+ ott/wavve.json   | 34 +++++++++++------------
+ 4 files changed, 90 insertions(+), 88 deletions(-)
+[main 813dd51] chore(ott): local refresh (2026-08-06 06:12 KST)
+ 4 files changed, 90 insertions(+), 88 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   ab1a2a7..813dd51  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   813dd51..9c4f6c3  main       -> origin/main
+업데이트 중 813dd51..9c4f6c3
+Created autostash: 36aef30
+Fast-forward
+ convenience-events/products.json | 8193 +++++++++++++++++++-------------------
+ rankings/ball-league.json        |  138 +-
+ rankings/dark.json               |    2 +-
+ rankings/economy.json            |   46 +-
+ rankings/ent.json                |    2 +-
+ rankings/female-sports.json      |    2 +-
+ rankings/football.json           |    2 +-
+ rankings/index.json              |   28 +-
+ rankings/male-sports.json        |    2 +-
+ rankings/misc.json               |    2 +-
+ rankings/records.json            |    2 +-
+ rankings/seed.json               |  204 +-
+ rankings/world.json              |    2 +-
+ 13 files changed, 4254 insertions(+), 4371 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✗ 디즈니+ 실패: TOP 10 슬라이더를 찾지 못함
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (9편, 1개 그룹)
+── 5/6 성공, 1 실패
+▶ ott/ 변경 확인
+ ott/coupang.json | 12 +++------
+ ott/laftel.json  | 80 ++++++++++++++++++++++++++++----------------------------
+ ott/tving.json   | 40 ++++++++++++++--------------
+ ott/wavve.json   | 38 +++++++++++++--------------
+ 4 files changed, 82 insertions(+), 88 deletions(-)
+[main 03a6a90] chore(ott): local refresh (2026-08-07 06:05 KST)
+ 4 files changed, 82 insertions(+), 88 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   9c4f6c3..03a6a90  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   f948726..6ae04b5  main       -> origin/main
+업데이트 중 f948726..6ae04b5
+Created autostash: aa23b65
+Fast-forward
+ outlets/outlets.json        | 538 +++++++++++++++++++++++++-------------------
+ rankings/ball-league.json   | 140 ++++++------
+ rankings/dark.json          |   2 +-
+ rankings/economy.json       |  42 ++--
+ rankings/ent.json           |   2 +-
+ rankings/female-sports.json |   2 +-
+ rankings/football.json      |  40 ++--
+ rankings/index.json         |  30 +--
+ rankings/male-sports.json   |   2 +-
+ rankings/misc.json          |   2 +-
+ rankings/records.json       |   2 +-
+ rankings/seed.json          | 240 ++++++++++----------
+ rankings/world.json         |   2 +-
+ 13 files changed, 559 insertions(+), 485 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✗ 디즈니+ 실패: TOP 10 슬라이더를 찾지 못함
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (10편, 1개 그룹)
+── 5/6 성공, 1 실패
+▶ ott/ 변경 확인
+ ott/coupang.json | 46 +++++++++++++++++++---------------
+ ott/laftel.json  | 76 ++++++++++++++++++++++++++++----------------------------
+ ott/tving.json   | 62 ++++++++++++++++++++++-----------------------
+ ott/wavve.json   | 38 ++++++++++++++--------------
+ 4 files changed, 114 insertions(+), 108 deletions(-)
+[main a65b817] chore(ott): local refresh (2026-08-09 21:52 KST)
+ 4 files changed, 114 insertions(+), 108 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   6ae04b5..a65b817  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+이미 업데이트 상태입니다.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✓ ott/tving.json
+✓ ../ott-rank/public/data/tving.json (로컬 dev 미러)
+✓ 티빙 완료 (10편, 1개 그룹)
+▶ 디즈니+ 랜딩 조회…
+✗ 디즈니+ 실패: TOP 10 슬라이더를 찾지 못함
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (10편, 1개 그룹)
+── 5/6 성공, 1 실패
+▶ ott/ 변경 확인
+ ott/coupang.json |  2 +-
+ ott/laftel.json  | 72 +++++++++++++++++++++++++++-----------------------------
+ ott/tving.json   |  2 +-
+ ott/wavve.json   | 30 +++++++++++------------
+ 4 files changed, 52 insertions(+), 54 deletions(-)
+[main 5bf66ed] chore(ott): local refresh (2026-08-10 06:00 KST)
+ 4 files changed, 52 insertions(+), 54 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   a65b817..5bf66ed  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   44a6a0d..be227e9  main       -> origin/main
+업데이트 중 44a6a0d..be227e9
+Created autostash: 27f5450
+Fast-forward
+ rankings/ball-league.json   |   2 +-
+ rankings/dark.json          |   2 +-
+ rankings/economy.json       |   2 +-
+ rankings/ent.json           |  22 +++----
+ rankings/female-sports.json |  36 ++++++------
+ rankings/football.json      |   2 +-
+ rankings/index.json         |  80 +++++++++++++-------------
+ rankings/male-sports.json   |   4 +-
+ rankings/misc.json          |   2 +-
+ rankings/records.json       |   4 +-
+ rankings/seed.json          | 136 ++++++++++++++++++++++----------------------
+ rankings/world.json         |   4 +-
+ 12 files changed, 148 insertions(+), 148 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+· 변경 없음, 건너뜀: /Users/kyungtaekim/ClaudeProjects/minilabs-data-hub/ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✗ 티빙 실패: 랭킹 밴드(/all/ranking)를 찾지 못함
+▶ 디즈니+ 랜딩 조회…
+✗ 디즈니+ 실패: TOP 10 슬라이더를 찾지 못함
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (9편, 1개 그룹)
+── 4/6 성공, 2 실패
+▶ ott/ 변경 확인
+ ott/coupang.json | 32 ++++++++++-------------
+ ott/laftel.json  | 78 ++++++++++++++++++++++++++++----------------------------
+ ott/wavve.json   | 22 ++++++++--------
+ 3 files changed, 63 insertions(+), 69 deletions(-)
+[main 96946d0] chore(ott): local refresh (2026-08-11 06:00 KST)
+ 3 files changed, 63 insertions(+), 69 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   be227e9..96946d0  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   96946d0..d583f84  main       -> origin/main
+업데이트 중 96946d0..d583f84
+Created autostash: 152338d
+Fast-forward
+ korea-stats/stats.json    |   2 +-
+ now-showing/movies.json   | 658 ++++++++++++++++++++++++---------------------
+ outlets/outlets.json      | 661 +++++++++++++++++++++++-----------------------
+ rankings/ball-league.json |  58 ++--
+ rankings/economy.json     |  40 +--
+ rankings/football.json    |   2 +-
+ rankings/index.json       |  24 +-
+ rankings/seed.json        | 122 ++++-----
+ 8 files changed, 817 insertions(+), 750 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+✓ ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✗ 티빙 실패: 랭킹 밴드(/all/ranking)를 찾지 못함
+▶ 디즈니+ 랜딩 조회…
+✗ 디즈니+ 실패: TOP 10 슬라이더를 찾지 못함
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (10편, 1개 그룹)
+── 4/6 성공, 2 실패
+▶ ott/ 변경 확인
+ ott/coupang.json | 10 ++++++--
+ ott/laftel.json  | 72 +++++++++++++++++++++++++++++---------------------------
+ ott/netflix.json | 56 +++++++++++++++++++++----------------------
+ ott/wavve.json   | 42 ++++++++++++++++-----------------
+ 4 files changed, 94 insertions(+), 86 deletions(-)
+[main 6824b76] chore(ott): local refresh (2026-08-12 06:00 KST)
+ 4 files changed, 94 insertions(+), 86 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   d583f84..6824b76  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   301ddb1..476e5bd  main       -> origin/main
+업데이트 중 301ddb1..476e5bd
+Created autostash: a398be2
+Fast-forward
+ now-showing/movies.json | 999 +++++++++++++++++++++++++-----------------------
+ 1 file changed, 522 insertions(+), 477 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+✓ ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✗ 티빙 실패: 랭킹 밴드(/all/ranking)를 찾지 못함
+▶ 디즈니+ 랜딩 조회…
+✗ 디즈니+ 실패: TOP 10 슬라이더를 찾지 못함
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (10편, 1개 그룹)
+── 4/6 성공, 2 실패
+▶ ott/ 변경 확인
+ ott/coupang.json | 16 +++++------
+ ott/laftel.json  | 82 ++++++++++++++++++++++++++++----------------------------
+ ott/netflix.json |  2 +-
+ ott/wavve.json   | 34 +++++++++++------------
+ 4 files changed, 67 insertions(+), 67 deletions(-)
+[main c87dabc] chore(ott): local refresh (2026-08-13 06:00 KST)
+ 4 files changed, 67 insertions(+), 67 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   476e5bd..c87dabc  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   4603f81..6a3efff  main       -> origin/main
+업데이트 중 c87dabc..6a3efff
+Created autostash: a0bc3ed
+Fast-forward
+ .github/workflows/fetch-convenience-events.yml |   66 +-
+ convenience-events/products.json               |  332 +-------
+ korea-stats/stats.json                         |   30 +-
+ ott/netflix.json                               |    2 +-
+ outlets/outlets.json                           | 1034 ++++++++++++------------
+ rankings/ball-league.json                      |  186 ++---
+ rankings/dark.json                             |    2 +-
+ rankings/economy.json                          |   46 +-
+ rankings/ent.json                              |    2 +-
+ rankings/female-sports.json                    |    2 +-
+ rankings/football.json                         |    2 +-
+ rankings/index.json                            |   32 +-
+ rankings/male-sports.json                      |    2 +-
+ rankings/misc.json                             |    2 +-
+ rankings/records.json                          |    2 +-
+ rankings/seed.json                             |  252 +++---
+ rankings/world.json                            |    2 +-
+ rate-lens/rates.json                           |    2 +-
+ scripts/fetch-convenience-events.mjs           |  120 ++-
+ 19 files changed, 1015 insertions(+), 1103 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+✓ ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✗ 티빙 실패: 랭킹 밴드(/all/ranking)를 찾지 못함
+▶ 디즈니+ 랜딩 조회…
+✗ 디즈니+ 실패: TOP 10 슬라이더를 찾지 못함
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (10편, 1개 그룹)
+── 4/6 성공, 2 실패
+▶ ott/ 변경 확인
+ ott/coupang.json | 20 ++++++++--------
+ ott/laftel.json  | 72 ++++++++++++++++++++++++++++----------------------------
+ ott/netflix.json |  2 +-
+ ott/wavve.json   | 42 ++++++++++++++++-----------------
+ 4 files changed, 68 insertions(+), 68 deletions(-)
+[main c6576ba] chore(ott): local refresh (2026-08-14 06:12 KST)
+ 4 files changed, 68 insertions(+), 68 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   6a3efff..c6576ba  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+https://github.com/ddakshe/minilabs-data-hub URL에서
+ * branch            main       -> FETCH_HEAD
+   c6576ba..75b2f6f  main       -> origin/main
+업데이트 중 c6576ba..75b2f6f
+Created autostash: 4aadce0
+Fast-forward
+ now-showing/movies.json     | 1198 +++++++++++++++++++++++----------------
+ outlets/outlets.json        | 1304 +++++++++++++++++++++----------------------
+ rankings/ball-league.json   |  158 +++---
+ rankings/dark.json          |    2 +-
+ rankings/economy.json       |   50 +-
+ rankings/ent.json           |    2 +-
+ rankings/female-sports.json |    2 +-
+ rankings/football.json      |    2 +-
+ rankings/index.json         |   28 +-
+ rankings/male-sports.json   |    2 +-
+ rankings/misc.json          |    2 +-
+ rankings/records.json       |    2 +-
+ rankings/seed.json          |  228 ++++----
+ rankings/world.json         |    2 +-
+ rate-lens/rates.json        |    2 +-
+ 15 files changed, 1586 insertions(+), 1398 deletions(-)
+자동 스태시 적용.
+▶ 스크래핑
+▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…
+✓ ott/netflix.json
+✓ ../ott-rank/public/data/netflix.json (로컬 dev 미러)
+✓ 넷플릭스 완료 (10편, 1개 그룹)
+▶ 라프텔 인기 랭킹 조회…
+✓ ott/laftel.json
+✓ ../ott-rank/public/data/laftel.json (로컬 dev 미러)
+✓ 라프텔 완료 (10편, 1개 그룹)
+▶ 웨이브 오늘의 Top 조회…
+✓ ott/wavve.json
+✓ ../ott-rank/public/data/wavve.json (로컬 dev 미러)
+✓ 웨이브 완료 (10편, 1개 그룹)
+▶ 티빙 랭킹 페이지 조회…
+✗ 티빙 실패: 랭킹 밴드(/all/ranking)를 찾지 못함
+▶ 디즈니+ 랜딩 조회…
+✗ 디즈니+ 실패: TOP 10 슬라이더를 찾지 못함
+▶ 쿠팡플레이 랜딩 조회…
+✓ ott/coupang.json
+✓ ../ott-rank/public/data/coupang.json (로컬 dev 미러)
+✓ 쿠팡플레이 완료 (10편, 1개 그룹)
+── 4/6 성공, 2 실패
+▶ ott/ 변경 확인
+ ott/coupang.json | 32 +++++++++++------------
+ ott/laftel.json  | 80 ++++++++++++++++++++++++++++----------------------------
+ ott/netflix.json |  2 +-
+ ott/wavve.json   | 42 ++++++++++++++---------------
+ 4 files changed, 78 insertions(+), 78 deletions(-)
+[main 2bd6a6b] chore(ott): local refresh (2026-08-15 06:09 KST)
+ 4 files changed, 78 insertions(+), 78 deletions(-)
+To https://github.com/ddakshe/minilabs-data-hub.git
+   75b2f6f..2bd6a6b  main -> main
+▶ jsDelivr 캐시 purge (즉시 반영)
+✓ push + purge 완료 → 앱 즉시 최신화 (재배포 불필요)
+▶ 최신 pull (CI가 올린 커밋과 충돌 방지)
+fatal: unable to access 'https://github.com/ddakshe/minilabs-data-hub.git/': Could not resolve host: github.com

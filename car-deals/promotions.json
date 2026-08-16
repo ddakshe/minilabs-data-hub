@@ -1,10 +1,11 @@
 {
   "month": "2026-08",
-  "updatedAt": "2026-08-10",
+  "updatedAt": "2026-08-12",
   "items": [
     {
       "brand": "kia",
       "model": "레이 EV",
+      "category": "EV",
       "basePrice": 30620000,
       "benefits": [],
       "conditionalBenefits": [
@@ -29,6 +30,7 @@
     {
       "brand": "kia",
       "model": "EV3",
+      "category": "EV",
       "basePrice": 51500000,
       "benefits": [
         {
@@ -68,6 +70,7 @@
     {
       "brand": "kia",
       "model": "EV4",
+      "category": "EV",
       "basePrice": 52930000,
       "benefits": [
         {
@@ -107,6 +110,7 @@
     {
       "brand": "kia",
       "model": "EV5",
+      "category": "EV",
       "basePrice": 52070000,
       "benefits": [
         {
@@ -141,6 +145,7 @@
     {
       "brand": "kia",
       "model": "EV6",
+      "category": "EV",
       "basePrice": 50080000,
       "benefits": [
         {
@@ -175,6 +180,7 @@
     {
       "brand": "kia",
       "model": "EV6 GT",
+      "category": "EV",
       "basePrice": 73210000,
       "benefits": [],
       "conditionalBenefits": [
@@ -199,6 +205,7 @@
     {
       "brand": "kia",
       "model": "EV9",
+      "category": "EV",
       "basePrice": 83290000,
       "benefits": [
         {
@@ -238,6 +245,7 @@
     {
       "brand": "kia",
       "model": "봉고Ⅲ EV",
+      "category": "EV",
       "basePrice": 43450000,
       "benefits": [
         {
@@ -269,6 +277,7 @@
     {
       "brand": "kia",
       "model": "PV5 패신저",
+      "category": "PBV",
       "basePrice": 51340000,
       "benefits": [
         {
@@ -304,6 +313,7 @@
     {
       "brand": "kia",
       "model": "PV5 카고",
+      "category": "PBV",
       "basePrice": 45200000,
       "benefits": [],
       "conditionalBenefits": [
@@ -329,6 +339,7 @@
     {
       "brand": "kia",
       "model": "PV5 WAV",
+      "category": "PBV",
       "basePrice": 54280000,
       "benefits": [
         {
@@ -363,6 +374,7 @@
     {
       "brand": "kia",
       "model": "PV5 오픈베드",
+      "category": "PBV",
       "basePrice": 45000000,
       "benefits": [],
       "conditionalBenefits": [
@@ -388,6 +400,7 @@
     {
       "brand": "kia",
       "model": "모닝",
+      "category": "승용",
       "basePrice": 16010000,
       "benefits": [],
       "conditionalBenefits": [
@@ -412,6 +425,7 @@
     {
       "brand": "kia",
       "model": "레이",
+      "category": "승용",
       "basePrice": 19550000,
       "benefits": [],
       "conditionalBenefits": [
@@ -436,6 +450,7 @@
     {
       "brand": "kia",
       "model": "K5",
+      "category": "승용",
       "basePrice": 35430000,
       "benefits": [
         {
@@ -470,6 +485,7 @@
     {
       "brand": "kia",
       "model": "K8",
+      "category": "승용",
       "basePrice": 52750000,
       "benefits": [
         {
@@ -505,6 +521,7 @@
     {
       "brand": "kia",
       "model": "K9",
+      "category": "승용",
       "basePrice": 74750000,
       "benefits": [],
       "conditionalBenefits": [
@@ -530,6 +547,7 @@
     {
       "brand": "kia",
       "model": "셀토스",
+      "category": "RV",
       "basePrice": 33430000,
       "benefits": [],
       "conditionalBenefits": [
@@ -554,6 +572,7 @@
     {
       "brand": "kia",
       "model": "니로",
+      "category": "RV",
       "basePrice": 30270000,
       "benefits": [
         {
@@ -584,6 +603,7 @@
     {
       "brand": "kia",
       "model": "스포티지",
+      "category": "RV",
       "basePrice": 43760000,
       "benefits": [],
       "conditionalBenefits": [
@@ -608,6 +628,7 @@
     {
       "brand": "kia",
       "model": "쏘렌토",
+      "category": "RV",
       "basePrice": 47150000,
       "benefits": [
         {
@@ -639,6 +660,7 @@
     {
       "brand": "kia",
       "model": "타스만",
+      "category": "RV",
       "basePrice": 43500000,
       "benefits": [
         {
@@ -673,6 +695,7 @@
     {
       "brand": "kia",
       "model": "카니발",
+      "category": "RV",
       "basePrice": 51520000,
       "benefits": [],
       "conditionalBenefits": [
@@ -698,6 +721,7 @@
     {
       "brand": "kia",
       "model": "카니발 하이리무진",
+      "category": "RV",
       "basePrice": 74380000,
       "benefits": [],
       "conditionalBenefits": [
@@ -723,6 +747,7 @@
     {
       "brand": "kia",
       "model": "봉고Ⅲ 트럭",
+      "category": "택시 & 상용",
       "basePrice": 25050000,
       "benefits": [
         {
@@ -862,13 +887,14 @@
           "amount": 800000
         }
       ],
-      "testDriveUrl": "https://www.renault.co.kr/ko/side/app_testdrive.jsp?curTmst=20260810000536784&bannerUrl=&bannerSeq=&utm_source=&utm_medium=&utm_campaign=&utm_content=&h_mcode=A214&h_carsel=XM3&inBanner=RKMpurchasingTestdriveArkana&inSeq=1",
+      "testDriveUrl": "https://www.renault.co.kr/ko/side/app_testdrive.jsp?curTmst=20260812105652782&bannerUrl=&bannerSeq=&utm_source=&utm_medium=&utm_campaign=&utm_content=&h_mcode=A214&h_carsel=XM3&inBanner=RKMpurchasingTestdriveArkana&inSeq=1",
       "endsAt": "2026-08-31",
       "isEv": false
     },
     {
       "brand": "hyundai",
       "model": "디 올 뉴 아반떼",
+      "category": "승용",
       "basePrice": 23980000,
       "benefits": [
         {
@@ -894,6 +920,7 @@
     {
       "brand": "hyundai",
       "model": "디 올 뉴 아반떼 Hybrid",
+      "category": "승용",
       "basePrice": 30420000,
       "benefits": [
         {
@@ -919,6 +946,7 @@
     {
       "brand": "hyundai",
       "model": "더 뉴 그랜저",
+      "category": "승용",
       "basePrice": 42450000,
       "benefits": [
         {
@@ -951,6 +979,7 @@
     {
       "brand": "hyundai",
       "model": "더 뉴 그랜저 Hybrid",
+      "category": "승용",
       "basePrice": 48330000,
       "benefits": [],
       "conditionalBenefits": [
@@ -972,6 +1001,7 @@
     {
       "brand": "hyundai",
       "model": "그랜저",
+      "category": "승용",
       "basePrice": 38520000,
       "benefits": [
         {
@@ -1009,6 +1039,7 @@
     {
       "brand": "hyundai",
       "model": "그랜저 Hybrid",
+      "category": "승용",
       "basePrice": 44170000,
       "benefits": [
         {
@@ -1045,6 +1076,7 @@
     {
       "brand": "hyundai",
       "model": "쏘나타 디 엣지",
+      "category": "승용",
       "basePrice": 28660000,
       "benefits": [
         {
@@ -1080,6 +1112,7 @@
     {
       "brand": "hyundai",
       "model": "쏘나타 디 엣지 Hybrid",
+      "category": "승용",
       "basePrice": 33180000,
       "benefits": [
         {
@@ -1115,6 +1148,7 @@
     {
       "brand": "hyundai",
       "model": "베뉴",
+      "category": "SUV",
       "basePrice": 19940000,
       "benefits": [
         {
@@ -1149,6 +1183,7 @@
     {
       "brand": "hyundai",
       "model": "코나",
+      "category": "SUV",
       "basePrice": 23930000,
       "benefits": [
         {
@@ -1183,6 +1218,7 @@
     {
       "brand": "hyundai",
       "model": "코나 Hybrid",
+      "category": "SUV",
       "basePrice": 29380000,
       "benefits": [
         {
@@ -1217,6 +1253,7 @@
     {
       "brand": "hyundai",
       "model": "디 올 뉴 팰리세이드",
+      "category": "SUV",
       "basePrice": 43830000,
       "benefits": [
         {
@@ -1267,6 +1304,7 @@
     {
       "brand": "hyundai",
       "model": "디 올 뉴 팰리세이드 Hybrid",
+      "category": "SUV",
       "basePrice": 49820000,
       "benefits": [
         {
@@ -1317,6 +1355,7 @@
     {
       "brand": "hyundai",
       "model": "싼타페",
+      "category": "SUV",
       "basePrice": 36570000,
       "benefits": [
         {
@@ -1361,6 +1400,7 @@
     {
       "brand": "hyundai",
       "model": "싼타페 Hybrid",
+      "category": "SUV",
       "basePrice": 40220000,
       "benefits": [
         {
@@ -1405,6 +1445,7 @@
     {
       "brand": "hyundai",
       "model": "투싼",
+      "category": "SUV",
       "basePrice": 28440000,
       "benefits": [
         {
@@ -1435,6 +1476,7 @@
     {
       "brand": "hyundai",
       "model": "투싼 Hybrid",
+      "category": "SUV",
       "basePrice": 33180000,
       "benefits": [
         {
@@ -1465,6 +1507,7 @@
     {
       "brand": "hyundai",
       "model": "더 뉴 스타리아 리무진 Hybrid",
+      "category": "MPV",
       "basePrice": 59800000,
       "benefits": [
         {
@@ -1510,6 +1553,7 @@
     {
       "brand": "hyundai",
       "model": "더 뉴 스타리아 라운지",
+      "category": "MPV",
       "basePrice": 47720000,
       "benefits": [
         {
@@ -1555,6 +1599,7 @@
     {
       "brand": "hyundai",
       "model": "넥쏘",
+      "category": "수소 / 전기차",
       "basePrice": 76470000,
       "benefits": [
         {
@@ -1591,6 +1636,7 @@
     {
       "brand": "hyundai",
       "model": "더 뉴 스타리아 라운지 Hybrid",
+      "category": "MPV",
       "basePrice": 44990000,
       "benefits": [
         {
@@ -1636,6 +1682,7 @@
     {
       "brand": "hyundai",
       "model": "더 뉴 스타리아",
+      "category": "MPV",
       "basePrice": 32590000,
       "benefits": [
         {
@@ -1681,6 +1728,7 @@
     {
       "brand": "hyundai",
       "model": "더 뉴 스타리아 Hybrid",
+      "category": "MPV",
       "basePrice": 36250000,
       "benefits": [
         {
@@ -1726,6 +1774,7 @@
     {
       "brand": "hyundai",
       "model": "코나 Electric",
+      "category": "수소 / 전기차",
       "basePrice": 41520000,
       "benefits": [
         {
@@ -1774,6 +1823,7 @@
     {
       "brand": "hyundai",
       "model": "아이오닉 5",
+      "category": "수소 / 전기차",
       "basePrice": 47350000,
       "benefits": [
         {
@@ -1818,6 +1868,7 @@
     {
       "brand": "hyundai",
       "model": "더 뉴 스타리아 Electric",
+      "category": "수소 / 전기차",
       "basePrice": 57920000,
       "benefits": [],
       "conditionalBenefits": [
@@ -1838,6 +1889,7 @@
     {
       "brand": "hyundai",
       "model": "더 뉴 스타리아 라운지 Electric",
+      "category": "수소 / 전기차",
       "basePrice": 63590000,
       "benefits": [],
       "conditionalBenefits": [
@@ -1858,6 +1910,7 @@
     {
       "brand": "hyundai",
       "model": "더 뉴 스타리아 리무진 Electric",
+      "category": "수소 / 전기차",
       "basePrice": 84820000,
       "benefits": [],
       "conditionalBenefits": [
@@ -1878,6 +1931,7 @@
     {
       "brand": "hyundai",
       "model": "아이오닉 9",
+      "category": "수소 / 전기차",
       "basePrice": 67590000,
       "benefits": [
         {
@@ -1933,6 +1987,7 @@
     {
       "brand": "hyundai",
       "model": "더 뉴 아이오닉 6",
+      "category": "수소 / 전기차",
       "basePrice": 48560000,
       "benefits": [
         {
@@ -1977,6 +2032,7 @@
     {
       "brand": "hyundai",
       "model": "아이오닉 6 N",
+      "category": "N",
       "basePrice": 79900000,
       "benefits": [
         {
@@ -2021,6 +2077,7 @@
     {
       "brand": "hyundai",
       "model": "ST1",
+      "category": "수소 / 전기차",
       "basePrice": 56550000,
       "benefits": [
         {
@@ -2065,6 +2122,7 @@
     {
       "brand": "hyundai",
       "model": "포터 II Electric",
+      "category": "수소 / 전기차",
       "basePrice": 43500000,
       "benefits": [
         {
@@ -2109,6 +2167,7 @@
     {
       "brand": "hyundai",
       "model": "아이오닉 5 N",
+      "category": "N",
       "basePrice": 78790000,
       "benefits": [
         {
@@ -2153,6 +2212,7 @@
     {
       "brand": "hyundai",
       "model": "아반떼 N",
+      "category": "N",
       "basePrice": 33560000,
       "benefits": [
         {
@@ -2197,6 +2257,7 @@
     {
       "brand": "hyundai",
       "model": "포터 II",
+      "category": "소형트럭&택시",
       "basePrice": 21410000,
       "benefits": [
         {

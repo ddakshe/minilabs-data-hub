@@ -1,0 +1,88 @@
+name: Fetch chicken-brand events
+
+on:
+  schedule:
+    - cron: '0 0 * * 1'   # 매주 월요일 09:00 KST (치킨 이벤트는 주 단위로 갱신)
+  workflow_dispatch:
+    inputs:
+      only:
+        description: '긁을 브랜드 콤마목록 (비우면 전체 어댑터). 예: cheogajip'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-chicken-events
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # cheerio 의존성 설치 (브라우저 다운로드 없이 node 패키지만).
+      - name: Install deps
+        run: npm ci
+
+      - name: Show trigger context
+        run: |
+          echo "Event  : ${{ github.event_name }}"
+          echo "Only   : ${{ github.event.inputs.only || '(all adapters)' }}"
+          date -u "+UTC: %Y-%m-%d %H:%M:%S"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      - name: Fetch chicken events
+        run: |
+          ONLY="${{ github.event.inputs.only }}"
+          node scripts/fetch-chicken-events.mjs "$ONLY"
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git add chicken-events/
+          if git diff --cached --quiet -- chicken-events/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes — skipping commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --cached --stat chicken-events/
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
+          TRIGGER="${{ github.event_name }}"
+          if [ "$TRIGGER" = "workflow_dispatch" ]; then
+            MSG="chore(chicken-events): manual refresh ($DATE_KST)"
+          else
+            MSG="chore(chicken-events): weekly refresh ($DATE_KST)"
+          fi
+
+          git commit -m "$MSG"
+          git push
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## 치킨 이벤트 수집 결과"
+            echo ""
+            echo "- Trigger: \`${{ github.event_name }}\`"
+            echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
+            echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+          } >> "$GITHUB_STEP_SUMMARY"

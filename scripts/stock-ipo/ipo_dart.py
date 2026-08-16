@@ -42,6 +42,15 @@ def _fetch_filings(key, bgn, end):
     return [i for i in out if '증권신고서(지분증권)' in i['report_nm']]
 
 
+def is_price_confirmed(report_nm):
+    """[발행조건확정] 공시에만 확정 공모가가 있다.
+
+    최초·[기재정정] 증권신고서의 slprc 는 희망밴드 '최저가액'이다 (원문에 명시).
+    estkRs 는 [발행조건확정] 을 색인하지 않으므로(013), 확정가는 원문에서 뽑아야 한다.
+    """
+    return '발행조건확정' in (report_nm or '')
+
+
 def _clean(v):
     """DART는 빈 값을 '-' 로 준다."""
     v = (v or '').strip()
@@ -70,7 +79,8 @@ def _fetch_offering(key, corp_code, bgn, end):
         'paymentDate': parse_date(gen.get('pymd')),
         'noticeDate': parse_date(gen.get('sband')),
         'allotmentDate': parse_date(gen.get('asand')),
-        'offerPrice': parse_number(sec.get('slprc')),
+        # ⚠️ 확정가가 아니라 희망밴드 최저가액이다. 확정가는 [발행조건확정] 원문에 있다
+        'bandLow': parse_number(sec.get('slprc')),
         'shareCount': parse_number(sec.get('stkcnt')),
         'totalAmount': parse_number(sec.get('slta')),
         'faceValue': parse_number(sec.get('fv')),
@@ -123,7 +133,7 @@ EMPTY_DETAIL = {
     'offerPrice': None, 'shareCount': None, 'totalAmount': None,
     'faceValue': None, 'offerMethod': None, 'shareType': None,
     'underwriter': None, 'underwriters': [], 'fundUse': [],
-    'oldShareSales': [], 'putBack': None,
+    'oldShareSales': [], 'putBack': None, 'bandLow': None,
 }
 
 
@@ -192,11 +202,15 @@ def fetch_ipos(key, bgn, end):
     print(f'  증권신고서(지분증권) {len(filings)}건')
 
     companies = {}
+    confirmed = {}      # corp_code -> [발행조건확정] 공시의 rcept_no
     for f in filings:
         companies.setdefault(f['corp_code'], f)
+        if is_price_confirmed(f['report_nm']):
+            confirmed.setdefault(f['corp_code'], f['rcept_no'])
 
     ipos = [c for c in companies.values() if is_ipo(c)]
     print(f'  비상장(IPO) {len(ipos)} / 상장(유상증자) {len(companies) - len(ipos)}')
+    print(f'  발행조건확정 공시 {len(confirmed)}건')
 
     rows = []
     for c in ipos:
@@ -208,6 +222,7 @@ def fetch_ipos(key, bgn, end):
             'corpName': c['corp_name'],
             'isSpac': is_spac(c['corp_name']),
             **(detail or dict(EMPTY_DETAIL)),
+            'confirmedRceptNo': confirmed.get(c['corp_code']),
             'company': company,
             # BRAND.md: 외부 링크는 종목당 1개까지. 공시 원문이 그 하나다.
             'dartUrl': (f"https://dart.fss.or.kr/dsaf001/main.do?rcpNo={detail['receiptNo']}"
