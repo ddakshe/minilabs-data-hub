@@ -54,9 +54,9 @@ jobs:
           TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
 
       # 표준 라이브러리만 쓰므로 의존성 설치 단계가 없다.
-      - name: Run tests
-        run: python3 -m pytest scripts/stock-ipo/tests -q
-
+      # 테스트는 로컬에서 돌린다 (pytest 는 표준 라이브러리가 아니라 CI 에 설치가 필요하고,
+      # 이 저장소의 다른 워크플로도 테스트를 돌리지 않는다):
+      #   python3 -m pytest scripts/stock-ipo/tests -q
       - name: Fetch IPO data
         env:
           DART_API_KEY: ${{ secrets.DART_API_KEY }}
