@@ -1,0 +1,102 @@
+name: Fetch Recall
+
+# recall-mini(리콜모아) 앱이 쓰는 국내 리콜 정보.
+#
+# 매일 도는 이유: 공산품 월 63건 / 자동차 29건 / 의약품 16건이 꾸준히 들어온다.
+# API 기본 정렬이 최신순이라 카테고리당 300건만 받아도 최근 수년치를 덮는다.
+# diff 감지가 있어 실제 커밋은 데이터가 바뀐 날에만 발생한다.
+#
+# IP 제약 없음 — 키가 집 공인 IP 기준으로 발급됐지만 러너(20.57.133.118)에서도
+# 9/9 통과를 확인했다 (probe-recall, 2026-08-16).
+
+on:
+  schedule:
+    - cron: '30 21 * * *'  # 매일 06:30 KST (fetch-rates 06:00 과 겹치지 않게)
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: '실행 이유 (로그에만 기록, 선택)'
+        required: false
+        default: 'manual refresh'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-recall
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Show trigger context
+        run: |
+          echo "Event  : ${{ github.event_name }}"
+          echo "Reason : ${{ github.event.inputs.reason || '(scheduled)' }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      # 의존성 없이 Node 내장 fetch 만 쓰므로 npm ci 를 생략한다.
+      - name: Fetch recalls
+        env:
+          RECALL_API_KEYS: ${{ secrets.RECALL_API_KEYS }}
+        run: node scripts/fetch-recall.mjs
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git add recall/
+          # meta.json 은 fetchedAt 때문에 매일 바뀐다. 그것만 바뀌었으면 커밋하지 않는다 —
+          # 내용이 같은데 매일 커밋이 쌓이면 히스토리에서 진짜 변경을 못 찾는다.
+          if git diff --cached --quiet -- recall/recalls.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "recalls.json 변화 없음 — 커밋 생략."
+            git restore --staged recall/ || true
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --cached --stat recall/
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            MSG="chore(recall): manual refresh ($DATE_KST)"
+          else
+            MSG="chore(recall): refresh ($DATE_KST)"
+          fi
+
+          git commit -m "$MSG"
+          # 다른 워크플로가 같은 시간대에 밀어넣을 수 있다. 한 번은 되받아 재시도한다.
+          git push || (git pull --rebase origin main && git push)
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Recall Fetch Summary"
+            echo ""
+            echo "- Trigger: \`${{ github.event_name }}\`"
+            echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
+            echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+            if [ -f recall/meta.json ]; then
+              echo ""
+              echo '```json'
+              cat recall/meta.json
+              echo '```'
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
