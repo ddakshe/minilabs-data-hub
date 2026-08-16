@@ -1,0 +1,102 @@
+name: Fetch Stock IPO
+
+# stock-ipo-mini(공모주 미리보기) 앱이 쓰는 국내 공모주 청약 일정.
+#
+# 매일 도는 이유: 공모가는 [기재정정] 공시로 청약 며칠 전에 확정된다.
+# 주 단위로 돌리면 '공모가 확정 전'인 채로 청약이 시작되는 구간이 생긴다.
+# 실측(2026-08-16, 일요일): 하루 사이 13건 중 2건이 미확정 → 확정으로 바뀌었다.
+# diff 감지가 있어 실제 커밋은 데이터가 바뀐 날에만 발생한다.
+#
+# 다른 워크플로와 달리 Python 을 쓴다: DART 증권신고서 원문이 ZIP 으로 오는데
+# Node 로 풀려면 외부 의존성이 필요하다. Python 은 zipfile 이 표준 라이브러리라
+# 이 저장소의 '의존성 설치 없음' 원칙을 그대로 지킨다.
+#
+# 토스증권 API 는 허용 IP 사전 등록이 필수라 Actions 에서 호출할 수 없다.
+# 상장일 보강은 고정 IP 머신에서 따로 돌린다 (없어도 배치는 정상 동작).
+
+on:
+  schedule:
+    - cron: '0 23 * * *'  # 매일 08:00 KST — 청약 시작(보통 10시)보다 앞선다
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: '실행 이유 (로그에만 기록, 선택)'
+        required: false
+        default: 'manual refresh'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-stock-ipo
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Show trigger context
+        run: |
+          echo "Event  : ${{ github.event_name }}"
+          echo "Reason : ${{ github.event.inputs.reason || '(scheduled)' }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      # 표준 라이브러리만 쓰므로 의존성 설치 단계가 없다.
+      - name: Run tests
+        run: python3 -m pytest scripts/stock-ipo/tests -q
+
+      - name: Fetch IPO data
+        env:
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+        run: python3 scripts/stock-ipo/build_ipo_json.py
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git add stock-ipo/
+          if git diff --cached --quiet -- stock-ipo/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes — skipping commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --cached --stat stock-ipo/
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            MSG="chore(stock-ipo): manual refresh ($DATE_KST)"
+          else
+            MSG="chore(stock-ipo): refresh ($DATE_KST)"
+          fi
+
+          git commit -m "$MSG"
+          git push
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Stock IPO Fetch Summary"
+            echo ""
+            echo "- Trigger: \`${{ github.event_name }}\`"
+            echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
+            echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+          } >> "$GITHUB_STEP_SUMMARY"

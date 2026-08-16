@@ -17,7 +17,23 @@ holidays/                  ← holiday-pto-mini 앱용 (KASI, 월 1회 diff 감�
   holidays.json            # 현재 연도부터 +2년치 공휴일·대체공휴일
 convenience-events/        ← convenience-events-mini 앱용 (편의점 3사 행사, 매일)
   products.json            # CU·GS25·세븐일레븐 1+1/2+1/증정/할인 (5천여건, 가격·카테고리 포함)
+chicken-events/            ← chicken-event-mini 앱용 (치킨 브랜드 진행중 이벤트, 매주 월)
+  events.json              # 브랜드별 이벤트(제목·기간·플랫폼). 어댑터 레지스트리 방식, 어댑터 없는 브랜드는 링크전용
+rate-lens/                 ← rate-lens-mini(금리 돋보기) 앱용 (금감원 공시, 매일 diff 감지)
+  rates.json               # 예적금 765상품 / 금리행 4,335 (회사·상품·금리 3테이블 정규화)
+stock-ipo/                 ← stock-ipo-mini(공모주 미리보기) 앱용 (DART, 매일 diff 감지)
+  ipo.json                 # 국내 공모주 청약 일정 13건 (공모가·일정·인수단·자금사용처·환매청구권)
+  doc_cache.json           # 증권신고서 원문 추출 캐시(receiptNo 기준) — 5MB 원문 재다운로드 방지
 ```
+
+`stock-ipo/ipo.json` 은 청약이 **끝난 건도 남긴다** — "내가 놓쳤나" 확인이 앱의 절반이다.
+`offerPrice: null` 은 누락이 아니라 **공모가 미확정**(기재정정 진행 중) 상태다.
+상장일(`listDate`)은 토스증권 API 로만 확정되는데 허용 IP 제한 때문에 Actions 에서 못 받는다.
+**추정하지 않고 `null` 로 둔다.**
+
+`rate-lens/rates.json` 은 기본금리(`intr_rate`, 우대조건 미충족 시 실제 금리)와
+최고금리(`intr_rate2`)를 **둘 다** 담는다. 앱의 존재 이유가 그 격차라서 어느 쪽도 버리면 안 된다.
+결측은 `null` 이며 0 이 아니다 — 0 으로 치환하면 순위가 조용히 오염된다.
 
 ## 사용 방법
 
@@ -30,6 +46,9 @@ https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/subway-arcade/a
 https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/subway-arcade/stats.json
 https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/holidays/holidays.json
 https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/convenience-events/products.json
+https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/stock-ipo/ipo.json
+https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/chicken-events/events.json
+https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/rate-lens/rates.json
 ```
 
 ## 데이터 갱신
