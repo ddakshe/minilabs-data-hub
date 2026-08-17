@@ -8,17 +8,28 @@ MIN_PRICE = 1.0
 # 느슨한 패턴("$N per share")은 워런트 행사가·최근 체결가·액면가를 전부 잡는다.
 # 2026-08-17 실측에서 20건 중 7건이 오탐이었다. 앞에 "initial public offering price"가
 # 붙고 그 사이에 마침표나 다른 금액이 없는 경우만 인정한다.
-# 어순이 두 가지다. 실측:
-#   ITG        "initial public offering price ... will be $16.00 per share"
-#   Quantinuum "initial public offering price per share ... is $60.00"
-# 둘 다 [^.$] 로 문장 경계와 다른 금액을 넘지 못하게 막는다.
+# 표기가 네 가지다. 2026-08-17 실측에서 전부 확인했다:
+#   ITG           "initial public offering price ... will be $16.00 per share"
+#   Quantinuum    "initial public offering price per share ... is $60.00"
+#   Londian Wason "initial public offering price per ADS is US$22.00"   ← ADS 상장
+#   TCGX          "at an initial public offering price of $10.00"       ← per 단위 없음
+#   East West     "Initial public offering price $ 10.000"              ← 표 형식
+#
+# [^.$] 로 문장 경계와 다른 금액을 넘지 못하게 막는 것이 오탐 방지의 핵심이다.
+# 마지막 패턴은 느슨해 보이지만 $ 가 "price" 바로 뒤에 와야 하므로
+# "price, less the underwriting..." (워런트) 나 "price could impact" (직상장) 은 걸리지 않는다.
+_UNIT = r'(?:share|ADS|unit)s?'
 _OFFER_PRICES = (
     re.compile(
-        r'initial public offering price[^.$]{0,60}?\$\s*([\d,]+\.?\d*)\s*per\s+share',
+        rf'initial public offering price[^.$]{{0,60}}?(?:US)?\$\s*([\d,]+\.?\d*)\s*per\s+{_UNIT}',
         re.I,
     ),
     re.compile(
-        r'initial public offering price\s+per\s+share[^.$]{0,60}?\$\s*([\d,]+\.?\d*)',
+        rf'initial public offering price\s+per\s+{_UNIT}[^.$]{{0,60}}?(?:US)?\$\s*([\d,]+\.?\d*)',
+        re.I,
+    ),
+    re.compile(
+        r'initial public offering price\s*(?:of|is|was)?\s*(?:US)?\$\s*([\d,]+\.?\d*)',
         re.I,
     ),
 )
@@ -38,6 +49,28 @@ def parse_number(s):
         return int(float(cleaned))
     except ValueError:
         return None
+
+
+# 진짜 IPO 인지 가르는 게이트.
+#
+# 2026-08-17 실측에서 Janus Living 이 $20.00 로 목록에 들어왔다. 각주
+# "NOTE 19 ... at the initial public offering price of $20.00" 을 잡은 것인데,
+# Janus 는 이미 상장된 회사(최근가 $30.18)의 후속공모였다. 과거 IPO 가격이라
+# 값 자체는 틀리지 않았지만 "방금 상장" 목록에 있어서는 안 된다.
+#
+# 가격 패턴을 조이는 것보다 이 게이트가 정확하다. 진짜 IPO 문서에는
+# 예외 없이 아래 문장 중 하나가 있다 (ITG·Quantinuum·Apnimed 확인).
+_IS_IPO = (
+    re.compile(r'there\s+(?:has|have)\s+been\s+no\s+public\s+market', re.I),
+    re.compile(r'no\s+established\s+public\s+(?:trading\s+)?market', re.I),
+    re.compile(r'this\s+is\s+(?:our|the)\s+initial\s+public\s+offering', re.I),
+    re.compile(r"this\s+is\s+[A-Z][\w.,&' ]{2,40}(?:’s|'s)\s+initial\s+public\s+offering", re.I),
+)
+
+
+def is_new_listing(text):
+    """이 문서가 신규 상장(IPO)인지. 후속공모·직상장이면 False."""
+    return any(p.search(text or '') for p in _IS_IPO)
 
 
 def parse_offer_price(text):

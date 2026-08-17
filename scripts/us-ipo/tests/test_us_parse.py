@@ -3,7 +3,7 @@ import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 
-from us_parse import is_spac, parse_number, parse_offer_price, sic_to_industry
+from us_parse import is_new_listing, is_spac, parse_number, parse_offer_price, sic_to_industry
 
 FIX = pathlib.Path(__file__).parent / 'fixtures'
 
@@ -85,3 +85,27 @@ class TestIsSpac:
 
     def test_본문이_있으면_본문을_우선한다(self):
         assert is_spac(None, 'Foo Inc.', 'we are a blank check company') is True
+
+
+class TestIsNewListing:
+    """Janus 회귀 방지: 이미 상장된 회사의 후속공모를 걸러낸다."""
+
+    def test_공모전_시장이_없다는_문장이_있으면_IPO(self):
+        assert is_new_listing(
+            'Prior to this offering, there has been no public market for our common stock.'
+        ) is True
+
+    def test_this_is_our_ipo_도_인정한다(self):
+        assert is_new_listing('This is our initial public offering.') is True
+        assert is_new_listing("This is Apnimed, Inc.'s initial public offering.") is True
+
+    def test_후속공모는_False(self):
+        # Janus: 각주에 과거 IPO 가격이 있으나 신규 상장이 아니다
+        assert is_new_listing(
+            'All purchases were at the initial public offering price of $20.00 per share. '
+            'The last reported sale price was $30.18.'
+        ) is False
+
+    def test_빈_입력(self):
+        assert is_new_listing('') is False
+        assert is_new_listing(None) is False
