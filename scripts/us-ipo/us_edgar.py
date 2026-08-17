@@ -108,6 +108,42 @@ def fetch_submissions(cik):
         return None
 
 
+# 희망 공모밴드가 실려 있는 등록신고서. 수정본(/A)이 확정에 가장 가깝다.
+# 외국 발행인은 S-1 이 아니라 F-1 을 낸다 — Londian Wason·Ticketplus 가 그 경우였다.
+REGISTRATION_FORMS = ('S-1/A', 'F-1/A', 'S-1', 'F-1')
+
+
+def latest_registration_url(cik, sub):
+    """직전 등록신고서의 본문 URL. 없으면 None.
+
+    이미 받아둔 submissions 응답을 재사용한다 — 별도 요청을 하지 않는다.
+    """
+    recent = ((sub or {}).get('filings') or {}).get('recent') or {}
+    forms = recent.get('form') or []
+    accessions = recent.get('accessionNumber') or []
+    documents = recent.get('primaryDocument') or []
+
+    for wanted in REGISTRATION_FORMS:
+        for i, form in enumerate(forms):
+            if form != wanted or i >= len(accessions) or i >= len(documents):
+                continue
+            if not documents[i]:
+                continue
+            return (
+                f'https://www.sec.gov/Archives/edgar/data/{cik.lstrip("0")}/'
+                f'{accessions[i].replace("-", "")}/{documents[i]}'
+            )
+    return None
+
+
+def fetch_text(url):
+    """임의 공시 본문을 평문으로. 실패하면 None."""
+    try:
+        return strip_html(_request(url, raw=True).decode('utf-8', 'replace'))
+    except (urllib.error.HTTPError, urllib.error.URLError, ValueError):
+        return None
+
+
 def fetch_company_facts(cik):
     """XBRL us-gaap 사실들. 상장 전 회사는 비어 있을 수 있다 — 정상이다."""
     try:

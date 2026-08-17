@@ -3,7 +3,7 @@ import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 
-from us_parse import is_new_listing, is_spac, parse_number, parse_offer_price, sic_to_industry
+from us_parse import band_position, is_new_listing, is_spac, parse_price_band, parse_number, parse_offer_price, sic_to_industry
 
 FIX = pathlib.Path(__file__).parent / 'fixtures'
 
@@ -109,3 +109,63 @@ class TestIsNewListing:
     def test_빈_입력(self):
         assert is_new_listing('') is False
         assert is_new_listing(None) is False
+
+
+class TestPriceBand:
+    def test_밴드를_뽑는다(self):
+        assert parse_price_band('$11.00 to $13.00 per share') == (11.0, 13.0)
+        assert parse_price_band('between $15.00 and $17.00 per share') == (15.0, 17.0)
+
+    def test_ADS_단위도_잡는다(self):
+        assert parse_price_band('$20.00 to $22.00 per ADS') == (20.0, 22.0)
+
+    def test_너무_넓은_범위는_밴드가_아니다(self):
+        # 3배를 넘으면 행사가·자산가치 등 다른 금액 범위를 잡은 것이다
+        assert parse_price_band('$1.00 to $50.00 per share') is None
+
+    def test_액면가_범위는_거른다(self):
+        assert parse_price_band('$0.0001 to $0.001 per share') is None
+
+    def test_역순이면_버린다(self):
+        assert parse_price_band('$17.00 to $15.00 per share') is None
+
+    def test_없으면_None(self):
+        assert parse_price_band('아무 말') is None
+        assert parse_price_band('') is None
+
+
+class TestBandPosition:
+    def test_상단초과(self):
+        assert band_position(14.0, (11.0, 13.0)) == 'above'
+
+    def test_상단(self):
+        assert band_position(13.0, (11.0, 13.0)) == 'top'
+
+    def test_밴드내(self):
+        assert band_position(12.0, (11.0, 13.0)) == 'within'
+
+    def test_하단(self):
+        assert band_position(11.0, (11.0, 13.0)) == 'bottom'
+
+    def test_하단미달(self):
+        assert band_position(9.0, (11.0, 13.0)) == 'below'
+
+    def test_밴드가_없으면_None(self):
+        assert band_position(13.0, None) is None
+        assert band_position(None, (11.0, 13.0)) is None
+
+    def test_확정가와_동떨어진_밴드는_버린다(self):
+        """Attovia 회귀: $17 확정인데 $3~$3.5 밴드가 잡혀 '상단 초과' 배지가 붙었다."""
+        text = '$3.00 to $3.50 per share'
+        assert parse_price_band(text, price=17.0) is None
+        # 확정가를 안 주면 모양만 보므로 통과한다 (기존 동작 유지)
+        assert parse_price_band(text) == (3.0, 3.5)
+
+    def test_상단_초과는_허용한다(self):
+        # 상단을 조금 넘기는 건 실제로 일어나는 일이고 그게 above 신호다
+        assert parse_price_band('$11.00 to $13.00 per share', price=14.0) == (11.0, 13.0)
+
+    def test_정합한_밴드를_고른다(self):
+        # 앞에 엉뚱한 범위가 있어도 확정가에 맞는 것을 찾아낸다
+        text = '$3.00 to $3.50 per share ... $16.00 to $18.00 per share'
+        assert parse_price_band(text, price=18.0) == (16.0, 18.0)

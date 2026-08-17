@@ -12,16 +12,25 @@ from datetime import date, timedelta
 from us_document import parse_prospectus
 from us_edgar import (
     dedupe_by_cik,
+    fetch_text,
     fetch_company_facts,
     fetch_document_text,
     fetch_submissions,
     hit_cik,
     hit_filed_at,
     hit_name,
+    latest_registration_url,
     search_filings,
 )
 from us_fx import usd_krw
-from us_parse import is_new_listing, is_spac, parse_offer_price, sic_to_industry
+from us_parse import (
+    band_position,
+    is_new_listing,
+    is_spac,
+    parse_offer_price,
+    parse_price_band,
+    sic_to_industry,
+)
 from us_paths import DATA_DIR, OUTPUT
 from us_xbrl import annual_financials
 
@@ -60,7 +69,24 @@ def _company_meta(cik):
         'industry': sic_to_industry(sic),
         'location': _location_of(sub),
         'financials': annual_financials(fetch_company_facts(cik)),
+        'sub': sub,
     }
+
+
+def _price_band(cik, sub, price):
+    """직전 등록신고서에서 희망밴드를 찾아 확정가의 위치를 판정한다.
+
+    미국에서 'priced above the range' 는 수요가 강했다는 표준 신호로,
+    국내의 기관 수요예측 경쟁률에 대응한다. 사실만 싣고 해석은 앱이 하지 않는다.
+    없으면 전부 None — 배지를 붙이지 않는다.
+    """
+    url = latest_registration_url(cik, sub)
+    if not url:
+        return None, None, None
+    band = parse_price_band(fetch_text(url), price)
+    if not band:
+        return None, None, None
+    return band[0], band[1], band_position(price, band)
 
 
 def _sec_url(cik, form):
@@ -104,12 +130,17 @@ def build_listed(today):
         before = doc['sharesBefore']
         shares_after = (before + shares) if (before and shares) else None
 
+        band_low, band_high, position = _price_band(cik, meta['sub'], price)
+
         items.append({
             'cik': cik,
             'name': _clean_name(raw_name),
             'ticker': meta['ticker'],
             'exchange': doc['exchange'],
             'offerPrice': price,
+            'priceBandLow': band_low,
+            'priceBandHigh': band_high,
+            'bandPosition': position,
             'sharesOffered': shares,
             'sharesAfterListing': shares_after,
             'grossProceeds': int(price * shares) if shares else None,

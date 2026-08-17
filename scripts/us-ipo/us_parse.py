@@ -89,6 +89,69 @@ def parse_offer_price(text):
     return None
 
 
+# 희망 공모밴드. 등록신고서(S-1/A·F-1/A) 표지에 실린다.
+#   "$11.00 to $13.00 per share"  /  "between $15.00 and $17.00 per share"
+_BAND = re.compile(
+    r'(?:between\s*)?(?:US)?\$\s*([\d.]+)\s*(?:and|to|-|–|~)\s*(?:US)?\$?\s*([\d.]+)'
+    rf'\s*per\s+{_UNIT}',
+    re.I,
+)
+
+# 실제 IPO 밴드는 좁다 ($11~$13 처럼 20% 안팎). 3배를 넘으면 밴드가 아니라
+# 다른 금액 범위(행사가·자산가치 등)를 잡은 것이다.
+_MAX_BAND_RATIO = 3.0
+
+
+def parse_price_band(text, price=None):
+    """(하단, 상단) 또는 None. 밴드로 보기 어려운 값은 버린다.
+
+    `price`(확정 공모가)를 주면 **정합성까지 본다.** 등록신고서에는 옵션 행사가·
+    전환가 같은 다른 금액 범위가 여러 개 있어서, 모양만 맞는 첫 번째를 집으면
+    엉뚱한 값이 밴드가 된다.
+
+    2026-08-17 실측: Attovia 가 $17.00 에 확정됐는데 밴드가 $3~$3 으로 잡혀
+    '밴드 상단 초과' 배지가 붙었다. 값이 비어 있는 것보다 나쁘다 —
+    "수요가 몰렸다"는 틀린 신호를 적극적으로 전달하기 때문이다.
+    """
+    if not text:
+        return None
+    for m in _BAND.finditer(text):
+        try:
+            low, high = float(m.group(1).replace(',', '')), float(m.group(2).replace(',', ''))
+        except ValueError:
+            continue
+        if low < MIN_PRICE or high <= low:
+            continue
+        if high / low > _MAX_BAND_RATIO:
+            continue
+        # 확정가는 밴드 근처에 있어야 한다. 상단을 넘기거나 하단을 밑돌 수는 있지만
+        # (그게 above/below 신호다) 배수로 벌어지면 밴드를 잘못 잡은 것이다.
+        if price is not None and not (low * 0.5 <= price <= high * 1.5):
+            continue
+        return low, high
+    return None
+
+
+def band_position(price, band):
+    """확정 공모가가 희망밴드의 어디에 놓였는지.
+
+    미국에서 'priced above the range' 는 수요가 강했다는 표준 신호다
+    (국내의 기관 수요예측 경쟁률에 대응한다). 사실만 적고 해석은 붙이지 않는다.
+    """
+    if price is None or not band:
+        return None
+    low, high = band
+    if price > high:
+        return 'above'
+    if price == high:
+        return 'top'
+    if price == low:
+        return 'bottom'
+    if price < low:
+        return 'below'
+    return 'within'
+
+
 def sic_to_industry(sic):
     """SIC 코드를 한글 업종 12군으로 접는다.
 
