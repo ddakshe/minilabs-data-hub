@@ -241,12 +241,15 @@ async function kia() {
         firstRegistration: c.firstRegisteredOn ?? null,
         accident: null,
         warranty: null,
-        // 기아만 주는 필드 — 매물이 올라온 시각. 최신순 정렬의 기준이다.
+        // 기아만 주는 두 필드. listedAt은 매물이 올라온 시각(최신순 정렬 기준),
+        // reserved는 예약중 여부다. 앱에서 "이미 빠진 차" 신호로 쓸 수 있다.
         listedAt: c.displayedAt ?? null,
+        reserved: c.reserved ?? null,
         // 목록 응답에 판매점 정보가 없다. plateNumber(번호판)는 오지만 개인정보라 담지 않는다.
         dealer: null,
         region: null,
-        url: c.id != null ? `https://cpo.kia.com/products/${c.id}` : null,
+        // 상세 경로는 /products/detail/?id=N 이다(/products/N 은 404).
+        url: c.id != null ? `https://cpo.kia.com/products/detail/?id=${c.id}` : null,
         image: c.exteriorImageUrl ?? null,
       })
     }
