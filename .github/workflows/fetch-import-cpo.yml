@@ -1,0 +1,111 @@
+name: Fetch import CPO
+
+on:
+  schedule:
+    # 매일 09:20 KST. 매물은 수시로 바뀌어서 일 단위로 돌린다.
+    # :00을 피한 이유는 다른 워크플로와 겹치지 않게 하기 위함.
+    - cron: '20 0 * * *'
+  workflow_dispatch:
+    inputs:
+      only:
+        description: 'fetch 기반 브랜드 콤마목록 (비우면 전체). 예: benz,lexus'
+        required: false
+        default: ''
+      max_per_brand:
+        description: '브랜드당 최대 수집 건수(최신순). 비우면 300, 0이면 무제한'
+        required: false
+        default: ''
+      pw_only:
+        description: 'Playwright 브랜드 콤마목록. 기본은 porsche,volvo (bmw는 CI에서 불가 — README 참고). skip 이면 건너뜀'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-import-cpo
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install deps
+        run: npm ci
+
+      # 포르쉐·볼보는 브라우저가 필요하다.
+      - name: Install Chromium
+        if: ${{ github.event.inputs.pw_only != 'skip' }}
+        run: npx playwright install --with-deps chromium
+
+      - name: Show trigger context
+        run: |
+          echo "Event  : ${{ github.event_name }}"
+          echo "Only   : ${{ github.event.inputs.only || '(all fetch adapters)' }}"
+          echo "PwOnly : ${{ github.event.inputs.pw_only || '(all pw adapters)' }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      # 두 스크립트가 같은 listings.json을 갱신하므로 순서대로 돌린다.
+      - name: Fetch (API 기반)
+        env:
+          MAX_PER_BRAND: ${{ github.event.inputs.max_per_brand }}
+        run: node scripts/fetch-import-cpo.mjs "${{ github.event.inputs.only }}"
+
+      # bmw는 제외한다 — 실제 Chrome + headed가 필요해서 러너에서 데이터가 오지 않는다.
+      # 헤드리스로 돌리면 실패가 아니라 조용히 0건이 되므로 아예 넣지 않는다. 로컬에서 돌린다.
+      - name: Fetch (Playwright)
+        if: ${{ github.event.inputs.pw_only != 'skip' }}
+        env:
+          MAX_PER_BRAND: ${{ github.event.inputs.max_per_brand }}
+        run: |
+          PW="${{ github.event.inputs.pw_only }}"
+          node scripts/fetch-import-cpo-pw.mjs "${PW:-porsche,volvo}"
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git add import-cpo/
+          if git diff --cached --quiet -- import-cpo/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes — skipping commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --cached --stat import-cpo/
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
+          git commit -m "chore(import-cpo): daily refresh ($DATE_KST)"
+          git push
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## 수입차 인증중고차 수집 결과"
+            echo ""
+            echo "- Trigger: \`${{ github.event_name }}\`"
+            echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
+            echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+            echo ""
+            if [ -f import-cpo/listings.json ]; then
+              echo '```'
+              node -e "const d=require('./import-cpo/listings.json');console.log('total',d.total);console.log(Object.entries(d.byBrand).sort((a,b)=>b[1]-a[1]).map(([k,v])=>k+' '+v).join(' · '));if(d.failed?.length)console.log('failed:',d.failed.join(', '))"
+              echo '```'
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
