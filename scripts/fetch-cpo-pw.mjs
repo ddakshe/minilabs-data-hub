@@ -579,17 +579,24 @@ async function main() {
 
   // brands 메타(name·searchUrl)는 fetch 스크립트가 만든다. 여기서는 이 실행에서 알게 된
   // collected·sourceTotal만 갱신하고 나머지는 그대로 물려받는다.
+  const today = todayKST()
+  // 이번 실행에서 실제로 새로 받은 브랜드만 날짜를 갱신한다.
+  // 파일 전체 updatedAt 은 CI 덕에 항상 오늘이라 브랜드별 신선도를 못 나타낸다.
+  const refreshed = new Set()
+  for (const rows of collected.values()) for (const r of rows) refreshed.add(r.brand)
+
   const brandMeta = { ...(existing.brands ?? {}) }
   for (const [b, n] of Object.entries(byBrand)) {
     brandMeta[b] = {
       ...(brandMeta[b] ?? { name: null, searchUrl: null }),
       collected: n,
       sourceTotal: sourceTotals[b] ?? brandMeta[b]?.sourceTotal ?? null,
+      updatedAt: refreshed.has(b) ? today : (brandMeta[b]?.updatedAt ?? null),
     }
   }
 
   const out = {
-    updatedAt: todayKST(),
+    updatedAt: today,
     maxPerBrand: MAX_PER_BRAND,
     total: items.length,
     byBrand,

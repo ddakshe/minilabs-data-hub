@@ -529,6 +529,10 @@ async function main() {
   }
   const items = []
   const failed = []
+  // 이번 실행에서 실제로 새로 받은 브랜드. 파일 전체 updatedAt 만으로는
+  // "CI가 7개를 매일 갱신하니 항상 오늘"이 되어 로컬 수동인 BMW·포르쉐가
+  // 며칠 밀려도 신선해 보인다. 그래서 브랜드별로 따로 찍는다.
+  const refreshed = new Set()
 
   for (const meta of BRANDS) {
     const adapter = ADAPTERS[meta.id]
@@ -551,6 +555,7 @@ async function main() {
       const got = await adapter()
       if (got.length === 0) throw new Error('0건 파싱됨')
       items.push(...got)
+      for (const r of got) refreshed.add(r.brand)
       console.log(`✓ ${meta.id}: ${got.length}건`)
     } catch (err) {
       // 실패 → 직전 데이터 유지. 빈 목록으로 덮어써서 앱 화면을 비우는 것이 최악이다.
@@ -569,6 +574,7 @@ async function main() {
 
   // 앱이 "최신 N건만 보여주고 나머지는 공식 사이트로" 화면을 만들 수 있게
   // 브랜드별 수집 수 · 소스 전체 재고 수 · 전체보기 링크를 함께 싣는다.
+  const today = todayKST()
   const prevBrands = existing.brands ?? {}
   const brands = {}
   for (const meta of BRANDS) {
@@ -580,11 +586,13 @@ async function main() {
       // 이번에 안 돌린 브랜드는 직전 값을 유지한다(모르는 걸 0으로 쓰지 않는다).
       sourceTotal: sourceTotals[meta.id] ?? prevBrands[meta.id]?.sourceTotal ?? null,
       searchUrl: meta.searchUrl ?? null,
+      // 이 브랜드 데이터를 마지막으로 받은 날. 앱이 브랜드별 신선도를 판단한다.
+      updatedAt: refreshed.has(meta.id) ? today : (prevBrands[meta.id]?.updatedAt ?? null),
     }
   }
 
   const out = {
-    updatedAt: todayKST(),
+    updatedAt: today,
     maxPerBrand: MAX_PER_BRAND,
     total: items.length,
     byBrand,
