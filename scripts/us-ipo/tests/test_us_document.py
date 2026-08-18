@@ -90,6 +90,7 @@ class TestRealDocument:
             'underwriters': [],
             'businessSummary': None,
             'netResult': None,
+            'netResultYear': None,
             'useOfProceeds': None,
             'lockupDays': None,
         }
@@ -107,20 +108,51 @@ class TestSharesBefore:
 
 
 class TestNetResult:
-    def test_순손실은_음수다(self):
-        assert parse_prospectus('we incurred a net loss of $17.4 million')['netResult'] == -17_400_000
+    """연간 실적만, 최신 연도만. 2026-08-17 실측에서 분기값과 구년도를 집는 버그가 있었다."""
 
-    def test_순이익은_양수다(self):
-        assert parse_prospectus('we had net income of $1.8 million')['netResult'] == 1_800_000
+    def test_연간_순손실은_음수다(self):
+        text = 'For the year ended December 31, 2025, the Company had a net loss of $66.1 million.'
+        assert parse_prospectus(text)['netResult'] == -66_100_000
+
+    def test_연간_순이익은_양수다(self):
+        text = 'For the year ended December 31, 2025, we had net income of $1.8 million.'
+        assert parse_prospectus(text)['netResult'] == 1_800_000
+
+    def test_값이_먼저_오는_어순도_잡는다(self):
+        text = 'a net loss of $61.2 million for the year ended December 31, 2024'
+        assert parse_prospectus(text)['netResult'] == -61_200_000
+
+    def test_분기값은_버린다(self):
+        """Scribe·Apnimed 회귀: MD&A 가 분기를 먼저 언급해 첫 매치가 분기였다."""
+        text = 'including a net loss of $17.4 million for the three months ended March 31, 2026'
+        assert parse_prospectus(text)['netResult'] is None
+
+    def test_두_해를_나열하면_버린다(self):
+        """'$47.8 million and $21.8 million, respectively' 는 어느 해 값인지 확정 불가."""
+        text = ('for the years ended December 31, 2024 and 2025, we incurred net losses '
+                'of $47.8 million and $21.8 million, respectively')
+        assert parse_prospectus(text)['netResult'] is None
+
+    def test_최신_연도를_고른다(self):
+        """Latigo·Attovia 회귀: 구년도를 집었다."""
+        text = ('a net loss of $61.2 million for the year ended December 31, 2024. '
+                'Separately, a net loss of $109.2 million for the year ended December 31, 2025.')
+        result = parse_prospectus(text)
+        assert result['netResult'] == -109_200_000
+        assert result['netResultYear'] == '2025'
+
+    def test_단위_없는_맨_숫자는_버린다(self):
+        """'$475' 처럼 million/billion 이 없으면 천 달러 단위 표에서 잘려 나온 값일 수 있다."""
+        text = 'For the year ended December 31, 2025, a net loss of $475'
+        assert parse_prospectus(text)['netResult'] is None
 
     def test_billion_단위(self):
-        assert parse_prospectus('a net loss of $1.2 billion')['netResult'] == -1_200_000_000
-
-    def test_단위가_없으면_그대로(self):
-        assert parse_prospectus('net loss of $250,000')['netResult'] == -250_000
+        text = 'For the year ended December 31, 2025, a net loss of $1.2 billion'
+        assert parse_prospectus(text)['netResult'] == -1_200_000_000
 
     def test_없으면_None(self):
         assert parse_prospectus('아무 말')['netResult'] is None
+        assert parse_prospectus('아무 말')['netResultYear'] is None
 
 
 class TestUseOfProceeds:

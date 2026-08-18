@@ -53,11 +53,26 @@ _SHARES_BEFORE = re.compile(
 
 # 바이오텍이 다수라 매출보다 순손실이 훨씬 자주 나온다.
 # XBRL 이 없는 IPO 기업의 재무 대체재다.
-_NET_LOSS = re.compile(
-    r'net loss(?:es)? of \$\s*([\d,.]+)\s*(million|billion)?', re.I,
-)
-_NET_INCOME = re.compile(
-    r'net income of \$\s*([\d,.]+)\s*(million|billion)?', re.I,
+#
+# ⚠️ 2026-08-17 실측 교훈: 첫 매치를 집으면 대부분 틀린다. 투자설명서는
+# 유동성 논의에서 분기 실적을 먼저 언급하는 경우가 많아 첫 문장이 분기일
+# 확률이 오히려 높다 (Scribe·Apnimed 가 분기, Latigo·Attovia 가 구년도였다).
+# us_xbrl.py 에서 지킨 '연간만, 최신만' 규율을 여기에도 적용한다.
+#
+# 두 어순을 다 본다:
+#   "for the year ended December 31, 2025, the Company had a net loss of $66.1 million"
+#   "net loss of $61.2 million for the year ended December 31, 2024"
+_YEAR = r'(?:fiscal\s+)?year\s+ended\s+\w+\s+\d{1,2},?\s*(20\d\d)'
+_RESULT = r'net\s+(loss|income)\s+of\s+\$\s*([\d,.]+)\s*(million|billion)?'
+
+_ANNUAL_FORWARD = re.compile(rf'{_YEAR}[^.]{{0,140}}?{_RESULT}', re.I)
+_ANNUAL_BACKWARD = re.compile(rf'{_RESULT}[^.]{{0,100}}?for\s+the\s+{_YEAR}', re.I)
+
+# 아래가 문장에 있으면 어느 해·어느 기간의 값인지 확정할 수 없다.
+#   "net losses of $47.8 million and $21.8 million, respectively" — 두 해를 나열
+#   "three/six/nine months ended" — 분기·반기
+_AMBIGUOUS = re.compile(
+    r'\band\s+\$|respectively|(?:three|six|nine)\s+months\s+ended', re.I,
 )
 
 _USE_OF_PROCEEDS = re.compile(
@@ -129,21 +144,40 @@ def _shares_before(text):
 
 
 def _net_result(text):
-    """순손익(달러). 손실은 음수. 없으면 None.
+    """(순손익 달러, 회계연도) 또는 (None, None). 손실은 음수.
+
+    연간 실적만, 그중 가장 최근 연도만 쓴다. 기간이나 연도가 모호한 문장은
+    통째로 버린다 — 분기값을 연간처럼 보여주는 것이 값을 비워두는 것보다 나쁘다.
 
     매출은 뽑지 않는다 — 'Internal Revenue Code' 를 매출로 잡는 오탐이 나서
     본문 정규식으로는 신뢰할 수 없다. 표 파싱이 필요하다.
     """
-    for pattern, sign in ((_NET_LOSS, -1), (_NET_INCOME, 1)):
-        m = pattern.search(text)
-        if not m:
-            continue
-        try:
-            value = float(m.group(1).replace(',', ''))
-        except ValueError:
-            continue
-        return int(sign * value * _SCALE.get((m.group(2) or '').lower(), 1))
-    return None
+    found = {}     # 연도 -> 금액
+    for pattern, order in ((_ANNUAL_FORWARD, 'year_first'), (_ANNUAL_BACKWARD, 'value_first')):
+        for m in pattern.finditer(text):
+            if _AMBIGUOUS.search(m.group(0)):
+                continue
+            if order == 'year_first':
+                year, kind, raw, scale = m.group(1), m.group(2), m.group(3), m.group(4)
+            else:
+                kind, raw, scale, year = m.group(1), m.group(2), m.group(3), m.group(4)
+            try:
+                value = float(raw.replace(',', ''))
+            except ValueError:
+                continue
+            # 단위가 없는 맨 숫자는 신뢰하지 않는다. 재무제표가 '천 달러 단위'로
+            # 표기된 표에서 잘려 나온 값일 수 있다 ($475 같은 값이 그래서 나왔다).
+            unit = _SCALE.get((scale or '').lower())
+            if unit is None:
+                continue
+            sign = -1 if kind.lower() == 'loss' else 1
+            # int() 는 버림이다. 66.1 * 1e6 = 66099999.99… 라 66,099,999 가 된다.
+            found.setdefault(year, round(sign * value * unit))
+
+    if not found:
+        return None, None
+    year = max(found)
+    return found[year], year
 
 
 def _use_of_proceeds(text):
@@ -163,13 +197,16 @@ def _lockup_days(text):
 def parse_prospectus(text):
     """못 뽑은 항목은 None / 빈 리스트다. 추측하지 않는다."""
     text = text or ''
+    net_result, fiscal_year = _net_result(text)
     return {
         'sharesOffered': _shares_offered(text),
         'sharesBefore': _shares_before(text),
         'exchange': _exchange(text),
         'underwriters': _underwriters(text),
         'businessSummary': _business_summary(text),
-        'netResult': _net_result(text),
+        'netResult': net_result,
+        # 어느 해 실적인지 함께 낸다. 화면에 "2025년 순손실" 로 적어야 사실이 된다.
+        'netResultYear': fiscal_year,
         'useOfProceeds': _use_of_proceeds(text),
         'lockupDays': _lockup_days(text),
     }

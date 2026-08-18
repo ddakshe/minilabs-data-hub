@@ -153,6 +153,7 @@ def build_listed(today):
             'businessSummary': doc['businessSummary'],
             'useOfProceeds': doc['useOfProceeds'],
             'netResult': doc['netResult'],
+            'netResultYear': doc['netResultYear'],
             'lockupDays': doc['lockupDays'],
             'location': meta['location'],
             'financials': meta['financials'],
