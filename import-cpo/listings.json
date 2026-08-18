@@ -1,18 +1,61 @@
 {
   "updatedAt": "2026-08-18",
-  "total": 1314,
+  "maxPerBrand": 300,
+  "total": 1316,
   "byBrand": {
     "audi": 68,
     "benz": 300,
     "bmw": 300,
-    "lexus": 76,
+    "lexus": 78,
     "porsche": 300,
     "toyota": 52,
     "volvo": 218
   },
-  "failed": [
-    "porsche"
-  ],
+  "brands": {
+    "bmw": {
+      "name": "BMW Premium Selection",
+      "collected": 300,
+      "sourceTotal": 1341,
+      "searchUrl": "https://www.bmw.co.kr/ko-kr/sl/usedcarfinder/results"
+    },
+    "benz": {
+      "name": "Mercedes-Benz 인증중고차",
+      "collected": 300,
+      "sourceTotal": 710,
+      "searchUrl": "https://www.mercedes-benz.co.kr/passengercars/buy/used-car/search-results.html"
+    },
+    "volvo": {
+      "name": "Volvo Selekt",
+      "collected": 218,
+      "sourceTotal": 218,
+      "searchUrl": "https://selekt.volvocars.co.kr/kr/vehicles/volvo/all-models"
+    },
+    "porsche": {
+      "name": "Porsche Approved",
+      "collected": 300,
+      "sourceTotal": null,
+      "searchUrl": "https://finder.porsche.com/kr/ko-KR/search"
+    },
+    "lexus": {
+      "name": "Lexus Certified",
+      "collected": 78,
+      "sourceTotal": 78,
+      "searchUrl": "https://certified.lexus.co.kr/car-list/"
+    },
+    "audi": {
+      "name": "Audi Approved :plus",
+      "collected": 68,
+      "sourceTotal": 68,
+      "searchUrl": "https://www.audi.co.kr/ko/kr-used-car-search/"
+    },
+    "toyota": {
+      "name": "Toyota Certified",
+      "collected": 52,
+      "sourceTotal": 52,
+      "searchUrl": "https://certified.toyota.co.kr/car-list/"
+    }
+  },
+  "failed": [],
   "items": [
     {
       "brand": "audi",
@@ -2044,30 +2087,6 @@
     },
     {
       "brand": "benz",
-      "id": "MB3AQS347X",
-      "model": "Mercedes-AMG GLB 35 4MATIC",
-      "trim": null,
-      "year": 2025,
-      "mileageKm": 10293,
-      "priceKrw": 49000000,
-      "newPriceKrw": null,
-      "fuel": "PETROL_ELECTRIC_PLUGIN_HYBRID",
-      "transmission": "AUTOMATIC",
-      "bodyType": "SUV_OFFROADER",
-      "color": "night black",
-      "firstRegistration": "2025-03-31",
-      "accident": null,
-      "warranty": null,
-      "previousOwners": null,
-      "vehicleClass": "GLB",
-      "chassisCode": "X247",
-      "dealer": "창원 전시장 / 창원 서비스센터 / 인증 중고차 창원 전시장",
-      "region": "성산구 해원로 374번길  6, 51542 경상남도 창원시",
-      "url": "https://www.mercedes-benz.co.kr/passengercars/buy/used-car/product.html/MB3AQS347X",
-      "image": "https://vx-prod-publish.azureedge.net/usedcar/kr/6106c8a4-21b8-4e9f-a119-321e1d31c3d1/images/xmlbVpj8ZCZBdZsoX63ksjH4gP07Xei6zGw274NvpZkZHguLOiyRsoUgOxfHaq5cYoXEOfwWnzyeQxsFPJICOrudO1pUjC62jEk3SWa5Ivo=.jpg"
-    },
-    {
-      "brand": "benz",
       "id": "MB3H8UOKYZ",
       "model": "GLE 450 4MATIC Coupé",
       "trim": null,
@@ -3604,6 +3623,30 @@
     },
     {
       "brand": "benz",
+      "id": "MBACIF6S7Y",
+      "model": "E 350 e 4MATIC EXCLUSIVE with EQ Hybrid",
+      "trim": null,
+      "year": 2025,
+      "mileageKm": 7561,
+      "priceKrw": 72000000,
+      "newPriceKrw": null,
+      "fuel": "PETROL_ELECTRIC_PLUGIN_HYBRID",
+      "transmission": "AUTOMATIC",
+      "bodyType": "LIMOUSINE",
+      "color": "폴라 화이트",
+      "firstRegistration": "2025-12-12",
+      "accident": null,
+      "warranty": null,
+      "previousOwners": null,
+      "vehicleClass": "E",
+      "chassisCode": "W214",
+      "dealer": "창원 전시장 / 창원 서비스센터 / 인증 중고차 창원 전시장",
+      "region": "성산구 해원로 374번길  6, 51542 경상남도 창원시",
+      "url": "https://www.mercedes-benz.co.kr/passengercars/buy/used-car/product.html/MBACIF6S7Y",
+      "image": "https://vx-prod-publish.azureedge.net/usedcar/kr/5de46172-51d4-494f-9f37-741a04ea2fbf/images/lxcSWJzHDvwW8a5Yfv99nAhURR6LpZJmDzKTVdNF4TuYHsGWgSaF9gzePcPggM7uu51xgMM1VCdag2LbMMey04B-er1+FdvDvK6ZrqDgv7k=.jpg"
+    },
+    {
+      "brand": "benz",
       "id": "MBADF9HL13",
       "model": "Mercedes-AMG GLE 53 4MATIC+ Coupé",
       "trim": null,
@@ -3865,6 +3908,30 @@
       "region": "기흥구 중부대로  23-2, 16955 경기도 용인시",
       "url": "https://www.mercedes-benz.co.kr/passengercars/buy/used-car/product.html/MBC388GB0P",
       "image": "https://vx-prod-publish.azureedge.net/usedcar/kr/19a8f1d8-43aa-4547-a77e-32391bba0204/images/NAwEXkVWrMfIH7vKtSTl82qyRRRDGAdAmsuvdJa3YUkpWMsSa3HvgCjl6oN6a4VW-s1T-AQPbllPFVhVKSJ-BJSFifjZ86mfjTcqHz8S2rU=.jpg"
+    },
+    {
+      "brand": "benz",
+      "id": "MBC58RVKVT",
+      "model": "Mercedes-AMG E 53 Hybrid 4MATIC+",
+      "trim": null,
+      "year": 2025,
+      "mileageKm": 1267,
+      "priceKrw": 107000000,
+      "newPriceKrw": null,
+      "fuel": "PETROL_ELECTRIC_PLUGIN_HYBRID",
+      "transmission": "AUTOMATIC",
+      "bodyType": "LIMOUSINE",
+      "color": "옵시디안 블랙",
+      "firstRegistration": "2025-09-03",
+      "accident": null,
+      "warranty": null,
+      "previousOwners": null,
+      "vehicleClass": "E",
+      "chassisCode": "W214",
+      "dealer": "하남 서비스센터 / 인증 중고차 하남 전시장",
+      "region": "감초로 188, 12988 경기도 하남시",
+      "url": "https://www.mercedes-benz.co.kr/passengercars/buy/used-car/product.html/MBC58RVKVT",
+      "image": "https://vx-prod-publish.azureedge.net/usedcar/kr/b8783d58-fae7-46a8-a7f8-9e5655534965/images/wRQqL1fLYhWeqk8W27iect5OnE1F1-0zeT3iyTd-pT3Vrf-JcJy+iNV34t8uDv6hP-q6s0OUXEd9HyBskEEZWXsUcnUVAsQsk-JwbjeQTpo=.jpg"
     },
     {
       "brand": "benz",
@@ -6820,30 +6887,6 @@
     },
     {
       "brand": "benz",
-      "id": "MBQ6RNSFTT",
-      "model": "E 450 4MATIC EXCLUSIVE",
-      "trim": null,
-      "year": 2024,
-      "mileageKm": 16882,
-      "priceKrw": 79800000,
-      "newPriceKrw": null,
-      "fuel": "PETROL_ELECTRIC_PLUGIN_HYBRID",
-      "transmission": "AUTOMATIC",
-      "bodyType": "LIMOUSINE",
-      "color": "흰색",
-      "firstRegistration": "2025-03-23",
-      "accident": null,
-      "warranty": null,
-      "previousOwners": null,
-      "vehicleClass": "E",
-      "chassisCode": "W214",
-      "dealer": "하남 서비스센터 / 인증 중고차 하남 전시장",
-      "region": "감초로 188, 12988 경기도 하남시",
-      "url": "https://www.mercedes-benz.co.kr/passengercars/buy/used-car/product.html/MBQ6RNSFTT",
-      "image": "https://vx-prod-publish.azureedge.net/usedcar/kr/6014fbee-34e0-44d7-bca9-8cbc9ce88fbf/images/BNMCnUqFxWDrKD9Tbfl5nC7sewpoZWd26+IRkWsF0MPnAbY0TCO+36N2sNl+SJSS3VI5tcsSvgR+mMz5lorMbRd31qwtap+QjAjrS+ES37s=.jpg"
-    },
-    {
-      "brand": "benz",
       "id": "MBQEDI2MI9",
       "model": "Mercedes-AMG GT 43 4MATIC+",
       "trim": null,
@@ -8901,7 +8944,7 @@
       "trim": "X5 40I",
       "year": 2025,
       "mileageKm": 4131,
-      "priceKrw": 97900000,
+      "priceKrw": 95900000,
       "newPriceKrw": null,
       "fuel": "GASOLINE",
       "transmission": "AUTOMATIC",
@@ -9480,7 +9523,7 @@
       "dealer": null,
       "region": null,
       "url": "https://www.bmw.co.kr/ko-kr/sl/usedcarfinder/details/9189348-58473180",
-      "image": "https://cdn.bmwdms.co.kr/Prd/WBA61GG08S7T672561/9376f6868a6544d682644a080c8f69e0.jpg"
+      "image": "https://cdn.bmwdms.co.kr/Prd/WBA61GG08S7T672561/38deaedd5d88485397e37c935ae97dc8.jpg"
     },
     {
       "brand": "bmw",
@@ -13092,7 +13135,7 @@
       "dealer": null,
       "region": null,
       "url": "https://www.bmw.co.kr/ko-kr/sl/usedcarfinder/details/9207722-59361202",
-      "image": "https://cdn.bmwdms.co.kr/Prd/WBA41FL0XTCW374571/be7f3d1c12cd47ecba9451ad574c41a4.jpg"
+      "image": "https://cdn.bmwdms.co.kr/Prd/WBA41FL0XTCW374571/555e8ea48b494a18beeab79bf6ba1546.jpg"
     },
     {
       "brand": "bmw",
@@ -13365,7 +13408,7 @@
       "dealer": null,
       "region": null,
       "url": "https://www.bmw.co.kr/ko-kr/sl/usedcarfinder/details/9210697-59430342",
-      "image": "https://cdn.bmwdms.co.kr/Prd/WBA71GP06T91888401/812f96fb83ee4d5fad66a8c69e726ee0.jpg"
+      "image": "https://cdn.bmwdms.co.kr/Prd/WBA71GP06T91888401/d69c306b6a5145a48e739b023e4d0bc4.jpg"
     },
     {
       "brand": "bmw",
@@ -13953,7 +13996,7 @@
       "dealer": null,
       "region": null,
       "url": "https://www.bmw.co.kr/ko-kr/sl/usedcarfinder/details/9219320-59808588",
-      "image": "https://cdn.bmwdms.co.kr/Prd/WBA21FJ03TCW750901/619bbe0f8d5341618dd23a4d1748f9f8.jpg"
+      "image": "https://cdn.bmwdms.co.kr/Prd/WBA21FJ03TCW750901/cda327d45c5843fd90937a1a75ee87c9.jpg"
     },
     {
       "brand": "bmw",
@@ -15159,7 +15202,7 @@
       "trim": "LUXURY",
       "year": 2023,
       "mileageKm": 44219,
-      "priceKrw": 86000000,
+      "priceKrw": 84500000,
       "newPriceKrw": 109700000,
       "fuel": null,
       "transmission": null,
@@ -16536,6 +16579,48 @@
       "dealer": "양재점",
       "region": "양재점",
       "url": "https://certified.lexus.co.kr/car-detail/?idx=6368",
+      "image": "https://certified.lexus.co.kr/assets/img/lexus_preparing.jpg"
+    },
+    {
+      "brand": "lexus",
+      "id": "6369",
+      "model": "NX 350h",
+      "trim": "PREMIUM",
+      "year": 2026,
+      "mileageKm": 3900,
+      "priceKrw": 62000000,
+      "newPriceKrw": 66950000,
+      "fuel": null,
+      "transmission": null,
+      "bodyType": null,
+      "color": "White",
+      "firstRegistration": null,
+      "accident": null,
+      "warranty": null,
+      "dealer": "양재점",
+      "region": "양재점",
+      "url": "https://certified.lexus.co.kr/car-detail/?idx=6369",
+      "image": "https://certified.lexus.co.kr/assets/img/lexus_preparing.jpg"
+    },
+    {
+      "brand": "lexus",
+      "id": "6370",
+      "model": "ES 300h",
+      "trim": "LUXURY+",
+      "year": 2026,
+      "mileageKm": 4600,
+      "priceKrw": 59000000,
+      "newPriceKrw": 67250000,
+      "fuel": null,
+      "transmission": null,
+      "bodyType": null,
+      "color": "Black",
+      "firstRegistration": null,
+      "accident": null,
+      "warranty": null,
+      "dealer": "양재점",
+      "region": "양재점",
+      "url": "https://certified.lexus.co.kr/car-detail/?idx=6370",
       "image": "https://certified.lexus.co.kr/assets/img/lexus_preparing.jpg"
     },
     {

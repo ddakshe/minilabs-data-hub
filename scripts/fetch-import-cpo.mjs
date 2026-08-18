@@ -40,6 +40,10 @@ const ONLY = process.argv[2]
 const MAX_PER_BRAND = process.env.MAX_PER_BRAND ? Number(process.env.MAX_PER_BRAND) : 300
 const capped = (n) => (MAX_PER_BRAND > 0 && n >= MAX_PER_BRAND)
 
+// 소스가 알려주는 "전체 재고 수". 앱에서 "전체 1,344대 중 최신 300대"를 쓰려면 필요하다.
+// 어댑터가 받은 값을 여기 적어두고 main()이 출력에 싣는다.
+const sourceTotals = {}
+
 const UA =
   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
 
@@ -126,6 +130,7 @@ async function benz() {
   // 그래서 빈 페이지가 나올 때까지 도는 방식으로 간다.
   for (let page = 1; page <= MB_MAX_PAGES; page += 1) {
     const s = await mbPage(page)
+    if (s.navigation?.totalResults) sourceTotals.benz = s.navigation.totalResults
     const rows = s.results ?? []
     if (rows.length === 0) break
 
@@ -188,6 +193,7 @@ function toyotaFamily(brand, origin, apiPrefix) {
       const list = json?.search_list
       if (!list) throw new Error(`${brand}: search_list 없음`)
       totalPage = list.total_page ?? 1
+      if (list.total_list_num) sourceTotals[brand] = list.total_list_num
 
       for (const c of list.car_list ?? []) {
         if (capped(items.length)) break
@@ -238,6 +244,7 @@ async function audi() {
   const json = await res.json()
 
   const rows = json.vehicleBasic ?? []
+  if (json.totalCount) sourceTotals.audi = json.totalCount
   return (MAX_PER_BRAND > 0 ? rows.slice(0, MAX_PER_BRAND) : rows).map((a) => ({
     brand: 'audi',
     id: a.carId ?? null,
@@ -268,15 +275,44 @@ async function audi() {
 const ADAPTERS = { benz, lexus, audi, toyota }
 
 // ───────────────────────── 브랜드 메타 ─────────────────────────
+// searchUrl = 앱의 "나머지는 공식 사이트에서" 링크. 최신 N건만 보여주고 전체는 여기로 넘긴다.
 const BRANDS = [
-  { id: 'bmw', name: 'BMW Premium Selection', pw: true },
-  { id: 'mini', name: 'MINI NEXT', pw: true },
-  { id: 'benz', name: 'Mercedes-Benz 인증중고차' },
-  { id: 'volvo', name: 'Volvo Selekt', pw: true },
-  { id: 'porsche', name: 'Porsche Approved', pw: true },
-  { id: 'lexus', name: 'Lexus Certified' },
-  { id: 'audi', name: 'Audi Approved :plus' },
-  { id: 'toyota', name: 'Toyota Certified' },
+  {
+    id: 'bmw',
+    name: 'BMW Premium Selection',
+    pw: true,
+    searchUrl: 'https://www.bmw.co.kr/ko-kr/sl/usedcarfinder/results',
+  },
+  {
+    id: 'mini',
+    name: 'MINI NEXT',
+    pw: true,
+    searchUrl: 'https://www.mini.co.kr/ko-kr/sl/usedcarfinder/results',
+  },
+  {
+    id: 'benz',
+    name: 'Mercedes-Benz 인증중고차',
+    searchUrl: 'https://www.mercedes-benz.co.kr/passengercars/buy/used-car/search-results.html',
+  },
+  {
+    id: 'volvo',
+    name: 'Volvo Selekt',
+    pw: true,
+    searchUrl: 'https://selekt.volvocars.co.kr/kr/vehicles/volvo/all-models',
+  },
+  {
+    id: 'porsche',
+    name: 'Porsche Approved',
+    pw: true,
+    searchUrl: 'https://finder.porsche.com/kr/ko-KR/search',
+  },
+  { id: 'lexus', name: 'Lexus Certified', searchUrl: 'https://certified.lexus.co.kr/car-list/' },
+  {
+    id: 'audi',
+    name: 'Audi Approved :plus',
+    searchUrl: 'https://www.audi.co.kr/ko/kr-used-car-search/',
+  },
+  { id: 'toyota', name: 'Toyota Certified', searchUrl: 'https://certified.toyota.co.kr/car-list/' },
 ]
 
 async function readExisting() {
@@ -334,10 +370,28 @@ async function main() {
   const byBrand = {}
   for (const it of items) byBrand[it.brand] = (byBrand[it.brand] ?? 0) + 1
 
+  // 앱이 "최신 N건만 보여주고 나머지는 공식 사이트로" 화면을 만들 수 있게
+  // 브랜드별 수집 수 · 소스 전체 재고 수 · 전체보기 링크를 함께 싣는다.
+  const prevBrands = existing.brands ?? {}
+  const brands = {}
+  for (const meta of BRANDS) {
+    const collected = byBrand[meta.id] ?? 0
+    if (collected === 0 && !prevBrands[meta.id]) continue
+    brands[meta.id] = {
+      name: meta.name,
+      collected,
+      // 이번에 안 돌린 브랜드는 직전 값을 유지한다(모르는 걸 0으로 쓰지 않는다).
+      sourceTotal: sourceTotals[meta.id] ?? prevBrands[meta.id]?.sourceTotal ?? null,
+      searchUrl: meta.searchUrl ?? null,
+    }
+  }
+
   const out = {
     updatedAt: todayKST(),
+    maxPerBrand: MAX_PER_BRAND,
     total: items.length,
     byBrand,
+    brands,
     failed,
     items,
   }

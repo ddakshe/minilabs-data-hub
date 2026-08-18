@@ -4,6 +4,8 @@
 robots에서 상세를 막고 있고 DB권 침해 판례 리스크가 있다.
 
 - 산출: `import-cpo/listings.json`
+- 앱 설계 전제: **최신 N건만 보여주고 나머지는 브랜드 공식 사이트로 링크**한다.
+  완전한 매물 검색을 흉내내지 않는다 — `brands[].searchUrl`이 그 링크다.
 - 소비: `https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/import-cpo/listings.json`
 - 스크래퍼: `scripts/fetch-import-cpo.mjs`(API 기반) + `scripts/fetch-import-cpo-pw.mjs`(브라우저 필요)
 - 워크플로: `.github/workflows/fetch-import-cpo.yml` (매일 09:20 KST)
@@ -25,6 +27,13 @@ BMW·포르쉐는 로컬에서 돌린다:
 ```bash
 node scripts/fetch-import-cpo-pw.mjs bmw,porsche
 ```
+
+**주기: 매일이면 충분하다.** 상한 300 기준 실측 소요는 bmw+porsche+volvo 전부 돌려 **3분 51초**,
+볼보는 CI가 커버하니 로컬에서 필요한 bmw+porsche만 돌리면 **약 3분**이다.
+(상한이 없던 시절엔 BMW만 클릭 111회여서 주 1회를 고민할 만했지만, 지금은 24회다.)
+
+최신순 슬라이스는 전체 재고보다 회전이 빠르다 — 신규 유입이 전부 상위 300에 들어오기 때문에
+주기를 길게 잡으면 놓치는 매물이 생긴다. 창을 넓히는(`MAX_PER_BRAND`↑) 것보다 자주 돌리는 게 낫다.
 
 CI가 실패해도 데이터는 파괴되지 않는다. 담당하지 않는 브랜드와 실패한 브랜드는
 기존 데이터를 그대로 유지하도록 만들어서, 포르쉐가 0건으로 끝난 실행에서도
@@ -204,6 +213,39 @@ MAX_PER_BRAND=0 node scripts/fetch-import-cpo-pw.mjs bmw      # 전량 시도(�
 ⚠️ 단 **BMW 사진 URL 경로에 VIN이 들어 있다**(`cdn.bmwdms.co.kr/Prd/<VIN>/…`).
 사진을 띄우려면 이 URL이 필요해서 그대로 둔다 — VIN을 필드로 저장하지는 않지만
 완전히 제거된 것은 아니라는 점을 알고 쓸 것. 사진을 포기하면 완전히 지울 수 있다.
+
+## 최상위 메타: `brands`
+
+앱이 "전체 N대 중 최신 M대 · 나머지는 공식 사이트에서"를 하드코딩 없이 그릴 수 있게
+브랜드별 메타를 함께 싣는다.
+
+```jsonc
+{
+  "maxPerBrand": 300,
+  "brands": {
+    "benz": {
+      "name": "Mercedes-Benz 인증중고차",
+      "collected": 300,        // 이 파일에 담긴 수
+      "sourceTotal": 710,      // 소스가 알려준 전체 재고
+      "searchUrl": "https://www.mercedes-benz.co.kr/passengercars/buy/used-car/search-results.html"
+    }
+  }
+}
+```
+
+실측(2026-08-18):
+
+| 브랜드 | 수집 / 전체 | 비율 |
+|---|---|---|
+| BMW · MINI | 300 / 1,341 | 22% |
+| Mercedes-Benz | 300 / 710 | 42% |
+| Porsche | 300 / **?** | — |
+| Volvo · Lexus · Audi · Toyota | 전량 | 100% |
+
+**`sourceTotal`이 `null`일 수 있다.** 포르쉐는 상한 때문에 끝까지 돌지 않아 총량을 모르고,
+`hitcounts` 패싯은 값이 `"25+"`로 캡되어 총량으로 쓸 수 없다. 추정치를 넣으면 앱이 틀린
+숫자를 자신 있게 보여주게 되므로 비워 둔다 — 앱은 `null`이면 "전체 N대" 문구를 생략할 것.
+이번 실행에서 다루지 않은 브랜드도 직전 값을 유지한다(모르는 걸 0으로 쓰지 않는다).
 
 ## 단위 함정 (제일 많이 틀리는 곳)
 

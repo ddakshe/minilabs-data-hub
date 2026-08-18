@@ -47,6 +47,9 @@ async function dropConsentOverlay(page) {
 // Number('')는 0(무제한)이 되어 기본값이 뒤집힌다.
 const MAX_PER_BRAND = process.env.MAX_PER_BRAND ? Number(process.env.MAX_PER_BRAND) : 300
 
+// 소스가 알려주는 "전체 재고 수". 앱의 "전체 N대 중 최신 M대" 표시에 쓴다.
+const sourceTotals = {}
+
 function todayKST() {
   return new Intl.DateTimeFormat('sv-SE', { timeZone: 'Asia/Seoul' }).format(new Date())
 }
@@ -177,6 +180,8 @@ async function porsche(browser) {
   }
 
   await page.close()
+  // 포르쉐는 상한 때문에 끝까지 돌지 않아 전체 재고 수를 알 수 없다.
+  // hitcounts 패싯은 값이 "25+"로 캡되어 총량으로 쓸 수 없다 → 추정치를 쓰지 않고 비워 둔다.
   return items
 }
 
@@ -195,6 +200,7 @@ async function volvo(browser) {
   await dropConsentOverlay(page)
 
   const found = Number(await page.getAttribute('#results', 'data-found')) || 0
+  if (found) sourceTotals.volvo = found
   const count = () => page.$$eval('article[id^="vehicleMDX-"]', (e) => e.length)
 
   for (let i = 0; i < VOLVO_MAX_CLICKS; i += 1) {
@@ -368,6 +374,7 @@ async function bmw(browser, { launchBmw }) {
     try {
       const j = await r.json()
       total = j?.metadata?.totalCount ?? total
+      if (total) sourceTotals.bmw = total
       for (const h of j?.hits ?? []) {
         const rec = mapBmwHit(h)
         if (rec?.id) byId.set(rec.id, rec)
@@ -558,10 +565,23 @@ async function main() {
   const byBrand = {}
   for (const it of items) byBrand[it.brand] = (byBrand[it.brand] ?? 0) + 1
 
+  // brands 메타(name·searchUrl)는 fetch 스크립트가 만든다. 여기서는 이 실행에서 알게 된
+  // collected·sourceTotal만 갱신하고 나머지는 그대로 물려받는다.
+  const brandMeta = { ...(existing.brands ?? {}) }
+  for (const [b, n] of Object.entries(byBrand)) {
+    brandMeta[b] = {
+      ...(brandMeta[b] ?? { name: null, searchUrl: null }),
+      collected: n,
+      sourceTotal: sourceTotals[b] ?? brandMeta[b]?.sourceTotal ?? null,
+    }
+  }
+
   const out = {
     updatedAt: todayKST(),
+    maxPerBrand: MAX_PER_BRAND,
     total: items.length,
     byBrand,
+    brands: brandMeta,
     failed: [...new Set([...(existing.failed ?? []).filter((b) => !collected.has(b)), ...failed])],
     items,
   }
