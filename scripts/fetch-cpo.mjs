@@ -54,6 +54,21 @@ function todayKST() {
   return new Intl.DateTimeFormat('sv-SE', { timeZone: 'Asia/Seoul' }).format(new Date())
 }
 
+/**
+ * 차종(시리즈). 앱이 "BMW · 3시리즈"처럼 2단으로 묶는 데 쓴다.
+ *
+ * 소스가 시리즈 필드를 주는 브랜드는 그 값을 쓴다(추측하지 않는다):
+ *   기아   modelCodeName            "쏘렌토"
+ *   아우디  symbolicCarlineGroup     "A8"
+ *   벤츠   vehicleClass             "E" → "E클래스"
+ *   BMW   series.name              "2" → "2시리즈"   (pw 스크립트)
+ * 안 주는 브랜드만 모델명에서 뽑는다 — 규칙은 각 어댑터에 적어 둔다.
+ */
+function firstToken(model) {
+  const t = String(model ?? '').trim().split(/[\s(,]/)[0]
+  return t || null
+}
+
 /** '99,220' | 22815.0 | 8407 → 8407 (정수 km). 못 읽으면 null. */
 function toKm(v) {
   if (v == null) return null
@@ -117,6 +132,29 @@ async function hyundaiPage(pageIdx) {
   return res.text()
 }
 
+/** 제네시스 차종. 이 목록에 있으면 brand 를 genesis 로 갈라낸다 */
+const GENESIS_SERIES = new Set(['G70', 'G80', 'G90', 'GV60', 'GV70', 'GV80'])
+
+/**
+ * 현대 모델명 → 차종.
+ *   "2023 그랜저(GN7) 하이브리드 2WD 익스클루시브" → "그랜저"
+ *   "2021 더 뉴 G70 가솔린 2.0 터보 2WD"           → "G70"
+ *
+ * 국산차 이름에는 "더 뉴 / 올 뉴 / 디 올 뉴" 같은 세대 접두사가 붙는다.
+ * 이걸 안 걷어내면 첫 토큰이 "더"가 되어 실측 300대 중 33대가 차종 "더"로 잡혔다.
+ */
+function hyundaiSeries(name) {
+  if (!name) return null
+  const cleaned = String(name)
+    .replace(/^\d{4}\s*/, '')
+    .replace(/^(디\s*)?올\s*뉴\s*/, '')
+    .replace(/^더\s*뉴\s*/, '')
+    .replace(/^더\s+/, '')
+    .replace(/^신형\s*/, '')
+    .trim()
+  return firstToken(cleaned)
+}
+
 function parseHyundaiCards(html) {
   const $ = cheerio.load(html)
   const out = []
@@ -150,10 +188,15 @@ function parseHyundaiCards(html) {
       ? `20${regTxt.slice(0, 2)}-${String(regTxt.match(/(\d{1,2})월/)[1]).padStart(2, '0')}`
       : null
 
+    const series = hyundaiSeries(name)
     out.push({
-      brand: 'hyundai',
+      // 현대 사이트는 "현대/제네시스" 통합이라 제네시스 매물이 같은 목록에 섞여 온다.
+      // 실측 300대 중 111대(37%)가 G80·GV70 등이었다. 앱에서 "현대 → G80"으로 보이면
+      // 사실과 다르므로 차종을 보고 브랜드를 갈라준다.
+      brand: GENESIS_SERIES.has(series ?? '') ? 'genesis' : 'hyundai',
       id,
       model: name,
+      series,
       trim: null,
       year: Number(name?.match(/^(\d{4})/)?.[1]) || null,
       mileageKm: toKm(spans.find((t) => /km$/.test(t))),
@@ -229,6 +272,8 @@ async function kia() {
         brand: 'kia',
         id: c.id != null ? String(c.id) : null,
         model: c.modelName ?? null,
+        // 기아는 차종명을 따로 준다 — 파싱 불필요
+        series: c.modelCodeName ?? null,
         trim: c.modelTrim ?? null,
         year: c.modelYear ? Number(c.modelYear) : null,
         mileageKm: toKm(c.drivingDistance),
@@ -332,6 +377,10 @@ async function benz() {
         brand: 'benz',
         id: v.identification?.code ?? null,
         model: v.vehicleModel?.name ?? null,
+        // vehicleClass 가 "E"/"A" 형태로 온다 → "E클래스"
+        series: v.vehicleModel?.vehicleClass?.value
+          ? `${v.vehicleModel.vehicleClass.value}클래스`
+          : null,
         // 벤츠는 마케팅 트림을 따로 주지 않는다. typeClass는 차대코드(W177)라
         // trim에 넣으면 오해를 부르므로 비워 둔다. 등급은 model 문자열에 들어 있다.
         trim: null,
@@ -391,6 +440,8 @@ function toyotaFamily(brand, origin, apiPrefix) {
           brand,
           id: c.idx != null ? String(c.idx) : null,
           model: c.model_name ?? null,
+          // "ES 300h" → "ES", "CAMRY HYBRID" → "CAMRY". 첫 토큰이 차종이다
+          series: firstToken(c.model_name),
           trim: c.class_name ?? null,
           year: c.year ? Number(c.year) : null,
           mileageKm: toKm(c.mileage),
@@ -439,6 +490,8 @@ async function audi() {
     brand: 'audi',
     id: a.carId ?? null,
     model: a.model?.description ?? null,
+    // symbolicCarlineGroup = 카라인 그룹(A8, Q3 …). 시리즈로 그대로 쓴다
+    series: a.symbolicCarlineGroup?.description ?? null,
     trim: a.trimline?.description ?? null,
     year: a.modelYear ?? null,
     mileageKm: toKm(a.used?.mileage),
@@ -470,6 +523,12 @@ const BRANDS = [
   {
     id: 'hyundai',
     name: '현대 인증중고차',
+    searchUrl: 'https://certified.hyundai.com/p/search/vehicle',
+  },
+  {
+    id: 'genesis',
+    name: '제네시스 인증중고차',
+    // 제네시스 전용 사이트가 아니라 현대 인증중고차 사이트에 함께 올라온다.
     searchUrl: 'https://certified.hyundai.com/p/search/vehicle',
   },
   { id: 'kia', name: '기아 인증중고차', searchUrl: 'https://cpo.kia.com/products/' },

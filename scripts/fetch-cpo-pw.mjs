@@ -67,6 +67,21 @@ function priceToKrw(v) {
   return Math.round(n < 1_000_000 ? n * 10000 : n)
 }
 
+/**
+ * 차종(시리즈). 앱이 "BMW · 3시리즈"처럼 2단으로 묶는 데 쓴다.
+ * BMW는 소스가 series.name 을 주므로 파싱하지 않는다. 포르쉐·볼보만 모델명에서 뽑는다.
+ */
+const PORSCHE_LINES = ['911', '718', 'Taycan', 'Panamera', 'Cayenne', 'Macan', 'Boxster', 'Cayman']
+const VOLVO_LINES = ['XC90', 'XC60', 'XC40', 'S90', 'S60', 'V90', 'V60', 'EX90', 'EX40', 'EX30', 'C40']
+
+/** 알려진 라인 목록에서 모델명에 포함된 것을 찾는다. 목록 밖이면 null(추측하지 않는다). */
+function matchLine(model, lines) {
+  const m = String(model ?? '')
+  // 긴 이름을 먼저 본다 — XC60 이 XC6 보다, 718 이 71 보다 앞서야 한다.
+  const sorted = [...lines].sort((a, b) => b.length - a.length)
+  return sorted.find((l) => m.toLowerCase().includes(l.toLowerCase())) ?? null
+}
+
 /** srcset("URL 320w, URL 640w, …")에서 가장 큰 폭의 URL을 고른다. */
 function pickLargest(srcset) {
   if (!srcset) return null
@@ -157,6 +172,7 @@ async function porsche(browser) {
         id,
         // 제목이 "2025 포르쉐 Taycan" 형태라 연식과 브랜드명을 떼어낸다.
         model: c.title?.replace(/^\d{4}\s*/, '').replace(/^포르쉐\s*/, '') ?? null,
+        series: matchLine(c.title, PORSCHE_LINES),
         trim: null,
         year: yearM ? Number(yearM[1]) : null,
         mileageKm: toKm(pick(/km$/)),
@@ -265,6 +281,7 @@ async function volvo(browser) {
     brand: 'volvo',
     id: r.id,
     model: r.title,
+    series: matchLine(r.title, VOLVO_LINES),
     trim: null, // 모델명 문자열에 섞여 있어 분리하지 않는다(잘못 자르면 더 나쁘다)
     year: r.year ? Number(r.year) : null,
     mileageKm: toKm(r.km),
@@ -306,6 +323,14 @@ const BMW_MAX_CLICKS = Number(process.env.BMW_MAX_CLICKS ?? 200)
 // 중간에 막혀 전량을 못 받았는지. main()이 이 값을 보고 기존 데이터와 합칠지 결정한다.
 let bmwPartial = false
 
+function bmwSeries(mo) {
+  const raw = mo?.series?.name ?? mo?.retailSeries?.name ?? null
+  if (raw && /^\d+$/.test(String(raw))) return `${raw}시리즈`
+  const range = String(mo?.marketingModelRange ?? '')
+  const head = range.split('_')[0]
+  return head || (raw ? String(raw) : null)
+}
+
 function mapBmwHit(hit) {
   const v = hit?.vehicle
   if (!v) return null
@@ -319,6 +344,9 @@ function mapBmwHit(hit) {
     brand: mo.brand === 'MINI' ? 'mini' : 'bmw',
     id: v.documentId ?? null,
     model: mo.model?.modelName ?? null,
+    // series.name 이 "3"/"5" 형태로 온다 → "3시리즈".
+    // 전기 모델(iX·i4)은 숫자가 아니라 marketingModelRange 가 "iX_I20" 형태라 그 앞부분을 쓴다.
+    series: bmwSeries(mo),
     trim: mo.model?.derivative ?? null,
     year: mo.modelYear ?? null,
     mileageKm: toKm(lc.mileage?.km),
