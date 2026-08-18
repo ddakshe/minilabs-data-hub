@@ -25,8 +25,18 @@ robots에서 상세를 막고 있고 DB권 침해 판례 리스크가 있다.
 BMW·포르쉐는 로컬에서 돌린다:
 
 ```bash
+# 저장소 루트에서 (pull → 수집 → 변경 있으면 commit·push → jsDelivr purge)
+./refresh-cpo.sh                  # bmw,porsche 기본
+./refresh-cpo.sh bmw              # 특정 브랜드만
+MAX_PER_BRAND=600 ./refresh-cpo.sh
+
+# 스크래퍼만 직접
 node scripts/fetch-cpo-pw.mjs bmw,porsche
 ```
+
+⚠️ **반드시 이 저장소 디렉터리에서 실행할 것.** `playwright`가 여기 `node_modules`에 있어서
+다른 곳에서 돌리면 `ERR_MODULE_NOT_FOUND: playwright`로 죽는다.
+`refresh-cpo.sh`는 `cd "$(dirname "$0")"`로 이 문제를 스스로 막는다.
 
 **주기: 매일이면 충분하다.** 상한 300 기준 실측 소요는 bmw+porsche+volvo 전부 돌려 **3분 51초**,
 볼보는 CI가 커버하니 로컬에서 필요한 bmw+porsche만 돌리면 **약 3분**이다.
