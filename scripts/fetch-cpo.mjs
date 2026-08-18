@@ -38,7 +38,25 @@ const ONLY = process.argv[2]
 // 인증중고차 앱에서 중요한 건 최근 매물이다. 0이면 무제한.
 // 빈 문자열도 "미지정"으로 본다 — Actions에서 입력을 비우면 env가 ''로 들어오고
 // Number('')는 0(무제한)이 되어 기본값이 뒤집힌다.
-const MAX_PER_BRAND = process.env.MAX_PER_BRAND ? Number(process.env.MAX_PER_BRAND) : 300
+/*
+ * 브랜드별 수집 상한. 0 = 무제한(기본).
+ *
+ * 예전엔 300이 기본이었다. 실측해 보니 상한을 없애는 쪽이 오히려 빠르다 —
+ * 페이지가 독립적인 현대·벤츠를 동시 요청으로 바꾸고 기아 페이지를 100으로 키우면
+ * 전량(약 2,800건)이 상한 300 순차 수집(약 35초)보다 짧게 끝난다.
+ *
+ * 상한을 없애면 얻는 게 하나 더 있다. 브랜드마다 "무엇을 기준으로 300을 잘랐는지"가
+ * 달랐다(BMW는 UI 최신순, 기아는 등록일순, 현대는 인기순). 전량을 받으면 이 표본 편향이
+ * 아예 질문거리가 안 된다. 특히 현대는 sortType 최신순 값을 못 찾아 인기순으로 받고 있다.
+ */
+const MAX_PER_BRAND = process.env.MAX_PER_BRAND ? Number(process.env.MAX_PER_BRAND) : 0
+
+/*
+ * 동시 요청 수. CI는 GitHub Actions 데이터센터 IP에서 도니까 넉넉히 잡지 않는다.
+ * 실측으로 현대 5동시·벤츠 8동시가 전부 200이었지만, 차단당하면 매일 도는 수집이
+ * 통째로 멈추므로 5로 묶고 필요할 때만 올린다.
+ */
+const CONCURRENCY = Number(process.env.CONCURRENCY ?? 5)
 const capped = (n) => (MAX_PER_BRAND > 0 && n >= MAX_PER_BRAND)
 
 // 소스가 알려주는 "전체 재고 수". 앱에서 "전체 1,344대 중 최신 300대"를 쓰려면 필요하다.
@@ -49,6 +67,42 @@ const UA =
   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
+
+/** [from, to] 정수 배열. to < from 이면 빈 배열 */
+const range = (from, to) =>
+  to < from ? [] : Array.from({ length: to - from + 1 }, (_, i) => from + i)
+
+/** 동시 실행 수를 제한한 map. 결과 순서는 입력 순서를 지킨다 */
+async function mapLimit(list, limit, fn) {
+  const out = new Array(list.length)
+  let next = 0
+  const worker = async () => {
+    while (next < list.length) {
+      const i = next
+      next += 1
+      out[i] = await fn(list[i], i)
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(limit, list.length) }, worker))
+  return out
+}
+
+/**
+ * 실패하면 한 번 더. 페이지를 수십 개 병렬로 던지면 한 개가 튕길 확률이 올라가는데,
+ * 여기서 던지면 어댑터 전체가 실패로 처리돼 브랜드 하나가 통째로 직전 데이터로 되돌아간다.
+ */
+async function retry(fn, tries = 2, waitMs = 800) {
+  let last
+  for (let i = 0; i < tries; i += 1) {
+    try {
+      return await fn()
+    } catch (err) {
+      last = err
+      if (i + 1 < tries) await sleep(waitMs)
+    }
+  }
+  throw last
+}
 
 function todayKST() {
   return new Intl.DateTimeFormat('sv-SE', { timeZone: 'Asia/Seoul' }).format(new Date())
@@ -96,7 +150,9 @@ function priceToKrw(v) {
 // ⚠ sortType 유효값을 아직 popularity만 확인했다(recent·regDate·newest는 500).
 //   최신순 값을 확인하기 전까지는 인기순으로 받는다 — 최신 N건 정책과 어긋나는 유일한 브랜드다.
 const HYUNDAI_LIST = 'https://certified.hyundai.com/p/search/vehicle/list'
+// rowsPerPage 는 15가 상한이다. 50·100·200 을 주면 전부 HTTP 400 (실측).
 const HYUNDAI_PAGE_SIZE = 15
+const HYUNDAI_MAX_PAGES = 120 // 안전장치. 1,088건 기준 73페이지
 
 async function hyundaiPage(pageIdx) {
   const body = new URLSearchParams({
@@ -221,19 +277,28 @@ function parseHyundaiCards(html) {
   return out
 }
 
+/*
+ * 페이지가 startNo 오프셋으로 독립적이라 병렬로 받는다(실측: 동시 5요청 104ms 전부 200).
+ * 1페이지를 먼저 받아 #totalVehicleCnt 로 총량을 알아낸 뒤 나머지를 한꺼번에 던진다.
+ */
 async function hyundai() {
-  const items = []
-  for (let pageIdx = 1; pageIdx <= 40; pageIdx += 1) {
-    const cards = parseHyundaiCards(await hyundaiPage(pageIdx))
-    if (cards.length === 0) break
-    for (const c of cards) {
-      if (capped(items.length)) break
-      if (!items.some((x) => x.id === c.id)) items.push(c)
-    }
-    if (capped(items.length)) break
-    await sleep(600)
-  }
-  return items
+  const first = parseHyundaiCards(await hyundaiPage(1))
+  if (first.length === 0) return []
+
+  const total = sourceTotals.hyundai ?? first.length
+  const want = MAX_PER_BRAND > 0 ? Math.min(total, MAX_PER_BRAND) : total
+  const lastPage = Math.min(HYUNDAI_MAX_PAGES, Math.ceil(want / HYUNDAI_PAGE_SIZE))
+
+  const rest = await mapLimit(range(2, lastPage), CONCURRENCY, (pageIdx) =>
+    retry(async () => parseHyundaiCards(await hyundaiPage(pageIdx)))
+  )
+
+  // 오프셋 방식이라 재고가 요청 중에 변하면 같은 매물이 두 페이지에 걸칠 수 있다.
+  const byId = new Map()
+  for (const c of [first, ...rest].flat()) if (!byId.has(c.id)) byId.set(c.id, c)
+
+  const items = [...byId.values()]
+  return MAX_PER_BRAND > 0 ? items.slice(0, MAX_PER_BRAND) : items
 }
 
 // ───────────────────────── 기아 인증중고차 ─────────────────────────
@@ -242,13 +307,15 @@ async function hyundai() {
 // 기아는 진짜 "최근 올라온 매물"로 정렬할 수 있는 유일한 소스다.
 // 페이지네이션은 커서 방식: 응답 레코드의 cursors 배열을 다음 요청에 그대로 넘긴다.
 const KIA_API = 'https://cpo.kia.com/api/search/'
-const KIA_PAGE_SIZE = 50
+// 서버 상한은 100이다. 200·500 을 주면 HTTP 200 이지만 100건만 온다(실측).
+// 커서 방식이라 병렬화는 불가능해서, 페이지를 키우는 것이 유일한 단축 수단이다.
+const KIA_PAGE_SIZE = 100
 
 async function kia() {
   const items = []
   let cursors = null
 
-  for (let page = 0; page < 40; page += 1) {
+  for (let page = 0; page < 60; page += 1) {
     const qs = new URLSearchParams({
       size: String(KIA_PAGE_SIZE),
       sort: 'DISPLAYED_AT_DESC',
@@ -302,7 +369,7 @@ async function kia() {
     if (capped(items.length)) break
     cursors = rows[rows.length - 1]?.cursors ?? null
     if (!cursors) break
-    await sleep(500)
+    await sleep(300)
   }
 
   return items
@@ -356,24 +423,10 @@ async function mbPage(page) {
   return json.data.search
 }
 
-async function benz() {
-  const items = []
-
-  // totalPages·totalResults를 믿고 돌면 안 된다.
-  // limit=100이면 page 7(601번째부터)이 0건인데 limit=50이면 page 13(같은 601번째)이 정상으로 온다.
-  // totalResults도 700으로 딱 떨어져서 실제 재고가 아니라 상한값으로 보인다.
-  // 그래서 빈 페이지가 나올 때까지 도는 방식으로 간다.
-  for (let page = 1; page <= MB_MAX_PAGES; page += 1) {
-    const s = await mbPage(page)
-    if (s.navigation?.totalResults) sourceTotals.benz = s.navigation.totalResults
-    const rows = s.results ?? []
-    if (rows.length === 0) break
-
-    for (const v of rows) {
-      if (capped(items.length)) break
-      const uv = v.usedVehicleData ?? {}
-      const ti = v.technicalInformation ?? {}
-      items.push({
+function mapBenzRow(v) {
+  const uv = v.usedVehicleData ?? {}
+  const ti = v.technicalInformation ?? {}
+  return {
         brand: 'benz',
         id: v.identification?.code ?? null,
         model: v.vehicleModel?.name ?? null,
@@ -402,14 +455,43 @@ async function benz() {
         dealer: v.dealer?.nameLocalLanguage ?? null,
         region: v.dealer?.addressLocalLanguage ?? null,
         url: v.pdpLink ?? null,
-        image: v.images?.default ?? null,
-      })
+    image: v.images?.default ?? null,
+  }
+}
+
+/*
+ * page 가 독립적인 정수라 병렬로 받는다(실측: 동시 8요청 전부 200).
+ *
+ * 종료 판정은 여전히 "빈 페이지"로 한다. navigation 값을 그대로 믿으면 안 되기 때문이다:
+ *   limit=100 이면 page 7(601번째)이 0건인데 limit=50 이면 page 13(같은 601번째)은 정상이다.
+ *   totalResults=724 인데 실제로는 page 14에서 24건으로 끝난다(674건). 부풀려진 값이다.
+ * 그래서 totalPages 는 "여기까지만 던져보자"는 상한으로만 쓰고, 빈 페이지는 그냥 걸러낸다.
+ */
+async function benz() {
+  const first = await mbPage(1)
+  if (first.navigation?.totalResults) sourceTotals.benz = first.navigation.totalResults
+  if ((first.results ?? []).length === 0) return []
+
+  const totalPages = Math.min(MB_MAX_PAGES, first.navigation?.totalPages ?? MB_MAX_PAGES)
+  const lastPage =
+    MAX_PER_BRAND > 0
+      ? Math.min(totalPages, Math.ceil(MAX_PER_BRAND / MB_PAGE_SIZE))
+      : totalPages
+
+  const rest = await mapLimit(range(2, lastPage), CONCURRENCY, (page) =>
+    retry(() => mbPage(page))
+  )
+
+  const byId = new Map()
+  for (const s of [first, ...rest]) {
+    for (const v of s.results ?? []) {
+      const row = mapBenzRow(v)
+      if (row.id && !byId.has(row.id)) byId.set(row.id, row)
     }
-    if (capped(items.length)) break
-    await sleep(600)
   }
 
-  return items
+  const items = [...byId.values()]
+  return MAX_PER_BRAND > 0 ? items.slice(0, MAX_PER_BRAND) : items
 }
 
 // ───────────────────────── Lexus · Toyota ─────────────────────────
@@ -529,6 +611,8 @@ const BRANDS = [
     id: 'genesis',
     name: '제네시스 인증중고차',
     // 제네시스 전용 사이트가 아니라 현대 인증중고차 사이트에 함께 올라온다.
+    // 그래서 자기 어댑터가 없고, 현대 어댑터가 차종을 보고 갈라낸 결과로 채워진다.
+    derivedFrom: 'hyundai',
     searchUrl: 'https://certified.hyundai.com/p/search/vehicle',
   },
   { id: 'kia', name: '기아 인증중고차', searchUrl: 'https://cpo.kia.com/products/' },
@@ -597,10 +681,25 @@ async function main() {
     const adapter = ADAPTERS[meta.id]
     const prev = prevItems.get(meta.id) ?? []
 
+    /*
+     * 이번 실행에서 이미 이 브랜드 매물이 들어왔으면 기존 데이터를 얹지 않는다.
+     *
+     * 제네시스가 그 경우다. 자기 어댑터는 없지만 현대 어댑터가 만들어 준다.
+     * 이 가드가 없으면 "어댑터 없음 → 기존 유지"로 판단해 직전 파일의 제네시스를
+     * 그대로 다시 밀어넣어 같은 매물이 두 번 들어간다(실측 105건 중복).
+     * "제네시스 분리" 직후엔 기존 파일에 제네시스가 없어서 잠복해 있던 버그다.
+     */
+    if (refreshed.has(meta.id)) {
+      const n = items.filter((x) => x.brand === meta.id).length
+      console.log(`· ${meta.id}: ${meta.derivedFrom ?? '다른 어댑터'} 결과에 포함됨 → ${n}건`)
+      continue
+    }
+
     if (!adapter) {
       // Playwright 담당 브랜드는 이 스크립트가 건드리지 않고 기존 데이터를 그대로 넘긴다.
       items.push(...prev)
-      console.log(`· ${meta.id}: ${meta.pw ? 'Playwright 담당' : '어댑터 없음'} → 기존 ${prev.length}건 유지`)
+      const why = meta.pw ? 'Playwright 담당' : meta.derivedFrom ? `${meta.derivedFrom} 수집 실패` : '어댑터 없음'
+      console.log(`· ${meta.id}: ${why} → 기존 ${prev.length}건 유지`)
       continue
     }
 
@@ -622,6 +721,27 @@ async function main() {
       failed.push(meta.id)
       console.warn(`⚠ ${meta.id}: 실패(${err.message}) → 기존 ${prev.length}건 유지`)
     }
+  }
+
+  /*
+   * 마지막 안전망: (brand, id) 중복 제거.
+   * 위 가드로 제네시스 문제는 막았지만, 파생 브랜드를 또 추가하거나
+   * 오프셋 페이지네이션 중 재고가 바뀌면 같은 매물이 두 번 들어올 수 있다.
+   * 앱은 (brand, id)를 키로 쓰므로(즐겨찾기·조회 기록) 중복은 조용히 망가진다.
+   */
+  {
+    const seen = new Set()
+    const unique = []
+    for (const it of items) {
+      const key = `${it.brand}:${it.id}`
+      if (seen.has(key)) continue
+      seen.add(key)
+      unique.push(it)
+    }
+    const dropped = items.length - unique.length
+    if (dropped > 0) console.log(`· 중복 ${dropped}건 제거`)
+    items.length = 0
+    items.push(...unique)
   }
 
   // 두 스크립트(fetch / pw)가 같은 파일을 갱신하므로 순서를 고정한다.

@@ -45,7 +45,32 @@ async function dropConsentOverlay(page) {
 // 전량을 긁지 않는다. 최신순으로 브랜드당 이만큼만. 0이면 무제한.
 // 빈 문자열도 "미지정"으로 본다 — Actions에서 입력을 비우면 env가 ''로 들어오고
 // Number('')는 0(무제한)이 되어 기본값이 뒤집힌다.
-const MAX_PER_BRAND = process.env.MAX_PER_BRAND ? Number(process.env.MAX_PER_BRAND) : 300
+/*
+ * 브랜드별 수집 상한. 0 = 무제한(기본). fetch-cpo.mjs 와 기본값을 맞춘다.
+ * 볼보(217)·포르쉐(101)는 이미 전량이라 해제해도 달라지는 게 없다.
+ */
+const MAX_PER_BRAND = process.env.MAX_PER_BRAND ? Number(process.env.MAX_PER_BRAND) : 0
+
+/*
+ * ⚠ BMW 는 별도 상한이 필요하다 — **렌더러 메모리 벽** 때문이다.
+ *
+ * 카드 사진이 1280×778 이라 디코딩하면 장당 약 4MB 다. "더보기"로 카드를 쌓으면
+ * 400~750장 사이에서 렌더러가 응답을 멈춘다(실측 3회: 756 · 468 · 264).
+ * 붕괴는 점진적이다 — UI 카운터가 0이 되고, 클릭당 수집이 12건→6건으로 줄다가 정지한다.
+ *
+ * 시도했지만 통하지 않은 것들:
+ *   - 이미지 요청 abort → SPA 가 이미지 로드 성공을 렌더링 조건으로 써서
+ *     11클릭(132건)째에 "더보기"가 DOM 에서 사라진다.
+ *   - 로드 후 img.src 를 1×1 로 교체 → 해제 대상이 0장. srcset/picture/background-image
+ *     를 쓰는 것으로 보인다(미확인).
+ *   - 클릭 간격 단축 → 5배 빨라지지만 메모리도 5배 빨리 쌓여 **더 일찍** 죽는다.
+ *     원래 코드의 waitForTimeout(500) 은 낭비가 아니라 우연한 백프레셔였다.
+ *
+ * 전량(1,338건)을 받으려면 세션을 쪼개야 한다 — URL 의 filters= 를 차종·가격대로 나눠
+ * 브라우저를 여러 번 새로 띄우면 메모리가 누적되지 않는다. 별도 작업으로 남긴다.
+ * 그때까지는 최신순(PRODUCTION_DATE_DESC) 상위 700건만 받는다.
+ */
+const BMW_MAX_ITEMS = Number(process.env.BMW_MAX_ITEMS ?? 700)
 
 // 소스가 알려주는 "전체 재고 수". 앱의 "전체 N대 중 최신 M대" 표시에 쓴다.
 const sourceTotals = {}
@@ -444,12 +469,35 @@ async function bmw(browser, { launchBmw }) {
     return Number((/([\d,]+)\s*중\s*([\d,]+)/.exec(t)?.[1] ?? '0').replace(/,/g, ''))
   }
 
-  const target = MAX_PER_BRAND > 0 ? Math.min(MAX_PER_BRAND, total ?? MAX_PER_BRAND) : total
+  // BMW 는 메모리 벽 때문에 전용 상한을 쓴다(위 BMW_MAX_ITEMS 주석 참고)
+  const cap = MAX_PER_BRAND > 0 ? Math.min(MAX_PER_BRAND, BMW_MAX_ITEMS) : BMW_MAX_ITEMS
+  const target = cap > 0 ? Math.min(cap, total ?? cap) : total
 
   // "더보기"는 a/button이 아니라 텍스트 노드다. Playwright 로케이터는 리렌더 사이에
   // 간헐적으로 count 0을 돌려주므로(실측), 페이지 안에서 텍스트로 직접 찾아 누른다.
+  /*
+   * ⚠ Playwright 의 page.evaluate 에는 기본 타임아웃이 없다. 렌더러가 메모리로 죽으면
+   * 영원히 걸린다 — 실측으로 26분간 완전 정지했고(CPU 25초만 소모) 알아채기 어려웠다.
+   * 제한을 넘으면 null 을 돌려 아래 "정체" 경로로 흐르게 한다(5회 연속이면 중단).
+   */
+  const withTimeout = async (promise, ms) => {
+    let timer
+    const guard = new Promise((r) => {
+      timer = setTimeout(() => {
+        console.warn(`  ⚠ bmw 더보기 클릭: ${ms}ms 초과 — 페이지가 응답하지 않는다`)
+        r(null)
+      }, ms)
+    })
+    try {
+      return await Promise.race([promise, guard])
+    } finally {
+      clearTimeout(timer)
+    }
+  }
+
   const clickMore = () =>
-    page.evaluate(() => {
+    withTimeout(
+      page.evaluate(() => {
       const leaf = [...document.querySelectorAll('*')].find(
         (e) => e.children.length === 0 && (e.textContent || '').trim() === '더보기'
       )
@@ -458,7 +506,9 @@ async function bmw(browser, { launchBmw }) {
       target.scrollIntoView({ block: 'center' })
       target.click()
       return true
-    })
+      }),
+      20000
+    )
 
   // 목록 UI가 뜰 때까지 기다린다(카운터가 생기면 준비된 것).
   for (let i = 0; i < 60; i += 1) {
