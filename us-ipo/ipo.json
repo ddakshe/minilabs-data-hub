@@ -2,7 +2,7 @@
   "generatedAt": "2026-08-18T00:00:00Z",
   "source": "SEC EDGAR",
   "sourceUrl": "https://www.sec.gov/edgar",
-  "usdKrw": 1411.91,
+  "usdKrw": 1410.07,
   "listed": [
     {
       "cik": "0002006960",
@@ -394,6 +394,49 @@
   ],
   "upcoming": [
     {
+      "cik": "0002017526",
+      "name": "Freenome, Inc.",
+      "ticker": "FRNM",
+      "filedAt": "2026-08-18",
+      "isSpac": false,
+      "sic": "8071",
+      "industry": "기타",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": null,
+        "netIncome": 837468,
+        "assets": 92779988
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002017526&type=S-1"
+    },
+    {
+      "cik": "0002112634",
+      "name": "Sensei Harbor Corp.",
+      "ticker": null,
+      "filedAt": "2026-08-18",
+      "isSpac": false,
+      "sic": "7371",
+      "industry": "소프트웨어·IT",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002112634&type=S-1"
+    },
+    {
+      "cik": "0002068385",
+      "name": "SharonAI Holdings Inc.",
+      "ticker": "SHAZ",
+      "filedAt": "2026-08-18",
+      "isSpac": false,
+      "sic": "7374",
+      "industry": "소프트웨어·IT",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": 1566631,
+        "netIncome": -39623909,
+        "assets": 133140150
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002068385&type=S-1"
+    },
+    {
       "cik": "0002123380",
       "name": "Gravity Acquisition Corp.",
       "ticker": null,
@@ -560,22 +603,6 @@
       "industry": "기타",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002109616&type=S-1"
-    },
-    {
-      "cik": "0002068385",
-      "name": "SharonAI Holdings Inc.",
-      "ticker": "SHAZ",
-      "filedAt": "2026-08-12",
-      "isSpac": false,
-      "sic": "7374",
-      "industry": "소프트웨어·IT",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 1566631,
-        "netIncome": -39623909,
-        "assets": 133140150
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002068385&type=S-1"
     },
     {
       "cik": "0001131903",
@@ -1352,17 +1379,6 @@
       "industry": "SPAC",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002115659&type=S-1"
-    },
-    {
-      "cik": "0002112634",
-      "name": "Sensei Harbor Corp.",
-      "ticker": null,
-      "filedAt": "2026-07-27",
-      "isSpac": false,
-      "sic": "7371",
-      "industry": "소프트웨어·IT",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002112634&type=S-1"
     },
     {
       "cik": "0002098410",
@@ -3046,17 +3062,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002104879&type=S-1"
     },
     {
-      "cik": "0002125551",
-      "name": "Alpex Acquisition Corp",
-      "ticker": "ALPX",
-      "filedAt": "2026-06-05",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002125551&type=S-1"
-    },
-    {
       "cik": "0002128739",
       "name": "JAB Acquisition Corp I",
       "ticker": "JAB",
@@ -3066,6 +3071,17 @@
       "industry": "SPAC",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002128739&type=S-1"
+    },
+    {
+      "cik": "0002125551",
+      "name": "Alpex Acquisition Corp",
+      "ticker": "ALPX",
+      "filedAt": "2026-06-05",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002125551&type=S-1"
     },
     {
       "cik": "0001921603",
