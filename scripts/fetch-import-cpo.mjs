@@ -304,7 +304,8 @@ const BRANDS = [
     id: 'porsche',
     name: 'Porsche Approved',
     pw: true,
-    searchUrl: 'https://finder.porsche.com/kr/ko-KR/search',
+    // 앱이 CPO만 보여주므로 링크도 인증중고차 필터가 걸린 검색으로 보낸다.
+    searchUrl: 'https://finder.porsche.com/kr/ko-KR/search?condition=porsche_approved',
   },
   { id: 'lexus', name: 'Lexus Certified', searchUrl: 'https://certified.lexus.co.kr/car-list/' },
   {

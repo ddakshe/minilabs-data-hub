@@ -81,7 +81,12 @@ function pickLargest(srcset) {
 // ───────────────────────── Porsche Approved ─────────────────────────
 // 카드는 data-testid="result-N"(0~14, 15개/페이지). 스펙은 같은 클래스의 span에 순서 없이 들어 있어
 // 인덱스가 아니라 텍스트 패턴으로 골라낸다(항목 수가 차량마다 다르다).
-const POR_LIST = 'https://finder.porsche.com/kr/ko-KR/search'
+//
+// condition=porsche_approved로 인증중고차만 받는다. 필터 없이 받으면 신차가 섞여 오고(439건 중 CPO 112),
+// 상한에 걸려 끝까지 못 돌아 전체 재고 수도 알 수 없었다. 필터를 걸면 전량이 100건대라 끝까지 돌 수 있고
+// sourceTotal을 추정 없이 정확히 알 수 있다.
+// (`condition[]=…`이나 `filter=condition:…` 형식은 무효 — 필터가 안 걸린 결과가 온다)
+const POR_LIST = 'https://finder.porsche.com/kr/ko-KR/search?condition=porsche_approved'
 const POR_MAX_PAGES = 40
 
 async function porsche(browser) {
@@ -89,10 +94,11 @@ async function porsche(browser) {
   const items = []
   const seen = new Set()
   let emptyStreak = 0
+  let reachedEnd = false
 
   for (let p = 1; p <= POR_MAX_PAGES; p += 1) {
     // networkidle은 쓰면 안 된다 — 애널리틱스가 계속 요청을 날려 idle이 오지 않는다.
-    await page.goto(`${POR_LIST}?page=${p}`, { waitUntil: 'domcontentloaded', timeout: 90000 })
+    await page.goto(`${POR_LIST}&page=${p}`, { waitUntil: 'domcontentloaded', timeout: 90000 })
     await dropConsentOverlay(page)
     // 렌더가 늦었을 뿐인데 끊으면 뒤 페이지를 통째로 잃는다.
     // 한 번 재시도하고, 그래도 없으면 그때 끝으로 본다.
@@ -108,7 +114,12 @@ async function porsche(browser) {
         ready = false
       }
     }
-    if (!ready) break
+    // 결과가 없는 페이지에는 result 카드가 아예 없어서 셀렉터 대기가 실패한다.
+    // 앞 페이지들을 정상 수집한 뒤 도달한 지점이므로 렌더 실패가 아니라 목록의 끝으로 본다.
+    if (!ready) {
+      reachedEnd = items.length > 0
+      break
+    }
     const cards = await page.$$eval('[data-testid^="result-"]', (els) =>
       els.map((el) => ({
         title: el.querySelector('h2')?.textContent?.trim() ?? null,
@@ -123,7 +134,7 @@ async function porsche(browser) {
             .find((v) => v && v.includes('images.finder.porsche.com')) ?? null,
       }))
     )
-    if (cards.length === 0) break
+    if (cards.length === 0) { reachedEnd = true; break }
     if (MAX_PER_BRAND > 0 && items.length >= MAX_PER_BRAND) break
 
     let fresh = 0
@@ -173,15 +184,16 @@ async function porsche(browser) {
     // 같은 매물만 다시 온 페이지가 연속 2번 나오면 끝으로 본다(1번은 일시적 중복일 수 있다).
     if (fresh === 0) {
       emptyStreak += 1
-      if (emptyStreak >= 2) break
+      if (emptyStreak >= 2) { reachedEnd = true; break }
     } else {
       emptyStreak = 0
     }
   }
 
   await page.close()
-  // 포르쉐는 상한 때문에 끝까지 돌지 않아 전체 재고 수를 알 수 없다.
-  // hitcounts 패싯은 값이 "25+"로 캡되어 총량으로 쓸 수 없다 → 추정치를 쓰지 않고 비워 둔다.
+  // 끝까지 돌았을 때만 총량으로 기록한다. 상한에 걸려 끊긴 수를 전체 재고로 쓰면
+  // 앱이 "전체 N대"를 틀리게 보여준다.
+  if (reachedEnd) sourceTotals.porsche = items.length
   return items
 }
 

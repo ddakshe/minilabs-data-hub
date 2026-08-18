@@ -72,14 +72,19 @@ MAX_PER_BRAND=1000 node scripts/fetch-import-cpo-pw.mjs
 |---|---|---|---|---|
 | Mercedes-Benz | fetch | 300 | ~652 | GraphQL (`commerce/onesearch`) |
 | BMW · MINI | **pw** | 300 | ~1,344 | SPA 응답 가로채기 (로컬 전용) |
-| Porsche | **pw** | 300 (**CPO 112**) | ~439 | SSR HTML, `?page=N` |
+| Porsche | **pw** | 101 (전부 CPO) | 101 | SSR HTML, `?condition=porsche_approved&page=N` |
 | Volvo Selekt | **pw** | 218 | 218 | 클릭 페이지네이션 |
 | Lexus Certified | fetch | 75 | 75 | PHP JSON, 무인증 |
 | Audi Approved :plus | fetch | 67 | 67 | REST, `Token` 헤더 |
 | Toyota Certified | fetch | 52 | 52 | PHP JSON, 무인증 |
 
-합계 **1,312건**. 포르쉐 목록에는 **신차가 섞여 있다** — `certified === true`로 거르면
-**순수 CPO 1,124건**. 다른 브랜드는 목록 자체가 인증중고차만이라 이 필드가 없다.
+합계 **1,117건이고 전부 인증중고차다.**
+
+포르쉐는 `condition=porsche_approved` 필터를 걸어 받는다. 필터 없이 받으면 신차가 섞여
+439건 중 CPO가 112건뿐이고, 상한에 걸려 끝까지 못 돌아 전체 재고 수도 알 수 없었다.
+필터를 걸면 전량이 100건대라 끝까지 돌 수 있어 `sourceTotal`을 추정 없이 정확히 안다.
+(`condition[]=…`, `filter=condition:…` 형식은 무효 — 필터가 안 걸린 결과가 온다)
+`certified` 필드는 포르쉐 레코드에 남아 있지만 이제 전부 `true`다.
 
 MINI는 별도 물량이 아니다. BMW와 같은 풀에 섞여 오고 레코드의 `brand`로 갈라진다.
 
@@ -104,8 +109,8 @@ MINI는 별도 물량이 아니다. BMW와 같은 풀에 섞여 오고 레코드
 | newPriceKrw | **0** | **0** | **0** | 100 | **0** | 100 | **0** |
 | dealer | 100 | 100 | **0** | 100 | **0** | 100 | 100 |
 
-\* 포르쉐는 `certified === true`(인증중고차 112건) 기준. 신차가 섞인 전체 439건 기준으로는
-주행거리 60%, 사고 26%로 떨어진다 — 신차엔 그런 이력이 없기 때문이다.
+\* 포르쉐는 이제 CPO만 받으므로 전 건 기준이다. 주행거리·사고·최초등록·이미지 모두 100%다.
+(필터 없이 신차가 섞였을 때는 주행거리 60%, 사고 26%로 떨어졌다 — 신차엔 그런 이력이 없다)
 
 알아둘 것:
 
@@ -238,13 +243,12 @@ MAX_PER_BRAND=0 node scripts/fetch-import-cpo-pw.mjs bmw      # 전량 시도(�
 | 브랜드 | 수집 / 전체 | 비율 |
 |---|---|---|
 | BMW · MINI | 300 / 1,341 | 22% |
-| Mercedes-Benz | 300 / 710 | 42% |
-| Porsche | 300 / **?** | — |
+| Mercedes-Benz | 300 / 716 | 42% |
+| Porsche | 101 / 101 | 100% |
 | Volvo · Lexus · Audi · Toyota | 전량 | 100% |
 
-**`sourceTotal`이 `null`일 수 있다.** 포르쉐는 상한 때문에 끝까지 돌지 않아 총량을 모르고,
-`hitcounts` 패싯은 값이 `"25+"`로 캡되어 총량으로 쓸 수 없다. 추정치를 넣으면 앱이 틀린
-숫자를 자신 있게 보여주게 되므로 비워 둔다 — 앱은 `null`이면 "전체 N대" 문구를 생략할 것.
+**`sourceTotal`은 `null`일 수 있다.** 상한에 걸려 끝까지 돌지 못한 실행에서는 기록하지 않는다 —
+끊긴 수를 전체 재고로 쓰면 앱이 "전체 N대"를 틀리게 보여준다. 앱은 `null`이면 그 문구를 생략할 것.
 이번 실행에서 다루지 않은 브랜드도 직전 값을 유지한다(모르는 걸 0으로 쓰지 않는다).
 
 ## 단위 함정 (제일 많이 틀리는 곳)
