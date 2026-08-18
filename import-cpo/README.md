@@ -8,6 +8,28 @@ robots에서 상세를 막고 있고 DB권 침해 판례 리스크가 있다.
 - 스크래퍼: `scripts/fetch-import-cpo.mjs`(API 기반) + `scripts/fetch-import-cpo-pw.mjs`(브라우저 필요)
 - 워크플로: `.github/workflows/fetch-import-cpo.yml` (매일 09:20 KST)
 
+## CI에서 도는 것과 로컬에서만 도는 것
+
+2026-08-18 실측(run 32106585398, 2분 24초, 전 단계 success):
+
+| 브랜드 | CI | 비고 |
+|---|---|---|
+| Mercedes-Benz · Lexus · Audi · Toyota | ✅ | 해외 IP에서도 정상. 한국 호스팅인 렉서스·토요타도 문제없다 |
+| Volvo | ✅ | Playwright 클릭 페이지네이션이 러너에서도 동작 |
+| **Porsche** | ❌ | Vercel 봇 챌린지가 Actions 데이터센터 IP를 통과시키지 않는다.<br>실측: 셀렉터 대기 25초 × 2 = **51초 타임아웃 후 0건**. 로컬 맥에서는 같은 코드가 300건을 받는다 |
+| **BMW · MINI** | ❌ | 실제 Chrome + headed 필수. 헤드리스는 조용히 0건 |
+
+그래서 워크플로의 Playwright 단계 기본값은 **`volvo`만**이다.
+BMW·포르쉐는 로컬에서 돌린다:
+
+```bash
+node scripts/fetch-import-cpo-pw.mjs bmw,porsche
+```
+
+CI가 실패해도 데이터는 파괴되지 않는다. 담당하지 않는 브랜드와 실패한 브랜드는
+기존 데이터를 그대로 유지하도록 만들어서, 포르쉐가 0건으로 끝난 실행에서도
+기존 300건과 BMW 300건이 온전히 남았다.
+
 ## 수집 정책: 전량이 아니라 최신 N건
 
 브랜드당 **`MAX_PER_BRAND`(기본 300)건만** 최신순으로 받는다. 전량을 긁지 않는 이유:
