@@ -22,8 +22,9 @@ const NETFLIX_TOP10 = {
   SERIES: { url: "https://www.netflix.com/tudum/top10/south-korea/tv", label: "시리즈 TOP 10" },
 };
 const LAFTEL_RANKING = "https://api.laftel.net/api/home/v1/recommend/ranking/?type=4hour";
-// 티빙 랭킹 페이지(Next.js SSR). __NEXT_DATA__ 안에 "오늘의 티빙 TOP 20" 밴드가 박혀 있음.
-const TVING_RANKING_PAGE = "https://www.tving.com/ranking";
+// 티빙 홈(Next.js SSR). __NEXT_DATA__ 안에 param="/all/ranking..." 밴드(TOP20_MAIN_DAY)가 박혀 있음.
+// 2026-08-18: 전용 /ranking 페이지가 삭제(진짜 404, body 에도 밴드 없음)되고 밴드가 홈으로 옮겨졌다.
+const TVING_RANKING_PAGE = "https://www.tving.com/";
 // 디즈니+ 한국 랜딩. __NEXT_DATA__ 에 "오늘 한국의 TOP 10" 슬라이더(TopRankedCard)가 SSR됨.
 const DISNEY_PAGE = "https://www.disneyplus.com/ko-kr";
 // 쿠팡플레이 랜딩. __NEXT_DATA__ props.pageProps.top20Rail 에 "이번 주 TOP 20" 랭킹 SSR됨.
@@ -159,11 +160,11 @@ async function buildLaftel() {
 }
 
 // ── 티빙: 오늘의 티빙 TOP 20 ──
-// 랭킹 페이지 HTML의 __NEXT_DATA__ 에서 param="/all/ranking" 밴드를 추출.
+// 홈 HTML의 __NEXT_DATA__ 에서 param 이 "/all/ranking" 으로 시작하는 밴드를 추출.
+// param 에 쿼리가 붙어 있으므로(예: "/all/ranking&pageNo=1&gradeCode=CPTG0019") 부분일치로 찾는다.
 async function buildTving() {
-  console.log("▶ 티빙 랭킹 페이지 조회…");
-  // 주의: 이 경로는 HTTP 404를 반환하지만 body의 __NEXT_DATA__ 에는 랭킹이 들어있음(Next.js soft-404).
-  // 따라서 상태코드로 판단하지 않고 body를 파싱한다.
+  console.log("▶ 티빙 홈 조회…");
+  // 상태코드로 판단하지 않고 body 를 파싱한다(과거 /ranking 이 soft-404 였던 이력).
   const res = await fetch(TVING_RANKING_PAGE, {
     headers: {
       "User-Agent": UA,
@@ -182,7 +183,7 @@ async function buildTving() {
     if (o.param && String(o.param).includes("/all/ranking") && Array.isArray(o.items)) band = o;
     for (const k in o) walk(o[k]);
   })(data);
-  if (!band) throw new Error("랭킹 밴드(/all/ranking)를 찾지 못함");
+  if (!band) throw new Error("랭킹 밴드(param=/all/ranking...)를 찾지 못함");
 
   const items = band.items.slice(0, 10).map((it, i) => ({
     rank: i + 1,
@@ -240,23 +241,31 @@ async function buildWavve() {
 }
 
 // ── 디즈니+: 오늘 한국의 TOP 10 ──
-// 랜딩 HTML의 __NEXT_DATA__ 에서 "오늘 한국의 TOP 10" 텍스트 노드의 형제 Slider(TopRankedCard) 추출.
+// 랜딩 HTML의 __NEXT_DATA__ 에서 TopRankedCard 노드를 직접 수집한다.
+// 2026-08-18: 예전에는 "오늘 한국의 TOP 10" 텍스트 노드의 *형제* Slider 를 집었는데,
+// 트리 구조가 바뀌면서 형제 관계가 어긋나 실패했다. 형제 관계에 기대지 않고 노드 타입으로
+// 직접 찾는다 — 구조가 또 바뀌어도 카드 타입만 유지되면 살아남는다.
+// 순서는 문서 순서가 아니라 카드의 index 필드로 정한다.
 async function buildDisney() {
   console.log("▶ 디즈니+ 랜딩 조회…");
   const html = await fetchText(DISNEY_PAGE);
   const m = html.match(/<script id="__NEXT_DATA__" type="application\/json">([\s\S]*?)<\/script>/);
   if (!m) throw new Error("__NEXT_DATA__ 를 찾지 못함");
 
+  // 다른 레일의 TopRankedCard 와 섞이지 않도록 해당 밴드가 실제로 있는지 먼저 확인한다.
+  if (!m[1].includes("오늘 한국의 TOP 10")) {
+    throw new Error('"오늘 한국의 TOP 10" 밴드를 찾지 못함');
+  }
+
   const root = JSON.parse(m[1]);
-  let parent = null;
-  (function walk(o, par) {
-    if (parent || !o || typeof o !== "object") return;
-    if (o.children === "오늘 한국의 TOP 10") parent = par;
-    for (const k in o) walk(o[k], o);
-  })(root, null);
-  const slider = Array.isArray(parent) ? parent.find((s) => s && s._type === "Slider") : null;
-  const cards = slider?.children ?? [];
-  if (cards.length === 0) throw new Error("TOP 10 슬라이더를 찾지 못함");
+  const cards = [];
+  (function walk(o) {
+    if (!o || typeof o !== "object") return;
+    if (o._type === "TopRankedCard") cards.push(o);
+    for (const k in o) walk(o[k]);
+  })(root);
+  if (cards.length === 0) throw new Error("TopRankedCard 를 찾지 못함");
+  cards.sort((a, b) => (a.index ?? 0) - (b.index ?? 0));
 
   const items = cards.slice(0, 10).map((c, i) => {
     const imageId = c.imageVariants?.defaultImage?.imageId;
