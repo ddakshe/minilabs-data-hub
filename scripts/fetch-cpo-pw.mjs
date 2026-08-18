@@ -1,5 +1,5 @@
-// 수입차 인증중고차(CPO) — JS 상호작용이 필요한 사이트 전용 Playwright 스크래퍼.
-// fetch-import-cpo.mjs(내장 fetch)가 못 긁는 브랜드를 담당하고, 같은 listings.json을 갱신한다.
+// 인증중고차(CPO) — JS 상호작용이 필요한 사이트 전용 Playwright 스크래퍼.
+// fetch-cpo.mjs(내장 fetch)가 못 긁는 브랜드를 담당하고, 같은 listings.json을 갱신한다.
 //
 // 담당:
 //   포르쉐 — finder.porsche.com이 Vercel 봇 챌린지로 curl을 막는다(429). 브라우저로는 그냥 열린다.
@@ -10,8 +10,8 @@
 //            무엇보다 요청 간격을 크게 벌린다. 아래 "BMW" 섹션의 주의사항을 먼저 읽을 것.
 //
 // Usage:
-//   node scripts/fetch-import-cpo-pw.mjs           # 전체
-//   node scripts/fetch-import-cpo-pw.mjs porsche   # 특정 브랜드만
+//   node scripts/fetch-cpo-pw.mjs           # 전체
+//   node scripts/fetch-cpo-pw.mjs porsche   # 특정 브랜드만
 //
 // BMW 전용 환경변수:
 //   BMW_PAGE_SIZE=12    한 요청당 매물 수. 12는 UI가 쓰는 확인된 값. 클수록 총 요청이 줄어든다.
@@ -24,7 +24,7 @@ import { fileURLToPath } from 'node:url'
 import { chromium } from 'playwright'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const OUTPUT_PATH = path.resolve(__dirname, '../import-cpo/listings.json')
+const OUTPUT_PATH = path.resolve(__dirname, '../cpo/listings.json')
 
 const ONLY = process.argv[2]
   ? new Set(process.argv[2].split(',').map((s) => s.trim()).filter(Boolean))
@@ -60,7 +60,7 @@ function toKm(v) {
   return Number.isFinite(n) && n >= 0 ? n : null
 }
 
-/** fetch-import-cpo.mjs의 priceToKrw와 같은 규칙. 100만원 미만은 만원 표기로 본다. */
+/** fetch-cpo.mjs의 priceToKrw와 같은 규칙. 100만원 미만은 만원 표기로 본다. */
 function priceToKrw(v) {
   const n = Number(String(v ?? '').replace(/[^\d.]/g, ''))
   if (!Number.isFinite(n) || n <= 0) return null

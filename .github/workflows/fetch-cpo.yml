@@ -1,4 +1,4 @@
-name: Fetch import CPO
+name: Fetch CPO
 
 on:
   schedule:
@@ -24,7 +24,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: fetch-import-cpo
+  group: fetch-cpo
   cancel-in-progress: false
 
 jobs:
@@ -60,7 +60,7 @@ jobs:
       - name: Fetch (API 기반)
         env:
           MAX_PER_BRAND: ${{ github.event.inputs.max_per_brand }}
-        run: node scripts/fetch-import-cpo.mjs "${{ github.event.inputs.only }}"
+        run: node scripts/fetch-cpo.mjs "${{ github.event.inputs.only }}"
 
       # bmw·porsche는 제외한다. 둘 다 러너에서 데이터가 오지 않는다(원인은 다르다):
       #   bmw     — 실제 Chrome + headed가 필요. 헤드리스는 조용히 0건이 된다.
@@ -73,18 +73,18 @@ jobs:
           MAX_PER_BRAND: ${{ github.event.inputs.max_per_brand }}
         run: |
           PW="${{ github.event.inputs.pw_only }}"
-          node scripts/fetch-import-cpo-pw.mjs "${PW:-volvo}"
+          node scripts/fetch-cpo-pw.mjs "${PW:-volvo}"
 
       - name: Check for changes
         id: diff
         run: |
-          git add import-cpo/
-          if git diff --cached --quiet -- import-cpo/; then
+          git add cpo/
+          if git diff --cached --quiet -- cpo/; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No changes — skipping commit."
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
-            git --no-pager diff --cached --stat import-cpo/
+            git --no-pager diff --cached --stat cpo/
           fi
 
       - name: Commit & push
@@ -93,22 +93,22 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
-          git commit -m "chore(import-cpo): daily refresh ($DATE_KST)"
+          git commit -m "chore(cpo): daily refresh ($DATE_KST)"
           git push
 
       - name: Summary
         if: always()
         run: |
           {
-            echo "## 수입차 인증중고차 수집 결과"
+            echo "## 인증중고차 수집 결과"
             echo ""
             echo "- Trigger: \`${{ github.event_name }}\`"
             echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
             echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
             echo ""
-            if [ -f import-cpo/listings.json ]; then
+            if [ -f cpo/listings.json ]; then
               echo '```'
-              node -e "const d=require('./import-cpo/listings.json');console.log('total',d.total);console.log(Object.entries(d.byBrand).sort((a,b)=>b[1]-a[1]).map(([k,v])=>k+' '+v).join(' · '));if(d.failed?.length)console.log('failed:',d.failed.join(', '))"
+              node -e "const d=require('./cpo/listings.json');console.log('total',d.total);console.log(Object.entries(d.byBrand).sort((a,b)=>b[1]-a[1]).map(([k,v])=>k+' '+v).join(' · '));if(d.failed?.length)console.log('failed:',d.failed.join(', '))"
               echo '```'
             fi
           } >> "$GITHUB_STEP_SUMMARY"

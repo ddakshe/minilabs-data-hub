@@ -1,5 +1,5 @@
-// 수입차 인증중고차(CPO) 매물 스크래퍼 — 브랜드 공식 소스만 사용.
-// 출력: import-cpo/listings.json
+// 인증중고차(CPO) 매물 스크래퍼 — 국산·수입 브랜드 공식 소스만 사용.
+// 출력: cpo/listings.json
 //
 // 설계: fetch-car-deals.mjs의 어댑터 레지스트리 패턴을 따른다.
 //   - 어댑터 성공 → items에 정규화된 매물
@@ -12,21 +12,22 @@
 //
 // 수집하지 않는 것: VIN, 차량번호판. BMW·벤츠 API가 그대로 주지만 개인정보라 버린다.
 //
-// fetch로 못 받는 세 브랜드는 fetch-import-cpo-pw.mjs가 담당한다:
+// fetch로 못 받는 세 브랜드는 fetch-cpo-pw.mjs가 담당한다:
 //   포르쉐 — Vercel 봇 챌린지가 curl을 막는다.
 //   볼보   — 페이지네이션이 URL로 안 움직인다("12개 더 로드하기" 클릭이 필요).
 //   BMW    — WAF가 짧은 간격의 연속 요청을 막는다. 브라우저 컨텍스트 + 넓은 간격이 필요.
 //
 // Usage:
-//   node scripts/fetch-import-cpo.mjs             # 전체
-//   node scripts/fetch-import-cpo.mjs lexus,audi  # 특정 브랜드만(나머지는 기존 데이터 유지)
+//   node scripts/fetch-cpo.mjs             # 전체
+//   node scripts/fetch-cpo.mjs lexus,audi  # 특정 브랜드만(나머지는 기존 데이터 유지)
 
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import * as cheerio from 'cheerio'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const OUTPUT_PATH = path.resolve(__dirname, '../import-cpo/listings.json')
+const OUTPUT_PATH = path.resolve(__dirname, '../cpo/listings.json')
 
 const ONLY = process.argv[2]
   ? new Set(process.argv[2].split(',').map((s) => s.trim()).filter(Boolean))
@@ -71,6 +72,192 @@ function priceToKrw(v) {
   const n = Number(String(v ?? '').replace(/[^\d.]/g, ''))
   if (!Number.isFinite(n) || n <= 0) return null
   return Math.round(n < 1_000_000 ? n * 10000 : n)
+}
+
+// ───────────────────────── 현대 인증중고차 ─────────────────────────
+// POST /p/search/vehicle/list 가 목록을 **HTML 조각**으로 준다(JSON 아님). form-urlencoded 바디.
+// 브라우저 없이 curl로도 열린다 → CI에서 돌 수 있다. robots.txt는 Allow: / 로 전면 허용.
+//
+// ⚠ sortType 유효값을 아직 popularity만 확인했다(recent·regDate·newest는 500).
+//   최신순 값을 확인하기 전까지는 인기순으로 받는다 — 최신 N건 정책과 어긋나는 유일한 브랜드다.
+const HYUNDAI_LIST = 'https://certified.hyundai.com/p/search/vehicle/list'
+const HYUNDAI_PAGE_SIZE = 15
+
+async function hyundaiPage(pageIdx) {
+  const body = new URLSearchParams({
+    ntcSeq: '',
+    type: 'PLP',
+    pageIdx: String(pageIdx),
+    rowsPerPage: String(HYUNDAI_PAGE_SIZE),
+    startNo: String((pageIdx - 1) * HYUNDAI_PAGE_SIZE),
+    listCnt: String(HYUNDAI_PAGE_SIZE),
+    sortType: 'popularity',
+    srchType: 'srchWord',
+    searchWord: '',
+    sdStatCd: '',
+    selectedCodeList: '',
+    lowPrice: '0',
+    highPrice: '0',
+    lowMileage: '0',
+    highMileage: '',
+    lowModelYear: '',
+    highModelYear: '',
+  })
+  const res = await fetch(HYUNDAI_LIST, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+      'X-Requested-With': 'XMLHttpRequest',
+      'User-Agent': UA,
+      Referer: 'https://certified.hyundai.com/p/search/vehicle',
+    },
+    body,
+  })
+  if (!res.ok) throw new Error(`hyundai HTTP ${res.status}`)
+  return res.text()
+}
+
+function parseHyundaiCards(html) {
+  const $ = cheerio.load(html)
+  const out = []
+
+  // 총 재고 수는 <em id="totalVehicleCnt">1,064</em> 에 있다.
+  const total = toKm($('#totalVehicleCnt').first().text())
+  if (total) sourceTotals.hyundai = total
+
+  // 구조: ul#productList > li > a[href="javascript:common.link.goodsDeatil('<ID>')"]
+  //   .unit_info .name  → "2023 투싼(NX4) 하이브리드 2WD 모던"  (앞 4자리가 연식)
+  //   .drive span       → [최초등록("23년 11월"), 주행거리, 번호판, 지역]
+  //   .price .pay em    → 만원 단위 판매가. del.txt.del은 할인 전 가격이라 쓰지 않는다.
+  $('#productList > li').each((_, li) => {
+    const $li = $(li)
+    const href = $li.find('a[href*="goodsDeatil"]').first().attr('href') ?? ''
+    const id = href.match(/goodsDeatil\('([A-Z0-9]+)'\)/)?.[1] ?? null
+    if (!id) return
+
+    const name = $li.find('.unit_info .name').first().text().trim() || null
+    const spans = $li
+      .find('.drive span')
+      .map((__, sp) => $(sp).text().trim())
+      .get()
+
+    // 번호판(예: 269로8643)은 개인정보라 담지 않는다. 지역만 취한다.
+    const plateIdx = spans.findIndex((t) => /^\d{2,3}[가-힣]\d{4}$/.test(t))
+    const region = plateIdx >= 0 ? (spans[plateIdx + 1] ?? null) : (spans[spans.length - 1] ?? null)
+
+    const regTxt = spans.find((t) => /^\d{2}년\s*\d{1,2}월$/.test(t)) ?? null
+    const firstRegistration = regTxt
+      ? `20${regTxt.slice(0, 2)}-${String(regTxt.match(/(\d{1,2})월/)[1]).padStart(2, '0')}`
+      : null
+
+    out.push({
+      brand: 'hyundai',
+      id,
+      model: name,
+      trim: null,
+      year: Number(name?.match(/^(\d{4})/)?.[1]) || null,
+      mileageKm: toKm(spans.find((t) => /km$/.test(t))),
+      priceKrw: priceToKrw($li.find('.price .pay em').first().text().trim()),
+      newPriceKrw: null,
+      fuel: null,
+      transmission: null,
+      bodyType: null,
+      color: null,
+      firstRegistration,
+      accident: null,
+      warranty: null,
+      dealer: null,
+      region,
+      // 개별 상세 URL이 없다. goodsDetail.do는 브라우저에서도 400이고, JS가 만드는 경로를
+      // 재현하지 못했다. 대신 ID로 검색하면 정확히 그 한 대만 나오므로 그 링크를 쓴다(실측 확인).
+      url: `https://certified.hyundai.com/p/search/vehicle?srchType=srchWord&searchWord=${id}`,
+      image: $li.find('img').first().attr('src') ?? null,
+    })
+  })
+
+  return out
+}
+
+async function hyundai() {
+  const items = []
+  for (let pageIdx = 1; pageIdx <= 40; pageIdx += 1) {
+    const cards = parseHyundaiCards(await hyundaiPage(pageIdx))
+    if (cards.length === 0) break
+    for (const c of cards) {
+      if (capped(items.length)) break
+      if (!items.some((x) => x.id === c.id)) items.push(c)
+    }
+    if (capped(items.length)) break
+    await sleep(600)
+  }
+  return items
+}
+
+// ───────────────────────── 기아 인증중고차 ─────────────────────────
+// 순수 JSON API. 브라우저·키·쿠키 전부 불필요하고 curl로 그냥 열린다.
+// sort=DISPLAYED_AT_DESC = **매물 등록일 최신순**. 다른 브랜드는 연식·생산일로 대신했는데
+// 기아는 진짜 "최근 올라온 매물"로 정렬할 수 있는 유일한 소스다.
+// 페이지네이션은 커서 방식: 응답 레코드의 cursors 배열을 다음 요청에 그대로 넘긴다.
+const KIA_API = 'https://cpo.kia.com/api/search/'
+const KIA_PAGE_SIZE = 50
+
+async function kia() {
+  const items = []
+  let cursors = null
+
+  for (let page = 0; page < 40; page += 1) {
+    const qs = new URLSearchParams({
+      size: String(KIA_PAGE_SIZE),
+      sort: 'DISPLAYED_AT_DESC',
+      displayChannel: 'GENERAL',
+    })
+    for (const c of cursors ?? []) qs.append('cursors[]', String(c))
+
+    const res = await fetch(`${KIA_API}?${qs}`, {
+      headers: { Accept: 'application/json', 'User-Agent': UA, Referer: 'https://cpo.kia.com/products/' },
+    })
+    if (!res.ok) throw new Error(`kia HTTP ${res.status}`)
+    const json = await res.json()
+    if (json.totalElements) sourceTotals.kia = json.totalElements
+
+    const rows = json.content ?? []
+    if (rows.length === 0) break
+
+    for (const c of rows) {
+      if (capped(items.length)) break
+      items.push({
+        brand: 'kia',
+        id: c.id != null ? String(c.id) : null,
+        model: c.modelName ?? null,
+        trim: c.modelTrim ?? null,
+        year: c.modelYear ? Number(c.modelYear) : null,
+        mileageKm: toKm(c.drivingDistance),
+        priceKrw: priceToKrw(c.price),
+        newPriceKrw: null,
+        fuel: c.modelEngine ?? null,
+        transmission: c.modelMission ?? null,
+        bodyType: null,
+        color: c.exteriorColorCodeName ?? null,
+        firstRegistration: c.firstRegisteredOn ?? null,
+        accident: null,
+        warranty: null,
+        // 기아만 주는 필드 — 매물이 올라온 시각. 최신순 정렬의 기준이다.
+        listedAt: c.displayedAt ?? null,
+        // 목록 응답에 판매점 정보가 없다. plateNumber(번호판)는 오지만 개인정보라 담지 않는다.
+        dealer: null,
+        region: null,
+        url: c.id != null ? `https://cpo.kia.com/products/${c.id}` : null,
+        image: c.exteriorImageUrl ?? null,
+      })
+    }
+
+    if (capped(items.length)) break
+    cursors = rows[rows.length - 1]?.cursors ?? null
+    if (!cursors) break
+    await sleep(500)
+  }
+
+  return items
 }
 
 // ───────────────────────── Mercedes-Benz ─────────────────────────
@@ -271,12 +458,18 @@ async function audi() {
 }
 
 // 어댑터 레지스트리: 여기 추가하면 자동 수집 대상이 된다.
-// 포르쉐(봇 챌린지)·볼보(클릭 페이지네이션)는 fetch-import-cpo-pw.mjs에서 처리한다.
-const ADAPTERS = { benz, lexus, audi, toyota }
+// 포르쉐(봇 챌린지)·볼보(클릭 페이지네이션)는 fetch-cpo-pw.mjs에서 처리한다.
+const ADAPTERS = { hyundai, kia, benz, lexus, audi, toyota }
 
 // ───────────────────────── 브랜드 메타 ─────────────────────────
 // searchUrl = 앱의 "나머지는 공식 사이트에서" 링크. 최신 N건만 보여주고 전체는 여기로 넘긴다.
 const BRANDS = [
+  {
+    id: 'hyundai',
+    name: '현대 인증중고차',
+    searchUrl: 'https://certified.hyundai.com/p/search/vehicle',
+  },
+  { id: 'kia', name: '기아 인증중고차', searchUrl: 'https://cpo.kia.com/products/' },
   {
     id: 'bmw',
     name: 'BMW Premium Selection',

@@ -1,14 +1,14 @@
-# import-cpo — 수입차 인증중고차(CPO) 매물
+# cpo — 인증중고차(CPO) 매물 (국산 + 수입)
 
 브랜드 공식 소스만 사용한다. 애그리게이터(엔카·KB차차차·케이카)는 쓰지 않는다 —
 robots에서 상세를 막고 있고 DB권 침해 판례 리스크가 있다.
 
-- 산출: `import-cpo/listings.json`
+- 산출: `cpo/listings.json`
 - 앱 설계 전제: **최신 N건만 보여주고 나머지는 브랜드 공식 사이트로 링크**한다.
   완전한 매물 검색을 흉내내지 않는다 — `brands[].searchUrl`이 그 링크다.
-- 소비: `https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/import-cpo/listings.json`
-- 스크래퍼: `scripts/fetch-import-cpo.mjs`(API 기반) + `scripts/fetch-import-cpo-pw.mjs`(브라우저 필요)
-- 워크플로: `.github/workflows/fetch-import-cpo.yml` (매일 09:20 KST)
+- 소비: `https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/cpo/listings.json`
+- 스크래퍼: `scripts/fetch-cpo.mjs`(API 기반) + `scripts/fetch-cpo-pw.mjs`(브라우저 필요)
+- 워크플로: `.github/workflows/fetch-cpo.yml` (매일 09:20 KST)
 
 ## CI에서 도는 것과 로컬에서만 도는 것
 
@@ -16,7 +16,7 @@ robots에서 상세를 막고 있고 DB권 침해 판례 리스크가 있다.
 
 | 브랜드 | CI | 비고 |
 |---|---|---|
-| Mercedes-Benz · Lexus · Audi · Toyota | ✅ | 해외 IP에서도 정상. 한국 호스팅인 렉서스·토요타도 문제없다 |
+| 현대 · 기아 · Mercedes-Benz · Lexus · Audi · Toyota | ✅ | 해외 IP에서도 정상 |
 | Volvo | ✅ | Playwright 클릭 페이지네이션이 러너에서도 동작 |
 | **Porsche** | ❌ | Vercel 봇 챌린지가 Actions 데이터센터 IP를 통과시키지 않는다.<br>실측: 셀렉터 대기 25초 × 2 = **51초 타임아웃 후 0건**. 로컬 맥에서는 같은 코드가 300건을 받는다 |
 | **BMW · MINI** | ❌ | 실제 Chrome + headed 필수. 헤드리스는 조용히 0건 |
@@ -25,7 +25,7 @@ robots에서 상세를 막고 있고 DB권 침해 판례 리스크가 있다.
 BMW·포르쉐는 로컬에서 돌린다:
 
 ```bash
-node scripts/fetch-import-cpo-pw.mjs bmw,porsche
+node scripts/fetch-cpo-pw.mjs bmw,porsche
 ```
 
 **주기: 매일이면 충분하다.** 상한 300 기준 실측 소요는 bmw+porsche+volvo 전부 돌려 **3분 51초**,
@@ -50,8 +50,8 @@ CI가 실패해도 데이터는 파괴되지 않는다. 담당하지 않는 브�
 - 매일 갱신 비용이 크게 줄고 상대 서버 부담도 줄어든다.
 
 ```bash
-MAX_PER_BRAND=0    node scripts/fetch-import-cpo.mjs      # 0이면 무제한(전량 시도)
-MAX_PER_BRAND=1000 node scripts/fetch-import-cpo-pw.mjs
+MAX_PER_BRAND=0    node scripts/fetch-cpo.mjs      # 0이면 무제한(전량 시도)
+MAX_PER_BRAND=1000 node scripts/fetch-cpo-pw.mjs
 ```
 
 정렬 지원 현황:
@@ -68,25 +68,57 @@ MAX_PER_BRAND=1000 node scripts/fetch-import-cpo-pw.mjs
 
 ## 브랜드별 상태
 
-| 브랜드 | 담당 | 수집 | 전체 재고 | 방식 |
+국산 3 + 수입 6, **9개 브랜드**. 전국 인증중고차 재고 약 4,600대 중 최신 1,717대를 수집한다.
+
+| 브랜드 | 담당 | 수집 / 전체 | CI | 방식 |
 |---|---|---|---|---|
-| Mercedes-Benz | fetch | 300 | ~652 | GraphQL (`commerce/onesearch`) |
-| BMW · MINI | **pw** | 300 | ~1,344 | SPA 응답 가로채기 (로컬 전용) |
-| Porsche | **pw** | 101 (전부 CPO) | 101 | SSR HTML, `?condition=porsche_approved&page=N` |
-| Volvo Selekt | **pw** | 218 | 218 | 클릭 페이지네이션 |
-| Lexus Certified | fetch | 75 | 75 | PHP JSON, 무인증 |
-| Audi Approved :plus | fetch | 67 | 67 | REST, `Token` 헤더 |
-| Toyota Certified | fetch | 52 | 52 | PHP JSON, 무인증 |
+| **현대** (제네시스 포함) | fetch | 300 / 1,063 | ✅ | form POST → **HTML 조각**, cheerio |
+| **기아** | fetch | 300 / 998 | ✅ | 순수 JSON API, 커서 페이지네이션 |
+| BMW · MINI | pw | 300 / 1,341 | ❌ | SPA 응답 가로채기 (로컬 전용) |
+| Mercedes-Benz | fetch | 300 / 716 | ✅ | GraphQL (`commerce/onesearch`) |
+| Volvo Selekt | pw | 218 / 218 | ✅ | 클릭 페이지네이션 |
+| Porsche Approved | pw | 101 / 101 | ❌ | SSR HTML (로컬 전용) |
+| Lexus Certified | fetch | 78 / 78 | ✅ | PHP JSON, 무인증 |
+| Audi Approved :plus | fetch | 68 / 68 | ✅ | REST, `Token` 헤더 |
+| Toyota Certified | fetch | 52 / 52 | ✅ | PHP JSON, 무인증 |
 
-합계 **1,117건이고 전부 인증중고차다.**
+전부 인증중고차다(신차 섞임 없음). MINI는 BMW와 같은 풀에 섞여 오고 레코드의 `brand`로 갈라진다.
+현대 사이트는 제목이 "현대/제네시스 인증중고차"로, 제네시스 매물이 같은 목록에 포함된다.
 
-포르쉐는 `condition=porsche_approved` 필터를 걸어 받는다. 필터 없이 받으면 신차가 섞여
-439건 중 CPO가 112건뿐이고, 상한에 걸려 끝까지 못 돌아 전체 재고 수도 알 수 없었다.
-필터를 걸면 전량이 100건대라 끝까지 돌 수 있어 `sourceTotal`을 추정 없이 정확히 안다.
-(`condition[]=…`, `filter=condition:…` 형식은 무효 — 필터가 안 걸린 결과가 온다)
-`certified` 필드는 포르쉐 레코드에 남아 있지만 이제 전부 `true`다.
+### 현대 (`certified.hyundai.com`)
 
-MINI는 별도 물량이 아니다. BMW와 같은 풀에 섞여 오고 레코드의 `brand`로 갈라진다.
+```
+POST /p/search/vehicle/list   (application/x-www-form-urlencoded)
+  ntcSeq= &type=PLP &pageIdx=N &rowsPerPage=15 &startNo=… &listCnt=15
+  &sortType=popularity &srchType=srchWord &searchWord= &lowPrice=0 &highPrice=0 …
+→ JSON이 아니라 HTML 조각. ul#productList > li 를 cheerio로 파싱한다.
+```
+
+- `robots.txt`는 **`Allow: /`** 전면 허용. 브라우저 없이 curl로 열린다 → CI 가능.
+- 카드 구조: `.unit_info .name`(앞 4자리가 연식) · `.drive span`[최초등록, 주행거리, **번호판**, 지역] ·
+  `.price .pay em`(만원). `del.txt.del`은 **할인 전 가격**이라 쓰지 않는다.
+- **번호판은 담지 않는다**(`269로8643` 형태로 그대로 온다). 지역만 취한다.
+- 총 재고는 `<em id="totalVehicleCnt">`에 있다.
+- ⚠️ **`sortType` 최신순 값을 못 찾았다.** `popularity`만 유효하고 `recent`·`regDate`·`newest`는 500이다.
+  9개 브랜드 중 **최신순 정렬이 안 되는 유일한 브랜드**다(현재 인기순으로 받는다).
+- 개별 상세 URL이 없다. `goodsDetail.do?contsNo=`는 브라우저에서도 400이고 JS가 만드는 경로를
+  재현하지 못했다. 대신 **ID로 검색하면 정확히 그 한 대만 나와서** 그 링크를 쓴다(실측 확인).
+
+### 기아 (`cpo.kia.com`)
+
+```
+GET /api/search/?size=50&sort=DISPLAYED_AT_DESC&displayChannel=GENERAL
+    &cursors[]=<timestamp>&cursors[]=<id>        ← 다음 페이지
+→ { content: [...], totalElements: 998 }
+```
+
+- 키·쿠키·브라우저 전부 불필요. curl로 그냥 열린다.
+- **`sort=DISPLAYED_AT_DESC`는 매물 등록일 최신순이다.** 다른 브랜드는 연식·생산일로 대신했는데
+  기아만 "최근 올라온 매물"로 정렬할 수 있다. 그래서 레코드에 `listedAt`을 담는다(기아 전용 필드).
+  실측: 300건이 최근 5일치(2026-08-13 ~ 08-18)로 들어온다.
+- 페이지네이션은 오프셋이 아니라 **커서**다. 응답 마지막 레코드의 `cursors` 배열을 그대로 넘긴다.
+- 필드명 주의: 트림 `modelTrim`, 연료 `modelEngine`, 색상 `exteriorColorCodeName`.
+  목록 응답에 판매점 정보는 없다. **`plateNumber`(번호판)가 오지만 담지 않는다.**
 
 ## 필드 채움률 (실측)
 
@@ -126,7 +158,7 @@ MINI는 별도 물량이 아니다. BMW와 같은 풀에 섞여 오고 레코드
 
 ## ⚠️ BMW: 직접 API 호출은 막혀 있다 — "더보기" 응답을 가로챈다
 
-담당은 `fetch-import-cpo-pw.mjs`. **로컬(맥) 실행 전용**이고 워크플로는 bmw를 건너뛴다.
+담당은 `fetch-cpo-pw.mjs`. **로컬(맥) 실행 전용**이고 워크플로는 bmw를 건너뛴다.
 
 ### 왜 API를 직접 못 부르나
 
@@ -161,8 +193,8 @@ DOM을 긁는 것보다 낫다 — API 원본 그대로라 필드가 훨씬 풍�
 UI가 12개씩 불러오므로 기본 300건이면 "더보기" 24회다(전량은 111회).
 
 ```bash
-node scripts/fetch-import-cpo-pw.mjs bmw                      # 최신 300건
-MAX_PER_BRAND=0 node scripts/fetch-import-cpo-pw.mjs bmw      # 전량 시도(취약함)
+node scripts/fetch-cpo-pw.mjs bmw                      # 최신 300건
+MAX_PER_BRAND=0 node scripts/fetch-cpo-pw.mjs bmw      # 전량 시도(취약함)
 ```
 
 ### 클릭 구현에서 두 번 넘어진 지점

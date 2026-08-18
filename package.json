@@ -8,8 +8,8 @@
     "fetch:coupang-camps": "node scripts/fetch-coupang-camps.mjs",
     "fetch:kamis": "node scripts/fetch-kamis.mjs",
     "fetch:now-showing": "node scripts/fetch-now-showing.mjs",
-    "fetch:import-cpo": "node scripts/fetch-import-cpo.mjs",
-    "fetch:import-cpo-pw": "node scripts/fetch-import-cpo-pw.mjs"
+    "fetch:cpo": "node scripts/fetch-cpo.mjs",
+    "fetch:cpo-pw": "node scripts/fetch-cpo-pw.mjs"
   },
   "dependencies": {
     "cheerio": "^1.2.0",
