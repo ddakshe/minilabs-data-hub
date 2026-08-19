@@ -340,8 +340,20 @@ async function volvo(browser) {
 //
 // ⚠ 실제 Chrome + headed가 필수다. 헤드리스로는 데이터가 오지 않는다.
 //   → GitHub Actions에서는 돌지 않는다. 로컬(맥) 실행 전용이고, 워크플로는 bmw를 건너뛴다.
-const BMW_PAGE_URL =
-  'https://www.bmw.co.kr/ko-kr/sl/usedcarfinder/results?sorting=PRODUCTION_DATE_DESC'
+/*
+ * 정렬 축. ASC 로 바꿔 오래된 쪽을 긁을 수 있지만 **실익이 없다.**
+ *
+ * 처음엔 "DESC 로 최신 700 + ASC 로 오래된 700 → 합집합 1,400 > 전체 1,339" 로 계산했다.
+ * 건수는 맞았지만 쓸모가 없었다 — ASC 로 들어온 36건 중 **35건(97%)에 modelYear 가 없다.**
+ * 생산일이 가장 오래된 매물이라 BMW 가 연식을 채우지 않는다. 앱은 연식이 기본 정렬축이자
+ * 필터축이라 이 레코드를 쓸 수 없다(useListings 가 로딩 시점에 걸러낸다).
+ *
+ * 교훈: 정렬 반전은 "데이터가 얇은 쪽"을 긁는 방식이라 반대쪽 끝일수록 품질이 낮다.
+ * 전량이 필요하면 filters= 를 차종(17종·평균 79건)으로 쪼개야 한다 — 각 세션이 7클릭이라
+ * 메모리 벽에 닿지 않고, 품질이 고르게 나온다.
+ */
+const BMW_SORTING = process.env.BMW_SORTING ?? 'PRODUCTION_DATE_DESC'
+const BMW_PAGE_URL = `https://www.bmw.co.kr/ko-kr/sl/usedcarfinder/results?sorting=${BMW_SORTING}`
 const BMW_PAGE_STEP = 12 // UI가 "더보기" 한 번에 불러오는 수
 const BMW_MAX_CLICKS = Number(process.env.BMW_MAX_CLICKS ?? 200)
 
