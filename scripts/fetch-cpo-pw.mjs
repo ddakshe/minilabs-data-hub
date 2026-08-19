@@ -70,7 +70,18 @@ const MAX_PER_BRAND = process.env.MAX_PER_BRAND ? Number(process.env.MAX_PER_BRA
  * 브라우저를 여러 번 새로 띄우면 메모리가 누적되지 않는다. 별도 작업으로 남긴다.
  * 그때까지는 최신순(PRODUCTION_DATE_DESC) 상위 700건만 받는다.
  */
-const BMW_MAX_ITEMS = Number(process.env.BMW_MAX_ITEMS ?? 700)
+const BMW_MAX_ITEMS = Number(process.env.BMW_MAX_ITEMS ?? 400)
+
+/*
+ * 루프 전체 시간 상한. 넘으면 그 시점까지 모은 것으로 끝낸다(부분 수집 → 병합).
+ *
+ * 왜 필요한가: 실측으로 한 번 **54분**이 걸렸다. 벽에 부딪힌 뒤 클릭이 간헐적으로
+ * 성공하면 stalled 카운터가 0으로 리셋돼서 "5회 연속 실패" 조건에 영원히 못 닿는다.
+ * 정체 카운터만으로는 폭주를 막을 수 없다 — 시간으로 잘라야 한다.
+ */
+const BMW_DEADLINE_MS = Number(process.env.BMW_DEADLINE_MS ?? 8 * 60 * 1000)
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 
 // 소스가 알려주는 "전체 재고 수". 앱의 "전체 N대 중 최신 M대" 표시에 쓴다.
 const sourceTotals = {}
@@ -510,10 +521,30 @@ async function bmw(browser, { launchBmw }) {
   const clickMore = () =>
     withTimeout(
       page.evaluate(() => {
-      const leaf = [...document.querySelectorAll('*')].find(
-        (e) => e.children.length === 0 && (e.textContent || '').trim() === '더보기'
-      )
-      if (!leaf) return false
+      /*
+       * 예전엔 [...document.querySelectorAll('*')].find(...) 로 **매 클릭마다 전체 DOM을**
+       * 배열로 만들었다. 카드가 12개씩 쌓이니 400장이면 약 1만 요소를 매번 훑어서
+       * 클릭 수의 제곱으로 느려졌다(실측 37초/클릭 → 최적화 후 3.8초/클릭).
+       *
+       * XPath 는 네이티브이고 첫 매치에서 멈춘다. 찾은 노드는 window 에 캐시한다 —
+       * 더보기 버튼은 목록이 위로 쌓여도 같은 노드로 남아서 대부분 재사용된다.
+       * XPath 가 못 찾으면 원래 방식으로 한 번 더 본다(형태가 바뀌어도 죽지 않게).
+       */
+      const w = window
+      let leaf = w.__cpoMore
+      if (!leaf || !leaf.isConnected) {
+        leaf = document.evaluate(
+          "//*[not(*)][normalize-space(.)='더보기']",
+          document, null, 9 /* FIRST_ORDERED_NODE_TYPE */, null
+        ).singleNodeValue
+        if (!leaf) {
+          leaf = [...document.querySelectorAll('*')].find(
+            (e) => e.children.length === 0 && (e.textContent || '').trim() === '더보기'
+          )
+        }
+        if (!leaf) return false
+        w.__cpoMore = leaf
+      }
       const target = leaf.closest('a,button,[role="button"]') ?? leaf
       target.scrollIntoView({ block: 'center' })
       target.click()
@@ -530,7 +561,12 @@ async function bmw(browser, { launchBmw }) {
 
   let stalled = 0
   let stop = null
+  const deadline = Date.now() + BMW_DEADLINE_MS
   for (let click = 0; click < BMW_MAX_CLICKS; click += 1) {
+    if (Date.now() > deadline) {
+      stop = `시간 상한 ${Math.round(BMW_DEADLINE_MS / 60000)}분 초과 (${byId.size}건)`
+      break
+    }
     // 판정은 실제로 가로챈 개수로 한다. UI 카운터("N 중 M")는 렌더 타이밍에 따라
     // 0을 돌려주는 일이 잦아서 신뢰할 수 없다 — 보조 로그로만 쓴다.
     const before = byId.size
@@ -550,8 +586,22 @@ async function bmw(browser, { launchBmw }) {
       continue
     }
 
-    // 새 응답이 들어올 때까지 기다린다.
-    for (let w = 0; w < 24 && byId.size === before; w += 1) await page.waitForTimeout(500)
+    /*
+     * 새 응답이 들어올 때까지 기다린다.
+     *
+     * 예전엔 page.waitForTimeout(500) 을 24회 돌렸다. byId 는 Node 쪽 Map 이라
+     * 확인 비용이 0인데 굳이 브라우저를 왕복했고, 응답이 50ms 에 와도 첫 반복이
+     * 이미 500ms 를 자고 나서 재확인해서 클릭마다 최소 500ms 를 버렸다.
+     */
+    const waitUntil = Date.now() + 12000
+    while (byId.size === before && Date.now() < waitUntil) await sleep(100)
+
+    /*
+     * 클릭 사이 여유. 없애면 5배 빨라지지만 메모리도 그만큼 빨리 쌓여 벽이 앞당겨진다
+     * (실측: 여유 없이 468장에서 정지, 500ms 였을 때 756장). 상한을 400으로 낮췄으니
+     * 벽까지 가지 않지만, 벽 위치가 실행마다 264~756으로 흔들려서 최소한의 완충은 남긴다.
+     */
+    await sleep(150)
 
     if (byId.size === before) {
       stalled += 1
@@ -572,13 +622,17 @@ async function bmw(browser, { launchBmw }) {
   await b.close()
 
   const items = [...byId.values()]
-  const goal = MAX_PER_BRAND > 0 ? Math.min(MAX_PER_BRAND, total ?? MAX_PER_BRAND) : total
-  // 상한만큼 받았으면 부분 수집이 아니다(전량을 의도한 게 아니므로).
+  /*
+   * goal 은 루프가 실제로 쓴 상한(cap)이어야 한다. 예전엔 MAX_PER_BRAND 만 봤는데
+   * 그 값은 0(무제한)이고 BMW 는 BMW_MAX_ITEMS 를 따로 쓰므로, 상한대로 400건을 받아도
+   * "부분 수집 408/1356" 이라고 경고했다 — 정상인데 실패처럼 읽혔다.
+   */
+  const goal = cap > 0 ? Math.min(cap, total ?? cap) : total
   bmwPartial = goal != null && items.length < goal
   if (bmwPartial) {
-    console.warn(`  ⚠ bmw 부분 수집: ${items.length}/${goal}건 — 다시 실행하면 이어붙는다`)
+    console.warn(`  ⚠ bmw 목표 미달: ${items.length}/${goal}건 — 벽에 부딪혔거나 시간 상한`)
   } else {
-    console.log(`  · bmw 최신 ${items.length}건 (전체 ${total ?? '?'}건 중)`)
+    console.log(`  · bmw 최신 ${items.length}건 (전체 ${total ?? '?'}건 중 상한 ${goal})`)
   }
   return items.slice(0, MAX_PER_BRAND > 0 ? MAX_PER_BRAND : items.length)
 }
@@ -646,18 +700,22 @@ async function main() {
       items.push(...prev)
       continue
     }
-    // BMW·MINI가 부분 수집으로 끝났다면 기존 데이터를 버리지 않고 id 기준으로 합친다.
-    // 그러면 여러 번 나눠 돌려서 채울 수 있다. 전량을 받았을 때는 합치지 않는다 —
-    // 팔린 매물이 영구히 남으면 안 되기 때문이다.
-    if ((b === 'bmw' || b === 'mini') && bmwPartial) {
-      const byId = new Map(prev.map((x) => [x.id, x]))
-      for (const r of got) byId.set(r.id, r)
-      const merged = [...byId.values()]
-      console.log(`  · ${b}: 부분 수집 → 기존과 병합 ${prev.length} + ${got.length} → ${merged.length}건`)
-      items.push(...merged)
-    } else {
-      items.push(...got)
-    }
+    /*
+     * 병합하지 않는다 — **이번 실행에서 실제로 본 것만** 남긴다.
+     *
+     * 예전엔 부분 수집이면 기존 데이터와 id 기준으로 합쳤다("여러 번 나눠 돌려서 채운다").
+     * 그런데 BMW 는 메모리 벽 때문에 전량에 절대 도달하지 못해서 **항상** 병합 모드였고,
+     * 결과적으로 팔린 매물이 영구히 남았다(되돌린 커밋의 데이터까지 남아 있었다 —
+     * id 형식이 두 가지로 섞이고 그중 3건은 year 조차 없었다).
+     *
+     * "N일 안 보이면 팔린 것으로 간주" 방식도 여기서는 못 쓴다. 전체 1,353건 중 최신
+     * 400건만 보므로, 501번째에 있는 **아직 팔리지 않은** 차도 우리 창에 안 들어와서
+     * 함께 지워진다. 결국 400건으로 수렴하는데 그건 병합을 없애는 것과 같은 결과다.
+     *
+     * 대가: 최신순 하위(오래된 매물)가 빠진다. 앱 기본 정렬이 최신 연식순이라
+     * 화면에서 가장 덜 아쉬운 쪽이고, 더 필요하면 BMW_MAX_ITEMS 를 올리면 된다.
+     */
+    items.push(...got)
   }
 
   // 두 스크립트(fetch / pw)가 같은 파일을 갱신하므로 순서를 고정한다.
