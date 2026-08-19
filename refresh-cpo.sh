@@ -46,3 +46,22 @@ curl -s -o /dev/null "https://purge.jsdelivr.net/gh/ddakshe/minilabs-data-hub@ma
 
 echo "✅ 완료"
 node -e "const d=require('./cpo/listings.json');console.log('   총',d.total,'건 —',Object.entries(d.byBrand).sort((a,b)=>b[1]-a[1]).map(([k,v])=>k+' '+v).join(' · '))"
+
+# 브랜드별 신선도 점검.
+#
+# 8개 브랜드는 CI(09:20 KST)가, BMW·포르쉐는 이 스크립트가 갱신한다. 이 스크립트를
+# 10시에 돌리면 CI 결과를 pull 한 직후이므로, **여기서 전 브랜드 신선도를 한 번에 볼 수 있다.**
+# CI 가 조용히 실패하면 그 브랜드만 날짜가 밀리는데, 3일이 지나면 앱이 그 브랜드를
+# 목록에서 감춘다(useListings STALE_DAYS=3). 그때는 이미 늦으니 매일 여기서 경고한다.
+node -e "
+const d = require('./cpo/listings.json')
+const today = new Intl.DateTimeFormat('sv-SE', { timeZone: 'Asia/Seoul' }).format(new Date())
+const stale = Object.entries(d.brands ?? {})
+  .filter(([, m]) => m.updatedAt !== today)
+  .map(([b, m]) => b + ' ' + (m.updatedAt ?? '?'))
+if (stale.length === 0) { console.log('   신선도: 전 브랜드 오늘 갱신 ✓'); process.exit(0) }
+console.log('   ⚠ 오늘 갱신 안 된 브랜드: ' + stale.join(' · '))
+console.log('     CI(09:20 KST) 실패 가능성 — gh run list --workflow=fetch-cpo.yml 확인')
+console.log('     3일 넘기면 앱에서 해당 브랜드가 사라진다(STALE_DAYS=3)')
+"
+

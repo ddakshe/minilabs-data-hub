@@ -5,3 +5,7 @@ node_modules/
 # Python (scripts/stock-ipo)
 __pycache__/
 *.pyc
+
+# 로컬 실행 로그 (LaunchAgent 가 쓰던 것 — 러너로 옮긴 뒤엔 안 쓰인다)
+refresh-ott.log
+local-jobs-status.json
