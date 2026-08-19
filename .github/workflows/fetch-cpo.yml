@@ -12,7 +12,7 @@ on:
         required: false
         default: ''
       max_per_brand:
-        description: '브랜드당 최대 수집 건수(최신순). 비우면 300, 0이면 무제한'
+        description: '브랜드당 최대 수집 건수(최신순). 비우면 무제한(기본). BMW는 별도 상한 700'
         required: false
         default: ''
       pw_only:
