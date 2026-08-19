@@ -1,13 +1,40 @@
 {
-  "generatedAt": "2026-08-18T00:00:00Z",
+  "generatedAt": "2026-08-19T00:00:00Z",
   "source": "SEC EDGAR",
   "sourceUrl": "https://www.sec.gov/edgar",
-  "usdKrw": 1410.07,
+  "usdKrw": 1391.48,
   "listed": [
+    {
+      "cik": "0002132582",
+      "name": "Lyntris Inc.",
+      "ticker": "LYNX",
+      "exchange": "뉴욕증권거래소",
+      "offerPrice": 17.5,
+      "priceBandLow": null,
+      "priceBandHigh": null,
+      "bandPosition": null,
+      "sharesOffered": null,
+      "sharesAfterListing": null,
+      "grossProceeds": null,
+      "marketCap": null,
+      "filedAt": "2026-08-19",
+      "isSpac": false,
+      "sic": "3812",
+      "industry": "제조",
+      "underwriters": [],
+      "businessSummary": "We are a leading defense technology company delivering &#8220;sense-to-act&#8221; connectivity solutions for the modern, connected battlespace.",
+      "useOfProceeds": "We intend to use the net proceeds from this offering to repay approximately $60.",
+      "netResult": null,
+      "netResultYear": null,
+      "lockupDays": null,
+      "location": "DALLAS, TX",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002132582&type=424B4"
+    },
     {
       "cik": "0002006960",
       "name": "Londian Wason New Energy Tech Inc.",
-      "ticker": null,
+      "ticker": "FOIL",
       "exchange": "뉴욕증권거래소",
       "offerPrice": 22.0,
       "priceBandLow": null,
@@ -394,6 +421,44 @@
   ],
   "upcoming": [
     {
+      "cik": "0002133239",
+      "name": "Southern Cross Acquisition II Corp.",
+      "ticker": "SCAT",
+      "filedAt": "2026-08-19",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002133239&type=S-1"
+    },
+    {
+      "cik": "0002064768",
+      "name": "Canary Staked TRX ETF",
+      "ticker": null,
+      "filedAt": "2026-08-19",
+      "isSpac": false,
+      "sic": "6221",
+      "industry": "금융·부동산",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002064768&type=S-1"
+    },
+    {
+      "cik": "0002019793",
+      "name": "XCF Global, Inc.",
+      "ticker": "SAFX",
+      "filedAt": "2026-08-19",
+      "isSpac": false,
+      "sic": "2860",
+      "industry": "제조",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": 0,
+        "netIncome": 74004768,
+        "assets": 419472575
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002019793&type=S-1"
+    },
+    {
       "cik": "0002017526",
       "name": "Freenome, Inc.",
       "ticker": "FRNM",
@@ -583,17 +648,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001670747&type=S-1"
     },
     {
-      "cik": "0002132582",
-      "name": "Lyntris Inc.",
-      "ticker": null,
-      "filedAt": "2026-08-12",
-      "isSpac": false,
-      "sic": "3812",
-      "industry": "제조",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002132582&type=S-1"
-    },
-    {
       "cik": "0002109616",
       "name": "Fast Finance Pay Corp.",
       "ticker": null,
@@ -650,7 +704,7 @@
     {
       "cik": "0002133719",
       "name": "NorthStrive Acquisition Corp I.",
-      "ticker": null,
+      "ticker": "NSAI",
       "filedAt": "2026-08-11",
       "isSpac": true,
       "sic": "6770",
@@ -1462,17 +1516,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001035422&type=S-1"
     },
     {
-      "cik": "0002064768",
-      "name": "Canary Staked TRX ETF",
-      "ticker": null,
-      "filedAt": "2026-07-24",
-      "isSpac": false,
-      "sic": "6221",
-      "industry": "금융·부동산",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002064768&type=S-1"
-    },
-    {
       "cik": "0001838987",
       "name": "SunPower Inc.",
       "ticker": "SPWR",
@@ -1518,7 +1561,7 @@
     {
       "cik": "0001808377",
       "name": "Innovative Eyewear Inc",
-      "ticker": "LUCY",
+      "ticker": "LUCYW",
       "filedAt": "2026-07-23",
       "isSpac": false,
       "sic": "3851",
@@ -1961,17 +2004,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002137679&type=S-1"
     },
     {
-      "cik": "0002133239",
-      "name": "Southern Cross Acquisition II Corp.",
-      "ticker": "SCAT",
-      "filedAt": "2026-07-09",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002133239&type=S-1"
-    },
-    {
       "cik": "0001843714",
       "name": "Zapata Quantum, Inc.",
       "ticker": "ZPTA",
@@ -2060,7 +2092,7 @@
     {
       "cik": "0001849380",
       "name": "OneMedNet Corp",
-      "ticker": "ONMD",
+      "ticker": "ONMDW",
       "filedAt": "2026-07-08",
       "isSpac": false,
       "sic": "8731",
@@ -3567,49 +3599,6 @@
         "assets": 5025386
       },
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001701478&type=S-1"
-    },
-    {
-      "cik": "0002111038",
-      "name": "DISCIPLINED GROWTH ACQUISITION Corp",
-      "ticker": "DGAC",
-      "filedAt": "2026-05-20",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002111038&type=S-1"
-    },
-    {
-      "cik": "0002030617",
-      "name": "Picard Medical, Inc.",
-      "ticker": "PMI",
-      "filedAt": "2026-05-20",
-      "isSpac": false,
-      "sic": "3841",
-      "industry": "제조",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 4940000,
-        "netIncome": -27002000,
-        "assets": 22548000
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002030617&type=S-1"
-    },
-    {
-      "cik": "0002046386",
-      "name": "Medline Inc.",
-      "ticker": "MDLN",
-      "filedAt": "2026-05-20",
-      "isSpac": false,
-      "sic": "3841",
-      "industry": "제조",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 28432000000,
-        "netIncome": 1159000000,
-        "assets": 38484000000
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002046386&type=S-1"
     }
   ]
 }
