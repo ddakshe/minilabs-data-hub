@@ -9,7 +9,7 @@
 
 | # | 작업 | 주기 | 실행 | 로컬인 이유 |
 |---|---|---|---|---|
-| 1 | 인증중고차(BMW·포르쉐) | 매일 10시 | `./refresh-cpo.sh` | GUI 브라우저 · 봇 차단 |
+| 1 | 인증중고차(BMW·포르쉐) | **⏸ 중단** | `./refresh-cpo.sh` | GUI 브라우저 · 봇 차단 |
 | 2 | OTT 순위(라프텔·티빙) | 수·목 10시 | `./refresh-ott.sh` | 한국 IP 필요 |
 | 3 | 레버리지 데이터 | 평일 08:10 | `./refresh-lever.sh` | 토스 허용 IP 등록 |
 
@@ -21,12 +21,32 @@
 id: cpo
 repo: minilabs-data-hub
 command: ./refresh-cpo.sh
-schedule: daily
+schedule: on-demand        # ⏸ 2026-08-20 중단 — 아래 사유
 prefer_time: "10:00 KST"
 reason: gui-browser, bot-block
 outputs: cpo/listings.json
 consumers: [cpo-mini]
 ```
+
+### ⏸ 2026-08-20 중단
+
+앱인토스가 **"인증중고차 정보 제공 서비스" 자체의 출시를 한시적으로 제한**했다.
+수수료 모델을 검토 중이며 단계적으로 오픈할 예정이라고 하지만, **재개 알림은 받을 수 없다.**
+앱 내용 문제가 아니라 카테고리 정책이므로 앱을 고쳐도 달라지지 않는다.
+
+소비 앱(cpo-mini)이 출시되지 못하는 동안:
+
+- **CI(8개 브랜드)도 스케줄을 껐다** — `.github/workflows/fetch-cpo.yml`.
+  매일 1.3MB diff 를 커밋할 이유가 없고, 되살리는 비용이 12초라 미리 신선하게 둘 값이 없다.
+- **이 작업(BMW·포르쉐)은 `on-demand`** — 자동으로 잡히지 않는다.
+
+**재개 절차** (카테고리가 열리면):
+
+1. `schedule: on-demand` → `daily` 로 되돌린다
+2. `.github/workflows/fetch-cpo.yml` 의 `schedule` 두 줄 주석을 푼다
+3. `./run-local-jobs.sh cpo` 를 한 번 돌려 BMW·포르쉐를 채운다
+4. 앱에서 `npm run build && npm run preview && npm run screenshot` 로 스크린샷을 다시 찍는다
+   (데이터가 바뀌었을 테니 제출물도 새로 찍어야 한다)
 
 - **10시에 부르는 이유**: CI 가 09:20 KST 에 8개 브랜드를 올린다. 그 뒤에 돌리면
   이 스크립트의 첫 단계(`git pull --rebase`)가 CI 커밋을 흡수한 뒤 작업하므로
