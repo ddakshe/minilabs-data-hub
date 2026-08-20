@@ -471,8 +471,25 @@ async function main() {
   });
 
   // ── 개봉예정: 기존 KOBIS 목록 로직 ──
+  // 개봉예정도 KOBIS 하나에 매달려 있다. 다만 박스오피스와 대응이 달라야 한다 —
+  // 빈 배열로 내보내면 앱의 '개봉예정' 탭이 통째로 비어버린다. 배지 하나가 빠지는 것과
+  // 탭이 사라지는 것은 다르다. 그래서 실패하면 직전 성공본의 upcoming 을 그대로 물려준다.
+  // (앱도 같은 철학이다 — useMovies.js 가 마지막 성공본을 localStorage 에 들고 폴백한다)
   console.log("· KOBIS 영화목록 조회(개봉예정용)…");
-  const list = await fetchMovieList();
+  let list = [];
+  let reuseUpcoming = null;
+  try {
+    list = await fetchMovieList();
+  } catch (err) {
+    console.warn(`  ⚠ 개봉예정 목록 실패: ${err.message}`);
+    try {
+      const prev = JSON.parse(readFileSync(resolve(ROOT, "now-showing", "movies.json"), "utf-8"));
+      reuseUpcoming = prev.upcoming ?? null;
+      console.warn(`  → 직전 성공본의 개봉예정 ${reuseUpcoming?.length ?? 0}편을 유지한다`);
+    } catch {
+      console.warn("  → 직전 성공본도 없다. 개봉예정은 빈 목록으로 나간다");
+    }
+  }
   const soonCand = [];
   for (const m of list) {
     const open = parseYmd(m.openDt);
@@ -518,18 +535,21 @@ async function main() {
     `· 표시필터(성인/무포스터 제외): 상영중 ${nowShowing.length}→${nowShow.length}, 개봉예정 ${upcoming.length}→${upcome.length}`,
   );
 
+  // KOBIS 실패로 개봉예정을 못 받았으면 직전 성공본을 쓴다(위 reuseUpcoming 참고).
+  const upcomeOut = reuseUpcoming ?? upcome;
+
   const payload = {
     updatedAt: toIso(ymd(today)),
-    counts: { nowShowing: nowShow.length, upcoming: upcome.length },
+    counts: { nowShowing: nowShow.length, upcoming: upcomeOut.length },
     nowShowing: nowShow,
-    upcoming: upcome,
+    upcoming: upcomeOut,
   };
   const body = JSON.stringify(payload, null, 2);
 
   const outDir = resolve(ROOT, "now-showing");
   mkdirSync(outDir, { recursive: true });
   writeFileSync(resolve(outDir, "movies.json"), body, "utf-8");
-  console.log(`✓ now-showing/movies.json  (상영중 ${nowShow.length}, 개봉예정 ${upcome.length})`);
+  console.log(`✓ now-showing/movies.json  (상영중 ${nowShow.length}, 개봉예정 ${upcomeOut.length}${reuseUpcoming ? " — 직전 성공본 유지" : ""})`);
 
   const appDir = resolve(ROOT, "../now-showing-mini");
   if (existsSync(appDir)) {
