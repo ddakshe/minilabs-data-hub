@@ -373,9 +373,18 @@ async function main() {
 
   console.log(`· KMDb 보강: ${KMDB_KEY ? "ON" : "OFF (KMDB_KEY 없음)"}`);
 
+  // 박스오피스는 "순위 배지"라는 부가 정보다. getJson 이 3회 재시도까지 하지만 해외 IP에서
+  // 3회 전부 실패하는 날이 있고(2026-08-20 실측), 여기서 throw 하면 롯데·메가박스 상영작까지
+  // 통째로 버려져 그날 갱신이 0건이 된다. 부가 정보 하나가 필수 경로에 있어선 안 된다.
+  // 실패하면 빈 맵으로 계속한다 — boxOffice 필드가 null 이 되고 순위 배지만 빠진다.
   console.log("· KOBIS 박스오피스 조회…");
-  const box = await fetchBoxOffice();
-  console.log(`  박스오피스 ${box.size}편`);
+  let box = new Map();
+  try {
+    box = await fetchBoxOffice();
+    console.log(`  박스오피스 ${box.size}편`);
+  } catch (err) {
+    console.warn(`  ⚠ 박스오피스 실패(순위 배지 없이 계속): ${err.message}`);
+  }
 
   // ── 지금 상영중: 극장 체인 현재상영작 합집합 (롯데 + 메가박스 [+ CGV]) ──
   console.log("· 극장 체인 현재상영 조회…");
