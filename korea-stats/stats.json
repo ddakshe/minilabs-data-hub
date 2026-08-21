@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20",
+  "updatedAt": "2026-08-21",
   "source": "KOSIS Open API",
   "categories": [
     {
@@ -309,18 +309,14 @@
       "id": "pop_household",
       "category": "population",
       "title": "1인 가구 비율",
-      "value": 36.1,
+      "value": 36.6,
       "unit": "%",
-      "changePct": 1.7,
+      "changePct": 1.4,
       "decimals": 1,
       "frequency": "Y",
       "source": "통계청 인구총조사",
-      "period": "2024년",
+      "period": "2025년",
       "history": [
-        {
-          "prd": "2015",
-          "value": 27.2
-        },
         {
           "prd": "2016",
           "value": 27.9
@@ -356,6 +352,10 @@
         {
           "prd": "2024",
           "value": 36.1
+        },
+        {
+          "prd": "2025",
+          "value": 36.6
         }
       ]
     },
