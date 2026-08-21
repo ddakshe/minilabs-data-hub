@@ -25,17 +25,38 @@ async function call(path) {
     const { CODE, MESSAGE } = json.RESULT;
     // INFO-200 = 해당하는 데이터 없음. 결측은 오류가 아니다.
     if (CODE === 'INFO-200') return { total: 0, rows: [] };
-    throw new Error(`ECOS ${CODE}: ${String(MESSAGE).split('\n')[0]}`);
+    const err = new Error(`ECOS ${CODE}: ${String(MESSAGE).split('\n')[0]}`);
+    err.code = CODE;
+    throw err;
   }
   return { total: json[key].list_total_count, rows: json[key].row ?? [] };
 }
 
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+/**
+ * ERROR-602(3분간 300회 초과)는 **키 단위**로 걸린다. 실제 키로 이 수집기는 40회 안팎만
+ * 부르므로 스스로 넘길 일은 없지만, 같은 키를 쓰는 다른 작업과 겹치면 맞을 수 있다.
+ * 짧은 경합은 기다렸다 넘기고, 진짜 차단(30분)이면 깨끗이 실패해 다음 예약 실행에 맡긴다.
+ */
+async function callWithRetry(path, attempt = 0) {
+  try {
+    return await call(path);
+  } catch (err) {
+    if (err.code !== 'ERROR-602' || attempt >= 3) throw err;
+    const wait = 60_000 * 2 ** attempt;
+    console.warn(`  호출 제한 — ${wait / 1000}초 후 재시도 (${attempt + 1}/3)`);
+    await sleep(wait);
+    return callWithRetry(path, attempt + 1);
+  }
+}
+
 /** 전체를 페이지 단위로 훑는다. 첫 호출의 list_total_count 로 남은 페이지를 정한다. */
 export async function fetchAll(service, tail) {
-  const first = await call(`${service}/${KEY}/json/kr/1/${PAGE}/${tail}`);
+  const first = await callWithRetry(`${service}/${KEY}/json/kr/1/${PAGE}/${tail}`);
   const rows = [...first.rows];
   for (let start = PAGE + 1; start <= first.total; start += PAGE) {
-    const { rows: more } = await call(
+    const { rows: more } = await callWithRetry(
       `${service}/${KEY}/json/kr/${start}/${start + PAGE - 1}/${tail}`,
     );
     if (more.length === 0) break; // 방어: 총계가 실제보다 크게 잡히는 경우
