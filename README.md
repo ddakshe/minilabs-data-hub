@@ -26,6 +26,9 @@ fx/                        ← fx-lens-mini(환율 고시) 앱용 (한국은행 
   rates.json               # 여행 통화 14종 · 원화/대미달러 기준 1년 일별 + 장기 월평균 + 정책금리
 rate-lens/                 ← rate-lens-mini(금리 돋보기) 앱용 (금감원 공시, 매일 diff 감지)
   rates.json               # 예적금 765상품 / 금리행 4,335 (회사·상품·금리 3테이블 정규화)
+benefit-gauge/             ← benefit-gauge-mini(내가 받을 수 있는 혜택) 앱용 (보조금24, 주 1회)
+  benefits.json            # 개인·가구 대상 + 지원금액 명시 3,669건 (조건 비트마스크로 압축)
+  meta.json                # 수집 시각·건수. 앱이 "기준일" 표시에 쓸 수 있다
 stock-ipo/                 ← stock-ipo-mini(공모주 미리보기) 앱용 (DART, 매일 diff 감지)
   ipo.json                 # 국내 공모주 청약 일정 13건 (공모가·일정·인수단·자금사용처·환매청구권)
   doc_cache.json           # 증권신고서 원문 추출 캐시(receiptNo 기준) — 5MB 원문 재다운로드 방지
@@ -47,6 +50,18 @@ stock-ipo/                 ← stock-ipo-mini(공모주 미리보기) 앱용 (DA
 최고금리(`intr_rate2`)를 **둘 다** 담는다. 앱의 존재 이유가 그 격차라서 어느 쪽도 버리면 안 된다.
 결측은 `null` 이며 0 이 아니다 — 0 으로 치환하면 순위가 조용히 오염된다.
 
+`benefit-gauge/benefits.json` 은 **행을 객체가 아니라 배열로** 담는다. 3,669건 × 13필드를
+객체로 두면 키 이름이 반복되어 두 배 이상 커진다(앱 번들에 실리는 크기다).
+그래서 **배열 순서와 조건 비트 순서가 계약**이다 — `scripts/fetch-benefit-gauge.mjs` 의
+`SIT`·`HH`·`INC` 배열과 앱의 `src/data/types.ts`(`ROW`)·`src/lib/match.ts`(`SIT_CODES`·`HH_CODES`)가
+반드시 일치해야 한다. **어긋나면 에러 없이 조용히 틀린 개수를 센다.**
+그래서 이 도메인만 수집 스크립트 안에서 구조 검증(행 길이·비트 폭·정렬·시군구 인덱스 범위)을
+하고 실패하면 커밋 전에 죽는다.
+
+`지원유형` 필드는 쓰지 않는다. 부정확하다 — 국민내일배움카드(조회수 1위, 훈련비 500만원)가
+`서비스(일자리)` 로 분류돼 있어서 현금 필터로 걸러내면 최상위가 빠진다. 대신 `지원내용` 의
+금액 표현으로 판단한다.
+
 ## 사용 방법
 
 각 앱에서 GitHub raw URL로 접근:
@@ -62,6 +77,7 @@ https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/stock-ipo/ipo.j
 https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/chicken-events/events.json
 https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/fx/rates.json
 https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/rate-lens/rates.json
+https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/benefit-gauge/benefits.json
 https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/recall/recalls.json
 https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/recall/meta.json
 ```

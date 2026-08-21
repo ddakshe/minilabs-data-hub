@@ -9,7 +9,8 @@
     "fetch:kamis": "node scripts/fetch-kamis.mjs",
     "fetch:now-showing": "node scripts/fetch-now-showing.mjs",
     "fetch:cpo": "node scripts/fetch-cpo.mjs",
-    "fetch:cpo-pw": "node scripts/fetch-cpo-pw.mjs"
+    "fetch:cpo-pw": "node scripts/fetch-cpo-pw.mjs",
+    "fetch:benefit-gauge": "node scripts/fetch-benefit-gauge.mjs"
   },
   "dependencies": {
     "cheerio": "^1.2.0",
