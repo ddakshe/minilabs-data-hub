@@ -22,6 +22,8 @@ chicken-events/            ← chicken-event-mini 앱용 (치킨 브랜드 진�
 recall/                    ← recall-mini(리콜모아) 앱용 (소비자24, 매일 diff 감지)
   recalls.json             # 국내 리콜 1,700여건 (9개 카테고리 × 최근 300건, 최신순)
   meta.json                # 수집 시각·카테고리별 건수. 앱이 "기준일" 표시에 쓴다
+fx/                        ← fx-lens-mini(환율 고시) 앱용 (한국은행 ECOS, 평일 diff 감지)
+  rates.json               # 여행 통화 14종 · 원화/대미달러 기준 1년 일별 + 장기 월평균 + 정책금리
 rate-lens/                 ← rate-lens-mini(금리 돋보기) 앱용 (금감원 공시, 매일 diff 감지)
   rates.json               # 예적금 765상품 / 금리행 4,335 (회사·상품·금리 3테이블 정규화)
 stock-ipo/                 ← stock-ipo-mini(공모주 미리보기) 앱용 (DART, 매일 diff 감지)
@@ -33,6 +35,13 @@ stock-ipo/                 ← stock-ipo-mini(공모주 미리보기) 앱용 (DA
 `offerPrice: null` 은 누락이 아니라 **공모가 미확정**(기재정정 진행 중) 상태다.
 상장일(`listDate`)은 토스증권 API 로만 확정되는데 허용 IP 제한 때문에 Actions 에서 못 받는다.
 **추정하지 않고 `null` 로 둔다.**
+
+`fx/rates.json` 은 원화 기준(`krw`)과 대미달러 기준(`usd`)을 **둘 다** 담는다.
+원화가 강해지면 모든 통화가 동시에 싸 보이므로, 두 percentile 을 나란히 놔야
+"그 통화가 약해진 것"과 구분된다 — 앱의 존재 이유가 그 구분이라 어느 쪽도 버리면 안 된다.
+대미달러 값은 계산이 아니라 한국은행 고시(`731Y002`)이며, 고시가 없는 위안만 역산하고
+`derived: true` 로 표시한다. ECOS 결측은 빈 문자열로 오는데 **0 으로 치환하면 percentile 이
+조용히 오염된다** — 반드시 버린다.
 
 `rate-lens/rates.json` 은 기본금리(`intr_rate`, 우대조건 미충족 시 실제 금리)와
 최고금리(`intr_rate2`)를 **둘 다** 담는다. 앱의 존재 이유가 그 격차라서 어느 쪽도 버리면 안 된다.
@@ -51,6 +60,7 @@ https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/holidays/holida
 https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/convenience-events/products.json
 https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/stock-ipo/ipo.json
 https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/chicken-events/events.json
+https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/fx/rates.json
 https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/rate-lens/rates.json
 https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/recall/recalls.json
 https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/recall/meta.json
