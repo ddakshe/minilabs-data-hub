@@ -6,6 +6,7 @@
 //
 // 로컬 실행:
 //   GOV24_KEY=<decoded key> node scripts/fetch-benefit-gauge.mjs
+//   (또는 이미 있는 DATA_GO_KR_KEY 를 그대로 써도 된다 — 같은 data.go.kr 일반 인증키)
 //
 // ── API 함정 (실측 2026-08-21) ────────────────────────────────────────────
 // 1. 호스트는 apis.data.go.kr 이 아니라 api.odcloud.kr/api 다. 포맷은 JSON.
@@ -38,11 +39,15 @@ const OUT_DIR = resolve(ROOT, 'benefit-gauge');
 const OUT_PATH = resolve(OUT_DIR, 'benefits.json');
 const META_PATH = resolve(OUT_DIR, 'meta.json');
 
-const key = process.env.GOV24_KEY;
+// GOV24_KEY 를 먼저 보고, 없으면 허브에 이미 있는 DATA_GO_KR_KEY 로 떨어진다.
+// 둘 다 data.go.kr 일반 인증키(디코딩 형태)라 호환된다. 새 시크릿을 강요하지 않는다.
+// ⚠️ 단, 그 키의 계정으로 gov24 데이터셋 '활용신청'이 되어 있어야 401(code:-4) 이 안 난다.
+const key = process.env.GOV24_KEY || process.env.DATA_GO_KR_KEY;
 if (!key) {
-  console.error('GOV24_KEY 환경변수가 필요합니다 (data.go.kr 일반 인증키, 디코딩 형태).');
+  console.error('GOV24_KEY 또는 DATA_GO_KR_KEY 가 필요합니다 (data.go.kr 일반 인증키, 디코딩 형태).');
   process.exit(1);
 }
+console.error(`인증키 출처: ${process.env.GOV24_KEY ? 'GOV24_KEY' : 'DATA_GO_KR_KEY'}`);
 
 const BASE = 'https://api.odcloud.kr/api/gov24/v3';
 const PER_PAGE = 1000;

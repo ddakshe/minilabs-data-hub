@@ -49,7 +49,10 @@ jobs:
       # 커밋 전에 막는 것이 특히 중요하다.
       - name: Fetch benefits
         env:
+          # 전용 시크릿이 있으면 그걸 쓰고, 없으면 기존 DATA_GO_KR_KEY 로 떨어진다.
+          # 스크립트가 둘 중 값이 있는 쪽을 고른다.
           GOV24_KEY: ${{ secrets.GOV24_KEY }}
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
         run: node scripts/fetch-benefit-gauge.mjs
 
       - name: Check for changes
