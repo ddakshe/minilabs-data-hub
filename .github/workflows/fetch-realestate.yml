@@ -1,0 +1,117 @@
+name: Fetch Realestate
+
+# 국토부 실거래가 → 부동산 미니앱 2종(앱 A 매매 / 앱 B 전월세).
+#
+# 주 2회만 도는 이유가 두 개다.
+#
+#  1. 실거래 신고 기한이 계약일 +30일이다. 오늘 체결된 계약은 최대 한 달 뒤에
+#     데이터에 나타난다. 매일 받아도 어제와의 차이는 "한 달 전 계약 몇 건 추가"뿐이라
+#     하루 단위 신선도가 의미를 만들지 못한다.
+#  2. data.go.kr 인증키는 **계정 공통**이다. medical-tools 등 다른 프로젝트와
+#     하루 10,000회 한도를 나눠 쓴다. 실거래만 매일 1,536회를 태우면 남의 앱을 굶긴다.
+#     (429도 서비스별이 아니라 계정 단위로 걸린다)
+#
+# 3개월 롤링인 이유: 신고 지연 때문에 지난달·전전달 숫자가 계속 늘어난다.
+# 한 번 받고 끝내면 과거가 영원히 과소집계로 남는다.
+#
+# 백필은 이 워크플로로 하지 말 것 — workflow_dispatch 의 months 로 수동 실행한다.
+# 정기 실행과 같은 날 겹치면 한도를 넘긴다.
+
+on:
+  schedule:
+    - cron: '0 21 * * 0,3'  # 월·목 06:00 KST (fetch-rates 06:00·fetch-recall 06:30 과 요일 분산)
+  workflow_dispatch:
+    inputs:
+      months:
+        description: '수집할 개월 수 (기본 3, 백필은 12)'
+        required: false
+        default: '3'
+      reason:
+        description: '실행 이유 (로그에만 기록, 선택)'
+        required: false
+        default: 'manual refresh'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-realestate
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    # 동시성 3 고정이라 256지역 × 3개월 × 2종이면 20~40분 걸린다. 기본 6시간 한도로는 부족하지 않다.
+    timeout-minutes: 180
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Show trigger context
+        run: |
+          echo "Event  : ${{ github.event_name }}"
+          echo "Months : ${{ github.event.inputs.months || '3 (scheduled)' }}"
+          echo "Reason : ${{ github.event.inputs.reason || '(scheduled)' }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      # 의존성 없이 Node 내장 fetch 만 쓰므로 npm ci 를 생략한다.
+      - name: Fetch realestate
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        run: node scripts/fetch-realestate.mjs --months=${{ github.event.inputs.months || '3' }}
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git add realestate/
+          # meta.json 은 fetchedAt 때문에 매번 바뀐다. 그것만 바뀌었으면 커밋하지 않는다 —
+          # 내용이 같은데 커밋이 쌓이면 히스토리에서 진짜 변경을 못 찾는다.
+          if git diff --cached --quiet -- realestate/trade realestate/rent; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "축약본 변화 없음 — 커밋 생략."
+            git restore --staged realestate/ || true
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --cached --stat realestate/
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            MSG="chore(realestate): manual refresh ($DATE_KST)"
+          else
+            MSG="chore(realestate): refresh ($DATE_KST)"
+          fi
+
+          git commit -m "$MSG"
+          # 다른 워크플로가 같은 시간대에 밀어넣을 수 있다. 한 번은 되받아 재시도한다.
+          git push || (git pull --rebase origin main && git push)
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Realestate Fetch Summary"
+            echo ""
+            echo "- Trigger: \`${{ github.event_name }}\`"
+            echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
+            echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+            if [ -f realestate/meta.json ]; then
+              echo ""
+              echo '```json'
+              cat realestate/meta.json
+              echo '```'
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"

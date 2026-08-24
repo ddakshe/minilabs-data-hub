@@ -29,6 +29,11 @@ rate-lens/                 ← rate-lens-mini(금리 돋보기) 앱용 (금감�
 benefit-gauge/             ← benefit-gauge-mini(내가 받을 수 있는 혜택) 앱용 (보조금24, 주 1회)
   benefits.json            # 개인·가구 대상 + 지원금액 명시 3,669건 (조건 비트마스크로 압축)
   meta.json                # 수집 시각·건수. 앱이 "기준일" 표시에 쓸 수 있다
+realestate/                ← 부동산 미니앱 2종용 (국토부 실거래가, 주 2회 월·목 3개월 롤링)
+  region-master.json       시군구 256개 (LAWD_CD 5자리). 광주+전남은 `12` 전남광주통합특별시다
+  trade/{YYYY-MM}.json     앱 A(아파트 매매) 축약본 · trade/latest.json 을 앱이 읽는다
+  rent/{YYYY-MM}.json      앱 B(아파트 전월세) 축약본 · 갱신 인상률이 핵심 지표
+  meta.json                수집 시각·건수. 앱이 "기준일" 표시에 쓴다
 stock-ipo/                 ← stock-ipo-mini(공모주 미리보기) 앱용 (DART, 매일 diff 감지)
   ipo.json                 # 국내 공모주 청약 일정 13건 (공모가·일정·인수단·자금사용처·환매청구권)
   doc_cache.json           # 증권신고서 원문 추출 캐시(receiptNo 기준) — 5MB 원문 재다운로드 방지
@@ -85,3 +90,11 @@ https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/recall/meta.jso
 ## 데이터 갱신
 
 GitHub Actions가 매일 자동 실행 (cron). 수동 실행도 가능 (workflow_dispatch).
+
+`realestate/` 는 신고 기한(계약일 +30일) 때문에 **3개월을 매번 다시 받는다** — 지난달·전전달 숫자가
+계속 늘어나서, 한 번 받고 끝내면 과거가 영원히 과소집계로 남는다.
+주 2회만 도는 이유는 그 지연 때문에 하루 단위 신선도가 의미를 못 만들기 때문이고,
+`DATA_GO_KR_KEY` 가 **계정 공통**이라 다른 프로젝트와 하루 10,000회 한도를 나눠 쓰기 때문이다.
+
+집계 규칙의 근거는 `realestate-tools/_design/schema-v2.md` 에 있다.
+**여기 집계를 바꾸면 두 앱의 화면이 같이 깨진다.**
