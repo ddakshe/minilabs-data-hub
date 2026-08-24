@@ -12,8 +12,9 @@
  *   realestate/{trade|rent}/latest.json     앱이 읽는 최신월 (월별 파일의 사본)
  *   realestate/meta.json                    수집 시각·건수. 앱이 "기준일" 표시에 쓴다
  *
- * 키: `DATA_GO_KR_KEY` — data.go.kr 인증키. 인코딩·디코딩 어느 형태든 받는다. **계정 공통이다.**
- *     다른 프로젝트(medical-tools 등)와 하루 10,000회 한도를 나눠 쓴다.
+ * 키: `DATA_GO_KR_KEY` — data.go.kr 인증키. 인코딩·디코딩 어느 형태든 받는다. 계정당 1개다.
+ *     **다만 일일 요청제한은 서비스(활용신청) 단위다** — 2026-08-24 실측: AptRent 가 22(한도초과)를
+ *     뱉는 순간에도 AptTrade·RHRent·OffiRent 는 200 을 줬다. 종목 하나를 태워도 나머지는 산다.
  *
  *   node scripts/fetch-realestate.mjs                 # 3개월 롤링 (기본)
  *   node scripts/fetch-realestate.mjs --months=12     # 백필
@@ -30,7 +31,8 @@ const ENDPOINT = 'https://apis.data.go.kr/1613000';
 
 /**
  * v1 은 아파트 2종만. 빌라(RHRent)·오피스텔(OffiRent)은 앱 B v2에서 붙인다.
- * **종별로 순차 실행한다** — 429가 계정 단위라 병렬로 돌리면 서로의 한도를 갉아먹는다.
+ * **종별로 순차 실행한다** — 한도는 서비스 단위지만, 동시에 돌리면 초당 요청이 겹쳐
+ * 각자의 throttle 을 앞당긴다. 로그에서 어느 종목이 막혔는지 가리기도 어려워진다.
  */
 const SERVICES = [
   { id: 'trade', op: 'RTMSDataSvcAptTrade' },
@@ -80,6 +82,11 @@ const SERVICE_KEY = looksEncoded ? RAW_KEY : encodeURIComponent(RAW_KEY);
 console.log(`인증키: ${looksEncoded ? '인코딩 형태 — 그대로 사용' : '디코딩 형태 — URL 인코딩함'}`);
 
 // ── 유틸 ────────────────────────────────────────────────
+
+/** 오늘은 더 못 받는다. 재시도·후속 월 진행 모두 무의미하니 그 종목을 즉시 접는다. */
+class QuotaExceeded extends Error {}
+/** 설정 문제(미신청·엔드포인트 오류). 재시도해도 소용없다. */
+class Fatal extends Error {}
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -162,6 +169,30 @@ async function fetchPage(op, lawd, ymd, pageNo) {
     } catch {
       if (attempt === MAX_RETRY) throw new Error(`JSON 파싱 실패 ${lawd}/${ymd}`);
       await sleep(2 ** attempt * 1000);
+      continue;
+    }
+
+    /**
+     * ⚠️ 게이트웨이 오류는 **완전히 다른 봉투**로 온다.
+     *
+     *   정상: { response: { header, body } }
+     *   오류: { OpenAPI_ServiceResponse: { cmmMsgHeader: { returnReasonCode, errMsg } } }
+     *
+     * `response.header.resultCode` 만 보면 오류 봉투에선 undefined 가 되어
+     * 검사를 통째로 건너뛰고, `items` 도 없으니 **"거래 0건"으로 둔갑한다.**
+     * 실제로 이것 때문에 전월세 12개월이 errors=0 / rows=0 으로 조용히 비었다.
+     *
+     *   22 = 일일 요청제한 초과 (오늘은 재시도해도 소용없다 — 서비스 단위로 걸린다)
+     *   30 = 미신청 · 12 = 엔드포인트 이름 오류
+     */
+    const gw = json?.OpenAPI_ServiceResponse?.cmmMsgHeader;
+    if (gw) {
+      const rc = String(gw.returnReasonCode ?? '');
+      const msg = `${gw.errMsg ?? ''} ${gw.returnAuthMsg ?? ''}`.trim();
+      if (rc === '22') throw new QuotaExceeded(`${op}: 일일 요청제한 초과 (22) — ${msg}`);
+      if (rc === '30' || rc === '12') throw new Fatal(`${op}: ${rc === '30' ? '미신청' : '엔드포인트 이름 오류'}(${rc}) — ${msg}`);
+      if (attempt === MAX_RETRY) throw new Error(`게이트웨이 오류 ${rc} ${lawd}/${ymd}: ${msg}`);
+      await sleep(2 ** attempt * 3000);
       continue;
     }
 
@@ -446,11 +477,13 @@ async function main() {
   console.log(`예상 호출 ${codes.length * targets.length * SERVICES.length}회 (동시성 ${CONCURRENCY})\n`);
 
   const meta = { fetchedAt: new Date().toISOString(), months: targets, minRankCnt: MIN_RANK_CNT, services: {} };
+  let hadFailure = false;
   const zeroStreak = new Map(); // 코드 오류 경보용
 
   for (const svc of SERVICES) {
     await mkdir(path.join(OUT, svc.id), { recursive: true });
     const errors = [];
+    let aborted = null;
 
     for (const ym of targets) {
       const ymd = ym.replace('-', '');
@@ -462,12 +495,29 @@ async function main() {
       });
       process.stdout.write('\n');
 
+      // 한도 초과·설정 오류가 하나라도 있으면 그 종목은 오늘 끝이다.
+      // 남은 월을 계속 돌면 빈 파일만 쌓이고, 그게 좋은 데이터를 덮어쓴다.
+      const blocker = results.find((r) => !r.ok && /요청제한 초과 \(22\)|미신청|엔드포인트 이름 오류/.test(r.error));
+      if (blocker) {
+        aborted = blocker.error;
+        console.warn(`\n  ⛔ ${svc.id} 중단: ${blocker.error}`);
+        break;
+      }
+
       const byRegion = new Map();
       results.forEach((r, i) => {
         if (!r.ok) { errors.push(`${r.key}: ${r.error}`); return; }
         byRegion.set(codes[i], r.value);
         if (!r.value.length) zeroStreak.set(codes[i], (zeroStreak.get(codes[i]) ?? 0) + 1);
       });
+
+      // ⚠️ 전 지역 0건이면 정상 결과가 아니다. 기존 파일을 빈 파일로 덮어쓰지 않는다.
+      if (!byRegion.size || [...byRegion.values()].every((v) => !v.length)) {
+        console.warn(`  ⚠ ${svc.id} ${ym}: 전 지역 0건 — 파일을 쓰지 않는다 (기존 데이터 보존)`);
+        meta.services[svc.id] ??= {};
+        meta.services[svc.id][ym] = { rows: 0, regions: 0, skipped: '전 지역 0건' };
+        continue;
+      }
 
       const agg = svc.id === 'trade'
         ? aggregateTrade(byRegion, regionMap)
@@ -496,6 +546,13 @@ async function main() {
      *
      * 당월 하나만 수집한 경우(--ym)엔 나눌 게 없으니 그대로 latest 로 쓴다.
      */
+    if (aborted) {
+      meta.services[svc.id] ??= {};
+      meta.services[svc.id].aborted = aborted;
+      hadFailure = true;
+      continue; // latest/current 를 건드리지 않는다
+    }
+
     const isCurrentMonth = (ym) => ym === ymKST();
     const complete = targets.filter((ym) => !isCurrentMonth(ym));
     const latestYm = complete.length ? complete[complete.length - 1] : targets[targets.length - 1];
@@ -537,6 +594,12 @@ async function main() {
   }
 
   await writeFile(path.join(OUT, 'meta.json'), JSON.stringify(meta, null, 2), 'utf8');
+
+  if (hadFailure) {
+    // 성공으로 끝내면 "0건 = 거래 없음"으로 오해하고 넘어가게 된다. 실제로 그래서 한 번 놓쳤다.
+    console.error('\n종목 중 하나가 중단됐다. meta.json 의 aborted 를 볼 것.');
+    process.exit(1);
+  }
   console.log('\n완료.');
 }
 
