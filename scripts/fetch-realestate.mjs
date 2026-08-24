@@ -254,8 +254,27 @@ async function pool(tasks, limit, onDone) {
  * 강남 45건과 도봉 500건을 같은 무게로 평균 내면 서울이 실제보다 비싸진다.
  * (구 단위 중앙값끼리 나눈 전세가율이 종로 82.7%로 왜곡됐던 것과 같은 함정)
  */
+/**
+ * 평형대별 풀을 중앙값·건수로 접는다.
+ *
+ * 전국·시도에도 이걸 붙이는 이유: 전 평형 혼합 중앙값은 **평형 구성비가 흔들리면 같이 흔들린다.**
+ * 큰 평형 거래가 몰린 달은 시장이 안 올랐어도 중앙값이 오른다. 앱 첫 화면이 약속하는 숫자는
+ * "국민평형 84㎡ 시세"이므로 비교 축을 평형으로 고정해야 한다(`_design/schema-v2.md` 의
+ * "전국 비교는 평형 고정이 전제"). 데이터 증가량은 전국 4개 + 시도 16×4 로 무시할 수준이다.
+ */
+const areaDigest = (pools) =>
+  Object.fromEntries(
+    Object.entries(pools).map(([k, v]) => [k, { med: won(median(v)), cnt: v.length }]),
+  );
+
+/** 평형대별 풀에 다른 풀을 합친다. */
+const mergeArea = (into, from) => {
+  for (const [b, v] of Object.entries(from)) (into[b] ??= []).push(...v);
+};
+
 function aggregateTrade(byRegion, regionMap) {
   const nat = [];
+  const natArea = {};
   const sidoPool = new Map();
   const sigungu = {};
 
@@ -275,25 +294,32 @@ function aggregateTrade(byRegion, regionMap) {
     if (!prices.length) continue;
 
     nat.push(...prices);
+    mergeArea(natArea, byArea);
     const sidoCode = code.slice(0, 2);
-    if (!sidoPool.has(sidoCode)) sidoPool.set(sidoCode, { name: meta.sido, vals: [] });
-    sidoPool.get(sidoCode).vals.push(...prices);
+    if (!sidoPool.has(sidoCode)) sidoPool.set(sidoCode, { name: meta.sido, vals: [], area: {} });
+    const sp = sidoPool.get(sidoCode);
+    sp.vals.push(...prices);
+    mergeArea(sp.area, byArea);
 
     sigungu[code] = {
       n: meta.sigungu,
       sido: sidoCode,
       med: won(median(prices)),
       cnt: prices.length,
-      byArea: Object.fromEntries(
-        Object.entries(byArea).map(([k, v]) => [k, { med: won(median(v)), cnt: v.length }]),
-      ),
+      byArea: areaDigest(byArea),
     };
   }
 
   return {
-    national: { med: won(median(nat)), cnt: nat.length },
+    national: { med: won(median(nat)), cnt: nat.length, byArea: areaDigest(natArea) },
     sido: [...sidoPool.entries()]
-      .map(([code, { name, vals }]) => ({ code, n: name, med: won(median(vals)), cnt: vals.length }))
+      .map(([code, { name, vals, area }]) => ({
+        code,
+        n: name,
+        med: won(median(vals)),
+        cnt: vals.length,
+        byArea: areaDigest(area),
+      }))
       .sort((a, b) => b.cnt - a.cnt),
     sigungu,
   };
@@ -423,17 +449,43 @@ async function attachPrev(svc, ym, doc) {
   const chg = (cur, before) =>
     cur != null && before ? pct((cur / before - 1) * 100) : null;
 
+  /**
+   * 평형대별 전월 대비도 붙인다. 첫 화면이 읽는 숫자가 `byArea.m`(84㎡)이라
+   * 여기에 변화율이 없으면 화면이 전 평형 혼합 변화율을 빌려 쓰게 된다 — 다른 지표를
+   * 같은 줄에 나란히 놓는 셈이다.
+   */
+  const attachArea = (cur, before) => {
+    for (const [b, v] of Object.entries(cur ?? {})) {
+      v.prevMed = before?.[b]?.med ?? null;
+      v.chg = chg(v.med, v.prevMed);
+    }
+  };
+
   if (svc === 'trade') {
     doc.national.prevMed = old.national?.med ?? null;
     doc.national.chg = chg(doc.national.med, old.national?.med);
-    const oldSido = new Map((old.sido ?? []).map((s) => [s.code, s.med]));
+    attachArea(doc.national.byArea, old.national?.byArea);
+    const oldSido = new Map((old.sido ?? []).map((s) => [s.code, s]));
     for (const s of doc.sido) {
-      s.prevMed = oldSido.get(s.code) ?? null;
+      const before = oldSido.get(s.code);
+      s.prevMed = before?.med ?? null;
       s.chg = chg(s.med, s.prevMed);
+      attachArea(s.byArea, before?.byArea);
     }
     for (const [code, cur] of Object.entries(doc.sigungu)) {
-      cur.prevMed = old.sigungu?.[code]?.med ?? null;
+      const before = old.sigungu?.[code];
+      cur.prevMed = before?.med ?? null;
       cur.chg = chg(cur.med, cur.prevMed);
+      /**
+       * 시군구 평형대에도 변화율을 붙인다.
+       *
+       * 랭킹을 전 평형 혼합 `chg` 로 매기면 **"많이 오른 곳"이 아니라 "평형 구성이 널뛴 곳"**
+       * 이 상위를 독점한다. 2026-07 실측(182개 지역): 지역 내 소형/중형 가격 격차가
+       * 2배 미만이면 |chg| 중앙 3.4%인데 3배 이상이면 13.1%, |chg|>20% 비율이 3% → 30% 로 뛴다.
+       * 상위 5곳이 전부 격차 2.3~3.9배였다(익산 +64.6%, 219건 — 표본 부족이 아니다).
+       * 평형을 고정해야 시장 신호가 남는다.
+       */
+      attachArea(cur.byArea, before?.byArea);
     }
   } else {
     doc.national.jeonse.prevMed = old.national?.jeonse?.med ?? null;
@@ -473,14 +525,44 @@ async function main() {
   const months = Number(arg('months') ?? DEFAULT_MONTHS);
   const targets = only ? [only] : Array.from({ length: months }, (_, i) => ymKST(new Date(), -i)).reverse();
 
-  console.log(`지역 ${codes.length}개 · 월 ${targets.join(', ')} · 종별 ${SERVICES.length}`);
-  console.log(`예상 호출 ${codes.length * targets.length * SERVICES.length}회 (동시성 ${CONCURRENCY})\n`);
+  /**
+   * `--service=rent` 로 한 종목만 돌린다.
+   *
+   * 한도는 서비스(활용신청) 단위로 걸린다 — 2026-08-24 실측: `AptRent` 가 22 를 뱉는 순간
+   * `AptTrade`·`RHRent`·`OffiRent` 는 같은 키로 정상 응답했다. 그래서 한 종목만 막히는 일이
+   * 실제로 생기고, 그때 전체를 다시 돌리면 이미 받아둔 종목의 호출까지 다시 태운다.
+   */
+  const svcArg = arg('service');
+  const services = svcArg ? SERVICES.filter((s) => s.id === svcArg) : SERVICES;
+  if (!services.length) {
+    console.error(`--service=${svcArg} 는 없는 종목이다. 가능: ${SERVICES.map((s) => s.id).join(', ')}`);
+    process.exit(1);
+  }
 
-  const meta = { fetchedAt: new Date().toISOString(), months: targets, minRankCnt: MIN_RANK_CNT, services: {} };
+  console.log(`지역 ${codes.length}개 · 월 ${targets.join(', ')} · 종별 ${services.map((s) => s.id).join('+')}`);
+  console.log(`예상 호출 ${codes.length * targets.length * services.length}회 (동시성 ${CONCURRENCY})\n`);
+
+  /**
+   * ⚠️ meta 를 빈 객체로 시작하면 **이번에 안 돌린 종목의 기록이 사라진다.**
+   * 한 종목만 재수집하는 건 위의 이유로 상시 벌어지는 일이라 기존 meta 를 읽어 병합한다.
+   * 즉 `meta.services` 는 "마지막 실행 결과"가 아니라 **"지금 디스크에 있는 파일"** 을 뜻한다.
+   */
+  const prevMeta = await readFile(path.join(OUT, 'meta.json'), 'utf8').then(JSON.parse).catch(() => null);
+  const meta = {
+    fetchedAt: new Date().toISOString(),
+    months: targets,
+    minRankCnt: MIN_RANK_CNT,
+    services: structuredClone(prevMeta?.services ?? {}),
+  };
+  // 이번에 돌리는 종목의 지난 aborted 는 지운다 — 이번 실행 결과로 다시 판정해야 한다.
+  for (const svc of services) {
+    meta.services[svc.id] ??= {};
+    delete meta.services[svc.id].aborted;
+  }
   let hadFailure = false;
   const zeroStreak = new Map(); // 코드 오류 경보용
 
-  for (const svc of SERVICES) {
+  for (const svc of services) {
     await mkdir(path.join(OUT, svc.id), { recursive: true });
     const errors = [];
     let aborted = null;
@@ -586,11 +668,14 @@ async function main() {
   // 모든 대상 월에서 0건인 코드는 "거래 없음"이 아니라 코드 오류일 수 있다.
   // API 가 잘못된 LAWD_CD 에도 totalCount 0 을 주기 때문에 여기서만 잡힌다.
   const suspect = [...zeroStreak.entries()]
-    .filter(([, n]) => n === targets.length * SERVICES.length)
+    .filter(([, n]) => n === targets.length * services.length)
     .map(([code]) => code);
   if (suspect.length) {
     meta.suspectCodes = suspect;
     console.warn(`\n⚠ 전 기간 0건인 코드 ${suspect.length}개 — 코드 오류 가능성: ${suspect.join(', ')}`);
+  } else if (svcArg && prevMeta?.suspectCodes) {
+    // 한 종목만 돌렸으면 다른 종목을 다시 본 게 아니다. 지난 판정을 지우지 않는다.
+    meta.suspectCodes = prevMeta.suspectCodes;
   }
 
   await writeFile(path.join(OUT, 'meta.json'), JSON.stringify(meta, null, 2), 'utf8');

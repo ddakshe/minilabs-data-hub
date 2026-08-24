@@ -7,15 +7,19 @@ name: Fetch Realestate
 #  1. 실거래 신고 기한이 계약일 +30일이다. 오늘 체결된 계약은 최대 한 달 뒤에
 #     데이터에 나타난다. 매일 받아도 어제와의 차이는 "한 달 전 계약 몇 건 추가"뿐이라
 #     하루 단위 신선도가 의미를 만들지 못한다.
-#  2. data.go.kr 인증키는 **계정 공통**이다. medical-tools 등 다른 프로젝트와
-#     하루 10,000회 한도를 나눠 쓴다. 실거래만 매일 1,536회를 태우면 남의 앱을 굶긴다.
-#     (429도 서비스별이 아니라 계정 단위로 걸린다)
+#  2. 인증키는 계정 공통이지만 **일일 요청제한은 서비스(활용신청) 단위로 센다.**
+#     2026-08-24 실측: AptRent 가 returnReasonCode 22(일일 한도 초과)를 뱉는 순간
+#     AptTrade·RHRent·OffiRent 는 같은 키로 정상 응답했다.
+#     즉 다른 프로젝트(fetch-local-currency 등)와 겹쳐도 서로의 한도를 갉아먹지 않는다.
+#     하지만 **이 워크플로 안의 AptTrade·AptRent 각각**은 하루 예산이 따로 있고,
+#     정기 실행(3개월 = 종별 768회)과 백필(12개월 = 종별 3,072회)이 같은 날 겹치면
+#     그 종목의 한도를 넘긴다. 겹치지 말아야 하는 건 남의 앱이 아니라 같은 종목이다.
 #
 # 3개월 롤링인 이유: 신고 지연 때문에 지난달·전전달 숫자가 계속 늘어난다.
 # 한 번 받고 끝내면 과거가 영원히 과소집계로 남는다.
 #
-# 백필은 이 워크플로로 하지 말 것 — workflow_dispatch 의 months 로 수동 실행한다.
-# 정기 실행과 같은 날 겹치면 한도를 넘긴다.
+# 백필은 정기 실행에 맡기지 말 것 — workflow_dispatch 의 months 로 수동 실행한다.
+# 한 종목만 막혔을 때는 service 로 그 종목만 다시 받는다(이미 받은 종목의 호출을 아낀다).
 
 on:
   schedule:
@@ -26,6 +30,15 @@ on:
         description: '수집할 개월 수 (기본 3, 백필은 12)'
         required: false
         default: '3'
+      service:
+        description: '받을 종목 (한 종목만 막혔을 때 그것만 다시 받는다)'
+        required: false
+        type: choice
+        default: 'all'
+        options:
+          - all
+          - trade
+          - rent
       reason:
         description: '실행 이유 (로그에만 기록, 선택)'
         required: false
@@ -58,6 +71,7 @@ jobs:
         run: |
           echo "Event  : ${{ github.event_name }}"
           echo "Months : ${{ github.event.inputs.months || '3 (scheduled)' }}"
+          echo "Service: ${{ github.event.inputs.service || 'all (scheduled)' }}"
           echo "Reason : ${{ github.event.inputs.reason || '(scheduled)' }}"
           TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
 
@@ -65,7 +79,17 @@ jobs:
       - name: Fetch realestate
         env:
           DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
-        run: node scripts/fetch-realestate.mjs --months=${{ github.event.inputs.months || '3' }}
+          MONTHS: ${{ github.event.inputs.months || '3' }}
+          SERVICE: ${{ github.event.inputs.service || 'all' }}
+        run: |
+          ARGS="--months=$MONTHS"
+          # all 은 스크립트 기본값(전 종목)이라 플래그를 붙이지 않는다.
+          # `[ ] && ...` 로 쓰면 all 일 때 테스트가 1을 반환해 `bash -e` 가 스텝을 죽인다.
+          if [ "$SERVICE" != "all" ]; then
+            ARGS="$ARGS --service=$SERVICE"
+          fi
+          echo "→ node scripts/fetch-realestate.mjs $ARGS"
+          node scripts/fetch-realestate.mjs $ARGS
 
       - name: Check for changes
         id: diff
