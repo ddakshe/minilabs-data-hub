@@ -482,13 +482,42 @@ async function main() {
       meta.services[svc.id][ym] = { rows, regions: Object.keys(agg.sigungu).length };
     }
 
-    // 최신월을 latest 로 복제한다. 앱은 latest.json 만 읽는다.
-    const last = targets[targets.length - 1];
-    await writeFile(
-      path.join(OUT, svc.id, 'latest.json'),
-      await readFile(path.join(OUT, svc.id, `${last}.json`), 'utf8'),
-      'utf8',
-    );
+    /**
+     * ⚠️ latest 를 "마지막 월"로 잡으면 안 된다.
+     *
+     * 당월은 신고 기한(계약일 +30일)이 지나지 않아 항상 미완성이다.
+     * 2026-08-24 실측: 7월 42,498건 vs 8월 15,631건 → 전월 대비 **-15%** 가 찍혔다.
+     * 시장이 빠진 게 아니라 데이터가 덜 들어온 것인데, 사용자는 구분할 방법이 없다.
+     * "아파트 실거래가"를 표방하는 앱이 첫 화면에 가짜 폭락률을 띄우게 된다.
+     *
+     * 그래서 나눈다.
+     *   latest.json   직전 완료월. 앱의 기본 화면이 읽는다.
+     *   current.json  당월. `partial: true` 를 달아 "집계 중"으로만 보조 표시한다.
+     *
+     * 당월 하나만 수집한 경우(--ym)엔 나눌 게 없으니 그대로 latest 로 쓴다.
+     */
+    const isCurrentMonth = (ym) => ym === ymKST();
+    const complete = targets.filter((ym) => !isCurrentMonth(ym));
+    const latestYm = complete.length ? complete[complete.length - 1] : targets[targets.length - 1];
+
+    const readMonth = (ym) => readFile(path.join(OUT, svc.id, `${ym}.json`), 'utf8');
+    await writeFile(path.join(OUT, svc.id, 'latest.json'), await readMonth(latestYm), 'utf8');
+
+    const currentYm = targets.find(isCurrentMonth);
+    if (currentYm) {
+      const cur = JSON.parse(await readMonth(currentYm));
+      cur.partial = true;
+      cur.partialNote = '신고 기한이 계약일 +30일이라 당월은 집계가 끝나지 않았다. 전월 대비 변화율을 쓰지 말 것.';
+      // 미완성 월의 변화율은 하락으로만 보이는 착시다. 아예 내보내지 않는다.
+      const strip = (o) => { if (o) { delete o.chg; delete o.prevMed; } };
+      strip(cur.national); strip(cur.national?.jeonse);
+      (cur.sido ?? []).forEach(strip);
+      Object.values(cur.sigungu ?? {}).forEach((v) => { strip(v); strip(v.jeonse); });
+      await writeFile(path.join(OUT, svc.id, 'current.json'), JSON.stringify(cur), 'utf8');
+      meta.services[svc.id].currentYm = currentYm;
+    }
+    meta.services[svc.id].latestYm = latestYm;
+    console.log(`  → latest=${latestYm}${currentYm ? ` · current=${currentYm} (집계 중)` : ''}`);
 
     if (errors.length) {
       meta.services[svc.id].errors = errors.length;
