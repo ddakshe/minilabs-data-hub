@@ -1,0 +1,17 @@
+name: Probe Realestate
+# 진단 전용. 수동 실행만. 커밋도 데이터 변경도 하지 않는다.
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        run: node scripts/probe-realestate.mjs
