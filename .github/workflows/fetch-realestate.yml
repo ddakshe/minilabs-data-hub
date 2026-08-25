@@ -127,6 +127,41 @@ jobs:
           # 다른 워크플로가 같은 시간대에 밀어넣을 수 있다. 한 번은 되받아 재시도한다.
           git push || (git pull --rebase origin main && git push)
 
+      - name: Purge jsDelivr CDN cache
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          # 앱은 cdn.jsdelivr.net/@main 으로 받는다. purge 를 안 하면 엣지가 옛 파일을
+          # 최대 12시간(s-maxage=43200) 물고 있고, 브라우저는 7일(max-age=604800)이다.
+          #
+          # ⚠️ 이게 없으면 "조금 옛날 값"이 아니라 **필드가 통째로 빠진 파일**이 나간다.
+          #    2026-08-25 실측: 원본은 sido[].jeonse.chg 를 16/16 갖고 있는데 jsDelivr 는
+          #    rent·offirent 가 0/16 이었다. 앱은 값이 없으면 정직하게 "—" 를 찍으므로
+          #    화면에서 변화율이 전부 사라지고 정렬이 죽는다 — 기능이 빠진 것처럼 보인다.
+          #
+          # 월별 파일은 앱이 읽지 않는다. 앱이 실제로 받는 것만 턴다.
+          sleep 10
+          BASE="https://purge.jsdelivr.net/gh/ddakshe/minilabs-data-hub@main/realestate"
+          fail=0
+          for svc in trade rent rhrent offirent; do
+            for f in latest current; do
+              [ -f "realestate/$svc/$f.json" ] || continue
+              code=$(curl -s -o /dev/null -w "%{http_code}" "$BASE/$svc/$f.json")
+              echo "  $svc/$f.json -> $code"
+              [ "$code" = "200" ] || fail=1
+            done
+          done
+          code=$(curl -s -o /dev/null -w "%{http_code}" "$BASE/meta.json")
+          echo "  meta.json -> $code"
+          [ "$code" = "200" ] || fail=1
+
+          if [ "$fail" = "1" ]; then
+            # 수집 자체는 성공했다. purge 실패로 워크플로를 빨갛게 만들지 않는다 —
+            # 다음 실행이 다시 턴다. 다만 요약에 남겨 놓치지 않게 한다.
+            echo "::warning::jsDelivr purge 일부 실패 — 최대 12시간 옛 파일이 나갈 수 있다"
+          else
+            echo "✓ jsDelivr cache purged"
+          fi
+
       - name: Summary
         if: always()
         run: |
