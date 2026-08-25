@@ -12,6 +12,7 @@
 | 1 | 인증중고차(BMW·포르쉐) | **⏸ 중단** | `./refresh-cpo.sh` | GUI 브라우저 · 봇 차단 |
 | 2 | OTT 순위(라프텔·티빙) | 수·목 10시 | `./refresh-ott.sh` | 한국 IP 필요 |
 | 3 | 레버리지 데이터 | 평일 08:10 | `./refresh-lever.sh` | 토스 허용 IP 등록 |
+| 4 | 배당 이름표(한글명·시총) | **분기 1회** | `stock-tools/scripts/dividend_toss.py` | 토스 허용 IP 등록 |
 
 ---
 
@@ -157,3 +158,41 @@ cron·launchd 는 **조용히 죽고** 실패를 알려주지 않는다. 특히 
 러너가 `local-jobs-status.json` 의 `ranAt` 을 보고 **오늘 이미 성공한 작업은 건너뛴다.**
 (사람이 부르는 방식이라 필요하다. cron 은 하루 한 번이라 이 문제가 없었다.)
 다시 돌리려면 `--force` 또는 id 를 직접 지목한다.
+
+
+---
+
+## 4. 배당 이름표 — 한글명 · 시가총액
+
+```yaml
+id: dividend-labels
+repo: stock-tools
+command: python3 scripts/dividend_toss.py
+schedule: quarterly
+prefer_time: "분기 첫 영업일"
+reason: toss-ip-allowlist
+outputs: minilabs-data-hub/dividend/toss.json
+consumers: [stock-dividend-mini]
+```
+
+### 왜 로컬인가
+
+토스증권 Open API 는 **허용 IP 사전 등록**이 필수다. Actions 러너 IP 는 등록할 수 없다
+(`stock-tools/CLAUDE.md` 의 "런타임에 토스 API 를 호출하는 설계를 하지 말 것"과 같은 제약).
+
+### 왜 분기 1회로 충분한가
+
+여기서 나오는 값이 **이름표뿐**이기 때문이다.
+
+| 값 | 쓰임 | 변화 |
+|---|---|---|
+| `names` 한글명 | 목록·검색에 표시 | 사명 변경·신규 상장 때만 |
+| `caps` 시가총액 | 회사 규모 게이지의 **구간 판정**(3억/20억/100억/2000억$) | 구간 경계를 넘는 종목은 소수 |
+
+🔴 **현재가는 2026-08-25 부터 여기서 내지 않는다.** 주가는 매일 갱신이 필요한 유일한
+값이라, 토스에 묶어 두면 사람이 매일 손으로 돌려야 했다. Yahoo(키·IP 불필요)로 옮겨
+`.github/workflows/fetch-dividend.yml` 이 **매일 CI 로** 낸다.
+실측 1,311/1,313(99.8%) · 58초 (2026-08-25).
+
+이 스크립트는 `/api/v1/prices` 를 여전히 부르지만 **시가총액 계산(주식수 × 주가)에만**
+쓰고 파일로 내보내지 않는다.

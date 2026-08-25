@@ -1,0 +1,53 @@
+name: fetch-dividend
+
+on:
+  schedule:
+    - cron: '30 21 * * 2-6'   # 06:30 KST (화~토) = 미국 직전 거래일 마감 뒤
+  workflow_dispatch:
+
+# 데이터 커밋을 위해 쓰기 권한이 필요하다
+permissions:
+  contents: write
+
+# 동시 실행을 막는다. 두 번이 겹치면 같은 파일에 push 가 충돌한다
+concurrency:
+  group: fetch-dividend
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      # 의존성 설치 단계가 없다 — 표준 라이브러리만 쓴다.
+      # SEC EDGAR·Yahoo 모두 키도 허용 IP 등록도 요구하지 않으므로 Secrets 도 필요 없다.
+
+      # 배당 본체(SEC EDGAR). frames API 라 종목마다 부르지 않아 가볍다.
+      - name: 배당 수집
+        env:
+          # 연락처일 뿐 비밀이 아니다. SEC 가 User-Agent 에 요구한다.
+          SEC_USER_AGENT: stock-tools kyungtaekim@odkmedia.net
+        run: python3 scripts/dividend/build_dividend.py
+
+      # 주가(Yahoo). dividend.json 의 티커 목록을 읽으므로 **위 단계 뒤여야 한다.**
+      # 성공률이 90% 미만이면 스스로 실패하고 아무것도 쓰지 않는다 (build_price.py 주석).
+      - name: 주가 수집
+        run: python3 scripts/dividend/build_price.py
+
+      - name: 변경이 있으면 커밋
+        run: |
+          if git diff --quiet dividend/; then
+            echo "변경 없음"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add dividend/
+          git commit -m "chore(dividend): 데이터 갱신 $(date -u +%Y-%m-%d)"
+          # 다른 워크플로가 그 사이 push 했을 수 있다
+          git pull --rebase --autostash origin main
+          git push
