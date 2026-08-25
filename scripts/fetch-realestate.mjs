@@ -511,6 +511,23 @@ async function attachPrev(svc, kind, ym, doc) {
   } else {
     doc.national.jeonse.prevMed = old.national?.jeonse?.med ?? null;
     doc.national.jeonse.chg = chg(doc.national.jeonse.med, old.national?.jeonse?.med);
+
+    /**
+     * ⚠️ 시도를 빠뜨리면 안 된다.
+     *
+     * 매매 분기는 전국·시도·시군구 셋 다 처리하는데 여기서는 시도가 빠져 있었다.
+     * 그 결과 앱 B 의 **시도 격자 변화율이 전부 비고, 상승폭·하락폭 정렬이 통째로
+     * 비활성**됐다 — 전국과 시군구만 보고 있으면 드러나지 않는 종류의 결함이다.
+     *
+     * 월세는 변화율을 붙이지 않는다. 보증금과 월세액 두 축이라 하나로 접을 수 없다.
+     */
+    const oldSido = new Map((old.sido ?? []).map((s) => [s.code, s]));
+    for (const s of doc.sido) {
+      const before = oldSido.get(s.code);
+      s.jeonse.prevMed = before?.jeonse?.med ?? null;
+      s.jeonse.chg = chg(s.jeonse.med, s.jeonse.prevMed);
+    }
+
     for (const [code, cur] of Object.entries(doc.sigungu)) {
       cur.jeonse.prevMed = old.sigungu?.[code]?.jeonse?.med ?? null;
       cur.jeonse.chg = chg(cur.jeonse.med, cur.jeonse.prevMed);
