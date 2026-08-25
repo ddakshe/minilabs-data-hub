@@ -97,7 +97,9 @@ jobs:
           git add realestate/
           # meta.json 은 fetchedAt 때문에 매번 바뀐다. 그것만 바뀌었으면 커밋하지 않는다 —
           # 내용이 같은데 커밋이 쌓이면 히스토리에서 진짜 변경을 못 찾는다.
-          if git diff --cached --quiet -- realestate/trade realestate/rent; then
+          # ⚠️ 종목을 추가하면 이 목록도 늘려야 한다. 빠뜨리면 그 종목만 바뀐 실행이
+          #    "변화 없음"으로 판정돼 수집 결과가 통째로 버려진다.
+          if git diff --cached --quiet -- realestate/trade realestate/rent realestate/rhrent realestate/offirent; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "축약본 변화 없음 — 커밋 생략."
             git restore --staged realestate/ || true
