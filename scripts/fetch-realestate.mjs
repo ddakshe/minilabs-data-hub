@@ -35,8 +35,11 @@ const ENDPOINT = 'https://apis.data.go.kr/1613000';
  * 각자의 throttle 을 앞당긴다. 로그에서 어느 종목이 막혔는지 가리기도 어려워진다.
  */
 const SERVICES = [
-  { id: 'trade', op: 'RTMSDataSvcAptTrade' },
-  { id: 'rent', op: 'RTMSDataSvcAptRent' },
+  { id: 'trade', op: 'RTMSDataSvcAptTrade', kind: 'trade', areas: 'apt' },
+  { id: 'rent', op: 'RTMSDataSvcAptRent', kind: 'rent', areas: 'apt' },
+  // 앱 B 는 아파트만으로 성립하지 않는다 — 전월세 수요의 상당수가 빌라·오피스텔이다.
+  { id: 'rhrent', op: 'RTMSDataSvcRHRent', kind: 'rent', areas: 'small' },
+  { id: 'offirent', op: 'RTMSDataSvcOffiRent', kind: 'rent', areas: 'small' },
 ];
 
 /**
@@ -57,12 +60,29 @@ const DEFAULT_MONTHS = 3;
 const MIN_RANK_CNT = 30;
 
 /** 전용면적 구간. 전국 비교는 평형 고정이 전제이고 대표는 m(국민평형)이다. */
-const AREA_BUCKETS = [
-  ['s', 0, 60],
-  ['m', 60, 85],
-  ['l', 85, 135],
-  ['xl', 135, Infinity],
-];
+/**
+ * 평형 구간은 **종목군마다 다르다.**
+ *
+ * 아파트 기준(60/85/135㎡)을 빌라·오피스텔에 그대로 쓰면 물량이 전부 `s` 한 칸에 몰려
+ * 평형 구분이 무의미해진다 — 실측 표본에서 오피스텔 25.16㎡, 빌라 27.72·37.8㎡ 였다.
+ *
+ * `small` 경계는 잠정값이다. 첫 수집 뒤 meta.json 의 `areaDist` 로 분포를 확인하고
+ * 필요하면 조정한다(조정하면 재집계가 필요하므로 첫 판에 최대한 맞춘다).
+ */
+const AREA_BUCKET_SETS = {
+  apt: [
+    ['s', 0, 60],
+    ['m', 60, 85],
+    ['l', 85, 135],
+    ['xl', 135, Infinity],
+  ],
+  small: [
+    ['s', 0, 30],
+    ['m', 30, 45],
+    ['l', 45, 60],
+    ['xl', 60, Infinity],
+  ],
+};
 
 const RAW_KEY = process.env.DATA_GO_KR_KEY;
 if (!RAW_KEY) {
@@ -116,7 +136,8 @@ const won = (x) => (x == null ? null : Math.round(x));
 /** 소수 1자리 퍼센트. 중앙값끼리 나누지 말고 개별 비율의 중앙값을 쓸 것. */
 const pct = (x) => (x == null ? null : Math.round(x * 10) / 10);
 
-const areaOf = (ar) => AREA_BUCKETS.find(([, lo, hi]) => ar >= lo && ar < hi)?.[0] ?? 'xl';
+const areaOf = (ar, set = 'apt') =>
+  AREA_BUCKET_SETS[set].find(([, lo, hi]) => ar >= lo && ar < hi)?.[0] ?? 'xl';
 
 /** 환산보증금 = 보증금 + 월세×100. 월세 인상률의 유일한 성립 축이다(§아래 주석). */
 const converted = (deposit, monthly) => deposit + monthly * 100;
@@ -272,7 +293,7 @@ const mergeArea = (into, from) => {
   for (const [b, v] of Object.entries(from)) (into[b] ??= []).push(...v);
 };
 
-function aggregateTrade(byRegion, regionMap) {
+function aggregateTrade(byRegion, regionMap, areaSet = 'apt') {
   const nat = [];
   const natArea = {};
   const sidoPool = new Map();
@@ -288,7 +309,7 @@ function aggregateTrade(byRegion, regionMap) {
       const ar = Number(r.excluUseAr);
       if (!amt || !Number.isFinite(ar)) continue;
       prices.push(amt);
-      const b = areaOf(ar);
+      const b = areaOf(ar, areaSet);
       (byArea[b] ??= []).push(amt);
     }
     if (!prices.length) continue;
@@ -336,7 +357,7 @@ function aggregateTrade(byRegion, regionMap) {
  * `preDeposit` 는 결측이 아니라 **갱신계약에만 있는 값**이다(전체 채움률 47.4%).
  * contractType === '갱신' 으로 거른 뒤에 봐야 한다.
  */
-function aggregateRent(byRegion, regionMap) {
+function aggregateRent(byRegion, regionMap, areaSet = 'apt') {
   const mk = () => ({ jeonse: [], wolseDep: [], wolseMon: [], rateJ: [], rateW: [], rateWMon: [], rr: 0, rrTot: 0, allTot: 0, frozen: 0, frozenTot: 0 });
   const nat = mk();
   const sidoPool = new Map();
@@ -354,7 +375,7 @@ function aggregateRent(byRegion, regionMap) {
       const ar = Number(r.excluUseAr);
       if (!dep && !mon) continue;
       acc.allTot++;
-      const bucket = Number.isFinite(ar) ? areaOf(ar) : null;
+      const bucket = Number.isFinite(ar) ? areaOf(ar, areaSet) : null;
       const isJeonse = mon === 0;
 
       if (isJeonse) acc.jeonse.push(dep);
@@ -439,7 +460,7 @@ const shapeRentArea = (byArea) =>
   );
 
 /** 직전 월 파일에서 med 를 끌어와 변화율을 붙인다. 원본을 두 번 받지 않는다. */
-async function attachPrev(svc, ym, doc) {
+async function attachPrev(svc, kind, ym, doc) {
   const prev = prevYm(ym);
   const f = path.join(OUT, svc, `${prev}.json`);
   if (!existsSync(f)) return doc;
@@ -461,7 +482,7 @@ async function attachPrev(svc, ym, doc) {
     }
   };
 
-  if (svc === 'trade') {
+  if (kind === 'trade') {
     doc.national.prevMed = old.national?.med ?? null;
     doc.national.chg = chg(doc.national.med, old.national?.med);
     attachArea(doc.national.byArea, old.national?.byArea);
@@ -601,12 +622,28 @@ async function main() {
         continue;
       }
 
-      const agg = svc.id === 'trade'
-        ? aggregateTrade(byRegion, regionMap)
-        : aggregateRent(byRegion, regionMap);
+      const agg = svc.kind === 'trade'
+        ? aggregateTrade(byRegion, regionMap, svc.areas)
+        : aggregateRent(byRegion, regionMap, svc.areas);
 
-      const doc = await attachPrev(svc.id, ym, { ym, updatedAt: meta.fetchedAt, minRankCnt: MIN_RANK_CNT, ...agg });
+      const doc = await attachPrev(svc.id, svc.kind, ym, { ym, updatedAt: meta.fetchedAt, minRankCnt: MIN_RANK_CNT, ...agg });
       await writeFile(path.join(OUT, svc.id, `${ym}.json`), JSON.stringify(doc), 'utf8');
+
+      /**
+       * 평형 구간 분포를 meta 에 남긴다.
+       *
+       * `small` 경계(30/45/60㎡)는 표본 몇 건으로 잡은 잠정값이다. 한 칸에 80% 이상이
+       * 몰리면 구간이 잘못 잡힌 것이고, 그때 재집계가 필요하다 — 그 판단을 **이번 수집
+       * 결과만 보고** 할 수 있어야 다시 3,072회를 태우지 않는다.
+       */
+      const dist = {};
+      for (const v of Object.values(agg.sigungu)) {
+        for (const [b, a] of Object.entries(v.byArea ?? {})) {
+          dist[b] = (dist[b] ?? 0) + (a.cnt ?? 0);
+        }
+      }
+      meta.areaDist ??= {};
+      meta.areaDist[svc.id] = { set: svc.areas, ...dist };
 
       const rows = [...byRegion.values()].reduce((s, v) => s + v.length, 0);
       console.log(`  → ${ym}: 거래 ${rows.toLocaleString()}건 · 시군구 ${Object.keys(agg.sigungu).length}개`);
