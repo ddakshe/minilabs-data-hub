@@ -91,9 +91,24 @@ def main() -> int:
         labels.append(se)
         print(f"    {se[:36]:38} 당기 {(x.get('thstrm') or ''):>12}  전기 {(x.get('frmtrm') or ''):>12}")
 
-    print('\n══ 3. 시가배당률이 있나 (이 앱의 축) ══')
-    hit = [l for l in labels if '시가배당' in l]
-    print(f"  {'✅ 있다: ' + ' / '.join(hit) if hit else '🔴 없다 — 축을 다시 정해야 한다'}")
+    print('\n══ 3. 배당수익률이 있나 (이 앱의 축) ══')
+    # ⚠️ DART 표기는 '시가배당률' 이 아니라 **'현금배당수익률(%)'** 이다.
+    #    '시가배당' 으로 찾으면 값이 있는데도 없다고 나온다 (2026-08-25 실측).
+    hit = [l for l in labels if '배당수익률' in l]
+    print(f"  {'✅ 있다: ' + ' / '.join(hit) if hit else '🔴 없다'}")
+
+    print('\n══ 3-b. 값이 2줄씩 나오는 이유 — 주식 종류 구분 ══')
+    # 삼성전자는 보통주(005930)·우선주(005935) 가 있어 항목마다 2줄이다.
+    # 무엇으로 가르는지 모르면 우선주 수익률을 보통주 것으로 쓰게 된다.
+    raw = r.get('list') or []
+    keys = sorted({k for x in raw for k in x})
+    print(f'  응답 필드: {keys}')
+    for x in raw:
+        if '배당수익률' in (x.get('se') or '') or '주당 현금배당금' in (x.get('se') or ''):
+            extra = {k: v for k, v in x.items() if k not in ('se', 'thstrm', 'frmtrm', 'lwfr',
+                                                             'rcept_no', 'corp_code', 'corp_cls',
+                                                             'stlm_dt', 'status', 'message')}
+            print(f"    {(x.get('se') or '')[:22]:24} 당기={x.get('thstrm'):>8}  {extra}")
 
     print('\n══ 4. 몇 년치를 받을 수 있나 (삼성전자) ══')
     ok_years = []
