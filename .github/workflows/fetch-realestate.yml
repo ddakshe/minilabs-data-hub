@@ -39,6 +39,8 @@ on:
           - all
           - trade
           - rent
+          - rhrent
+          - offirent
       reason:
         description: '실행 이유 (로그에만 기록, 선택)'
         required: false
