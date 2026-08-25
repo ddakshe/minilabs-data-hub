@@ -1,0 +1,24 @@
+name: probe-dividend-kr
+
+# 스케줄 없음. **손으로만 돌린다** — 데이터가 쓸 만한지 확인하는 일회성 프로브다.
+# 키를 노트북으로 옮기지 않으려고 CI 에서 돈다 (Secrets 가 여기 있다).
+on:
+  workflow_dispatch:
+
+# 아무것도 커밋하지 않는다. 읽기 권한만 준다
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: DART 배당 데이터 프로브
+        env:
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+        run: python3 scripts/dividend-kr/probe_dart.py
