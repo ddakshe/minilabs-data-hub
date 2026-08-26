@@ -13,6 +13,7 @@
 | 2 | OTT 순위(라프텔·티빙) | 수·목 10시 | `./refresh-ott.sh` | 한국 IP 필요 |
 | 3 | 레버리지 데이터 | 평일 08:10 | `./refresh-lever.sh` | 토스 허용 IP 등록 |
 | 4 | 배당 이름표(한글명·시총) | **분기 1회** | `stock-tools/scripts/dividend_toss.py` | 토스 허용 IP 등록 |
+| 5 | 국내 배당(DART) | **연 1회 · 3~4월** | `./refresh-dividend-kr.sh` | 순차 40분 · DART 차단 이력 |
 
 ---
 
@@ -196,3 +197,93 @@ consumers: [stock-dividend-mini]
 
 이 스크립트는 `/api/v1/prices` 를 여전히 부르지만 **시가총액 계산(주식수 × 주가)에만**
 쓰고 파일로 내보내지 않는다.
+
+---
+
+## 5. 국내 배당 — DART 사업보고서
+
+```yaml
+id: dividend-kr
+repo: minilabs-data-hub
+command: ./refresh-dividend-kr.sh
+schedule: on-demand
+prefer_time: "4월 중순 · 5월 초 한 번 더"
+reason: long-running, rate-limit
+outputs: dividend-kr/dividend-kr.json
+consumers: [stock-dividend-kr]
+batch: ../stock-tools/stock-dividend-kr/scripts/collect.py
+credentials: ~/.config/stock-tools/dart.env
+```
+
+### 왜 로컬인가 — **허용 IP 문제가 아니다**
+
+3번(lever)·4번(배당 이름표)과 이유가 다르다. DART 키는 GitHub Secrets 에도 있고
+(`DART_API_KEY`) 허브의 `probe-dividend-kr.yml` 이 이미 CI 에서 그 키로 돈다.
+**기술적으로는 CI 로 옮길 수 있다.** 옮기지 않는 이유는 두 가지다.
+
+- **한 번에 40분 넘게 돈다.** 약 8,400건을 **초당 3건 이하**로 순차 호출한다
+  (`collect.py` 의 `WORKERS = 1` · `dart.py` 의 `SLEEP = 0.3`).
+- **DART 가 이 프로젝트에 IP 차단을 걸었던 적이 있다** (2026-08-25 → 하루 뒤 해제).
+  동시 4개로 돌리다 약 1,000건에서 `RemoteDisconnected` 가 났고, **그게 경고인 걸
+  모르고 재시도를 붙여 더 밀어붙인 것**이 결정타였다. 천천히 받는 것 말고 방어 수단이
+  없으므로 시간을 줄일 방법도 없다.
+
+🔴 **`WORKERS` 와 `SLEEP` 을 올리지 말 것.** 아끼는 15분이 차단 하루와 바꿀 값이 아니다.
+
+### 왜 `on-demand` 인가 — 스케줄을 적으면 매일 돈다
+
+러너의 `due_today()` 는 `daily` · `weekly` · 5필드 cron 만 해석하고 **그 밖의 값은
+`return True` 로 떨어진다.** `annual` 이나 `yearly` 라고 적으면 "매일 due" 가 되어
+40분짜리가 날마다 잡힌다. 자동으로 잡히지 않는 값은 `on-demand` 뿐이다.
+
+> ⚠️ 같은 이유로 **4번(`schedule: quarterly`)도 지금 매일 due 로 계산된다.**
+> `ran_ok_today` 가 같은 날 재실행만 막을 뿐이라 실제로는 매일 한 번씩 돈다.
+> 의도한 주기가 아니라면 그쪽도 `on-demand` 로 바꾸는 편이 맞다.
+
+부를 때는 이름을 직접 지목한다:
+
+```bash
+./run-local-jobs.sh dividend-kr      # 결과가 local-jobs-status.json 에 남는다
+./refresh-dividend-kr.sh             # 러너 없이 직접
+```
+
+### 왜 연 1회로 충분한가
+
+출처가 **사업보고서**다. 12월 결산 법인은 사업연도 종료 후 90일(3월 31일)까지 낸다.
+국내는 결산배당 연 1회가 대부분이라 그 사이에는 값이 움직이지 않는다 —
+실측으로도 **1,139종목 중 1,046개(91.8%)가 같은 사업연도(2025) 한 값**에 몰려 있다.
+
+| 시점 | 할 일 |
+|---|---|
+| 4월 중순 | 본 수집 |
+| 5월 초 | 한 번 더 (지연·정정 제출 반영) |
+| 그 밖 | 안 돌려도 된다 |
+
+### 🔴 돌리기 전에 — `LATEST` 를 올려야 한다
+
+`collect.py` 의 연도가 **하드코딩**이다.
+
+```python
+LATEST = 2025                    # 이 해 호출로 2025·2024·2023 이 온다
+PAST = (2022, 2019, 2016)        # 각각 3년치 → 2014 까지
+```
+
+새 사업연도를 받으려면 둘 다 올린다 (`LATEST = 2026` · `PAST = (2023, 2020, 2017)`).
+**안 올리면 캐시가 다 차 있어 몇 초 만에 끝나고 작년과 같은 파일이 나온다** — 성공한
+것처럼 보이므로 눈치채기 어렵다. 끝나고 찍히는 `asOf` 를 확인할 것.
+
+### 캐시 — 재실행이 싸다
+
+`stock-dividend-kr/.cache/` 에 원본 응답이 그대로 쌓인다 (현재 63MB · 16,000여 건).
+캐시에 있으면 호출하지 않으므로 **중간에 끊겨도 이어서 받고**, 분석 코드만 고쳐
+다시 돌리면 호출 0건이다.
+
+### 실패 신호
+
+- `HTTP 000` 또는 연결 거부 → **차단이다. 멈추고 하루 기다린다.** 재시도로 덮지 않는다
+- 끝났는데 `asOf` 가 작년 그대로 → `LATEST` 를 안 올렸다
+- 종목 수가 크게 줄었다 → `clean_yield()` 가 과하게 걸렀는지 확인 (신고 오기 필터)
+
+### 안 돌리면
+
+앱의 기준 사업연도가 한 해 뒤처진다. 화면은 정상으로 돌지만 새 배당이 반영되지 않는다.
