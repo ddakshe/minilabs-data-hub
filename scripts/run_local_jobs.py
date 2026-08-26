@@ -67,8 +67,38 @@ def load_jobs():
     return jobs
 
 
+def field_match(field, value):
+    """cron 한 필드가 값에 걸리는지. '*' · '3' · '1-5' · '1,3' 만 다룬다 (스텝 '*/2' 는 미지원)."""
+    field = field.strip()
+    if field == '*':
+        return True
+    for chunk in field.split(','):
+        chunk = chunk.strip()
+        if '-' in chunk:
+            a, b = (int(x) for x in chunk.split('-'))
+            if a <= value <= b:
+                return True
+        elif chunk.isdigit() and int(chunk) == value:
+            return True
+    return False
+
+
 def due_today(job, now):
-    """cron 식이면 요일·시각을 대충 본다. 'daily' 는 매일, 'on-demand' 는 자동 실행 안 함."""
+    """오늘 자동으로 잡히는 작업인지.
+
+    'daily' 는 매일, 'on-demand' 는 자동 실행 안 함, 5필드 cron 은 **월·일·요일**을 본다
+    (시·분은 러너가 하루 단위라 무시한다).
+
+    🔴 **예전에는 요일 필드만 읽었다.** 월·일을 무시해서 `0 10 15 4 *`(4월 15일)라고 써도
+       요일이 `*` 라 매일 due 가 됐다. 계절성 작업(사업보고서·연말정산처럼 한 해에 몇 번만
+       도는 것)을 표현할 방법이 아예 없었다. 기존 항목은 월·일이 `*` 라 동작이 그대로다.
+
+    ⚠️ **일(dom)과 요일(dow)을 둘 다 제한하면 여기서는 AND 다.** POSIX cron 은 OR 이라
+       (`0 0 13 * 5` = 13일 **또는** 금요일) 다르다. 둘을 함께 쓰지 말 것.
+
+    ⚠️ 해석하지 못하는 값(`quarterly` 같은 자유 문구)은 **True 로 떨어진다** — 즉 매일 due 다.
+       자동으로 잡히지 않게 하려면 반드시 `on-demand` 라고 적는다.
+    """
     sched = (job.get('schedule') or '').strip()
     if not sched or sched == 'on-demand':
         return False
@@ -78,19 +108,12 @@ def due_today(job, now):
         return now.weekday() in (2, 3)     # 수·목 (기존 OTT 관행)
     parts = sched.split()
     if len(parts) == 5:
-        dow = parts[4]
-        if dow == '*':
-            return True
-        # '1-5' · '1,3' 형태만 다룬다 (일=0)
-        wd = (now.weekday() + 1) % 7
-        for chunk in dow.split(','):
-            if '-' in chunk:
-                a, b = (int(x) for x in chunk.split('-'))
-                if a <= wd <= b:
-                    return True
-            elif chunk.isdigit() and int(chunk) == wd:
-                return True
-        return False
+        _, _, dom, mon, dow = parts
+        if not field_match(mon, now.month):
+            return False
+        if not field_match(dom, now.day):
+            return False
+        return field_match(dow, (now.weekday() + 1) % 7)   # 일=0
     return True
 
 
