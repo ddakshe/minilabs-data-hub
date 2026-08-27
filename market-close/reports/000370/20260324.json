@@ -1,0 +1,74 @@
+{
+  "code": "000370",
+  "name": "한화손해보험",
+  "market": "KOSPI",
+  "basDt": "20260324",
+  "price": {
+    "code": "000370",
+    "name": "한화손해보험",
+    "market": "KOSPI",
+    "basDt": "20260324",
+    "close": 6750,
+    "vs": 40,
+    "fltRt": 0.6,
+    "open": 6930,
+    "high": 6940,
+    "low": 6680,
+    "prevClose": 6710,
+    "volume": 321206,
+    "tradeValue": 2182499975,
+    "week52": {
+      "low": 3665,
+      "high": 9300,
+      "position": 0.5474711623779946,
+      "days": 244,
+      "from": "20250324"
+    },
+    "recent5": [
+      {
+        "basDt": "20260318",
+        "fltRt": 2.73
+      },
+      {
+        "basDt": "20260319",
+        "fltRt": -4.61
+      },
+      {
+        "basDt": "20260320",
+        "fltRt": 4.69
+      },
+      {
+        "basDt": "20260323",
+        "fltRt": -6.15
+      },
+      {
+        "basDt": "20260324",
+        "fltRt": 0.6
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 1941402,
+      "ratio": 0.17
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 532,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-27T17:53:09.299Z"
+  },
+  "facts": [
+    "시가 6,930원보다 180원 낮게 마감했어요.",
+    "장중 6,940원까지 올랐다가 190원 낮은 가격에 마감했어요.",
+    "거래량이 최근 20거래일 평균의 0.2배였어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null
+  },
+  "builtAt": "2026-08-27T17:53:09.299Z"
+}

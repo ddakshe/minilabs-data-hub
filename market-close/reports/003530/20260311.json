@@ -1,0 +1,74 @@
+{
+  "code": "003530",
+  "name": "한화투자증권",
+  "market": "KOSPI",
+  "basDt": "20260311",
+  "price": {
+    "code": "003530",
+    "name": "한화투자증권",
+    "market": "KOSPI",
+    "basDt": "20260311",
+    "close": 7390,
+    "vs": 160,
+    "fltRt": 2.21,
+    "open": 7460,
+    "high": 7790,
+    "low": 7200,
+    "prevClose": 7230,
+    "volume": 4824961,
+    "tradeValue": 36462354305,
+    "week52": {
+      "low": 2950,
+      "high": 9560,
+      "position": 0.6717095310136157,
+      "days": 244,
+      "from": "20250311"
+    },
+    "recent5": [
+      {
+        "basDt": "20260305",
+        "fltRt": 17.81
+      },
+      {
+        "basDt": "20260306",
+        "fltRt": 2.56
+      },
+      {
+        "basDt": "20260309",
+        "fltRt": -8.55
+      },
+      {
+        "basDt": "20260310",
+        "fltRt": 4.03
+      },
+      {
+        "basDt": "20260311",
+        "fltRt": 2.21
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 16245751,
+      "ratio": 0.3
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 532,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-27T17:53:09.320Z"
+  },
+  "facts": [
+    "시가 7,460원보다 70원 낮게 마감했어요.",
+    "장중 7,790원까지 올랐다가 400원 낮은 가격에 마감했어요.",
+    "거래량이 최근 20거래일 평균의 0.3배였어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null
+  },
+  "builtAt": "2026-08-27T17:53:09.320Z"
+}
