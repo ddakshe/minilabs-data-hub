@@ -1,9 +1,36 @@
 {
-  "generatedAt": "2026-08-25T00:00:00Z",
+  "generatedAt": "2026-08-27T00:00:00Z",
   "source": "SEC EDGAR",
   "sourceUrl": "https://www.sec.gov/edgar",
-  "usdKrw": 1383.07,
+  "usdKrw": 1383.49,
   "listed": [
+    {
+      "cik": "0002145659",
+      "name": "JATT III Acquisition Corp",
+      "ticker": null,
+      "exchange": "나스닥",
+      "offerPrice": 10.0,
+      "priceBandLow": null,
+      "priceBandHigh": null,
+      "bandPosition": null,
+      "sharesOffered": 6000000,
+      "sharesAfterListing": null,
+      "grossProceeds": 60000000,
+      "marketCap": null,
+      "filedAt": "2026-08-26",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "underwriters": [],
+      "businessSummary": "We are a team of experienced life sciences executives, investors, physicians and entrepreneurs.",
+      "useOfProceeds": null,
+      "netResult": null,
+      "netResultYear": null,
+      "lockupDays": null,
+      "location": "WESTFIELD, NJ",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002145659&type=424B4"
+    },
     {
       "cik": "0002132582",
       "name": "Lyntris Inc.",
@@ -390,36 +417,41 @@
       "location": "SAO PAOLO",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002098395&type=424B4"
-    },
-    {
-      "cik": "0001853921",
-      "name": "Scribe Therapeutics, Inc.",
-      "ticker": "SCTX",
-      "exchange": "나스닥",
-      "offerPrice": 15.0,
-      "priceBandLow": 13.0,
-      "priceBandHigh": 15.0,
-      "bandPosition": "top",
-      "sharesOffered": 8580000,
-      "sharesAfterListing": 17077386,
-      "grossProceeds": 128700000,
-      "marketCap": 256160790,
-      "filedAt": "2026-07-27",
-      "isSpac": false,
-      "sic": "2836",
-      "industry": "제약·바이오",
-      "underwriters": [],
-      "businessSummary": "We are a clinical-stage biotechnology company engineering purpose-built in vivo CRISPR technologies designed to extend healthy lifespan through disease prevention and durable therapeutic intervention.",
-      "useOfProceeds": "We currently intend to use the net proceeds we receive from this offering and the concurrent private placement, together with our existing cash, cash equivalents, and investments as follows: approximately $30.",
-      "netResult": null,
-      "netResultYear": null,
-      "lockupDays": null,
-      "location": "ALAMEDA, CA",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001853921&type=424B4"
     }
   ],
   "upcoming": [
+    {
+      "cik": "0002016072",
+      "name": "Velos Acquisition I Corp.",
+      "ticker": "VLOS",
+      "filedAt": "2026-08-26",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": null,
+        "netIncome": 5778750,
+        "assets": 308181330
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002016072&type=S-1"
+    },
+    {
+      "cik": "0001947016",
+      "name": "Starfighters Space, Inc.",
+      "ticker": "FJET",
+      "filedAt": "2026-08-26",
+      "isSpac": false,
+      "sic": "4512",
+      "industry": "운수·통신",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": 0,
+        "netIncome": -16543616,
+        "assets": 28386884
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001947016&type=S-1"
+    },
     {
       "cik": "0002111838",
       "name": "Haymaker Acquisition Corp V",
@@ -1045,17 +1077,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002149294&type=S-1"
     },
     {
-      "cik": "0002145659",
-      "name": "JATT III Acquisition Corp",
-      "ticker": null,
-      "filedAt": "2026-08-10",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002145659&type=S-1"
-    },
-    {
       "cik": "0001838003",
       "name": "Encore Medical, Inc.",
       "ticker": "EMI",
@@ -1164,17 +1185,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000095572&type=S-1"
     },
     {
-      "cik": "0001892704",
-      "name": "First Breach, Inc.",
-      "ticker": "FBDT",
-      "filedAt": "2026-08-07",
-      "isSpac": false,
-      "sic": "3480",
-      "industry": "제조",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001892704&type=S-1"
-    },
-    {
       "cik": "0002108121",
       "name": "Ionetix Corp   DE",
       "ticker": null,
@@ -1189,6 +1199,17 @@
         "assets": 25490
       },
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002108121&type=S-1"
+    },
+    {
+      "cik": "0001892704",
+      "name": "First Breach, Inc.",
+      "ticker": "FBDT",
+      "filedAt": "2026-08-07",
+      "isSpac": false,
+      "sic": "3480",
+      "industry": "제조",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001892704&type=S-1"
     },
     {
       "cik": "0002083125",
@@ -1776,22 +1797,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002092446&type=S-1"
     },
     {
-      "cik": "0001947016",
-      "name": "Starfighters Space, Inc.",
-      "ticker": "FJET",
-      "filedAt": "2026-07-22",
-      "isSpac": false,
-      "sic": "4512",
-      "industry": "운수·통신",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 0,
-        "netIncome": -16543616,
-        "assets": 28386884
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001947016&type=S-1"
-    },
-    {
       "cik": "0002076561",
       "name": "Pine Tree Acquisition Corp.",
       "ticker": null,
@@ -1801,6 +1806,17 @@
       "industry": "SPAC",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002076561&type=S-1"
+    },
+    {
+      "cik": "0001853921",
+      "name": "Scribe Therapeutics, Inc.",
+      "ticker": "SCTX",
+      "filedAt": "2026-07-20",
+      "isSpac": false,
+      "sic": "2836",
+      "industry": "제약·바이오",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001853921&type=S-1"
     },
     {
       "cik": "0002146369",
@@ -3006,17 +3022,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001602409&type=S-1"
     },
     {
-      "cik": "0002092574",
-      "name": "Swarmer, Inc",
-      "ticker": "SWMR",
-      "filedAt": "2026-06-10",
-      "isSpac": false,
-      "sic": "7372",
-      "industry": "소프트웨어·IT",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002092574&type=S-1"
-    },
-    {
       "cik": "0002111009",
       "name": "American Ventures Acquisition Corp. I",
       "ticker": null,
@@ -3512,39 +3517,6 @@
         "assets": 159407000
       },
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001853138&type=S-1"
-    },
-    {
-      "cik": "0002102771",
-      "name": "Keystone Acquisition Corp.",
-      "ticker": "KEYY",
-      "filedAt": "2026-05-28",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002102771&type=S-1"
-    },
-    {
-      "cik": "0002105274",
-      "name": "InterPrivate Investment Partners V, Inc.",
-      "ticker": "IPVV",
-      "filedAt": "2026-05-27",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002105274&type=S-1"
-    },
-    {
-      "cik": "0000832370",
-      "name": "Ealixir, Inc.",
-      "ticker": "EAXR",
-      "filedAt": "2026-05-27",
-      "isSpac": false,
-      "sic": "7372",
-      "industry": "소프트웨어·IT",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000832370&type=S-1"
     }
   ]
 }
