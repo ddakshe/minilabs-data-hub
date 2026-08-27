@@ -52,47 +52,22 @@
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 533,
+      "rows": 532,
       "rows52w": 244
     },
-    "generatedAt": "2026-08-27T04:33:11.034Z"
+    "generatedAt": "2026-08-27T18:23:58.087Z"
   },
   "facts": [
     "시가 111,300원보다 2,000원 낮게 마감했어요.",
     "장중 111,600원까지 올랐다가 2,300원 낮은 가격에 마감했어요.",
     "거래량이 최근 20거래일 평균의 0.4배였어요."
   ],
-  "news": [
-    {
-      "title": "원익IPS, 외국인 순매수 상위에 6일 연속 랭킹",
-      "source": "씽크풀 AI",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1qemVqc3FlbFVfNkx6VWZEM2dwOUJURDFGRVc0LWp4Ulh6Q09Yd2NVVzdrOGJyQUx4d09QbV9YdDIzQ0w3UmhidEprZzF3RUNRRUNQaE9HUUpkRzJfQWREaw?oc=5",
-      "publishedAt": "2026-08-26T09:35:00.000Z"
-    },
-    {
-      "title": "코스닥 823.94P (-0.4%↓) HLB, 원익IPS등 하락세",
-      "source": "씽크풀 AI",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9MMlppdGVzdmkzX2JTZ0FfQjhjMzZoZGZYQUxIWXZZSmpCT1FZY1RpWmhqdFBzaGpxb0hvSDhKMHJlV3ZmcS1LT2dIdFJYOEx3NWI4dQ?oc=5",
-      "publishedAt": "2026-08-26T02:31:00.000Z"
-    },
-    {
-      "title": "“반도체 반등에 6800선 회복”…코스피, 엔비디아 실적 앞두고 1% 상승",
-      "source": "디지털데일리",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFA4QkRHTC1DT3lkNFZPaEV6WS1laFh6Q3BsQW9FaXhidjNDSkJRLXJVdjZTT2VUOGxpWDQxSVJRNGl2elc5dEltb2NxYTJsbjVkWUl6VjJWM2NkTGdFcmxlOWQzOUc?oc=5",
-      "publishedAt": "2026-08-26T07:39:40.000Z"
-    },
-    {
-      "title": "장 초반 보합권…코스피 0.3% 상승",
-      "source": "아시아경제",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE14LUh3clVaaWk3dGxnN2UwMnBlNk9sUkoxY1RULWNyNG05QnNOLTB5WWJjeWJoN2pNWm5sMk5zZk5qUnFLcWY4NVNOZl9MTTJEbE44NlZhamZraDBWTjJqejR3?oc=5",
-      "publishedAt": "2026-08-26T00:40:00.000Z"
-    }
-  ],
+  "news": [],
   "dart": [],
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
-    "news": "구글 뉴스 RSS",
-    "dart": "DART OpenAPI"
+    "news": null,
+    "dart": null
   },
-  "builtAt": "2026-08-27T04:55:06.913Z"
+  "builtAt": "2026-08-27T18:25:55.170Z"
 }
