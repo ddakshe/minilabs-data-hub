@@ -23,7 +23,9 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    # §17 — data.go.kr 은 국내 IP 만 받는다. fetch-price 가 여기 있으므로 같은 제약이다.
+    runs-on: [self-hosted, macOS, ARM64]
+    timeout-minutes: 20
     env:
       MC_OUT: market-close
     steps:
@@ -64,6 +66,15 @@ jobs:
           DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
         run: node scripts/market-close/fetch-price.mjs ${{ steps.new.outputs.codes }}
 
+      # 지수는 종목과 무관하게 하루 한 벌이다. 여기서도 받아야 신규 종목 리포트에
+      # '시장 대비' 문장이 들어간다 (out/index 는 커밋하지 않는 중간 산출물이라
+      #  정규 크론이 만든 것이 이 잡에는 남아 있지 않다).
+      - name: Fetch market indexes
+        continue-on-error: true
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        run: node scripts/market-close/fetch-index.mjs
+
       - name: Fetch news
         if: steps.new.outputs.codes != ''
         continue-on-error: true
@@ -75,6 +86,12 @@ jobs:
         env:
           DART_API_KEY: ${{ secrets.DART_API_KEY }}
         run: node scripts/market-close/fetch-dart.mjs ${{ steps.new.outputs.codes }}
+
+      - name: Fetch ownership (DART 지분공시)
+        continue-on-error: true
+        env:
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+        run: node scripts/market-close/fetch-ownership.mjs ${{ steps.new.outputs.codes }}
 
       # --backfill 로 120일치를 한 번에 채운다. 신청 직후에도 아카이브가 비지 않는다.
       - name: Build reports

@@ -22,7 +22,18 @@ concurrency:
 
 jobs:
   fetch:
-    runs-on: ubuntu-latest
+    # 🚨 **잡 전체가 셀프호스티드다.** apis.data.go.kr 이 GitHub 호스티드 러너의
+    #    해외 IP 를 TCP SYN 단계에서 버린다(§17 실측). 국내 IP 가 필요하다.
+    #
+    #    ⚠️ §17 의 "같은 job 의 다른 스텝으로 나누면 된다" 는 **틀렸다.**
+    #    한 job 의 모든 스텝은 **같은 러너 하나**에서 돈다 — 스텝별 runs-on 은 없다.
+    #    시세만 맥에서 돌리려면 job 을 쪼개고 artifact 로 넘겨야 하는데,
+    #    그러면 §17 이 피하려던 커밋 충돌이 그대로 돌아온다.
+    #    뉴스·공시·푸시는 맥에서도 멀쩡히 되므로 **통째로 옮기는 편이 단순하다.**
+    #
+    #    대가: 맥이 꺼져 있으면 그 시각의 잡은 러너를 기다리다 늦게 돌거나 취소된다.
+    runs-on: [self-hosted, macOS, ARM64]
+    timeout-minutes: 30
     env:
       # 산출물 루트. 로컬은 out/, 여기서는 market-close/ 다 (scripts/market-close/paths.mjs)
       MC_OUT: market-close
@@ -65,6 +76,14 @@ jobs:
           DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
         run: node scripts/market-close/fetch-price.mjs --preset --wanted
 
+      # 코스피·코스닥 지수. 총 2회 호출이고 종목 수와 무관하다.
+      # 실패해도 '시장 대비' 문장 하나가 빠질 뿐이라 리포트는 성립한다.
+      - name: Fetch market indexes
+        continue-on-error: true
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        run: node scripts/market-close/fetch-index.mjs
+
       # 뉴스·공시는 실패해도 리포트가 성립한다. 시세만 있으면 화면이 채워진다.
       - name: Fetch news
         continue-on-error: true
@@ -75,6 +94,15 @@ jobs:
         env:
           DART_API_KEY: ${{ secrets.DART_API_KEY }}
         run: node scripts/market-close/fetch-dart.mjs --preset --wanted
+
+      # 🚨 §18 이 만든 지분공시가 **워크플로에 연결돼 있지 않았다** — 스크립트는
+      # 허브로 복사되지만 아무도 부르지 않아 프로덕션 리포트의 ownership 이 늘 비었다.
+      # 종목당 2회 호출(DART 20,000/일 여유). 공시와 같은 등급으로 실패를 허용한다.
+      - name: Fetch ownership (DART 지분공시)
+        continue-on-error: true
+        env:
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+        run: node scripts/market-close/fetch-ownership.mjs --preset --wanted
 
       # 금지 어휘 게이트에 걸리면 exit 1 → 아래 커밋 단계로 넘어가지 않는다.
       # 무인 크론이 AI/템플릿 출력을 퍼블릭 저장소에 바로 커밋하므로 여기가 마지막 방어선이다.

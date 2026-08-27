@@ -159,7 +159,10 @@ async function main() {
     basDt, generatedAt: new Date().toISOString(),
     rule: '보통주(코드 끝자리 0) · 스팩/리츠 제외 · KOSPI/KOSDAQ 만',
     count: kept.length,
-    items: kept.map(({ code, name, mkt }) => ({ code, name, mkt })),
+    // 🔑 cap 을 같이 넣는다 — 앱의 종목 검색에서 **시총 정렬·규모 필터**가 이것을 쓴다.
+    // 단위는 preset.json 과 같은 '원' 이라 lib/format.ts 의 cap() 을 그대로 쓸 수 있다.
+    // 파일이 139KB → 약 180KB 로 늘지만 호출은 늘지 않는다 (이미 받아 둔 mrktTotAmt 다).
+    items: kept.map(({ code, name, mkt, cap }) => ({ code, name, mkt, cap })),
   }, null, 0) + '\n');
 
   writeFileSync(p('preset.json'), JSON.stringify({

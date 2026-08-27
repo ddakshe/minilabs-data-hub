@@ -6,10 +6,12 @@ import dns from 'node:dns';
 /**
  * 네트워크 공통 설정.
  *
- * 🚨 **IPv4 우선.** GitHub Actions 러너는 IPv6 주소를 갖지만 국내 공공 API 로 가는
- *    IPv6 경로가 없는 경우가 있다. Node 18+ 는 AAAA 를 먼저 시도하므로 연결이 매달리다가
- *    undici 기본 connect 타임아웃(**정확히 10초**)에 걸려 `fetch failed` 로 끝난다.
- *    로컬(맥)에서는 재현되지 않아 원인을 찾기 어렵다 — 실패 시각이 10초인 것이 단서다.
+ * ⚠️ **IPv4 우선 — 다만 이건 존재하지 않는 원인을 고친 것이었다(§17).**
+ *    "러너가 IPv6 로 새어 나간다" 던 진단은 틀렸다. `apis.data.go.kr` 은 **AAAA 레코드가
+ *    아예 없어서** Node 가 IPv6 를 시도할 일이 없다. 실패가 정확히 10초였던 것도 IPv6 의
+ *    증거가 아니라 **undici connect 타임아웃 기본값**의 증거였다.
+ *    진짜 원인은 국내 IP 외 차단이고, 그건 셀프호스티드 러너로 풀었다(워크플로의 runs-on).
+ *    이 한 줄은 해롭지 않아 남겨 두지만, **여기서 원인을 찾지 말 것.**
  */
 dns.setDefaultResultOrder('ipv4first');
 

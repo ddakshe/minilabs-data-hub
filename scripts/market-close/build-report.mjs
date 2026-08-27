@@ -73,16 +73,28 @@ function main() {
 
   let built = 0, skipped = 0, blocked = 0;
 
+  // 지수는 종목과 무관하게 하루 한 벌이다. 루프 밖에서 한 번만 읽는다.
+  // 없으면 `null` 이 흐르고 시장 대비 문장만 조용히 빠진다 — 리포트는 그대로 나온다.
+  const index = readJSON(p('index/market.json'));
+  const marketAt = (basDt, mkt) => {
+    const key = mkt === 'KOSPI' ? 'kospi' : mkt === 'KOSDAQ' ? 'kosdaq' : null;
+    const d = key && index?.days?.[basDt]?.[key];
+    return d ? { name: key === 'kospi' ? '코스피' : '코스닥', clpr: d.clpr, vs: d.vs, fltRt: d.fltRt } : null;
+  };
+
   for (const code of codes) {
     const price = readJSON(p(`price/${code}.json`));
     if (!price) { skipped += 1; console.log(`  · ${code} 시세 없음 — 건너뜀`); continue; }
 
     const news = readJSON(p(`news/${code}.json`));
     const dart = readJSON(p(`dart/${code}.json`));
+    // 지분공시는 90일 창이라 basDt 와 무관하게 최신 파일을 쓴다 (§17).
+    const own = readJSON(p(`ownership/${code}.json`));
     const basDt = price.basDt;
 
     // ── 사실 문장 + 게이트 ──────────────────────────────────────
-    const facts = buildFacts(price);
+    const mkt = marketAt(basDt, price.market);
+    const facts = buildFacts(price, mkt);
     const gate = checkAll(facts);
     if (!gate.ok) {
       // 템플릿이라 여기 걸릴 일이 없어야 정상이다. 걸렸다면 템플릿이 바뀐 것이다.
@@ -109,12 +121,13 @@ function main() {
         // 매일 119개 파일을 다시 쓰면 내용이 같아도 git 이 커진다.
         if (existsSync(`${dir}/${row.basDt}.json`)) continue;
         const past = pastReport(rows, i, price);
-        const pf = buildFacts(past);
+        const pf = buildFacts(past, marketAt(row.basDt, price.market));
         if (!checkAll(pf).ok) continue;
         writeFileSync(`${dir}/${row.basDt}.json`, JSON.stringify({
           code, name: price.name, market: price.market, basDt: row.basDt,
           price: past, facts: pf, news: [], dart: [], priceOnly: true,
-          sources: { price: price.source.api, news: null, dart: null },
+          marketIndex: marketAt(row.basDt, price.market),
+          sources: { price: price.source.api, news: null, dart: null, marketIndex: index?.source ?? null },
           builtAt: new Date().toISOString(),
         }, null, 2) + '\n');
         backfilled += 1;
@@ -127,10 +140,15 @@ function main() {
       price, facts,
       news: news?.items ?? [],
       dart: dart?.items ?? [],
+      ownership: own?.items ?? [],
+      ownershipWindowDays: own?.windowDays ?? null,
+      marketIndex: mkt,
       sources: {
         price: price.source.api,
         news: news?.source ?? null,
         dart: dart?.source ?? null,
+        ownership: own?.source ?? null,
+        marketIndex: mkt ? index?.source ?? null : null,
       },
       builtAt: new Date().toISOString(),
     };
@@ -149,7 +167,7 @@ function main() {
       for (let i = start; i < rows.length - 1; i += 1) {
         const row = rows[i];
         if (have.has(row.basDt) || row.basDt === basDt) continue;
-        const pf = buildFacts(pastReport(rows, i, price));
+        const pf = buildFacts(pastReport(rows, i, price), marketAt(row.basDt, price.market));
         days.push({
           basDt: row.basDt, close: row.clpr, fltRt: row.fltRt,
           headline: buildHeadline(pf), newsCount: 0, dartCount: 0, priceOnly: true,
