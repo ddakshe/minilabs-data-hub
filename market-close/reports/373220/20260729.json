@@ -1,0 +1,74 @@
+{
+  "code": "373220",
+  "name": "LG에너지솔루션",
+  "market": "KOSPI",
+  "basDt": "20260729",
+  "price": {
+    "code": "373220",
+    "name": "LG에너지솔루션",
+    "market": "KOSPI",
+    "basDt": "20260729",
+    "close": 300500,
+    "vs": -13500,
+    "fltRt": -4.3,
+    "open": 316000,
+    "high": 319000,
+    "low": 290500,
+    "prevClose": 314000,
+    "volume": 397135,
+    "tradeValue": 120033365750,
+    "week52": {
+      "low": 300500,
+      "high": 514000,
+      "position": 0,
+      "days": 244,
+      "from": "20250729"
+    },
+    "recent5": [
+      {
+        "basDt": "20260723",
+        "fltRt": 8.41
+      },
+      {
+        "basDt": "20260724",
+        "fltRt": -5.32
+      },
+      {
+        "basDt": "20260727",
+        "fltRt": 1.06
+      },
+      {
+        "basDt": "20260728",
+        "fltRt": -5.71
+      },
+      {
+        "basDt": "20260729",
+        "fltRt": -4.3
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 347859,
+      "ratio": 1.14
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-27T04:33:23.877Z"
+  },
+  "facts": [
+    "시가 316,000원보다 15,500원 낮게 마감했어요.",
+    "장중 319,000원까지 올랐다가 18,500원 낮은 가격에 마감했어요.",
+    "거래량이 최근 20거래일 평균의 1.1배였어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null
+  },
+  "builtAt": "2026-08-27T04:33:23.877Z"
+}

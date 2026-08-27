@@ -1,0 +1,74 @@
+{
+  "code": "000660",
+  "name": "SK하이닉스",
+  "market": "KOSPI",
+  "basDt": "20260529",
+  "price": {
+    "code": "000660",
+    "name": "SK하이닉스",
+    "market": "KOSPI",
+    "basDt": "20260529",
+    "close": 2333000,
+    "vs": 44000,
+    "fltRt": 1.92,
+    "open": 2352000,
+    "high": 2379000,
+    "low": 2290500,
+    "prevClose": 2289000,
+    "volume": 8518013,
+    "tradeValue": 19864932227914,
+    "week52": {
+      "low": 204500,
+      "high": 2333000,
+      "position": 1,
+      "days": 244,
+      "from": "20250529"
+    },
+    "recent5": [
+      {
+        "basDt": "20260522",
+        "fltRt": 0.05
+      },
+      {
+        "basDt": "20260526",
+        "fltRt": 5.72
+      },
+      {
+        "basDt": "20260527",
+        "fltRt": 9.31
+      },
+      {
+        "basDt": "20260528",
+        "fltRt": 2.05
+      },
+      {
+        "basDt": "20260529",
+        "fltRt": 1.92
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 5632137,
+      "ratio": 1.51
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-27T04:33:23.754Z"
+  },
+  "facts": [
+    "시가 2,352,000원보다 19,000원 낮게 마감했어요.",
+    "장중 2,379,000원까지 올랐다가 46,000원 낮은 가격에 마감했어요.",
+    "거래량이 최근 20거래일 평균의 1.5배였어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null
+  },
+  "builtAt": "2026-08-27T04:33:23.754Z"
+}

@@ -1,0 +1,74 @@
+{
+  "code": "240810",
+  "name": "원익IPS",
+  "market": "KOSDAQ",
+  "basDt": "20260730",
+  "price": {
+    "code": "240810",
+    "name": "원익IPS",
+    "market": "KOSDAQ",
+    "basDt": "20260730",
+    "close": 76300,
+    "vs": -6900,
+    "fltRt": -8.29,
+    "open": 79600,
+    "high": 86500,
+    "low": 74900,
+    "prevClose": 83200,
+    "volume": 1335078,
+    "tradeValue": 105562090850,
+    "week52": {
+      "low": 30500,
+      "high": 183300,
+      "position": 0.299738219895288,
+      "days": 244,
+      "from": "20250730"
+    },
+    "recent5": [
+      {
+        "basDt": "20260724",
+        "fltRt": -11.3
+      },
+      {
+        "basDt": "20260727",
+        "fltRt": 5.47
+      },
+      {
+        "basDt": "20260728",
+        "fltRt": -15.57
+      },
+      {
+        "basDt": "20260729",
+        "fltRt": -7.04
+      },
+      {
+        "basDt": "20260730",
+        "fltRt": -8.29
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 2069403,
+      "ratio": 0.65
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-27T04:33:24.153Z"
+  },
+  "facts": [
+    "시가 79,600원보다 3,300원 낮게 마감했어요.",
+    "장중 86,500원까지 올랐다가 10,200원 낮은 가격에 마감했어요.",
+    "거래량이 최근 20거래일 평균의 0.7배였어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null
+  },
+  "builtAt": "2026-08-27T04:33:24.153Z"
+}

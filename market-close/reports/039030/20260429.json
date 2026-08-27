@@ -1,0 +1,74 @@
+{
+  "code": "039030",
+  "name": "이오테크닉스",
+  "market": "KOSDAQ",
+  "basDt": "20260429",
+  "price": {
+    "code": "039030",
+    "name": "이오테크닉스",
+    "market": "KOSDAQ",
+    "basDt": "20260429",
+    "close": 516000,
+    "vs": 3000,
+    "fltRt": 0.58,
+    "open": 500000,
+    "high": 518000,
+    "low": 481000,
+    "prevClose": 513000,
+    "volume": 75627,
+    "tradeValue": 38229444500,
+    "week52": {
+      "low": 115300,
+      "high": 516000,
+      "position": 1,
+      "days": 244,
+      "from": "20250429"
+    },
+    "recent5": [
+      {
+        "basDt": "20260423",
+        "fltRt": 0.31
+      },
+      {
+        "basDt": "20260424",
+        "fltRt": 4.44
+      },
+      {
+        "basDt": "20260427",
+        "fltRt": -0.2
+      },
+      {
+        "basDt": "20260428",
+        "fltRt": 1.58
+      },
+      {
+        "basDt": "20260429",
+        "fltRt": 0.58
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 89546,
+      "ratio": 0.84
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-27T04:33:24.198Z"
+  },
+  "facts": [
+    "시가 500,000원보다 16,000원 높게 마감했어요.",
+    "장중 518,000원까지 올랐다가 2,000원 낮은 가격에 마감했어요.",
+    "거래량이 최근 20거래일 평균의 0.8배였어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null
+  },
+  "builtAt": "2026-08-27T04:33:24.198Z"
+}

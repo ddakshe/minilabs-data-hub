@@ -1,0 +1,74 @@
+{
+  "code": "028260",
+  "name": "삼성물산",
+  "market": "KOSPI",
+  "basDt": "20260601",
+  "price": {
+    "code": "028260",
+    "name": "삼성물산",
+    "market": "KOSPI",
+    "basDt": "20260601",
+    "close": 455000,
+    "vs": 22500,
+    "fltRt": 5.2,
+    "open": 444000,
+    "high": 493500,
+    "low": 440000,
+    "prevClose": 432500,
+    "volume": 1005218,
+    "tradeValue": 467679604000,
+    "week52": {
+      "low": 151300,
+      "high": 455000,
+      "position": 1,
+      "days": 243,
+      "from": "20250602"
+    },
+    "recent5": [
+      {
+        "basDt": "20260526",
+        "fltRt": -2.26
+      },
+      {
+        "basDt": "20260527",
+        "fltRt": -0.12
+      },
+      {
+        "basDt": "20260528",
+        "fltRt": -2.68
+      },
+      {
+        "basDt": "20260529",
+        "fltRt": 8.26
+      },
+      {
+        "basDt": "20260601",
+        "fltRt": 5.2
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 769790,
+      "ratio": 1.31
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-27T04:33:23.929Z"
+  },
+  "facts": [
+    "시가 444,000원보다 11,000원 높게 마감했어요.",
+    "장중 493,500원까지 올랐다가 38,500원 낮은 가격에 마감했어요.",
+    "거래량이 최근 20거래일 평균의 1.3배였어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null
+  },
+  "builtAt": "2026-08-27T04:33:23.929Z"
+}

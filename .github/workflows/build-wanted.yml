@@ -1,0 +1,112 @@
+name: Build Wanted (신규 신청만)
+
+# 신청 직후 기다리는 시간을 줄이기 위한 보조 크론이다.
+# 정규 크론(fetch-market-close.yml)은 평일 마감 후 하루 세 번 전체를 돌리고,
+# 이쪽은 30분마다 **아직 리포트가 없는 신청 종목만** 만든다.
+#
+# 💰 이 저장소는 PUBLIC 이라 Actions 사용 시간이 무료다(하루 48회).
+# 🚧 GitHub 의 schedule 은 정확하지 않다 — 부하가 몰리면 수십 분 밀린다.
+#    '30분마다'는 상한이 아니라 목표치다. 앱이 '준비 중'을 계속 보여주므로
+#    늦어져도 이용자 경험이 깨지지는 않는다.
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# ⚠️ 정규 크론과 **같은 그룹**을 쓴다. 두 워크플로가 동시에 push 하면 충돌한다.
+concurrency:
+  group: fetch-market-close
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      MC_OUT: market-close
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # 신청 목록을 읽는다. tickers.json 은 저장소에 이미 있으므로
+      # fetch-universe 를 돌리지 않는다 — 시세 API 호출 4회를 아끼고
+      # 프리셋을 장중에 흔들지 않기 위해서다.
+      - name: Fetch wanted tickers (Firestore)
+        run: node scripts/market-close/fetch-wanted.mjs
+
+      - name: Resolve new tickers
+        id: new
+        run: |
+          CODES=$(node scripts/market-close/new-wanted.mjs)
+          echo "codes=$CODES" >> "$GITHUB_OUTPUT"
+          if [ -z "$CODES" ]; then
+            echo "신규 신청 없음 — 여기서 끝낸다."
+          else
+            echo "신규: $CODES"
+          fi
+
+      - name: Gate self-test
+        if: steps.new.outputs.codes != ''
+        run: node scripts/market-close/forbidden.mjs
+
+      - name: Fetch price
+        if: steps.new.outputs.codes != ''
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        run: node scripts/market-close/fetch-price.mjs ${{ steps.new.outputs.codes }}
+
+      - name: Fetch news
+        if: steps.new.outputs.codes != ''
+        continue-on-error: true
+        run: node scripts/market-close/fetch-news.mjs ${{ steps.new.outputs.codes }}
+
+      - name: Fetch disclosures
+        if: steps.new.outputs.codes != ''
+        continue-on-error: true
+        env:
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+        run: node scripts/market-close/fetch-dart.mjs ${{ steps.new.outputs.codes }}
+
+      # --backfill 로 120일치를 한 번에 채운다. 신청 직후에도 아카이브가 비지 않는다.
+      - name: Build reports
+        if: steps.new.outputs.codes != ''
+        run: node scripts/market-close/build-report.mjs --backfill ${{ steps.new.outputs.codes }}
+
+      - name: Commit & push
+        if: steps.new.outputs.codes != ''
+        run: |
+          git add market-close/reports
+          if git diff --cached --quiet; then
+            echo "변경 없음 — 커밋을 건너뜁니다."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(market-close): 신규 신청 종목 (${{ steps.new.outputs.codes }})"
+
+          # 정규 크론과 겹칠 수 있으므로 rebase 후 재시도한다.
+          for i in 1 2 3; do
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push && exit 0
+            echo "push 재시도 $i"
+            sleep 5
+          done
+          exit 1
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Build Wanted"
+            echo ""
+            echo "- 신규 종목: \`${{ steps.new.outputs.codes || '없음' }}\`"
+            echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+          } >> "$GITHUB_STEP_SUMMARY"

@@ -1,0 +1,74 @@
+{
+  "code": "036930",
+  "name": "주성엔지니어링",
+  "market": "KOSDAQ",
+  "basDt": "20260305",
+  "price": {
+    "code": "036930",
+    "name": "주성엔지니어링",
+    "market": "KOSDAQ",
+    "basDt": "20260305",
+    "close": 66800,
+    "vs": 13000,
+    "fltRt": 24.16,
+    "open": 57000,
+    "high": 69900,
+    "low": 56800,
+    "prevClose": 53800,
+    "volume": 4369749,
+    "tradeValue": 283229558050,
+    "week52": {
+      "low": 26300,
+      "high": 66800,
+      "position": 1,
+      "days": 244,
+      "from": "20250305"
+    },
+    "recent5": [
+      {
+        "basDt": "20260226",
+        "fltRt": 6.86
+      },
+      {
+        "basDt": "20260227",
+        "fltRt": 0
+      },
+      {
+        "basDt": "20260303",
+        "fltRt": 5.17
+      },
+      {
+        "basDt": "20260304",
+        "fltRt": -8.81
+      },
+      {
+        "basDt": "20260305",
+        "fltRt": 24.16
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 1776334,
+      "ratio": 2.46
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-27T04:33:24.112Z"
+  },
+  "facts": [
+    "시가 57,000원보다 9,800원 높게 마감했어요.",
+    "장중 69,900원까지 올랐다가 3,100원 낮은 가격에 마감했어요.",
+    "거래량이 최근 20거래일 평균의 2.5배였어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null
+  },
+  "builtAt": "2026-08-27T04:33:24.112Z"
+}

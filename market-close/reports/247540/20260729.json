@@ -1,0 +1,74 @@
+{
+  "code": "247540",
+  "name": "에코프로비엠",
+  "market": "KOSDAQ",
+  "basDt": "20260729",
+  "price": {
+    "code": "247540",
+    "name": "에코프로비엠",
+    "market": "KOSDAQ",
+    "basDt": "20260729",
+    "close": 92600,
+    "vs": -9200,
+    "fltRt": -9.04,
+    "open": 102300,
+    "high": 104800,
+    "low": 88300,
+    "prevClose": 101800,
+    "volume": 583750,
+    "tradeValue": 55159094100,
+    "week52": {
+      "low": 92600,
+      "high": 246000,
+      "position": 0,
+      "days": 244,
+      "from": "20250729"
+    },
+    "recent5": [
+      {
+        "basDt": "20260723",
+        "fltRt": 9.95
+      },
+      {
+        "basDt": "20260724",
+        "fltRt": -8.38
+      },
+      {
+        "basDt": "20260727",
+        "fltRt": 2.03
+      },
+      {
+        "basDt": "20260728",
+        "fltRt": -7.87
+      },
+      {
+        "basDt": "20260729",
+        "fltRt": -9.04
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 521045,
+      "ratio": 1.12
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-27T04:33:24.073Z"
+  },
+  "facts": [
+    "시가 102,300원보다 9,700원 낮게 마감했어요.",
+    "장중 104,800원까지 올랐다가 12,200원 낮은 가격에 마감했어요.",
+    "거래량이 최근 20거래일 평균의 1.1배였어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null
+  },
+  "builtAt": "2026-08-27T04:33:24.073Z"
+}

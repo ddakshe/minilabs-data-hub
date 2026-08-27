@@ -1,0 +1,74 @@
+{
+  "code": "196170",
+  "name": "알테오젠",
+  "market": "KOSDAQ",
+  "basDt": "20260714",
+  "price": {
+    "code": "196170",
+    "name": "알테오젠",
+    "market": "KOSDAQ",
+    "basDt": "20260714",
+    "close": 279500,
+    "vs": -37000,
+    "fltRt": -11.69,
+    "open": 304000,
+    "high": 311000,
+    "low": 253000,
+    "prevClose": 316500,
+    "volume": 1323134,
+    "tradeValue": 365782418250,
+    "week52": {
+      "low": 279500,
+      "high": 559000,
+      "position": 0,
+      "days": 245,
+      "from": "20250714"
+    },
+    "recent5": [
+      {
+        "basDt": "20260708",
+        "fltRt": -7.11
+      },
+      {
+        "basDt": "20260709",
+        "fltRt": -4.31
+      },
+      {
+        "basDt": "20260710",
+        "fltRt": 8
+      },
+      {
+        "basDt": "20260713",
+        "fltRt": -2.31
+      },
+      {
+        "basDt": "20260714",
+        "fltRt": -11.69
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 492785,
+      "ratio": 2.69
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-27T04:33:24.019Z"
+  },
+  "facts": [
+    "시가 304,000원보다 24,500원 낮게 마감했어요.",
+    "장중 311,000원까지 올랐다가 31,500원 낮은 가격에 마감했어요.",
+    "거래량이 최근 20거래일 평균의 2.7배였어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null
+  },
+  "builtAt": "2026-08-27T04:33:24.019Z"
+}

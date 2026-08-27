@@ -1,0 +1,74 @@
+{
+  "code": "214450",
+  "name": "파마리서치",
+  "market": "KOSDAQ",
+  "basDt": "20260415",
+  "price": {
+    "code": "214450",
+    "name": "파마리서치",
+    "market": "KOSDAQ",
+    "basDt": "20260415",
+    "close": 298500,
+    "vs": 0,
+    "fltRt": 0,
+    "open": 302500,
+    "high": 303500,
+    "low": 297000,
+    "prevClose": 298500,
+    "volume": 52147,
+    "tradeValue": 15618275250,
+    "week52": {
+      "low": 282500,
+      "high": 711000,
+      "position": 0.03733955659276546,
+      "days": 244,
+      "from": "20250415"
+    },
+    "recent5": [
+      {
+        "basDt": "20260409",
+        "fltRt": 0.85
+      },
+      {
+        "basDt": "20260410",
+        "fltRt": 1.68
+      },
+      {
+        "basDt": "20260413",
+        "fltRt": -1.99
+      },
+      {
+        "basDt": "20260414",
+        "fltRt": 0.84
+      },
+      {
+        "basDt": "20260415",
+        "fltRt": 0
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 60847,
+      "ratio": 0.86
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-27T04:33:24.248Z"
+  },
+  "facts": [
+    "시가 302,500원보다 4,000원 낮게 마감했어요.",
+    "장중 303,500원까지 올랐다가 5,000원 낮은 가격에 마감했어요.",
+    "거래량이 최근 20거래일 평균의 0.9배였어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null
+  },
+  "builtAt": "2026-08-27T04:33:24.249Z"
+}

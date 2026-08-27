@@ -1,0 +1,74 @@
+{
+  "code": "105560",
+  "name": "KB금융",
+  "market": "KOSPI",
+  "basDt": "20260417",
+  "price": {
+    "code": "105560",
+    "name": "KB금융",
+    "market": "KOSPI",
+    "basDt": "20260417",
+    "close": 162300,
+    "vs": 0,
+    "fltRt": 0,
+    "open": 163000,
+    "high": 163400,
+    "low": 161100,
+    "prevClose": 162300,
+    "volume": 762368,
+    "tradeValue": 123870578940,
+    "week52": {
+      "low": 80300,
+      "high": 168800,
+      "position": 0.9265536723163842,
+      "days": 244,
+      "from": "20250417"
+    },
+    "recent5": [
+      {
+        "basDt": "20260413",
+        "fltRt": -1.07
+      },
+      {
+        "basDt": "20260414",
+        "fltRt": -0.45
+      },
+      {
+        "basDt": "20260415",
+        "fltRt": 1.48
+      },
+      {
+        "basDt": "20260416",
+        "fltRt": 2.59
+      },
+      {
+        "basDt": "20260417",
+        "fltRt": 0
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 1144031,
+      "ratio": 0.67
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-27T04:33:23.983Z"
+  },
+  "facts": [
+    "시가 163,000원보다 700원 낮게 마감했어요.",
+    "장중 163,400원까지 올랐다가 1,100원 낮은 가격에 마감했어요.",
+    "거래량이 최근 20거래일 평균의 0.7배였어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null
+  },
+  "builtAt": "2026-08-27T04:33:23.983Z"
+}

@@ -1,0 +1,74 @@
+{
+  "code": "032830",
+  "name": "삼성생명",
+  "market": "KOSPI",
+  "basDt": "20260507",
+  "price": {
+    "code": "032830",
+    "name": "삼성생명",
+    "market": "KOSPI",
+    "basDt": "20260507",
+    "close": 300000,
+    "vs": 2000,
+    "fltRt": 0.67,
+    "open": 304000,
+    "high": 307000,
+    "low": 294500,
+    "prevClose": 298000,
+    "volume": 549698,
+    "tradeValue": 164848147500,
+    "week52": {
+      "low": 83500,
+      "high": 300000,
+      "position": 1,
+      "days": 245,
+      "from": "20250507"
+    },
+    "recent5": [
+      {
+        "basDt": "20260429",
+        "fltRt": 0
+      },
+      {
+        "basDt": "20260430",
+        "fltRt": -0.99
+      },
+      {
+        "basDt": "20260504",
+        "fltRt": 6.21
+      },
+      {
+        "basDt": "20260506",
+        "fltRt": 12.45
+      },
+      {
+        "basDt": "20260507",
+        "fltRt": 0.67
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 418104,
+      "ratio": 1.31
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-27T04:33:23.954Z"
+  },
+  "facts": [
+    "시가 304,000원보다 4,000원 낮게 마감했어요.",
+    "장중 307,000원까지 올랐다가 7,000원 낮은 가격에 마감했어요.",
+    "거래량이 최근 20거래일 평균의 1.3배였어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null
+  },
+  "builtAt": "2026-08-27T04:33:23.954Z"
+}

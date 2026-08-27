@@ -1,0 +1,74 @@
+{
+  "code": "058470",
+  "name": "리노공업",
+  "market": "KOSDAQ",
+  "basDt": "20260721",
+  "price": {
+    "code": "058470",
+    "name": "리노공업",
+    "market": "KOSDAQ",
+    "basDt": "20260721",
+    "close": 70000,
+    "vs": 900,
+    "fltRt": 1.3,
+    "open": 69100,
+    "high": 70900,
+    "low": 67400,
+    "prevClose": 69100,
+    "volume": 539877,
+    "tradeValue": 37508229500,
+    "week52": {
+      "low": 44400,
+      "high": 127000,
+      "position": 0.3099273607748184,
+      "days": 244,
+      "from": "20250721"
+    },
+    "recent5": [
+      {
+        "basDt": "20260714",
+        "fltRt": 1.11
+      },
+      {
+        "basDt": "20260715",
+        "fltRt": 6.57
+      },
+      {
+        "basDt": "20260716",
+        "fltRt": -7.19
+      },
+      {
+        "basDt": "20260720",
+        "fltRt": -4.43
+      },
+      {
+        "basDt": "20260721",
+        "fltRt": 1.3
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 1109649,
+      "ratio": 0.49
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-27T04:33:24.179Z"
+  },
+  "facts": [
+    "시가 69,100원보다 900원 높게 마감했어요.",
+    "장중 70,900원까지 올랐다가 900원 낮은 가격에 마감했어요.",
+    "거래량이 최근 20거래일 평균의 0.5배였어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null
+  },
+  "builtAt": "2026-08-27T04:33:24.179Z"
+}

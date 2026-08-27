@@ -1,0 +1,74 @@
+{
+  "code": "005380",
+  "name": "현대차",
+  "market": "KOSPI",
+  "basDt": "20260514",
+  "price": {
+    "code": "005380",
+    "name": "현대차",
+    "market": "KOSPI",
+    "basDt": "20260514",
+    "close": 712000,
+    "vs": 2000,
+    "fltRt": 0.28,
+    "open": 724000,
+    "high": 730000,
+    "low": 692000,
+    "prevClose": 710000,
+    "volume": 2399620,
+    "tradeValue": 1701639434500,
+    "week52": {
+      "low": 179900,
+      "high": 712000,
+      "position": 1,
+      "days": 245,
+      "from": "20250514"
+    },
+    "recent5": [
+      {
+        "basDt": "20260508",
+        "fltRt": 7.17
+      },
+      {
+        "basDt": "20260511",
+        "fltRt": 5.38
+      },
+      {
+        "basDt": "20260512",
+        "fltRt": 0
+      },
+      {
+        "basDt": "20260513",
+        "fltRt": 9.91
+      },
+      {
+        "basDt": "20260514",
+        "fltRt": 0.28
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 1775259,
+      "ratio": 1.35
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-27T04:33:23.841Z"
+  },
+  "facts": [
+    "시가 724,000원보다 12,000원 낮게 마감했어요.",
+    "장중 730,000원까지 올랐다가 18,000원 낮은 가격에 마감했어요.",
+    "거래량이 최근 20거래일 평균의 1.4배였어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null
+  },
+  "builtAt": "2026-08-27T04:33:23.841Z"
+}

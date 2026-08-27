@@ -1,0 +1,74 @@
+{
+  "code": "028300",
+  "name": "HLB",
+  "market": "KOSDAQ",
+  "basDt": "20260519",
+  "price": {
+    "code": "028300",
+    "name": "HLB",
+    "market": "KOSDAQ",
+    "basDt": "20260519",
+    "close": 49500,
+    "vs": -800,
+    "fltRt": -1.59,
+    "open": 51200,
+    "high": 52100,
+    "low": 48050,
+    "prevClose": 50300,
+    "volume": 699434,
+    "tradeValue": 34622151850,
+    "week52": {
+      "low": 37000,
+      "high": 68200,
+      "position": 0.40064102564102566,
+      "days": 245,
+      "from": "20250519"
+    },
+    "recent5": [
+      {
+        "basDt": "20260513",
+        "fltRt": -5.48
+      },
+      {
+        "basDt": "20260514",
+        "fltRt": -0.56
+      },
+      {
+        "basDt": "20260515",
+        "fltRt": -2.44
+      },
+      {
+        "basDt": "20260518",
+        "fltRt": -3.08
+      },
+      {
+        "basDt": "20260519",
+        "fltRt": -1.59
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 612475,
+      "ratio": 1.14
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-27T04:33:24.226Z"
+  },
+  "facts": [
+    "시가 51,200원보다 1,700원 낮게 마감했어요.",
+    "장중 52,100원까지 올랐다가 2,600원 낮은 가격에 마감했어요.",
+    "거래량이 최근 20거래일 평균의 1.1배였어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null
+  },
+  "builtAt": "2026-08-27T04:33:24.227Z"
+}

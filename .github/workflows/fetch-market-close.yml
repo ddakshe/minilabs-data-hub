@@ -1,0 +1,121 @@
+name: Fetch Market Close
+
+on:
+  schedule:
+    # 평일 16:30 / 17:30 / 18:30 KST (07:30 / 08:30 / 09:30 UTC).
+    # data.go.kr 의 당일 반영 시각이 확정되지 않아 세 번 건다.
+    # build-report 가 멱등이라 이미 만든 날은 교체만 하고 중복되지 않는다.
+    - cron: '30 7,8,9 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: '실행 이유 (로그에만 기록, 선택)'
+        required: false
+        default: 'manual refresh'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-market-close
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    env:
+      # 산출물 루트. 로컬은 out/, 여기서는 market-close/ 다 (scripts/market-close/paths.mjs)
+      MC_OUT: market-close
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Show trigger context
+        run: |
+          echo "Event  : ${{ github.event_name }}"
+          echo "Reason : ${{ github.event.inputs.reason || '(scheduled)' }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      # 게이트 자체 테스트를 먼저 돌린다. 여기서 죽으면 데이터를 받지도 않는다 —
+      # 금지 어휘 게이트가 망가진 채로 리포트를 만드는 것이 최악이기 때문이다.
+      - name: Gate self-test
+        run: node scripts/market-close/forbidden.mjs
+
+      - name: Fetch universe (preset 20 + tickers)
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        run: node scripts/market-close/fetch-universe.mjs
+
+      # 추가 종목 신청을 Firestore 에서 읽는다. 서비스 계정 없이 공개 REST 다.
+      # 규칙 미배포·장애로 403 이 나면 '신청 0건'으로 강등되고 계속 진행한다 —
+      # 신청 기능이 죽어도 기본 20종목 리포트는 나와야 한다.
+      - name: Fetch wanted tickers (Firestore)
+        continue-on-error: true
+        run: node scripts/market-close/fetch-wanted.mjs
+
+      - name: Fetch prices
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        run: node scripts/market-close/fetch-price.mjs --preset --wanted
+
+      # 뉴스·공시는 실패해도 리포트가 성립한다. 시세만 있으면 화면이 채워진다.
+      - name: Fetch news
+        continue-on-error: true
+        run: node scripts/market-close/fetch-news.mjs --preset --wanted
+
+      - name: Fetch disclosures
+        continue-on-error: true
+        env:
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+        run: node scripts/market-close/fetch-dart.mjs --preset --wanted
+
+      # 금지 어휘 게이트에 걸리면 exit 1 → 아래 커밋 단계로 넘어가지 않는다.
+      # 무인 크론이 AI/템플릿 출력을 퍼블릭 저장소에 바로 커밋하므로 여기가 마지막 방어선이다.
+      - name: Build reports
+        run: node scripts/market-close/build-report.mjs --preset --wanted --backfill
+
+      - name: Check for changes
+        id: diff
+        run: |
+          # 앱이 읽는 것만 커밋한다. price/news/dart/history 는 중간 산출물이다.
+          git add market-close/reports market-close/preset.json market-close/tickers.json
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "변경 없음 — 커밋을 건너뜁니다."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --cached --stat | tail -5
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
+          git commit -m "chore(market-close): refresh ($DATE_KST)"
+          git push
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Market Close"
+            echo ""
+            echo "- Trigger: \`${{ github.event_name }}\`"
+            echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
+            echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+            if [ -f market-close/preset.json ]; then
+              echo "- 기준일: $(node -p "require('./market-close/preset.json').basDt")"
+            fi
+            if [ -f market-close/wanted.json ]; then
+              echo "- 추가 신청: $(node -p "require('./market-close/wanted.json').items.map(i=>i.code+' '+i.name).join(', ') || '없음'")"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"

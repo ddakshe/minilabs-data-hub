@@ -1,0 +1,74 @@
+{
+  "code": "402340",
+  "name": "SK스퀘어",
+  "market": "KOSPI",
+  "basDt": "20260618",
+  "price": {
+    "code": "402340",
+    "name": "SK스퀘어",
+    "market": "KOSPI",
+    "basDt": "20260618",
+    "close": 1700000,
+    "vs": 104000,
+    "fltRt": 6.52,
+    "open": 1656000,
+    "high": 1738000,
+    "low": 1623000,
+    "prevClose": 1596000,
+    "volume": 1177611,
+    "tradeValue": 1968016195500,
+    "week52": {
+      "low": 135200,
+      "high": 1700000,
+      "position": 1,
+      "days": 245,
+      "from": "20250618"
+    },
+    "recent5": [
+      {
+        "basDt": "20260612",
+        "fltRt": 10.59
+      },
+      {
+        "basDt": "20260615",
+        "fltRt": 4.05
+      },
+      {
+        "basDt": "20260616",
+        "fltRt": 6.23
+      },
+      {
+        "basDt": "20260617",
+        "fltRt": 6.33
+      },
+      {
+        "basDt": "20260618",
+        "fltRt": 6.52
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 997396,
+      "ratio": 1.18
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-27T04:33:23.785Z"
+  },
+  "facts": [
+    "시가 1,656,000원보다 44,000원 높게 마감했어요.",
+    "장중 1,738,000원까지 올랐다가 38,000원 낮은 가격에 마감했어요.",
+    "거래량이 최근 20거래일 평균의 1.2배였어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null
+  },
+  "builtAt": "2026-08-27T04:33:23.785Z"
+}

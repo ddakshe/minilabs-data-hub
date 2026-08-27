@@ -1,0 +1,74 @@
+{
+  "code": "086520",
+  "name": "에코프로",
+  "market": "KOSDAQ",
+  "basDt": "20260722",
+  "price": {
+    "code": "086520",
+    "name": "에코프로",
+    "market": "KOSDAQ",
+    "basDt": "20260722",
+    "close": 77100,
+    "vs": 1900,
+    "fltRt": 2.53,
+    "open": 77700,
+    "high": 80900,
+    "low": 77100,
+    "prevClose": 75200,
+    "volume": 750086,
+    "tradeValue": 59247364000,
+    "week52": {
+      "low": 46550,
+      "high": 185000,
+      "position": 0.22065727699530516,
+      "days": 244,
+      "from": "20250722"
+    },
+    "recent5": [
+      {
+        "basDt": "20260715",
+        "fltRt": 9.23
+      },
+      {
+        "basDt": "20260716",
+        "fltRt": -7.41
+      },
+      {
+        "basDt": "20260720",
+        "fltRt": -8.13
+      },
+      {
+        "basDt": "20260721",
+        "fltRt": 2.31
+      },
+      {
+        "basDt": "20260722",
+        "fltRt": 2.53
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 1389208,
+      "ratio": 0.54
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-27T04:33:24.046Z"
+  },
+  "facts": [
+    "시가 77,700원보다 600원 낮게 마감했어요.",
+    "장중 80,900원까지 올랐다가 3,800원 낮은 가격에 마감했어요.",
+    "거래량이 최근 20거래일 평균의 0.5배였어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null
+  },
+  "builtAt": "2026-08-27T04:33:24.046Z"
+}

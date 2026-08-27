@@ -1,0 +1,74 @@
+{
+  "code": "005930",
+  "name": "삼성전자",
+  "market": "KOSPI",
+  "basDt": "20260602",
+  "price": {
+    "code": "005930",
+    "name": "삼성전자",
+    "market": "KOSPI",
+    "basDt": "20260602",
+    "close": 360500,
+    "vs": 11500,
+    "fltRt": 3.3,
+    "open": 360500,
+    "high": 370000,
+    "low": 342000,
+    "prevClose": 349000,
+    "volume": 44720282,
+    "tradeValue": 15945279373744,
+    "week52": {
+      "low": 56800,
+      "high": 360500,
+      "position": 1,
+      "days": 244,
+      "from": "20250602"
+    },
+    "recent5": [
+      {
+        "basDt": "20260527",
+        "fltRt": 2.68
+      },
+      {
+        "basDt": "20260528",
+        "fltRt": -2.44
+      },
+      {
+        "basDt": "20260529",
+        "fltRt": 5.84
+      },
+      {
+        "basDt": "20260601",
+        "fltRt": 10.09
+      },
+      {
+        "basDt": "20260602",
+        "fltRt": 3.3
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 34501511,
+      "ratio": 1.3
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-27T04:33:23.731Z"
+  },
+  "facts": [
+    "시가 360,500원과 같은 가격으로 마감했어요.",
+    "장중 370,000원까지 올랐다가 9,500원 낮은 가격에 마감했어요.",
+    "거래량이 최근 20거래일 평균의 1.3배였어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null
+  },
+  "builtAt": "2026-08-27T04:33:23.731Z"
+}
