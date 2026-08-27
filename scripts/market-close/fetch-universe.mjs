@@ -66,7 +66,7 @@ async function call(label, params) {
   if (calls > 0) await sleep(GAP_MS);
   calls += 1;
 
-  const res = await fetchRetry(url, { signal: AbortSignal.timeout(TIMEOUT_MS) });
+  const res = await fetchRetry(url, {}, { timeoutMs: TIMEOUT_MS });
   const text = await res.text();
   let json = null;
   try { json = JSON.parse(text); } catch { /* XML 에러 응답 */ }

@@ -101,9 +101,8 @@ async function fetchOnce(query) {
   calls += 1;
 
   const res = await fetchRetry(rssUrl(query), {
-    signal: AbortSignal.timeout(TIMEOUT_MS),
     headers: { 'User-Agent': 'Mozilla/5.0 (compatible; market-close-mini/0.1)' },
-  });
+  }, { timeoutMs: TIMEOUT_MS });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   return parseRss(await res.text());
 }

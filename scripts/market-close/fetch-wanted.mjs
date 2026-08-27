@@ -32,7 +32,7 @@ async function fetchAll() {
     + `?pageSize=${PAGE_SIZE}&key=${API_KEY}`;
   if (DRY) { console.log(`[dry-run] ${url.replace(API_KEY, '<KEY>')}`); return []; }
 
-  const res = await fetchRetry(url, { signal: AbortSignal.timeout(20000) });
+  const res = await fetchRetry(url, {}, { timeoutMs: 20000 });
   if (!res.ok) {
     const body = (await res.text()).slice(0, 300);
     // 규칙 미배포(403)는 '신청 0건'과 같게 취급한다 — 크론 전체를 죽이지 않는다.

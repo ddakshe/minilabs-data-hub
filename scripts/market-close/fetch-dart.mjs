@@ -52,9 +52,7 @@ function mapIsFresh() {
 
 async function buildCorpMap() {
   console.log('corp_code 매핑 생성 — corpCode.xml 내려받는 중…');
-  const res = await fetchRetry(`https://opendart.fss.or.kr/api/corpCode.xml?crtfc_key=${KEY}`, {
-    signal: AbortSignal.timeout(60000),
-  });
+  const res = await fetchRetry(`https://opendart.fss.or.kr/api/corpCode.xml?crtfc_key=${KEY}`, {}, { timeoutMs: 60000 });
   if (!res.ok) throw new Error(`corpCode HTTP ${res.status}`);
   const buf = Buffer.from(await res.arrayBuffer());
 
@@ -112,7 +110,7 @@ async function fetchDisclosures(corp, basDt) {
 
   const url = `https://opendart.fss.or.kr/api/list.json?crtfc_key=${KEY}`
     + `&corp_code=${corp}&bgn_de=${basDt}&end_de=${basDt}&page_count=50`;
-  const res = await fetchRetry(url, { signal: AbortSignal.timeout(TIMEOUT_MS) });
+  const res = await fetchRetry(url, {}, { timeoutMs: TIMEOUT_MS });
   const j = await res.json();
 
   // 013 = 조회된 데이터가 없습니다 (정상)
