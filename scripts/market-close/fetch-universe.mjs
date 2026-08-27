@@ -18,6 +18,7 @@
  */
 
 import { OUT, p } from './paths.mjs';
+import { fetchRetry } from './net.mjs';
 
 const BASE =
   'https://apis.data.go.kr/1160100/service/GetStockSecuritiesInfoService/getStockPriceInfo';
@@ -65,7 +66,7 @@ async function call(label, params) {
   if (calls > 0) await sleep(GAP_MS);
   calls += 1;
 
-  const res = await fetch(url, { signal: AbortSignal.timeout(TIMEOUT_MS) });
+  const res = await fetchRetry(url, { signal: AbortSignal.timeout(TIMEOUT_MS) });
   const text = await res.text();
   let json = null;
   try { json = JSON.parse(text); } catch { /* XML 에러 응답 */ }

@@ -100,7 +100,7 @@ async function fetchOnce(query) {
   if (calls > 0) await sleep(GAP_MS);
   calls += 1;
 
-  const res = await fetch(rssUrl(query), {
+  const res = await fetchRetry(rssUrl(query), {
     signal: AbortSignal.timeout(TIMEOUT_MS),
     headers: { 'User-Agent': 'Mozilla/5.0 (compatible; market-close-mini/0.1)' },
   });

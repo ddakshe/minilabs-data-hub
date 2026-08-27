@@ -23,6 +23,7 @@
  */
 
 import { OUT, p } from './paths.mjs';
+import { fetchRetry } from './net.mjs';
 import { resolveTargets } from './targets.mjs';
 
 const BASE =
@@ -71,7 +72,7 @@ async function call(params) {
   if (calls > 0) await sleep(GAP_MS);
   calls += 1;
 
-  const res = await fetch(url, { signal: AbortSignal.timeout(TIMEOUT_MS) });
+  const res = await fetchRetry(url, { signal: AbortSignal.timeout(TIMEOUT_MS) });
   const text = await res.text();
   let json = null;
   try { json = JSON.parse(text); } catch { /* XML 에러 */ }

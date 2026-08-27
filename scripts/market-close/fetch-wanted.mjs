@@ -15,6 +15,7 @@
 
 import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { OUT, p } from './paths.mjs';
+import { fetchRetry } from './net.mjs';
 
 const PROJECT = 'minilabs-ranking';
 const API_KEY = process.env.FIREBASE_WEB_KEY ?? 'AIzaSyB6IulmzT3IcN9LVBce8icId2I1Z1p4sfI';
@@ -31,7 +32,7 @@ async function fetchAll() {
     + `?pageSize=${PAGE_SIZE}&key=${API_KEY}`;
   if (DRY) { console.log(`[dry-run] ${url.replace(API_KEY, '<KEY>')}`); return []; }
 
-  const res = await fetch(url, { signal: AbortSignal.timeout(20000) });
+  const res = await fetchRetry(url, { signal: AbortSignal.timeout(20000) });
   if (!res.ok) {
     const body = (await res.text()).slice(0, 300);
     // 규칙 미배포(403)는 '신청 0건'과 같게 취급한다 — 크론 전체를 죽이지 않는다.
