@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-24",
+  "updatedAt": "2026-08-27",
   "month": "2026-08",
   "counts": {
-    "CU": 1504,
-    "GS25": 1717,
-    "EMART24": 2307,
-    "7-ELEVEN": 2345
+    "CU": 1503,
+    "GS25": "실패→직전유지(1717): GS25 CSRFToken 추출 실패",
+    "EMART24": 2311,
+    "7-ELEVEN": "유지(2345)"
   },
   "products": [
     {
@@ -3895,15 +3895,6 @@
       "eventType": "1+1",
       "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8809193710015.jpg",
       "category": "음료"
-    },
-    {
-      "id": "cu-25530",
-      "chain": "CU",
-      "name": "코이)돈코츠어묵탕컵",
-      "price": 4900,
-      "eventType": "1+1",
-      "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8809265027126.jpg",
-      "category": "안주/간식"
     },
     {
       "id": "cu-25593",
@@ -8537,7 +8528,7 @@
       "name": "웅진)자연은토마토P500ml",
       "price": 2350,
       "eventType": "2+1",
-      "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801382130314.jpg",
+      "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801382130314_1.png",
       "category": "음료"
     },
     {
@@ -8546,7 +8537,7 @@
       "name": "웅진)자연은제주감귤500m",
       "price": 2350,
       "eventType": "2+1",
-      "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801382137917.jpg",
+      "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801382137917_1.png",
       "category": "기타"
     },
     {
@@ -8726,7 +8717,7 @@
       "name": "웅진)자연은샤인머스캣500",
       "price": 2350,
       "eventType": "2+1",
-      "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801382149866.jpg",
+      "image": "https://tqklhszfkvzk6518638.edge.naverncp.com/product/8801382149866_1.png",
       "category": "기타"
     },
     {
@@ -28996,6 +28987,42 @@
       "eventType": "증정",
       "image": "https://image.woodongs.com/imgsvr/item/GD_80135906_911.jpg",
       "category": "기타"
+    },
+    {
+      "id": "emart24-8801119746016",
+      "chain": "EMART24",
+      "name": "하이트)테라스파클링캔수박485ml",
+      "price": 2500,
+      "eventType": "골라담기",
+      "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801119746016.JPG",
+      "category": "주류"
+    },
+    {
+      "id": "emart24-8801119746214",
+      "chain": "EMART24",
+      "name": "하이트)테라스파클링캔토마토485ml",
+      "price": 2500,
+      "eventType": "골라담기",
+      "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8801119746214.JPG",
+      "category": "주류"
+    },
+    {
+      "id": "emart24-8934822520137",
+      "chain": "EMART24",
+      "name": "하이네켄)타이거라들러500ml(신)",
+      "price": 4500,
+      "eventType": "골라담기",
+      "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8934822520137.JPG",
+      "category": "음료"
+    },
+    {
+      "id": "emart24-8934822521035",
+      "chain": "EMART24",
+      "name": "하이네켄)타이거라들러500ml(신)*4입",
+      "price": 11000,
+      "eventType": "할인",
+      "image": "https://msave.emart24.co.kr/cmsbo/upload/nHq/plu_image/500x500/8934822521035.JPG",
+      "category": "음료"
     },
     {
       "id": "emart24-8801022915004",
