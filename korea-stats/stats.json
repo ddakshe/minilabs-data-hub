@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24",
+  "updatedAt": "2026-08-27",
   "source": "KOSIS Open API",
   "categories": [
     {
@@ -201,9 +201,9 @@
       "id": "pop_fertility",
       "category": "population",
       "title": "합계출산율",
-      "value": 0.8,
+      "value": 0.799,
       "unit": "명",
-      "changePct": 7,
+      "changePct": 6.8,
       "decimals": 2,
       "frequency": "Y",
       "source": "통계청 인구동향조사",
@@ -247,7 +247,7 @@
         },
         {
           "prd": "2025",
-          "value": 0.8
+          "value": 0.799
         }
       ]
     },
@@ -1650,17 +1650,13 @@
       "id": "pop_birth",
       "category": "population",
       "title": "출생아 수",
-      "value": 23160,
+      "value": 23111,
       "unit": "명",
-      "changePct": 13.6,
+      "changePct": 15.6,
       "frequency": "M",
       "source": "통계청 인구동향조사",
-      "period": "2026.05",
+      "period": "2026.06",
       "history": [
-        {
-          "prd": "202306",
-          "value": 18585
-        },
         {
           "prd": "202307",
           "value": 19085
@@ -1735,51 +1731,51 @@
         },
         {
           "prd": "202501",
-          "value": 24099
+          "value": 24054
         },
         {
           "prd": "202502",
-          "value": 20151
+          "value": 20116
         },
         {
           "prd": "202503",
-          "value": 21112
+          "value": 21088
         },
         {
           "prd": "202504",
-          "value": 20787
+          "value": 20764
         },
         {
           "prd": "202505",
-          "value": 20379
+          "value": 20356
         },
         {
           "prd": "202506",
-          "value": 20011
+          "value": 19996
         },
         {
           "prd": "202507",
-          "value": 21863
+          "value": 21854
         },
         {
           "prd": "202508",
-          "value": 21000
+          "value": 20983
         },
         {
           "prd": "202509",
-          "value": 22391
+          "value": 22382
         },
         {
           "prd": "202510",
-          "value": 21977
+          "value": 21994
         },
         {
           "prd": "202511",
-          "value": 20684
+          "value": 20702
         },
         {
           "prd": "202512",
-          "value": 20003
+          "value": 20052
         },
         {
           "prd": "202601",
@@ -1800,6 +1796,10 @@
         {
           "prd": "202605",
           "value": 23160
+        },
+        {
+          "prd": "202606",
+          "value": 23111
         }
       ]
     },
@@ -1807,17 +1807,13 @@
       "id": "soc_marriage",
       "category": "society",
       "title": "혼인 건수",
-      "value": 20368,
+      "value": 21075,
       "unit": "건",
-      "changePct": -6.4,
+      "changePct": 14,
       "frequency": "M",
       "source": "통계청 인구동향조사",
-      "period": "2026.05",
+      "period": "2026.06",
       "history": [
-        {
-          "prd": "202306",
-          "value": 16052
-        },
         {
           "prd": "202307",
           "value": 14153
@@ -1957,6 +1953,10 @@
         {
           "prd": "202605",
           "value": 20368
+        },
+        {
+          "prd": "202606",
+          "value": 21075
         }
       ]
     },
@@ -1964,17 +1964,13 @@
       "id": "soc_divorce",
       "category": "society",
       "title": "이혼 건수",
-      "value": 7122,
+      "value": 7688,
       "unit": "건",
-      "changePct": -3.9,
+      "changePct": 13.5,
       "frequency": "M",
       "source": "통계청 인구동향조사",
-      "period": "2026.05",
+      "period": "2026.06",
       "history": [
-        {
-          "prd": "202306",
-          "value": 7789
-        },
         {
           "prd": "202307",
           "value": 7497
@@ -2114,6 +2110,10 @@
         {
           "prd": "202605",
           "value": 7122
+        },
+        {
+          "prd": "202606",
+          "value": 7688
         }
       ]
     },
