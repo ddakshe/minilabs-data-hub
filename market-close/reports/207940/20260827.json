@@ -72,10 +72,10 @@
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 533,
+      "rows": 532,
       "rows52w": 244
     },
-    "generatedAt": "2026-08-28T11:50:44.690Z"
+    "generatedAt": "2026-08-28T23:21:59.067Z"
   },
   "facts": [
     "코스피보다 1.84%p 낮았어요.",
@@ -106,5 +106,7 @@
     "ownership": null,
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-08-28T11:52:39.618Z"
+  "builtAt": "2026-08-28T23:23:58.995Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260305"
 }

@@ -72,10 +72,10 @@
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 533,
+      "rows": 532,
       "rows52w": 244
     },
-    "generatedAt": "2026-08-28T11:51:00.285Z"
+    "generatedAt": "2026-08-28T23:22:15.014Z"
   },
   "facts": [
     "코스닥보다 4.53%p 높았어요.",
@@ -118,5 +118,7 @@
     "ownership": null,
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-08-28T11:52:39.656Z"
+  "builtAt": "2026-08-28T23:23:59.018Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260305"
 }

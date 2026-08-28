@@ -72,10 +72,10 @@
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 533,
+      "rows": 532,
       "rows52w": 244
     },
-    "generatedAt": "2026-08-28T11:51:29.377Z"
+    "generatedAt": "2026-08-28T23:22:46.067Z"
   },
   "facts": [
     "코스피보다 4.27%p 높았어요.",
@@ -83,12 +83,6 @@
     "시가보다 39,000원 높게 마감했어요."
   ],
   "news": [
-    {
-      "title": "美포탄·미사일 재고 바닥에…K방산 빅 찬스",
-      "source": "매일경제",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5pci05alFLcFlOOEFfQ2V5MGxsUzhmdGRIUHJFSWJlaDRVTHdxS0N3VmQyQ3JobXR0UHNhcVJibU5NeG93SDdoWl9UelQ0aHNtUFRJTWhR?oc=5",
-      "publishedAt": "2026-08-27T08:48:00.000Z"
-    },
     {
       "title": "한화에어로 'K9A2' 현지 생산·탄약 협력 속도",
       "source": "파이낸셜뉴스",
@@ -114,10 +108,16 @@
       "publishedAt": "2026-08-27T00:14:37.000Z"
     },
     {
-      "title": "한화·LIG D&A, '유럽 방산 허브 부상' 독일 진출 확대",
-      "source": "더구루",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9lOGxPbTdiYjNldFplMDJOdjVmcy1HTVFvZEJVc1I3YXdENGN2ZGdIZ2FnMkJpSjlQWm80R1JHZG8zbjNsbEktQV9zdFBnNktXSTBoLUZMX2NfMlB4aU95TUppSQ?oc=5",
-      "publishedAt": "2026-08-27T00:04:06.000Z"
+      "title": "한화, 美 방산 자회사에 4100억 투입… 미국시장 공략 강화",
+      "source": "주간동아",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9BU2pVNEtXcjd1T1ppbG1ENFpGeVpSdHM4MjJiNnNXakNNWnJKek1ucDA2UkhjRWpzRUZLQzhGa0V3TGtJYXJlVWNXa3RKTGtOUHJRWUMxQldCc0tNNTBoYmNVc2lEN3At?oc=5",
+      "publishedAt": "2026-08-26T22:00:02.000Z"
+    },
+    {
+      "title": "[UWC X CIMEX 2026] 한화에어로 \"軍용 무인차량 완전자율 임무수행 목표\"",
+      "source": "드론매거진 뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9KWkczOEw4M3pOcU4xdGlWU1R0NG1JRHU3VmJZZXBZT1Ntc2J4R2p2RWJ6VW9RWW5HWGFHTHhSRlN5S2x6YWFCMjNBZGdMN2cxQlp5dFhhelpBbnhscWgxZkRrbjI?oc=5",
+      "publishedAt": "2026-08-27T08:31:23.000Z"
     }
   ],
   "dart": [],
@@ -136,5 +136,7 @@
     "ownership": null,
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-08-28T11:52:39.747Z"
+  "builtAt": "2026-08-28T23:23:59.090Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260305"
 }

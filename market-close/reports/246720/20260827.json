@@ -69,10 +69,10 @@
     "volumeVs20d": null,
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 533,
+      "rows": 532,
       "rows52w": 244
     },
-    "generatedAt": "2026-08-28T11:51:42.547Z"
+    "generatedAt": "2026-08-28T23:22:59.150Z"
   },
   "facts": [
     "코스닥보다 1.3%p 낮았어요.",
@@ -103,5 +103,7 @@
     "ownership": null,
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-08-28T11:52:39.828Z"
+  "builtAt": "2026-08-28T23:23:59.109Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260305"
 }

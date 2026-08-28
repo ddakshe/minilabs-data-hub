@@ -1,0 +1,101 @@
+{
+  "code": "000270",
+  "name": "기아",
+  "market": "KOSPI",
+  "basDt": "20260611",
+  "price": {
+    "code": "000270",
+    "name": "기아",
+    "market": "KOSPI",
+    "basDt": "20260611",
+    "close": 156000,
+    "vs": -3700,
+    "fltRt": -2.32,
+    "open": 154300,
+    "high": 156000,
+    "low": 150300,
+    "prevClose": 159700,
+    "volume": 1634502,
+    "tradeValue": 251234005350,
+    "week52": {
+      "low": 95900,
+      "high": 206000,
+      "position": 0.5458673932788374,
+      "days": 245,
+      "from": "20250611"
+    },
+    "recent5": [
+      {
+        "basDt": "20260605",
+        "fltRt": -1.95,
+        "open": 162900,
+        "high": 163000,
+        "low": 154600,
+        "close": 161100
+      },
+      {
+        "basDt": "20260608",
+        "fltRt": -6.02,
+        "open": 149900,
+        "high": 154700,
+        "low": 149800,
+        "close": 151400
+      },
+      {
+        "basDt": "20260609",
+        "fltRt": 8.52,
+        "open": 155900,
+        "high": 167300,
+        "low": 154500,
+        "close": 164300
+      },
+      {
+        "basDt": "20260610",
+        "fltRt": -2.8,
+        "open": 162000,
+        "high": 164800,
+        "low": 154500,
+        "close": 159700
+      },
+      {
+        "basDt": "20260611",
+        "fltRt": -2.32,
+        "open": 154300,
+        "high": 156000,
+        "low": 150300,
+        "close": 156000
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 1781074,
+      "ratio": 0.92
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 532,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-28T23:23:59.073Z"
+  },
+  "facts": [
+    "코스피보다 2.75%p 낮았어요.",
+    "거래량은 20일 평균의 0.9배예요.",
+    "시가보다 1,700원 높게 마감했어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 7763.95,
+    "vs": 33.13,
+    "fltRt": 0.43
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null,
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-08-28T23:23:59.073Z"
+}
