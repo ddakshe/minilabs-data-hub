@@ -34,6 +34,9 @@ const disneyPoster = (imageId) =>
 // 웨이브 오늘의 Top20 (웹 공개 apikey, 익명 credential=none)
 const WAVVE_RANKING =
   "https://apis.wavve.com/v1/catalog?broadcastid=CN2&catalogType=ranking&limit=20&offset=0&orderby=default&rankingType=top&uicode=CN2&isBand=true&apikey=E5F3E0D30947AA5440556471321BB6D9&device=pc&partner=pooq&region=kor&targetage=all&pooqzone=none&drm=wm&client_version=7.2.80";
+// 웨이브 오늘의 영화 Top20 (MN503). 밴드 정의는 /v1/home 응답에 fetch URL 로 박혀 있다.
+const WAVVE_MOVIE_RANKING =
+  "https://apis.wavve.com/v1/catalog?broadcastid=MN503&catalogType=ranking&category=movie&genre=svod&limit=20&mtype=svod&offset=0&orderby=viewtime&rankingType=top&uicode=MN503&isBand=true&apikey=E5F3E0D30947AA5440556471321BB6D9&device=pc&partner=pooq&region=kor&targetage=all&pooqzone=none&drm=wm&client_version=7.2.80";
 const UA =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36";
 
@@ -300,12 +303,24 @@ async function parseNetflixPage(url) {
 
 // ── 넷플릭스: 영화/시리즈 Top10 (공개 Tudum 페이지, 영어 원제 + 작동 딥링크) ──
 async function buildNetflix() {
-  console.log("▶ 넷플릭스 공개 Top10 페이지 조회(시리즈)…");
-  // 시리즈만 노출: 세로 포스터·한글 제목이 시리즈에 집중돼 있고 영화는 대부분 영어 텍스트라 제외.
-  const { url, label } = NETFLIX_TOP10.SERIES;
-  const page = await parseNetflixPage(url);
-  const groups = page.items.length > 0 ? [{ label, items: page.items }] : [];
-  const week = page.week;
+  console.log("▶ 넷플릭스 공개 Top10 페이지 조회(시리즈·영화)…");
+  // 예전엔 시리즈만 노출했다 — "영화는 대부분 영어 제목" 이 이유였는데,
+  // og:title 조회를 붙이면서 그 전제가 사라졌다(영화 TOP10 실측 한글 10/10).
+  const series = await parseNetflixPage(NETFLIX_TOP10.SERIES.url);
+  const groups = [];
+  if (series.items.length > 0) groups.push({ label: NETFLIX_TOP10.SERIES.label, items: series.items });
+
+  // 영화는 부가 그룹이라 실패해도 시리즈만으로 진행한다.
+  try {
+    const movies = await parseNetflixPage(NETFLIX_TOP10.MOVIES.url);
+    if (movies.items.length > 0) {
+      groups.push({ label: NETFLIX_TOP10.MOVIES.label, items: movies.items });
+    }
+  } catch (e) {
+    console.error(`  · 영화 TOP10 건너뜀: ${e.message}`);
+  }
+
+  const week = series.week;
   if (groups.length === 0) throw new Error("Top10 항목을 찾지 못함(페이지 구조 변경?)");
 
   return {
@@ -445,9 +460,9 @@ async function buildTving() {
 
 // ── 웨이브: 오늘의 Top20 ──
 // data.context_list[] 순서=순위. program.title(한글)·vertical_logo_y_image(포스터)·context_id(딥링크).
-async function buildWavve() {
-  console.log("▶ 웨이브 오늘의 Top 조회…");
-  const j = await fetchJson(WAVVE_RANKING, {
+// 웨이브 랭킹 밴드 하나 → items[]. 밴드가 둘(통합/영화)이라 공통으로 뺐다.
+async function fetchWavveBand(url) {
+  const j = await fetchJson(url, {
     Accept: "application/json, text/plain, */*",
     Authorization: "Bearer none",
     "wavve-credential": "none",
@@ -455,9 +470,7 @@ async function buildWavve() {
     Referer: "https://www.wavve.com/",
   });
   const list = j?.data?.context_list ?? [];
-  if (list.length === 0) throw new Error("context_list 가 비었습니다");
-
-  const items = list.slice(0, 10).map((it, i) => {
+  return list.slice(0, 10).map((it, i) => {
     const p = it.program ?? it.series ?? it.content ?? {};
     // 줄거리·출연진은 series 에만 있다. 기존 코드는 program 만 읽고 series 를 버렸다 — 추가 요청 0건.
     const se = it.series ?? {};
@@ -473,6 +486,22 @@ async function buildWavve() {
       }),
     };
   });
+}
+
+async function buildWavve() {
+  console.log("▶ 웨이브 오늘의 Top 조회…");
+  const items = await fetchWavveBand(WAVVE_RANKING);
+  if (items.length === 0) throw new Error("context_list 가 비었습니다");
+
+  const groups = [{ label: "오늘의 TOP 10", items }];
+
+  // 영화는 부가 그룹이라 실패해도 통합 랭킹만으로 진행한다.
+  try {
+    const movies = await fetchWavveBand(WAVVE_MOVIE_RANKING);
+    if (movies.length > 0) groups.push({ label: "오늘의 영화 TOP 10", items: movies });
+  } catch (e) {
+    console.error(`  · 영화 TOP 건너뜀: ${e.message}`);
+  }
 
   return {
     service: "wavve",
@@ -482,7 +511,7 @@ async function buildWavve() {
     estimated: false,
     layout: "grid",
     subscribeUrl: "https://www.wavve.com/",
-    groups: [{ label: "오늘의 TOP 10", items }],
+    groups,
   };
 }
 
