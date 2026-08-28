@@ -220,20 +220,35 @@ async function parseNetflixPage(url) {
     if (paren && /[가-힣]/.test(paren)) koByEn.set(cleanNfTitle(b[1]), paren);
   }
 
-  // 각 항목: 순위·videoId·가로썸네일(sdpArt, 10개 전부)·영어제목. sdpArt 는 artwork 안, title 보다 앞.
+  // 각 항목: 순위·videoId·가로썸네일(sdpArt)·큰이미지(storyArt)·영어제목.
+  // 아트 순서는 캐시에서 sdpArt → storyArt → title 이다.
+  // sdpArt 는 390x219 라 목록 썸네일용으로 충분하지만 상세 시트에는 작다.
+  // storyArt 가 1200x675 로 같은 캐시에 들어 있어 함께 뽑아 extra.hero 로 보낸다
+  // (목록은 계속 가벼운 sdpArt 를 쓰고, 큰 이미지는 시트를 열 때만 로드된다).
   const re =
-    /"PulseTop10ItemEntity:top10-[^"]*?-(\d+)":\{[\s\S]{0,400}?"weeklyRank":(\d+)[\s\S]{0,900}?"sdpArt":\{[\s\S]{0,400}?"url":"([^"]+?)"[\s\S]{0,2500}?"title":"((?:[^"\\]|\\.)*?)"/g;
+    /"PulseTop10ItemEntity:top10-[^"]*?-(\d+)":\{[\s\S]{0,400}?"weeklyRank":(\d+)[\s\S]{0,900}?"sdpArt":\{[\s\S]{0,400}?"url":"([^"]+?)"([\s\S]{0,2500}?)"title":"((?:[^"\\]|\\.)*?)"/g;
   const byRank = new Map();
   let m;
   while ((m = re.exec(html))) {
     const rank = Number(m[2]);
     if (byRank.has(rank)) continue;
-    const en = cleanNfTitle(unescapeJsString(m[4]));
+    const en = cleanNfTitle(unescapeJsString(m[5]));
+    const story = m[4].match(/"storyArt":\{[\s\S]{0,400}?"url":"([^"]+?)"/);
+    // 등급·연도·에피소드 수는 같은 엔티티에 이미 들어 있다 — 추가 요청 0건.
+    // 뒤쪽(title 이후)에 있는 필드라 블록 전체에서 다시 찾는다.
+    const tail = html.slice(m.index, m.index + 4000);
+    const grab = (re) => (tail.match(re) || [])[1];
     byRank.set(rank, {
       rank,
       title: koByEn.get(en) || en, // 한글 있으면 한글, 없으면 영어 원제
       poster: m[3].replace(/\\u002F/g, "/"), // 가로 썸네일 (전 항목)
       watchUrl: `https://www.netflix.com/kr/title/${m[1]}`,
+      extra: compactExtra({
+        hero: story ? story[1].replace(/\\u002F/g, "/") : undefined,
+        ageRating: grab(/"maturityRating":"([^"]*)"/),
+        year: Number(grab(/"releaseYear":(\d+)/)) || undefined,
+        episodes: Number(grab(/"totalCount":(\d+)/)) || undefined,
+      }),
     });
   }
   const items = [...byRank.values()].sort((a, b) => a.rank - b.rank);
