@@ -107,6 +107,34 @@ batch: ../stock-tools/scripts/lever_batch.py
 credentials: ~/.config/stock-tools/toss.env
 ```
 
+### ⏸ CI 이전 시도 (2026-08-28) — pairs.json 이 커밋돼 있지 않아 막혔다
+
+셀프호스티드 러너가 생겨서 옮기려 했다. **허용 IP 문제는 실제로 풀렸다** — 러너에서
+토스 토큰이 발급됐고 `환율 USD/KRW 1,377.47` 까지 받았다. 막힌 곳은 그 다음이다.
+
+```
+0짝 · 0종목 수집
+ValueError: max() arg is an empty sequence
+```
+
+`stock-lever-mini/data/pairs.json` 은 추적되는 파일인데, **실제로 쓰는 56짝 버전이
+커밋되지 않은 채 이 기계의 작업 트리에만 있다.** git 에 있는 것은 `origin/master` 도
+`feat/egg-mini` 도 11짝짜리 옛 버전이다. 그래서 어느 ref 를 꺼내도 결과가 같다.
+
+🔴 **이건 CI 와 별개의 위험이다.** 레버리지 수집이 커밋되지 않은 파일 하나에 의존한다.
+이 맥이 죽으면 그 설정이 사라진다.
+
+**재개 절차**
+
+1. `stock-tools` 에서 `stock-lever-mini/data/pairs.json` 을 `master` 에 커밋한다
+2. `.github/workflows/fetch-lever.yml` 의 `schedule`·`cron` 두 줄 주석을 푼다
+3. `gh workflow run fetch-lever.yml` 로 한 번 확인한다
+4. 되면 이 절과 아래 yaml 블록을 지운다 — 그래야 러너와 대시보드에서 빠진다
+
+워크플로는 이미 있고 스케줄만 꺼둔 상태다. 그 안에 이전 과정에서 얻은 것들이
+주석으로 남아 있다(러너가 osxkeychain 에 닿지 못하는 것, 시스템 파이썬을 쓰는 이유,
+번들 출력을 버리는 이유).
+
 - **왜 로컬인가**: 토스증권 Open API 는 **허용 IP 사전 등록**이 필수다.
   미등록 IP 는 `/oauth2/token` 단계에서 403 `IP address not allowed` — 토큰조차 못 받는다.
   Actions·Vercel 등은 아웃바운드 IP 가 유동이라 등록 자체가 불가능하다.
