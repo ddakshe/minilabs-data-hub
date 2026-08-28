@@ -59,15 +59,28 @@ async function fetchPage(pageNo) {
   if (!res.ok) throw new Error(`HTTP ${res.status}`)
 
   const json = await res.json()
-  const header = json?.response?.header
-  const body = json?.response?.body
+
+  // 인증 실패·트래픽 초과는 아래 정상 스키마가 아니라 이 모양으로 온다.
+  // 먼저 걸러내지 않으면 '알 수 없는 응답' 으로 뭉개져 원인을 못 찾는다.
+  const err = json?.OpenAPI_ServiceResponse?.cmmMsgHeader
+  if (err) throw new Error(`API 거부: ${err.errMsg} (${err.returnAuthMsg ?? ''})`)
+
+  // ⚠ 이 엔드포인트는 `response` 래퍼가 없다. 최상위에 header·body 가 바로 온다.
+  // 표준데이터(tn_pubr_public_*) 계열이 다른 data.go.kr API 와 다른 지점이며,
+  // 예전에 json.response.header 로 읽어 header 가 undefined 가 되는 바람에
+  // 'API error: undefined undefined' 만 남기고 넉 달간 한 번도 성공하지 못했다.
+  const header = json?.header
+  const body = json?.body
 
   if (header?.resultCode !== '00') {
-    throw new Error(`API error: ${header?.resultCode} ${header?.resultMsg}`)
+    throw new Error(`API error: ${header?.resultCode ?? '응답 형식 불명'} ${header?.resultMsg ?? JSON.stringify(json).slice(0, 200)}`)
   }
 
+  // items 도 배열이 아니라 { item: [...] } 다. 1건일 때 객체로 오는 API 가 있어 배열로 맞춘다.
+  const item = body?.items?.item ?? []
+
   return {
-    items: body?.items ?? [],
+    items: Array.isArray(item) ? item : [item],
     totalCount: Number(body?.totalCount ?? 0),
   }
 }
