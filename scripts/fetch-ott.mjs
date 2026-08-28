@@ -103,6 +103,26 @@ async function fetchNetflixKoTitle(videoId) {
   return null;
 }
 
+// 직전 산출물의 videoId → 한글 제목. 파일이 없거나 깨져 있으면 빈 맵.
+function previousNetflixKoTitles() {
+  const map = new Map();
+  try {
+    const path = resolve(ROOT, "ott", "netflix.json");
+    if (!existsSync(path)) return map;
+    const prev = JSON.parse(readFileSync(path, "utf-8"));
+    for (const g of prev.groups ?? []) {
+      for (const it of g.items ?? []) {
+        if (it.watchUrl && /[가-힣]/.test(it.title)) {
+          map.set(it.watchUrl.split("/").pop(), it.title);
+        }
+      }
+    }
+  } catch {
+    /* 없으면 없는 대로 */
+  }
+  return map;
+}
+
 async function parseNetflixPage(url) {
   const html = await fetchText(url);
   const week = (html.match(/"weekEndDate":"(\d{4}-\d{2}-\d{2})"/) || [])[1] || todayKST();
@@ -135,7 +155,15 @@ async function parseNetflixPage(url) {
   }
   const items = [...byRank.values()].sort((a, b) => a.rank - b.rank);
 
-  // boxshot 에서 못 건진 한글 제목을 작품 페이지에서 보충. 순차 + 간격을 둔다
+  // 지난 실행에서 이미 확보한 한글 제목은 재사용한다. 조회가 산발적으로 실패해서
+  // 매 실행마다 한글↔영문이 뒤집히면 의미 없는 커밋이 쌓이기 때문이다 — 한 번 한글이면 계속 한글.
+  const prevKo = previousNetflixKoTitles();
+  for (const it of items) {
+    const ko = prevKo.get(it.watchUrl.split("/").pop());
+    if (ko && !/[가-힣]/.test(it.title)) it.title = ko;
+  }
+
+  // 남은 영문 제목을 작품 페이지에서 보충. 순차 + 간격을 둔다
   // (동시에 때리면 넷플릭스가 연결을 끊는다). 실패해도 영문 제목이 남으므로 치명적이지 않다.
   // 넷플릭스가 산발적으로 연결을 끊어 1 회차에 3~4 개는 빈다 — 남은 것만 재시도한다.
   for (let round = 0; round < 3; round++) {
