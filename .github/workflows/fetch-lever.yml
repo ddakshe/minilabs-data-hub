@@ -1,0 +1,116 @@
+name: Fetch Lever
+
+on:
+  schedule:
+    # 평일 08:10 KST (= 23:10 UTC 전날, 일~목).
+    # 미국 정규장이 KST 05:00(서머타임 06:00) 마감이라 그 시각이면 한국·미국 양쪽
+    # 전일 종가가 모두 확정된다. 로컬로 돌리던 때의 주기를 그대로 옮겼다.
+    - cron: '10 23 * * 0-4'
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: '실행 이유 (로그에만 기록, 선택)'
+        required: false
+        default: 'manual refresh'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-lever
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    # 🚨 토스증권 Open API 는 **허용 IP 사전 등록**이 필수다. 미등록 IP 는 /oauth2/token
+    #    단계에서 403 `IP address not allowed` — 토큰조차 못 받는다. GitHub 호스티드
+    #    러너는 아웃바운드 IP 가 유동이라 등록 자체가 불가능하다.
+    #    이 맥이 허용 IP 로 등록돼 있어서 셀프호스티드로만 돌 수 있다.
+    #    (2026-08-28 이전까지 LOCAL_JOBS.md 의 로컬 작업이었던 이유가 이것이다)
+    runs-on: [self-hosted, macOS, ARM64]
+    timeout-minutes: 20
+    env:
+      # 배치는 stock-tools(비공개)에 있다. **작업 클론(~/ClaudeProjects/stock-tools)을
+      # 쓰지 않는다** — 그 클론은 사람이 브랜치를 갈아타고 파일을 고치는 곳이라, CI 가
+      # 그걸 읽으면 어느 브랜치가 체크아웃돼 있느냐에 따라 결과가 조용히 달라진다.
+      # (실제로 지금 feat/egg-mini 가 나가 있다.)
+      # 대신 master 를 러너 작업공간으로 새로 클론한다. 러너가 사람과 같은 계정으로 돌고
+      # git 자격증명이 osxkeychain 에 있어 PAT 없이 비공개 저장소를 받을 수 있다.
+      STOCK_TOOLS: ${{ github.workspace }}/.stock-tools
+      # 토스 자격증명은 ~/.config/stock-tools/toss.env (chmod 600, 저장소 밖) 에 있고
+      # 러너가 같은 사용자로 돌기 때문에 그대로 읽힌다. 시크릿으로 올리지 않는다.
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Show trigger context
+        run: |
+          echo "Event  : ${{ github.event_name }}"
+          echo "Reason : ${{ github.event.inputs.reason || '(scheduled)' }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      - name: Checkout stock-tools (master)
+        run: |
+          rm -rf "$STOCK_TOOLS"
+          git clone --quiet --depth 1 --branch master \
+            https://github.com/ddakshe/stock-tools.git "$STOCK_TOOLS"
+          git -C "$STOCK_TOOLS" log -1 --format='stock-tools %h %s'
+
+      - name: Preflight
+        run: |
+          test -r "$HOME/.config/stock-tools/toss.env" || { echo "::error::토스 자격증명을 읽을 수 없다"; exit 1; }
+          # 배치와 toss_client 는 표준 라이브러리만 쓴다. 러너는 launchd 기본 PATH 라
+          # anaconda·pyenv 가 없으므로 시스템 파이썬을 명시적으로 쓴다.
+          /usr/bin/python3 -V
+
+      - name: Fetch lever data
+        env:
+          # 기본값은 '형제 디렉터리의 허브' 라 이 기계의 클론을 가리킨다. 러너 작업공간에
+          # 체크아웃한 허브에 써야 아래 commit 단계가 그것을 집는다.
+          LEVER_HUB_PATH: ${{ github.workspace }}/lever/lever.json
+          # 번들(주봉)은 stock-lever-mini 의 빌드 산출물이고 저장소에 커밋된 적이 없다.
+          # CI 가 남의 작업 클론에 쓰면 그쪽 워킹 트리를 매일 더럽히므로 버리는 경로로 보낸다.
+          # 앱을 빌드할 때 사람이 로컬에서 배치를 한 번 돌려 만든다.
+          LEVER_BUNDLE_PATH: ${{ runner.temp }}/lever-bundle.json
+        run: |
+          cd "$STOCK_TOOLS"
+          /usr/bin/python3 scripts/lever_batch.py
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git add lever/
+          if git diff --cached --quiet -- lever/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes — skipping commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --cached --stat lever/
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d %H:%M")
+          git commit -m "chore(lever): 레버리지 데이터 갱신 ($DATE_KST KST)"
+          # 다른 워크플로가 같은 시간대에 밀어넣을 수 있다. 한 번은 되받아 재시도한다.
+          git push || (git pull --rebase origin main && git push)
+
+      - name: Purge jsDelivr cache
+        if: steps.diff.outputs.changed == 'true'
+        run: curl -s -o /dev/null "https://purge.jsdelivr.net/gh/ddakshe/minilabs-data-hub@main/lever/lever.json" || true
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Lever Fetch Summary"
+            echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
+            echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+          } >> "$GITHUB_STEP_SUMMARY"
