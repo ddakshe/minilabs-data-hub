@@ -37,17 +37,46 @@
   (resolve-sources.mjs). 연식 규칙을 코드가 추측하지 않으므로 내년에도 그대로 돈다.
 */
 
-/** 기아. 연식이 파일명에 안 들어간다(2026-08 기준). */
+/**
+ * 기아. 연식이 파일명에 안 들어간다(2026-08 기준).
+ *
+ * 기아는 정규 파일명(price_sportage.pdf)을 **계속 갱신**하고 구세대를 별도 이름으로
+ * 남긴다(price_sportageql.pdf = 구형 스포티지, 2024-12). 그래서 정규 이름만 봐도
+ * 현행이다 — 현대와 정반대다(현대는 신형에 새 이름을 만들고 옛 이름을 방치한다).
+ *
+ * 그래도 풀체인지 이름 후보를 함께 둔다. 현대에서 정확히 이 함정에 빠져 구형
+ * 아반떼 가격을 서빙한 적이 있다. 옛 파일이 걸려도 최신이 이기므로 해롭지 않다.
+ */
 const kia = (...slugs) => ({
   base: 'https://www.kia.com/content/dam/kwp/kr/ko/vehicles/pdf/price',
-  name: (s, y) => (y ? null : `price_${s}.pdf`),
+  names: (s, y) =>
+    y ? [] : [`price_${s}.pdf`, `price_the_new_${s}.pdf`, `price_the_all_new_${s}.pdf`],
   slugs,
 });
 
-/** 현대. `<슬러그>-<연식>-price.pdf` 와 `<슬러그>-price.pdf` 를 모두 후보로 본다. */
+/**
+ * 현대. 파일명이 세 축으로 흩어져 있다.
+ *
+ *   접두어   (없음) / the-new- / the-all-new-
+ *   연식     (없음) / -2027 / -2026 ...
+ *   구분자   -price.pdf / **_price.pdf**
+ *
+ * 실제로 쓰이는 조합들:
+ *   avante-2026-price.pdf          2026 아반떼 (연식변경)
+ *   the-all-new-avante_price.pdf   디 올 뉴 아반떼 (풀체인지) ← 언더스코어
+ *   the-new-staria_price.pdf       더 뉴 스타리아
+ *   venue-2027-price.pdf
+ *
+ * 하이픈만 보다가 풀체인지 신형 아반떼를 통째로 놓치고 구형 가격을 서빙한 적이 있다.
+ * 축을 하나라도 빼면 그런 일이 또 생긴다. 전부 조회해 최신을 고른다.
+ */
 const hyundai = (...slugs) => ({
   base: 'https://www.hyundai.com/contents/repn-car/catalog',
-  name: (s, y) => (y ? `${s}-${y}-price.pdf` : `${s}-price.pdf`),
+  names: (s, y) => {
+    const stems = [s, `the-new-${s}`, `the-all-new-${s}`];
+    const tail = y ? `-${y}` : '';
+    return stems.flatMap((stem) => [`${stem}${tail}-price.pdf`, `${stem}${tail}_price.pdf`]);
+  },
   slugs,
 });
 

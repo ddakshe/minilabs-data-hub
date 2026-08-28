@@ -49,8 +49,7 @@ async function resolve(source) {
   const urls = [];
   for (const slug of source.slugs) {
     for (const y of [null, YEAR + 1, YEAR, YEAR - 1, YEAR - 2, YEAR - 3]) {
-      const name = source.name(slug, y);
-      if (name) urls.push(`${source.base}/${name}`);
+      for (const name of source.names(slug, y)) urls.push(`${source.base}/${name}`);
     }
   }
   const hits = (await Promise.all([...new Set(urls)].map(head))).filter(Boolean);
