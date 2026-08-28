@@ -224,13 +224,36 @@ function parts(text) {
     cur += ch;
   }
   if (cur.trim()) out.push(cur.trim());
-  return out.filter((p) => p.length > 1);
+  /*
+    중복을 지운다. 패키지 품목 표가 파워트레인마다 반복되는 차종이 있어서, 그대로
+    이어 붙이면 하이패스의 구성품이 ["하이패스","하이패스","하이패스","하이패스"] 가 된다.
+    개수를 근거로 쓰는 아래 판정이 통째로 어긋난다.
+  */
+  return [...new Set(out.filter((p) => p.length > 1))];
 }
 
 const norm = (s) => s.replace(/\s+/g, '');
 
+/** 이 트림과 그보다 싼 모든 트림의 기본 품목을 합친 것. */
+const byPrice = trims.toSorted((a, b) => a.price - b.price);
+function cumulativeBase(name) {
+  const upto = byPrice.findIndex((t) => t.name === name);
+  return byPrice
+    .slice(0, upto + 1)
+    .map((t) => baseText[t.name] ?? '')
+    .join('\n');
+}
+
+/*
+  ⚠️ 구성품을 **격자보다 먼저** 읽어야 한다. 아래 기본/불가 판정이 구성품 집합에
+  의존하기 때문이다. 한때 이걸 격자 뒤로 옮겼다가 판정 시점에 includes 가 늘 비어
+  있어서 **현대 전 차종의 "기본 포함" 이 0개**가 됐다. 전부 '불가' 로 떨어졌고,
+  상위 트림에 기본으로 들어오는 옵션을 "이 트림에선 못 넣음" 이라고 표시했다.
+*/
+const contents = readPackages(lines, new Set(Object.keys(paid)));
+
 const options = Object.keys(paid).map((name, i) => {
-  const includes = [];
+  const includes = parts(contents[name] ?? '');
   const byTrim = {};
   for (const t of trims) {
     if (paid[name][t.name] !== undefined) {
@@ -238,18 +261,29 @@ const options = Object.keys(paid).map((name, i) => {
       byTrim[t.name] = p === 0 ? { kind: 'included' } : { kind: 'paid', price: p };
       continue;
     }
-    // 선택 목록에 없다. 구성품이 이 트림 기본 품목에 들어 있으면 기본 포함이다.
-    const base = norm(baseText[t.name] ?? '');
+    /*
+      선택 목록에 없다. 구성품이 이 트림 기본 품목에 들어 있으면 기본 포함이다.
+
+      ⚠️ **기본 품목은 누적이다.** 원본이 "▶ 모던 기본 품목 및" 한 줄로 아래 트림을
+      통째로 상속하고, 그 트림에서 **새로 추가된 것만** 적는다. 자기 블록만 보면
+      Modern 에서 기본이 된 옵션이 Inspiration 에서 '불가' 로 떨어진다 —
+      상위 트림일수록 옵션이 줄어드는 거꾸로 된 결과가 나온다.
+      그래서 자기보다 싼 트림의 기본 품목까지 합쳐서 본다.
+    */
+    const base = norm(cumulativeBase(t.name));
     const hit = includes.filter((p) => base.includes(norm(p))).length;
+    /*
+      구성품이 하나뿐인 패키지는 근거로 쓰지 않는다. "선루프" 처럼 이름이 곧
+      구성품인 것들은 그 단어가 다른 옵션 설명에 스쳐도 걸려서, Modern 에서만
+      '기본' 이 되고 상위 Inspiration 에서 다시 '유료' 가 되는 거꾸로 된 결과가 나왔다.
+      두 개 이상이 겹칠 때만 "이 패키지가 통째로 기본이 됐다" 고 본다.
+    */
     byTrim[t.name] =
-      includes.length > 0 && hit / includes.length >= 0.6 ? { kind: 'included' } : { kind: 'locked' };
+      includes.length >= 2 && hit / includes.length >= 0.6
+        ? { kind: 'included' }
+        : { kind: 'locked' };
   }
   return { id: `h-${i}`, name, includes, byTrim };
 });
-
-// 아는 이름일 때만 항목을 연다 — 옵션 목록은 격자를 세운 뒤에야 확정된다.
-const contents = readPackages(lines, new Set(Object.keys(paid)));
-// 격자를 세울 때 비어 있던 구성품을 여기서 채운다.
-for (const o of options) if (o.includes.length === 0 && contents[o.name]) o.includes = parts(contents[o.name]);
 
 console.log(JSON.stringify({ trims, options, contents }, null, 2));
