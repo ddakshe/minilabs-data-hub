@@ -7,8 +7,9 @@ name: Repair auto-option
 # 가드레일을 둔 의미가 없다 — 틀린 값을 막으려고 만든 장치를 우회하는 셈이다.
 # 사람이 PR 에서 숫자를 보고 합친다.
 #
-# ⚠️ 동작하려면 저장소 시크릿에 ANTHROPIC_API_KEY 가 있어야 한다. 없으면
-# 이 워크플로는 조용히 건너뛴다 — 수집 워크플로가 연 이슈는 그대로 남는다.
+# ⚠️ 동작하려면 저장소 시크릿에 GEMINI_API_KEY 가 있어야 한다.
+# Google AI Studio 에서 발급하며 무료 할당량이 넉넉하다.
+# 없으면 이 워크플로는 조용히 건너뛴다 — 수집 워크플로가 연 이슈는 그대로 남는다.
 
 on:
   workflow_run:
@@ -41,6 +42,7 @@ jobs:
         with:
           node-version: '20'
 
+      # 에이전트가 원본 PDF 를 직접 뜯어봐야 원인을 안다.
       - name: Install poppler
         run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
 
@@ -48,24 +50,44 @@ jobs:
       - name: Check credentials
         id: cred
         run: |
-          if [ -z "${{ secrets.ANTHROPIC_API_KEY }}" ]; then
-            echo "ANTHROPIC_API_KEY 가 없어 자동 복구를 건너뛴다." >> "$GITHUB_STEP_SUMMARY"
+          if [ -z "${{ secrets.GEMINI_API_KEY }}" ]; then
+            echo "GEMINI_API_KEY 가 없어 자동 복구를 건너뛴다." >> "$GITHUB_STEP_SUMMARY"
             echo "ok=false" >> "$GITHUB_OUTPUT"
           else
             echo "ok=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Repair with Claude
+      # 에이전트가 무엇을 보고 시작할지 미리 만들어 준다. 매번 스스로 재현하게
+      # 하면 토큰만 쓰고, 실패 모드도 매번 달라진다.
+      - name: Reproduce failure
+        id: repro
         if: steps.cred.outputs.ok == 'true'
-        uses: anthropics/claude-code-action@v1
+        continue-on-error: true
+        run: |
+          node scripts/auto-option/bake.mjs /tmp/models.new.json 2>/tmp/bake.log || true
+          node scripts/auto-option/guard.mjs auto-option/models.json /tmp/models.new.json > /tmp/guard.log 2>&1 || true
+          {
+            echo '### bake'
+            tail -40 /tmp/bake.log
+            echo '### guard'
+            cat /tmp/guard.log
+          } > /tmp/repro.md
+          cat /tmp/repro.md
+
+      - name: Repair with Gemini
+        if: steps.cred.outputs.ok == 'true'
+        uses: google-github-actions/run-gemini-cli@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          claude_args: '--allowedTools "Bash,Read,Edit,Write,Grep,Glob"'
+          gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           prompt: |
             auto-option 가격표 수집이 가드레일에 걸려 커밋되지 않았다.
             원인을 찾아 고치고 **PR 을 열어라**. main 에 직접 푸시하지 마라.
 
-            ## 재현
+            재현 결과는 `/tmp/repro.md` 에 있다. 먼저 그것부터 읽어라.
+
+            ## 다시 돌리는 법
             ```
             node scripts/auto-option/bake.mjs /tmp/models.new.json
             node scripts/auto-option/guard.mjs auto-option/models.json /tmp/models.new.json
@@ -83,7 +105,8 @@ jobs:
               위치**로 칼럼을 잡는다 (옵션명이 길면 pdftotext 가 세로로 쪼개기 때문)
             - `scripts/auto-option/models.config.mjs`  차종별 설정과 예외
 
-            원본은 `pdftotext -layout <pdf>` 로 뜯어 보면 된다. PDF 주소는 config 에 있다.
+            원본은 `pdftotext -layout <pdf>` 로 뜯어 보면 된다. 받아둔 PDF 는
+            `.pdf-cache/` 에 있고, 주소는 config 에 있다.
 
             ## 반드시 지킬 것
             1. **차종 하나만의 문제면 파서를 고치지 마라.** `models.config.mjs` 의
@@ -97,3 +120,5 @@ jobs:
                통과 못 하면 PR 을 열되 **무엇이 남았는지 본문에 적어라.**
             4. PR 본문에는 원본 서식이 어떻게 바뀌었는지, 무엇을 고쳤는지,
                숫자가 어떻게 달라지는지를 적어라. 사람이 그걸 보고 합친다.
+            5. `auto-option/models.json` 은 네가 직접 고치지 마라. 파서·설정을 고치면
+               bake 가 다시 만든다.

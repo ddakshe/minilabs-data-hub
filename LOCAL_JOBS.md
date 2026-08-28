@@ -10,8 +10,9 @@
 | # | 작업 | 주기 | 실행 | 로컬인 이유 |
 |---|---|---|---|---|
 | 1 | 인증중고차(BMW·포르쉐) | **⏸ 중단** | `./refresh-cpo.sh` | GUI 브라우저 · 봇 차단 |
-| 2 | 배당 이름표(한글명·시총) | **분기 1회** | `stock-tools/scripts/dividend_toss.py` | 토스 허용 IP 등록 |
-| 3 | 국내 배당(DART) | **4·5월 수요일** | `./refresh-dividend-kr.sh` | 순차 40분 · DART 차단 이력 |
+| 2 | 레버리지 데이터 | 평일 08:10 | `./refresh-lever.sh` | 토스 허용 IP 등록 |
+| 3 | 배당 이름표(한글명·시총) | **분기 1회** | `stock-tools/scripts/dividend_toss.py` | 토스 허용 IP 등록 |
+| 4 | 국내 배당(DART) | **4·5월 수요일** | `./refresh-dividend-kr.sh` | 순차 40분 · DART 차단 이력 |
 
 ---
 
@@ -92,47 +93,35 @@ consumers: [cpo-mini]
 > 셀프호스티드 러너로 전부 옮길 수 있다.** 남는 것은 IP 가 아닌 이유들뿐이다 —
 > GUI 브라우저가 필요한 cpo, 출력이 두 저장소에 걸친 lever 같은 것.
 
-## ~~레버리지 데이터~~ → CI 로 옮겼다 (2026-08-28)
+## 2. 레버리지 데이터
 
-`fetch-lever.yml` · 평일 08:10 KST · 셀프호스티드 러너.
+```yaml
+id: lever
+repo: minilabs-data-hub
+command: ./refresh-lever.sh
+schedule: "10 8 * * 1-5"
+reason: ip-allowlist
+outputs: lever/lever.json
+consumers: [stock-lever-mini]
+batch: ../stock-tools/scripts/lever_batch.py
+credentials: ~/.config/stock-tools/toss.env
+```
 
-로컬이었던 이유는 **토스증권 Open API 의 허용 IP 사전 등록**이었다. 그 제약은 그대로다 —
-미등록 IP 는 `/oauth2/token` 에서 403 이라 토큰조차 못 받는다. 달라진 것은 워크플로가
-도는 장소다. 러너가 허용 IP 로 등록된 이 맥에서 돌므로 제약을 만족한다.
+- **왜 로컬인가**: 토스증권 Open API 는 **허용 IP 사전 등록**이 필수다.
+  미등록 IP 는 `/oauth2/token` 단계에서 403 `IP address not allowed` — 토큰조차 못 받는다.
+  Actions·Vercel 등은 아웃바운드 IP 가 유동이라 등록 자체가 불가능하다.
+- **08:10 KST 인 이유**: 미국 정규장이 KST 05:00(서머타임 06:00) 마감이라
+  그 시각이면 한국·미국 양쪽 전일 종가가 모두 확정된다.
+- **필요한 것**
+  - 키: `~/.config/stock-tools/toss.env` (`chmod 600`, 저장소 밖)
+  - 이 기계의 **공인 IP** 가 WTS > 설정 > Open API > 허용 IP 에 등록돼 있을 것
+  - VPN·iCloud 비공개 릴레이가 켜져 있으면 출구 IP 가 바뀌어 403 이 난다
+- **실패 신호**: 로그에 `403 IP address not allowed` 또는 `환율 조회 실패`.
+  후자는 대개 토큰 만료인데 클라이언트가 자동 재발급하므로, 계속 나면 키를 의심할 것.
+- **안 돌리면**: 앱의 기준일이 멈춘다. 화면이 깨지지는 않지만
+  `BRAND.md` 원칙 3 대로 "갱신 준비 중" 으로 물러서야 하는 상태가 된다.
 
-**PAT 이 필요 없는 이유**: 이 기계의 stock-tools 클론이 **이미 받아둔 `origin/master` 를
-`git archive` 로 꺼내** 쓴다. 스냅샷이라 네트워크도 자격증명도 필요 없다.
-
-> `git clone` 으로 짰다가 실패했다 — 러너가 LaunchAgent 라 osxkeychain 에 닿지 못해
-> `could not read Username for 'https://github.com': Device not configured` 로 죽는다.
-> 비공개 저장소를 러너에서 네트워크로 받으려면 결국 PAT 이 필요하다.
-
-⚠ **작업 클론(`~/ClaudeProjects/stock-tools`)을 가리키지 않는다.** 처음엔 그렇게 짰다가
-바꿨다 — 그 클론은 사람이 브랜치를 갈아타고 파일을 고치는 곳이라, CI 가 그것을 읽으면
-**어느 브랜치가 체크아웃돼 있느냐에 따라 결과가 조용히 달라진다.** 실제로 옮기던 시점에
-`feat/egg-mini` 가 나가 있었다. 워크플로는 `master` 를 매번 새로 클론한다.
-
-**출력 두 개 중 하나만 CI 가 낸다.**
-
-| 출력 | 누가 | 왜 |
-|---|---|---|
-| `lever/lever.json` (일봉) | CI | 앱이 원격으로 읽는 실데이터 |
-| `stock-lever-mini/src/data/lever.json` (주봉) | 사람 | 빌드 산출물이고 **저장소에 커밋된 적이 없다** |
-
-번들까지 CI 가 내려면 남의 작업 클론에 매일 쓰거나 비공개 저장소로 push 해야 한다.
-전자는 워킹 트리를 더럽히고 후자는 PAT 이 필요하다. 커밋된 적 없는 파일을 위해 둘 다
-치를 값이 아니라, CI 에서는 버리는 경로(`LEVER_BUNDLE_PATH`)로 보낸다. 앱을 빌드할 때
-로컬에서 배치를 한 번 돌리면 된다.
-
-`refresh-lever.sh` 는 지웠다 — pull → 배치 → commit → push 를 워크플로가 대신한다.
-손으로 돌릴 일이 있으면 `gh workflow run fetch-lever.yml` 이 같은 일을 하면서 실패가
-기록으로 남는다. 배치만 돌려보려면 `stock-tools` 에서 직접 부르면 된다.
-
-- **실패 신호**: 로그에 `403 IP address not allowed`. 이 기계의 공인 IP 가 바뀌면
-  (공유기 재부팅·ISP 갱신·VPN·iCloud 비공개 릴레이) 그렇게 된다. WTS > 설정 >
-  Open API > 허용 IP 를 다시 맞춰야 한다. **셀프호스티드로 옮겨도 이 위험은 그대로다.**
-- **새로 생긴 실패 모드**: 맥이 꺼져 있으면 08:10 스케줄이 큐에 걸린 채 안 돈다.
-  깨어나면 실행되지만 시각은 보장되지 않는다.
+---
 
 ## 실행 방법
 
@@ -164,7 +153,7 @@ cron·launchd 는 **조용히 죽고** 실패를 알려주지 않는다. 특히 
 
 ---
 
-## 2. 배당 이름표 — 한글명 · 시가총액
+## 3. 배당 이름표 — 한글명 · 시가총액
 
 ```yaml
 id: dividend-labels
@@ -201,7 +190,7 @@ consumers: [stock-dividend-mini]
 
 ---
 
-## 3. 국내 배당 — DART 사업보고서
+## 4. 국내 배당 — DART 사업보고서
 
 ```yaml
 id: dividend-kr
