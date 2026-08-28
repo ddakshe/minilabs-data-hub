@@ -37,7 +37,19 @@ realestate/                ← 부동산 미니앱 2종용 (국토부 실거래�
 stock-ipo/                 ← stock-ipo-mini(공모주 미리보기) 앱용 (DART, 매일 diff 감지)
   ipo.json                 # 국내 공모주 청약 일정 13건 (공모가·일정·인수단·자금사용처·환매청구권)
   doc_cache.json           # 증권신고서 원문 추출 캐시(receiptNo 기준) — 5MB 원문 재다운로드 방지
+auto-option/               ← auto-option-mini(옵션 계산기) 앱용 (기아·현대 공식 가격표 PDF, 수동 갱신)
+  models.json              # 28종 트림 87 · 옵션 313. 옵션마다 트림별 상태(불가/기본/유료)
+  meta.json                # 수집 시각·건수 + **빠진 차종과 그 이유**
 ```
+
+`auto-option/models.json` 은 PDF 파싱이라 Actions 로 돌리지 않는다 — `pdftotext` 와 원본
+PDF 75MB 가 필요하고, 가격표는 자주 바뀌지 않는다. 앱 저장소에서 `npm run bake` 로 굽고
+결과 JSON 만 여기로 옮긴다.
+
+`meta.json` 의 `skipped` 는 지우지 말 것. **왜 그 차가 없는지**를 남기지 않으면
+다음 사람이 같은 조사를 처음부터 다시 한다. 카니발은 트림 × 승차인원 조합의 기본가가
+PDF 본문에 없어서, 봉고3 는 축거·적재함별 표가 얽혀서 뺐다.
+가격 계산기에서 틀린 금액을 넣는 건 그 차종을 빼는 것보다 나쁘다.
 
 `stock-ipo/ipo.json` 은 청약이 **끝난 건도 남긴다** — "내가 놓쳤나" 확인이 앱의 절반이다.
 `offerPrice: null` 은 누락이 아니라 **공모가 미확정**(기재정정 진행 중) 상태다.
