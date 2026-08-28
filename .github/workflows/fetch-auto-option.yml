@@ -2,8 +2,8 @@ name: Fetch auto-option
 
 on:
   schedule:
-    # 매주 월 09:00 KST — 가격표는 월 단위로 바뀐다. 매일 돌릴 이유가 없다.
-    - cron: '0 0 * * 1'
+    # 매월 1일 09:00 KST — 제조사가 가격표를 월초에 갱신한다. 주 단위로 돌릴 이유가 없다.
+    - cron: '0 0 1 * *'
   workflow_dispatch:
 
 permissions:
@@ -126,7 +126,7 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
-          git commit -m "chore(auto-option): weekly refresh ($DATE_KST)"
+          git commit -m "chore(auto-option): monthly refresh ($DATE_KST)"
           # 다른 워크플로가 같은 시간대에 밀어넣을 수 있다. 한 번은 되받아 재시도한다.
           git push || (git pull --rebase origin main && git push)
 

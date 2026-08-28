@@ -1,0 +1,99 @@
+name: Repair auto-option
+
+# 가격표 수집이 가드레일에 걸리면(= 파서가 원본 서식 변화를 못 따라갔을 가능성)
+# 에이전트가 원인을 찾아 고치고 **PR 을 연다**.
+#
+# ⚠️ main 에 직접 밀지 않는다. 에이전트가 고친 가격 데이터를 검토 없이 합치면
+# 가드레일을 둔 의미가 없다 — 틀린 값을 막으려고 만든 장치를 우회하는 셈이다.
+# 사람이 PR 에서 숫자를 보고 합친다.
+#
+# ⚠️ 동작하려면 저장소 시크릿에 ANTHROPIC_API_KEY 가 있어야 한다. 없으면
+# 이 워크플로는 조용히 건너뛴다 — 수집 워크플로가 연 이슈는 그대로 남는다.
+
+on:
+  workflow_run:
+    workflows: ['Fetch auto-option']
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: repair-auto-option
+  cancel-in-progress: false
+
+jobs:
+  repair:
+    # 수집이 성공했으면 고칠 게 없다.
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      github.event.workflow_run.conclusion == 'failure'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install poppler
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+
+      # 자격증명이 없으면 여기서 멈춘다. 이슈는 이미 열려 있으므로 사람이 본다.
+      - name: Check credentials
+        id: cred
+        run: |
+          if [ -z "${{ secrets.ANTHROPIC_API_KEY }}" ]; then
+            echo "ANTHROPIC_API_KEY 가 없어 자동 복구를 건너뛴다." >> "$GITHUB_STEP_SUMMARY"
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Repair with Claude
+        if: steps.cred.outputs.ok == 'true'
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_args: '--allowedTools "Bash,Read,Edit,Write,Grep,Glob"'
+          prompt: |
+            auto-option 가격표 수집이 가드레일에 걸려 커밋되지 않았다.
+            원인을 찾아 고치고 **PR 을 열어라**. main 에 직접 푸시하지 마라.
+
+            ## 재현
+            ```
+            node scripts/auto-option/bake.mjs /tmp/models.new.json
+            node scripts/auto-option/guard.mjs auto-option/models.json /tmp/models.new.json
+            ```
+            guard 는 종료코드 2 로 "이 변화는 수상하다" 를 알린다. 출력에 어느 차종의
+            무엇이 어떻게 변했는지 적혀 있다.
+
+            ## 구조
+            - `scripts/auto-option/parse-kia.mjs`      기아 내연. 원본이 격자를 발행한다
+            - `scripts/auto-option/parse-kia-ev.mjs`   기아 전기. 격자는 같지만 트림명이
+              왼쪽 칼럼에 세로로 쪼개지고 가격이 두 개다(세제혜택 전/후 — **전**을 쓴다)
+            - `scripts/auto-option/parse-hyundai.mjs`  현대. 격자가 없어 트림별 목록에서
+              역으로 세운다
+            - `scripts/auto-option/pdf-table.mjs`      공용. 헤더가 아니라 **값의 정렬
+              위치**로 칼럼을 잡는다 (옵션명이 길면 pdftotext 가 세로로 쪼개기 때문)
+            - `scripts/auto-option/models.config.mjs`  차종별 설정과 예외
+
+            원본은 `pdftotext -layout <pdf>` 로 뜯어 보면 된다. PDF 주소는 config 에 있다.
+
+            ## 반드시 지킬 것
+            1. **차종 하나만의 문제면 파서를 고치지 마라.** `models.config.mjs` 의
+               `skip` / `grid` / `dropTrims` / `dropOptions` / `fix()` 로 그 차종에만
+               붙여라. 공용 파서는 전 차종이 지나는 길목이라, 한 차종 때문에 건드리면
+               나머지가 조용히 깨진다. (전에 카니발 때문에 그런 적이 있다.)
+            2. **금액을 추측하지 마라.** 원본에서 못 읽는 값은 비워 두거나 그 차종을
+               `skip` 하고 **이유를 적어라**. 가격 계산기에서 틀린 금액을 넣는 건
+               그 차종을 빼는 것보다 나쁘다.
+            3. 고친 뒤 위 두 명령을 다시 돌려 guard 가 종료코드 0 인지 확인해라.
+               통과 못 하면 PR 을 열되 **무엇이 남았는지 본문에 적어라.**
+            4. PR 본문에는 원본 서식이 어떻게 바뀌었는지, 무엇을 고쳤는지,
+               숫자가 어떻게 달라지는지를 적어라. 사람이 그걸 보고 합친다.

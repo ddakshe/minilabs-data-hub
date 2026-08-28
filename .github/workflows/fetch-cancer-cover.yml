@@ -1,0 +1,94 @@
+name: Fetch cancer-cover data
+
+# 두 통계 모두 연 1회 갱신이다(국가암등록통계는 2년 시차). 매일 돌 이유가 없어
+# 매달 1일에만 돈다. 새 연도 자료가 올라오면 그달 실행에서 diff 로 잡힌다.
+on:
+  schedule:
+    - cron: '10 21 1 * *'   # 매월 1일 06:10 KST
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: '실행 이유 (로그에만 기록, 선택)'
+        required: false
+        default: 'manual refresh'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-cancer-cover
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Show trigger context
+        run: |
+          echo "Event  : ${{ github.event_name }}"
+          echo "Reason : ${{ github.event.inputs.reason || '(scheduled)' }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      - name: Fetch KOSIS data
+        env:
+          KOSIS_API_KEY: ${{ secrets.KOSIS_API_KEY }}
+        run: |
+          if [ -z "$KOSIS_API_KEY" ]; then
+            echo "::error::KOSIS_API_KEY secret is not set."
+            exit 1
+          fi
+          node scripts/fetch-cancer-cover.mjs
+
+      - name: Check for changes
+        id: diff
+        run: |
+          if git diff --quiet -- cancer-cover/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes — skipping commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --stat cancer-cover/
+          fi
+
+      # 통계 연도가 올라갔는지 요약에 남긴다. 앱을 재배포해야 사용자에게 닿으므로
+      # (데이터가 번들 내장이다) 사람이 알아채는 지점이 여기뿐이다.
+      - name: Detect new vintage
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          BEFORE=$(git show HEAD:cancer-cover/meta.json 2>/dev/null || echo '{}')
+          echo "이전: $BEFORE"
+          echo "현재: $(cat cancer-cover/meta.json)"
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
+          git add cancer-cover/
+          git commit -m "chore(cancer-cover): refresh ($DATE_KST)"
+          git push || (git pull --rebase origin main && git push)
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## cancer-cover Fetch Summary"
+            echo ""
+            echo "- Trigger: \`${{ github.event_name }}\`"
+            echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
+            echo "- Meta: \`$(cat cancer-cover/meta.json 2>/dev/null || echo n/a)\`"
+            echo ""
+            echo "> 데이터가 바뀌면 **cancer-cover-mini 앱에서 \`npm run data\` → 재빌드 → 재배포**해야"
+            echo "> 사용자에게 닿는다. 번들 내장이라 CDN 갱신만으로는 반영되지 않는다."
+          } >> "$GITHUB_STEP_SUMMARY"
