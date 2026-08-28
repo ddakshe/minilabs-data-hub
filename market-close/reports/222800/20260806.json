@@ -1,0 +1,101 @@
+{
+  "code": "222800",
+  "name": "심텍",
+  "market": "KOSDAQ",
+  "basDt": "20260806",
+  "price": {
+    "code": "222800",
+    "name": "심텍",
+    "market": "KOSDAQ",
+    "basDt": "20260806",
+    "close": 106000,
+    "vs": 3000,
+    "fltRt": 2.91,
+    "open": 109500,
+    "high": 117400,
+    "low": 105200,
+    "prevClose": 103000,
+    "volume": 1701533,
+    "tradeValue": 186475833600,
+    "week52": {
+      "low": 23050,
+      "high": 157300,
+      "position": 0.617877094972067,
+      "days": 244,
+      "from": "20250806"
+    },
+    "recent5": [
+      {
+        "basDt": "20260731",
+        "fltRt": 29.94,
+        "open": 78100,
+        "high": 82900,
+        "low": 74700,
+        "close": 82900
+      },
+      {
+        "basDt": "20260803",
+        "fltRt": 5.55,
+        "open": 81500,
+        "high": 90000,
+        "low": 81200,
+        "close": 87500
+      },
+      {
+        "basDt": "20260804",
+        "fltRt": 10.97,
+        "open": 94000,
+        "high": 97500,
+        "low": 89100,
+        "close": 97100
+      },
+      {
+        "basDt": "20260805",
+        "fltRt": 6.08,
+        "open": 102100,
+        "high": 103700,
+        "low": 95400,
+        "close": 103000
+      },
+      {
+        "basDt": "20260806",
+        "fltRt": 2.91,
+        "open": 109500,
+        "high": 117400,
+        "low": 105200,
+        "close": 106000
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 661331,
+      "ratio": 2.57
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-28T01:56:16.928Z"
+  },
+  "facts": [
+    "코스닥이 0.26% 오른 날 2.91% 올랐어요.",
+    "거래량이 최근 20거래일 평균의 2.6배였어요.",
+    "시가 109,500원보다 3,500원 낮게 마감했어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 801.67,
+    "vs": 2.08,
+    "fltRt": 0.26
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null,
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-08-28T01:56:16.928Z"
+}
