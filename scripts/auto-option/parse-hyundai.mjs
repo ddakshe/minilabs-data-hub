@@ -282,15 +282,33 @@ const options = Object.keys(paid).map((name, i) => {
     const base = norm(cumulativeBase(t.name));
     const hit = includes.filter((p) => base.includes(norm(p))).length;
     /*
+      ⚠️ 못 찾았을 때 무엇으로 두느냐가 이 파서에서 제일 중요한 판단이다.
+      "불가" 와 "기본 포함" 은 **뜻이 반대**다 — 불가면 그 트림은 탈락이고,
+      기본이면 그 트림이 정답이다. 틀리면 앱이 거꾸로 답한다.
+
+      기아 원본 격자(정답이 적혀 있다)로 실측한 결과, 낮은 트림에서 유료였던
+      옵션이 더 비싼 트림에서 선택 목록에 없으면 **기본 104 : 불가 7 (94%:6%)** 였다.
+      상위 트림은 장비가 쌓이지 빠지지 않기 때문이다.
+
+      그래서 **자기보다 싼 트림에서 유료였던 옵션은 기본 포함으로 본다.**
+      그 아래(아직 안 나온 트림)는 불가가 맞다.
+    */
+    const at = byPrice.findIndex((x) => x.name === t.name);
+    const paidBelow = byPrice.slice(0, at).some((x) => paid[name]?.[x.name] !== undefined);
+    /*
+      단, 더 비싼 트림에서 **여전히 유료**라면 여기서 기본이 됐을 리 없다.
+      장비는 위로 갈수록 쌓이지 빠지지 않는다. 이 조건을 빼면
+      "싼 트림에선 공짜인데 비싼 트림에선 돈 내야 한다" 는 모순이 생긴다.
+    */
+    const paidAbove = byPrice.slice(at + 1).some((x) => paid[name]?.[x.name] !== undefined);
+    /*
       구성품이 하나뿐인 패키지는 근거로 쓰지 않는다. "선루프" 처럼 이름이 곧
       구성품인 것들은 그 단어가 다른 옵션 설명에 스쳐도 걸려서, Modern 에서만
       '기본' 이 되고 상위 Inspiration 에서 다시 '유료' 가 되는 거꾸로 된 결과가 나왔다.
       두 개 이상이 겹칠 때만 "이 패키지가 통째로 기본이 됐다" 고 본다.
     */
-    byTrim[t.name] =
-      includes.length >= 2 && hit / includes.length >= 0.6
-        ? { kind: 'included' }
-        : { kind: 'locked' };
+    const proven = includes.length >= 2 && hit / includes.length >= 0.6;
+    byTrim[t.name] = proven || (paidBelow && !paidAbove) ? { kind: 'included' } : { kind: 'locked' };
   }
   return { id: `h-${i}`, name, includes, byTrim };
 });
