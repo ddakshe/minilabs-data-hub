@@ -68,7 +68,8 @@ jobs:
           fi
 
           git commit -m "$MSG"
-          git push
+          # 다른 워크플로가 같은 시간대에 밀어넣을 수 있다. 한 번은 되받아 재시도한다.
+          git push || (git pull --rebase origin main && git push)
 
       - name: Summary
         if: always()
