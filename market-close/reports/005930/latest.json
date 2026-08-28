@@ -55,19 +55,85 @@
       "rows": 532,
       "rows52w": 244
     },
-    "generatedAt": "2026-08-27T18:23:06.765Z"
+    "generatedAt": "2026-08-28T00:39:35.190Z"
   },
   "facts": [
-    "시가 256,500원보다 5,000원 높게 마감했어요.",
-    "장중 266,500원까지 올랐다가 5,000원 낮은 가격에 마감했어요.",
-    "거래량이 최근 20거래일 평균의 0.6배였어요."
+    "코스피가 0.97% 오른 날 1.75% 올랐어요.",
+    "거래량이 최근 20거래일 평균의 0.6배였어요.",
+    "시가 256,500원보다 5,000원 높게 마감했어요."
   ],
-  "news": [],
-  "dart": [],
+  "news": [
+    {
+      "title": "삼성전자, 스와치에 1160만달러 배상…워치페이스 상표권 침해",
+      "source": "글로벌이코노믹",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQOVpETXRUWlc2elYwNmdRVE5rWjd4MzcwUGVvSm5pcGJmRmctNC00dnJJOGZDWEh0WDQ1UmgtYjd0TldaV3RMbmlDNjJPSHprbEphLVg4aUp2dGlTSjBNdzN4ZS1SM3p0S08xQ2t3UUozN2REd1l4Umh0T09JWnZyWVl3YWxLS0h4?oc=5",
+      "publishedAt": "2026-08-26T13:06:15.000Z"
+    },
+    {
+      "title": "삼성전자, 차세대 포터블 SSD 2종 P9, P7 공개",
+      "source": "Samsung Global Newsroom",
+      "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPQ2c5RVB5ZEE4SU9fb2VhbWRmcmprNFlaRnBnb0NUa0FyYVNzeFZGdU9ORVFOR3pvYzVCWmtGeVcxNm5TOUpISkxHa0JGY21JLWdMekJMbFE0MTBkN044WkNsV0t5T3ZZNnFzRUNyaEhXWUQybTJJM1ZMbTRkTkpnU0FqOHBNUnF2aUJXSEVSUzVtOFllbEVOcXhfQ3BlMlNpbUp1V0Vva1E1XzhWdVFRZEF3OE5SY2QwSWRjbExKWGlEdjhaWV9hVUtCeDFWZVc3aG1oeGhYWWVzSTFmMXhaeWRTWjN4YXRweWJySzhNU3lHdw?oc=5",
+      "publishedAt": "2026-08-26T07:00:00.000Z"
+    }
+  ],
+  "dart": [
+    {
+      "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+      "filer": "김경륜",
+      "receiptNo": "20260826000445",
+      "date": "20260826",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260826000445"
+    },
+    {
+      "title": "[기재정정]임원ㆍ주요주주특정증권등소유상황보고서",
+      "filer": "조미선",
+      "receiptNo": "20260826000434",
+      "date": "20260826",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260826000434"
+    }
+  ],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20260731",
+      "holder": "삼성물산",
+      "ratio": 19.69,
+      "ratioChange": 0,
+      "reason": "보유주식수 변동 · 보유주식등에 관한 계약의 변경",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260731000779"
+    },
+    {
+      "kind": "major",
+      "date": "20260724",
+      "holder": "삼성물산",
+      "ratio": 19.69,
+      "ratioChange": 0,
+      "reason": "보유주식수 변동 · 보유주식등에 관한 계약의 변경",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260724000625"
+    },
+    {
+      "kind": "major",
+      "date": "20260710",
+      "holder": "삼성물산",
+      "ratio": 19.69,
+      "ratioChange": -0.01,
+      "reason": "보유주식수 변동 · 보유주식등에 관한 계약의 변경",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260710000678"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 6808.21,
+    "vs": 65.47,
+    "fltRt": 0.97
+  },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
-    "news": null,
-    "dart": null
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-08-27T18:25:55.118Z"
+  "builtAt": "2026-08-28T00:41:33.737Z"
 }

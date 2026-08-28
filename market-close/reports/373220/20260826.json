@@ -55,19 +55,54 @@
       "rows": 532,
       "rows52w": 244
     },
-    "generatedAt": "2026-08-27T18:23:23.919Z"
+    "generatedAt": "2026-08-28T00:39:48.340Z"
   },
   "facts": [
-    "시가 348,500원보다 2,500원 높게 마감했어요.",
-    "장중 352,000원까지 올랐다가 1,000원 낮은 가격에 마감했어요.",
-    "거래량이 최근 20거래일 평균의 0.6배였어요."
+    "코스피가 0.97% 오른 날 0.43% 올랐어요.",
+    "거래량이 최근 20거래일 평균의 0.6배였어요.",
+    "시가 348,500원보다 2,500원 높게 마감했어요."
   ],
-  "news": [],
+  "news": [
+    {
+      "title": "LG에너지솔루션, 압도적 북미 생산 네트워크로 성장 가속화",
+      "source": "조선일보",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPRzgwLTY4emJjR0VrSmpsRXFlbkJKNE80TlBLREFESFE5YVVDb2hqeTdzOE5SOVVuWmdiMU5hSUMyR1NHS2dMbHJuM0puVVQyN2hBTS1MaFhic25pSHAyVXN4S3psUlNBM0xhbzA1WEliZzZZenNSQUZtbWppemlDMlBleENwV1EtR29lNHlR?oc=5",
+      "publishedAt": "2026-08-25T15:37:00.000Z"
+    },
+    {
+      "title": "LG엔솔 \"전고체 상용화, 소형·특수 용도 거쳐 전기차로 확대 전망\"",
+      "source": "네이트",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE81S0hpWVFJQ3NoQWRISXJVMVRicTkwTjA0SXpQR1pfdXRRaHlFUzd1ZVdQTHE2Y2pkSnNaZTFLblFJclFyRDdIdFhZRGhNQmFJNGFB?oc=5",
+      "publishedAt": "2026-08-26T00:22:00.000Z"
+    },
+    {
+      "title": "'ESS 골드러시' 미국 시장 4배 커진다…배터리 라인 전환 속도전",
+      "source": "머니투데이",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBDOEMzcnlXU0xqdTg5c3hvRmw0QlJFTmg1NWNjR0g1bGhSRXBMcmNmd21aN3NPTFd0eE5XSlprT3hfeWVCZ3A3NG00eU1neGNMVE95YXJiNkV5WE5RZ1ViOUlQUTRoWmZrWlM4NdIBckFVX3lxTE9NUm5hQzBVZmFzZ1hpYl9pVWpKeWYwODlIWFlGTUFOV3o4WjN6cnkwa0o0emlRZk1DRFFIQmdlaGdIbXN6MnZtS1hYS1NZbmR4aVdQZ3RIREpZbWRtRG1JQ2tfb2dYLVJldUdvc2IxWWtSdw?oc=5",
+      "publishedAt": "2026-08-26T09:20:00.000Z"
+    },
+    {
+      "title": "'배터리 슈퍼을' 옛말…현대차, LG·SK·삼성으로 공급처 다변화",
+      "source": "네이트",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFByNmswQm1IamJJRmFPOGRpWWhsZk90dU1Ud3lvNGxtZmR4Szh3am1zMW9QdlRQMWx6M29vYlNnMkJuQk9fS1U4N0l4V2pLMk9wWWZv?oc=5",
+      "publishedAt": "2026-08-25T22:00:00.000Z"
+    }
+  ],
   "dart": [],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 6808.21,
+    "vs": 65.47,
+    "fltRt": 0.97
+  },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
-    "news": null,
-    "dart": null
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-08-27T18:25:55.139Z"
+  "builtAt": "2026-08-28T00:41:33.764Z"
 }

@@ -55,19 +55,105 @@
       "rows": 532,
       "rows52w": 244
     },
-    "generatedAt": "2026-08-27T18:24:21.905Z"
+    "generatedAt": "2026-08-28T00:40:33.178Z"
   },
   "facts": [
-    "시가 118,600원보다 300원 높게 마감했어요.",
-    "장중 124,500원까지 올랐다가 5,600원 낮은 가격에 마감했어요.",
-    "거래량이 최근 20거래일 평균의 3.3배였어요."
+    "코스피가 0.97% 오른 날 0.68% 올랐어요.",
+    "거래량이 최근 20거래일 평균의 3.3배였어요.",
+    "시가 118,600원보다 300원 높게 마감했어요."
   ],
-  "news": [],
+  "news": [
+    {
+      "title": "한화오션 거제사업장서 하청노동자 사망",
+      "source": "뉴스토마토",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9mTGU0dHF4M3ZZT3Axc2N1QUJpeVpreTlIRkMzcGl5U1BMblZlSEw0MmhLbkloQm5nYjNzMklvdmRYSXhKd2FKTVd3QzRnalR0M1VIaFVKeGFoM2QxUG04Tw?oc=5",
+      "publishedAt": "2026-08-26T04:34:36.000Z"
+    }
+  ],
   "dart": [],
+  "ownership": [
+    {
+      "kind": "insider",
+      "date": "20260804",
+      "holder": "한화에너지",
+      "position": "-",
+      "role": "10%이상주주",
+      "sharesAfter": 13446749,
+      "sharesChange": -4331649,
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260804000050"
+    },
+    {
+      "kind": "major",
+      "date": "20260803",
+      "holder": "김승연",
+      "ratio": 60.53,
+      "ratioChange": 0.28,
+      "reason": "보유주식 등에 관한 계약의 변경 및 · 회사분할로 인한 주식 수 변동",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260803000315"
+    },
+    {
+      "kind": "insider",
+      "date": "20260803",
+      "holder": "김승연",
+      "position": "회장",
+      "role": "사실상지배주주",
+      "sharesAfter": 7532506,
+      "sharesChange": -2426473,
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260803000321"
+    },
+    {
+      "kind": "insider",
+      "date": "20260803",
+      "holder": "김동관",
+      "position": "수석부회장",
+      "role": "사실상지배주주",
+      "sharesAfter": 6188993,
+      "sharesChange": -1993683,
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260803000324"
+    },
+    {
+      "kind": "insider",
+      "date": "20260803",
+      "holder": "김동원",
+      "position": "-",
+      "role": "사실상지배주주",
+      "sharesAfter": 3047583,
+      "sharesChange": -981729,
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260803000328"
+    },
+    {
+      "kind": "insider",
+      "date": "20260803",
+      "holder": "김동선",
+      "position": "-",
+      "role": "사실상지배주주",
+      "sharesAfter": 3047583,
+      "sharesChange": -981729,
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260803000334"
+    },
+    {
+      "kind": "major",
+      "date": "20260723",
+      "holder": "김승연",
+      "ratio": 60.25,
+      "ratioChange": -0.06,
+      "reason": "보유주식 등에 관한 계약의 변경",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260723000608"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 6808.21,
+    "vs": 65.47,
+    "fltRt": 0.97
+  },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
-    "news": null,
-    "dart": null
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-08-27T18:25:55.190Z"
+  "builtAt": "2026-08-28T00:41:33.834Z"
 }

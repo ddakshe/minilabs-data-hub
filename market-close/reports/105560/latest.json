@@ -55,19 +55,66 @@
       "rows": 532,
       "rows52w": 244
     },
-    "generatedAt": "2026-08-27T18:23:37.560Z"
+    "generatedAt": "2026-08-28T00:39:59.045Z"
   },
   "facts": [
-    "시가 165,700원보다 900원 높게 마감했어요.",
-    "장중 167,800원까지 올랐다가 1,200원 낮은 가격에 마감했어요.",
-    "거래량이 최근 20거래일 평균의 0.6배였어요."
+    "코스피가 0.97% 오른 날 0.12% 올랐어요.",
+    "거래량이 최근 20거래일 평균의 0.6배였어요.",
+    "시가 165,700원보다 900원 높게 마감했어요."
   ],
-  "news": [],
-  "dart": [],
+  "news": [
+    {
+      "title": "KB금융 10개 계열사, 소비자보호 전문성·연속성 강화 논의",
+      "source": "연합뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE96cDQ0bVJIMkFMUUlpN1VxVlRHbUpxU05FVlk4R2I5Mi14a0Y2S2xtVU1tTEhNQlNaYXhVN01YWURfc2VkRnpESXQ5SWRQN1NmQi04ZERmWUdDV2NWek1FetIBYEFVX3lxTE96cDQ0bVJIMkFMUUlpN1VxVlRHbUpxU05FVlk4R2I5Mi14a0Y2S2xtVU1tTEhNQlNaYXhVN01YWURfc2VkRnpESXQ5SWRQN1NmQi04ZERmWUdDV2NWek1Feg?oc=5",
+      "publishedAt": "2026-08-26T00:31:02.000Z"
+    },
+    {
+      "title": "KB금융, 내일 차기 회장 후보 3인 확정…양종희와 누가 오를까",
+      "source": "연합인포맥스",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBNdU9DTTQ5OEZTTktDV2VUb0RKbk8zb0o0SVc1bTctVnA4SmR5Yjg5bnA4SzU0Zk1FV2hmQTRyVFhUTmNHcUl4M0pIMk5Id1NkRUtHTmhlVlFOLTM0RjJjd3lVVHpuM3hsdm56SHhVOWI?oc=5",
+      "publishedAt": "2026-08-25T23:52:00.000Z"
+    },
+    {
+      "title": "KB금융, 계열사 소비자보호 체계 고도화",
+      "source": "전자신문",
+      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5pc0dLanNDZXVheWw2Nmxaa2JVbkFuRVZSYkJqTVRsdkR4WjI3THBhRGhLTUNZcTlFVXh3dHBmcGxwNElybTRaSDg1RHVHQQ?oc=5",
+      "publishedAt": "2026-08-26T00:27:40.000Z"
+    }
+  ],
+  "dart": [
+    {
+      "title": "[첨부정정]증권신고서(채무증권)",
+      "filer": "KB금융",
+      "receiptNo": "20260826000090",
+      "date": "20260826",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260826000090"
+    }
+  ],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20260617",
+      "holder": "국민연금공단",
+      "ratio": 9.33,
+      "ratioChange": 0.39,
+      "reason": "일반투자목적에서 단순투자목적으로 보유목적 변경",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260617000314"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 6808.21,
+    "vs": 65.47,
+    "fltRt": 0.97
+  },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
-    "news": null,
-    "dart": null
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-08-27T18:25:55.151Z"
+  "builtAt": "2026-08-28T00:41:33.780Z"
 }
