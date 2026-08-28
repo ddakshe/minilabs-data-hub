@@ -23,12 +23,11 @@ concurrency:
 
 jobs:
   build:
-    # ⚠️ §17 의 '국내 IP 상시 차단' 은 **틀렸다** (2026-08-28 로그로 반증).
-    #    2026-08-27T18:23Z 정기 크론이 ubuntu-latest 에서 23종목을 전부 받았고
-    #    (run 33103147724), fetch-realestate·fetch-local-currency 도 같은
-    #    apis.data.go.kr 을 매일 성공한다. §17 의 SYN 타임아웃은 그때 그 러너에
-    #    국한된 **일시적 차단**이었다. 재발하면 셀프호스티드가 플랜 B 다(§19).
-    runs-on: ubuntu-latest
+    # 🚨 data.go.kr 은 **GitHub 러너 IP 풀의 일부만** 차단한다 — 실행마다 동전 던지기다.
+    #    08-28 03:23Z ubuntu-latest 성공(23종목) / 09:09 KST 같은 워크플로 fetch failed
+    #    / 09:10 KST 이 맥 성공. §17 도, 그 반증도 각각 표본 하나였다(§19 ⓒ).
+    #    국내 IP 는 100% 라 셀프호스티드로 동전 던지기를 없앤다.
+    runs-on: [self-hosted, macOS, ARM64]
     timeout-minutes: 20
     env:
       MC_OUT: market-close
