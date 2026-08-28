@@ -46,6 +46,51 @@ const todayKST = () =>
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+// extra 조립 공통. 빈 값(빈 문자열·빈 배열·null)은 통째로 뺀다.
+// 앱이 "있는 것만 그린다"는 전제라, 빈 키를 남기면 시트에 빈 줄이 생긴다.
+function compactExtra(obj) {
+  const out = {};
+  for (const [k, v] of Object.entries(obj)) {
+    if (v === null || v === undefined) continue;
+    if (typeof v === "string" && !v.trim()) continue;
+    if (Array.isArray(v) && v.length === 0) continue;
+    out[k] = v;
+  }
+  return Object.keys(out).length ? out : undefined;
+}
+
+// "박세영, 한고은, 임지은" 같은 쉼표 문자열 → 배열. 시트가 길어지므로 상한을 둔다.
+function splitNames(str, limit = 8) {
+  return String(str || "")
+    .split(",")
+    .map((x) => x.trim())
+    .filter(Boolean)
+    .slice(0, limit);
+}
+
+// og: 메타태그만 필요한 페이지용. 전체를 읽지 않고 둘 다 나오면 즉시 끊는다.
+// 넷플릭스·디즈니 페이지가 1MB 에 가까워, 전부 읽으면 느릴 뿐 아니라
+// 넷플릭스는 연결을 끊어버려서(IncompleteRead) 대부분 실패한다.
+async function fetchOgMeta(url, headers = {}) {
+  const res = await fetch(url, {
+    headers: { "User-Agent": UA, "Accept-Language": "ko-KR,ko;q=0.9", ...headers },
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status} — ${url}`);
+  let buf = "";
+  const decoder = new TextDecoder();
+  for await (const chunk of res.body) {
+    buf += decoder.decode(chunk, { stream: true });
+    if (/og:title"/.test(buf) && /og:description"/.test(buf)) break;
+    if (buf.length > 400_000) break;
+  }
+  res.body.cancel().catch(() => {});
+  const pick = (re) => (buf.match(re) || [])[1] || "";
+  return {
+    title: pick(/og:title" content="([^"]*)"/).trim(),
+    description: pick(/og:description" content="([^"]*)"/).trim(),
+  };
+}
+
 async function fetchText(url) {
   const res = await fetch(url, { headers: { "User-Agent": UA } });
   if (!res.ok) throw new Error(`HTTP ${res.status} — ${url}`);
@@ -79,32 +124,25 @@ function unescapeJsString(raw) {
   }
 }
 
-// Tudum 은 영문 제목만 준다. netflix.com/kr/title/{id} 의 og:title 에 한글 제목이 있어
-// 항목마다 한 번씩 조회한다. 다만 이 페이지는 1MB 가 넘고 넷플릭스가 연결을 자주 끊어서
-// (IncompleteRead) 전체를 읽으면 대부분 실패한다 — og:title 은 head 초반에 있으므로
-// 그 태그를 만나는 즉시 스트림을 끊는다. 실패한 항목은 영문 제목을 그대로 쓴다.
-async function fetchNetflixKoTitle(videoId) {
-  const res = await fetch(`https://www.netflix.com/kr/title/${videoId}`, {
-    headers: { "User-Agent": UA, "Accept-Language": "ko-KR,ko;q=0.9" },
-  });
-  if (!res.ok) return null;
-  let buf = "";
-  const decoder = new TextDecoder();
-  for await (const chunk of res.body) {
-    buf += decoder.decode(chunk, { stream: true });
-    const m = buf.match(/og:title" content="([^"]*)"/);
-    if (m) {
-      res.body.cancel().catch(() => {});
-      const t = m[1].replace(/(, 지금 시청하세요)? \| 넷플릭스.*$/, "").trim();
-      return /[가-힣]/.test(t) ? t : null;
-    }
-    if (buf.length > 400_000) break; // head 를 지났는데도 없으면 포기
-  }
-  return null;
+// Tudum 은 영문 제목만 주고 줄거리는 아예 없다. netflix.com/kr/title/{id} 의
+// og:title·og:description 에 둘 다 있어서 항목마다 한 번 조회한다 (한 요청에서 둘 다 얻는다).
+async function fetchNetflixMeta(videoId) {
+  const og = await fetchOgMeta(`https://www.netflix.com/kr/title/${videoId}`);
+  const title = og.title.replace(/(, 지금 시청하세요)? \| 넷플릭스.*$/, "").trim();
+
+  // 페이지가 덜 로드되면 og:title 이 비고 og:description 은 사이트 공용 문구로 나온다.
+  // 거르지 않으면 10편 전부 같은 안내 문구가 줄거리로 들어간다.
+  const boilerplate = !title || /스마트 TV, 태블릿|다양한 디바이스에서 영화와 시리즈/.test(og.description);
+  return {
+    title: /[가-힣]/.test(title) ? title : null,
+    synopsis: boilerplate ? null : og.description || null,
+  };
 }
 
-// 직전 산출물의 videoId → 한글 제목. 파일이 없거나 깨져 있으면 빈 맵.
-function previousNetflixKoTitles() {
+// 직전 산출물의 videoId → { title, synopsis }. 파일이 없거나 깨져 있으면 빈 맵.
+// 조회 실패가 매번 다른 항목에서 나기 때문에, 이전 값을 깔아두지 않으면
+// 실행마다 제목·줄거리가 들어왔다 빠졌다 하며 노이즈 커밋이 쌓인다.
+function previousNetflixMeta() {
   const map = new Map();
   try {
     const path = resolve(ROOT, "ott", "netflix.json");
@@ -112,9 +150,11 @@ function previousNetflixKoTitles() {
     const prev = JSON.parse(readFileSync(path, "utf-8"));
     for (const g of prev.groups ?? []) {
       for (const it of g.items ?? []) {
-        if (it.watchUrl && /[가-힣]/.test(it.title)) {
-          map.set(it.watchUrl.split("/").pop(), it.title);
-        }
+        if (!it.watchUrl) continue;
+        map.set(it.watchUrl.split("/").pop(), {
+          title: /[가-힣]/.test(it.title || "") ? it.title : null,
+          synopsis: it.extra?.synopsis || null,
+        });
       }
     }
   } catch {
@@ -155,32 +195,35 @@ async function parseNetflixPage(url) {
   }
   const items = [...byRank.values()].sort((a, b) => a.rank - b.rank);
 
-  // 지난 실행에서 이미 확보한 한글 제목은 재사용한다. 조회가 산발적으로 실패해서
-  // 매 실행마다 한글↔영문이 뒤집히면 의미 없는 커밋이 쌓이기 때문이다 — 한 번 한글이면 계속 한글.
-  const prevKo = previousNetflixKoTitles();
+  // 지난 실행에서 확보한 값(한글 제목·줄거리)을 먼저 깐다. 조회가 산발적으로 실패해서
+  // 매 실행마다 값이 들어왔다 빠졌다 하면 의미 없는 커밋이 쌓인다 — 한 번 얻으면 유지(래칫).
+  const prev = previousNetflixMeta();
   for (const it of items) {
-    const ko = prevKo.get(it.watchUrl.split("/").pop());
-    if (ko && !/[가-힣]/.test(it.title)) it.title = ko;
+    const p = prev.get(it.watchUrl.split("/").pop());
+    if (!p) continue;
+    if (p.title && !/[가-힣]/.test(it.title)) it.title = p.title;
+    if (p.synopsis) it.extra = { ...(it.extra ?? {}), synopsis: p.synopsis, source: "netflix" };
   }
 
-  // 남은 영문 제목을 작품 페이지에서 보충. 순차 + 간격을 둔다
-  // (동시에 때리면 넷플릭스가 연결을 끊는다). 실패해도 영문 제목이 남으므로 치명적이지 않다.
-  // 넷플릭스가 산발적으로 연결을 끊어 1 회차에 3~4 개는 빈다 — 남은 것만 재시도한다.
+  // 남은 것을 작품 페이지에서 보충. 제목과 줄거리가 같은 응답에 있어 요청은 항목당 1건이다.
+  // 순차 + 간격을 둔다(동시에 때리면 넷플릭스가 연결을 끊는다). 실패해도 영문 제목이 남는다.
   // 넷플릭스 한국은 외국 작품까지 전부 제목을 현지화한다(영화 TOP10 실측 10/10).
   // 그래서 영문이 남았다면 그건 "원래 영문"이 아니라 조회가 끊긴 것이다 —
   // 검색 같은 다른 출처로 메우면 틀린 제목이 섞이므로, 같은 출처를 끈질기게 다시 친다.
+  const needs = (it) => !/[가-힣]/.test(it.title) || !it.extra?.synopsis;
   for (let round = 0; round < 4; round++) {
-    const todo = items.filter((it) => !/[가-힣]/.test(it.title));
+    const todo = items.filter(needs);
     if (todo.length === 0) break;
     for (const it of todo) {
       const videoId = it.watchUrl.split("/").pop();
       for (let attempt = 0; attempt < 3; attempt++) {
         try {
-          const ko = await fetchNetflixKoTitle(videoId);
-          if (ko) {
-            it.title = ko;
-            break;
+          const meta = await fetchNetflixMeta(videoId);
+          if (meta.title && !/[가-힣]/.test(it.title)) it.title = meta.title;
+          if (meta.synopsis && !it.extra?.synopsis) {
+            it.extra = { ...(it.extra ?? {}), synopsis: meta.synopsis, source: "netflix" };
           }
+          if (!needs(it)) break;
         } catch {
           /* 연결이 끊겼다 — 새 연결로 다시 */
         }
@@ -190,7 +233,8 @@ async function parseNetflixPage(url) {
     }
   }
   const koCount = items.filter((it) => /[가-힣]/.test(it.title)).length;
-  console.log(`  · 한글 제목 ${koCount}/${items.length}`);
+  const synCount = items.filter((it) => it.extra?.synopsis).length;
+  console.log(`  · 한글 제목 ${koCount}/${items.length}, 줄거리 ${synCount}/${items.length}`);
 
   return { week, items };
 }
@@ -316,11 +360,18 @@ async function buildWavve() {
 
   const items = list.slice(0, 10).map((it, i) => {
     const p = it.program ?? it.series ?? it.content ?? {};
+    // 줄거리·출연진은 series 에만 있다. 기존 코드는 program 만 읽고 series 를 버렸다 — 추가 요청 0건.
+    const se = it.series ?? {};
     return {
       rank: i + 1,
       title: p.title,
       poster: p.vertical_logo_y_image || undefined,
       // 웨이브는 콘텐츠 상세가 SPA/로그인 벽이라 작품 딥링크가 실제 페이지로 안 감. 생략 → 홈페이지로 유도.
+      extra: compactExtra({
+        synopsis: (se.synopsis || "").trim(),
+        cast: splitNames(se.actors),
+        source: "wavve",
+      }),
     };
   });
 
@@ -404,6 +455,20 @@ async function buildCoupang() {
       title: it.title,
       poster: it.images?.poster_url || undefined,
       watchUrl: `https://www.coupangplay.com/content/${it.id}`,
+      // rail 응답이 상세 메타를 통째로 싣고 있다 — 추가 요청 0건.
+      extra: compactExtra({
+        synopsis: (it.description || "").trim(),
+        ageRating: it.ageRatingLocalized,
+        year: it.releaseYear ? Number(it.releaseYear) : undefined,
+        runtime: it.running_time_friendly,
+        rating: it.averageUserRating,
+        tags: (it.tags ?? []).map((t) => t.label).filter(Boolean).slice(0, 5),
+        reviews: (it.bestReviews ?? [])
+          .slice(0, 3)
+          .map((r) => ({ text: r.review, meta: r.meta }))
+          .filter((r) => r.text),
+        source: "coupang",
+      }),
     });
   }
   items.sort((a, b) => a.rank - b.rank);
