@@ -44,7 +44,9 @@ function pastReport(rows, i, template) {
   const win = rows.slice(0, i + 1).filter((x) => x.basDt >= cutoff);
   const closes = win.map((x) => x.clpr);
   const low = Math.min(...closes), high = Math.max(...closes);
-  const recent5 = rows.slice(Math.max(0, i - 4), i + 1).map((x) => ({ basDt: x.basDt, fltRt: x.fltRt }));
+  const recent5 = rows.slice(Math.max(0, i - 4), i + 1).map((x) => ({
+    basDt: x.basDt, fltRt: x.fltRt, open: x.mkp, high: x.hipr, low: x.lopr, close: x.clpr,
+  }));
   const vol20 = rows.slice(Math.max(0, i - 20), i).map((x) => x.trqu).filter((v) => v !== null);
   const avg20 = vol20.length ? Math.round(vol20.reduce((a, b) => a + b, 0) / vol20.length) : null;
 
@@ -106,6 +108,27 @@ function main() {
 
     const dir = p(`reports/${code}`);
     mkdirSync(dir, { recursive: true });
+
+    // ── 전체보기용 캔들 시계열 ──────────────────────────────────────
+    // 🔑 **날짜별 상세에 넣지 않고 종목당 한 파일로 뺀다.** 상세 파일마다
+    //    120일치를 복제하면 종목당 120배가 되고 git 이 감당하지 못한다.
+    //    앱은 '전체보기' 를 누를 때만 이 파일을 받는다 (lazy).
+    {
+      const hist = readJSON(p(`history/${code}.json`));
+      const rows = (hist?.rows ?? []).slice(-RETAIN_DAYS);
+      if (rows.length) {
+        writeFileSync(`${dir}/candles.json`, JSON.stringify({
+          code, name: price.name, market: price.market,
+          count: rows.length, firstBasDt: rows[0].basDt, lastBasDt: rows[rows.length - 1].basDt,
+          rows: rows.map((x) => ({
+            basDt: x.basDt, fltRt: x.fltRt,
+            open: x.mkp, high: x.hipr, low: x.lopr, close: x.clpr,
+          })),
+          source: price.source.api,
+          updatedAt: new Date().toISOString(),
+        }) + '\n');
+      }
+    }
 
     // ── backfill: 과거 거래일을 시계열로 채운다 ──────────────────
     // ⚠️ 뉴스·공시는 소급되지 않는다 (§2-b: 구글 RSS 가 과거를 주지 않는다).

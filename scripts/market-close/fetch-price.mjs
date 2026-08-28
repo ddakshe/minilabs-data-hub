@@ -119,7 +119,14 @@ function buildPriceReport(code, rows) {
   const low52 = Math.min(...closes);
   const high52 = Math.max(...closes);
 
-  const recent5 = s.slice(-5).map((r) => ({ basDt: r.basDt, fltRt: r.fltRt }));
+  // 🔑 **5일은 그대로 두고 시·고·저·종을 얹는다.** 캔들(윗꼬리·아랫꼬리)을 그리려면
+  //    등락률만으로는 부족하다. 시계열에 이미 있는 값이라 **호출은 늘지 않는다.**
+  //    필드 이름을 `recent5` 로 두는 이유: 이미 커밋된 아카이브 상세 수천 개가
+  //    이 이름을 쓰고 있다. 개수가 5로 유지되는 한 이름이 거짓이 아니다.
+  const recent5 = s.slice(-5).map((r) => ({
+    basDt: r.basDt, fltRt: r.fltRt,
+    open: r.mkp, high: r.hipr, low: r.lopr, close: r.clpr,
+  }));
   const vol20 = s.slice(-21, -1).map((r) => r.trqu).filter((v) => v !== null);
   const avgVol20 = vol20.length ? Math.round(vol20.reduce((a, b) => a + b, 0) / vol20.length) : null;
 
