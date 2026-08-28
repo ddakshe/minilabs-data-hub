@@ -10,10 +10,9 @@
 | # | 작업 | 주기 | 실행 | 로컬인 이유 |
 |---|---|---|---|---|
 | 1 | 인증중고차(BMW·포르쉐) | **⏸ 중단** | `./refresh-cpo.sh` | GUI 브라우저 · 봇 차단 |
-| 2 | OTT 순위(라프텔·티빙) | 수·목 10시 | `./refresh-ott.sh` | 한국 IP 필요 |
-| 3 | 레버리지 데이터 | 평일 08:10 | `./refresh-lever.sh` | 토스 허용 IP 등록 |
-| 4 | 배당 이름표(한글명·시총) | **분기 1회** | `stock-tools/scripts/dividend_toss.py` | 토스 허용 IP 등록 |
-| 5 | 국내 배당(DART) | **4·5월 수요일** | `./refresh-dividend-kr.sh` | 순차 40분 · DART 차단 이력 |
+| 2 | 레버리지 데이터 | 평일 08:10 | `./refresh-lever.sh` | 토스 허용 IP 등록 |
+| 3 | 배당 이름표(한글명·시총) | **분기 1회** | `stock-tools/scripts/dividend_toss.py` | 토스 허용 IP 등록 |
+| 4 | 국내 배당(DART) | **4·5월 수요일** | `./refresh-dividend-kr.sh` | 순차 40분 · DART 차단 이력 |
 
 ---
 
@@ -76,34 +75,25 @@ consumers: [cpo-mini]
   - `cpo/listings.json` 의 `brands.<브랜드>.updatedAt` 이 오늘 날짜로 바뀌었는지
   - 최상위 `failed` 배열에 브랜드가 들어갔는지
 
-## 2. OTT 순위 — 라프텔 · 티빙
+## ~~OTT 순위 — 라프텔 · 티빙~~ → CI 로 옮겼다 (2026-08-28)
 
-```yaml
-id: ott
-repo: minilabs-data-hub
-command: ./refresh-ott.sh
-schedule: "0 10 * * 3,4"
-reason: region-ip
-outputs: ott/
-consumers: [ott-mini]
-```
+**셀프호스티드 러너가 생기면서 로컬로 둘 이유가 없어졌다.**
 
-- **왜 로컬인가**: Actions 는 미국 IP 라 넷플릭스·웨이브·디즈니만 된다.
-  라프텔·티빙은 **한국 IP** 에서만 응답한다.
-- CI(`0 0 * * 3,4` = 수·목 09:00 KST)가 3개를 갱신하고, 나머지 2개를 이걸로 채운다.
-  넷플릭스 주간 갱신이 화요일(US)이라 수·목 KST 사이에 반영된다.
-- **주기를 `weekly-2` 에서 명시적 cron 으로 바꿨다.** 러너의 `weekly` 분기는 접미사(`-2`)를
-  파싱하지 않고 수·목을 하드코딩한다 — 값이 맞아 보이지만 `weekly-5` 라 써도 똑같이 동작한다.
-  cron 식은 러너가 실제로 요일을 읽는다.
-- **10시인 이유**: cpo 와 같다. CI(09:00) 뒤에 돌려야 `git pull --rebase` 가 CI 커밋을
-  흡수한 뒤 작업한다.
-- **실패 신호**: 라프텔·티빙 섹션이 비거나 갱신일이 밀림.
-- ⚠ **예전에 LaunchAgent 로도 돌고 있었다** (`com.minilabs.refresh-ott`, 매일 06:00).
-  러너와 이중 실행이 되고 문서의 "주 2회" 와도 맞지 않아 내렸다
-  (`~/Library/LaunchAgents/com.minilabs.refresh-ott.plist.disabled`).
-  **로컬 작업은 이제 전부 이 러너 한 곳을 지난다.**
+로컬이었던 이유는 오직 한국 IP 였다 — Actions 의 미국 IP 로는 넷플릭스·웨이브·디즈니만
+되고 라프텔·티빙이 응답하지 않아서, CI 가 3개를 받고 나머지 2개를 사람이 채웠다.
+러너가 이 맥에서 돌면 그 전제가 사라진다. `fetch-ott.yml` 을
+`runs-on: [self-hosted, macOS, ARM64]` 로 바꾸니 **한 워크플로가 6개를 다 받는다**
+(실측 2026-08-28: 라프텔 10편 · 티빙 10편 정상).
 
-## 3. 레버리지 데이터
+`refresh-ott.sh` 도 지웠다. 워크플로가 `node scripts/fetch-ott.mjs` 를 직접 부르므로
+그 껍데기(pull → 배치 → commit → push)를 CI 가 대신한다. 손으로 돌리고 싶으면
+`gh workflow run fetch-ott.yml` 이 같은 일을 하고, 실패가 기록으로 남는다는 점이 낫다.
+
+> 남겨둘 교훈: 여기 있는 작업들의 '로컬인 이유' 를 다시 볼 것. **IP 때문인 것들은
+> 셀프호스티드 러너로 전부 옮길 수 있다.** 남는 것은 IP 가 아닌 이유들뿐이다 —
+> GUI 브라우저가 필요한 cpo, 출력이 두 저장소에 걸친 lever 같은 것.
+
+## 2. 레버리지 데이터
 
 ```yaml
 id: lever
@@ -163,7 +153,7 @@ cron·launchd 는 **조용히 죽고** 실패를 알려주지 않는다. 특히 
 
 ---
 
-## 4. 배당 이름표 — 한글명 · 시가총액
+## 3. 배당 이름표 — 한글명 · 시가총액
 
 ```yaml
 id: dividend-labels
@@ -200,7 +190,7 @@ consumers: [stock-dividend-mini]
 
 ---
 
-## 5. 국내 배당 — DART 사업보고서
+## 4. 국내 배당 — DART 사업보고서
 
 ```yaml
 id: dividend-kr
