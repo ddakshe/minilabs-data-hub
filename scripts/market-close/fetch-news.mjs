@@ -20,6 +20,10 @@
 
 import { OUT, p } from './paths.mjs';
 import { resolveTargets } from './targets.mjs';
+// 🚨 §17 의 fetchRetry 이관 때 **이 한 줄이 빠져 있었다.** 그래서 뉴스 수집이
+//    프로덕션에서 종목마다 `fetchRetry is not defined` 로 죽고 있었다 —
+//    워크플로가 continue-on-error 라 잡은 초록불이었고 아무도 몰랐다.
+import { fetchRetry } from './net.mjs';
 
 const ABS_MAX_CALLS = 60;
 const GAP_MS = 1500;   // 800ms 는 너무 빨랐다 — 간헐적으로 빈 응답이 온다
