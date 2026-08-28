@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-27T00:00:00Z",
+  "generatedAt": "2026-08-28T00:00:00Z",
   "source": "SEC EDGAR",
   "sourceUrl": "https://www.sec.gov/edgar",
-  "usdKrw": 1383.49,
+  "usdKrw": 1380.38,
   "listed": [
     {
       "cik": "0002145659",
@@ -420,6 +420,22 @@
     }
   ],
   "upcoming": [
+    {
+      "cik": "0002076148",
+      "name": "FullPAC, Inc.",
+      "ticker": null,
+      "filedAt": "2026-08-27",
+      "isSpac": false,
+      "sic": "7389",
+      "industry": "기타",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": 1455884,
+        "netIncome": -1923792,
+        "assets": 526395
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002076148&type=S-1"
+    },
     {
       "cik": "0002016072",
       "name": "Velos Acquisition I Corp.",
@@ -1563,22 +1579,6 @@
       "industry": "운수·통신",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002011617&type=S-1"
-    },
-    {
-      "cik": "0002076148",
-      "name": "FullPAC, Inc.",
-      "ticker": null,
-      "filedAt": "2026-07-29",
-      "isSpac": false,
-      "sic": "7389",
-      "industry": "기타",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 1455884,
-        "netIncome": -1923792,
-        "assets": 526395
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002076148&type=S-1"
     },
     {
       "cik": "0002142855",
@@ -2854,17 +2854,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002113481&type=S-1"
     },
     {
-      "cik": "0002133836",
-      "name": "Bridge III Acquisition Ltd",
-      "ticker": "BDDD",
-      "filedAt": "2026-06-15",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002133836&type=S-1"
-    },
-    {
       "cik": "0002023730",
       "name": "Hadron Energy, Inc.",
       "ticker": "HDRN",
@@ -2879,6 +2868,17 @@
         "assets": 211878016
       },
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002023730&type=S-1"
+    },
+    {
+      "cik": "0002133836",
+      "name": "Bridge III Acquisition Ltd",
+      "ticker": "BDDD",
+      "filedAt": "2026-06-15",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002133836&type=S-1"
     },
     {
       "cik": "0001811935",
@@ -3020,6 +3020,17 @@
         "assets": 60845989
       },
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001602409&type=S-1"
+    },
+    {
+      "cik": "0002092574",
+      "name": "Swarmer, Inc",
+      "ticker": "SWMR",
+      "filedAt": "2026-06-10",
+      "isSpac": false,
+      "sic": "7372",
+      "industry": "소프트웨어·IT",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002092574&type=S-1"
     },
     {
       "cik": "0002111009",
@@ -3197,17 +3208,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002104879&type=S-1"
     },
     {
-      "cik": "0002128739",
-      "name": "JAB Acquisition Corp I",
-      "ticker": "JAB",
-      "filedAt": "2026-06-05",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002128739&type=S-1"
-    },
-    {
       "cik": "0002125551",
       "name": "Alpex Acquisition Corp",
       "ticker": "ALPX",
@@ -3239,6 +3239,17 @@
       "industry": "제조",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002110029&type=S-1"
+    },
+    {
+      "cik": "0002128739",
+      "name": "JAB Acquisition Corp I",
+      "ticker": "JAB",
+      "filedAt": "2026-06-05",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002128739&type=S-1"
     },
     {
       "cik": "0002138284",
@@ -3436,87 +3447,6 @@
       "industry": "금융·부동산",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002107730&type=S-1"
-    },
-    {
-      "cik": "0002101470",
-      "name": "Wilco 63 Corp",
-      "ticker": "WLCO",
-      "filedAt": "2026-05-29",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002101470&type=S-1"
-    },
-    {
-      "cik": "0002104177",
-      "name": "Long Table Growth Corp.",
-      "ticker": "LTGR",
-      "filedAt": "2026-05-29",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002104177&type=S-1"
-    },
-    {
-      "cik": "0001283259",
-      "name": "BIOVENTRIX, INC.",
-      "ticker": null,
-      "filedAt": "2026-05-29",
-      "isSpac": false,
-      "sic": "3841",
-      "industry": "제조",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001283259&type=S-1"
-    },
-    {
-      "cik": "0001829247",
-      "name": "BullFrog AI Holdings, Inc.",
-      "ticker": "BFRG",
-      "filedAt": "2026-05-29",
-      "isSpac": false,
-      "sic": "2834",
-      "industry": "제약·바이오",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 116670,
-        "netIncome": -6498068,
-        "assets": 2808351
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001829247&type=S-1"
-    },
-    {
-      "cik": "0001680139",
-      "name": "HealthLynked Corp",
-      "ticker": "HLYK",
-      "filedAt": "2026-05-29",
-      "isSpac": false,
-      "sic": "8011",
-      "industry": "기타",
-      "financials": {
-        "fiscalEnd": "2024-12-31",
-        "revenue": 3008361,
-        "netIncome": -6131479,
-        "assets": 2222989
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001680139&type=S-1"
-    },
-    {
-      "cik": "0001853138",
-      "name": "Kodiak AI, Inc.",
-      "ticker": "KDK",
-      "filedAt": "2026-05-29",
-      "isSpac": false,
-      "sic": "7373",
-      "industry": "소프트웨어·IT",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 3797000,
-        "netIncome": -585525000,
-        "assets": 159407000
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001853138&type=S-1"
     }
   ]
 }
