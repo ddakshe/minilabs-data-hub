@@ -1,0 +1,156 @@
+name: Fetch CPO Local (BMW·포르쉐 · 맥 · 중단됨)
+
+# fetch-cpo.yml 과 짝이다. **같은 listings.json 을 브랜드만 나눠 갱신한다.**
+#   · fetch-cpo.yml  — 8개 브랜드(현대·제네시스·기아·벤츠·볼보·렉서스·아우디·토요타) · ubuntu
+#   · 여기            — BMW·포르쉐 · 이 맥
+#
+# 나눈 이유는 둘이 호스티드 러너에서 **안 되는 이유가 서로 다르기** 때문이다:
+#   BMW     — 실제 Chrome + headed 필수. 번들 Chromium 은 조용히 0건이 된다.
+#   포르쉐  — Vercel 봇 챌린지가 Actions 데이터센터 IP 를 막는다(실측: 51초 타임아웃 후 0건).
+# 8개는 그냥 되므로 무료인 ubuntu 에 두고, 이 둘만 맥으로 가져왔다.
+#
+# ⏸ **스케줄을 꺼둔 채로 만든다 (2026-08-20 중단이 계속됨).**
+#
+#    앱인토스가 "인증중고차 정보 제공 서비스" 자체의 출시를 한시적으로 제한했다.
+#    수수료 모델 검토 중이며 단계적으로 오픈할 예정이라지만 재개 알림은 받을 수 없다.
+#    앱 내용 문제가 아니라 카테고리 정책이라 앱을 고쳐도 달라지지 않는다.
+#    소비 앱(cpo-mini)이 못 나오는 동안 매일 1.3MB diff 를 커밋할 이유가 없고,
+#    되살리는 비용이 12초라 미리 신선하게 둘 값도 없다.
+#
+#    **재개 절차**: 아래 schedule 두 줄과 fetch-cpo.yml 의 schedule 두 줄을 함께 푼다.
+#    10:00 KST 인 이유는 fetch-cpo.yml(09:20 KST) 뒤라서다 — 8개 브랜드 커밋을 pull 한
+#    뒤에 작업하므로 push 거부가 구조적으로 생기지 않는다. 반대 순서면 사람이 충돌을 푼다.
+#
+# ⚠ **아직 러너에서 검증되지 않았다.** 러너는 LaunchAgent + UserName=kyungtaekim 이라
+#    Aqua 세션이고 이론상 headed Chrome 이 뜬다. 다만 실제로 확인한 적이 없다 —
+#    되살릴 때 `gh workflow run fetch-cpo-local.yml -f brands=porsche` 로 먼저
+#    포르쉐(headless)만 돌려보고, 그 다음 bmw 를 붙이는 순서를 권한다.
+#    화면이 잠기면 BMW 는 멈춘다(부분 수집으로 기존과 병합된다).
+
+on:
+  # schedule:
+  #   - cron: '0 1 * * *'   # 매일 10:00 KST — fetch-cpo.yml(09:20) 다음
+  workflow_dispatch:
+    inputs:
+      brands:
+        description: '수집할 브랜드 콤마목록. 기본 bmw,porsche'
+        required: false
+        default: 'bmw,porsche'
+      bmw_max_items:
+        description: 'BMW 상한(기본 400). 렌더러 메모리 벽 때문에 있는 값 — 올리면 중간에 멈춘다'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  # fetch-cpo.yml 과 **같은 그룹**이다. 둘이 같은 listings.json 을 쓰므로 겹쳐 돌면
+  # 나중 것이 앞의 결과를 덮거나 push 가 충돌한다.
+  group: fetch-cpo
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: [self-hosted, macOS, ARM64]
+    # BMW 는 8분 데드라인(BMW_DEADLINE_MS)에 포르쉐가 더해진다. 한 번 54분이 걸린 적이 있어
+    # 넉넉히 주되, 무한정 물고 있지는 않게 한다.
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Show trigger context
+        run: |
+          echo "Brands : ${{ github.event.inputs.brands || 'bmw,porsche' }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+          # headed Chrome 은 로그인된 GUI 세션에서만 뜬다. 러너가 어떤 세션에 있는지 남긴다.
+          echo "GUI session: $(/usr/bin/stat -f%Su /dev/console 2>/dev/null || echo '?')"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install deps
+        run: npm ci
+
+      # BMW 는 **실제 Chrome**(channel: 'chrome')을 쓴다 — 번들 Chromium 은 조용히 0건이다.
+      # 포르쉐·볼보는 번들 Chromium 으로 충분하다.
+      - name: Preflight — 실제 Chrome 확인
+        run: |
+          APP="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+          if [ -x "$APP" ]; then
+            echo "Chrome: $("$APP" --version)"
+          else
+            echo "::warning::실제 Chrome 을 찾지 못했다 — BMW 는 조용히 0건이 된다"
+          fi
+          npx playwright install chromium
+
+      - name: Scrape (Playwright)
+        env:
+          BMW_MAX_ITEMS: ${{ github.event.inputs.bmw_max_items }}
+        run: node scripts/fetch-cpo-pw.mjs "${{ github.event.inputs.brands || 'bmw,porsche' }}"
+
+      # ⚠ 건수로 성패를 판단하면 안 된다. 스크래퍼는 실패 시 **직전 데이터를 유지**하고
+      #   부분 수집이면 병합하므로 byBrand 가 0이 되지 않는다. 볼 곳은 updatedAt 과 failed 다.
+      - name: 브랜드별 신선도 점검
+        run: |
+          node -e "
+          const d = require('./cpo/listings.json')
+          const today = new Intl.DateTimeFormat('sv-SE', { timeZone: 'Asia/Seoul' }).format(new Date())
+          const want = '${{ github.event.inputs.brands || 'bmw,porsche' }}'.split(',').map(s => s.trim())
+          const stale = want.filter(b => (d.brands?.[b]?.updatedAt) !== today)
+          console.log('총 ' + d.total + '건 — ' + Object.entries(d.byBrand).sort((a,b)=>b[1]-a[1]).map(([k,v])=>k+' '+v).join(' · '))
+          if (d.failed?.length) console.log('failed: ' + d.failed.join(', '))
+          if (stale.length) {
+            console.log('::error::오늘 갱신되지 않은 브랜드: ' + stale.map(b => b + ' ' + (d.brands?.[b]?.updatedAt ?? '?')).join(' · '))
+            process.exit(1)
+          }
+          console.log('신선도: 요청한 브랜드 모두 오늘 갱신 ✓')
+          "
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git add cpo/
+          if git diff --cached --quiet -- cpo/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes — skipping commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --cached --stat cpo/
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d %H:%M")
+          git commit -m "chore(cpo): ${{ github.event.inputs.brands || 'bmw,porsche' }} 갱신 ($DATE_KST KST)"
+          git push || (git pull --rebase origin main && git push)
+
+      - name: Purge jsDelivr cache
+        if: steps.diff.outputs.changed == 'true'
+        run: curl -s -o /dev/null "https://purge.jsdelivr.net/gh/ddakshe/minilabs-data-hub@main/cpo/listings.json" || true
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## 인증중고차 (BMW·포르쉐) 수집 결과"
+            echo ""
+            echo "- Brands : \`${{ github.event.inputs.brands || 'bmw,porsche' }}\`"
+            echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
+            echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+            echo ""
+            if [ -f cpo/listings.json ]; then
+              echo '```'
+              node -e "const d=require('./cpo/listings.json');console.log('total',d.total);console.log(Object.entries(d.byBrand).sort((a,b)=>b[1]-a[1]).map(([k,v])=>k+' '+v).join(' · '));if(d.failed?.length)console.log('failed:',d.failed.join(', '))"
+              echo '```'
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"

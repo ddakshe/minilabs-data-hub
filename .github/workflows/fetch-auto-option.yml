@@ -28,10 +28,6 @@ jobs:
         with:
           node-version: '20'
 
-      # PDF 를 텍스트로 뽑는 데 필요하다. npm 의존성은 없다.
-      - name: Install poppler
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
-
       - name: Show trigger context
         run: |
           echo "Event : ${{ github.event_name }}"
@@ -50,6 +46,12 @@ jobs:
           else
             echo "바뀐 차종: $CHANGED"
           fi
+
+      # 파싱할 게 있을 때만 깐다. 아무것도 안 바뀐 달에는 7초를 버릴 이유가 없다 —
+      # 주소 조회 전체가 4초인데 설치가 더 오래 걸린다.
+      - name: Install poppler
+        if: steps.sources.outputs.changed != ''
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
 
       # 2단계 — 바뀐 차종만 받아서 파싱한다. 나머지는 이전 결과를 그대로 옮긴다.
       # PDF 30개는 75MB 다. 한 차종만 바뀌었는데 전부 받을 이유가 없다.
