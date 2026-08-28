@@ -408,6 +408,14 @@ async function buildTvingUpcoming(limit = 10) {
   // 제목만 dedup 하고 날짜는 별도 배열에서 같은 인덱스로 꺼내면 짝이 밀린다 —
   // 날짜는 중복이 남아 있기 때문이다. 그래서 제목이 나온 위치부터 앞을 훑어
   // 그 카드에 속한 "공개일" 을 집는다(DOM 순서상 제목 뒤에 온다).
+  // 포스터는 카드 안에서 제목보다 앞에 온다 — 제목 직전의 이미지가 그 카드 것이다.
+  // src 가 HTML 속성이라 쿼리의 & 가 &amp; 로 이스케이프돼 있다. 풀지 않으면
+  // ?width=480&amp;height=693 이 그대로 요청돼 400 이 난다.
+  const imgs = [...seg.matchAll(/<img[^>]+src="(https:\/\/framerusercontent[^"]+)"/g)].map((m) => ({
+    at: m.index,
+    url: m[1].replace(/&amp;/g, "&"),
+  }));
+
   const seen = new Set();
   const items = [];
   for (const m of seg.matchAll(/<h3[^>]*>([\s\S]*?)<\/h3>/g)) {
@@ -415,6 +423,7 @@ async function buildTvingUpcoming(limit = 10) {
     if (!title || title.includes("오픈 예정 콘텐츠")) continue; // 섹션 제목 자신
     if (seen.has(title)) continue;
     seen.add(title);
+    const poster = imgs.filter((g) => g.at < m.index).pop()?.url;
     const after = seg.slice(m.index, m.index + 2500);
     // "2026. 9. 10." → 2026-09-10. "9월"·"미정" 은 그대로 둔다(원문이 확정 아님).
     const raw = stripTags((after.match(/공개일[\s\S]{0,400}?<p[^>]*>([\s\S]{0,40}?)<\/p>/) || [])[1] ?? "");
@@ -422,6 +431,7 @@ async function buildTvingUpcoming(limit = 10) {
     items.push({
       rank: items.length + 1,
       title,
+      poster,
       extra: compactExtra({
         releaseDate: md ? `${md[1]}-${md[2].padStart(2, "0")}-${md[3].padStart(2, "0")}` : undefined,
         releaseText: md ? undefined : raw || undefined,
