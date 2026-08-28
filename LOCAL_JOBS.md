@@ -17,20 +17,27 @@
 
 ---
 
-## 1. 인증중고차 — BMW · 포르쉐
+## ~~1. 인증중고차 — BMW · 포르쉐~~ → CI 로 옮겼다 (2026-08-28 · 스케줄 꺼둠)
 
-```yaml
-id: cpo
-repo: minilabs-data-hub
-command: ./refresh-cpo.sh
-schedule: on-demand        # ⏸ 2026-08-20 중단 — 아래 사유
-prefer_time: "10:00 KST"
-reason: gui-browser, bot-block
-outputs: cpo/listings.json
-consumers: [cpo-mini]
-```
+**yaml 블록을 지웠다.** `fetch-cpo-local.yml` 이 같은 일을 하는데 블록을 남겨두면
+대시보드에 **같은 작업이 두 줄로** 보인다(`Fetch CPO Local` 과 `cpo`). 실제로 그렇게 됐다.
 
-### ⏸ 2026-08-20 중단
+지금 cpo 는 워크플로 두 개로 나뉘어 있고 **둘 다 스케줄이 꺼져 있다**:
+
+| 워크플로 | 브랜드 | 러너 | 호스티드에서 안 되는 이유 |
+|---|---|---|---|
+| `fetch-cpo.yml` | 8개(현대·제네시스·기아·벤츠·볼보·렉서스·아우디·토요타) | ubuntu | — 잘 된다 |
+| `fetch-cpo-local.yml` | BMW · 포르쉐 | **맥** | BMW: headed Chrome 필수 / 포르쉐: 봇 차단 |
+
+⚠ **`fetch-cpo-local.yml` 은 러너에서 검증되지 않았다.** 러너가 LaunchAgent +
+`UserName=kyungtaekim` 이라 Aqua 세션이고 이론상 headed Chrome 이 뜨지만, 확인한 적이 없다.
+앱이 멈춰 있어 검증에 시간을 쓸 이유가 없었다.
+**되살릴 때 포르쉐(headless)부터 돌려 워크플로 골자를 확인하고, 그 다음 BMW 를 붙일 것.**
+그것마저 안 되면 `./refresh-cpo.sh` 가 그대로 남아 있다(손으로 돌리는 원래 경로).
+
+### ⏸ 2026-08-20 중단 · 🔴 심사 거절
+
+**앱 심사가 거절된 상태다** (2026-08-28 확인). 나중에 다시 쓸 가능성은 있다.
 
 앱인토스가 **"인증중고차 정보 제공 서비스" 자체의 출시를 한시적으로 제한**했다.
 수수료 모델을 검토 중이며 단계적으로 오픈할 예정이라고 하지만, **재개 알림은 받을 수 없다.**
@@ -40,13 +47,15 @@ consumers: [cpo-mini]
 
 - **CI(8개 브랜드)도 스케줄을 껐다** — `.github/workflows/fetch-cpo.yml`.
   매일 1.3MB diff 를 커밋할 이유가 없고, 되살리는 비용이 12초라 미리 신선하게 둘 값이 없다.
-- **이 작업(BMW·포르쉐)은 `on-demand`** — 자동으로 잡히지 않는다.
+- **BMW·포르쉐 워크플로도 스케줄을 껐다** — `.github/workflows/fetch-cpo-local.yml`.
 
-**재개 절차** (카테고리가 열리면):
+**재개 절차** (카테고리가 열리고 심사를 통과하면):
 
-1. `schedule: on-demand` → `daily` 로 되돌린다
-2. `.github/workflows/fetch-cpo.yml` 의 `schedule` 두 줄 주석을 푼다
-3. `./run-local-jobs.sh cpo` 를 한 번 돌려 BMW·포르쉐를 채운다
+1. `.github/workflows/fetch-cpo.yml` 의 `schedule` 두 줄 주석을 푼다 (8개 브랜드 · 09:20 KST)
+2. `gh workflow run fetch-cpo-local.yml -f brands=porsche` 로 워크플로를 먼저 검증한다
+   → 되면 `-f brands=bmw` 로 headed Chrome 까지 확인하고,
+     `fetch-cpo-local.yml` 의 `schedule` 두 줄 주석을 푼다 (10:00 KST — 8개 브랜드 다음)
+   → 안 되면 `./refresh-cpo.sh` 로 손으로 돌린다
 4. 앱에서 `npm run build && npm run preview && npm run screenshot` 로 스크린샷을 다시 찍는다
    (데이터가 바뀌었을 테니 제출물도 새로 찍어야 한다)
 
