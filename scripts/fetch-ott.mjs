@@ -91,6 +91,49 @@ async function fetchOgMeta(url, headers = {}) {
   };
 }
 
+// 직전 산출물의 watchUrl → extra. 조회가 실패한 항목이 빈 채로 저장되면
+// 다음 실행에 다시 채워지면서 매번 diff 가 생긴다 — 이전 값을 깔아 그걸 막는다(래칫).
+function previousExtraByWatchUrl(service) {
+  const map = new Map();
+  try {
+    const path = resolve(ROOT, "ott", `${service}.json`);
+    if (!existsSync(path)) return map;
+    const prev = JSON.parse(readFileSync(path, "utf-8"));
+    for (const g of prev.groups ?? []) {
+      for (const it of g.items ?? []) {
+        if (it.watchUrl && it.extra) map.set(it.watchUrl, it.extra);
+      }
+    }
+  } catch {
+    /* 없으면 없는 대로 */
+  }
+  return map;
+}
+
+// 항목의 watchUrl 페이지를 열어 og:description 을 줄거리로 채운다.
+// 디즈니+·티빙이 같은 방식이라 공통으로 뺐다. 순차 + 간격 — 한 번에 때리지 않는다.
+// 개별 실패는 삼킨다. 줄거리 없는 항목은 앱이 알아서 생략하므로 전체를 막을 이유가 없다.
+async function enrichSynopsisFromWatchUrl(service, items, { delay = 400 } = {}) {
+  const prev = previousExtraByWatchUrl(service);
+  for (const it of items) {
+    if (!it.watchUrl) continue;
+    const carried = prev.get(it.watchUrl);
+    if (carried?.synopsis) it.extra = { ...(it.extra ?? {}), ...carried };
+    if (it.extra?.synopsis) continue;
+    try {
+      const og = await fetchOgMeta(it.watchUrl);
+      if (og.description) {
+        it.extra = { ...(it.extra ?? {}), synopsis: og.description, source: service };
+      }
+    } catch {
+      /* 이 항목만 줄거리 없이 간다 */
+    }
+    await sleep(delay);
+  }
+  const n = items.filter((it) => it.extra?.synopsis).length;
+  console.log(`  · 줄거리 ${n}/${items.length}`);
+}
+
 async function fetchText(url) {
   const res = await fetch(url, { headers: { "User-Agent": UA } });
   if (!res.ok) throw new Error(`HTTP ${res.status} — ${url}`);
@@ -284,8 +327,40 @@ async function buildLaftel() {
     title: it.name,
     poster: it.img || it.images?.[0]?.img_url || undefined,
     watchUrl: `https://laftel.net/item/${it.id}`,
-    extra: { genre: (it.genres ?? []).slice(0, 2).join("·") || undefined },
+    // genre 는 기존 앱이 카드에 쓰던 필드라 그대로 두고, 나머지를 옆에 붙인다.
+    extra: compactExtra({
+      genre: (it.genres ?? []).slice(0, 2).join("·"),
+      genres: (it.genres ?? []).slice(0, 4),
+      ageRating: it.content_rating,
+      source: "laftel",
+    }),
   }));
+
+  // 줄거리는 랭킹 응답에 없고 detail API 에만 있다. 항목당 1건.
+  const prev = previousExtraByWatchUrl("laftel");
+  for (const [i, it] of items.entries()) {
+    const carried = prev.get(it.watchUrl);
+    if (carried?.synopsis) {
+      it.extra = { ...(it.extra ?? {}), synopsis: carried.synopsis };
+      continue;
+    }
+    try {
+      const d = await fetchJson(`https://api.laftel.net/api/items/v1/${arr[i].id}/`, {
+        Accept: "application/json, text/plain, */*",
+        Referer: "https://laftel.net/",
+      });
+      it.extra = compactExtra({
+        ...(it.extra ?? {}),
+        synopsis: (d.content || "").trim(),
+        tags: (d.tags ?? []).map((t) => t.name ?? t).filter(Boolean).slice(0, 5),
+        rating: d.avg_rating,
+      });
+    } catch {
+      /* 이 항목만 줄거리 없이 간다 */
+    }
+    await sleep(300);
+  }
+  console.log(`  · 줄거리 ${items.filter((it) => it.extra?.synopsis).length}/${items.length}`);
 
   return {
     service: "laftel",
@@ -331,6 +406,9 @@ async function buildTving() {
     poster: it.imageUrl || undefined,
     watchUrl: `https://www.tving.com/contents/${it.code}`,
   }));
+
+  // 랭킹 밴드에는 줄거리가 없다. 콘텐츠 페이지를 한 번씩 더 열어 og:description 을 쓴다.
+  await enrichSynopsisFromWatchUrl("tving", items);
 
   return {
     service: "tving",
@@ -423,6 +501,9 @@ async function buildDisney() {
       watchUrl: `https://www.disneyplus.com${c.url}`,
     };
   });
+
+  // 랜딩 카드에는 제목·이미지·URL 뿐이라, 각 엔티티 페이지를 한 번씩 더 열어 줄거리를 얻는다.
+  await enrichSynopsisFromWatchUrl("disney", items);
 
   return {
     service: "disney",
