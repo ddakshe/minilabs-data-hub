@@ -33,6 +33,9 @@ jobs:
       github.event_name == 'workflow_dispatch' ||
       github.event.workflow_run.conclusion == 'failure'
     runs-on: ubuntu-latest
+    # 에이전트가 헤매면 무료 할당량을 그대로 태운다. 점검 실행이 12분 걸린 적이 있다.
+    # 20분 안에 못 끝낼 복구라면 사람이 봐야 하는 문제다.
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v4

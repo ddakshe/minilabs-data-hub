@@ -1,5 +1,5 @@
 /*
- * KOSIS Open API → cancer-cover/{cancers,incidence,costs,meta}.json
+ * KOSIS Open API → cancer-cover/{cancers,incidence,costs,survival,meta}.json
  *
  * 사용법:
  *   KOSIS_API_KEY=xxx node scripts/fetch-cancer-cover.mjs
@@ -256,13 +256,59 @@ function buildCosts(inpatient, outpatient) {
   }
 }
 
+// ── 5년 상대생존율 ────────────────────────────────────────────────
+
+/*
+ * 왜 담나. 이 앱은 "암 걸리면 5천만 원 듭니다" 식 공포 마케팅의 반대편에 서 있는데,
+ * 그 주장을 받쳐주는 가장 강한 공식 숫자가 생존율이다. 그리고 생존율이 높다는 것은
+ * **살아서 생활을 이어간다**는 뜻이라, 필요한 돈이 장례비가 아니라 치료하는 동안
+ * 먹고살 돈이라는 앱의 재해석과 정확히 이어진다.
+ *
+ * 진단시기 축(C3)은 순서대로 오지 않는다 — 응답 첫 값이 2006-2010년이고 최신이
+ * 뒤에 섞여 있다. 라벨의 끝 연도로 정렬해 최신·최초를 고른다.
+ */
+const ITM_SURVIVAL = '5년 상대생존율'
+
+function buildSurvival(rows) {
+  const endYear = (label) => Number(String(label).match(/(\d{4})년?\s*$/)?.[1] ?? 0)
+  const periods = [...new Set(rows.map((r) => r.C3_NM))].sort((a, b) => endYear(a) - endYear(b))
+  const latest = periods.at(-1)
+  const first = periods[0]
+  if (!latest || !first || latest === first) throw new Error('생존율 진단시기 축 이상: ' + periods.join('/'))
+
+  /* 성별로 나누지 않고 '계'만 담는다. 성별 생존율 차이는 암종 구성 차이가 크고,
+   * 앱이 그 해석을 설명할 수 없다. 화면은 암종별 한 값만 쓴다. */
+  const pick = (site, period) =>
+    num(rows.find(
+      (r) => r.ITM_NM === ITM_SURVIVAL && r.C2_NM === '계' && r.C3_NM === period && stripIcd(r.C1_NM) === site
+    )?.DT)
+
+  const survival = {}
+  for (const c of CANCERS) {
+    const now = pick(c.kosis, latest)
+    if (now === null) continue // 해당 암종이 표에 없으면 비운다. 지어내지 않는다
+    survival[c.id] = { latest: now, past: pick(c.kosis, first) }
+  }
+  survival.all = { latest: pick(ALL_CANCERS, latest), past: pick(ALL_CANCERS, first) }
+
+  return {
+    source: 'KOSIS 117 / DT_117N_A00021 — 24개 암종·성별 5년 상대생존율',
+    sourceShort: '국가암등록통계 5년 상대생존율',
+    period: latest,
+    pastPeriod: first,
+    unit: '%',
+    note: '상대생존율은 같은 나이·성별 일반인구 대비 생존 비율이라 100%를 넘을 수 있다(갑상선).',
+    survival,
+  }
+}
+
 // ── 검증 ──────────────────────────────────────────────────────────
 
 /*
  * 쓰기 전에 구조를 본다. 이 도메인의 실패는 전부 "예외 없이 조용히 빈 값"이라
  * 파일이 정상 생성되고 앱 화면에서야 드러난다. 여기서 죽어야 잘못된 값이 커밋되지 않는다.
  */
-function validate(incidence, costs) {
+function validate(incidence, costs, survival) {
   const fail = []
 
   for (const sex of SEXES) {
@@ -290,6 +336,14 @@ function validate(incidence, costs) {
     if (!c.basis) fail.push(`basis 없음: ${id}`)
   }
 
+  /* 생존율은 0~110% 안에 있어야 한다. 상대생존율이라 100%를 조금 넘을 수 있지만
+   * (갑상선 100.2) 그 밖의 값이면 축을 잘못 읽은 것이다. */
+  const survCount = Object.keys(survival.survival).length
+  if (survCount < CANCERS.length - 3) fail.push(`생존율 누락 과다: ${survCount}/${CANCERS.length + 1}`)
+  for (const [id, v] of Object.entries(survival.survival)) {
+    if (!(v.latest >= 0 && v.latest <= 110)) fail.push(`생존율 범위 이상: ${id} = ${v.latest}`)
+  }
+
   /* 연도가 뒤로 갈 수 없다. 표가 개편돼 옛 연도가 오면 앱이 조용히 과거로 돌아간다. */
   const nowYear = new Date().getFullYear()
   if (incidence.year < 2020 || incidence.year > nowYear) fail.push(`발생률 연도 이상: ${incidence.year}`)
@@ -310,25 +364,32 @@ async function write(name, data) {
   console.log(`  ${name.padEnd(16)} ${(Buffer.byteLength(json) / 1024).toFixed(1).padStart(6)} KB`)
 }
 
-const [incidenceRows, inpatientRows, outpatientRows] = await Promise.all([
+const [incidenceRows, inpatientRows, outpatientRows, survivalRows] = await Promise.all([
   kosis({ orgId: '117', tblId: 'DT_117N_A00023', itmId: '16117AC000107+16117ac000101', objL1: 'ALL', objL2: 'ALL', objL3: 'ALL' }),
   kosis({ orgId: '354', tblId: 'DT_LEE_61', itmId: 'T001+T002', objL1: 'ALL', objL2: 'ALL' }),
   kosis({ orgId: '354', tblId: 'DT_LEE_62', itmId: 'T001+T002', objL1: 'ALL', objL2: 'ALL' }),
+  kosis({ orgId: '117', tblId: 'DT_117N_A00021', itmId: 'ALL', objL1: 'ALL', objL2: 'ALL', objL3: 'ALL' }),
 ])
-console.log(`KOSIS 응답: 발생률 ${incidenceRows.length}행 · 입원 ${inpatientRows.length}행 · 외래 ${outpatientRows.length}행`)
+console.log(
+  `KOSIS 응답: 발생률 ${incidenceRows.length}행 · 입원 ${inpatientRows.length}행 · ` +
+    `외래 ${outpatientRows.length}행 · 생존율 ${survivalRows.length}행`
+)
 
 const incidence = buildIncidence(incidenceRows)
 const costs = buildCosts(inpatientRows, outpatientRows)
-validate(incidence, costs)
+const survival = buildSurvival(survivalRows)
+validate(incidence, costs, survival)
 
 await fs.mkdir(OUT_DIR, { recursive: true })
 await write('cancers.json', { cancers: CANCERS.map(({ id, label }) => ({ id, label })) })
 await write('incidence.json', incidence)
 await write('costs.json', costs)
+await write('survival.json', survival)
 await write('meta.json', {
   updatedAt: new Date().toISOString().slice(0, 10),
   incidenceYear: incidence.year,
   costsYear: costs.year,
+  survivalPeriod: survival.period,
   cancers: CANCERS.length,
   /* 진료비를 비운 암종과 그 이유. 지우지 말 것 — 없으면 다음 사람이 같은 조사를 다시 한다. */
   costsSkipped: CANCERS.filter((c) => !c.hira).map((c) => ({
