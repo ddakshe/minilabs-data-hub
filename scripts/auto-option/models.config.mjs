@@ -73,7 +73,12 @@ const kia = (...slugs) => ({
 const hyundai = (...slugs) => ({
   base: 'https://www.hyundai.com/contents/repn-car/catalog',
   names: (s, y) => {
-    const stems = [s, `the-new-${s}`, `the-all-new-${s}`];
+    /*
+      -pe 는 product enhancement(페이스리프트) 다. 더 뉴 아이오닉 6 가격표가
+      ioniq6-pe_price.pdf 에 있는데 이 축을 안 보다가 2022년 출시 초기형의
+      2023년 가격표를 쓰고 있었다. 페이스리프트는 반복되는 관례라 규칙으로 둔다.
+    */
+    const stems = [s, `the-new-${s}`, `the-all-new-${s}`, `${s}-pe`];
     const tail = y ? `-${y}` : '';
     return stems.flatMap((stem) => [`${stem}${tail}-price.pdf`, `${stem}${tail}_price.pdf`]);
   },
