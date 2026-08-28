@@ -180,11 +180,35 @@ function loadKeys() {
   return JSON.parse(raw);
 }
 
+/**
+ * 연결이 실패하면 잠시 쉬고 다시 시도한다.
+ *
+ * ⚠ AbortSignal.timeout 만으로는 부족하다. 실제로 죽은 방식은
+ * `ConnectTimeoutError (attempted address: www.consumer.go.kr:443, timeout: 10000ms)` 였는데,
+ * 이건 undici 의 **연결(connect) 타임아웃**이라 요청 전체에 거는 AbortSignal 이 닿지 않는다.
+ * 소비자24가 간헐적으로 해외(Actions) IP 에 늦게 응답하는 것이라 재시도 말고 손쓸 방법이 없다.
+ */
+async function fetchRetry(url, tries = 4) {
+  let last;
+  for (let i = 0; i < tries; i++) {
+    try {
+      return await fetch(url, { signal: AbortSignal.timeout(30000) });
+    } catch (e) {
+      last = e;
+      if (i === tries - 1) break;
+      const wait = 2000 * 2 ** i; // 2s → 4s → 8s
+      console.warn(`  ⚠ 연결 실패 (${e.cause?.code ?? e.name}) — ${wait / 1000}초 뒤 재시도 ${i + 2}/${tries}`);
+      await new Promise((r) => setTimeout(r, wait));
+    }
+  }
+  throw last;
+}
+
 async function fetchPage(cat, key, page) {
   const url =
     `${ENDPOINT}?serviceKey=${key}&pageNo=${page}&cntPerPage=${PER_PAGE}&cntntsId=${cat.id}`;
 
-  const res = await fetch(url, { signal: AbortSignal.timeout(30000) });
+  const res = await fetchRetry(url);
   if (!res.ok) throw new Error(`${cat.name} p${page}: HTTP ${res.status}`);
 
   const xml = await res.text();

@@ -16,8 +16,30 @@ export const PAGE = KEY === 'sample' ? 10 : 1000;
 
 export const usingSampleKey = KEY === 'sample';
 
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+/**
+ * ECOS 는 간헐적으로 연결 자체가 실패한다(실측: 08-21·08-27 각 1회 `TypeError: fetch failed`).
+ * 하루 한 번 도는 수집이라 한 번 놓치면 그날 환율이 통째로 빈다. 재시도가 가장 싼 방어다.
+ */
+async function fetchRetry(url, tries = 4) {
+  let last;
+  for (let i = 0; i < tries; i++) {
+    try {
+      return await fetch(url, { signal: AbortSignal.timeout(30000) });
+    } catch (e) {
+      last = e;
+      if (i === tries - 1) break;
+      const wait = 2000 * 2 ** i;
+      console.warn(`  ⚠ ECOS 연결 실패 (${e.cause?.code ?? e.name}) — ${wait / 1000}초 뒤 재시도 ${i + 2}/${tries}`);
+      await sleep(wait);
+    }
+  }
+  throw last;
+}
+
 async function call(path) {
-  const res = await fetch(`${BASE}/${path}`);
+  const res = await fetchRetry(`${BASE}/${path}`);
   if (!res.ok) throw new Error(`ECOS ${res.status}: ${path}`);
   const json = await res.json();
   const key = Object.keys(json)[0];
@@ -32,7 +54,6 @@ async function call(path) {
   return { total: json[key].list_total_count, rows: json[key].row ?? [] };
 }
 
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 /**
  * ERROR-602(3분간 300회 초과)는 **키 단위**로 걸린다. 실제 키로 이 수집기는 40회 안팎만
