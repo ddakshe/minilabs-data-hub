@@ -1,0 +1,101 @@
+{
+  "code": "119850",
+  "name": "지엔씨에너지",
+  "market": "KOSDAQ",
+  "basDt": "20260602",
+  "price": {
+    "code": "119850",
+    "name": "지엔씨에너지",
+    "market": "KOSDAQ",
+    "basDt": "20260602",
+    "close": 21100,
+    "vs": -850,
+    "fltRt": -3.87,
+    "open": 21750,
+    "high": 21800,
+    "low": 20150,
+    "prevClose": 21950,
+    "volume": 199037,
+    "tradeValue": 4128676200,
+    "week52": {
+      "low": 21100,
+      "high": 43950,
+      "position": 0,
+      "days": 244,
+      "from": "20250602"
+    },
+    "recent5": [
+      {
+        "basDt": "20260527",
+        "fltRt": -8.41,
+        "open": 27450,
+        "high": 27600,
+        "low": 24600,
+        "close": 25050
+      },
+      {
+        "basDt": "20260528",
+        "fltRt": -3.79,
+        "open": 25050,
+        "high": 25200,
+        "low": 23000,
+        "close": 24100
+      },
+      {
+        "basDt": "20260529",
+        "fltRt": -5.81,
+        "open": 24400,
+        "high": 24450,
+        "low": 21550,
+        "close": 22700
+      },
+      {
+        "basDt": "20260601",
+        "fltRt": -3.3,
+        "open": 22200,
+        "high": 23300,
+        "low": 21600,
+        "close": 21950
+      },
+      {
+        "basDt": "20260602",
+        "fltRt": -3.87,
+        "open": 21750,
+        "high": 21800,
+        "low": 20150,
+        "close": 21100
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 257119,
+      "ratio": 0.77
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-28T06:08:25.997Z"
+  },
+  "facts": [
+    "코스닥보다 1.58%p 낮았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가보다 650원 낮게 마감했어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 1026.03,
+    "vs": -24,
+    "fltRt": -2.29
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null,
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-08-28T06:08:25.997Z"
+}

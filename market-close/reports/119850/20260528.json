@@ -1,0 +1,101 @@
+{
+  "code": "119850",
+  "name": "지엔씨에너지",
+  "market": "KOSDAQ",
+  "basDt": "20260528",
+  "price": {
+    "code": "119850",
+    "name": "지엔씨에너지",
+    "market": "KOSDAQ",
+    "basDt": "20260528",
+    "close": 24100,
+    "vs": -950,
+    "fltRt": -3.79,
+    "open": 25050,
+    "high": 25200,
+    "low": 23000,
+    "prevClose": 25050,
+    "volume": 226956,
+    "tradeValue": 5372506375,
+    "week52": {
+      "low": 24100,
+      "high": 43950,
+      "position": 0,
+      "days": 244,
+      "from": "20250528"
+    },
+    "recent5": [
+      {
+        "basDt": "20260521",
+        "fltRt": 8,
+        "open": 26100,
+        "high": 27450,
+        "low": 25800,
+        "close": 27000
+      },
+      {
+        "basDt": "20260522",
+        "fltRt": 2.96,
+        "open": 27100,
+        "high": 28150,
+        "low": 27100,
+        "close": 27800
+      },
+      {
+        "basDt": "20260526",
+        "fltRt": -1.62,
+        "open": 29000,
+        "high": 29050,
+        "low": 27250,
+        "close": 27350
+      },
+      {
+        "basDt": "20260527",
+        "fltRt": -8.41,
+        "open": 27450,
+        "high": 27600,
+        "low": 24600,
+        "close": 25050
+      },
+      {
+        "basDt": "20260528",
+        "fltRt": -3.79,
+        "open": 25050,
+        "high": 25200,
+        "low": 23000,
+        "close": 24100
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 253505,
+      "ratio": 0.9
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-28T06:08:25.997Z"
+  },
+  "facts": [
+    "코스닥보다 1.25%p 낮았어요.",
+    "거래량은 20일 평균의 0.9배예요.",
+    "시가보다 950원 낮게 마감했어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 1104.36,
+    "vs": -28.77,
+    "fltRt": -2.54
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null,
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-08-28T06:08:25.997Z"
+}

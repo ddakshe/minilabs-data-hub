@@ -1,0 +1,98 @@
+{
+  "code": "246720",
+  "name": "아스타",
+  "market": "KOSDAQ",
+  "basDt": "20260812",
+  "price": {
+    "code": "246720",
+    "name": "아스타",
+    "market": "KOSDAQ",
+    "basDt": "20260812",
+    "close": 6070,
+    "vs": 0,
+    "fltRt": 0,
+    "open": null,
+    "high": null,
+    "low": null,
+    "prevClose": 6070,
+    "volume": 0,
+    "tradeValue": 0,
+    "week52": {
+      "low": 5800,
+      "high": 10980,
+      "position": 0.052123552123552123,
+      "days": 244,
+      "from": "20250812"
+    },
+    "recent5": [
+      {
+        "basDt": "20260806",
+        "fltRt": 0,
+        "open": null,
+        "high": null,
+        "low": null,
+        "close": 6070
+      },
+      {
+        "basDt": "20260807",
+        "fltRt": 0,
+        "open": null,
+        "high": null,
+        "low": null,
+        "close": 6070
+      },
+      {
+        "basDt": "20260810",
+        "fltRt": 0,
+        "open": null,
+        "high": null,
+        "low": null,
+        "close": 6070
+      },
+      {
+        "basDt": "20260811",
+        "fltRt": 0,
+        "open": null,
+        "high": null,
+        "low": null,
+        "close": 6070
+      },
+      {
+        "basDt": "20260812",
+        "fltRt": 0,
+        "open": null,
+        "high": null,
+        "low": null,
+        "close": 6070
+      }
+    ],
+    "volumeVs20d": null,
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-28T06:08:26.025Z"
+  },
+  "facts": [
+    "코스닥보다 0.12%p 낮았어요.",
+    "1년 범위의 아래로부터 5% 지점이에요.",
+    "최근 5일 중 0일 올랐어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 858.91,
+    "vs": 1.07,
+    "fltRt": 0.12
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null,
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-08-28T06:08:26.025Z"
+}

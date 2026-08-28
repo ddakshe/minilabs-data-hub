@@ -1,0 +1,126 @@
+{
+  "code": "246720",
+  "name": "아스타",
+  "market": "KOSDAQ",
+  "basDt": "20260827",
+  "price": {
+    "code": "246720",
+    "name": "아스타",
+    "market": "KOSDAQ",
+    "basDt": "20260827",
+    "close": 6070,
+    "vs": 0,
+    "fltRt": 0,
+    "open": null,
+    "high": null,
+    "low": null,
+    "prevClose": 6070,
+    "volume": 0,
+    "tradeValue": 0,
+    "week52": {
+      "low": 5800,
+      "high": 10980,
+      "position": 0.052123552123552123,
+      "days": 244,
+      "from": "20250827"
+    },
+    "recent5": [
+      {
+        "basDt": "20260821",
+        "fltRt": 0,
+        "open": null,
+        "high": null,
+        "low": null,
+        "close": 6070
+      },
+      {
+        "basDt": "20260824",
+        "fltRt": 0,
+        "open": null,
+        "high": null,
+        "low": null,
+        "close": 6070
+      },
+      {
+        "basDt": "20260825",
+        "fltRt": 0,
+        "open": null,
+        "high": null,
+        "low": null,
+        "close": 6070
+      },
+      {
+        "basDt": "20260826",
+        "fltRt": 0,
+        "open": null,
+        "high": null,
+        "low": null,
+        "close": 6070
+      },
+      {
+        "basDt": "20260827",
+        "fltRt": 0,
+        "open": null,
+        "high": null,
+        "low": null,
+        "close": 6070
+      }
+    ],
+    "volumeVs20d": null,
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-28T06:08:17.206Z"
+  },
+  "facts": [
+    "코스닥보다 1.3%p 낮았어요.",
+    "1년 범위의 아래로부터 5% 지점이에요.",
+    "최근 5일 중 0일 올랐어요."
+  ],
+  "news": [
+    {
+      "title": "아스타 에너지 주가, 오늘 급등한 이유?",
+      "source": "Investing.com 한국어",
+      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBZTlhBazQwS21LQi1uRGdQUVdYSkVRQkNPN0JHMS0zcUZ3MUZJM3lJSndxUl9VWUZHVklWQXFKSnpWV0lrcWdEOUI2R0pqczlwR0JNTy1RTWVMM1Z3c3ZQVUxIOEo2QTBYN3JRdnk4eVBBVHUxN2lB?oc=5",
+      "publishedAt": "2026-08-27T08:46:00.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20260623",
+      "holder": "에스디바이오센서",
+      "ratio": 38.62,
+      "ratioChange": 0,
+      "reason": "보유주식등에 관한 계약 내용 변경",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260623000217"
+    },
+    {
+      "kind": "major",
+      "date": "20260623",
+      "holder": "조응준",
+      "ratio": 31.97,
+      "ratioChange": 0,
+      "reason": "주식양수도 계약체결 종결일 변경으로 인한 계약기간 정정",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260623000229"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 837.65,
+    "vs": 10.78,
+    "fltRt": 1.3
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-08-28T06:08:26.026Z"
+}

@@ -1,0 +1,101 @@
+{
+  "code": "246720",
+  "name": "아스타",
+  "market": "KOSDAQ",
+  "basDt": "20260309",
+  "price": {
+    "code": "246720",
+    "name": "아스타",
+    "market": "KOSDAQ",
+    "basDt": "20260309",
+    "close": 7450,
+    "vs": -30,
+    "fltRt": -0.4,
+    "open": 7280,
+    "high": 7450,
+    "low": 6900,
+    "prevClose": 7480,
+    "volume": 23990,
+    "tradeValue": 172085360,
+    "week52": {
+      "low": 4015,
+      "high": 10980,
+      "position": 0.49318018664752333,
+      "days": 243,
+      "from": "20250310"
+    },
+    "recent5": [
+      {
+        "basDt": "20260303",
+        "fltRt": -5.63,
+        "open": 7440,
+        "high": 7440,
+        "low": 7000,
+        "close": 7040
+      },
+      {
+        "basDt": "20260304",
+        "fltRt": -6.96,
+        "open": 6850,
+        "high": 6930,
+        "low": 6350,
+        "close": 6550
+      },
+      {
+        "basDt": "20260305",
+        "fltRt": 17.56,
+        "open": 6740,
+        "high": 7780,
+        "low": 6730,
+        "close": 7700
+      },
+      {
+        "basDt": "20260306",
+        "fltRt": -2.86,
+        "open": 7600,
+        "high": 7700,
+        "low": 7200,
+        "close": 7480
+      },
+      {
+        "basDt": "20260309",
+        "fltRt": -0.4,
+        "open": 7280,
+        "high": 7450,
+        "low": 6900,
+        "close": 7450
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 141044,
+      "ratio": 0.17
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-28T06:08:26.014Z"
+  },
+  "facts": [
+    "코스닥보다 4.14%p 높았어요.",
+    "거래량은 20일 평균의 0.2배예요.",
+    "시가보다 170원 높게 마감했어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 1102.28,
+    "vs": -52.39,
+    "fltRt": -4.54
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null,
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-08-28T06:08:26.014Z"
+}
