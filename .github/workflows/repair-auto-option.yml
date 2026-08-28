@@ -83,6 +83,10 @@ jobs:
         uses: google-github-actions/run-gemini-cli@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Gemini CLI 는 "신뢰하는 폴더" 가 아니면 YOLO(자동 승인)를 끄고 default 로
+          # 되돌린다. 헤드리스에서는 승인해 줄 사람이 없어 그대로 죽는다.
+          # CI 러너는 우리가 체크아웃한 우리 저장소뿐이므로 신뢰해도 된다.
+          GEMINI_CLI_TRUST_WORKSPACE: 'true'
         with:
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
           prompt: |
