@@ -29,6 +29,12 @@ const TVING_RANKING_PAGE = "https://www.tving.com/";
 const DISNEY_PAGE = "https://www.disneyplus.com/ko-kr";
 // 쿠팡플레이 랜딩. __NEXT_DATA__ props.pageProps.top20Rail 에 "이번 주 TOP 20" 랭킹 SSR됨.
 const COUPANG_PAGE = "https://www.coupangplay.com/";
+// 넷플릭스 공식 신규/공개예정. __NEXT_DATA__ 에 title1·startTime(epoch ms)·image·videoID 가 SSR 된다.
+const NETFLIX_UPCOMING = "https://about.netflix.com/ko/new-to-watch";
+// 디즈니+ "공개 예정" 컬렉션 페이지. 랜딩 타일이 가리키는 곳.
+const DISNEY_UPCOMING = "https://www.disneyplus.com/ko-kr/browse/page-36541dc7-6961-4bbb-a07b-ef97d7da7995";
+// 티빙 광고주용 세일즈 사이트. "향후 3개월 오픈 예정" 이 여기에만 정리돼 있다.
+const TVING_UPCOMING = "https://www.tvingads.com/content";
 const disneyPoster = (imageId) =>
   `https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/${imageId}/scale?width=400&format=webp`;
 // 웨이브 오늘의 Top20 (웹 공개 apikey, 익명 credential=none)
@@ -302,6 +308,132 @@ async function parseNetflixPage(url) {
 }
 
 // ── 넷플릭스: 영화/시리즈 Top10 (공개 Tudum 페이지, 영어 원제 + 작동 딥링크) ──
+// ── 공개 예정작 ──────────────────────────────────────────────
+// 순위가 아니라 "언제 나온다" 목록이다. rank 는 공개일 순서를 담는 자리로 쓴다.
+// 예정작은 부가 그룹이라 실패해도 순위 그룹은 그대로 나가야 한다 — 호출부에서 try 로 감싼다.
+
+const stripTags = (x) =>
+  x.replace(/<[^>]+>/g, "").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").trim();
+
+// YYYY-MM-DD (KST). 예정작은 날짜가 핵심이라 시간대를 흘리면 하루가 어긋난다.
+const ymdKST = (ms) =>
+  new Intl.DateTimeFormat("sv-SE", { timeZone: "Asia/Seoul" }).format(new Date(ms));
+
+// 넷플릭스 공식 신규/공개예정. __NEXT_DATA__ 에 배열이 통째로 SSR 되어 브라우저가 필요 없다.
+// 항목: { country, startTime(epoch ms), title1, image, videoID }
+// 예정작 그룹을 붙인다. 실패하면 로그만 남기고 넘어간다 —
+// 예정작 때문에 순위가 못 나가면 주객이 전도된다.
+async function addUpcoming(groups, name, builder) {
+  try {
+    const items = await builder();
+    if (items.length > 0) groups.push({ label: "공개 예정", items });
+    console.log(`  · 공개 예정 ${items.length}편`);
+  } catch (e) {
+    console.error(`  · ${name} 공개 예정 건너뜀: ${e.message}`);
+  }
+}
+
+async function buildNetflixUpcoming(limit = 10) {
+  const html = await fetchText(NETFLIX_UPCOMING);
+  const m = html.match(/<script id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/);
+  if (!m) throw new Error("__NEXT_DATA__ 를 찾지 못함");
+
+  let arr = null;
+  (function walk(o) {
+    if (arr || !o || typeof o !== "object") return;
+    if (Array.isArray(o) && o.length > 3 && o[0] && typeof o[0] === "object" && "title1" in o[0] && "startTime" in o[0]) {
+      arr = o;
+      return;
+    }
+    for (const k in o) walk(o[k]);
+  })(JSON.parse(m[1]));
+  if (!arr) throw new Error("공개 예정 배열을 찾지 못함");
+
+  const now = Date.now();
+  return arr
+    .filter((x) => x.country === "KR" && x.startTime >= now && x.title1)
+    .sort((a, b) => a.startTime - b.startTime)
+    .slice(0, limit)
+    .map((x, i) => ({
+      rank: i + 1,
+      title: x.title1,
+      poster: x.image || undefined,
+      // videoID 가 있으면 작품 페이지로. 아직 공개 전이라 없을 수도 있다.
+      watchUrl: x.videoID ? `https://www.netflix.com/kr/title/${x.videoID}` : undefined,
+      extra: compactExtra({ releaseDate: ymdKST(x.startTime), source: "netflix" }),
+    }));
+}
+
+// 디즈니+ "공개 예정" 컬렉션. 같은 페이지에 다른 섹션(이번 주 새로운 에피소드 등)이
+// 이어지므로 첫 섹션까지만 자른다. 이 페이지에는 공개일 표기가 없다.
+async function buildDisneyUpcoming(limit = 10) {
+  const html = await fetchText(DISNEY_UPCOMING);
+  const start = html.indexOf("공개 예정</h2>");
+  if (start < 0) throw new Error('"공개 예정" 섹션을 찾지 못함');
+  const next = html.indexOf("</h2>", start + 10);
+  const seg = html.slice(start, next > start ? next : start + 60000);
+
+  const seen = new Set();
+  const items = [];
+  for (const m of seg.matchAll(/aria-label="([^"]{1,60})" href="(\/ko-kr\/browse\/entity-[^"]+)"/g)) {
+    const title = stripTags(m[1]);
+    if (seen.has(title)) continue;
+    seen.add(title);
+    const img = seg.slice(m.index, m.index + 3000).match(/\/ripcut-delivery\/v2\/variant\/disney\/([0-9a-f-]+)\/compose/);
+    items.push({
+      rank: items.length + 1,
+      title,
+      poster: img ? disneyPoster(img[1]) : undefined,
+      watchUrl: `https://www.disneyplus.com${m[2]}`,
+      extra: compactExtra({ source: "disney" }),
+    });
+    if (items.length >= limit) break;
+  }
+  if (items.length === 0) throw new Error("공개 예정 항목 없음");
+  return items;
+}
+
+// 티빙은 서비스 자체에 예정작 목록이 없고 광고주용 세일즈 사이트에만 정리돼 있다.
+// ⚠️ Framer 로 만든 페이지라 클래스명이 해시(framer-14rvfvr)라서 리빌드마다 바뀐다.
+//    그래서 클래스에 기대지 않고 "COMING SOON"~"DEMO RANKING" 구간의 h3 제목과
+//    "공개일" 뒤 텍스트만 읽는다. 그래도 순위 스크래퍼보다 잘 깨지는 자리다.
+async function buildTvingUpcoming(limit = 10) {
+  const html = await fetchText(TVING_UPCOMING);
+  const a = html.indexOf("COMING SOON");
+  if (a < 0) throw new Error('"COMING SOON" 구간을 찾지 못함');
+  const b = html.indexOf("DEMO RANKING");
+  const seg = html.slice(a, b > a ? b : a + 200000);
+
+  // 반응형이라 같은 카드가 모바일/데스크톱으로 두 번 나온다.
+  // 제목만 dedup 하고 날짜는 별도 배열에서 같은 인덱스로 꺼내면 짝이 밀린다 —
+  // 날짜는 중복이 남아 있기 때문이다. 그래서 제목이 나온 위치부터 앞을 훑어
+  // 그 카드에 속한 "공개일" 을 집는다(DOM 순서상 제목 뒤에 온다).
+  const seen = new Set();
+  const items = [];
+  for (const m of seg.matchAll(/<h3[^>]*>([\s\S]*?)<\/h3>/g)) {
+    const title = stripTags(m[1]);
+    if (!title || title.includes("오픈 예정 콘텐츠")) continue; // 섹션 제목 자신
+    if (seen.has(title)) continue;
+    seen.add(title);
+    const after = seg.slice(m.index, m.index + 2500);
+    // "2026. 9. 10." → 2026-09-10. "9월"·"미정" 은 그대로 둔다(원문이 확정 아님).
+    const raw = stripTags((after.match(/공개일[\s\S]{0,400}?<p[^>]*>([\s\S]{0,40}?)<\/p>/) || [])[1] ?? "");
+    const md = raw.match(/(\d{4})\.\s*(\d{1,2})\.\s*(\d{1,2})/);
+    items.push({
+      rank: items.length + 1,
+      title,
+      extra: compactExtra({
+        releaseDate: md ? `${md[1]}-${md[2].padStart(2, "0")}-${md[3].padStart(2, "0")}` : undefined,
+        releaseText: md ? undefined : raw || undefined,
+        source: "tving",
+      }),
+    });
+    if (items.length >= limit) break;
+  }
+  if (items.length === 0) throw new Error("COMING SOON 항목 없음");
+  return items;
+}
+
 async function buildNetflix() {
   console.log("▶ 넷플릭스 공개 Top10 페이지 조회(시리즈·영화)…");
   // 예전엔 시리즈만 노출했다 — "영화는 대부분 영어 제목" 이 이유였는데,
@@ -319,6 +451,8 @@ async function buildNetflix() {
   } catch (e) {
     console.error(`  · 영화 TOP10 건너뜀: ${e.message}`);
   }
+
+  await addUpcoming(groups, "넷플릭스", buildNetflixUpcoming);
 
   const week = series.week;
   if (groups.length === 0) throw new Error("Top10 항목을 찾지 못함(페이지 구조 변경?)");
@@ -446,6 +580,9 @@ async function buildTving() {
   // 랭킹 밴드에는 줄거리가 없다. 콘텐츠 페이지를 한 번씩 더 열어 og:description 을 쓴다.
   await enrichSynopsisFromWatchUrl("tving", items);
 
+  const groups = [{ label: "오늘의 티빙 TOP 10", items }];
+  await addUpcoming(groups, "티빙", buildTvingUpcoming);
+
   return {
     service: "tving",
     serviceName: "티빙",
@@ -454,7 +591,7 @@ async function buildTving() {
     estimated: false,
     layout: "grid",
     subscribeUrl: "https://www.tving.com/",
-    groups: [{ label: "오늘의 티빙 TOP 10", items }],
+    groups,
   };
 }
 
@@ -555,6 +692,9 @@ async function buildDisney() {
   // 랜딩 카드에는 제목·이미지·URL 뿐이라, 각 엔티티 페이지를 한 번씩 더 열어 줄거리를 얻는다.
   await enrichSynopsisFromWatchUrl("disney", items);
 
+  const groups = [{ label: "오늘 한국의 TOP 10", items }];
+  await addUpcoming(groups, "디즈니+", buildDisneyUpcoming);
+
   return {
     service: "disney",
     serviceName: "디즈니+",
@@ -563,7 +703,7 @@ async function buildDisney() {
     estimated: false,
     layout: "grid",
     subscribeUrl: "https://www.disneyplus.com/ko-kr",
-    groups: [{ label: "오늘 한국의 TOP 10", items }],
+    groups,
   };
 }
 
