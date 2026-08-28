@@ -75,12 +75,12 @@
       "rows": 533,
       "rows52w": 244
     },
-    "generatedAt": "2026-08-28T01:54:50.654Z"
+    "generatedAt": "2026-08-28T11:51:05.576Z"
   },
   "facts": [
-    "코스닥이 1.3% 오른 날 3.29% 올랐어요.",
-    "거래량이 최근 20거래일 평균의 0.6배였어요.",
-    "시가 176,500원보다 2,600원 높게 마감했어요."
+    "코스닥보다 1.99%p 높았어요.",
+    "거래량은 20일 평균의 0.6배예요.",
+    "시가보다 2,600원 높게 마감했어요."
   ],
   "news": [
     {
@@ -91,36 +91,8 @@
     }
   ],
   "dart": [],
-  "ownership": [
-    {
-      "kind": "major",
-      "date": "20260803",
-      "holder": "미래에셋자산운용",
-      "ratio": 6.93,
-      "ratioChange": 1.1,
-      "reason": "지분율 변동",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260803000357"
-    },
-    {
-      "kind": "major",
-      "date": "20260707",
-      "holder": "미래에셋자산운용",
-      "ratio": 5.83,
-      "ratioChange": 2.82,
-      "reason": "신규",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260707000374"
-    },
-    {
-      "kind": "major",
-      "date": "20260706",
-      "holder": "삼성자산운용",
-      "ratio": 6,
-      "ratioChange": -1.04,
-      "reason": "매매로 인한 변동보고의무 발생(삼성액티브자산운용의 위탁운용분 포함)",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260706000306"
-    }
-  ],
-  "ownershipWindowDays": 90,
+  "ownership": [],
+  "ownershipWindowDays": null,
   "marketIndex": {
     "name": "코스닥",
     "clpr": 837.65,
@@ -130,9 +102,9 @@
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
     "news": "구글 뉴스 RSS",
-    "dart": "DART OpenAPI",
-    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "dart": null,
+    "ownership": null,
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-08-28T01:56:16.849Z"
+  "builtAt": "2026-08-28T11:52:39.669Z"
 }

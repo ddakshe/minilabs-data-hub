@@ -1,0 +1,101 @@
+{
+  "code": "030200",
+  "name": "KT",
+  "market": "KOSPI",
+  "basDt": "20260325",
+  "price": {
+    "code": "030200",
+    "name": "KT",
+    "market": "KOSPI",
+    "basDt": "20260325",
+    "close": 60100,
+    "vs": 800,
+    "fltRt": 1.35,
+    "open": 60500,
+    "high": 61000,
+    "low": 60000,
+    "prevClose": 59300,
+    "volume": 289831,
+    "tradeValue": 17532588500,
+    "week52": {
+      "low": 46350,
+      "high": 68900,
+      "position": 0.6097560975609756,
+      "days": 244,
+      "from": "20250325"
+    },
+    "recent5": [
+      {
+        "basDt": "20260319",
+        "fltRt": -1.82,
+        "open": 59200,
+        "high": 59900,
+        "low": 59000,
+        "close": 59300
+      },
+      {
+        "basDt": "20260320",
+        "fltRt": 2.36,
+        "open": 59400,
+        "high": 60700,
+        "low": 59400,
+        "close": 60700
+      },
+      {
+        "basDt": "20260323",
+        "fltRt": -4.78,
+        "open": 59100,
+        "high": 59200,
+        "low": 56700,
+        "close": 57800
+      },
+      {
+        "basDt": "20260324",
+        "fltRt": 2.6,
+        "open": 59400,
+        "high": 59400,
+        "low": 57200,
+        "close": 59300
+      },
+      {
+        "basDt": "20260325",
+        "fltRt": 1.35,
+        "open": 60500,
+        "high": 61000,
+        "low": 60000,
+        "close": 60100
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 560770,
+      "ratio": 0.52
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-28T11:52:39.755Z"
+  },
+  "facts": [
+    "코스피보다 0.24%p 낮았어요.",
+    "거래량은 20일 평균의 0.5배예요.",
+    "시가보다 400원 낮게 마감했어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 5642.21,
+    "vs": 88.29,
+    "fltRt": 1.59
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null,
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-08-28T11:52:39.755Z"
+}

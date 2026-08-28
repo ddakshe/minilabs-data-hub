@@ -1,0 +1,101 @@
+{
+  "code": "030200",
+  "name": "KT",
+  "market": "KOSPI",
+  "basDt": "20260630",
+  "price": {
+    "code": "030200",
+    "name": "KT",
+    "market": "KOSPI",
+    "basDt": "20260630",
+    "close": 52900,
+    "vs": 200,
+    "fltRt": 0.38,
+    "open": 52900,
+    "high": 54000,
+    "low": 52700,
+    "prevClose": 52700,
+    "volume": 251043,
+    "tradeValue": 13434113026,
+    "week52": {
+      "low": 48250,
+      "high": 68900,
+      "position": 0.22518159806295399,
+      "days": 245,
+      "from": "20250630"
+    },
+    "recent5": [
+      {
+        "basDt": "20260624",
+        "fltRt": -1.34,
+        "open": 52900,
+        "high": 53000,
+        "low": 50700,
+        "close": 51700
+      },
+      {
+        "basDt": "20260625",
+        "fltRt": 0.58,
+        "open": 51800,
+        "high": 53800,
+        "low": 51800,
+        "close": 52000
+      },
+      {
+        "basDt": "20260626",
+        "fltRt": 0.38,
+        "open": 52500,
+        "high": 52700,
+        "low": 51000,
+        "close": 52200
+      },
+      {
+        "basDt": "20260629",
+        "fltRt": 0.96,
+        "open": 52700,
+        "high": 54000,
+        "low": 52000,
+        "close": 52700
+      },
+      {
+        "basDt": "20260630",
+        "fltRt": 0.38,
+        "open": 52900,
+        "high": 54000,
+        "low": 52700,
+        "close": 52900
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 455934,
+      "ratio": 0.55
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-28T11:52:39.765Z"
+  },
+  "facts": [
+    "코스피보다 0.59%p 낮았어요.",
+    "거래량은 20일 평균의 0.6배예요.",
+    "시가 그대로 마감했어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 8476.48,
+    "vs": 81.83,
+    "fltRt": 0.97
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null,
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-08-28T11:52:39.765Z"
+}

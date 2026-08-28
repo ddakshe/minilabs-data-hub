@@ -75,7 +75,7 @@
       "rows": 533,
       "rows52w": 244
     },
-    "generatedAt": "2026-08-28T06:08:14.581Z"
+    "generatedAt": "2026-08-28T11:51:39.976Z"
   },
   "facts": [
     "코스닥보다 3.82%p 낮았어요.",
@@ -103,37 +103,8 @@
     }
   ],
   "dart": [],
-  "ownership": [
-    {
-      "kind": "major",
-      "date": "20260804",
-      "holder": "KB자산운용",
-      "ratio": 7.21,
-      "ratioChange": 1.23,
-      "reason": "1%이상 변동",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260804000166"
-    },
-    {
-      "kind": "major",
-      "date": "20260803",
-      "holder": "브이아이피자산운용",
-      "ratio": 5.37,
-      "ratioChange": 0.42,
-      "reason": "5% 이상 신규취득",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260803000287"
-    },
-    {
-      "kind": "insider",
-      "date": "20260625",
-      "holder": "안병철",
-      "position": "대표이사",
-      "role": "10%이상주주",
-      "sharesAfter": 5009546,
-      "sharesChange": 4000,
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260625000449"
-    }
-  ],
-  "ownershipWindowDays": 90,
+  "ownership": [],
+  "ownershipWindowDays": null,
   "marketIndex": {
     "name": "코스닥",
     "clpr": 837.65,
@@ -143,9 +114,9 @@
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
     "news": "구글 뉴스 RSS",
-    "dart": "DART OpenAPI",
-    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "dart": null,
+    "ownership": null,
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-08-28T06:08:26.005Z"
+  "builtAt": "2026-08-28T11:52:39.821Z"
 }

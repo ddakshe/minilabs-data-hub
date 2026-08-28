@@ -1,0 +1,101 @@
+{
+  "code": "035720",
+  "name": "카카오",
+  "market": "KOSPI",
+  "basDt": "20260622",
+  "price": {
+    "code": "035720",
+    "name": "카카오",
+    "market": "KOSPI",
+    "basDt": "20260622",
+    "close": 36800,
+    "vs": -950,
+    "fltRt": -2.52,
+    "open": 38250,
+    "high": 38500,
+    "low": 36800,
+    "prevClose": 37750,
+    "volume": 1352403,
+    "tradeValue": 50493097675,
+    "week52": {
+      "low": 36800,
+      "high": 70400,
+      "position": 0,
+      "days": 244,
+      "from": "20250623"
+    },
+    "recent5": [
+      {
+        "basDt": "20260616",
+        "fltRt": -0.74,
+        "open": 41100,
+        "high": 41400,
+        "low": 40450,
+        "close": 40450
+      },
+      {
+        "basDt": "20260617",
+        "fltRt": 0.25,
+        "open": 40500,
+        "high": 41250,
+        "low": 39600,
+        "close": 40550
+      },
+      {
+        "basDt": "20260618",
+        "fltRt": -3.08,
+        "open": 40200,
+        "high": 40200,
+        "low": 39250,
+        "close": 39300
+      },
+      {
+        "basDt": "20260619",
+        "fltRt": -3.94,
+        "open": 39300,
+        "high": 39700,
+        "low": 37500,
+        "close": 37750
+      },
+      {
+        "basDt": "20260622",
+        "fltRt": -2.52,
+        "open": 38250,
+        "high": 38500,
+        "low": 36800,
+        "close": 36800
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 2824996,
+      "ratio": 0.48
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-28T11:52:39.785Z"
+  },
+  "facts": [
+    "코스피보다 3.21%p 낮았어요.",
+    "거래량은 20일 평균의 0.5배예요.",
+    "시가보다 1,450원 낮게 마감했어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 9114.55,
+    "vs": 62.13,
+    "fltRt": 0.69
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null,
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-08-28T11:52:39.785Z"
+}

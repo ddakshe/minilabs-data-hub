@@ -75,12 +75,12 @@
       "rows": 533,
       "rows52w": 244
     },
-    "generatedAt": "2026-08-28T01:54:29.134Z"
+    "generatedAt": "2026-08-28T11:50:44.690Z"
   },
   "facts": [
-    "코스피가 1.53% 오른 날 0.31% 내렸어요.",
-    "거래량이 최근 20거래일 평균의 0.6배였어요.",
-    "시가 1,602,000원보다 8,000원 낮게 마감했어요."
+    "코스피보다 1.84%p 낮았어요.",
+    "거래량은 20일 평균의 0.6배예요.",
+    "시가보다 8,000원 낮게 마감했어요."
   ],
   "news": [
     {
@@ -88,33 +88,11 @@
       "source": "아시아경제",
       "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5FQWQ1QlFFOGgyWDRwUUs0dnRqQVdSZXBuS2lQUlRmdU85Z0VaV04zLWJjc05DQjdCMG5Kd3pQMVFldFJ6ZzZFX1J1SXRfS3lwSGxscHY0Yng2ZEFnMjNIOA?oc=5",
       "publishedAt": "2026-08-27T00:16:38.000Z"
-    },
-    {
-      "title": "사내 동호회로 만드는 업무 활력…새로운 소통 방식 만들어가는 삼성바이오로직스",
-      "source": "이투데이",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE50N2xhQmFwNGFza3hYb0pLdEt1dW1vRXByWDFQaldKQTF3MXNGdmRRTkhGT0xSUnNKSThfSXlKU2dKVDk4RlZVR2RHR0hNZGJfRmkxbw?oc=5",
-      "publishedAt": "2026-08-27T02:00:00.000Z"
-    },
-    {
-      "title": "SK이터닉스, 삼성바이오로직스에 재생에너지 170MW 공급",
-      "source": "디일렉",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE16QWJtUDJnbm5qQWpkUEdPVXBndDFCdGJRX2VLemJVZG5XYkN5YjF0ejNsX2V5RUpobFB2dnB2SUkxTXhZRU5RS2FmcERXemxiZFlibEtQQTJJeWp3emNhUFVmRGtzQQ?oc=5",
-      "publishedAt": "2026-08-27T09:29:47.000Z"
     }
   ],
   "dart": [],
-  "ownership": [
-    {
-      "kind": "major",
-      "date": "20260731",
-      "holder": "국민연금공단",
-      "ratio": 6.88,
-      "ratioChange": 0.2,
-      "reason": "단순투자목적에서 일반투자목적으로 보유목적 변경",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260731000384"
-    }
-  ],
-  "ownershipWindowDays": 90,
+  "ownership": [],
+  "ownershipWindowDays": null,
   "marketIndex": {
     "name": "코스피",
     "clpr": 6912.37,
@@ -124,9 +102,9 @@
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
     "news": "구글 뉴스 RSS",
-    "dart": "DART OpenAPI",
-    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "dart": null,
+    "ownership": null,
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-08-28T01:56:16.758Z"
+  "builtAt": "2026-08-28T11:52:39.618Z"
 }

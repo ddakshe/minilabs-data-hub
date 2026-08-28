@@ -1,0 +1,101 @@
+{
+  "code": "030200",
+  "name": "KT",
+  "market": "KOSPI",
+  "basDt": "20260729",
+  "price": {
+    "code": "030200",
+    "name": "KT",
+    "market": "KOSPI",
+    "basDt": "20260729",
+    "close": 53800,
+    "vs": -100,
+    "fltRt": -0.19,
+    "open": 54100,
+    "high": 54900,
+    "low": 52600,
+    "prevClose": 53900,
+    "volume": 794124,
+    "tradeValue": 42782567710,
+    "week52": {
+      "low": 48250,
+      "high": 68900,
+      "position": 0.2687651331719128,
+      "days": 244,
+      "from": "20250729"
+    },
+    "recent5": [
+      {
+        "basDt": "20260723",
+        "fltRt": 0.76,
+        "open": 52200,
+        "high": 53400,
+        "low": 52200,
+        "close": 52700
+      },
+      {
+        "basDt": "20260724",
+        "fltRt": 2.66,
+        "open": 52900,
+        "high": 54500,
+        "low": 52900,
+        "close": 54100
+      },
+      {
+        "basDt": "20260727",
+        "fltRt": 0.55,
+        "open": 54400,
+        "high": 54800,
+        "low": 53900,
+        "close": 54400
+      },
+      {
+        "basDt": "20260728",
+        "fltRt": -0.92,
+        "open": 53500,
+        "high": 54000,
+        "low": 52900,
+        "close": 53900
+      },
+      {
+        "basDt": "20260729",
+        "fltRt": -0.19,
+        "open": 54100,
+        "high": 54900,
+        "low": 52600,
+        "close": 53800
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 436670,
+      "ratio": 1.82
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-28T11:52:39.767Z"
+  },
+  "facts": [
+    "코스피보다 5.79%p 높았어요.",
+    "거래량은 20일 평균의 1.8배예요.",
+    "시가보다 300원 낮게 마감했어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 5663.24,
+    "vs": -360.42,
+    "fltRt": -5.98
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null,
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-08-28T11:52:39.767Z"
+}

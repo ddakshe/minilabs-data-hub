@@ -1,0 +1,116 @@
+{
+  "code": "035720",
+  "name": "카카오",
+  "market": "KOSPI",
+  "basDt": "20260827",
+  "price": {
+    "code": "035720",
+    "name": "카카오",
+    "market": "KOSPI",
+    "basDt": "20260827",
+    "close": 36000,
+    "vs": -350,
+    "fltRt": -0.96,
+    "open": 36700,
+    "high": 37250,
+    "low": 35850,
+    "prevClose": 36350,
+    "volume": 1259525,
+    "tradeValue": 45767689325,
+    "week52": {
+      "low": 33150,
+      "high": 67700,
+      "position": 0.0824891461649783,
+      "days": 244,
+      "from": "20250827"
+    },
+    "recent5": [
+      {
+        "basDt": "20260821",
+        "fltRt": -7.49,
+        "open": 38150,
+        "high": 38750,
+        "low": 33600,
+        "close": 35800
+      },
+      {
+        "basDt": "20260824",
+        "fltRt": 0,
+        "open": 35000,
+        "high": 36500,
+        "low": 34950,
+        "close": 35800
+      },
+      {
+        "basDt": "20260825",
+        "fltRt": 0.7,
+        "open": 35750,
+        "high": 36250,
+        "low": 34200,
+        "close": 36050
+      },
+      {
+        "basDt": "20260826",
+        "fltRt": 0.83,
+        "open": 36100,
+        "high": 36650,
+        "low": 35650,
+        "close": 36350
+      },
+      {
+        "basDt": "20260827",
+        "fltRt": -0.96,
+        "open": 36700,
+        "high": 37250,
+        "low": 35850,
+        "close": 36000
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 2910589,
+      "ratio": 0.43
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-28T11:51:34.691Z"
+  },
+  "facts": [
+    "코스피보다 2.49%p 낮았어요.",
+    "거래량은 20일 평균의 0.4배예요.",
+    "시가보다 700원 낮게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "카카오톡 로그인 사칭 피싱 페이지... 접속만 해도 아이폰 공격",
+      "source": "보안뉴스",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1CNzNLcTNSSnVSX0dxbmZMdkhKWE9yZnFiX1QyQ0pJc2dIRGRRRnRnckg2UC1PVTV3YnoyaXZvbFZlRVlaOU52SUpBNXBfWlhMeUZCTnIyTktNbWpzZGJZMFdBMnFRMV81Tmg4?oc=5",
+      "publishedAt": "2026-08-27T07:50:08.000Z"
+    },
+    {
+      "title": "같은 인적분할인데 한화와 카카오 주가 엇갈린 이유는",
+      "source": "조선일보",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNVUFVOGlZTzEwb3NHSDA1UnY3eTFVSHR0NFdRZGttQkJtWWZBMVJlMlRLSWxzbTJLbVhLOFJDclhwbWFtcTk0Z0VILV81cHk2UHFCV2VzZGd3cW5DSTNQRlptVHJfWF84QUkwZlNIWDNmUGxGaW8zcGRwckJ6TVNNNUl5bjhBd04tbDRR?oc=5",
+      "publishedAt": "2026-08-27T00:05:47.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [],
+  "ownershipWindowDays": null,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 6912.37,
+    "vs": 104.16,
+    "fltRt": 1.53
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": null,
+    "ownership": null,
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-08-28T11:52:39.793Z"
+}

@@ -1,0 +1,101 @@
+{
+  "code": "030200",
+  "name": "KT",
+  "market": "KOSPI",
+  "basDt": "20260403",
+  "price": {
+    "code": "030200",
+    "name": "KT",
+    "market": "KOSPI",
+    "basDt": "20260403",
+    "close": 59500,
+    "vs": 100,
+    "fltRt": 0.17,
+    "open": 59600,
+    "high": 60500,
+    "low": 59500,
+    "prevClose": 59400,
+    "volume": 312219,
+    "tradeValue": 19148835720,
+    "week52": {
+      "low": 46350,
+      "high": 68900,
+      "position": 0.5831485587583148,
+      "days": 244,
+      "from": "20250403"
+    },
+    "recent5": [
+      {
+        "basDt": "20260330",
+        "fltRt": 0,
+        "open": 58500,
+        "high": 60800,
+        "low": 58400,
+        "close": 60800
+      },
+      {
+        "basDt": "20260331",
+        "fltRt": -0.66,
+        "open": 59500,
+        "high": 60900,
+        "low": 59200,
+        "close": 60400
+      },
+      {
+        "basDt": "20260401",
+        "fltRt": 1.66,
+        "open": 61800,
+        "high": 61800,
+        "low": 60600,
+        "close": 61400
+      },
+      {
+        "basDt": "20260402",
+        "fltRt": -3.26,
+        "open": 61400,
+        "high": 62300,
+        "low": 59400,
+        "close": 59400
+      },
+      {
+        "basDt": "20260403",
+        "fltRt": 0.17,
+        "open": 59600,
+        "high": 60500,
+        "low": 59500,
+        "close": 59500
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 433852,
+      "ratio": 0.72
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-28T11:52:39.756Z"
+  },
+  "facts": [
+    "코스피보다 2.57%p 낮았어요.",
+    "거래량은 20일 평균의 0.7배예요.",
+    "시가보다 100원 낮게 마감했어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 5377.3,
+    "vs": 143.25,
+    "fltRt": 2.74
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null,
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-08-28T11:52:39.756Z"
+}

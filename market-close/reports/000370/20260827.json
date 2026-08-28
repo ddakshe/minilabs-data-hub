@@ -75,12 +75,12 @@
       "rows": 533,
       "rows52w": 244
     },
-    "generatedAt": "2026-08-28T01:55:06.793Z"
+    "generatedAt": "2026-08-28T11:51:21.530Z"
   },
   "facts": [
-    "코스피가 1.53% 오른 날 0.39% 올랐어요.",
-    "거래량이 최근 20거래일 평균의 1.4배였어요.",
-    "시가 7,790원보다 60원 낮게 마감했어요."
+    "코스피보다 1.14%p 낮았어요.",
+    "거래량은 20일 평균의 1.4배예요.",
+    "시가보다 60원 낮게 마감했어요."
   ],
   "news": [
     {
@@ -92,7 +92,7 @@
   ],
   "dart": [],
   "ownership": [],
-  "ownershipWindowDays": 90,
+  "ownershipWindowDays": null,
   "marketIndex": {
     "name": "코스피",
     "clpr": 6912.37,
@@ -102,9 +102,9 @@
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
     "news": "구글 뉴스 RSS",
-    "dart": "DART OpenAPI",
-    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "dart": null,
+    "ownership": null,
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-08-28T01:56:16.952Z"
+  "builtAt": "2026-08-28T11:52:39.710Z"
 }
