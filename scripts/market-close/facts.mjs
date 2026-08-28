@@ -9,6 +9,9 @@
  *   ② §4-c 금지 어휘 게이트를 생성 시점에 통과시켜야 한다 (앱에서는 검사할 수 없다)
  *   ③ 같은 로직을 JS 두 벌로 두면 반드시 갈라진다
  *
+ * ⚠️ **짧게 쓴다.** 리포트에서 차트 옆 좁은 칸에 들어간다 — 한 줄이 두 줄로 넘어가면
+ *    카드 높이가 종목마다 달라진다. 목표는 **한 문장 20자 안쪽**이다.
+ *
  * ⚠️ **순서가 곧 우선순위다.** 아래에서 `slice(0, 3)` 으로 세 문장만 남기고,
  *    첫 문장이 그대로 아카이브 한 줄 요약(`buildHeadline`)이 된다.
  *    앞쪽에는 **화면의 숫자만 봐서는 알 수 없는 것**을 둔다 — 시가·고가·저가는
@@ -37,38 +40,37 @@ export function buildFacts(r, mkt = null) {
   // ① 시장 대비 — 이 값은 우리가 빼 주지 않으면 어디에도 없다.
   //    지수는 없는 날이 있다(수집 실패·창 밖의 과거). 그때는 조용히 빠진다.
   if (mkt && mkt.fltRt !== null && mkt.fltRt !== undefined && r.fltRt !== null) {
-    const day = mkt.fltRt === 0
-      ? `${mkt.name}${ga(mkt.name)} 제자리였던 날`
-      : `${mkt.name}${ga(mkt.name)} ${pct(Math.abs(mkt.fltRt))}% ${mkt.fltRt > 0 ? '오른' : '내린'} 날`;
-    const mine = r.fltRt === 0
-      ? '전날과 같은 가격으로 마감했어요.'
-      : `${pct(Math.abs(r.fltRt))}% ${r.fltRt > 0 ? '올랐어요' : '내렸어요'}.`;
-    out.push(`${day} ${mine}`);
+    // 🔑 **차이를 말한다.** "코스피가 1.53% 오른 날 9.5% 올랐어요" 는 숫자 둘을 나열하고
+    //    뺄셈은 읽는 사람에게 미룬다. 그 뺄셈이 이 문장을 만든 이유다.
+    const d = Number((r.fltRt - mkt.fltRt).toFixed(2));
+    out.push(d === 0
+      ? `${mkt.name}${ga(mkt.name)} 오른 만큼 올랐어요.`
+      : `${mkt.name}보다 ${pct(Math.abs(d))}%p ${d > 0 ? '높았어요' : '낮았어요'}.`);
   }
 
   // ② 거래량 배수 — 거래량 자체는 화면에 있지만 '평소 대비'는 여기에만 있다.
   if (r.volumeVs20d) {
-    out.push(`거래량이 최근 20거래일 평균의 ${r.volumeVs20d.ratio.toFixed(1)}배였어요.`);
+    out.push(`거래량은 20일 평균의 ${r.volumeVs20d.ratio.toFixed(1)}배예요.`);
   }
 
   // ③ 이하는 화면의 숫자와 겹친다. 자리가 남을 때만 나간다.
   if (r.open !== null) {
     const d = r.close - r.open;
-    if (d === 0) out.push(`시가 ${won(r.open)}원과 같은 가격으로 마감했어요.`);
-    else out.push(`시가 ${won(r.open)}원보다 ${won(Math.abs(d))}원 ${d > 0 ? '높게' : '낮게'} 마감했어요.`);
+    if (d === 0) out.push('시가 그대로 마감했어요.');
+    else out.push(`시가보다 ${won(Math.abs(d))}원 ${d > 0 ? '높게' : '낮게'} 마감했어요.`);
   }
 
   if (r.high !== null && r.high > r.close) {
-    out.push(`장중 ${won(r.high)}원까지 올랐다가 ${won(r.high - r.close)}원 낮은 가격에 마감했어요.`);
+    out.push(`장중 ${won(r.high)}원까지 올랐다 밀렸어요.`);
   } else if (r.low !== null && r.low < r.close) {
-    out.push(`장중 ${won(r.low)}원까지 내렸다가 ${won(r.close - r.low)}원 높은 가격에 마감했어요.`);
+    out.push(`장중 ${won(r.low)}원까지 내렸다 올라왔어요.`);
   }
 
-  out.push(`최근 1년 가격 범위에서 아래로부터 ${Math.round(r.week52.position * 100)}% 지점이에요.`);
+  out.push(`1년 범위의 아래로부터 ${Math.round(r.week52.position * 100)}% 지점이에요.`);
 
   const valid = r.recent5.filter((d) => d.fltRt !== null).length;
   const ups = r.recent5.filter((d) => (d.fltRt ?? 0) > 0).length;
-  if (valid > 0) out.push(`최근 ${valid}거래일 중 ${ups}일 올랐어요.`);
+  if (valid > 0) out.push(`최근 ${valid}일 중 ${ups}일 올랐어요.`);
 
   return out.slice(0, 3);
 }

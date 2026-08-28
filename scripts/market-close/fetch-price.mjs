@@ -90,6 +90,17 @@ async function call(params) {
 
 const num = (v) => { const n = Number(v); return Number.isFinite(n) ? n : null; };
 
+/**
+ * 🚨 **거래정지일은 시가·고가·저가·거래량이 `0` 으로 온다.** 종가만 직전 값을 그대로 들고
+ *    등락률도 0 이다 (실측: 한화 20260730~0824 · 리노공업 20250410~0424 ·
+ *    삼성바이오로직스 20251030~1121 — 24종목 중 3종목).
+ *    **0 원짜리 가격은 없다.** 그대로 두면 캔들이 바닥에서 천장까지 solid 로 서고,
+ *    20일 평균 거래량이 0 에 눌려 '평균의 5배' 같은 거짓 문장이 나온다.
+ *    가격은 `null`(그날은 값이 없다)로 바꾸고, 거래량 0 은 사실이므로 남기되
+ *    **평균에서는 뺀다.**
+ */
+const price = (v) => { const n = num(v); return n === 0 ? null : n; };
+
 /** 시계열 → 리포트 입력. 순수 함수라 테스트가 쉽다. */
 function buildPriceReport(code, rows) {
   // basDt 오름차순 정렬. API 정렬 순서를 신뢰하지 않는다.
@@ -97,7 +108,7 @@ function buildPriceReport(code, rows) {
     .filter((r) => String(r.srtnCd).trim() === code)
     .map((r) => ({
       basDt: String(r.basDt), clpr: num(r.clpr), vs: num(r.vs), fltRt: num(r.fltRt),
-      mkp: num(r.mkp), hipr: num(r.hipr), lopr: num(r.lopr),
+      mkp: price(r.mkp), hipr: price(r.hipr), lopr: price(r.lopr),
       trqu: num(r.trqu), trPrc: num(r.trPrc),
       name: String(r.itmsNm).trim(), mkt: String(r.mrktCtg).trim(),
     }))
@@ -127,7 +138,8 @@ function buildPriceReport(code, rows) {
     basDt: r.basDt, fltRt: r.fltRt,
     open: r.mkp, high: r.hipr, low: r.lopr, close: r.clpr,
   }));
-  const vol20 = s.slice(-21, -1).map((r) => r.trqu).filter((v) => v !== null);
+  // 거래정지일(거래량 0)은 평균에서 뺀다. 넣으면 평균이 눌려 배수가 부풀려진다.
+  const vol20 = s.slice(-21, -1).map((r) => r.trqu).filter((v) => v !== null && v > 0);
   const avgVol20 = vol20.length ? Math.round(vol20.reduce((a, b) => a + b, 0) / vol20.length) : null;
 
   return {

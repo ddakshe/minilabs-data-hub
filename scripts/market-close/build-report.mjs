@@ -47,7 +47,7 @@ function pastReport(rows, i, template) {
   const recent5 = rows.slice(Math.max(0, i - 4), i + 1).map((x) => ({
     basDt: x.basDt, fltRt: x.fltRt, open: x.mkp, high: x.hipr, low: x.lopr, close: x.clpr,
   }));
-  const vol20 = rows.slice(Math.max(0, i - 20), i).map((x) => x.trqu).filter((v) => v !== null);
+  const vol20 = rows.slice(Math.max(0, i - 20), i).map((x) => x.trqu).filter((v) => v !== null && v > 0);
   const avg20 = vol20.length ? Math.round(vol20.reduce((a, b) => a + b, 0) / vol20.length) : null;
 
   return {
@@ -222,6 +222,26 @@ function main() {
     built += 1;
     const isNew = !prev?.days?.some((d) => d.basDt === basDt);
     console.log(`  ✓ ${code} ${price.name.padEnd(12)} ${basDt} ${isNew ? '신규' : '갱신'} · 누적 ${String(kept.length).padStart(3)}일${backfilled ? ` (backfill ${backfilled})` : ''} · 뉴스 ${detail.news.length} 공시 ${detail.dart.length}`);
+  }
+
+  // ── 지수 한 줄 — 앱 헤더용 ───────────────────────────────────
+  // 🔑 **종목과 무관한 전역 사실이라 파일도 하나다.** 리포트마다 넣으면 같은 값이
+  //    종목 수만큼 복제되고, 헤더는 종목을 열기 전에도 그려야 한다.
+  if (index?.lastBasDt) {
+    // 🚨 **하루치만 실으면 아카이브에서 거짓말이 된다.** 기록에서 6월 리포트를 열면
+    //    헤더 날짜는 6월인데 지수만 오늘 것이 남는다. 아카이브 보존 기간만큼 함께 싣는다
+    //    (120거래일 × 2지수 ≈ 12KB, 앱이 시작에 한 번만 받는다).
+    const keep = Object.keys(index.days).sort().slice(-RETAIN_DAYS);
+    const days = {};
+    for (const k of keep) days[k] = index.days[k];
+    writeFileSync(p('market.json'), JSON.stringify({
+      lastBasDt: index.lastBasDt,
+      count: keep.length,
+      days,
+      source: index.source,
+      updatedAt: new Date().toISOString(),
+    }) + '\n');
+    console.log(`→ ${OUT}/market.json (${keep.length}일 · 최신 ${index.lastBasDt})`);
   }
 
   console.log(`\n생성 ${built} · 건너뜀 ${skipped} · 게이트 차단 ${blocked}`);
