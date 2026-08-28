@@ -100,8 +100,12 @@ consumers: [cpo-mini]
 미등록 IP 는 `/oauth2/token` 에서 403 이라 토큰조차 못 받는다. 달라진 것은 워크플로가
 도는 장소다. 러너가 허용 IP 로 등록된 이 맥에서 돌므로 제약을 만족한다.
 
-**PAT 이 필요 없는 이유**: 배치는 비공개 저장소(stock-tools)에 있지만, 러너가 사람과 같은
-계정으로 돌고 git 자격증명이 osxkeychain 에 있어 워크플로가 그냥 `git clone` 하면 된다.
+**PAT 이 필요 없는 이유**: 이 기계의 stock-tools 클론이 **이미 받아둔 `origin/master` 를
+`git archive` 로 꺼내** 쓴다. 스냅샷이라 네트워크도 자격증명도 필요 없다.
+
+> `git clone` 으로 짰다가 실패했다 — 러너가 LaunchAgent 라 osxkeychain 에 닿지 못해
+> `could not read Username for 'https://github.com': Device not configured` 로 죽는다.
+> 비공개 저장소를 러너에서 네트워크로 받으려면 결국 PAT 이 필요하다.
 
 ⚠ **작업 클론(`~/ClaudeProjects/stock-tools`)을 가리키지 않는다.** 처음엔 그렇게 짰다가
 바꿨다 — 그 클론은 사람이 브랜치를 갈아타고 파일을 고치는 곳이라, CI 가 그것을 읽으면

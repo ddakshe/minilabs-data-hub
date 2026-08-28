@@ -34,8 +34,11 @@ jobs:
       # 쓰지 않는다** — 그 클론은 사람이 브랜치를 갈아타고 파일을 고치는 곳이라, CI 가
       # 그걸 읽으면 어느 브랜치가 체크아웃돼 있느냐에 따라 결과가 조용히 달라진다.
       # (실제로 지금 feat/egg-mini 가 나가 있다.)
-      # 대신 master 를 러너 작업공간으로 새로 클론한다. 러너가 사람과 같은 계정으로 돌고
-      # git 자격증명이 osxkeychain 에 있어 PAT 없이 비공개 저장소를 받을 수 있다.
+      # 대신 그 클론이 이미 받아둔 origin/master 를 git archive 로 꺼내 쓴다 — 스냅샷이라
+      # 브랜치·수정 상태와 무관하고, 네트워크도 자격증명도 필요 없다.
+      # (git clone 은 안 된다: 러너가 LaunchAgent 라 osxkeychain 에 닿지 못해
+      #  `could not read Username ... Device not configured` 로 죽는다. 실측 2026-08-28)
+      LOCAL_CLONE: /Users/kyungtaekim/ClaudeProjects/stock-tools
       STOCK_TOOLS: ${{ github.workspace }}/.stock-tools
       # 토스 자격증명은 ~/.config/stock-tools/toss.env (chmod 600, 저장소 밖) 에 있고
       # 러너가 같은 사용자로 돌기 때문에 그대로 읽힌다. 시크릿으로 올리지 않는다.
@@ -52,12 +55,19 @@ jobs:
           echo "Reason : ${{ github.event.inputs.reason || '(scheduled)' }}"
           TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
 
-      - name: Checkout stock-tools (master)
+      - name: Export stock-tools (origin/master 스냅샷)
         run: |
-          rm -rf "$STOCK_TOOLS"
-          git clone --quiet --depth 1 --branch master \
-            https://github.com/ddakshe/stock-tools.git "$STOCK_TOOLS"
-          git -C "$STOCK_TOOLS" log -1 --format='stock-tools %h %s'
+          test -d "$LOCAL_CLONE/.git" || { echo "::error::stock-tools 클론이 없다: $LOCAL_CLONE"; exit 1; }
+
+          # 최신화는 되면 좋고 안 되면 그만이다(자격증명이 없어 대개 실패한다).
+          git -C "$LOCAL_CLONE" fetch --quiet origin master 2>/dev/null || \
+            echo "::notice::origin/master 를 새로 받지 못했다 — 이미 받아둔 것으로 진행한다"
+
+          # 배치 코드가 얼마나 묵었는지 남긴다. 조용히 옛 코드로 도는 것을 막는 유일한 장치다.
+          echo "stock-tools origin/master: $(git -C "$LOCAL_CLONE" log -1 --format='%h %ci %s' origin/master)"
+
+          rm -rf "$STOCK_TOOLS" && mkdir -p "$STOCK_TOOLS"
+          git -C "$LOCAL_CLONE" archive origin/master | tar -x -C "$STOCK_TOOLS"
 
       - name: Preflight
         run: |
