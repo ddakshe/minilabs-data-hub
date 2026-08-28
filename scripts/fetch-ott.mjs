@@ -577,7 +577,45 @@ function writeIfChanged(path, body) {
   return true;
 }
 
+// 직전 저장본과 비교해 prevRank(항목)·prevAt(서비스)을 채운다.
+// 앱 localStorage 가 아니라 여기서 계산하는 이유: 첫 방문자에게도 변동이 보이고,
+// 기기 간 값이 일치하며, 앱은 "받아서 그리기만" 하는 정적 클라이언트로 남는다.
+//
+// 매칭 키는 title 이다. 서비스 내부 ID 가 더 안정적이지만 웨이브는 항목에 ID 를
+// 싣지 않아 6개 공통으로 쓸 수 있는 게 title 뿐이다. 제목 표기가 바뀌면 NEW 로
+// 오인되는데, 오탐의 대가가 배지 하나라 감수한다.
+//
+// 순위가 그대로면 prevRank === rank 가 되고 앱이 알아서 아무것도 안 그린다 —
+// "변동 없음" 을 위한 별도 분기가 필요 없다.
+function injectRankDelta(service, payload) {
+  let prev = null;
+  try {
+    const path = resolve(ROOT, "ott", `${service}.json`);
+    if (existsSync(path)) prev = JSON.parse(readFileSync(path, "utf-8"));
+  } catch {
+    /* 없으면 전부 신규로 본다 */
+  }
+
+  const prevRankByTitle = new Map();
+  for (const g of prev?.groups ?? []) {
+    for (const it of g.items ?? []) {
+      if (it.title != null) prevRankByTitle.set(it.title, it.rank);
+    }
+  }
+
+  for (const g of payload.groups ?? []) {
+    for (const it of g.items ?? []) {
+      it.prevRank = prevRankByTitle.get(it.title) ?? null;
+    }
+  }
+  // 기준 시점. 서비스마다 갱신 주기가 달라(라프텔 4시간, 넷플릭스 주간)
+  // "언제 대비" 인지를 앱이 표기할 수 있어야 한다.
+  if (prev?.updatedAt) payload.prevAt = prev.updatedAt;
+  return payload;
+}
+
 function emit(service, payload) {
+  injectRankDelta(service, payload);
   const body = JSON.stringify(payload, null, 2);
 
   const outDir = resolve(ROOT, "ott");
