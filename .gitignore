@@ -9,3 +9,6 @@ __pycache__/
 # 로컬 실행 로그 (LaunchAgent 가 쓰던 것 — 러너로 옮긴 뒤엔 안 쓰인다)
 refresh-ott.log
 local-jobs-status.json
+
+# auto-option 가격표 PDF. 매번 새로 받으므로 저장하지 않는다 (75MB).
+.pdf-cache/

@@ -1,0 +1,147 @@
+name: Fetch auto-option
+
+on:
+  schedule:
+    # 매주 월 09:00 KST — 가격표는 월 단위로 바뀐다. 매일 돌릴 이유가 없다.
+    - cron: '0 0 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: fetch-auto-option
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # PDF 를 텍스트로 뽑는 데 필요하다. npm 의존성은 없다.
+      - name: Install poppler
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
+
+      - name: Show trigger context
+        run: |
+          echo "Event : ${{ github.event_name }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      # PDF 는 저장하지 않는다. 매번 받아서 파싱하고 버린다.
+      - name: Bake
+        id: bake
+        run: node scripts/auto-option/bake.mjs /tmp/models.new.json
+
+      # 파서는 레이아웃이 바뀌면 에러 없이 쓰레기를 뽑는다. 이전 결과와 비교해
+      # 말이 안 되는 변화면 커밋하지 않는다.
+      - name: Guard
+        id: guard
+        continue-on-error: true
+        run: |
+          {
+            echo 'report<<GUARD_EOF'
+            node scripts/auto-option/guard.mjs auto-option/models.json /tmp/models.new.json
+            echo 'GUARD_EOF'
+          } >> "$GITHUB_OUTPUT"
+
+      # 여기서 멈추는 게 이 워크플로의 핵심이다. 틀린 값이 나가는 것보다
+      # 하루 늦게 갱신되는 편이 낫다 — 옛 데이터는 최소한 한때 사실이었다.
+      - name: Open issue when suspicious
+        if: steps.guard.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPORT: ${{ steps.guard.outputs.report }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
+          {
+            echo "자동 수집이 이전 데이터와 크게 다른 결과를 냈습니다. **커밋하지 않았습니다.**"
+            echo ""
+            echo "가격표 서식이 바뀌어 파서가 조용히 잘못 읽고 있을 가능성이 큽니다."
+            echo ""
+            echo '```'
+            echo "$REPORT"
+            echo '```'
+            echo ""
+            echo "### 확인할 것"
+            echo "1. 원본 PDF 를 받아 레이아웃이 바뀌었는지 본다"
+            echo "2. \`scripts/auto-option/parse-*.mjs\` 를 고친다"
+            echo "3. 차종 하나만의 문제라면 파서가 아니라 \`models.config.mjs\` 에 예외로 둔다"
+            echo "4. \`node scripts/auto-option/bake.mjs /tmp/x.json\` 으로 확인 후 수동 커밋"
+            echo ""
+            echo "실행 로그: $RUN_URL"
+          } > /tmp/issue.md
+          gh issue create --title "auto-option: 수상한 데이터 변화 ($DATE_KST)" --body-file /tmp/issue.md
+          exit 1
+
+      - name: Promote & update meta
+        if: steps.guard.outcome == 'success'
+        run: |
+          cp /tmp/models.new.json auto-option/models.json
+          node -e '
+            const fs = require("node:fs");
+            const p = "auto-option/meta.json";
+            const models = JSON.parse(fs.readFileSync("auto-option/models.json", "utf8"));
+            // skipped/known 은 사람이 관리한다 — 왜 빠졌는지가 자동 갱신에 지워지면 안 된다.
+            const prev = fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, "utf8")) : {};
+            const brands = [...new Set(models.map((m) => m.brand))].sort();
+            fs.writeFileSync(p, JSON.stringify({
+              ...prev,
+              fetchedAt: new Date().toISOString(),
+              source: "기아·현대 공식 가격표 PDF",
+              models: models.length,
+              byBrand: Object.fromEntries(brands.map((b) => [b, models.filter((m) => m.brand === b).length])),
+              trims: models.reduce((n, m) => n + m.trims.length, 0),
+              options: models.reduce((n, m) => n + m.options.length, 0),
+            }, null, 2) + "\n");
+          '
+
+      - name: Check for changes
+        id: diff
+        if: steps.guard.outcome == 'success'
+        run: |
+          git add auto-option/
+          if git diff --cached --quiet -- auto-option/models.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes — skipping commit."
+            git reset
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --cached --stat auto-option/
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
+          git commit -m "chore(auto-option): weekly refresh ($DATE_KST)"
+          # 다른 워크플로가 같은 시간대에 밀어넣을 수 있다. 한 번은 되받아 재시도한다.
+          git push || (git pull --rebase origin main && git push)
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## 가격표 수집 결과"
+            echo ""
+            echo "- Trigger: \`${{ github.event_name }}\`"
+            echo "- Guard  : \`${{ steps.guard.outcome }}\`"
+            echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
+            echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+            echo ""
+            echo '```'
+            echo "${{ steps.guard.outputs.report }}"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"

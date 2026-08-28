@@ -175,8 +175,9 @@ function main() {
       },
       builtAt: new Date().toISOString(),
     };
-    writeFileSync(`${dir}/${basDt}.json`, JSON.stringify(detail, null, 2) + '\n');
-    writeFileSync(`${dir}/latest.json`, JSON.stringify(detail, null, 2) + '\n');
+    // ── 아카이브 목록 (멱등 병합) ─ 을 먼저 만들어 '며칠치 쌓였는지'를 얻는다 ──
+    // 🔑 **'쌓인다' 가 이 앱의 존재 이유(§1)인데 리포트에 그 숫자가 없었다.**
+    //    앱은 목록 화면에서 종목마다 index.json(28KB)을 받을 수 없다 — 숫자 하나면 된다.
 
     // ── 아카이브 목록 (멱등 병합) ───────────────────────────────
     const prev = readJSON(`${dir}/index.json`);
@@ -208,6 +209,11 @@ function main() {
     });
     days.sort((a, b) => b.basDt.localeCompare(a.basDt));               // 최신이 위
     const kept = days.slice(0, RETAIN_DAYS);
+
+    detail.archiveDays = kept.length;
+    detail.archiveFrom = kept[kept.length - 1]?.basDt ?? basDt;
+    writeFileSync(`${dir}/${basDt}.json`, JSON.stringify(detail, null, 2) + '\n');
+    writeFileSync(`${dir}/latest.json`, JSON.stringify(detail, null, 2) + '\n');
 
     writeFileSync(`${dir}/index.json`, JSON.stringify({
       code, name: price.name, market: price.market,
