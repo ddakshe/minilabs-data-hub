@@ -166,18 +166,27 @@ async function parseNetflixPage(url) {
   // 남은 영문 제목을 작품 페이지에서 보충. 순차 + 간격을 둔다
   // (동시에 때리면 넷플릭스가 연결을 끊는다). 실패해도 영문 제목이 남으므로 치명적이지 않다.
   // 넷플릭스가 산발적으로 연결을 끊어 1 회차에 3~4 개는 빈다 — 남은 것만 재시도한다.
-  for (let round = 0; round < 3; round++) {
+  // 넷플릭스 한국은 외국 작품까지 전부 제목을 현지화한다(영화 TOP10 실측 10/10).
+  // 그래서 영문이 남았다면 그건 "원래 영문"이 아니라 조회가 끊긴 것이다 —
+  // 검색 같은 다른 출처로 메우면 틀린 제목이 섞이므로, 같은 출처를 끈질기게 다시 친다.
+  for (let round = 0; round < 4; round++) {
     const todo = items.filter((it) => !/[가-힣]/.test(it.title));
     if (todo.length === 0) break;
     for (const it of todo) {
       const videoId = it.watchUrl.split("/").pop();
-      try {
-        const ko = await fetchNetflixKoTitle(videoId);
-        if (ko) it.title = ko;
-      } catch {
-        /* 영문 제목 유지 */
+      for (let attempt = 0; attempt < 3; attempt++) {
+        try {
+          const ko = await fetchNetflixKoTitle(videoId);
+          if (ko) {
+            it.title = ko;
+            break;
+          }
+        } catch {
+          /* 연결이 끊겼다 — 새 연결로 다시 */
+        }
+        await sleep(800 * (attempt + 1));
       }
-      await sleep(1500 + round * 1500);
+      await sleep(1200);
     }
   }
   const koCount = items.filter((it) => /[가-힣]/.test(it.title)).length;
