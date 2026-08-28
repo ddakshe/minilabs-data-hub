@@ -19,7 +19,12 @@ concurrency:
 
 jobs:
   fetch:
-    runs-on: ubuntu-latest
+    # 🚨 GitHub 러너(해외 IP)에서는 6개 중 2개만 성공한다 — 라프텔은 403,
+    #    티빙·쿠팡플레이는 다른 HTML 을 받아 랭킹 밴드를 찾지 못한다.
+    #    같은 코드가 국내 IP(이 맥)에서는 5/6, 넷플릭스 파서 수정 후 6/6.
+    #    fetch-market-close 와 같은 이유로 셀프호스티드를 쓴다.
+    runs-on: [self-hosted, macOS, ARM64]
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v4

@@ -44,6 +44,8 @@ const nfSearchUrl = (title) =>
 const todayKST = () =>
   new Intl.DateTimeFormat("sv-SE", { timeZone: "Asia/Seoul" }).format(new Date());
 
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
 async function fetchText(url) {
   const res = await fetch(url, { headers: { "User-Agent": UA } });
   if (!res.ok) throw new Error(`HTTP ${res.status} — ${url}`);
@@ -64,6 +66,42 @@ const cleanNfTitle = (t) =>
     /:\s*(Limited Series|Season \d+.*|Volume \d+.*|Part \d+.*|Chapter \d+.*|The Final Season|\d{4})$/i,
     "",
   );
+
+// Apollo 캐시의 문자열은 JS 리터럴 이스케이프라 JSON 과 완전히 같지 않다.
+// 예: "I\\'m SOLO" — \' 는 JS 에선 유효하지만 JSON 에선 무효라 JSON.parse 가 죽는다.
+// 아포스트로피가 든 제목이 차트에 진입한 주에만 터지므로(2026-08 넷플릭스 3주 결측)
+// JSON 이 모르는 이스케이프를 먼저 정규화하고, 그래도 실패하면 원문을 쓴다.
+function unescapeJsString(raw) {
+  try {
+    return JSON.parse(`"${raw.replace(/\\'/g, "'")}"`);
+  } catch {
+    return raw.replace(/\\(['"\\/])/g, "$1");
+  }
+}
+
+// Tudum 은 영문 제목만 준다. netflix.com/kr/title/{id} 의 og:title 에 한글 제목이 있어
+// 항목마다 한 번씩 조회한다. 다만 이 페이지는 1MB 가 넘고 넷플릭스가 연결을 자주 끊어서
+// (IncompleteRead) 전체를 읽으면 대부분 실패한다 — og:title 은 head 초반에 있으므로
+// 그 태그를 만나는 즉시 스트림을 끊는다. 실패한 항목은 영문 제목을 그대로 쓴다.
+async function fetchNetflixKoTitle(videoId) {
+  const res = await fetch(`https://www.netflix.com/kr/title/${videoId}`, {
+    headers: { "User-Agent": UA, "Accept-Language": "ko-KR,ko;q=0.9" },
+  });
+  if (!res.ok) return null;
+  let buf = "";
+  const decoder = new TextDecoder();
+  for await (const chunk of res.body) {
+    buf += decoder.decode(chunk, { stream: true });
+    const m = buf.match(/og:title" content="([^"]*)"/);
+    if (m) {
+      res.body.cancel().catch(() => {});
+      const t = m[1].replace(/(, 지금 시청하세요)? \| 넷플릭스.*$/, "").trim();
+      return /[가-힣]/.test(t) ? t : null;
+    }
+    if (buf.length > 400_000) break; // head 를 지났는데도 없으면 포기
+  }
+  return null;
+}
 
 async function parseNetflixPage(url) {
   const html = await fetchText(url);
@@ -87,7 +125,7 @@ async function parseNetflixPage(url) {
   while ((m = re.exec(html))) {
     const rank = Number(m[2]);
     if (byRank.has(rank)) continue;
-    const en = cleanNfTitle(JSON.parse(`"${m[4]}"`));
+    const en = cleanNfTitle(unescapeJsString(m[4]));
     byRank.set(rank, {
       rank,
       title: koByEn.get(en) || en, // 한글 있으면 한글, 없으면 영어 원제
@@ -96,6 +134,27 @@ async function parseNetflixPage(url) {
     });
   }
   const items = [...byRank.values()].sort((a, b) => a.rank - b.rank);
+
+  // boxshot 에서 못 건진 한글 제목을 작품 페이지에서 보충. 순차 + 간격을 둔다
+  // (동시에 때리면 넷플릭스가 연결을 끊는다). 실패해도 영문 제목이 남으므로 치명적이지 않다.
+  // 넷플릭스가 산발적으로 연결을 끊어 1 회차에 3~4 개는 빈다 — 남은 것만 재시도한다.
+  for (let round = 0; round < 3; round++) {
+    const todo = items.filter((it) => !/[가-힣]/.test(it.title));
+    if (todo.length === 0) break;
+    for (const it of todo) {
+      const videoId = it.watchUrl.split("/").pop();
+      try {
+        const ko = await fetchNetflixKoTitle(videoId);
+        if (ko) it.title = ko;
+      } catch {
+        /* 영문 제목 유지 */
+      }
+      await sleep(1500 + round * 1500);
+    }
+  }
+  const koCount = items.filter((it) => /[가-힣]/.test(it.title)).length;
+  console.log(`  · 한글 제목 ${koCount}/${items.length}`);
+
   return { week, items };
 }
 
@@ -381,8 +440,10 @@ async function main() {
 
   const ok = services.length - failed;
   console.log(`── ${ok}/${services.length} 성공, ${failed} 실패`);
-  // 성공한 서비스는 이미 저장됨(실패 서비스는 기존 JSON 유지). 전부 실패한 경우만 job 실패.
-  if (ok === 0) throw new Error("모든 서비스 실패");
+  // 성공한 서비스는 이미 저장됨(실패 서비스는 기존 JSON 유지).
+  // 하나라도 실패하면 job 을 실패시킨다 — 예전엔 전부 실패할 때만 빨간불이라
+  // 2/6 성공이 몇 주간 초록불로 지나갔고 넷플릭스가 8/09 에 멈춘 걸 아무도 몰랐다.
+  if (failed > 0) throw new Error(`${failed}개 서비스 실패 (${ok}/${services.length} 성공)`);
 }
 
 main().catch((e) => {
