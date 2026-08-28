@@ -241,7 +241,8 @@ async function parseNetflixPage(url) {
     byRank.set(rank, {
       rank,
       title: koByEn.get(en) || en, // 한글 있으면 한글, 없으면 영어 원제
-      poster: m[3].replace(/\\u002F/g, "/"), // 가로 썸네일 (전 항목)
+      // 그리드가 2:3 으로 중앙 크롭하므로 큰 storyArt 를 쓴다. 없으면 sdpArt 로 폴백.
+      poster: (story ? story[1] : m[3]).replace(/\\u002F/g, "/"),
       watchUrl: `https://www.netflix.com/kr/title/${m[1]}`,
       extra: compactExtra({
         hero: story ? story[1].replace(/\\u002F/g, "/") : undefined,
@@ -313,7 +314,12 @@ async function buildNetflix() {
     brandColor: "#E50914",
     updatedAt: week,
     estimated: false,
-    layout: "list", // 가로 썸네일 리스트 (넷플릭스 공식 overview 스타일)
+    // 넷플릭스만 리스트라 6개 탭 중 혼자 한 줄에 하나씩 나왔다. 그리드로 통일한다.
+    // 넷플릭스에 세로 포스터 자산은 없지만(§ storyArt 주석), Tudum 캐러셀 자체가
+    // 이 가로 storyArt 를 세로로 중앙 크롭해 쓰므로 같은 방식이면 결과가 같다.
+    // 그래서 poster 를 sdpArt(390x219) 대신 storyArt(1200x675)로 바꾼다 —
+    // 2:3 으로 잘리면 폭의 37% 만 남아, 작은 이미지로는 화질이 무너진다.
+    layout: "grid",
     subscribeUrl: "https://www.netflix.com/kr/",
     groups,
   };
