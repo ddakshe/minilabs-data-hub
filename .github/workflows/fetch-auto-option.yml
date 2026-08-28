@@ -37,15 +37,32 @@ jobs:
           echo "Event : ${{ github.event_name }}"
           TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
 
-      # PDF 는 저장하지 않는다. 매번 받아서 파싱하고 버린다.
-      - name: Bake
-        id: bake
-        run: node scripts/auto-option/bake.mjs /tmp/models.new.json
+      # 1단계 — 주소만 조회한다(HEAD). 여기서 바뀐 차종을 가려낸다.
+      # 제조사가 연식마다 파일명을 바꾸므로 주소를 코드에 박아두면 안 된다.
+      # 한때 고정 주소를 쓰다가 현대 13종이 2~4년 된 가격표로 등록된 적이 있다.
+      - name: Resolve sources
+        id: sources
+        run: |
+          CHANGED=$(node scripts/auto-option/resolve-sources.mjs auto-option/sources.json)
+          echo "changed=$CHANGED" >> "$GITHUB_OUTPUT"
+          if [ -z "$CHANGED" ]; then
+            echo "원본이 하나도 안 바뀌었다 — 받지 않는다."
+          else
+            echo "바뀐 차종: $CHANGED"
+          fi
+
+      # 2단계 — 바뀐 차종만 받아서 파싱한다. 나머지는 이전 결과를 그대로 옮긴다.
+      # PDF 30개는 75MB 다. 한 차종만 바뀌었는데 전부 받을 이유가 없다.
+      - name: Bake changed models
+        if: steps.sources.outputs.changed != ''
+        run: |
+          node scripts/auto-option/bake.mjs /tmp/models.new.json --only "${{ steps.sources.outputs.changed }}"
 
       # 파서는 레이아웃이 바뀌면 에러 없이 쓰레기를 뽑는다. 이전 결과와 비교해
       # 말이 안 되는 변화면 커밋하지 않는다.
       - name: Guard
         id: guard
+        if: steps.sources.outputs.changed != ''
         continue-on-error: true
         run: |
           {
@@ -108,7 +125,8 @@ jobs:
 
       - name: Check for changes
         id: diff
-        if: steps.guard.outcome == 'success'
+        # 원본이 안 바뀌었어도 sources.json 은 갱신될 수 있다(조회 시각 등). 같이 본다.
+        if: steps.guard.outcome == 'success' || steps.sources.outputs.changed == ''
         run: |
           git add auto-option/
           if git diff --cached --quiet -- auto-option/models.json; then
@@ -137,6 +155,7 @@ jobs:
             echo "## 가격표 수집 결과"
             echo ""
             echo "- Trigger: \`${{ github.event_name }}\`"
+            echo "- Changed sources: \`${{ steps.sources.outputs.changed || '(none)' }}\`"
             echo "- Guard  : \`${{ steps.guard.outcome }}\`"
             echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
             echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"

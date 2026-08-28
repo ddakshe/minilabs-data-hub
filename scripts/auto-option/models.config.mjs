@@ -15,7 +15,8 @@
  * ── 쓸 수 있는 항목 ──────────────────────────────────────────────
  *   parser       필수. 'kia' | 'kia-ev' | 'hyundai'
  *   brand,label  화면에 나갈 이름
- *   url          원본 가격표 PDF 주소. 받아서 캐시에 두고 파싱한다
+ *   source       원본 후보. kia(...)/hyundai(...) 에 슬러그를 넘긴다.
+ *                슬러그가 바뀐 차종은 옛 이름도 함께 넘긴다 — 최신 파일이 이긴다
  *   skip         굽지 않는다. 값은 **이유** — 왜 빠졌는지 모르면 나중에 못 고친다
  *   grid         격자를 손으로 지정(0-based). 자동 선택(가장 큰 격자)이 틀릴 때만
  *   dropTrims    잘못 잡힌 트림 이름
@@ -24,25 +25,46 @@
  *   fix(model)   마지막 수단. 위 항목으로 안 되는 것만
  */
 
-/** 기아 가격표. 모델 슬러그만 갈아끼우면 된다. */
-const kia = (s) => `https://www.kia.com/content/dam/kwp/kr/ko/vehicles/pdf/price/price_${s}.pdf`;
-/** 현대 가격표. 디렉터리 이름이 catalog 지만 -price 로 끝나는 쪽이 가격표다. */
-const hyundai = (s) => `https://www.hyundai.com/contents/repn-car/catalog/${s}-price.pdf`;
+/*
+  ⚠️ 주소를 고정하지 않는다. 제조사가 연식마다 파일명을 바꾼다 —
+  avante-price.pdf(2023) / avante-2026-price.pdf / venue-2027-price.pdf,
+  게다가 슬러그까지 바뀐다(sonata → sonata-the-edge, ioniq5 → ioniq-5).
+
+  한때 `<모델>-price.pdf` 로 고정했다가 **현대 13종이 2~4년 된 가격표**로 등록됐다.
+  그랜저는 2022년 10월 파일이었다. 가격 계산기에서 3년 전 가격은 그냥 틀린 가격이다.
+
+  그래서 후보를 전부 조회해 **Last-Modified 가 가장 최근인 것**을 고른다
+  (resolve-sources.mjs). 연식 규칙을 코드가 추측하지 않으므로 내년에도 그대로 돈다.
+*/
+
+/** 기아. 연식이 파일명에 안 들어간다(2026-08 기준). */
+const kia = (...slugs) => ({
+  base: 'https://www.kia.com/content/dam/kwp/kr/ko/vehicles/pdf/price',
+  name: (s, y) => (y ? null : `price_${s}.pdf`),
+  slugs,
+});
+
+/** 현대. `<슬러그>-<연식>-price.pdf` 와 `<슬러그>-price.pdf` 를 모두 후보로 본다. */
+const hyundai = (...slugs) => ({
+  base: 'https://www.hyundai.com/contents/repn-car/catalog',
+  name: (s, y) => (y ? `${s}-${y}-price.pdf` : `${s}-price.pdf`),
+  slugs,
+});
 
 /** @type {Array<Record<string, unknown>>} */
 export const MODELS = [
   // ── 기아 내연 ──────────────────────────────────────────────────
-  { id: 'morning', label: '모닝', brand: '기아', parser: 'kia', url: kia('morning') },
-  { id: 'ray', label: '레이', brand: '기아', parser: 'kia', url: kia('ray') },
-  { id: 'seltos', label: '셀토스', brand: '기아', parser: 'kia', url: kia('seltos') },
-  { id: 'k5', label: 'K5', brand: '기아', parser: 'kia', url: kia('k5') },
-  { id: 'sportage', label: '스포티지', brand: '기아', parser: 'kia', url: kia('sportage') },
+  { id: 'morning', label: '모닝', brand: '기아', parser: 'kia', source: kia('morning') },
+  { id: 'ray', label: '레이', brand: '기아', parser: 'kia', source: kia('ray') },
+  { id: 'seltos', label: '셀토스', brand: '기아', parser: 'kia', source: kia('seltos') },
+  { id: 'k5', label: 'K5', brand: '기아', parser: 'kia', source: kia('k5') },
+  { id: 'sportage', label: '스포티지', brand: '기아', parser: 'kia', source: kia('sportage') },
   {
     id: 'k8',
     label: 'K8',
     brand: '기아',
     parser: 'kia',
-    url: kia('k8'),
+    source: kia('k8'),
     /*
       ⚠️ 알려진 한계 — 프레스티지(3,777만)가 빠진다. 격자 헤더가 103·259·415 줄뿐이고
       프레스티지 가격은 490 줄이라 그 뒤다. 490 이후 구간은 격자가 아니라
@@ -54,15 +76,15 @@ export const MODELS = [
       제대로 하려면 한 PDF 안에서 두 서식을 함께 읽는 파서가 필요하다.
     */
   },
-  { id: 'sorento', label: '쏘렌토', brand: '기아', parser: 'kia', url: kia('sorento') },
-  { id: 'tasman', label: '타스만', brand: '기아', parser: 'kia', url: kia('tasman') },
-  { id: 'k9', label: 'K9', brand: '기아', parser: 'kia', url: kia('k9') },
+  { id: 'sorento', label: '쏘렌토', brand: '기아', parser: 'kia', source: kia('sorento') },
+  { id: 'tasman', label: '타스만', brand: '기아', parser: 'kia', source: kia('tasman') },
+  { id: 'k9', label: 'K9', brand: '기아', parser: 'kia', source: kia('k9') },
   {
     id: 'bongo3',
     label: '봉고3',
     brand: '기아',
     parser: 'kia',
-    url: kia('bongo3'),
+    source: kia('bongo3'),
     /*
       상용 트럭이라 가격표에 적재함·축거별 표가 여러 개 얽혀 있고, 파서가 트림을
       "장    W    L", "축    D    GLS" 처럼 여러 칼럼을 붙여 읽는다. 격자 행 필터에
@@ -77,7 +99,7 @@ export const MODELS = [
     label: '카니발',
     brand: '기아',
     parser: 'kia',
-    url: kia('carnival'),
+    source: kia('carnival'),
     /*
       옵션 가격이 **트림 × 승차인원** 두 축에 걸려 있다. 같은 노블레스라도 9인승이면
       스타일 70만, 7인승이면 47만이다. 이 앱의 데이터 모델은 option.byTrim[트림] 하나뿐이라
@@ -98,26 +120,26 @@ export const MODELS = [
 
   // ── 기아 전기 ──────────────────────────────────────────────────
   // 내연차와 가격표 서식이 다르다. 트림명이 왼쪽 칼럼에 세로로 쪼개져 있고 가격이 두 개다.
-  { id: 'ev3', label: 'EV3', brand: '기아', parser: 'kia-ev', url: kia('ev3') },
-  { id: 'ev4', label: 'EV4', brand: '기아', parser: 'kia-ev', url: kia('ev4') },
-  { id: 'ev5', label: 'EV5', brand: '기아', parser: 'kia-ev', url: kia('ev5') },
-  { id: 'ev6', label: 'EV6', brand: '기아', parser: 'kia-ev', url: kia('ev6') },
-  { id: 'ev9', label: 'EV9', brand: '기아', parser: 'kia-ev', url: kia('ev9') },
-  { id: 'niro', label: '니로', brand: '기아', parser: 'kia-ev', url: kia('niro') },
+  { id: 'ev3', label: 'EV3', brand: '기아', parser: 'kia-ev', source: kia('ev3') },
+  { id: 'ev4', label: 'EV4', brand: '기아', parser: 'kia-ev', source: kia('ev4') },
+  { id: 'ev5', label: 'EV5', brand: '기아', parser: 'kia-ev', source: kia('ev5') },
+  { id: 'ev6', label: 'EV6', brand: '기아', parser: 'kia-ev', source: kia('ev6') },
+  { id: 'ev9', label: 'EV9', brand: '기아', parser: 'kia-ev', source: kia('ev9') },
+  { id: 'niro', label: '니로', brand: '기아', parser: 'kia-ev', source: kia('niro') },
 
   // ── 현대 ──────────────────────────────────────────────────────
   // 격자를 발행하지 않고 트림별 목록만 발행해서, 파서가 격자를 역으로 세운다.
-  { id: 'avante', label: '아반떼', brand: '현대', parser: 'hyundai', url: hyundai('avante') },
-  { id: 'sonata', label: '쏘나타', brand: '현대', parser: 'hyundai', url: hyundai('sonata') },
-  { id: 'grandeur', label: '그랜저', brand: '현대', parser: 'hyundai', url: hyundai('grandeur') },
-  { id: 'venue', label: '베뉴', brand: '현대', parser: 'hyundai', url: hyundai('venue') },
-  { id: 'kona', label: '코나', brand: '현대', parser: 'hyundai', url: hyundai('kona') },
-  { id: 'tucson', label: '투싼', brand: '현대', parser: 'hyundai', url: hyundai('tucson') },
-  { id: 'santafe', label: '싼타페', brand: '현대', parser: 'hyundai', url: hyundai('santafe') },
-  { id: 'palisade', label: '팰리세이드', brand: '현대', parser: 'hyundai', url: hyundai('palisade') },
-  { id: 'staria', label: '스타리아', brand: '현대', parser: 'hyundai', url: hyundai('staria') },
-  { id: 'porter2', label: '포터2', brand: '현대', parser: 'hyundai', url: hyundai('porter2') },
-  { id: 'ioniq5', label: '아이오닉5', brand: '현대', parser: 'hyundai', url: hyundai('ioniq5') },
-  { id: 'ioniq6', label: '아이오닉6', brand: '현대', parser: 'hyundai', url: hyundai('ioniq6') },
-  { id: 'ioniq9', label: '아이오닉9', brand: '현대', parser: 'hyundai', url: hyundai('ioniq9') },
+  { id: 'avante', label: '아반떼', brand: '현대', parser: 'hyundai', source: hyundai('avante') },
+  { id: 'sonata', label: '쏘나타', brand: '현대', parser: 'hyundai', source: hyundai('sonata', 'sonata-the-edge') },
+  { id: 'grandeur', label: '그랜저', brand: '현대', parser: 'hyundai', source: hyundai('grandeur') },
+  { id: 'venue', label: '베뉴', brand: '현대', parser: 'hyundai', source: hyundai('venue') },
+  { id: 'kona', label: '코나', brand: '현대', parser: 'hyundai', source: hyundai('kona') },
+  { id: 'tucson', label: '투싼', brand: '현대', parser: 'hyundai', source: hyundai('tucson') },
+  { id: 'santafe', label: '싼타페', brand: '현대', parser: 'hyundai', source: hyundai('santafe') },
+  { id: 'palisade', label: '팰리세이드', brand: '현대', parser: 'hyundai', source: hyundai('palisade') },
+  { id: 'staria', label: '스타리아', brand: '현대', parser: 'hyundai', source: hyundai('staria', 'staria-lounge') },
+  { id: 'porter2', label: '포터2', brand: '현대', parser: 'hyundai', source: hyundai('porter2') },
+  { id: 'ioniq5', label: '아이오닉5', brand: '현대', parser: 'hyundai', source: hyundai('ioniq5', 'ioniq-5') },
+  { id: 'ioniq6', label: '아이오닉6', brand: '현대', parser: 'hyundai', source: hyundai('ioniq6', 'ioniq-6') },
+  { id: 'ioniq9', label: '아이오닉9', brand: '현대', parser: 'hyundai', source: hyundai('ioniq9') },
 ];

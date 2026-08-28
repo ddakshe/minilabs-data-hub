@@ -1,0 +1,134 @@
+name: Fetch Dividend Labels (한글명·시총 · 맥)
+
+# 이름표만 낸다 — 한글 종목명과 시가총액. **주가는 여기서 내지 않는다.**
+#   · 주가  → fetch-dividend.yml (Yahoo · 키·IP 불필요 · 매일)
+#   · 이름표 → 여기 (토스 · 허용 IP 필요 · 분기 1회)
+# 둘을 한 워크플로에 섞으면 매일 도는 쪽이 통째로 토스 IP 에 묶인다.
+#
+# 2026-08-28 LOCAL_JOBS.md 의 로컬 작업(dividend-labels)에서 옮겨왔다.
+# 로컬이었던 이유는 오직 토스 허용 IP 였고, 러너가 그 IP 를 가진 이 맥이라 전제가 사라졌다.
+
+on:
+  schedule:
+    # 분기 첫날 10:00 KST (= 01:00 UTC). 문서상 '분기 첫 영업일' 이지만 cron 으로
+    # 영업일을 표현할 수 없고, 여기서 받는 값(사명·발행주식수)은 장이 열렸는지와 무관하다.
+    - cron: '0 1 1 1,4,7,10 *'
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: '실행 이유 (로그에만 기록, 선택)'
+        required: false
+        default: 'manual refresh'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-dividend-labels
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    # 🚨 토스증권 Open API 는 **허용 IP 사전 등록**이 필수다. 미등록 IP 는 /oauth2/token
+    #    단계에서 403 `IP address not allowed` — 토큰조차 못 받는다. GitHub 호스티드
+    #    러너는 아웃바운드 IP 가 유동이라 등록 자체가 불가능하다.
+    runs-on: [self-hosted, macOS, ARM64]
+    timeout-minutes: 20
+    env:
+      # 배치는 stock-tools(비공개)에 있다. **작업 클론을 직접 읽지 않는다** — 사람이
+      # 브랜치를 갈아타는 곳이라 어느 브랜치가 체크아웃돼 있느냐로 결과가 조용히 달라진다.
+      # 대신 그 클론이 받아둔 origin/master 를 git archive 로 꺼낸다(스냅샷이라 브랜치·수정
+      # 상태와 무관하고, 네트워크도 자격증명도 필요 없다). fetch-lever.yml 과 같은 방식이다.
+      LOCAL_CLONE: /Users/kyungtaekim/ClaudeProjects/stock-tools
+      STOCK_TOOLS: ${{ github.workspace }}/.stock-tools
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Show trigger context
+        run: |
+          echo "Event  : ${{ github.event_name }}"
+          echo "Reason : ${{ github.event.inputs.reason || '(scheduled)' }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      - name: Export stock-tools (origin/master 스냅샷)
+        run: |
+          test -d "$LOCAL_CLONE/.git" || { echo "::error::stock-tools 클론이 없다: $LOCAL_CLONE"; exit 1; }
+
+          # 최신화는 되면 좋고 안 되면 그만이다(러너가 osxkeychain 에 닿지 못해 대개 실패한다).
+          git -C "$LOCAL_CLONE" fetch --quiet origin master 2>/dev/null || \
+            echo "::notice::origin/master 를 새로 받지 못했다 — 이미 받아둔 것으로 진행한다"
+
+          # 배치 코드가 얼마나 묵었는지 남긴다. 조용히 옛 코드로 도는 것을 막는 유일한 장치다.
+          echo "stock-tools origin/master: $(git -C "$LOCAL_CLONE" log -1 --format='%h %ci %s' origin/master)"
+
+          rm -rf "$STOCK_TOOLS" && mkdir -p "$STOCK_TOOLS"
+          git -C "$LOCAL_CLONE" archive origin/master | tar -x -C "$STOCK_TOOLS"
+
+      - name: Preflight
+        run: |
+          test -r "$HOME/.config/stock-tools/toss.env" || { echo "::error::토스 자격증명을 읽을 수 없다"; exit 1; }
+          # 입력은 fetch-dividend.yml 이 만든 티커 목록이다. 없으면 첫 줄에서 죽으므로 먼저 본다.
+          test -s dividend/dividend.json || { echo "::error::dividend/dividend.json 이 없다 — fetch-dividend.yml 을 먼저 돌릴 것"; exit 1; }
+          # dividend_toss.py 와 toss_client 는 표준 라이브러리만 쓴다. 러너는 launchd 기본
+          # PATH 라 anaconda·pyenv 가 없으므로 시스템 파이썬을 명시적으로 쓴다.
+          /usr/bin/python3 -V
+
+      - name: Fetch labels
+        env:
+          # 기본값은 '형제 디렉터리의 허브' 라 이 기계의 작업 클론을 가리킨다. 러너 작업공간에
+          # 체크아웃한 허브를 써야 아래 commit 단계가 그것을 집는다.
+          DIVIDEND_SRC_PATH: ${{ github.workspace }}/dividend/dividend.json
+          DIVIDEND_HUB_PATH: ${{ github.workspace }}/dividend/toss.json
+          # 개발용 사본은 stock-dividend-mini 의 public/ 로 가는데, 그 앱은 이 저장소에
+          # 없고 CI 가 남의 작업 클론을 더럽힐 이유도 없다. 버리는 경로로 보낸다.
+          DIVIDEND_DEV_PATH: ${{ runner.temp }}/toss-dev.json
+        run: |
+          cd "$STOCK_TOOLS"
+          /usr/bin/python3 scripts/dividend_toss.py
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git add dividend/toss.json
+          if git diff --cached --quiet -- dividend/toss.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes — skipping commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --cached --stat dividend/toss.json
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d %H:%M")
+          git commit -m "chore(dividend): 토스 이름표 갱신 (한글명·시총 · $DATE_KST KST)"
+          # fetch-dividend.yml 이 같은 디렉터리를 매일 민다. 한 번은 되받아 재시도한다.
+          git push || (git pull --rebase origin main && git push)
+
+      - name: Purge jsDelivr cache
+        if: steps.diff.outputs.changed == 'true'
+        run: curl -s -o /dev/null "https://purge.jsdelivr.net/gh/ddakshe/minilabs-data-hub@main/dividend/toss.json" || true
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## 토스 이름표 수집 결과"
+            echo ""
+            echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
+            echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+            echo ""
+            if [ -f dividend/toss.json ]; then
+              echo '```'
+              /usr/bin/python3 -c "import json;d=json.load(open('dividend/toss.json'));print(f\"asOf {d['asOf']} · 한글명 {len(d['names']):,} · 시총 {len(d['caps']):,}\")"
+              echo '```'
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"

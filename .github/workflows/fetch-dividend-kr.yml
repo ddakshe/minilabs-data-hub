@@ -1,0 +1,200 @@
+name: Fetch Dividend KR (DART 국내배당 · 맥 · 수동)
+
+# 🔴 **스케줄이 없다. 일부러 없다.**
+#
+#   collect.py 의 LATEST/PAST 가 하드코딩이라 새 사업연도를 받으려면 사람이 올려야 한다.
+#   안 올리고 돌리면 캐시가 다 차 있어 몇 초 만에 끝나고 **작년과 같은 파일**이 나온다 —
+#   성공한 것처럼 보이므로 스케줄로 자동화하면 아무도 눈치채지 못한 채 몇 년이 간다.
+#   아래 '연도 가드' 가 그걸 잡지만, 잡아서 실패로 남기는 것보다 사람이 부르는 게 낫다.
+#
+#   **부르는 때**: 4월 중순(본 수집) · 5월 초(지연·정정 제출 반영). 그 밖에는 값이 안 움직인다.
+#   국내는 결산배당 연 1회가 대부분이고 출처가 사업보고서(12월 결산 → 3/31 마감)다.
+#
+# 2026-08-28 LOCAL_JOBS.md 의 로컬 작업(dividend-kr)에서 옮겨왔다.
+# 옮긴 이유는 **실패가 기록으로 남는 것** 하나다. 40분·차단 위험은 그대로다 —
+# 러너가 바로 그 맥이라 IP 도 속도도 로컬로 돌릴 때와 같다.
+
+on:
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: '실행 이유 (로그에만 기록, 선택)'
+        required: false
+        default: '4월 본 수집'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-dividend-kr
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    # DART 는 허용 IP 를 요구하지 않는다 — 셀프호스티드인 이유가 다르다.
+    #   · **캐시**. 8,400건을 초당 3건 이하로 받는 데 40분 걸린다. 이 맥의 .cache 를 그대로
+    #     쓰면 이미 받은 것을 다시 묻지 않는다. 호스티드 러너는 매번 전량을 새로 받는데,
+    #     그건 DART 에 40분을 더 미는 일이라 차단 위험만 는다.
+    #   · 2026-08-25 에 이 프로젝트가 실제로 IP 차단을 받았다(하루 뒤 해제).
+    runs-on: [self-hosted, macOS, ARM64]
+    # 40분이 정상이고 캐시가 비면 더 걸린다. 넉넉히 준다.
+    timeout-minutes: 150
+    env:
+      LOCAL_CLONE: /Users/kyungtaekim/ClaudeProjects/stock-tools
+      STOCK_TOOLS: ${{ github.workspace }}/.stock-tools
+      # DART 키는 ~/.config/stock-tools/dart.env (chmod 600, 저장소 밖) 에 있고 러너가
+      # 같은 사용자로 돌기 때문에 그대로 읽힌다. GitHub Secrets 의 DART_API_KEY 도 있지만
+      # 로컬 실행과 같은 경로를 쓰는 편이 '어느 키로 돌았나' 를 헷갈리지 않게 한다.
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Show trigger context
+        run: |
+          echo "Reason : ${{ github.event.inputs.reason }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      - name: Export stock-tools (origin/master 스냅샷)
+        run: |
+          test -d "$LOCAL_CLONE/.git" || { echo "::error::stock-tools 클론이 없다: $LOCAL_CLONE"; exit 1; }
+          git -C "$LOCAL_CLONE" fetch --quiet origin master 2>/dev/null || \
+            echo "::notice::origin/master 를 새로 받지 못했다 — 이미 받아둔 것으로 진행한다"
+          echo "stock-tools origin/master: $(git -C "$LOCAL_CLONE" log -1 --format='%h %ci %s' origin/master)"
+          rm -rf "$STOCK_TOOLS" && mkdir -p "$STOCK_TOOLS"
+          git -C "$LOCAL_CLONE" archive origin/master | tar -x -C "$STOCK_TOOLS"
+
+      # 🔑 이 워크플로의 핵심. 캐시는 **코드와 반대로 공유해야 한다.**
+      #
+      #    코드는 작업 클론에서 읽지 않는다 — 사람이 브랜치를 갈아타면 결과가 달라지니까.
+      #    캐시는 정반대다. 받아둔 DART 응답은 브랜치와 무관하고, 나눠 가지면 그만큼 DART 를
+      #    다시 두드린다. 그래서 스냅샷의 .cache 를 작업 클론의 것으로 **링크**한다.
+      #    (.cache/ 는 gitignore 라 작업 클론을 더럽히지 않는다)
+      - name: Link DART cache (작업 클론과 공유)
+        run: |
+          CACHE="$LOCAL_CLONE/stock-dividend-kr/.cache"
+          mkdir -p "$CACHE"
+          ln -sfn "$CACHE" "$STOCK_TOOLS/stock-dividend-kr/.cache"
+          echo "캐시: $CACHE ($(du -sh "$CACHE" 2>/dev/null | cut -f1) · $(find "$CACHE" -type f 2>/dev/null | wc -l | tr -d ' ')개)"
+
+      - name: Preflight
+        run: |
+          test -r "$HOME/.config/stock-tools/dart.env" || { echo "::error::DART 자격증명을 읽을 수 없다 (~/.config/stock-tools/dart.env)"; exit 1; }
+          /usr/bin/python3 -V
+
+      # 받아야 할 사업연도. 12월 결산 법인의 사업보고서 마감이 3/31 이라 4월부터 작년치가 선다.
+      - name: 대상 사업연도 계산
+        id: target
+        run: |
+          Y=$(/usr/bin/python3 -c "
+          from datetime import datetime, timezone, timedelta
+          n = datetime.now(timezone(timedelta(hours=9)))
+          print(n.year - 1 if n.month >= 4 else n.year - 2)")
+          echo "year=$Y" >> "$GITHUB_OUTPUT"
+          echo "▶ 대상 사업연도 $Y"
+
+      # 🔴 '데이터 없음'(status 013) 캐시를 대상 연도만 비운다.
+      #
+      #    dart.py 는 013 도 캐시한다 — "다시 물어봐도 같은 답" 이라는 전제인데 **공시 시즌에는
+      #    틀리다.** 아직 사업보고서를 안 낸 회사가 013 을 주고, 며칠 뒤 제출하면 000 이 된다.
+      #    비우지 않고 다시 돌리면 캐시가 013 을 돌려줘 **늦게 낸 회사를 영영 못 잡는다.**
+      #    시즌에 여러 번 도는 이유가 바로 지연·정정 제출을 줍는 것이라, 이 단계가 없으면
+      #    두 번째 실행부터 아무 일도 하지 않는다.
+      #
+      #    000 은 건드리지 않는다. 이미 받은 것을 다시 받을 이유가 없다.
+      - name: '데이터 없음 캐시 비우기 (대상 연도만)'
+        run: |
+          /usr/bin/python3 - "$STOCK_TOOLS/stock-dividend-kr" "${{ steps.target.outputs.year }}" <<'PY'
+          import json, pathlib, sys
+          app, year = sys.argv[1], sys.argv[2]
+          d = pathlib.Path(app) / '.cache' / 'alotMatter'
+          n = 0
+          for f in d.glob(f'*bsns_year-{year}_*.json') if d.exists() else []:
+              try:
+                  if json.loads(f.read_text()).get('status') == '013':
+                      f.unlink(); n += 1
+              except Exception:
+                  f.unlink(); n += 1        # 깨진 캐시도 지운다 — 다음 실행이 다시 받는다
+          print(f'   {n:,}건 비움 (이번 실행에서 다시 물어본다)')
+          PY
+
+      - name: 수집 (DART — 순차 · 초당 3건 이하)
+        run: |
+          cd "$STOCK_TOOLS"
+          /usr/bin/python3 stock-dividend-kr/scripts/collect.py
+
+      # 🔴 연도 가드. collect.py 의 LATEST/PAST 가 하드코딩이라 해가 바뀌면 손으로 올려야 한다.
+      #    안 올리면 캐시가 다 차 있어 몇 초 만에 끝나고 작년과 같은 파일이 나온다 —
+      #    성공한 것처럼 보이므로 여기서 잡지 않으면 아무도 눈치채지 못한다.
+      - name: 연도 가드
+        run: |
+          T="${{ steps.target.outputs.year }}"
+          OUT="$STOCK_TOOLS/stock-dividend-kr/data/dividend-kr.json"
+          ASOF=$(/usr/bin/python3 -c "import json,sys;print(json.load(open(sys.argv[1]))['asOf'])" "$OUT")
+          if [ "$ASOF" != "$T" ]; then
+            echo "::error::수집 결과가 $ASOF 사업연도다. $T 를 기대했다. stock-tools 의 stock-dividend-kr/scripts/collect.py 에서 LATEST=$T · PAST=($((T-3)), $((T-6)), $((T-9))) 로 올릴 것. 허브에 올리지 않고 멈춘다."
+            exit 1
+          fi
+          echo "✓ $ASOF 사업연도"
+
+      - name: 허브로 복사
+        run: |
+          mkdir -p dividend-kr
+          cp "$STOCK_TOOLS/stock-dividend-kr/data/dividend-kr.json" dividend-kr/dividend-kr.json
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git add dividend-kr/
+          if git diff --cached --quiet -- dividend-kr/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes — skipping commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --cached --stat dividend-kr/
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d %H:%M")
+          git commit -m "chore(dividend-kr): 국내 배당 데이터 갱신 (${{ steps.target.outputs.year }} 사업연도 · $DATE_KST KST)"
+          git push || (git pull --rebase origin main && git push)
+
+      # jsDelivr purge 를 하지 않는다 — 이 데이터를 쓰는 앱(stock-dividend-kr)은
+      # raw.githubusercontent.com 을 직접 부르고, URL 에 KST 날짜를 붙여 하루 단위로
+      # 캐시를 턴다 (src/lib/data.ts 의 dailyBucket). raw 는 max-age=300 이다.
+      - name: 발행 확인
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          /usr/bin/python3 - <<'PY'
+          import json, urllib.request
+          from datetime import datetime, timezone, timedelta
+          kst = datetime.now(timezone(timedelta(hours=9))).strftime('%Y-%m-%d')
+          url = ('https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main'
+                 f'/dividend-kr/dividend-kr.json?_={kst}')
+          with urllib.request.urlopen(url, timeout=30) as r:
+              d = json.load(r)
+          print(f"   HTTP {r.status} · {len(d['rows']):,}종목 · {d['asOf']} 사업연도 · 수집 {d['builtAt']}")
+          PY
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## 국내 배당(DART) 수집 결과"
+            echo ""
+            echo "- 대상 사업연도: \`${{ steps.target.outputs.year }}\`"
+            echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
+            echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+            echo ""
+            if [ -f dividend-kr/dividend-kr.json ]; then
+              echo '```'
+              /usr/bin/python3 -c "import json;d=json.load(open('dividend-kr/dividend-kr.json'));print(f\"{len(d['rows']):,}종목 · asOf {d['asOf']}\")"
+              echo '```'
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"

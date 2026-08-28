@@ -1,7 +1,12 @@
 /**
  * 가격표 PDF 를 받아 파싱해 JSON 으로 굽는다.
  *
- * 사용: node scripts/auto-option/bake.mjs <출력.json>
+ * 사용: node scripts/auto-option/bake.mjs <출력.json> [--only id1,id2,...]
+ *
+ * --only 를 주면 그 차종만 다시 파싱하고 **나머지는 이전 결과를 그대로 옮긴다**.
+ * PDF 30개는 75MB 다. 한 차종만 바뀌었는데 전부 받을 이유가 없다.
+ * 주소는 resolve-sources.mjs 가 만든 sources.json 에서 읽는다 — 연식마다 파일명이
+ * 바뀌므로 코드가 주소를 알고 있으면 안 된다.
  *
  * 무엇을 굽고 무엇을 예외로 손볼지는 **models.config.mjs** 에 있다. 여기는 그 표를
  * 실행하는 기계일 뿐이다. 차종을 더하거나 예외를 두려면 이 파일이 아니라 그 표를 고친다.
@@ -15,16 +20,37 @@
  * 로컬에서는 캐시가 있으면 다시 받지 않는다 — 파서를 고치며 수십 번 돌리게 된다.
  */
 import { execFileSync } from 'node:child_process';
-import { existsSync, mkdirSync, statSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 
 import { MODELS as CONFIG } from './models.config.mjs';
 
-const out = process.argv[2];
+const args = process.argv.slice(2);
+const out = args.find((a) => !a.startsWith('--'));
 if (!out) {
-  console.error('사용: node scripts/auto-option/bake.mjs <출력.json>');
+  console.error('사용: node scripts/auto-option/bake.mjs <출력.json> [--only id1,id2]');
   process.exit(1);
 }
+const onlyArg = args.find((a) => a.startsWith('--only'));
+/** 다시 구울 차종. 비어 있으면 전부. */
+const only = onlyArg
+  ? new Set((onlyArg.includes('=') ? onlyArg.split('=')[1] : args[args.indexOf(onlyArg) + 1] ?? '')
+      .split(/[\s,]+/)
+      .filter(Boolean))
+  : null;
+
+/** 현행 주소. resolve-sources.mjs 가 만든다. */
+const SOURCES = process.env.AUTO_OPTION_SOURCES ?? 'auto-option/sources.json';
+const sources = existsSync(SOURCES) ? JSON.parse(readFileSync(SOURCES, 'utf8')) : {};
+if (Object.keys(sources).length === 0) {
+  console.error(`✗ ${SOURCES} 가 없다. 먼저 resolve-sources.mjs 를 돌릴 것.`);
+  process.exit(1);
+}
+
+/** 다시 굽지 않는 차종은 여기서 그대로 옮겨 온다. */
+const PREV = process.env.AUTO_OPTION_PREV ?? 'auto-option/models.json';
+const prevModels = existsSync(PREV) ? JSON.parse(readFileSync(PREV, 'utf8')) : [];
+const prevById = new Map(prevModels.map((m) => [m.id, m]));
 
 /** 받은 PDF 를 두는 곳. git 에는 올리지 않는다. */
 const CACHE = process.env.AUTO_OPTION_PDF_CACHE ?? '.pdf-cache';
@@ -90,10 +116,29 @@ const models = [];
 let skipped = 0;
 let failed = 0;
 
+let reused = 0;
 for (const cfg of CONFIG) {
   if (cfg.skip) {
     console.error(`⏭  ${cfg.label}: ${cfg.skip}`);
     skipped += 1;
+    continue;
+  }
+
+  // --only 밖이면 다시 굽지 않고 이전 결과를 옮긴다.
+  if (only && !only.has(cfg.id)) {
+    const kept = prevById.get(cfg.id);
+    if (kept) {
+      models.push(kept);
+      reused += 1;
+      continue;
+    }
+    // 이전 결과가 없으면 옮길 게 없다. 그냥 굽는다.
+  }
+
+  const src = sources[cfg.id];
+  if (!src) {
+    console.error(`✗ ${cfg.label}: sources.json 에 주소가 없다`);
+    failed += 1;
     continue;
   }
 
@@ -106,7 +151,7 @@ for (const cfg of CONFIG) {
 
   let parsed;
   try {
-    const pdf = fetchPdf(cfg.url, cfg.id);
+    const pdf = fetchPdf(src.url, cfg.id);
     parsed = JSON.parse(
       execFileSync('node', [new URL(`./${parser}`, import.meta.url).pathname, pdf], {
         encoding: 'utf8',
@@ -198,8 +243,12 @@ for (const cfg of CONFIG) {
 mkdirSync(path.dirname(path.resolve(out)), { recursive: true });
 writeFileSync(out, JSON.stringify(models));
 
+// 설정 순서를 유지한다 — 재사용분이 섞여도 결과 파일이 안 흔들려야 diff 가 읽힌다.
+const order = new Map(CONFIG.map((c, i) => [c.id, i]));
+models.sort((a, b) => (order.get(a.id) ?? 0) - (order.get(b.id) ?? 0));
+
 console.error(
-  `\n구움 ${models.length} · 건너뜀 ${skipped} · 실패 ${failed}` +
+  `\n구움 ${models.length - reused} · 재사용 ${reused} · 건너뜀 ${skipped} · 실패 ${failed}` +
     ` · ${out} ${(JSON.stringify(models).length / 1024).toFixed(1)}KB`,
 );
 // 하나라도 실패하면 0 이 아닌 값으로 끝낸다 — CI 나 스크립트가 성공으로 오해하면 안 된다.
