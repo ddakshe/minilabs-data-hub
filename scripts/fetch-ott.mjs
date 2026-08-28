@@ -37,6 +37,11 @@ const DISNEY_UPCOMING = "https://www.disneyplus.com/ko-kr/browse/page-36541dc7-6
 const TVING_UPCOMING = "https://www.tvingads.com/content";
 const disneyPoster = (imageId) =>
   `https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/${imageId}/scale?width=400&format=webp`;
+// 공개 예정 페이지는 카드당 이미지가 하나뿐이고 그게 가로(16:9)라, 앱에서 2:3 으로
+// 크롭하면 이미지에 박힌 제목이 잘린다. ripcut 이 aspectRatio 파라미터를 받으므로
+// 같은 imageId 로 세로를 요청한다 — 추가 요청 없이 비율만 바꾼다.
+const disneyPosterPortrait = (imageId) =>
+  `https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/${imageId}/compose?aspectRatio=0.71&format=webp&width=400`;
 // 웨이브 오늘의 Top20 (웹 공개 apikey, 익명 credential=none)
 const WAVVE_RANKING =
   "https://apis.wavve.com/v1/catalog?broadcastid=CN2&catalogType=ranking&limit=20&offset=0&orderby=default&rankingType=top&uicode=CN2&isBand=true&apikey=E5F3E0D30947AA5440556471321BB6D9&device=pc&partner=pooq&region=kor&targetage=all&pooqzone=none&drm=wm&client_version=7.2.80";
@@ -383,7 +388,7 @@ async function buildDisneyUpcoming(limit = 10) {
     items.push({
       rank: items.length + 1,
       title,
-      poster: img ? disneyPoster(img[1]) : undefined,
+      poster: img ? disneyPosterPortrait(img[1]) : undefined,
       watchUrl: `https://www.disneyplus.com${m[2]}`,
       extra: compactExtra({ source: "disney" }),
     });
