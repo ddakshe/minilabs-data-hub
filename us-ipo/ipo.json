@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-28T00:00:00Z",
+  "generatedAt": "2026-08-29T00:00:00Z",
   "source": "SEC EDGAR",
   "sourceUrl": "https://www.sec.gov/edgar",
-  "usdKrw": 1380.38,
+  "usdKrw": 1374.55,
   "listed": [
     {
       "cik": "0002145659",
@@ -390,36 +390,150 @@
       "location": "VERNON, CA",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001787117&type=424B4"
-    },
-    {
-      "cik": "0002098395",
-      "name": "IMC Rare Earths Ltd",
-      "ticker": "IMC",
-      "exchange": "NYSE American",
-      "offerPrice": 5.0,
-      "priceBandLow": null,
-      "priceBandHigh": null,
-      "bandPosition": null,
-      "sharesOffered": null,
-      "sharesAfterListing": null,
-      "grossProceeds": null,
-      "marketCap": null,
-      "filedAt": "2026-07-29",
-      "isSpac": false,
-      "sic": "1000",
-      "industry": "광업·자원",
-      "underwriters": [],
-      "businessSummary": "We are a mineral exploration and development company, and our main rare earth element (or &ldquo;REE&rdquo;) project is the Itarantim Project located in the States of Bahia and Minas Gerais, Brazil.",
-      "useOfProceeds": "We intend to use the net proceeds from this offering to carry out planned exploration work at the Itarantim Project, including to fund exploration and development activities, licensing, permitting and reporting, general and administrative expenses and for working capital.",
-      "netResult": null,
-      "netResultYear": null,
-      "lockupDays": null,
-      "location": "SAO PAOLO",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002098395&type=424B4"
     }
   ],
   "upcoming": [
+    {
+      "cik": "0002113088",
+      "name": "Graf Industrial Corp. II",
+      "ticker": null,
+      "filedAt": "2026-08-28",
+      "isSpac": false,
+      "sic": null,
+      "industry": "기타",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002113088&type=S-1"
+    },
+    {
+      "cik": "0001779977",
+      "name": "SeeQC, Inc.",
+      "ticker": "SEQC",
+      "filedAt": "2026-08-28",
+      "isSpac": false,
+      "sic": "7374",
+      "industry": "소프트웨어·IT",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": 4157000,
+        "netIncome": -12199000,
+        "assets": 36517000
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001779977&type=S-1"
+    },
+    {
+      "cik": "0002148436",
+      "name": "Southport Acquisition Corp. II",
+      "ticker": null,
+      "filedAt": "2026-08-28",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002148436&type=S-1"
+    },
+    {
+      "cik": "0001858939",
+      "name": "Giant Oak Acquisition Corp",
+      "ticker": null,
+      "filedAt": "2026-08-28",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001858939&type=S-1"
+    },
+    {
+      "cik": "0002125355",
+      "name": "Bamboo Insurance Services, Inc.",
+      "ticker": null,
+      "filedAt": "2026-08-28",
+      "isSpac": false,
+      "sic": "6411",
+      "industry": "금융·부동산",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002125355&type=S-1"
+    },
+    {
+      "cik": "0002088082",
+      "name": "Electra Therapeutics, Inc.",
+      "ticker": null,
+      "filedAt": "2026-08-28",
+      "isSpac": false,
+      "sic": "2836",
+      "industry": "제약·바이오",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002088082&type=S-1"
+    },
+    {
+      "cik": "0002141616",
+      "name": "Amaero Inc.",
+      "ticker": null,
+      "filedAt": "2026-08-28",
+      "isSpac": false,
+      "sic": "3390",
+      "industry": "제조",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002141616&type=S-1"
+    },
+    {
+      "cik": "0002067767",
+      "name": "NextBoat Inc.",
+      "ticker": "NXB",
+      "filedAt": "2026-08-28",
+      "isSpac": false,
+      "sic": "3730",
+      "industry": "제조",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": 119866298,
+        "netIncome": -1871797,
+        "assets": 48417557
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002067767&type=S-1"
+    },
+    {
+      "cik": "0001938571",
+      "name": "ADAPTIN BIO, INC.",
+      "ticker": "APTN",
+      "filedAt": "2026-08-28",
+      "isSpac": false,
+      "sic": "2836",
+      "industry": "제약·바이오",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": null,
+        "netIncome": -5167569,
+        "assets": 619159
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001938571&type=S-1"
+    },
+    {
+      "cik": "0001855467",
+      "name": "MOBIX LABS, INC",
+      "ticker": "MOBX",
+      "filedAt": "2026-08-28",
+      "isSpac": false,
+      "sic": "3674",
+      "industry": "반도체·전자",
+      "financials": {
+        "fiscalEnd": "2024-09-30",
+        "revenue": 6442000,
+        "netIncome": -20034000,
+        "assets": 39088000
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001855467&type=S-1"
+    },
+    {
+      "cik": "0002067111",
+      "name": "Bitwise NEAR ETF",
+      "ticker": null,
+      "filedAt": "2026-08-28",
+      "isSpac": false,
+      "sic": "6199",
+      "industry": "금융·부동산",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002067111&type=S-1"
+    },
     {
       "cik": "0002076148",
       "name": "FullPAC, Inc.",
@@ -1239,17 +1353,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002083125&type=S-1"
     },
     {
-      "cik": "0002148436",
-      "name": "Southport Acquisition Corp. II",
-      "ticker": null,
-      "filedAt": "2026-08-07",
-      "isSpac": true,
-      "sic": null,
-      "industry": "기타",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002148436&type=S-1"
-    },
-    {
       "cik": "0001827635",
       "name": "Veradermics, Inc",
       "ticker": "MANE",
@@ -1411,17 +1514,6 @@
         "assets": 4837
       },
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002075109&type=S-1"
-    },
-    {
-      "cik": "0002067111",
-      "name": "Bitwise NEAR ETF",
-      "ticker": null,
-      "filedAt": "2026-08-03",
-      "isSpac": false,
-      "sic": "6199",
-      "industry": "금융·부동산",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002067111&type=S-1"
     },
     {
       "cik": "0002094496",
@@ -2161,22 +2253,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001843714&type=S-1"
     },
     {
-      "cik": "0001855467",
-      "name": "MOBIX LABS, INC",
-      "ticker": "MOBX",
-      "filedAt": "2026-07-09",
-      "isSpac": false,
-      "sic": "3674",
-      "industry": "반도체·전자",
-      "financials": {
-        "fiscalEnd": "2024-09-30",
-        "revenue": 6442000,
-        "netIncome": -20034000,
-        "assets": 39088000
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001855467&type=S-1"
-    },
-    {
       "cik": "0001711141",
       "name": "Leef Brands Inc.",
       "ticker": "LEEEF",
@@ -2495,17 +2571,6 @@
       "industry": "SPAC",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002110119&type=S-1"
-    },
-    {
-      "cik": "0001779977",
-      "name": "SeeQC, Inc.",
-      "ticker": "SEQC",
-      "filedAt": "2026-06-29",
-      "isSpac": false,
-      "sic": "7374",
-      "industry": "소프트웨어·IT",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001779977&type=S-1"
     },
     {
       "cik": "0001960355",
