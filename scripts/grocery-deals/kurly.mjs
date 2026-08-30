@@ -60,7 +60,7 @@ export async function collectKurly() {
       if (!(it.discountRate > 0)) continue
       if (it.isSoldOut) continue
       if (!it.discountedPrice || it.discountedPrice > PRICE_CAP) continue
-      if (candidates.has(it.no)) continue
+      if (candidates.has(it.no)) continue // 먼저 매칭된 키워드가 이긴다
       candidates.set(it.no, {
         id: it.no,
         name: it.name,
@@ -71,7 +71,7 @@ export async function collectKurly() {
         url: `https://www.kurly.com/goods/${it.no}`,
       })
     }
-    console.log(`  검색 '${kw}' → 누적 후보 ${candidates.size}`)
+    console.log(`▶ 검색 '${kw}' → 누적 후보 ${candidates.size}`)
     await sleep(250)
   }
 
@@ -82,6 +82,9 @@ export async function collectKurly() {
   let excluded = 0
   let failed = 0
   for (const [id, base] of candidates) {
+    // 페이싱은 루프 맨 앞에서 무조건 건다. 뒤쪽에 두면 continue 하는 경로(실패·배제)가
+    // 건너뛰어, 호출의 3분의 1이 무지연으로 나간다(실측: 795건 중 262건).
+    await sleep(200)
     let ids
     try {
       const d = await getJson(`${DETAIL}/${id}`)
@@ -93,9 +96,15 @@ export async function collectKurly() {
     const slot = slotForKurly(ids)
     if (!slot) { excluded++; continue }
     out.push({ ...base, slot })
-    await sleep(200)
   }
-  console.log(`  상세 조회 ${candidates.size}건 → 채택 ${out.length} / 배제 ${excluded} / 실패 ${failed}`)
+  const mark = failed > candidates.size / 2 ? '✗' : '▶'
+  console.log(`${mark} 상세 조회 ${candidates.size}건 → 채택 ${out.length} / 배제 ${excluded} / 실패 ${failed}`)
+
+  // 상세 API 가 광범위하게 죽으면 out 은 "작지만 0 은 아닌" 값이 되어 조용히 성공한다.
+  // oasis.mjs 의 카테고리 절반 가드와 같은 성격의 비율 가드를 둔다.
+  if (failed > candidates.size / 2) {
+    throw new Error(`컬리 2단계 실패율 과다 — ${candidates.size}건 중 ${failed}건 실패`)
+  }
 
   if (out.length === 0) throw new Error('컬리 2단계 0건 — slots.mjs 의 KURLY_SLOT 매핑을 확인할 것')
   return out
