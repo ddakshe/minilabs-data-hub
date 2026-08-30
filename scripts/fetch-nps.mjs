@@ -1,10 +1,16 @@
 /*
- * 국민연금공단 공공데이터 게시판 → nps/{regions,meta}.json
+ * 국민연금공단 공공데이터 게시판 → nps/{regions,distribution,meta}.json
  *
  * 사용법:
  *   node scripts/fetch-nps.mjs
  *
- * 소비자: nps-region-mini(우리동네 연금). 시도 17개의 1인당 월평균 수령액과 순위.
+ * 소비자: nps-region-mini(우리동네 연금).
+ *   regions.json      시도 17개의 1인당 월평균 수령액과 순위 (2-3 ÷ 2-11)
+ *   distribution.json 월 수급금액 분포 × 성별 × 가입기간 (2-6-1) + 가입기간별 평균 (2-13)
+ *
+ * 🔑 **분포가 이 데이터의 고유값이다.** 산정식만 있는 계산기 앱들은 "당신은 65만원"까지만
+ *    말할 수 있다. 같은 65만원이 전체에서는 상위 34.3%, 남성 중에는 49.5%, 가입 20년 이상
+ *    남성 중에는 93.5% 라는 건 실제 수급자 656만 명의 분포가 있어야 나온다.
  *
  * **왜 허브에서 받나.** 원본이 게시판 첨부(ZIP 안 CSV 26개)라 앱이 직접 못 읽는다.
  * 인증은 필요 없지만 CP949 · 첨부 형태 2종 · 단위 미표기 때문에 파싱이 까다롭고,
@@ -46,15 +52,40 @@ const DETAIL = `${HOST}/inforls/publdata/getOHAB0019M1.do`
 const BOARD = { hmpgCd: '01', hmpgBbsCd: 'BS20240191', sortSe: 'FR' }
 const UA = 'Mozilla/5.0 (compatible; minilabs-data-hub/1.0)'
 
-/** 현재 명명체계가 시작된 시점. 이보다 오래된 게시물은 파싱 규칙이 다르다. (함정 4) */
+/**
+ * 현재 명명체계가 시작된 시점. 이보다 오래된 게시물은 파싱 규칙이 다르다. (함정 4)
+ *
+ * ⚠️ 지역별(2-3·2-11)은 2021-01 부터 있지만 **분포(2-6-1)는 더 늦게 추가됐다** —
+ *    2021-01 에는 없고 2024-01 에는 있다(실측). 최신 게시물만 받으므로 실사용엔
+ *    문제가 없지만, 과거 게시물로 파서를 검증할 때는 2024 이후를 쓴다.
+ */
 const SCHEMA_FROM = '2021-01'
 
 const dec949 = new TextDecoder('euc-kr')
 
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
+
+/**
+ * 개별 첨부 게시물은 한 번에 26개를 받는다. 쉬지 않고 때리면 서버가 연결을 끊는다
+ * (실측: `fetch failed`). 요청 사이에 간격을 두고, 실패하면 물러섰다 다시 시도한다.
+ */
 async function get(url, init = {}) {
-  const res = await fetch(url, { ...init, headers: { 'User-Agent': UA, ...(init.headers ?? {}) } })
-  if (!res.ok) throw new Error(`HTTP ${res.status} — ${url}`)
-  return res
+  let lastError
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const res = await fetch(url, {
+        ...init,
+        headers: { 'User-Agent': UA, ...(init.headers ?? {}) },
+        signal: AbortSignal.timeout(30_000),
+      })
+      if (!res.ok) throw new Error(`HTTP ${res.status}`)
+      return res
+    } catch (e) {
+      lastError = e
+      if (attempt < 3) await sleep(attempt * 1500)
+    }
+  }
+  throw new Error(`${lastError?.message ?? 'fetch 실패'} — ${url}`)
 }
 
 /** 게시판 1페이지에서 가장 최신 「N년 M월 기준 국민연금 (공표)통계」 게시물을 찾는다. */
@@ -183,6 +214,7 @@ async function fetchRegionTables(attachments) {
     // 공표통계 CSV 는 한 장에 수 KB 라 26장을 받아도 부담이 없다.
     candidates = []
     for (const a of attachments) {
+      if (candidates.length > 0) await sleep(250) // 정부 사이트다. 몰아서 때리지 않는다.
       const buf = await download(a)
       if (buf.length > 2_000_000) continue // 예상 밖의 대용량은 건너뛴다
       try {
@@ -198,7 +230,19 @@ async function fetchRegionTables(attachments) {
       `찾은 것: ${hits.map((h) => h.name).join(' / ') || '없음'}`
     )
   }
-  return { ...orderTables(hits[0].rows, hits[1].rows), shape: zip ? 'zip' : 'files' }
+
+  const pickOne = (test, what) => {
+    const found = candidates.filter((c) => test(c.rows))
+    if (found.length !== 1) throw new Error(`${what} 표가 1장이 아니라 ${found.length}장이다`)
+    return found[0].rows
+  }
+
+  return {
+    ...orderTables(hits[0].rows, hits[1].rows),
+    dist: pickOne(isDistributionTable, '월 수급금액 분포(2-6-1)'),
+    termAvg: pickOne(isTermAvgTable, '가입기간별 평균(2-13)'),
+    shape: zip ? 'zip' : 'files',
+  }
 }
 
 /** 헤더 컬럼명으로 인덱스를 찾는다. 열 순서를 가정하지 않는다. */
@@ -212,6 +256,26 @@ const TYPES = [
   { key: 'old', label: '노령(연금)', ko: '노령연금' },
   { key: 'disabled', label: '장애(연금)', ko: '장애연금' },
   { key: 'survivor', label: '유족(연금)', ko: '유족연금' },
+]
+
+/**
+ * 2-6-1 의 월 수급금액 구간. CSV 는 라벨만 주므로 경계값을 여기 적는다.
+ * 마지막 '200만원 이상' 은 상한이 없어 300 으로 둔다 — 2-13 최고 수급금액이 330만원이라
+ * 그보다 넓게 잡으면 상위 구간의 보간이 실제보다 완만해진다.
+ */
+const BANDS = [
+  [0, 20], [20, 40], [40, 60], [60, 80], [80, 100],
+  [100, 130], [130, 160], [160, 200], [200, 300],
+]
+
+/** 2-6-1 의 비교군 컬럼. 사용자가 고를 수 있는 축이 곧 이 목록이다. */
+const GROUPS = [
+  { key: 'maleAll', col: '남자', ko: '남성 전체' },
+  { key: 'femaleAll', col: '여자', ko: '여성 전체' },
+  { key: 'male20', col: '남자(가입기간 20년이상)', ko: '남성 · 가입 20년 이상' },
+  { key: 'female20', col: '여자(가입기간 20년이상)', ko: '여성 · 가입 20년 이상' },
+  { key: 'male10', col: '남자(가입기간 10~19년)', ko: '남성 · 가입 10~19년' },
+  { key: 'female10', col: '여자(가입기간 10~19년)', ko: '여성 · 가입 10~19년' },
 ]
 
 function build(baseMonth, cRows, aRows) {
@@ -260,6 +324,80 @@ function build(baseMonth, cRows, aRows) {
   }
 }
 
+/**
+ * 2-6-1(월 수급금액별 × 성별 × 가입기간) + 2-13(가입기간별 최고·평균)을 합쳐
+ * 분포 스냅샷을 만든다.
+ *
+ * 앱은 이 파일 하나로 "내 금액이 상위 몇 %"를 비교군별로 전부 계산한다.
+ * 누적을 서버에서 굽지 않고 구간 인원만 넘긴다 — 앱이 보간 방식을 바꿀 수 있어야 하고,
+ * 6개 비교군 × 9구간이면 어차피 작다.
+ */
+function buildDistribution(baseMonth, dRows, avgRows) {
+  const hdr = dRows[0].map((v) => v.trim())
+  const body = dRows.slice(1)
+  if (body.length !== BANDS.length) {
+    throw new Error(`2-6-1 구간이 ${BANDS.length}개가 아니라 ${body.length}개다`)
+  }
+
+  const num = (v) => {
+    const n = Number(String(v).replace(/[,\s]/g, ''))
+    if (!Number.isFinite(n)) throw new Error(`숫자가 아니다: ${JSON.stringify(v)}`)
+    return n
+  }
+
+  const groups = GROUPS.map((g) => {
+    const i = hdr.indexOf(g.col)
+    if (i < 0) throw new Error(`2-6-1 에 '${g.col}' 컬럼이 없다. 헤더: ${hdr.join(',')}`)
+    const counts = body.map((r) => num(r[i]))
+    return { key: g.key, ko: g.ko, total: counts.reduce((a, b) => a + b, 0), counts }
+  })
+
+  // 전체(남+여)는 원본에 없다. 두 컬럼을 더해 만든다.
+  const mi = hdr.indexOf('남자'), fi = hdr.indexOf('여자')
+  const all = body.map((r) => num(r[mi]) + num(r[fi]))
+  groups.unshift({ key: 'all', ko: '전체 수급자', total: all.reduce((a, b) => a + b, 0), counts: all })
+
+  // 2-13 — 가입기간별 실제 평균. "같은 조건 사람들은 얼마 받나"의 답이다.
+  const aHdr = avgRows[0].map((v) => v.trim())
+  const avgRow = avgRows.find((r) => r[0].trim() === '평균수급금액')
+  const maxRow = avgRows.find((r) => r[0].trim() === '최고수급금액')
+  if (!avgRow || !maxRow) throw new Error('2-13 에 평균/최고수급금액 행이 없다')
+  const byTerm = {}
+  for (const label of ['20년이상(노령)', '10~19년(노령)', '조기(노령)']) {
+    const i = aHdr.indexOf(label)
+    if (i < 0) throw new Error(`2-13 에 '${label}' 컬럼이 없다`)
+    byTerm[label.replace('(노령)', '')] = { avg: num(avgRow[i]), max: num(maxRow[i]) }
+  }
+
+  return {
+    baseMonth,
+    unit: '원',
+    bands: BANDS.map(([lo, hi], i) => ({
+      label: body[i][0].trim(),
+      from: lo * 10_000,
+      to: hi * 10_000,
+      // 마지막 구간은 상한이 없다. 보간할 때 이 표시를 봐야 한다.
+      open: i === BANDS.length - 1,
+    })),
+    groups,
+    byTerm,
+  }
+}
+
+/** 2-6-1 인지 내용으로 판별한다. 구간 라벨이 '20만원 미만' 으로 시작하고 성별 컬럼이 있다. */
+function isDistributionTable(rows) {
+  if (rows.length !== BANDS.length + 1) return false
+  const h = rows[0].map((v) => v.trim())
+  return h.includes('남자(가입기간 20년이상)') && rows[1][0].trim().includes('20만원')
+}
+
+/** 2-13 인지. 행이 둘뿐이고 첫 열이 최고/평균수급금액이다. */
+function isTermAvgTable(rows) {
+  return rows.length === 3 &&
+    rows[1][0].trim() === '최고수급금액' &&
+    rows[0].some((v) => v.trim() === '20년이상(노령)')
+}
+
 /** 조용히 틀린 값을 커밋 전에 죽인다. */
 function validate(data) {
   const fail = (m) => { throw new Error(`검증 실패: ${m}`) }
@@ -286,6 +424,34 @@ function validate(data) {
   if (ranks.some((v, i) => v !== i + 1)) fail('순위가 1..17 연속이 아니다')
 }
 
+/** 분포도 조용히 틀릴 수 있다. 합계와 단조성으로 막는다. */
+function validateDistribution(dist, nationalOldCount) {
+  const fail = (m) => { throw new Error(`분포 검증 실패: ${m}`) }
+
+  if (dist.bands.length !== 9) fail(`구간이 9개가 아니라 ${dist.bands.length}개`)
+  if (dist.groups.length !== 7) fail(`비교군이 7개가 아니라 ${dist.groups.length}개`)
+
+  const all = dist.groups.find((g) => g.key === 'all')
+  if (!all) fail("'all' 비교군이 없다")
+
+  // 전체 분포의 합은 노령연금 수급자 수와 같아야 한다. 다르면 컬럼을 잘못 골랐다.
+  const diff = Math.abs(all.total - nationalOldCount)
+  if (diff / nationalOldCount > 0.02) {
+    fail(`전체 분포 합 ${all.total.toLocaleString()} 이 노령 수급자 ${nationalOldCount.toLocaleString()} 와 2% 넘게 다르다`)
+  }
+
+  for (const g of dist.groups) {
+    if (g.counts.length !== 9) fail(`${g.ko} 구간이 9개가 아니다`)
+    if (g.counts.some((c) => c < 0)) fail(`${g.ko} 에 음수가 있다`)
+    if (g.total <= 0) fail(`${g.ko} 합계가 0 이하`)
+  }
+
+  for (const [term, v] of Object.entries(dist.byTerm)) {
+    if (v.avg <= 0 || v.max <= 0) fail(`${term} 평균/최고가 0 이하`)
+    if (v.avg > v.max) fail(`${term} 평균(${v.avg})이 최고(${v.max})보다 크다`)
+  }
+}
+
 async function main() {
   // 과거 게시물로 파서를 검증할 때 쓴다 (첨부 형태가 시기마다 다르다 — 함정 2).
   //   NPS_PST_ID=PU202400000000029549 NPS_BASE_MONTH=2024-01 node scripts/fetch-nps.mjs
@@ -295,21 +461,30 @@ async function main() {
   console.log(`· 최신 게시물: ${post.baseMonth} 기준 (pstId=${post.pstId})`)
 
   const attachments = await listAttachments(post.pstId)
-  const { count, amount, shape } = await fetchRegionTables(attachments)
+  const { count, amount, dist: distRows, termAvg, shape } = await fetchRegionTables(attachments)
   console.log(`· 첨부 ${attachments.length}개, 형태=${shape}`)
 
   const data = build(post.baseMonth, count, amount)
   validate(data)
 
+  const dist = buildDistribution(post.baseMonth, distRows, termAvg)
+  validateDistribution(dist, data.national.old.count)
+
   await fs.mkdir(OUT_DIR, { recursive: true })
   await fs.writeFile(path.join(OUT_DIR, 'regions.json'), JSON.stringify(data, null, 1) + '\n')
+  await fs.writeFile(path.join(OUT_DIR, 'distribution.json'), JSON.stringify(dist, null, 1) + '\n')
 
   const meta = {
     baseMonth: data.baseMonth,
     fetchedAt: new Date().toISOString(),
     source: '국민연금공단 공공데이터 제공목록 — 월간 공표통계',
     sourceUrl: LIST,
-    files: ['2-3 수급자 수 급여 종류별_지역별', '2-11 수급자 수급금액 급여 종류별_지역별'],
+    files: [
+      '2-3 수급자 수 급여 종류별_지역별',
+      '2-11 수급자 수급금액 급여 종류별_지역별',
+      '2-6-1 노령연금 수급자 수 종류별성별_월 수급금액별',
+      '2-13 연금 종류별 최고·평균 수급금액',
+    ],
     regions: data.regions.length,
     nationalAvgOld: data.national.old.avg,
     // 공표는 기준월로부터 약 3~4개월 뒤에 올라온다. 앱은 이 기준월을 반드시 표시한다.
@@ -321,6 +496,9 @@ async function main() {
   console.log(`  전국 노령 1인당 월평균 ${data.national.old.avg.toLocaleString()}원`)
   console.log(`  1위 ${data.regions[0].name} ${data.regions[0].old.avg.toLocaleString()}원 / ` +
     `17위 ${data.regions[16].name} ${data.regions[16].old.avg.toLocaleString()}원`)
+  const all = dist.groups.find((g) => g.key === 'all')
+  console.log(`✓ nps/distribution.json — 비교군 ${dist.groups.length}개 × 구간 ${dist.bands.length}개`)
+  console.log(`  전체 ${all.total.toLocaleString()}명 · 20년이상 평균 ${dist.byTerm['20년이상'].avg.toLocaleString()}원`)
 }
 
 main().catch((e) => { console.error('✗', e.message); process.exit(1) })
