@@ -55,6 +55,8 @@ test('빈 문자열은 빈 배열을 준다 (throw 하지 않는다)', () => {
 })
 
 test('연속 호출해도 같은 결과다 — g 플래그 regex 의 lastIndex 재진입', () => {
+  // 이 테스트는 "리셋 줄 삭제"가 아니라 "조기 종료 + 리셋 없음" 조합을 잡는다.
+  // 전량 순회 상태에서는 리셋을 지워도 통과한다(측정 확인).
   assert.deepEqual(parseOasisList(html), parseOasisList(html))
 })
 

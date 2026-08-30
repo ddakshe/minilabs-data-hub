@@ -40,6 +40,11 @@ function cleanName(raw) {
 export function parseOasisList(html) {
   if (!html) return []
   const out = []
+  // 지금은 루프가 끝까지 돌아서 exec 가 알아서 lastIndex 를 0 으로 되돌린다 —
+  // 즉 이 줄을 지워도 당장은 아무 일도 안 일어난다. 지우지 말 것:
+  // 훗날 루프에 상한이나 조기 return 이 들어오는 순간, 이 줄이 없으면
+  // 두 번째 호출이 중간부터 파싱한다. oasis-parse.test.mjs 의 재진입 테스트가
+  // 그 조합을 잡는다.
   CARD.lastIndex = 0
   let m
   while ((m = CARD.exec(html)) !== null) {
