@@ -50,11 +50,19 @@ export function slotForKurly(categoryIds) {
 /**
  * 오아시스는 URL 이 곧 카테고리다. 목록만 받으면 슬롯이 확정되므로 상세 조회가 없다.
  * 페이지네이션이 동작하지 않아 카테고리당 60건이 상한이다 — 슬롯마다 ID 를 여러 개 둔다.
+ *
+ * 생물(수산·유기농소고기)은 담지 않는다 — 이 앱은 완성품만 모은다(생물은 조리 시간·
+ * 실력을 요구해 "끼당 N원" 약속이 깨진다). 같은 이유로 컬리 쪽도 채소/정육 대분류를
+ * 배제한다(kurly-categories.json 의 excluded 참고).
+ *
+ * ⚠️ 배열 순서가 우선순위다 — 장식이 아니다. Task 3의 수집기는 상품이 처음 매치되는
+ *    슬롯을 취하고 그 다음은 건너뛴다. 간편식·밀키트 카테고리(53·57·247·120)는 실제로
+ *    반찬·국 상품을 섞어 담고 있으므로([1등반찬]도라지오이무침 이 53에, 한우 얼큰
+ *    소고기뭇국 이 247에 있음, 실측), 더 구체적인 카테고리(soup/banchan/kimchi/tofu)가
+ *    먼저 와야 한다. 알파벳순 등으로 재정렬하지 말 것.
  */
 export const OASIS_CATEGORIES = [
   { id: 33, slot: 'soup', label: '국│찌개' },
-  { id: 4, slot: 'main', label: '수산' },
-  { id: 1151, slot: 'main', label: '유기농소고기' },
   { id: 44, slot: 'banchan', label: '반찬' },
   { id: 34, slot: 'banchan', label: '밑반찬│어묵' },
   { id: 243, slot: 'banchan', label: '1인 반찬' },
@@ -63,6 +71,10 @@ export const OASIS_CATEGORIES = [
   { id: 114, slot: 'kimchi', label: '액젓│젓갈' },
   { id: 242, slot: 'tofu', label: '나물│두부' },
   { id: 21, slot: 'tofu', label: '어묵│가공' },
+  { id: 120, slot: 'main', label: '밀키트I도시락' },
+  { id: 57, slot: 'main', label: '간편식사' },
+  { id: 247, slot: 'main', label: '간편식' },
+  { id: 53, slot: 'main', label: '간편식(2)' },
   { id: 119, slot: 'snack', label: '간식' },
   { id: 217, slot: 'snack', label: '간식│음료' },
 ]
