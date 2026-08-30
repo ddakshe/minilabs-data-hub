@@ -1,0 +1,90 @@
+name: Fetch grocery-deals
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 매일 09:00 KST — 특가는 자정 기준으로 갱신된다
+  workflow_dispatch:
+    inputs:
+      malls:
+        description: '수집할 몰 (kurly,oasis 중 쉼표구분. 비우면 전체)'
+        required: false
+        default: ''
+      reason:
+        description: '실행 이유 (로그에만 기록, 선택)'
+        required: false
+        default: 'manual refresh'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-grocery-deals
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Show trigger context
+        run: |
+          echo "Event  : ${{ github.event_name }}"
+          echo "Malls  : ${{ github.event.inputs.malls || '(all)' }}"
+          echo "Reason : ${{ github.event.inputs.reason || '(scheduled)' }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      - name: Unit tests
+        run: node --test scripts/grocery-deals/*.test.mjs
+
+      - name: Fetch grocery deals
+        env:
+          MALLS: ${{ github.event.inputs.malls }}
+        run: node scripts/fetch-grocery-deals.mjs
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git add grocery-deals/
+          if git diff --cached --quiet -- grocery-deals/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes — skipping commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --cached --stat grocery-deals/
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            MSG="chore(grocery-deals): manual refresh ($DATE_KST)"
+          else
+            MSG="chore(grocery-deals): daily refresh ($DATE_KST)"
+          fi
+
+          git commit -m "$MSG"
+          git push || (git pull --rebase origin main && git push)
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## grocery-deals Fetch Summary"
+            echo ""
+            echo "- Trigger: \`${{ github.event_name }}\`"
+            echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
+            echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+          } >> "$GITHUB_STEP_SUMMARY"
