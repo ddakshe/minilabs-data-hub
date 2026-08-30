@@ -68,6 +68,7 @@ async function main() {
         console.error(
           `✗ ${mall}: 직전 ${prevCount}건 → ${items.length}건 (30% 이상 급감) — 직전본을 유지한다`,
         )
+        console.log(`::error::${mall} 수집 실패`)
         failures++
         continue
       }
@@ -86,13 +87,18 @@ async function main() {
       console.log(`✓ grocery-deals/${mall}.json  (${items.length}건)`, payload.counts.bySlot)
     } catch (err) {
       console.error(`✗ ${mall}: ${err.message} — 직전본을 유지한다`)
+      console.log(`::error::${mall} 수집 실패`)
       failures++
     }
   }
 
   if (failures === targets.length) {
     console.error('✗ 모든 몰이 실패했다. 저장된 것이 없다.')
-    process.exit(1)
+  }
+  // process.exit() 은 성공한 몰의 fs.writeFile 버퍼가 아직 flush 되지 않았을 수 있어
+  // 쓰지 않는다 — exitCode 만 세팅해 Node 가 이벤트 루프를 다 비우고 스스로 종료하게 둔다.
+  if (failures > 0) {
+    process.exitCode = 1
   }
 }
 

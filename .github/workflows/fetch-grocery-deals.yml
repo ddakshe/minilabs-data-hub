@@ -24,6 +24,7 @@ concurrency:
 jobs:
   fetch:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -52,6 +53,7 @@ jobs:
 
       - name: Check for changes
         id: diff
+        if: always()
         run: |
           git add grocery-deals/
           if git diff --cached --quiet -- grocery-deals/; then
@@ -63,7 +65,7 @@ jobs:
           fi
 
       - name: Commit & push
-        if: steps.diff.outputs.changed == 'true'
+        if: always() && steps.diff.outputs.changed == 'true'
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

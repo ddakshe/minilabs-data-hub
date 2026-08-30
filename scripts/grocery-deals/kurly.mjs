@@ -15,6 +15,7 @@ import { withRetry } from './http.mjs'
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
 const SEARCH = 'https://api.kurly.com/search/v4/sites/market/normal-search'
 const DETAIL = 'https://api.kurly.com/showroom/v2/products'
+const MAX_CONSECUTIVE_FAILURES = 20 // 연속 실패 시 상세 API 가 죽은 것으로 보고 빠르게 그만둔다
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 
 const KEYWORDS = [
@@ -75,6 +76,7 @@ export async function collectKurly() {
   const out = []
   let excluded = 0
   let failed = 0
+  let consecutiveFailed = 0
   for (const [id, base] of candidates) {
     // 페이싱은 루프 맨 앞에서 무조건 건다. 뒤쪽에 두면 continue 하는 경로(실패·배제)가
     // 건너뛰어, 호출의 3분의 1이 무지연으로 나간다(실측: 795건 중 262건).
@@ -83,8 +85,15 @@ export async function collectKurly() {
     try {
       const d = await getJson(`${DETAIL}/${id}`)
       ids = d?.data?.category_ids ?? []
+      consecutiveFailed = 0
     } catch {
       failed++
+      consecutiveFailed++
+      // failed > candidates.size / 2 가드는 795건을 끝까지 돌고 나서야 발동한다 —
+      // 사이트 전체 장애면 그 전에 빠르게 그만둔다.
+      if (consecutiveFailed >= MAX_CONSECUTIVE_FAILURES) {
+        throw new Error(`컬리 2단계 연속 실패 ${consecutiveFailed}건 — 상세 API 장애로 보고 중단한다`)
+      }
       continue
     }
     const slot = slotForKurly(ids)
