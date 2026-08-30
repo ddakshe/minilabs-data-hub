@@ -41,3 +41,12 @@ test('오아시스 카테고리 ID는 중복되지 않는다', () => {
   const ids = OASIS_CATEGORIES.map(c => c.id)
   assert.equal(new Set(ids).size, ids.length)
 })
+
+test('좁은 카테고리가 넓은 카테고리보다 앞에 온다 — 순서는 장식이 아니다', () => {
+  const first = (slot) => OASIS_CATEGORIES.findIndex((c) => c.slot === slot)
+  const last = (slot) => OASIS_CATEGORIES.findLastIndex((c) => c.slot === slot)
+  for (const narrow of ['kimchi', 'soup', 'tofu']) {
+    assert.ok(last(narrow) < first('banchan'), `${narrow} 가 banchan 뒤에 있다 — kimchi/tofu 슬롯이 빈다`)
+  }
+  assert.ok(last('banchan') < first('main'), 'banchan 이 main 뒤에 있다 — 간편식이 반찬을 채간다')
+})
