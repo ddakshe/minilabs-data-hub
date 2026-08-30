@@ -53,3 +53,11 @@ test('할인가는 정가보다 작다', () => {
 test('빈 문자열은 빈 배열을 준다 (throw 하지 않는다)', () => {
   assert.deepEqual(parseOasisList(''), [])
 })
+
+test('연속 호출해도 같은 결과다 — g 플래그 regex 의 lastIndex 재진입', () => {
+  assert.deepEqual(parseOasisList(html), parseOasisList(html))
+})
+
+test('반환 필드는 정확히 5개다 — slot/img/url 은 Task 3 이 붙인다', () => {
+  assert.deepEqual(Object.keys(items[0]).sort(), ['id', 'name', 'orig', 'price', 'rate'])
+})
