@@ -23,6 +23,14 @@ const table = JSON.parse(readFileSync(resolve(__dirname, 'kurly-categories.json'
 
 export const SLOTS = ['soup', 'main', 'banchan', 'kimchi', 'tofu', 'snack']
 
+/** 선물세트·대용량 박스 배제 가격선. 두 몰이 공유한다 — 갈라지면 안 된다(실측: 이미 한 번 갈라졌었다). */
+export const PRICE_CAP = 20000
+
+/** 오아시스 전용 할인율 하한. 오아시스는 상품의 94%가 할인 표기라 그대로 쓰면 변별이 안 된다(스펙 §3.3).
+ *  컬리는 검색 API 가 discountRate > 0 만 돌려줘 별도 하한이 필요 없다 — 두 몰의 할인율 기준이 다른 것은
+ *  의도한 차이다. */
+export const OASIS_MIN_RATE = 25
+
 /** 이 대분류가 붙어 있으면 상품 전체를 버린다. 11=주방용품, 27=양념/오일 (실측) */
 export const KURLY_EXCLUDED = new Set(table.excluded)
 

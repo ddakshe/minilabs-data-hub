@@ -9,12 +9,12 @@
  *    페이지당 96건 고정이므로 키워드를 넓게 깔아 물량을 확보한다.
  * ⚠️ 카테고리 웹페이지는 CSR 이라 12KB 셸만 온다. 2단계를 우회할 방법이 없다.
  */
-import { slotForKurly } from './slots.mjs'
+import { slotForKurly, PRICE_CAP } from './slots.mjs'
+import { withRetry } from './http.mjs'
 
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
 const SEARCH = 'https://api.kurly.com/search/v4/sites/market/normal-search'
 const DETAIL = 'https://api.kurly.com/showroom/v2/products'
-const PRICE_CAP = 20000 // 선물세트·대용량 박스 배제 (실측 최대 205,200원)
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 
 const KEYWORDS = [
@@ -26,22 +26,15 @@ const KEYWORDS = [
   '간식', '빵',
 ]
 
-async function getJson(url, { retries = 3 } = {}) {
-  let lastErr
-  for (let attempt = 1; attempt <= retries; attempt++) {
-    try {
-      const res = await fetch(url, {
-        headers: { 'User-Agent': UA },
-        signal: AbortSignal.timeout(20000),
-      })
-      if (!res.ok) throw new Error(`HTTP ${res.status} — ${url}`)
-      return await res.json()
-    } catch (err) {
-      lastErr = err
-      if (attempt < retries) await sleep(1000 * attempt)
-    }
-  }
-  throw lastErr
+async function getJson(url) {
+  return withRetry(async () => {
+    const res = await fetch(url, {
+      headers: { 'User-Agent': UA },
+      signal: AbortSignal.timeout(20000),
+    })
+    if (!res.ok) throw new Error(`HTTP ${res.status} — ${url}`)
+    return await res.json()
+  })
 }
 
 async function search(keyword) {
@@ -60,6 +53,7 @@ export async function collectKurly() {
       if (!(it.discountRate > 0)) continue
       if (it.isSoldOut) continue
       if (!it.discountedPrice || it.discountedPrice > PRICE_CAP) continue
+      if (!(it.salesPrice > it.discountedPrice)) continue
       if (candidates.has(it.no)) continue // 먼저 매칭된 키워드가 이긴다
       candidates.set(it.no, {
         id: it.no,

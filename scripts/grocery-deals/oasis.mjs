@@ -8,31 +8,33 @@
  *    전체가 한 응답에 온다 — 반찬 기준 675건, 6MB, 2초.
  * ⚠️ 이미지는 data-src 로 lazy-load 되지만 파싱하지 않는다. URL 이 상품 ID 로 결정된다.
  */
-import { OASIS_CATEGORIES } from './slots.mjs'
+import { OASIS_CATEGORIES, PRICE_CAP, OASIS_MIN_RATE } from './slots.mjs'
+import { withRetry } from './http.mjs'
 import { parseOasisList } from './oasis-parse.mjs'
 
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
 const BASE = 'https://www.oasis.co.kr'
 const IMG = (id) => `https://oasisprodproduct.edge.naverncp.com/${id}/thumb/999`
 const ROWS = 720 // 실측 최대 보유량(675)보다 크게. 넘겨도 보유량까지만 온다
-const PRICE_CAP = 20000 // 선물세트·대용량 박스 배제. 컬리 수집기와 같은 값 (실측 최고가 152,230원 = 20kg 포기김치)
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 
 async function fetchCategory(id) {
   const url = `${BASE}/product/list?categoryId=${id}&rows=${ROWS}`
-  const res = await fetch(url, {
-    headers: { 'User-Agent': UA },
-    signal: AbortSignal.timeout(30000),
+  return withRetry(async () => {
+    const res = await fetch(url, {
+      headers: { 'User-Agent': UA },
+      signal: AbortSignal.timeout(30000),
+    })
+    if (!res.ok) throw new Error(`오아시스 HTTP ${res.status} (categoryId ${id})`)
+    return await res.text()
   })
-  if (!res.ok) throw new Error(`오아시스 HTTP ${res.status} (categoryId ${id})`)
-  return await res.text()
 }
 
 /**
  * @param {{ minRate?: number }} [options] minRate 미만 할인율은 버린다.
  *   오아시스는 상품의 94%가 할인 표기라 그대로 쓰면 변별이 안 된다(스펙 §3.3).
  */
-export async function collectOasis({ minRate = 25 } = {}) {
+export async function collectOasis({ minRate = OASIS_MIN_RATE } = {}) {
   const byId = new Map()
   let emptyCategories = 0
 
@@ -68,5 +70,8 @@ export async function collectOasis({ minRate = 25 } = {}) {
   if (emptyCategories > OASIS_CATEGORIES.length / 2) {
     throw new Error(`오아시스 파서 실패 — ${OASIS_CATEGORIES.length}개 중 ${emptyCategories}개가 0건`)
   }
+  // 카테고리는 모두 응답했지만 필터(minRate/PRICE_CAP)가 전부 걸러낸 경우도 실패다 —
+  // 빈 배열을 그대로 넘기면 kurly.mjs 와 달리 조용히 성공한다.
+  if (byId.size === 0) throw new Error('오아시스 0건 — minRate/PRICE_CAP 필터를 확인할 것')
   return [...byId.values()]
 }

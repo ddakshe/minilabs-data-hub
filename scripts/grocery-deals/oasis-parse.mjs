@@ -49,13 +49,15 @@ export function parseOasisList(html) {
   let m
   while ((m = CARD.exec(html)) !== null) {
     const [, id, rawName, , priceBlock] = m
-    const rate = RATE.exec(priceBlock)
-    if (!rate) continue
+    const rateMatch = RATE.exec(priceBlock)
+    if (!rateMatch) continue
+    const rate = Number(rateMatch[1])
     const price = toNumber(DISC.exec(priceBlock)?.[1])
     const orig = toNumber(ORIG.exec(priceBlock)?.[1])
     const name = cleanName(rawName)
     if (!name || !price || !orig || price >= orig) continue
-    out.push({ id: Number(id), name, price, orig, rate: Number(rate[1]) })
+    if (!(rate > 0)) continue // "할인됐다"는 price>=orig 로 간접 판단하지 않고 표기된 rate 로 직접 확인한다
+    out.push({ id: Number(id), name, price, orig, rate })
   }
   return out
 }
