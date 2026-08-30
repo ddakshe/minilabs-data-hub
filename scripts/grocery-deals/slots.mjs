@@ -10,8 +10,13 @@
  * ⚠️ 배제가 슬롯 매핑보다 중요하다. 슬롯이 비면 "오늘 국 특가 없어요"로 넘어가지만,
  *    주걱이 밥상에 오르면 사용자가 앱을 다시 열지 않는다.
  *
- * kurly-categories.json 은 scripts/grocery-deals/kurly-categories.json 생성 스크립트가
- * 만든다(사람이 ID를 옮겨적지 않는다). 오염이 발견되면 JSON만 고치면 된다.
+ * kurly-categories.json 의 ID 출처: 오염이 확인된 상품(예: 주걱이 섞여 나온 상품)의
+ * ID로 https://api.kurly.com/showroom/v2/products/{id} 를 호출해 응답의 category_ids
+ * 를 읽는다. category_ids 는 배열이고 index 1 이 대분류(KURLY_EXCLUDED 에 쓰는 값),
+ * index 2 가 중분류(KURLY_SLOT 에 쓰는 값)다. 이 절차는 한 번 인라인으로 실행해 결과만
+ * kurly-categories.json 에 옮겨 적었을 뿐 생성 스크립트 자체는 커밋된 적이 없다 — 그러니
+ * "생성 스크립트가 만든다"는 옛 주석은 사실이 아니다. 오염이 새로 발견되면 위 호출을
+ * 다시 해서 category_ids 를 읽고 이 JSON 을 손으로 고친다.
  */
 
 import { readFileSync } from 'node:fs'
@@ -31,7 +36,10 @@ export const PRICE_CAP = 20000
  *  의도한 차이다. */
 export const OASIS_MIN_RATE = 25
 
-/** 이 대분류가 붙어 있으면 상품 전체를 버린다. 11=주방용품, 27=양념/오일 (실측) */
+/** 이 대분류가 붙어 있으면 상품 전체를 버린다 (실측). kurly-categories.json 의 excluded:
+ *    11 주방용품, 15 과일, 27 양념/오일, 32 채소
+ *  11·27 은 스펙 문서에도 나오지만, 15·32 는 이 주석이 유일한 근거다 — JSON 자체는
+ *  주석을 못 달아서 여기 적는다. */
 export const KURLY_EXCLUDED = new Set(table.excluded)
 
 /** 중분류 ID → 슬롯 */
