@@ -42,6 +42,9 @@ cancer-cover/              ← cancer-cover-mini(암보험 충분할까) 앱용 
   incidence.json           # 성별 × 10년 연령대(20~70대) × 암종별 조발생률
   costs.json               # 암종별 1인당 진료비(입원+외래)·평균 입원일수, 상급종합병원
   meta.json                # 수집 시각 + 통계 연도 2종 + **진료비를 비운 암종과 그 이유**
+nps/                       ← nps-region-mini(우리동네 연금) 앱용 (국민연금 공표통계, 매월 1·11·21일)
+  regions.json             # 시도 17개 × 노령·장애·유족연금 수급자수·수급금액·1인당 월평균 + 노령 기준 순위
+  meta.json                # 기준월·수집시각. 앱이 "2026년 4월 기준" 표시에 쓴다 (공표 지연 3.5개월)
 auto-option/               ← auto-option-mini(옵션 계산기) 앱용 (기아·현대 공식 가격표 PDF, 수동 갱신)
   models.json              # 28종. 옵션마다 트림별 상태(불가/기본/유료)
   meta.json                # 수집 시각·건수 + **빠진 차종과 그 이유**

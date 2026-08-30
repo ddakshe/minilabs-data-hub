@@ -1,0 +1,361 @@
+{
+ "baseMonth": "2026-04",
+ "unit": "원",
+ "note": "원본 CSV 의 수급금액은 백만원 단위다. 여기서는 원으로 환산했다.",
+ "types": [
+  {
+   "key": "old",
+   "ko": "노령연금"
+  },
+  {
+   "key": "disabled",
+   "ko": "장애연금"
+  },
+  {
+   "key": "survivor",
+   "ko": "유족연금"
+  }
+ ],
+ "national": {
+  "old": {
+   "count": 6560449,
+   "amount": 4054449000000,
+   "avg": 618014
+  },
+  "disabled": {
+   "count": 67153,
+   "amount": 37931000000,
+   "avg": 564844
+  },
+  "survivor": {
+   "count": 1113920,
+   "amount": 352759000000,
+   "avg": 316683
+  }
+ },
+ "regions": [
+  {
+   "name": "울산",
+   "old": {
+    "count": 141822,
+    "amount": 119269000000,
+    "avg": 840977
+   },
+   "disabled": {
+    "count": 1604,
+    "amount": 922000000,
+    "avg": 574813
+   },
+   "survivor": {
+    "count": 22063,
+    "amount": 8771000000,
+    "avg": 397543
+   },
+   "rank": 1
+  },
+  {
+   "name": "세종",
+   "old": {
+    "count": 30061,
+    "amount": 20433000000,
+    "avg": 679718
+   },
+   "disabled": {
+    "count": 330,
+    "amount": 182000000,
+    "avg": 551515
+   },
+   "survivor": {
+    "count": 4781,
+    "amount": 1543000000,
+    "avg": 322736
+   },
+   "rank": 2
+  },
+  {
+   "name": "경기",
+   "old": {
+    "count": 1540979,
+    "amount": 1004198000000,
+    "avg": 651662
+   },
+   "disabled": {
+    "count": 16769,
+    "amount": 9881000000,
+    "avg": 589242
+   },
+   "survivor": {
+    "count": 231650,
+    "amount": 78312000000,
+    "avg": 338062
+   },
+   "rank": 3
+  },
+  {
+   "name": "서울",
+   "old": {
+    "count": 1101461,
+    "amount": 714203000000,
+    "avg": 648414
+   },
+   "disabled": {
+    "count": 9272,
+    "amount": 5786000000,
+    "avg": 624029
+   },
+   "survivor": {
+    "count": 163986,
+    "amount": 57986000000,
+    "avg": 353603
+   },
+   "rank": 4
+  },
+  {
+   "name": "인천",
+   "old": {
+    "count": 362636,
+    "amount": 229695000000,
+    "avg": 633404
+   },
+   "disabled": {
+    "count": 4265,
+    "amount": 2448000000,
+    "avg": 573974
+   },
+   "survivor": {
+    "count": 55976,
+    "amount": 18691000000,
+    "avg": 333911
+   },
+   "rank": 5
+  },
+  {
+   "name": "경남",
+   "old": {
+    "count": 469111,
+    "amount": 292948000000,
+    "avg": 624475
+   },
+   "disabled": {
+    "count": 5353,
+    "amount": 2877000000,
+    "avg": 537456
+   },
+   "survivor": {
+    "count": 86779,
+    "amount": 26529000000,
+    "avg": 305708
+   },
+   "rank": 6
+  },
+  {
+   "name": "대전",
+   "old": {
+    "count": 163995,
+    "amount": 100862000000,
+    "avg": 615031
+   },
+   "disabled": {
+    "count": 1750,
+    "amount": 1030000000,
+    "avg": 588571
+   },
+   "survivor": {
+    "count": 25713,
+    "amount": 8292000000,
+    "avg": 322483
+   },
+   "rank": 7
+  },
+  {
+   "name": "부산",
+   "old": {
+    "count": 484662,
+    "amount": 292059000000,
+    "avg": 602603
+   },
+   "disabled": {
+    "count": 4787,
+    "amount": 2674000000,
+    "avg": 558596
+   },
+   "survivor": {
+    "count": 84905,
+    "amount": 27947000000,
+    "avg": 329156
+   },
+   "rank": 8
+  },
+  {
+   "name": "충북",
+   "old": {
+    "count": 224884,
+    "amount": 132815000000,
+    "avg": 590593
+   },
+   "disabled": {
+    "count": 2311,
+    "amount": 1244000000,
+    "avg": 538295
+   },
+   "survivor": {
+    "count": 40081,
+    "amount": 11657000000,
+    "avg": 290836
+   },
+   "rank": 9
+  },
+  {
+   "name": "경북",
+   "old": {
+    "count": 420054,
+    "amount": 247238000000,
+    "avg": 588586
+   },
+   "disabled": {
+    "count": 4078,
+    "amount": 2104000000,
+    "avg": 515939
+   },
+   "survivor": {
+    "count": 84698,
+    "amount": 24330000000,
+    "avg": 287256
+   },
+   "rank": 10
+  },
+  {
+   "name": "광주",
+   "old": {
+    "count": 153902,
+    "amount": 89492000000,
+    "avg": 581487
+   },
+   "disabled": {
+    "count": 1807,
+    "amount": 963000000,
+    "avg": 532928
+   },
+   "survivor": {
+    "count": 27569,
+    "amount": 8540000000,
+    "avg": 309768
+   },
+   "rank": 11
+  },
+  {
+   "name": "대구",
+   "old": {
+    "count": 320508,
+    "amount": 184932000000,
+    "avg": 576997
+   },
+   "disabled": {
+    "count": 3424,
+    "amount": 1820000000,
+    "avg": 531542
+   },
+   "survivor": {
+    "count": 55071,
+    "amount": 17225000000,
+    "avg": 312778
+   },
+   "rank": 12
+  },
+  {
+   "name": "강원",
+   "old": {
+    "count": 222936,
+    "amount": 127100000000,
+    "avg": 570119
+   },
+   "disabled": {
+    "count": 2380,
+    "amount": 1170000000,
+    "avg": 491597
+   },
+   "survivor": {
+    "count": 41051,
+    "amount": 11873000000,
+    "avg": 289226
+   },
+   "rank": 13
+  },
+  {
+   "name": "제주",
+   "old": {
+    "count": 79951,
+    "amount": 45122000000,
+    "avg": 564371
+   },
+   "disabled": {
+    "count": 838,
+    "amount": 529000000,
+    "avg": 631265
+   },
+   "survivor": {
+    "count": 15319,
+    "amount": 4624000000,
+    "avg": 301847
+   },
+   "rank": 14
+  },
+  {
+   "name": "충남",
+   "old": {
+    "count": 293221,
+    "amount": 164869000000,
+    "avg": 562269
+   },
+   "disabled": {
+    "count": 2971,
+    "amount": 1592000000,
+    "avg": 535847
+   },
+   "survivor": {
+    "count": 54987,
+    "amount": 15212000000,
+    "avg": 276647
+   },
+   "rank": 15
+  },
+  {
+   "name": "전남",
+   "old": {
+    "count": 285403,
+    "amount": 150281000000,
+    "avg": 526557
+   },
+   "disabled": {
+    "count": 2612,
+    "amount": 1402000000,
+    "avg": 536753
+   },
+   "survivor": {
+    "count": 66846,
+    "amount": 17378000000,
+    "avg": 259971
+   },
+   "rank": 16
+  },
+  {
+   "name": "전북",
+   "old": {
+    "count": 264863,
+    "amount": 138933000000,
+    "avg": 524547
+   },
+   "disabled": {
+    "count": 2602,
+    "amount": 1307000000,
+    "avg": 502306
+   },
+   "survivor": {
+    "count": 52445,
+    "amount": 13849000000,
+    "avg": 264067
+   },
+   "rank": 17
+  }
+ ]
+}

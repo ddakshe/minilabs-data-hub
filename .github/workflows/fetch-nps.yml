@@ -1,0 +1,85 @@
+name: Fetch nps data
+
+# 공표통계는 월 1회 올라오는데 등록일이 말일에 몰리되 일정하지 않다
+# (2026-03-31 · 2026-04-30 이지만 2026-02-02 같은 사례도 있다).
+# 매월 1·11·21일에 돌려 어느 쪽으로 밀려도 열흘 안에 잡는다.
+on:
+  schedule:
+    - cron: '10 21 1,11,21 * *'   # 매월 1·11·21일 06:10 KST
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: '실행 이유 (로그에만 기록, 선택)'
+        required: false
+        default: 'manual refresh'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-nps
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Show trigger context
+        run: |
+          echo "Event  : ${{ github.event_name }}"
+          echo "Reason : ${{ github.event.inputs.reason || '(scheduled)' }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      # 인증이 필요 없다. 게시판 첨부를 그대로 받는다.
+      - name: Fetch NPS statistics
+        run: node scripts/fetch-nps.mjs
+
+      - name: Check for changes
+        id: diff
+        run: |
+          if git diff --quiet -- nps/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes — skipping commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --stat nps/
+          fi
+
+      # 기준월이 올라갔는지 남긴다. 앱은 이 기준월을 화면에 표시하므로
+      # 바뀌면 재배포해야 사용자에게 닿는다.
+      - name: Detect new base month
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          echo "이전: $(git show HEAD:nps/meta.json 2>/dev/null | grep baseMonth || echo '(없음)')"
+          echo "현재: $(grep baseMonth nps/meta.json)"
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
+          git add nps/
+          git commit -m "chore(nps): refresh ($DATE_KST)"
+          git push || (git pull --rebase origin main && git push)
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## nps Fetch Summary"
+            echo ""
+            echo "- Trigger: \`${{ github.event_name }}\`"
+            echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
+            echo "- Meta: \`$(cat nps/meta.json 2>/dev/null || echo n/a)\`"
+          } >> "$GITHUB_STEP_SUMMARY"
