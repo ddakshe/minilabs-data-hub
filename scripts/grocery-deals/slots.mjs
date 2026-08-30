@@ -56,21 +56,32 @@ export function slotForKurly(categoryIds) {
  * 배제한다(kurly-categories.json 의 excluded 참고).
  *
  * ⚠️ 배열 순서가 우선순위다 — 장식이 아니다. Task 3의 수집기는 상품이 처음 매치되는
- *    슬롯을 취하고 그 다음은 건너뛴다. 간편식·밀키트 카테고리(53·57·247·120)는 실제로
+ *    슬롯을 취하고 그 다음은 건너뛴다. 규칙은 **좁은 카테고리가 넓은 카테고리보다
+ *    먼저 와야 한다** — 넓은 잡화 카테고리가 앞에 있으면 뒤에 오는 좁은 카테고리의
+ *    상품을 먼저 채간다. `44 반찬`(382건)과 `34 밑반찬│어묵`(188건)이 그런 잡화
+ *    카테고리다 — 김치·나물/두부 상품이 실제로 여기 섞여 있어서(실측: 241 김치│절임의
+ *    25%+ 할인 38건 전부를 반찬 카테고리가 먼저 채감), banchan 을 kimchi/tofu 보다
+ *    앞에 두면 kimchi/tofu 슬롯이 거의 빈다. 간편식·밀키트 카테고리(53·57·247·120)도
  *    반찬·국 상품을 섞어 담고 있으므로([1등반찬]도라지오이무침 이 53에, 한우 얼큰
- *    소고기뭇국 이 247에 있음, 실측), 더 구체적인 카테고리(soup/banchan/kimchi/tofu)가
- *    먼저 와야 한다. 알파벳순 등으로 재정렬하지 말 것.
+ *    소고기뭇국 이 247에 있음, 실측) 다른 슬롯보다 뒤에 둔다.
+ *
+ *    실측 비교 (같은 원본 853건 기준, 분포만 다름):
+ *      반찬 먼저(구 순서): {soup:88, banchan:340, kimchi:3,  tofu:17,  main:219, snack:186}
+ *      좁은 것 먼저(현재): {kimchi:49, soup:86, tofu:78, banchan:235, main:219, snack:186}
+ *    kimchi 3→49, tofu 17→78. 총합은 동일 — 슬롯 간 배분만 바뀐다.
+ *
+ *    알파벳순 등으로 재정렬하지 말 것.
  */
 export const OASIS_CATEGORIES = [
-  { id: 33, slot: 'soup', label: '국│찌개' },
-  { id: 44, slot: 'banchan', label: '반찬' },
-  { id: 34, slot: 'banchan', label: '밑반찬│어묵' },
-  { id: 243, slot: 'banchan', label: '1인 반찬' },
-  { id: 123, slot: 'banchan', label: '오아시스반찬' },
   { id: 241, slot: 'kimchi', label: '김치│절임' },
   { id: 114, slot: 'kimchi', label: '액젓│젓갈' },
+  { id: 33, slot: 'soup', label: '국│찌개' },
   { id: 242, slot: 'tofu', label: '나물│두부' },
   { id: 21, slot: 'tofu', label: '어묵│가공' },
+  { id: 243, slot: 'banchan', label: '1인 반찬' },
+  { id: 123, slot: 'banchan', label: '오아시스반찬' },
+  { id: 34, slot: 'banchan', label: '밑반찬│어묵' },
+  { id: 44, slot: 'banchan', label: '반찬' },
   { id: 120, slot: 'main', label: '밀키트I도시락' },
   { id: 57, slot: 'main', label: '간편식사' },
   { id: 247, slot: 'main', label: '간편식' },
