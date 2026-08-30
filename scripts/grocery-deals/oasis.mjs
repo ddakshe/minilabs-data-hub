@@ -15,6 +15,7 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
 const BASE = 'https://www.oasis.co.kr'
 const IMG = (id) => `https://oasisprodproduct.edge.naverncp.com/${id}/thumb/999`
 const ROWS = 720 // 실측 최대 보유량(675)보다 크게. 넘겨도 보유량까지만 온다
+const PRICE_CAP = 20000 // 선물세트·대용량 박스 배제. 컬리 수집기와 같은 값 (실측 최고가 152,230원 = 20kg 포기김치)
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 
 async function fetchCategory(id) {
@@ -45,6 +46,7 @@ export async function collectOasis({ minRate = 25 } = {}) {
     let kept = 0
     for (const p of parsed) {
       if (p.rate < minRate) continue
+      if (p.price > PRICE_CAP) continue // 선물세트·대용량 박스 배제
       if (byId.has(p.id)) continue // 먼저 매칭된 슬롯이 이긴다
       byId.set(p.id, {
         id: p.id,
@@ -58,7 +60,7 @@ export async function collectOasis({ minRate = 25 } = {}) {
       })
       kept++
     }
-    console.log(`  ${cat.label}(${cat.id}) → 파싱 ${parsed.length} / ${minRate}%+ 채택 ${kept}`)
+    console.log(`▶ ${cat.label}(${cat.id}) → 파싱 ${parsed.length} / ${minRate}%+ 채택 ${kept}`)
     await sleep(1000) // 응답이 6MB 라 간격을 넉넉히 둔다
   }
 
