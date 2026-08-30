@@ -1,0 +1,20 @@
+{
+  "updatedAt": "2026-08-30",
+  "note": "손으로 관리한다. 스크래퍼가 덮어쓰지 않는다. 몰 정책 변경 시 여기만 고친다.",
+  "malls": {
+    "kurly": {
+      "label": "컬리",
+      "tiers": [
+        { "id": "normal", "label": "일반", "threshold": 40000, "fee": 3000 },
+        { "id": "members", "label": "컬리멤버스", "threshold": 20000, "fee": 3000 },
+        { "id": "dawn_local", "label": "샛별배송 지역", "threshold": 15000, "fee": 3000 }
+      ]
+    },
+    "oasis": {
+      "label": "오아시스",
+      "tiers": [
+        { "id": "normal", "label": "일반", "threshold": 30000, "fee": 3000 }
+      ]
+    }
+  }
+}
