@@ -3,10 +3,18 @@
   "name": "주성엔지니어링",
   "market": "KOSDAQ",
   "retainDays": 120,
-  "firstBasDt": "20260305",
-  "lastBasDt": "20260827",
+  "firstBasDt": "20260306",
+  "lastBasDt": "20260828",
   "count": 120,
   "days": [
+    {
+      "basDt": "20260828",
+      "close": 176800,
+      "fltRt": -1.28,
+      "headline": "코스닥보다 1.37%p 낮았어요.",
+      "newsCount": 4,
+      "dartCount": 0
+    },
     {
       "basDt": "20260827",
       "close": 179100,
@@ -1075,16 +1083,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260305",
-      "close": 66800,
-      "fltRt": 24.16,
-      "headline": "시가 57,000원보다 9,800원 높게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-08-28T23:23:59.026Z"
+  "updatedAt": "2026-08-31T11:28:09.898Z"
 }

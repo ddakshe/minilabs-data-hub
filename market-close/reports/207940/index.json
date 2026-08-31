@@ -3,10 +3,18 @@
   "name": "삼성바이오로직스",
   "market": "KOSPI",
   "retainDays": 120,
-  "firstBasDt": "20260305",
-  "lastBasDt": "20260827",
+  "firstBasDt": "20260306",
+  "lastBasDt": "20260828",
   "count": 120,
   "days": [
+    {
+      "basDt": "20260828",
+      "close": 1486000,
+      "fltRt": -6.78,
+      "headline": "코스피보다 4.99%p 낮았어요.",
+      "newsCount": 5,
+      "dartCount": 5
+    },
     {
       "basDt": "20260827",
       "close": 1594000,
@@ -1075,16 +1083,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260305",
-      "close": 1647000,
-      "fltRt": 8.64,
-      "headline": "시가 1,626,000원보다 21,000원 높게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-08-28T23:23:58.997Z"
+  "updatedAt": "2026-08-31T11:28:09.844Z"
 }

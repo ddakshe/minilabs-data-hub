@@ -1,0 +1,101 @@
+{
+  "code": "214450",
+  "name": "파마리서치",
+  "market": "KOSDAQ",
+  "basDt": "20260827",
+  "price": {
+    "code": "214450",
+    "name": "파마리서치",
+    "market": "KOSDAQ",
+    "basDt": "20260827",
+    "close": 432500,
+    "vs": -9500,
+    "fltRt": -2.15,
+    "open": 440500,
+    "high": 447000,
+    "low": 431000,
+    "prevClose": 442000,
+    "volume": 86622,
+    "tradeValue": 37846571250,
+    "week52": {
+      "low": 259000,
+      "high": 704000,
+      "position": 0.3898876404494382,
+      "days": 244,
+      "from": "20250827"
+    },
+    "recent5": [
+      {
+        "basDt": "20260821",
+        "fltRt": -3.14,
+        "open": 408500,
+        "high": 416000,
+        "low": 397500,
+        "close": 400500
+      },
+      {
+        "basDt": "20260824",
+        "fltRt": 3.87,
+        "open": 402000,
+        "high": 422000,
+        "low": 401000,
+        "close": 416000
+      },
+      {
+        "basDt": "20260825",
+        "fltRt": -0.36,
+        "open": 410000,
+        "high": 419000,
+        "low": 403500,
+        "close": 414500
+      },
+      {
+        "basDt": "20260826",
+        "fltRt": 6.63,
+        "open": 419000,
+        "high": 454000,
+        "low": 417000,
+        "close": 442000
+      },
+      {
+        "basDt": "20260827",
+        "fltRt": -2.15,
+        "open": 440500,
+        "high": 447000,
+        "low": 431000,
+        "close": 432500
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 225432,
+      "ratio": 0.38
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 531,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-08-31T11:28:09.934Z"
+  },
+  "facts": [
+    "코스닥보다 3.45%p 낮았어요.",
+    "거래량은 20일 평균의 0.4배예요.",
+    "시가보다 8,000원 낮게 마감했어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 837.65,
+    "vs": 10.78,
+    "fltRt": 1.3
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null,
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-08-31T11:28:09.934Z"
+}

@@ -3,10 +3,18 @@
   "name": "아스타",
   "market": "KOSDAQ",
   "retainDays": 120,
-  "firstBasDt": "20260305",
-  "lastBasDt": "20260827",
+  "firstBasDt": "20260306",
+  "lastBasDt": "20260828",
   "count": 120,
   "days": [
+    {
+      "basDt": "20260828",
+      "close": 6070,
+      "fltRt": 0,
+      "headline": "코스닥보다 0.09%p 낮았어요.",
+      "newsCount": 1,
+      "dartCount": 0
+    },
     {
       "basDt": "20260827",
       "close": 6070,
@@ -1076,16 +1084,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260305",
-      "close": 7700,
-      "fltRt": 17.56,
-      "headline": "코스닥보다 3.46%p 높았어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-08-28T23:23:59.110Z"
+  "updatedAt": "2026-08-31T11:28:10.008Z"
 }

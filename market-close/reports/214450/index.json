@@ -3,10 +3,27 @@
   "name": "파마리서치",
   "market": "KOSDAQ",
   "retainDays": 120,
-  "firstBasDt": "20260304",
-  "lastBasDt": "20260826",
+  "firstBasDt": "20260306",
+  "lastBasDt": "20260828",
   "count": 120,
   "days": [
+    {
+      "basDt": "20260828",
+      "close": 461500,
+      "fltRt": 6.71,
+      "headline": "코스닥보다 6.62%p 높았어요.",
+      "newsCount": 8,
+      "dartCount": 0
+    },
+    {
+      "basDt": "20260827",
+      "close": 432500,
+      "fltRt": -2.15,
+      "headline": "코스닥보다 3.45%p 낮았어요.",
+      "newsCount": 0,
+      "dartCount": 0,
+      "priceOnly": true
+    },
     {
       "basDt": "20260826",
       "close": 442000,
@@ -1067,25 +1084,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260305",
-      "close": 317000,
-      "fltRt": 10.07,
-      "headline": "시가 305,000원보다 12,000원 높게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
-    },
-    {
-      "basDt": "20260304",
-      "close": 288000,
-      "fltRt": -12.33,
-      "headline": "시가 315,000원보다 27,000원 낮게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-08-28T00:41:33.823Z"
+  "updatedAt": "2026-08-31T11:28:09.936Z"
 }
