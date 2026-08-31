@@ -2,7 +2,7 @@ import test from 'node:test'
 import assert from 'node:assert/strict'
 import { SLOTS, slotForKurly, OASIS_CATEGORIES } from './slots.mjs'
 
-/** 간편식 계열. 잡화라 맨 뒤에 와야 한다 */
+/** 간편식 계열. 소스·면·죽까지 품은 잡화라 밥상 슬롯에 두지 않고 맨 뒤에 둔다 */
 const CONVENIENCE = [120, 57, 247, 53]
 
 test('국/탕/찌개는 soup 슬롯이다', () => {
@@ -81,11 +81,12 @@ test('배제는 밥상 슬롯 뒤, 간편식·snack 앞에 온다', () => {
   }
 })
 
-test('snack 이 간편식보다 먼저 온다 — 음료·시리얼을 밥상에서 걸러낸다', () => {
+test('간식이 간편식보다 먼저 온다 — 둘 다 snack 이지만 좁은 것이 먼저다', () => {
   const idx = (id) => OASIS_CATEGORIES.findIndex((c) => c.id === id)
-  const lastSnack = OASIS_CATEGORIES.findLastIndex((c) => c.slot === 'snack')
-  for (const id of CONVENIENCE) {
-    assert.ok(idx(id) > lastSnack, `간편식 ${id} 이 snack 보다 앞에 있다 — 오트밀크·오곡라떼가 메인으로 온다`)
+  for (const narrow of [119, 217]) {
+    for (const conv of CONVENIENCE) {
+      assert.ok(idx(narrow) < idx(conv), `간식 ${narrow} 이 간편식 ${conv} 보다 뒤에 있다`)
+    }
   }
 })
 
@@ -96,4 +97,14 @@ test('완제품 단백질은 간편식보다 먼저 온다 — 소세지·떡갈
       assert.ok(idx(protein) < idx(conv), `완제품 ${protein} 이 간편식 ${conv} 보다 뒤에 있다`)
     }
   }
+})
+
+test('간편식은 main 이 아니다 — 소스·면·죽이 메인으로 올라온다', () => {
+  for (const id of CONVENIENCE) {
+    const cat = OASIS_CATEGORIES.find((c) => c.id === id)
+    assert.notEqual(cat.slot, 'main', `간편식 ${id} 이 main 이다 — 밥간장소스가 메인이 된다`)
+  }
+  // main 은 완제품 단백질만 가리킨다
+  const mains = OASIS_CATEGORIES.filter((c) => c.slot === 'main').map((c) => c.id)
+  assert.deepEqual(mains.sort((a, b) => a - b), [17, 22, 43, 1195])
 })
