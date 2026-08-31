@@ -17,6 +17,45 @@
 
 ---
 
+## GitHub 예약 대행 (launchd) — 데이터 작업이 아니라 **트리거**다
+
+> 위 표의 작업들과 성격이 다르다. 여기 있는 것은 **CI 를 대신 돌려 주는 것**이지
+> 로컬에서 데이터를 만드는 것이 아니다. 실행은 여전히 맥의 셀프호스티드 러너에서 한다.
+
+**왜** — 이 저장소에서 GitHub 의 `schedule` 이 대량으로 유실된다.
+2026-08-31 실측으로 **예상 39회 중 13회만 실행(유실 67%)** 이었다.
+고빈도 cron 일수록 심해서, `*/30`(하루 48회)인 `build-wanted` 는 하루 2~6회만 떴고
+간격도 3~6시간이었다. **취소 이력은 0 건** — 실행이 취소되는 게 아니라 애초에
+만들어지지 않는다. 그 여파로 `fetch-market-close` 가 사흘 동안 한 번도 안 떠서
+장마감 리포트가 08-27 에 멈춰 있었다.
+
+대상 워크플로는 모두 이 맥의 러너에서만 돈다. 맥이 꺼져 있으면 GitHub 예약이 떠도
+실행되지 않으므로, 예약을 launchd 로 옮겨도 잃는 것이 없다.
+
+| launchd Label | 워크플로 | 주기 |
+|---|---|---|
+| `com.minilabs.build-wanted-dispatch` | `build-wanted.yml` | 30분 (`StartInterval 1800`) |
+| `com.minilabs.market-close-dispatch` | `fetch-market-close.yml` | 평일 11:00 / 12:00 / 13:00 KST |
+
+```bash
+# 등록 (plist 는 ~/Library/LaunchAgents/)
+launchctl bootstrap "gui/$(id -u)" ~/Library/LaunchAgents/com.minilabs.build-wanted-dispatch.plist
+launchctl bootstrap "gui/$(id -u)" ~/Library/LaunchAgents/com.minilabs.market-close-dispatch.plist
+
+# 확인 · 로그 · 수동 실행
+launchctl list | grep com.minilabs..*-dispatch
+tail -f ~/Library/Logs/minilabs-dispatch.log
+./scripts/dispatch-workflow.sh fetch-market-close.yml "손으로"
+```
+
+🚨 **`fetch-market-close.yml` 의 예약(하루 3회)은 남겨 뒀다.** launchd 가 죽었을 때의
+안전망이다. `build-wanted.yml` 은 예약을 걷어냈다 — 그 하나가 큐를 잠식하고 있었다.
+
+🚧 `gh` 인증은 macOS keyring 을 쓴다. launchd(사용자 에이전트)는 로그인 세션 안에서
+돌아 접근이 된다 — 깨끗한 환경(`env -i`)으로 확인했다. 로그아웃 상태에서는 실패할 수 있다.
+
+---
+
 ## ~~1. 인증중고차 — BMW · 포르쉐~~ → CI 로 옮겼다 (2026-08-28 · 스케줄 꺼둠)
 
 **yaml 블록을 지웠다.** `fetch-cpo-local.yml` 이 같은 일을 하는데 블록을 남겨두면
