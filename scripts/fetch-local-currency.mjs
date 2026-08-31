@@ -29,6 +29,18 @@ const DELAY_MS = 400  // API 호출 간격 (rate limit 대응)
 const CONCURRENCY = 6
 const REQUEST_TIMEOUT_MS = 120_000
 
+// 최근에 받아둔 지역은 요청 자체를 건너뛴다.
+// 기존엔 "받아온 뒤 내용이 같으면 안 쓴다" 였다 — 파일은 안 바뀌지만
+// API 호출 비용은 그대로 들어서 전량 재수집에 8.8시간이 걸렸다.
+// 가맹점 정보는 느리게 바뀌므로 며칠에 한 번이면 충분하다.
+//
+// ⚠️ 파일 mtime 을 쓰면 안 된다. actions/checkout 이 체크아웃 시각으로
+//    덮어써서 CI 에서는 전부 "방금 받은 것"으로 보이고 영원히 건너뛴다.
+//    수집 시각을 _fetched.json 에 직접 기록한다.
+const MAX_AGE_DAYS = Number(process.env.MAX_AGE_DAYS ?? 3)
+const FORCE_ALL = process.env.FORCE_ALL === '1'
+const FETCHED_PATH = path.join(OUT_DIR, '_fetched.json')
+
 const BROWSER_HEADERS = {
   'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148',
   'Accept': 'application/json, text/plain, */*',
@@ -132,7 +144,10 @@ function sleep(ms) {
 await fs.mkdir(OUT_DIR, { recursive: true })
 
 console.log(`📦 ${REGIONS.length}개 지역 수집 시작 (동시 ${CONCURRENCY})`)
-let success = 0, fail = 0, unchanged = 0, done = 0
+// 지역별 마지막 수집 시각. 없으면 빈 맵에서 시작한다.
+const fetched = JSON.parse(await fs.readFile(FETCHED_PATH, 'utf-8').catch(() => '{}'))
+
+let success = 0, fail = 0, unchanged = 0, skipped = 0, done = 0
 const failed = []   // 어느 지역이 비었는지 _updated.json 에 남긴다
 
 // 공유 커서를 워커 CONCURRENCY 개가 나눠 집는다.
@@ -148,10 +163,21 @@ async function worker(workerId) {
     const code = REGIONS[i]
     const outPath = path.join(OUT_DIR, `${code}.json`)
 
+    // 충분히 최근이면 업스트림을 건드리지 않는다.
+    // 실패한 지역은 fetched 에 기록이 없으므로 다음 실행에 자동 재시도된다.
+    const last = fetched[code] ? Date.parse(fetched[code]) : 0
+    if (!FORCE_ALL && Date.now() - last < MAX_AGE_DAYS * 86400_000) {
+      skipped++
+      console.log(`[${++done}/${REGIONS.length}] ${code} ⏭  최근 수집됨`)
+      continue
+    }
+
     try {
       const items = await fetchRegion(code)
       const json = JSON.stringify(items)
       const prev = await fs.readFile(outPath, 'utf-8').catch(() => null)
+
+      fetched[code] = new Date().toISOString()
 
       if (prev === json) {
         unchanged++
@@ -177,18 +203,20 @@ await Promise.all(
 )
 const mins = ((Date.now() - t0) / 60000).toFixed(1)
 
+await fs.writeFile(FETCHED_PATH, JSON.stringify(fetched, null, 0))
+
 // 마지막 업데이트 시각 기록
 await fs.writeFile(
   path.join(OUT_DIR, '_updated.json'),
   JSON.stringify({
     updatedAt: new Date().toISOString(),
     total: REGIONS.length,
-    success, fail, unchanged,
+    success, fail, unchanged, skipped,
     failed,   // 실패 지역 목록 — 다음 실행에서 우선 재시도할 근거
   })
 )
 
-console.log(`\n완료(${mins}분): ✅ ${success} 갱신 / = ${unchanged} 동일 / ❌ ${fail} 실패`)
+console.log(`\n완료(${mins}분): ✅ ${success} 갱신 / = ${unchanged} 동일 / ⏭ ${skipped} 건너뜀 / ❌ ${fail} 실패`)
 if (failed.length) {
   console.log('실패 지역:', failed.map(f => f.code).join(', '))
 }
