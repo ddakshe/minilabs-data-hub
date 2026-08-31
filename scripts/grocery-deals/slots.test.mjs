@@ -2,6 +2,9 @@ import test from 'node:test'
 import assert from 'node:assert/strict'
 import { SLOTS, slotForKurly, OASIS_CATEGORIES } from './slots.mjs'
 
+/** 간편식 계열. 잡화라 맨 뒤에 와야 한다 */
+const CONVENIENCE = [120, 57, 247, 53]
+
 test('국/탕/찌개는 soup 슬롯이다', () => {
   assert.equal(slotForKurly([2, 16, 1174, 1177]), 'soup')
 })
@@ -52,22 +55,45 @@ test('좁은 카테고리가 넓은 카테고리보다 앞에 온다 — 순서�
   assert.ok(last('banchan') < first('main'), 'banchan 이 main 뒤에 있다 — 간편식이 반찬을 채간다')
 })
 
-test('배제는 밥상 슬롯 뒤, snack·main 앞에 온다', () => {
-  const first = (slot) => OASIS_CATEGORIES.findIndex((c) => c.slot === slot)
-  const last = (slot) => OASIS_CATEGORIES.findLastIndex((c) => c.slot === slot)
+test('배제는 밥상 슬롯 뒤, 간편식·snack 앞에 온다', () => {
+  const idx = (id) => OASIS_CATEGORIES.findIndex((c) => c.id === id)
   const firstDrop = OASIS_CATEGORIES.findIndex((c) => c.slot === null)
   const lastDrop = OASIS_CATEGORIES.findLastIndex((c) => c.slot === null)
   assert.ok(firstDrop > 0, '배제 카테고리가 없다')
-  // 앞에 두면 채소 카테고리가 나물·두부를 먼저 채가서 tofu 가 30% 날아간다(실측)
+
+  // 배제를 앞에 두면 채소 카테고리가 나물·두부를 먼저 채가서 tofu 가 30% 날아간다(실측).
+  // 뒤에 두면 정상 반찬은 이미 확정된 뒤라 손실이 0 이다.
+  const beforeDrop = OASIS_CATEGORIES.slice(0, firstDrop)
   for (const slot of ['kimchi', 'soup', 'tofu', 'banchan']) {
-    assert.ok(last(slot) < firstDrop, `${slot} 가 배제보다 뒤에 있다 — 정상 반찬이 배제에 쓸려나간다`)
+    assert.ok(
+      beforeDrop.some((c) => c.slot === slot),
+      `${slot} 카테고리가 배제보다 뒤에 있다 — 정상 반찬이 배제에 쓸려나간다`,
+    )
+    assert.ok(
+      !OASIS_CATEGORIES.slice(lastDrop).some((c) => c.slot === slot),
+      `${slot} 카테고리 일부가 배제 뒤에 남아 있다`,
+    )
   }
-  assert.ok(lastDrop < first('snack'), '배제가 snack 뒤에 있다')
-  assert.ok(lastDrop < first('main'), '배제가 main 뒤에 있다')
+
+  // 간편식은 잡화라 맨 뒤다. 배제·snack 이 먼저 걸러낸 뒤 남는 것만 가져간다.
+  for (const id of CONVENIENCE) {
+    assert.ok(idx(id) > lastDrop, `간편식 ${id} 이 배제보다 앞에 있다`)
+  }
 })
 
-test('snack 이 main 보다 먼저 온다 — 음료·시리얼을 밥상에서 걸러낸다', () => {
-  const first = (slot) => OASIS_CATEGORIES.findIndex((c) => c.slot === slot)
-  const last = (slot) => OASIS_CATEGORIES.findLastIndex((c) => c.slot === slot)
-  assert.ok(last('snack') < first('main'), 'snack 이 main 뒤에 있다 — 오트밀크·오곡라떼가 메인으로 온다')
+test('snack 이 간편식보다 먼저 온다 — 음료·시리얼을 밥상에서 걸러낸다', () => {
+  const idx = (id) => OASIS_CATEGORIES.findIndex((c) => c.id === id)
+  const lastSnack = OASIS_CATEGORIES.findLastIndex((c) => c.slot === 'snack')
+  for (const id of CONVENIENCE) {
+    assert.ok(idx(id) > lastSnack, `간편식 ${id} 이 snack 보다 앞에 있다 — 오트밀크·오곡라떼가 메인으로 온다`)
+  }
+})
+
+test('완제품 단백질은 간편식보다 먼저 온다 — 소세지·떡갈비가 메인을 채운다', () => {
+  const idx = (id) => OASIS_CATEGORIES.findIndex((c) => c.id === id)
+  for (const protein of [17, 1195, 22, 43]) {
+    for (const conv of CONVENIENCE) {
+      assert.ok(idx(protein) < idx(conv), `완제품 ${protein} 이 간편식 ${conv} 보다 뒤에 있다`)
+    }
+  }
 })

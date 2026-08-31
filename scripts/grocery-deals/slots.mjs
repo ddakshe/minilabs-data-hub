@@ -107,6 +107,7 @@ export function slotForKurly(categoryIds) {
  *      배제 없음:               soup 77 · main 209 · tofu 77 · banchan 220 · kimchi 39
  *      채소·과일 배제:          soup 77 · main 108 · tofu 77 · banchan 220 · kimchi 39
  *      + 베이커리·생활·유제품:  soup 77 · main  83 · tofu 77 · banchan 220 · kimchi 39
+ *      + 완제품 단백질 카테고리: soup 77 · main 109 · tofu 117 · banchan 208 · kimchi 39
  *    main 209 → 83 은 손실이 아니라 정화다. 오트밀크·오곡라떼·스틱샐러리·
  *    카스테라·김밥발(27x23cm)이 여기서 빠진다 — 김밥발은 음식이 아니라 도구다.
  */
@@ -117,10 +118,22 @@ export const OASIS_CATEGORIES = [
   { id: 33, slot: 'soup', label: '국│찌개' },
   { id: 242, slot: 'tofu', label: '나물│두부' },
   { id: 21, slot: 'tofu', label: '어묵│가공' },
+  { id: 45, slot: 'tofu', label: '전│묵│부침' },
+  { id: 1193, slot: 'tofu', label: '유정란│알류' },
   { id: 243, slot: 'banchan', label: '1인 반찬' },
   { id: 123, slot: 'banchan', label: '오아시스반찬' },
+  { id: 19, slot: 'banchan', label: '김│건어물' },
   { id: 34, slot: 'banchan', label: '밑반찬│어묵' },
   { id: 44, slot: 'banchan', label: '반찬' },
+
+  // ── 진짜 메인: 완제품 단백질. 간편식보다 먼저 잡는다 ──────────
+  //    "생물은 담지 않는다"는 규칙이 축산·수산 대분류를 통째로 막으면서
+  //    비엔나·떡갈비·삼치구이 같은 **완제품**까지 같이 죽이고 있었다.
+  //    데우기만 하면 되는 것은 "끼당 N원" 약속을 깨지 않는다.
+  { id: 17, slot: 'main', label: '육가공│족발' },
+  { id: 1195, slot: 'main', label: '양념육' },
+  { id: 22, slot: 'main', label: '돈가스│만두' },
+  { id: 43, slot: 'main', label: '일반생선' },
 
   // ── 배제: 밥상 슬롯이 확정된 뒤에 온다 ──────────────────────
   { id: 11, slot: null, label: '친환경채소' },
@@ -153,6 +166,7 @@ export const OASIS_CATEGORIES = [
   { id: 217, slot: 'snack', label: '간식│음료' },
 
   // ── main: 남은 간편식 ───────────────────────────────────
+  //    오아시스에 "메인요리" 카테고리가 없어서 간편식이 뒤를 채운다.
   { id: 120, slot: 'main', label: '밀키트I도시락' },
   { id: 57, slot: 'main', label: '간편식사' },
   { id: 247, slot: 'main', label: '간편식' },
