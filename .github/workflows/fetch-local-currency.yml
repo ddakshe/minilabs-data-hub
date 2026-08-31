@@ -19,7 +19,15 @@ concurrency:
 
 jobs:
   fetch:
-    runs-on: ubuntu-latest
+    # self-hosted 로 돌린다. 빨라지지는 않는다 — 병목은 업스트림 API 라
+    # 실행 위치와 무관하게 페이지당 40초~2.7분이다.
+    # 바꾼 이유는 **GitHub 러너의 6시간 잡 제한** 때문이다. 249개 지역을
+    # 동시 6으로 받아도 처리량이 시간당 30~40지역이라 6시간을 넘긴다.
+    # self-hosted 는 잡당 5일까지 가능하다.
+    #
+    # ⚠️ 러너가 하나라 이 잡이 도는 동안 다른 워크플로가 대기한다.
+    runs-on: [self-hosted, macOS, ARM64]
+    timeout-minutes: 720
     steps:
       - name: Checkout
         uses: actions/checkout@v4

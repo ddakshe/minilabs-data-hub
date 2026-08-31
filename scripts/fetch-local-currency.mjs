@@ -24,6 +24,11 @@ const PER_PAGE = 100
 const MAX_PAGES = 3   // 지역당 최대 300개
 const DELAY_MS = 400  // API 호출 간격 (rate limit 대응)
 
+// 업스트림 1회 호출이 40~60초 걸린다. 249개를 순차로 돌면 7~10시간이라
+// GitHub Actions 잡 제한(6시간)을 넘긴다. 워커 여러 개로 나눠 받는다.
+const CONCURRENCY = 6
+const REQUEST_TIMEOUT_MS = 120_000
+
 const BROWSER_HEADERS = {
   'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148',
   'Accept': 'application/json, text/plain, */*',
@@ -56,7 +61,11 @@ async function fetchPage(regionCd, page) {
   params.append('cond[bzmn_stts::EQ]', '01')
   params.append('cond[usage_rgn_cd::EQ]', regionCd)
 
-  const res = await fetch(`${API_BASE}?${params}`, { headers: BROWSER_HEADERS })
+  // Node fetch 는 기본 타임아웃이 없다. 멈춘 요청 하나가 워커를 영구히 붙잡는다.
+  const res = await fetch(`${API_BASE}?${params}`, {
+    headers: BROWSER_HEADERS,
+    signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
+  })
   if (!res.ok) throw new Error(`HTTP ${res.status}`)
   return res.json()
 }
@@ -122,37 +131,51 @@ function sleep(ms) {
 
 await fs.mkdir(OUT_DIR, { recursive: true })
 
-console.log(`📦 ${REGIONS.length}개 지역 수집 시작`)
-let success = 0, fail = 0, unchanged = 0
+console.log(`📦 ${REGIONS.length}개 지역 수집 시작 (동시 ${CONCURRENCY})`)
+let success = 0, fail = 0, unchanged = 0, done = 0
 const failed = []   // 어느 지역이 비었는지 _updated.json 에 남긴다
 
-for (let i = 0; i < REGIONS.length; i++) {
-  const code = REGIONS[i]
-  const outPath = path.join(OUT_DIR, `${code}.json`)
-  process.stdout.write(`[${i + 1}/${REGIONS.length}] ${code} ... `)
+// 공유 커서를 워커 CONCURRENCY 개가 나눠 집는다.
+// 지역마다 걸리는 시간이 제각각(1~3페이지)이라, 미리 N등분하면
+// 한 덩어리만 늦게 끝나 전체가 기다린다. 먼저 끝난 워커가 다음 걸 집게 한다.
+let next = 0
 
-  try {
-    const items = await fetchRegion(code)
-    const json = JSON.stringify(items)
+async function worker(workerId) {
+  while (true) {
+    const i = next++
+    if (i >= REGIONS.length) return
 
-    // 변경된 경우에만 파일 쓰기
-    const prev = await fs.readFile(outPath, 'utf-8').catch(() => null)
-    if (prev === json) {
-      console.log(`= ${items.length}개 (변경없음)`)
-      unchanged++
-    } else {
-      await fs.writeFile(outPath, json)
-      console.log(`✅ ${items.length}개`)
-      success++
+    const code = REGIONS[i]
+    const outPath = path.join(OUT_DIR, `${code}.json`)
+
+    try {
+      const items = await fetchRegion(code)
+      const json = JSON.stringify(items)
+      const prev = await fs.readFile(outPath, 'utf-8').catch(() => null)
+
+      if (prev === json) {
+        unchanged++
+        console.log(`[${++done}/${REGIONS.length}] ${code} = ${items.length}개 (변경없음)`)
+      } else {
+        await fs.writeFile(outPath, json)
+        success++
+        console.log(`[${++done}/${REGIONS.length}] ${code} ✅ ${items.length}개`)
+      }
+    } catch (e) {
+      fail++
+      failed.push({ code, error: String(e.message ?? e) })
+      console.log(`[${++done}/${REGIONS.length}] ${code} ❌ ${e.message}`)
     }
-  } catch (e) {
-    console.log(`❌ ${e.message}`)
-    fail++
-    failed.push({ code, error: String(e.message ?? e) })
-  }
 
-  if (i < REGIONS.length - 1) await sleep(DELAY_MS)
+    await sleep(DELAY_MS)
+  }
 }
+
+const t0 = Date.now()
+await Promise.all(
+  Array.from({ length: CONCURRENCY }, (_, k) => worker(k))
+)
+const mins = ((Date.now() - t0) / 60000).toFixed(1)
 
 // 마지막 업데이트 시각 기록
 await fs.writeFile(
@@ -165,4 +188,7 @@ await fs.writeFile(
   })
 )
 
-console.log(`\n완료: ✅ ${success} 갱신 / = ${unchanged} 동일 / ❌ ${fail} 실패`)
+console.log(`\n완료(${mins}분): ✅ ${success} 갱신 / = ${unchanged} 동일 / ❌ ${fail} 실패`)
+if (failed.length) {
+  console.log('실패 지역:', failed.map(f => f.code).join(', '))
+}
