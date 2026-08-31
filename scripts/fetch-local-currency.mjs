@@ -30,24 +30,18 @@ const BROWSER_HEADERS = {
   'Referer': 'https://toss.im/',
 }
 
-// ── 지역 코드 목록 (regions.ts 에서 추출한 249개) ──────────────────
-// 직접 임포트 대신 인라인 — Node에서 TS 의존성 없이 실행하기 위함
-const REGIONS = await loadRegionCodes()
+// ── 지역 코드 목록 ────────────────────────────────────────────────
+// _regions.json 은 이 저장소 안에 있다. 예전엔 이웃 저장소
+// (../../local-currency-map/src/data/regions.ts)를 읽었는데, Actions 러너에는
+// 그 저장소가 없어서 폴백이 _updated.json 을 지역코드로 착각했다.
+// 그래서 1개 지역만 시도하고 실패했다(total:1 success:0 fail:1).
+const REGIONS = JSON.parse(
+  await fs.readFile(path.join(OUT_DIR, '_regions.json'), 'utf-8')
+).map(r => r.code)
 
-async function loadRegionCodes() {
-  const src = await fs.readFile(
-    path.resolve(__dirname, '../..', 'local-currency-map/src/data/regions.ts'),
-    'utf-8'
-  ).catch(() => null)
-
-  if (src) {
-    const matches = [...src.matchAll(/"code":\s*"(\d+)"/g)]
-    return [...new Set(matches.map(m => m[1]))]
-  }
-
-  // fallback: local-currency 디렉토리에 이미 있는 파일 목록 사용
-  const files = await fs.readdir(OUT_DIR).catch(() => [])
-  return files.filter(f => f.endsWith('.json')).map(f => f.replace('.json', ''))
+if (REGIONS.length < 200) {
+  console.error(`✗ 지역 목록이 이상하다: ${REGIONS.length}개`)
+  process.exit(1)
 }
 
 // ── API 호출 ────────────────────────────────────────────────────────
@@ -81,11 +75,38 @@ function pickFields(item) {
   }
 }
 
+// 업스트림은 두 가지로 실패한다: HTTP 오류, 그리고 **200 + 빈 배열**.
+// 후자가 더 흔하다. 조건 검색 1회가 40~60초 걸리는 인덱스 없는 풀스캔이라
+// 부하를 받으면 에러 대신 조용히 빈 결과를 준다.
+// Actions 는 6시간까지 돌 수 있으니 넉넉히 재시도한다.
+const ATTEMPTS = 5
+const RETRY_DELAY_MS = 3000
+
+async function fetchPageWithRetry(regionCd, page) {
+  let lastErr
+  for (let attempt = 1; attempt <= ATTEMPTS; attempt++) {
+    try {
+      const data = await fetchPage(regionCd, page)
+      const items = (data.data ?? []).map(pickFields)
+      // page 1 의 빈 결과는 가짜일 가능성이 높다 — 다시 시도한다.
+      // (page 2 이후의 빈 결과는 "더 없음"이라는 정상 신호다.)
+      if (page === 1 && items.length === 0) {
+        lastErr = new Error('empty page 1')
+      } else {
+        return items
+      }
+    } catch (e) {
+      lastErr = e
+    }
+    if (attempt < ATTEMPTS) await sleep(RETRY_DELAY_MS)
+  }
+  throw lastErr
+}
+
 async function fetchRegion(regionCd) {
   const items = []
   for (let page = 1; page <= MAX_PAGES; page++) {
-    const data = await fetchPage(regionCd, page)
-    const pageItems = (data.data ?? []).map(pickFields)
+    const pageItems = await fetchPageWithRetry(regionCd, page)
     items.push(...pageItems)
     if (pageItems.length < PER_PAGE) break
     if (page < MAX_PAGES) await sleep(DELAY_MS)
@@ -103,6 +124,7 @@ await fs.mkdir(OUT_DIR, { recursive: true })
 
 console.log(`📦 ${REGIONS.length}개 지역 수집 시작`)
 let success = 0, fail = 0, unchanged = 0
+const failed = []   // 어느 지역이 비었는지 _updated.json 에 남긴다
 
 for (let i = 0; i < REGIONS.length; i++) {
   const code = REGIONS[i]
@@ -126,6 +148,7 @@ for (let i = 0; i < REGIONS.length; i++) {
   } catch (e) {
     console.log(`❌ ${e.message}`)
     fail++
+    failed.push({ code, error: String(e.message ?? e) })
   }
 
   if (i < REGIONS.length - 1) await sleep(DELAY_MS)
@@ -134,7 +157,12 @@ for (let i = 0; i < REGIONS.length; i++) {
 // 마지막 업데이트 시각 기록
 await fs.writeFile(
   path.join(OUT_DIR, '_updated.json'),
-  JSON.stringify({ updatedAt: new Date().toISOString(), total: REGIONS.length, success, fail, unchanged })
+  JSON.stringify({
+    updatedAt: new Date().toISOString(),
+    total: REGIONS.length,
+    success, fail, unchanged,
+    failed,   // 실패 지역 목록 — 다음 실행에서 우선 재시도할 근거
+  })
 )
 
 console.log(`\n완료: ✅ ${success} 갱신 / = ${unchanged} 동일 / ❌ ${fail} 실패`)
