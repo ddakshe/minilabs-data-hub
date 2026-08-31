@@ -31,8 +31,9 @@ test('SLOTS 는 6개 슬롯을 갖는다', () => {
   assert.deepEqual(SLOTS, ['soup', 'main', 'banchan', 'kimchi', 'tofu', 'snack'])
 })
 
-test('오아시스 카테고리는 모두 유효한 슬롯을 가리킨다', () => {
+test('오아시스 카테고리는 유효한 슬롯이거나 배제(null)다', () => {
   for (const c of OASIS_CATEGORIES) {
+    if (c.slot === null) continue
     assert.ok(SLOTS.includes(c.slot), `${c.label}(${c.id}) 의 슬롯 ${c.slot} 이 SLOTS 에 없다`)
   }
 })
@@ -49,4 +50,24 @@ test('좁은 카테고리가 넓은 카테고리보다 앞에 온다 — 순서�
     assert.ok(last(narrow) < first('banchan'), `${narrow} 가 banchan 뒤에 있다 — kimchi/tofu 슬롯이 빈다`)
   }
   assert.ok(last('banchan') < first('main'), 'banchan 이 main 뒤에 있다 — 간편식이 반찬을 채간다')
+})
+
+test('배제는 밥상 슬롯 뒤, snack·main 앞에 온다', () => {
+  const first = (slot) => OASIS_CATEGORIES.findIndex((c) => c.slot === slot)
+  const last = (slot) => OASIS_CATEGORIES.findLastIndex((c) => c.slot === slot)
+  const firstDrop = OASIS_CATEGORIES.findIndex((c) => c.slot === null)
+  const lastDrop = OASIS_CATEGORIES.findLastIndex((c) => c.slot === null)
+  assert.ok(firstDrop > 0, '배제 카테고리가 없다')
+  // 앞에 두면 채소 카테고리가 나물·두부를 먼저 채가서 tofu 가 30% 날아간다(실측)
+  for (const slot of ['kimchi', 'soup', 'tofu', 'banchan']) {
+    assert.ok(last(slot) < firstDrop, `${slot} 가 배제보다 뒤에 있다 — 정상 반찬이 배제에 쓸려나간다`)
+  }
+  assert.ok(lastDrop < first('snack'), '배제가 snack 뒤에 있다')
+  assert.ok(lastDrop < first('main'), '배제가 main 뒤에 있다')
+})
+
+test('snack 이 main 보다 먼저 온다 — 음료·시리얼을 밥상에서 걸러낸다', () => {
+  const first = (slot) => OASIS_CATEGORIES.findIndex((c) => c.slot === slot)
+  const last = (slot) => OASIS_CATEGORIES.findLastIndex((c) => c.slot === slot)
+  assert.ok(last('snack') < first('main'), 'snack 이 main 뒤에 있다 — 오트밀크·오곡라떼가 메인으로 온다')
 })

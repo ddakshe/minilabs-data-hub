@@ -47,9 +47,16 @@ export async function collectOasis({ minRate = OASIS_MIN_RATE } = {}) {
     }
     let kept = 0
     for (const p of parsed) {
+      if (byId.has(p.id)) continue // 먼저 매칭된 슬롯이 이긴다
+      if (cat.slot === null) {
+        // 배제 카테고리. 자리만 선점해서 뒤 카테고리가 못 채가게 한다.
+        // 할인율·가격 필터를 적용하지 않는다 — 조건과 무관하게 막아야 한다.
+        byId.set(p.id, null)
+        kept++
+        continue
+      }
       if (p.rate < minRate) continue
       if (p.price > PRICE_CAP) continue // 선물세트·대용량 박스 배제
-      if (byId.has(p.id)) continue // 먼저 매칭된 슬롯이 이긴다
       byId.set(p.id, {
         id: p.id,
         slot: cat.slot,
@@ -62,7 +69,8 @@ export async function collectOasis({ minRate = OASIS_MIN_RATE } = {}) {
       })
       kept++
     }
-    console.log(`▶ ${cat.label}(${cat.id}) → 파싱 ${parsed.length} / ${minRate}%+ 채택 ${kept}`)
+    const verb = cat.slot === null ? '배제' : `${minRate}%+ 채택`
+    console.log(`▶ ${cat.label}(${cat.id}) → 파싱 ${parsed.length} / ${verb} ${kept}`)
     await sleep(1000) // 응답이 6MB 라 간격을 넉넉히 둔다
   }
 
@@ -72,6 +80,7 @@ export async function collectOasis({ minRate = OASIS_MIN_RATE } = {}) {
   }
   // 카테고리는 모두 응답했지만 필터(minRate/PRICE_CAP)가 전부 걸러낸 경우도 실패다 —
   // 빈 배열을 그대로 넘기면 kurly.mjs 와 달리 조용히 성공한다.
-  if (byId.size === 0) throw new Error('오아시스 0건 — minRate/PRICE_CAP 필터를 확인할 것')
-  return [...byId.values()]
+  const items = [...byId.values()].filter(Boolean)
+  if (items.length === 0) throw new Error('오아시스 0건 — minRate/PRICE_CAP 필터를 확인할 것')
+  return items
 }

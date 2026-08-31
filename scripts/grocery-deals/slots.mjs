@@ -88,7 +88,30 @@ export function slotForKurly(categoryIds) {
  *
  *    알파벳순 등으로 재정렬하지 말 것.
  */
+/*
+ * ⚠️ slot: null 은 **배제**다. 그 카테고리의 상품 ID 를 자리만 선점해서 뒤에 오는
+ *    카테고리가 못 채가게 한다. 할인율·가격 필터를 적용하지 않는다 — 조건과
+ *    무관하게 막아야 하기 때문이다.
+ *
+ *    배제를 **밥상 슬롯 뒤, snack·main 앞**에 두는 것이 핵심이다 (2026-08-31 실측).
+ *    앞에 두면 채소 카테고리가 나물·두부 상품을 먼저 채가서 tofu 가 77 → 54 로
+ *    30% 날아간다. 뒤에 두면 정상 반찬은 이미 확정된 뒤라 손실이 0 이고, 아직
+ *    아무 슬롯도 못 잡은 채소·과일·빵·주방용품만 버려진다.
+ *
+ *    snack 을 main 앞에 두는 것도 같은 장치다. 오아시스에는 "메인요리" 카테고리가
+ *    없어서 간편식(53·57·247·120)을 main 으로 쓰는데, 그 안에 음료·시리얼이 섞여
+ *    있다. snack 이 먼저 먹으면 그것들은 snack 으로 확정되고, 앱의 슬롯 환산이
+ *    snack 을 0개로 잡으므로 밥상에 오르지 않는다.
+ *
+ *    실측 (같은 원본 기준, 밥상 슬롯 손실 없음):
+ *      배제 없음:               soup 77 · main 209 · tofu 77 · banchan 220 · kimchi 39
+ *      채소·과일 배제:          soup 77 · main 108 · tofu 77 · banchan 220 · kimchi 39
+ *      + 베이커리·생활·유제품:  soup 77 · main  83 · tofu 77 · banchan 220 · kimchi 39
+ *    main 209 → 83 은 손실이 아니라 정화다. 오트밀크·오곡라떼·스틱샐러리·
+ *    카스테라·김밥발(27x23cm)이 여기서 빠진다 — 김밥발은 음식이 아니라 도구다.
+ */
 export const OASIS_CATEGORIES = [
+  // ── 밥상 슬롯: 좁은 것부터 ────────────────────────────────
   { id: 241, slot: 'kimchi', label: '김치│절임' },
   { id: 114, slot: 'kimchi', label: '액젓│젓갈' },
   { id: 33, slot: 'soup', label: '국│찌개' },
@@ -98,10 +121,40 @@ export const OASIS_CATEGORIES = [
   { id: 123, slot: 'banchan', label: '오아시스반찬' },
   { id: 34, slot: 'banchan', label: '밑반찬│어묵' },
   { id: 44, slot: 'banchan', label: '반찬' },
+
+  // ── 배제: 밥상 슬롯이 확정된 뒤에 온다 ──────────────────────
+  { id: 11, slot: null, label: '친환경채소' },
+  { id: 137, slot: null, label: '샐러드채소' },
+  { id: 142, slot: null, label: '채소' },
+  { id: 197, slot: null, label: '우리땅채소' },
+  { id: 214, slot: null, label: '채소│농산' },
+  { id: 5407, slot: null, label: '절임┃채소' },
+  { id: 5411, slot: null, label: '농산 I 채소' },
+  { id: 12, slot: null, label: '수입과일I농산' },
+  { id: 122, slot: null, label: '우리땅과일' },
+  { id: 141, slot: null, label: '과일│농산' },
+  { id: 253, slot: null, label: '과일│수입' },
+  { id: 118, slot: null, label: '베이커리' },
+  { id: 219, slot: null, label: '빵│잼' },
+  { id: 1101, slot: null, label: '빵' },
+  { id: 1102, slot: null, label: '쿠키│케이크' },
+  { id: 8, slot: null, label: '생활' },
+  { id: 38, slot: null, label: '생활용품' },
+  { id: 218, slot: null, label: '생활│주방' },
+  { id: 148, slot: null, label: '마스크│구강' },
+  { id: 868, slot: null, label: '영양제' },
+  { id: 132, slot: null, label: '우유' },
+  { id: 1184, slot: null, label: '유제품' },
+  { id: 51, slot: null, label: '요거트' },
+  { id: 1188, slot: null, label: '치즈┃버터' },
+
+  // ── snack: main 보다 먼저. 음료·시리얼을 여기서 잡는다 ────────
+  { id: 119, slot: 'snack', label: '간식' },
+  { id: 217, slot: 'snack', label: '간식│음료' },
+
+  // ── main: 남은 간편식 ───────────────────────────────────
   { id: 120, slot: 'main', label: '밀키트I도시락' },
   { id: 57, slot: 'main', label: '간편식사' },
   { id: 247, slot: 'main', label: '간편식' },
   { id: 53, slot: 'main', label: '간편식(2)' },
-  { id: 119, slot: 'snack', label: '간식' },
-  { id: 217, slot: 'snack', label: '간식│음료' },
 ]
