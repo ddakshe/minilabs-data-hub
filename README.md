@@ -2,6 +2,18 @@
 
 MiniLabs 앱들이 사용하는 데이터를 GitHub Actions로 수집하고 저장하는 중앙 데이터 허브.
 
+> 🚨 **새 배치를 붙이기 전에 [`docs/api-budget.md`](docs/api-budget.md) 에서 남은 한도를 본다.**
+> `DART_API_KEY` 를 6개 워크플로가, `DATA_GO_KR_KEY` 를 7개가 **나눠 쓴다.**
+> 한도를 넘기면 그 키를 쓰는 형제 앱이 **같이 멈춘다.**
+>
+> ```bash
+> node scripts/api-registry.mjs     # 표 갱신 + 미신고·유령·한도 초과 검사
+> ```
+>
+> 표는 `.github/workflows/` 를 스캔해 자동 생성한다 — 손으로 고치지 않는다.
+> 한도와 호출량만 `docs/api-limits.json` 에 선언한다. **새 워크플로에 키를 붙이면
+> 다음 실행에서 「미신고」로 뜬다.**
+
 ## 구조
 
 ```

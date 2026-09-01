@@ -1,0 +1,102 @@
+{
+  "_": "API 한도와 워크플로별 예상 호출량. 코드가 알아낼 수 없는 값만 손으로 적는다.",
+  "_how": "워크플로 목록은 scripts/api-registry.mjs 가 .github/workflows 를 스캔해서 찾는다. 여기에는 한도와 예산만 선언한다. 스캔에서 나온 워크플로가 여기 없으면 '미신고'로 뜬다 — 그게 드리프트 감지다.",
+  "_update": "node scripts/api-registry.mjs   →  docs/api-budget.md 갱신 + 초과 시 exit 1",
+  "apis": {
+    "DART_API_KEY": {
+      "provider": "금융감독원 DART 오픈API",
+      "limitPerDay": 20000,
+      "scope": "키 단위 — 이 키를 쓰는 모든 워크플로가 **나눠 쓴다**",
+      "warn": "동시 요청 금지. 2026-08-25 동시 4개로 긁다가 IP 차단(하루). 순차 + SLEEP 0.3 을 지킨다.",
+      "budget": {
+        "fetch-market-close.yml": {
+          "callsPerRun": 60,
+          "note": "종목당 공시 1콜 · ABS_MAX_CALLS 로 상한"
+        },
+        "build-wanted.yml": {
+          "callsPerRun": 5,
+          "note": "신청 종목만 — 대개 0~5"
+        },
+        "fetch-stock-ipo.yml": {
+          "callsPerRun": 40,
+          "note": "list.json 페이지 순회"
+        },
+        "fetch-dividend-kr.yml": {
+          "callsPerRun": 4000,
+          "note": "🖥 러너의 ~/.config/stock-tools/dart.env 를 읽는다. 연 2회(4·5월)만 돈다"
+        },
+        "probe-dividend-kr.yml": {
+          "callsPerRun": 250,
+          "note": "수동 실행 프로브"
+        },
+        "fetch-company-info.yml": {
+          "callsPerRun": 3800,
+          "note": "🖥 러너 파일 · 전 종목 6콜 = 15,192 을 **4일에 나눠** 돈다(633종목/일). 한 번에 돌리면 한도의 76% 를 먹어 형제 앱이 막힌다",
+          "planned": true
+        }
+      }
+    },
+    "DATA_GO_KR_KEY": {
+      "provider": "공공데이터포털 (data.go.kr)",
+      "limitPerDay": 10000,
+      "scope": "**활용신청(데이터셋) 단위**로 각 10,000. 서로 다른 데이터셋이면 한도가 별개다 — 이 표의 합계는 최악을 가정한 것이고, 실제로는 데이터셋별로 나뉜다.",
+      "warn": "일반 인증키는 이미 URL 인코딩돼 있다. 다시 인코딩하면 403 SERVICE_KEY_IS_NOT_REGISTERED.",
+      "budget": {
+        "fetch-market-close.yml": {
+          "callsPerRun": 24,
+          "dataset": "주식시세정보",
+          "note": "프리셋 20 + 지수 2"
+        },
+        "build-wanted.yml": {
+          "callsPerRun": 5,
+          "dataset": "주식시세정보"
+        },
+        "fetch-local-currency.yml": {
+          "callsPerRun": 400,
+          "dataset": "지역화폐 가맹점"
+        },
+        "fetch-benefit-gauge.yml": {
+          "callsPerRun": 60,
+          "dataset": "보조금24"
+        },
+        "fetch-realestate.yml": {
+          "callsPerRun": 300,
+          "dataset": "국토부 실거래가"
+        },
+        "probe-realestate.yml": {
+          "callsPerRun": 20,
+          "dataset": "국토부 실거래가"
+        },
+        "fetch-company-info.yml": {
+          "callsPerRun": 2532,
+          "dataset": "주식시세정보",
+          "note": "전 종목 시세 1콜 — market-close 와 **같은 데이터를 공유**한다",
+          "planned": true
+        }
+      }
+    },
+    "ECOS_API_KEY": {
+      "provider": "한국은행 ECOS",
+      "limitPerDay": 100000,
+      "scope": "키 단위. 여유가 크다",
+      "budget": {
+        "fetch-fx.yml": {
+          "callsPerRun": 6
+        }
+      }
+    },
+    "KOSIS_API_KEY": {
+      "provider": "통계청 KOSIS",
+      "limitPerDay": 30000,
+      "scope": "키 단위",
+      "budget": {
+        "fetch-kosis.yml": {
+          "callsPerRun": 40
+        },
+        "fetch-cancer-cover.yml": {
+          "callsPerRun": 20
+        }
+      }
+    }
+  }
+}
