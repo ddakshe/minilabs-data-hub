@@ -35,7 +35,22 @@
 | launchd Label | 워크플로 | 주기 |
 |---|---|---|
 | `com.minilabs.build-wanted-dispatch` | `build-wanted.yml` | 30분 (`StartInterval 1800`) |
-| `com.minilabs.market-close-dispatch` | `fetch-market-close.yml` | 평일 11:00 / 12:00 / 13:00 KST |
+| `com.minilabs.market-close-dispatch` | `fetch-market-close.yml` | 평일 09:30~14:00 **30분마다** (게이트) |
+
+**market-close 는 시각을 고정하지 않는다.** 공개 시각이 날마다 흔들리기 때문이다 —
+실측으로 08-28 은 09:39~10:53, 09-01 은 10:35~10:40 사이였다. 고정 시각은 이른 날엔
+한 시간을 놀리고 늦은 날엔 놓친다. 그래서 30분마다 **싼 판정**만 하고, 새 기준일이
+있을 때만 파이프라인을 부른다. 그날 한 번 성공하면 나머지 호출은 판정에서 멈춘다.
+
+```
+scripts/market-close-due.mjs     exit 0=실행 / 1=건너뜀 / 2=판정불가
+  data.go.kr 의 최신 기준일  vs  market-close/market.json 의 lastBasDt
+```
+
+🔑 **날짜를 계산하지 않는다.** '어제가 영업일인가'를 달력으로 따지면 공휴일 표가
+필요하고 그 표가 틀리면 조용히 굶는다. 공개된 것과 만든 것을 비교하면 공휴일·임시휴장이
+자동으로 맞는다 — 없는 날은 애초에 공개되지 않는다. 평소 호출은 1~2회다
+(이미 만든 날에 닿으면 더 거슬러 올라가지 않는다).
 
 ```bash
 # 등록 (plist 는 ~/Library/LaunchAgents/)
