@@ -37,9 +37,17 @@ const REQUEST_TIMEOUT_MS = 120_000
 // ⚠️ 파일 mtime 을 쓰면 안 된다. actions/checkout 이 체크아웃 시각으로
 //    덮어써서 CI 에서는 전부 "방금 받은 것"으로 보이고 영원히 건너뛴다.
 //    수집 시각을 _fetched.json 에 직접 기록한다.
-const MAX_AGE_DAYS = Number(process.env.MAX_AGE_DAYS ?? 3)
+const MAX_AGE_DAYS = Number(process.env.MAX_AGE_DAYS ?? 7)
 const FORCE_ALL = process.env.FORCE_ALL === '1'
 const FETCHED_PATH = path.join(OUT_DIR, '_fetched.json')
+
+// 한 실행의 시간 예산. 개수가 아니라 시간으로 끊는 이유는 지역마다 소요가
+// 제각각이기 때문이다(1~3페이지 + 재시도). 오래 걸리는 지역은 예산을 많이 먹고
+// 빨리 끝나는 지역은 여러 개가 같은 실행에 들어간다 — 실행 시간이 균일해진다.
+//
+// 전량 수집은 8.8시간이 걸렸다. 매일 그러면 러너를 하루 종일 점유한다.
+// 60분씩 나눠 며칠에 걸쳐 한 바퀴 돈다. 가맹점 정보는 느리게 바뀌므로 충분하다.
+const BUDGET_MINUTES = Number(process.env.BUDGET_MINUTES ?? 60)
 
 const BROWSER_HEADERS = {
   'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148',
@@ -143,34 +151,44 @@ function sleep(ms) {
 
 await fs.mkdir(OUT_DIR, { recursive: true })
 
-console.log(`📦 ${REGIONS.length}개 지역 수집 시작 (동시 ${CONCURRENCY})`)
 // 지역별 마지막 수집 시각. 없으면 빈 맵에서 시작한다.
 const fetched = JSON.parse(await fs.readFile(FETCHED_PATH, 'utf-8').catch(() => '{}'))
 
-let success = 0, fail = 0, unchanged = 0, skipped = 0, done = 0
-const failed = []   // 어느 지역이 비었는지 _updated.json 에 남긴다
+// 받아야 할 지역을 **오래된 것부터** 고른다.
+// 기록이 없는 지역(= 한 번도 못 받았거나 지난번에 실패한 곳)이 0 으로 맨 앞에 온다.
+// 그래서 실패 목록을 따로 관리하지 않아도 다음 실행에서 우선 재시도된다.
+const todo = REGIONS
+  .map(code => ({ code, at: fetched[code] ? Date.parse(fetched[code]) : 0 }))
+  .filter(x => FORCE_ALL || Date.now() - x.at >= MAX_AGE_DAYS * 86400_000)
+  .sort((a, b) => a.at - b.at)
+  .map(x => x.code)
 
-// 공유 커서를 워커 CONCURRENCY 개가 나눠 집는다.
-// 지역마다 걸리는 시간이 제각각(1~3페이지)이라, 미리 N등분하면
-// 한 덩어리만 늦게 끝나 전체가 기다린다. 먼저 끝난 워커가 다음 걸 집게 한다.
+const skipped = REGIONS.length - todo.length
+
+console.log(`📦 대상 ${todo.length}개 / 전체 ${REGIONS.length} (건너뜀 ${skipped})`)
+console.log(`   동시 ${CONCURRENCY} · 예산 ${BUDGET_MINUTES}분\n`)
+
+let success = 0, fail = 0, unchanged = 0, done = 0
+const failed = []
+
+const t0 = Date.now()
+const deadline = t0 + BUDGET_MINUTES * 60_000
 let next = 0
+let ranOut = false
 
-async function worker(workerId) {
+// 공유 커서를 워커 CONCURRENCY 개가 나눠 집는다. 지역마다 소요가 제각각이라
+// 미리 N등분하면 한 덩어리만 늦게 끝나 전체가 기다린다.
+async function worker() {
   while (true) {
+    // 예산을 넘겼으면 새 지역을 집지 않는다. 이미 받는 중인 건 끝까지 마친다
+    // — 중간에 끊으면 그 지역에 쓴 시간이 통째로 버려진다.
+    if (Date.now() >= deadline) { ranOut = true; return }
+
     const i = next++
-    if (i >= REGIONS.length) return
+    if (i >= todo.length) return
 
-    const code = REGIONS[i]
+    const code = todo[i]
     const outPath = path.join(OUT_DIR, `${code}.json`)
-
-    // 충분히 최근이면 업스트림을 건드리지 않는다.
-    // 실패한 지역은 fetched 에 기록이 없으므로 다음 실행에 자동 재시도된다.
-    const last = fetched[code] ? Date.parse(fetched[code]) : 0
-    if (!FORCE_ALL && Date.now() - last < MAX_AGE_DAYS * 86400_000) {
-      skipped++
-      console.log(`[${++done}/${REGIONS.length}] ${code} ⏭  최근 수집됨`)
-      continue
-    }
 
     try {
       const items = await fetchRegion(code)
@@ -181,27 +199,26 @@ async function worker(workerId) {
 
       if (prev === json) {
         unchanged++
-        console.log(`[${++done}/${REGIONS.length}] ${code} = ${items.length}개 (변경없음)`)
+        console.log(`[${++done}/${todo.length}] ${code} = ${items.length}개 (변경없음)`)
       } else {
         await fs.writeFile(outPath, json)
         success++
-        console.log(`[${++done}/${REGIONS.length}] ${code} ✅ ${items.length}개`)
+        console.log(`[${++done}/${todo.length}] ${code} ✅ ${items.length}개`)
       }
     } catch (e) {
       fail++
       failed.push({ code, error: String(e.message ?? e) })
-      console.log(`[${++done}/${REGIONS.length}] ${code} ❌ ${e.message}`)
+      console.log(`[${++done}/${todo.length}] ${code} ❌ ${e.message}`)
     }
 
     await sleep(DELAY_MS)
   }
 }
 
-const t0 = Date.now()
-await Promise.all(
-  Array.from({ length: CONCURRENCY }, (_, k) => worker(k))
-)
+await Promise.all(Array.from({ length: CONCURRENCY }, () => worker()))
+
 const mins = ((Date.now() - t0) / 60000).toFixed(1)
+const remaining = Math.max(0, todo.length - done)
 
 await fs.writeFile(FETCHED_PATH, JSON.stringify(fetched, null, 0))
 
@@ -211,12 +228,16 @@ await fs.writeFile(
   JSON.stringify({
     updatedAt: new Date().toISOString(),
     total: REGIONS.length,
-    success, fail, unchanged, skipped,
+    success, fail, unchanged, skipped, remaining,
+    budgetExhausted: ranOut,
     failed,   // 실패 지역 목록 — 다음 실행에서 우선 재시도할 근거
   })
 )
 
 console.log(`\n완료(${mins}분): ✅ ${success} 갱신 / = ${unchanged} 동일 / ⏭ ${skipped} 건너뜀 / ❌ ${fail} 실패`)
+if (ranOut) {
+  console.log(`⏱  예산 ${BUDGET_MINUTES}분 소진 — ${remaining}개는 다음 실행으로 넘긴다`)
+}
 if (failed.length) {
   console.log('실패 지역:', failed.map(f => f.code).join(', '))
 }
