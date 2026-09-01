@@ -3,10 +3,18 @@
   "name": "한화에어로스페이스",
   "market": "KOSPI",
   "retainDays": 120,
-  "firstBasDt": "20260306",
-  "lastBasDt": "20260828",
+  "firstBasDt": "20260309",
+  "lastBasDt": "20260831",
   "count": 120,
   "days": [
+    {
+      "basDt": "20260831",
+      "close": 1102000,
+      "fltRt": -4.75,
+      "headline": "코스피보다 5.21%p 낮았어요.",
+      "newsCount": 8,
+      "dartCount": 2
+    },
     {
       "basDt": "20260828",
       "close": 1157000,
@@ -1075,16 +1083,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260306",
-      "close": 1481000,
-      "fltRt": 7.24,
-      "headline": "코스피보다 7.22%p 높았어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-08-31T11:28:09.969Z"
+  "updatedAt": "2026-09-01T01:49:19.316Z"
 }
