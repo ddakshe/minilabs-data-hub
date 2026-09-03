@@ -3,10 +3,18 @@
   "name": "한화",
   "market": "KOSPI",
   "retainDays": 120,
-  "firstBasDt": "20260310",
-  "lastBasDt": "20260901",
+  "firstBasDt": "20260311",
+  "lastBasDt": "20260902",
   "count": 120,
   "days": [
+    {
+      "basDt": "20260902",
+      "close": 126500,
+      "fltRt": -1.4,
+      "headline": "코스피보다 2.59%p 높았어요.",
+      "newsCount": 3,
+      "dartCount": 1
+    },
     {
       "basDt": "20260901",
       "close": 128300,
@@ -1072,16 +1080,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260310",
-      "close": 126000,
-      "fltRt": 2.02,
-      "headline": "시가 127,400원보다 1,400원 낮게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-09-02T06:38:41.668Z"
+  "updatedAt": "2026-09-03T06:41:39.513Z"
 }
