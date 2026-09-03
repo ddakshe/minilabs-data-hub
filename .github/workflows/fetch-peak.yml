@@ -2,6 +2,7 @@ name: Fetch Peak (고점·저점 + 지표 · 맥)
 
 # 국내 보통주 전종목 일봉 → 세 파일.
 #   peak/peak.json          stock-peak-mini  (계단: 고점·저점)
+#   peak/line.json          stock-peak-mini  (주봉 52개, 상세 시트의 1년 주가선)
 #   peak/indi.json          stock-chart-mini (지표: RSI·볼린저·MACD·이평)
 #   peak/series.json        stock-chart-mini (120일 종가, 상세 차트용)
 #
@@ -78,6 +79,7 @@ jobs:
       - name: Fetch peak data
         env:
           PEAK_OUT: ${{ github.workspace }}/peak/peak.json
+          LINE_OUT: ${{ github.workspace }}/peak/line.json
           INDI_OUT: ${{ github.workspace }}/peak/indi.json
           SERIES_OUT: ${{ github.workspace }}/peak/series.json
         run: |
@@ -128,7 +130,7 @@ jobs:
       - name: Purge jsDelivr cache
         if: steps.diff.outputs.changed == 'true'
         run: |
-          for f in peak indi series; do
+          for f in peak line indi series; do
             curl -s -o /dev/null "https://purge.jsdelivr.net/gh/ddakshe/minilabs-data-hub@main/peak/$f.json" || true
           done
 
