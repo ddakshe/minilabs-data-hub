@@ -1,0 +1,142 @@
+name: Fetch Peak (고점·저점 + 지표 · 맥)
+
+# 국내 보통주 전종목 일봉 → 세 파일.
+#   peak/peak.json          stock-peak-mini  (계단: 고점·저점)
+#   peak/indi.json          stock-chart-mini (지표: RSI·볼린저·MACD·이평)
+#   peak/series.json        stock-chart-mini (120일 종가, 상세 차트용)
+#
+# 배치 하나가 셋을 만든다. 일봉을 두 번 받지 않으므로 앱이 둘이어도 요청 수는 그대로다.
+
+on:
+  schedule:
+    # 평일 18:10 KST (= 09:10 UTC). 정규장 15:30 마감 + 일봉 확정 여유.
+    #
+    # 🚨 16:00 KST 이전에 돌면 배치가 오늘 봉을 **버린다**(candles_batch.py 의 CLOSED).
+    #    미완성 봉은 종가가 아니라 현재가이고 거래량은 반나절치인데 값이 멀쩡해 보여
+    #    에러로 드러나지 않는다. 그래서 시각을 당길 거면 그 가드부터 확인할 것.
+    #    18:59 에 당일 봉이 채워져 있음은 실측했다. 16:00~16:30 경계는 미측정이다.
+    - cron: '10 9 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: '실행 이유 (로그에만 기록, 선택)'
+        required: false
+        default: 'manual refresh'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-peak
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    # 🚨 토스증권 Open API 는 허용 IP 사전 등록이 필수다. 호스티드 러너는 아웃바운드 IP 가
+    #    유동이라 등록이 불가능하다 — 이 맥이 등록돼 있어 셀프호스티드로만 돈다.
+    runs-on: [self-hosted, macOS, ARM64]
+    timeout-minutes: 25
+    env:
+      # 배치는 stock-tools(비공개)에 있다. 작업 클론을 직접 읽지 않고 origin/master 스냅샷을
+      # git archive 로 꺼낸다 — 사람이 브랜치를 갈아타도 CI 결과가 흔들리지 않는다.
+      # (git clone 은 안 된다: 러너가 LaunchAgent 라 osxkeychain 에 닿지 못한다)
+      LOCAL_CLONE: /Users/kyungtaekim/ClaudeProjects/stock-tools
+      STOCK_TOOLS: ${{ github.workspace }}/.stock-tools
+      # 토스 자격증명은 ~/.config/stock-tools/toss.env (chmod 600, 저장소 밖).
+      # 러너가 같은 사용자로 돌아 그대로 읽힌다. 시크릿으로 올리지 않는다.
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Show trigger context
+        run: |
+          echo "Event  : ${{ github.event_name }}"
+          echo "Reason : ${{ github.event.inputs.reason || '(scheduled)' }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      - name: Export stock-tools (origin/master 스냅샷)
+        run: |
+          test -d "$LOCAL_CLONE/.git" || { echo "::error::stock-tools 클론이 없다: $LOCAL_CLONE"; exit 1; }
+          git -C "$LOCAL_CLONE" fetch --quiet origin master 2>/dev/null || \
+            echo "::notice::origin/master 를 새로 받지 못했다 — 이미 받아둔 것으로 진행한다"
+          # 배치 코드가 얼마나 묵었는지 남긴다. 조용히 옛 코드로 도는 것을 막는 유일한 장치다.
+          echo "stock-tools origin/master: $(git -C "$LOCAL_CLONE" log -1 --format='%h %ci %s' origin/master)"
+          rm -rf "$STOCK_TOOLS" && mkdir -p "$STOCK_TOOLS"
+          git -C "$LOCAL_CLONE" archive origin/master | tar -x -C "$STOCK_TOOLS"
+
+      - name: Preflight
+        run: |
+          test -r "$HOME/.config/stock-tools/toss.env" || { echo "::error::토스 자격증명을 읽을 수 없다"; exit 1; }
+          # 배치와 toss_client 는 표준 라이브러리만 쓴다. 러너는 launchd 기본 PATH 라
+          # anaconda·pyenv 가 없으므로 시스템 파이썬을 명시적으로 쓴다.
+          /usr/bin/python3 -V
+          /usr/bin/python3 "$STOCK_TOOLS/scripts/indicators.py"
+
+      - name: Fetch peak data
+        env:
+          PEAK_OUT: ${{ github.workspace }}/peak/peak.json
+          INDI_OUT: ${{ github.workspace }}/peak/indi.json
+          SERIES_OUT: ${{ github.workspace }}/peak/series.json
+        run: |
+          cd "$STOCK_TOOLS"
+          # 워커 4 = 실효 17 req/s. /candles 상한이 20 TPS 라 더 올릴 이유가 없다.
+          # 워커를 띄우기 전에 토큰을 확보한다(동시 발급은 429) — 배치가 알아서 한다.
+          /usr/bin/python3 scripts/candles_batch.py --workers 4
+
+      - name: Sanity check
+        run: |
+          /usr/bin/python3 - <<'PY'
+          import json, sys
+          d = json.load(open('peak/peak.json', encoding='utf-8'))
+          rows = d['rows']
+          # 종목 수가 갑자기 줄면 유니버스 조회나 레이트리밋이 깨진 것이다.
+          # 조용히 반쪽짜리를 커밋하는 것이 이 배치의 가장 큰 위험이라 여기서 막는다.
+          if len(rows) < 2000:
+              sys.exit(f'::error::종목이 {len(rows)}개뿐이다 (기대 2,500+) — 커밋하지 않는다')
+          # 계단 첫 칸은 현재가 이상이어야 한다(고가). 깨졌으면 계산이 틀린 것이다.
+          bad = [r['t'] for r in rows if r['H'][0][1] < r['c']][:5]
+          if bad:
+              sys.exit(f'::error::고가 계단이 현재가보다 낮다: {bad}')
+          print(f"{len(rows)}종목 · asOf {d['asOf']}")
+          PY
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git add peak/
+          if git diff --cached --quiet -- peak/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes — skipping commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --cached --stat peak/
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d %H:%M")
+          git commit -m "chore(peak): 고점·저점·지표 갱신 ($DATE_KST KST)"
+          # 다른 워크플로가 같은 시간대에 밀어넣을 수 있다. 한 번은 되받아 재시도한다.
+          git push || (git pull --rebase origin main && git push)
+
+      - name: Purge jsDelivr cache
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          for f in peak indi series; do
+            curl -s -o /dev/null "https://purge.jsdelivr.net/gh/ddakshe/minilabs-data-hub@main/peak/$f.json" || true
+          done
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Peak Fetch Summary"
+            echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
+            echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+          } >> "$GITHUB_STEP_SUMMARY"
