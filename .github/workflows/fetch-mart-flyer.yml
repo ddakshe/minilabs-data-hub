@@ -1,0 +1,110 @@
+name: Fetch Mart Flyer (마트 전단 · 맥)
+
+# mart-flyer-mini(이번주 전단) 앱이 쓰는 대형마트 8곳 주간 전단.
+#
+# 매일 도는 이유: 마트마다 전단 시작 요일이 다르다(이마트 목, 홈플러스 수, 하나로 목…).
+# 주 1회로 잡으면 어느 마트든 최대 6일 낡은 전단을 보여주게 된다.
+# diff 감지가 있어 실제 커밋은 전단이 바뀐 날에만 발생한다. 실행시간 1분 이내.
+
+on:
+  schedule:
+    - cron: '30 22 * * *'  # 매일 07:30 KST (fetch-rates 06:00 · fetch-recall 06:30 · subway-arcade 07:00 다음)
+  workflow_dispatch:
+    inputs:
+      only:
+        description: '특정 마트만 (예: emart,hanaro). 비우면 전체'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-mart-flyer
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    # 🚨 self-hosted 맥이어야 하는 이유가 둘이다.
+    #  1) **한국 IP** — 소스가 전부 국내 사이트다(my.homeplus.co.kr, nhhanaro.co.kr,
+    #     lottemartgo.com, ebook.megamart.com, eapp.emart.com). fetch-recall·
+    #     fetch-market-close 가 국내 사이트에서 해외 러너 연결 실패를 겪은 전례가 있다.
+    #  2) **macOS `sips`** — 하나로 전단 원본이 2.3MB 라 폭 1080 으로 줄여 재호스팅한다.
+    #     의존성 0으로 리사이즈하려고 OS 내장 도구를 쓴다. Linux 러너에는 없다.
+    runs-on: [self-hosted, macOS, ARM64]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Show trigger context
+        run: |
+          echo "Event : ${{ github.event_name }}"
+          echo "Only  : ${{ github.event.inputs.only || '(all)' }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      # 노브랜드만 Playwright 를 쓴다(JSON API 가 없어 DOM 에서 뽑는다).
+      # 나머지 7곳은 Node 내장 fetch 만 쓴다.
+      - name: Install deps
+        run: npm ci --no-audit --no-fund
+
+      - name: Fetch flyers
+        run: node scripts/fetch-mart-flyer.mjs ${{ github.event.inputs.only }}
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git add mart-flyer/
+          # updatedAt 은 매일 바뀐다. leaflets.json 의 그 줄만 달라졌으면 커밋하지 않는다 —
+          # 내용이 같은데 매일 커밋이 쌓이면 히스토리에서 진짜 전단 교체를 못 찾는다.
+          CHANGED=$(git diff --cached -- mart-flyer/leaflets.json \
+            | grep -E '^[+-]' | grep -vE '^[+-]{3}' | grep -vE '"updatedAt"|"week"|"period"' | wc -l | tr -d ' ')
+          IMGS=$(git diff --cached --name-only -- mart-flyer/img/ | wc -l | tr -d ' ')
+          if [ "$CHANGED" -eq 0 ] && [ "$IMGS" -eq 0 ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "전단 변화 없음 — 커밋 생략."
+            git restore --staged mart-flyer/ || true
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "leaflets.json 변경 $CHANGED 줄 / 이미지 $IMGS 개"
+            git --no-pager diff --cached --stat mart-flyer/
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
+          git commit -m "chore(mart-flyer): refresh ($DATE_KST)"
+          git push || (git pull --rebase origin main && git push)
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## 마트 전단 수집"
+            echo ""
+            echo "- Trigger: \`${{ github.event_name }}\`"
+            echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
+            echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+            if [ -f mart-flyer/leaflets.json ]; then
+              echo ""
+              node -e '
+                const d=require("./mart-flyer/leaflets.json");
+                const n=d.leaflets.length, p=d.leaflets.reduce((s,l)=>s+l.pages.length,0);
+                console.log(`| 마트 | 전단 | 장 |`);
+                console.log(`|---|---|---|`);
+                const by={};
+                for(const l of d.leaflets){ by[l.mart]??={n:0,p:0}; by[l.mart].n++; by[l.mart].p+=l.pages.length; }
+                for(const [k,v] of Object.entries(by)) console.log(`| ${k} | ${v.n} | ${v.p} |`);
+                console.log(`| **합계** | **${n}** | **${p}** |`);
+              '
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
