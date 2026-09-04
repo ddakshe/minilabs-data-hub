@@ -3,7 +3,16 @@
 //
 // 설계: fetch-chicken-events.mjs의 어댑터 레지스트리 패턴을 그대로 따른다.
 //   - 어댑터 있고 성공 → items에 차종별 혜택
-//   - 어댑터 실패/없음 → fallbacks에 링크전용 카드 (틀린 금액을 보여주는 것보다 낫다)
+//   - 어댑터 실패/없음 → 직전 데이터 유지, 그마저 없으면 fallbacks에 링크전용 카드
+//     (틀린 금액을 보여주느니 링크로 넘긴다)
+//
+// ⚠ **2단계 파이프라인의 1단계다.** 현대·제네시스·KGM은 JS 렌더링이라
+//   fetch-car-deals-pw.mjs(2단계)가 같은 파일에 병합한다. 여기서 그 브랜드를 버리면
+//   2단계 결과가 매달 증발한다 — 어댑터가 없어도 직전 데이터를 반드시 물려준다.
+//   (2026-08-28 사고: 현대 36건이 이 경로로 통째로 사라졌다)
+//
+// 성패 판정은 건수가 아니라 brands[id].updatedAt으로 한다. 실패 시 직전 데이터를 유지하므로
+// 건수는 0이 되지 않는다. 최종 판정은 scripts/validate-car-deals.mjs가 맡는다.
 //
 // 브랜드마다 혜택 합산 규칙이 다르다:
 //   - 기아: 기본/특별/기타가 실제로 중첩 적용 → 그냥 합산
@@ -331,24 +340,43 @@ async function main() {
     if (!prevItems.has(it.brand)) prevItems.set(it.brand, [])
     prevItems.get(it.brand).push(it)
   }
+  const prevBrands = existing.brands ?? {}
 
   const items = []
   const fallbacks = []
+  // 브랜드별 신선도. **건수로 성패를 판정하면 안 된다** — 실패하면 직전 데이터를 유지하므로
+  // 건수는 0이 되지 않는다. 볼 곳은 여기 updatedAt이다. (fetch-cpo-local.yml의 교훈)
+  const brands = {}
+
+  /** 이번 실행에서 못 얻은 브랜드: 직전 데이터를 그대로 물려주고 신선도만 옛 날짜로 남긴다. */
+  const retain = (id, why) => {
+    const prev = prevItems.get(id) ?? []
+    if (prev.length > 0) {
+      items.push(...prev)
+      // 브랜드별 기록이 없으면 updatedAt은 null로 둔다. 파일 전체의 updatedAt은 쓸 때마다
+      // 오늘로 갱신되므로 그걸 빌려오면 "모르는 것을 신선하다고 단정"하게 된다 — 이번 사고의 원인.
+      brands[id] = { updatedAt: prevBrands[id]?.updatedAt ?? null, items: prev.length }
+      console.warn(`⚠ ${id}: ${why} → 기존 ${prev.length}건 유지 (updatedAt ${brands[id].updatedAt})`)
+    } else {
+      fallbacks.push({ brand: id, titles: [] })
+      brands[id] = { updatedAt: null, items: 0 }
+      console.warn(`⚠ ${id}: ${why} → 링크전용 폴백`)
+    }
+  }
 
   for (const meta of BRANDS) {
     const run = !ONLY || ONLY.has(meta.id)
     const adapter = ADAPTERS[meta.id]
 
+    // 어댑터가 여기 없는 브랜드(현대·제네시스·KGM)는 fetch-car-deals-pw.mjs 담당이다.
+    // 이 단계에서 버리면 PW 단계의 결과가 매달 증발한다 — 반드시 물려준다.
     if (!adapter) {
-      fallbacks.push({ brand: meta.id, titles: [] })
-      console.log(`· ${meta.id}: 어댑터 없음 → 링크전용`)
+      retain(meta.id, 'cheerio 어댑터 없음(PW 단계 담당)')
       continue
     }
 
     if (!run) {
-      const prev = prevItems.get(meta.id) ?? []
-      items.push(...prev)
-      console.log(`· ${meta.id}: 이번 실행 대상 아님 → 기존 ${prev.length}건 유지`)
+      retain(meta.id, '이번 실행 대상 아님')
       continue
     }
 
@@ -356,18 +384,12 @@ async function main() {
       const got = await adapter()
       if (got.length === 0) throw new Error('0건 파싱됨')
       items.push(...got)
+      brands[meta.id] = { updatedAt: todayKST(), items: got.length }
       console.log(`✓ ${meta.id}: ${got.length}개 차종`)
     } catch (err) {
       // 파싱 실패 → 직전 데이터 유지, 없으면 링크전용 폴백.
-      // 틀린 금액을 보여주느니 링크로 넘긴다.
-      const prev = prevItems.get(meta.id) ?? []
-      if (prev.length > 0) {
-        items.push(...prev)
-        console.warn(`⚠ ${meta.id}: 파싱 실패(${err.message}) → 기존 ${prev.length}건 유지`)
-      } else {
-        fallbacks.push({ brand: meta.id, titles: [] })
-        console.warn(`⚠ ${meta.id}: 파싱 실패(${err.message}) → 링크전용 폴백`)
-      }
+      // 틀린 금액을 보여주느니 링크로 넘긴다. 신선도는 검증 단계가 잡아낸다.
+      retain(meta.id, `파싱 실패(${err.message})`)
     }
   }
 
@@ -375,6 +397,7 @@ async function main() {
   const out = {
     month: today.slice(0, 7),
     updatedAt: today,
+    brands,
     items,
     fallbacks,
   }

@@ -470,7 +470,14 @@ async function main() {
     .map((b) => ({ brand: b, titles: [] }))
 
   const today = todayKST()
-  const out = { month: today.slice(0, 7), updatedAt: today, items, fallbacks }
+
+  // 브랜드별 신선도. 1단계(cheerio)가 써둔 값을 이어받고, 이번에 실제로 긁은 브랜드만 덮는다.
+  // 실패한 브랜드는 옛 updatedAt이 그대로 남아 검증 단계에서 걸린다.
+  const brands = { ...(data.brands ?? {}) }
+  for (const [id, got] of collected) brands[id] = { updatedAt: today, items: got.length }
+  for (const f of fallbacks) brands[f.brand] = { updatedAt: null, items: 0 }
+
+  const out = { month: today.slice(0, 7), updatedAt: today, brands, items, fallbacks }
   await fs.writeFile(OUTPUT_PATH, JSON.stringify(out, null, 2) + '\n', 'utf8')
 
   console.log(

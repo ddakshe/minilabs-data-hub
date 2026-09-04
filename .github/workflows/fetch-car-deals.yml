@@ -1,5 +1,19 @@
 name: Fetch car deals
 
+# **2단계 파이프라인이다.** 둘 다 같은 car-deals/promotions.json 을 브랜드만 나눠 갱신한다.
+#   1단계 fetch-car-deals.mjs     — 기아·르노 (cheerio, 정적 HTML)
+#   2단계 fetch-car-deals-pw.mjs  — 현대·제네시스·KGM (Playwright, JS 렌더링)
+# 순서가 중요하다. 2단계가 1단계 결과를 읽어 병합하므로 반대로 돌리면 안 된다.
+#
+# ⚠ 2026-08-28 사고: 워크플로가 1단계만 돌렸고, 1단계는 어댑터 없는 브랜드를 그냥 버렸다.
+#   현대 36건·제네시스 1건·KGM 1건이 증발한 채 커밋됐고, month 필드가 멀쩡해서
+#   앱은 stale로도 error로도 안 걸리고 기아만 조용히 보여줬다. 9월까지 아무도 몰랐다.
+#   → 2단계를 워크플로에 넣고, 커밋 전 검증 게이트를 세웠다.
+#
+# self-hosted(맥)를 쓰는 이유: renault.co.kr 이 Actions 데이터센터 IP 에서 실패한다.
+#   실측 — 8/28·9/1 두 실행 모두 르노 어댑터가 죽어 8월 데이터를 물려받았고(endsAt 8-31),
+#   앱의 isLive() 필터가 그걸 전부 걸러 르노가 화면에서 사라졌다. 같은 코드가 이 맥에서는 3건을 문다.
+
 on:
   schedule:
     # 매월 1일 09:00 KST — 제조사가 이달의 구매 혜택을 월초에 공개한다.
@@ -7,9 +21,14 @@ on:
   workflow_dispatch:
     inputs:
       only:
-        description: '긁을 브랜드 콤마목록 (비우면 전체 어댑터). 예: kia,renault'
+        description: '긁을 브랜드 콤마목록 (비우면 전체). 예: kia,renault'
         required: false
         default: ''
+      allow_partial:
+        description: '일부 브랜드가 신선하지 않아도 커밋한다 (기본 false — 검증 실패 시 커밋 안 함)'
+        type: boolean
+        required: false
+        default: false
 
 permissions:
   contents: write
@@ -20,7 +39,9 @@ concurrency:
 
 jobs:
   fetch:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, macOS, ARM64]
+    timeout-minutes: 30
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -32,9 +53,11 @@ jobs:
         with:
           node-version: '20'
 
-      # cheerio만 필요 (Playwright 브라우저는 받지 않는다).
       - name: Install deps
         run: npm ci
+
+      - name: Install Playwright Chromium
+        run: npx playwright install chromium
 
       - name: Show trigger context
         run: |
@@ -42,10 +65,20 @@ jobs:
           echo "Only  : ${{ github.event.inputs.only || '(all adapters)' }}"
           TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
 
-      - name: Fetch car deals
+      # 1단계. 어댑터가 없거나 실패한 브랜드는 직전 데이터를 물려주기만 한다(버리지 않는다).
+      - name: 1단계 — 기아·르노 (cheerio)
+        run: node scripts/fetch-car-deals.mjs "${{ github.event.inputs.only }}"
+
+      # 2단계. 1단계 결과를 읽어 현대·제네시스·KGM만 교체 병합한다.
+      - name: 2단계 — 현대·제네시스·KGM (Playwright)
+        run: node scripts/fetch-car-deals-pw.mjs "${{ github.event.inputs.only }}"
+
+      # 커밋 전 게이트. 건수가 아니라 brands[id].updatedAt 으로 판정한다 —
+      # 스크래퍼는 실패 시 직전 데이터를 유지하므로 건수는 0이 되지 않는다.
+      - name: 검증 — 브랜드 커버리지·신선도·만료·스키마
         run: |
-          ONLY="${{ github.event.inputs.only }}"
-          node scripts/fetch-car-deals.mjs "$ONLY"
+          node scripts/validate-car-deals.mjs \
+            ${{ github.event.inputs.allow_partial == 'true' && '--allow-partial' || '' }}
 
       - name: Check for changes
         id: diff
@@ -78,4 +111,10 @@ jobs:
             echo "- Trigger: \`${{ github.event_name }}\`"
             echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
             echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+            echo ""
+            if [ -f car-deals/promotions.json ]; then
+              echo '```'
+              node scripts/validate-car-deals.mjs --allow-partial 2>&1 | head -5
+              echo '```'
+            fi
           } >> "$GITHUB_STEP_SUMMARY"
