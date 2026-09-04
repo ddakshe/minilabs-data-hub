@@ -1,0 +1,99 @@
+name: Fetch Community Flyer (제보 전단 · 맥)
+
+# 사용자가 구글폼으로 제보한 동네 마트 전단.
+#
+# 공식 8곳(fetch-mart-flyer.yml)과 워크플로를 나눈 이유:
+#  · 저쪽은 leaflets.json 을 통째로 다시 쓴다 — 한 잡에 합치면 제보가 지워질 자리가 생긴다.
+#  · 실패 원인이 완전히 다르다(저쪽=마트 사이트 개편, 여기=Drive 공유 설정).
+#    한 잡이면 어느 쪽이 깨졌는지 로그를 뒤져야 한다.
+#
+# 하루 두 번 도는 이유: 제보는 사람이 아무 때나 넣고, 승인도 아무 때나 누른다.
+# 아침에만 돌면 낮에 승인한 전단이 다음날에야 올라간다.
+
+on:
+  schedule:
+    - cron: '0 23 * * *'  # 08:00 KST (fetch-mart-flyer 07:30 다음 — 같은 러너를 안 겹치게)
+    - cron: '0 11 * * *'  # 20:00 KST
+  workflow_dispatch:      # 승인 직후 바로 반영하고 싶을 때
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-community-flyer
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    # 🚨 macOS `sips` 로 제보 사진을 폭 1080 으로 줄인다. 폰 카메라 원본은 3~5MB 라
+    #    그대로 커밋하면 저장소가 금방 부푼다. Linux 러너에는 sips 가 없다.
+    #    (Drive·구글시트는 해외에서도 붙으므로 한국 IP 는 여기선 이유가 아니다.)
+    runs-on: [self-hosted, macOS, ARM64]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Show trigger context
+        run: |
+          echo "Event : ${{ github.event_name }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      # 의존성 없음 — Node 내장 fetch + sips 만 쓴다.
+      - name: Fetch community flyers
+        run: node scripts/fetch-community-flyer.mjs
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git add mart-flyer/community.json mart-flyer/img/community || true
+          # updatedAt 은 매번 바뀐다. 그 줄만 달라졌으면 커밋하지 않는다 —
+          # 제보가 하나도 없는 날에도 커밋이 쌓이면 히스토리가 무의미해진다.
+          CHANGED=$(git diff --cached -- mart-flyer/community.json \
+            | grep -E '^[+-]' | grep -vE '^[+-]{3}' | grep -vE '"updatedAt"' | wc -l | tr -d ' ')
+          IMGS=$(git diff --cached --name-only -- mart-flyer/img/community | wc -l | tr -d ' ')
+          if [ "$CHANGED" -eq 0 ] && [ "$IMGS" -eq 0 ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "제보 변화 없음 — 커밋 생략."
+            git restore --staged mart-flyer/ || true
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "community.json 변경 $CHANGED 줄 / 이미지 $IMGS 개"
+            git --no-pager diff --cached --stat mart-flyer/
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
+          git commit -m "chore(mart-flyer): community flyers ($DATE_KST)"
+          git push || (git pull --rebase origin main && git push)
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## 제보 전단 수집"
+            echo ""
+            echo "- Trigger: \`${{ github.event_name }}\`"
+            echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
+            echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+            if [ -f mart-flyer/community.json ]; then
+              echo ""
+              node -e '
+                const d=require("./mart-flyer/community.json");
+                if(!d.leaflets.length){ console.log("_현재 게시 중인 제보 전단이 없습니다._"); process.exit(0); }
+                console.log("| 마트 | 지역 | 종료일 | 장 |");
+                console.log("|---|---|---|---|");
+                for(const l of d.leaflets) console.log(`| ${l.store} | ${l.region} | ${l.period.end} | ${l.pages.length} |`);
+              '
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
