@@ -12,7 +12,7 @@ on:
   schedule:
     # 평일 18:10 KST (= 09:10 UTC). 정규장 15:30 마감 + 일봉 확정 여유.
     #
-    # 🚨 16:00 KST 이전에 돌면 배치가 오늘 봉을 **버린다**(candles_batch.py 의 CLOSED).
+    # 🚨 16:00 KST 이전에 돌면 배치가 오늘 봉을 **버린다**(candle_cache.py 의 CLOSED).
     #    미완성 봉은 종가가 아니라 현재가이고 거래량은 반나절치인데 값이 멀쩡해 보여
     #    에러로 드러나지 않는다. 그래서 시각을 당길 거면 그 가드부터 확인할 것.
     #    18:59 에 당일 봉이 채워져 있음은 실측했다. 16:00~16:30 경계는 미측정이다.
@@ -74,9 +74,22 @@ jobs:
           # 배치와 toss_client 는 표준 라이브러리만 쓴다. 러너는 launchd 기본 PATH 라
           # anaconda·pyenv 가 없으므로 시스템 파이썬을 명시적으로 쓴다.
           /usr/bin/python3 -V
+          # 지표 자체 테스트. 정의가 깨진 채로 전 종목을 갈아엎지 않는다
           /usr/bin/python3 "$STOCK_TOOLS/scripts/indicators.py"
 
-      - name: Fetch peak data
+      # 1단계: 수집. 토스를 부르는 유일한 단계다.
+      # 캐시(~/.cache/stock-tools/candles)는 이 러너의 홈에 남아 실행 간에 이어진다.
+      # 캐시가 있으면 종목당 1요청(최근 10봉)이라 5,190 → 2,594 요청으로 준다.
+      # 겹치는 9봉을 캐시와 대조해 액면분할을 잡고, 걸린 종목만 전량 재수집한다.
+      - name: Collect candles (Toss)
+        run: |
+          cd "$STOCK_TOOLS"
+          # 워커 4 = 실효 17 req/s. /candles 상한이 20 TPS 라 더 올릴 이유가 없다.
+          /usr/bin/python3 scripts/candle_cache.py --workers 4
+
+      # 2단계: 가공. **토스를 부르지 않는다** — 캐시만 읽어 파생물을 만든다.
+      # 지표를 바꿔도 여기만 다시 돌리면 되고 재수집이 0 이다.
+      - name: Build derived JSON
         env:
           PEAK_OUT: ${{ github.workspace }}/peak/peak.json
           LINE_OUT: ${{ github.workspace }}/peak/line.json
@@ -84,9 +97,7 @@ jobs:
           SERIES_OUT: ${{ github.workspace }}/peak/series.json
         run: |
           cd "$STOCK_TOOLS"
-          # 워커 4 = 실효 17 req/s. /candles 상한이 20 TPS 라 더 올릴 이유가 없다.
-          # 워커를 띄우기 전에 토큰을 확보한다(동시 발급은 429) — 배치가 알아서 한다.
-          /usr/bin/python3 scripts/candles_batch.py --workers 4
+          /usr/bin/python3 scripts/candles_batch.py
 
       - name: Sanity check
         run: |
