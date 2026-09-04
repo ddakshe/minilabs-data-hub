@@ -2,13 +2,13 @@ name: Fetch convenience-store events
 
 on:
   schedule:
-    - cron: '0 0 * * 4'    # 매주 목요일 09:00 KST. CU·GS25만 담당.
-                           # (세븐 포함 3사 전부는 로컬 launchd가 매주 월요일 10:00에 처리 →
-                           #  Action을 목요일로 두어 CU·GS25를 주 2회(월·목)로 분산 갱신)
+    - cron: '0 0 * * 4'    # 매주 목요일 09:00 KST. CU·이마트24만 담당.
+                           # (세븐 포함 나머지는 로컬 launchd가 매주 월요일 10:00에 처리 →
+                           #  Action을 목요일로 두어 CU·이마트24를 주 2회(월·목)로 분산 갱신)
   workflow_dispatch:
     inputs:
       chain:
-        description: '긁을 체인 콤마목록 (비우면 cu,gs25,emart24 — 세븐은 해외 IP 차단이라 로컬에서만)'
+        description: '긁을 체인 콤마목록 (비우면 cu,emart24 — 세븐은 해외 IP 차단, gs25는 사이트 폐쇄로 제외)'
         required: false
         default: ''
 
@@ -47,9 +47,18 @@ jobs:
       - name: Fetch convenience-store data
         id: fetch
         run: |
-          # 기본은 cu,gs25,emart24 (세븐일레븐은 해외 IP 차단 → 로컬 launchd가 담당, 여기선 기존 데이터 유지)
+          # 기본은 cu,emart24. 목록에 없는 체인은 기존 데이터가 그대로 유지된다.
+          #  - 세븐일레븐: 해외 IP 차단 → 로컬 launchd가 담당
+          #  - GS25: 2026-09-03 사이트 폐쇄로 제외. gs25.gsretail.com 이 통째로
+          #    www.gsretail.com/brand/gs25(회사소개 SPA)로 리다이렉트되고 행사상품 페이지가
+          #    사라졌다. 한국 IP 에서도 같다 — 차단이 아니라 서비스 종료다.
+          #    상품은 '우리동네GS' 앱으로 옮겨갔고, 웹 API(c4a.woodongs.com/api/items)에는
+          #    컬렉션이 woodel_gs_pick 하나뿐이라 행사 유형(1+1·2+1)이 없다.
+          #    GS25 실패는 단순 실패라 직전 데이터를 유지한 채 실행은 계속된다(완결성 위반이
+          #    아니다). 다만 고쳐질 일이 없으므로 남겨두면 매 실행마다 실패 경고와 이슈 알림이
+          #    올라가고, failed_chains 가 늘 채워져 진짜 실패가 묻힌다. 그래서 뺀다.
           CHAIN="${{ github.event.inputs.chain }}"
-          node scripts/fetch-convenience-events.mjs "${CHAIN:-cu,gs25,emart24}"
+          node scripts/fetch-convenience-events.mjs "${CHAIN:-cu,emart24}"
 
       - name: Check for changes
         id: diff

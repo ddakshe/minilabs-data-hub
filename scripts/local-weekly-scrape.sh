@@ -1,7 +1,8 @@
 #!/bin/bash
 # 로컬(한국 IP) 주간 스크랩 — launchd에서 호출.
-# 3사 전부(CU·GS25·세븐일레븐) 긁어 convenience-events/products.json만 commit/push.
+# CU·이마트24·세븐일레븐을 긁어 convenience-events/products.json만 commit/push.
 # 세븐일레븐은 해외 IP 차단 때문에 GitHub Actions로는 못 긁으므로 이 로컬 잡이 담당한다.
+# GS25는 2026-09-03 사이트 폐쇄로 제외 — 목록에 없으면 직전 데이터가 그대로 유지된다.
 set -u
 
 REPO="/Users/kyungtaekim/ClaudeProjects/minilabs-data-hub"
@@ -16,8 +17,8 @@ echo "===== $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S KST') 로컬 주간 스크�
 # 최신 동기화 (WIP는 autostash로 보존, 충돌나면 중단)
 git pull --rebase --autostash origin main || { echo "pull 실패 — 중단"; exit 1; }
 
-# 3사 전부 스크랩
-node scripts/fetch-convenience-events.mjs || { echo "스크랩 실패 — 중단"; exit 1; }
+# 인자를 비우면 GS25까지 전체가 돈다. GS25는 사이트가 없어져 매번 실패하므로 명시해서 뺀다.
+node scripts/fetch-convenience-events.mjs cu,emart24,seven || { echo "스크랩 실패 — 중단"; exit 1; }
 
 # 변경 시에만 convenience-events/products.json만 커밋 (다른 WIP는 건드리지 않음)
 if git diff --quiet -- convenience-events/products.json; then

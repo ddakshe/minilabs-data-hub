@@ -444,6 +444,11 @@ function categorize(name) {
 
 const SOURCES = [
   ['cu', 'CU', scrapeCU],
+  // GS25: 2026-09-03 사이트 폐쇄. gs25.gsretail.com 이 www.gsretail.com/brand/gs25(회사소개
+  // SPA)로 통째 리다이렉트되고 행사상품 페이지·검색 엔드포인트가 사라졌다. 한국 IP 에서도
+  // 같으므로 차단이 아니라 서비스 종료다. 상품은 '우리동네GS' 앱으로 갔고, 웹 API
+  // (c4a.woodongs.com/api/items)는 컬렉션이 woodel_gs_pick 하나뿐이라 행사 유형이 없다.
+  // 파서는 남겨둔다 — 되살아나면 체인 목록에 다시 넣기만 하면 된다.
   ['gs25', 'GS25', scrapeGS25],
   ['emart24', 'EMART24', scrapeEmart24],
   // 세븐일레븐: 한국 IP(로컬)에선 정상, GitHub Actions 해외 IP에선 TCP 연결 차단(UND_ERR_CONNECT_TIMEOUT).
