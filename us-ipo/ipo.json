@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-03T00:00:00Z",
+  "generatedAt": "2026-09-04T00:00:00Z",
   "source": "SEC EDGAR",
   "sourceUrl": "https://www.sec.gov/edgar",
-  "usdKrw": 1362.56,
+  "usdKrw": 1357.29,
   "listed": [
     {
       "cik": "0002145659",
@@ -286,6 +286,49 @@
   ],
   "upcoming": [
     {
+      "cik": "0002133022",
+      "name": "Oura Inc.",
+      "ticker": null,
+      "filedAt": "2026-09-03",
+      "isSpac": false,
+      "sic": null,
+      "industry": "기타",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002133022&type=S-1"
+    },
+    {
+      "cik": "0001527352",
+      "name": "Nexalin Technology, Inc.",
+      "ticker": "NXL",
+      "filedAt": "2026-09-03",
+      "isSpac": false,
+      "sic": "3845",
+      "industry": "제조",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": 301647,
+        "netIncome": -8222181,
+        "assets": 4635319
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001527352&type=S-1"
+    },
+    {
+      "cik": "0001787518",
+      "name": "T3 Defense Inc.",
+      "ticker": "DFNS",
+      "filedAt": "2026-09-03",
+      "isSpac": false,
+      "sic": "8742",
+      "industry": "기타",
+      "financials": {
+        "fiscalEnd": "2024-09-30",
+        "revenue": 5913461,
+        "netIncome": -8518520,
+        "assets": 984999
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001787518&type=S-1"
+    },
+    {
       "cik": "0002111838",
       "name": "Haymaker Acquisition Corp V",
       "ticker": "HYAC",
@@ -317,6 +360,22 @@
       "industry": "소프트웨어·IT",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002055301&type=S-1"
+    },
+    {
+      "cik": "0001892704",
+      "name": "First Breach, Inc.",
+      "ticker": "FBDT",
+      "filedAt": "2026-09-02",
+      "isSpac": false,
+      "sic": "3480",
+      "industry": "제조",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": 384129,
+        "netIncome": -13822121,
+        "assets": 13020782
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001892704&type=S-1"
     },
     {
       "cik": "0002112634",
@@ -1354,17 +1413,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002108121&type=S-1"
     },
     {
-      "cik": "0001892704",
-      "name": "First Breach, Inc.",
-      "ticker": "FBDT",
-      "filedAt": "2026-08-07",
-      "isSpac": false,
-      "sic": "3480",
-      "industry": "제조",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001892704&type=S-1"
-    },
-    {
       "cik": "0002083125",
       "name": "PRESIDIO PRODUCTION Co",
       "ticker": "FTW",
@@ -1685,8 +1733,8 @@
       "ticker": null,
       "filedAt": "2026-07-29",
       "isSpac": false,
-      "sic": null,
-      "industry": "기타",
+      "sic": "6792",
+      "industry": "금융·부동산",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002142855&type=S-1"
     },
@@ -3240,83 +3288,6 @@
       "industry": "금융·부동산",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001925062&type=S-1"
-    },
-    {
-      "cik": "0002130386",
-      "name": "Yorkville International Capital Corp.",
-      "ticker": "YICC",
-      "filedAt": "2026-06-05",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002130386&type=S-1"
-    },
-    {
-      "cik": "0002104879",
-      "name": "RMG ML Sports Holdings",
-      "ticker": "SHOT",
-      "filedAt": "2026-06-05",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002104879&type=S-1"
-    },
-    {
-      "cik": "0002125551",
-      "name": "Alpex Acquisition Corp",
-      "ticker": "ALPX",
-      "filedAt": "2026-06-05",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002125551&type=S-1"
-    },
-    {
-      "cik": "0001921603",
-      "name": "WhiteHawk Income Corp",
-      "ticker": "WHK",
-      "filedAt": "2026-06-05",
-      "isSpac": false,
-      "sic": "1311",
-      "industry": "광업·자원",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001921603&type=S-1"
-    },
-    {
-      "cik": "0002110029",
-      "name": "ERock, Inc.",
-      "ticker": "EROC",
-      "filedAt": "2026-06-05",
-      "isSpac": false,
-      "sic": "3620",
-      "industry": "제조",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002110029&type=S-1"
-    },
-    {
-      "cik": "0002128739",
-      "name": "JAB Acquisition Corp I",
-      "ticker": "JAB",
-      "filedAt": "2026-06-05",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002128739&type=S-1"
-    },
-    {
-      "cik": "0002138284",
-      "name": "Grayscale Canton ETF",
-      "ticker": null,
-      "filedAt": "2026-06-05",
-      "isSpac": false,
-      "sic": null,
-      "industry": "기타",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002138284&type=S-1"
     }
   ]
 }
