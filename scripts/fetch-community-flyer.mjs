@@ -85,9 +85,28 @@ function driveFileId(url) {
   );
 }
 
-/** YYYY-MM-DD. 폼 날짜는 로케일에 따라 `2026. 9. 4` 로도 오므로 둘 다 받는다. */
+/**
+ * YYYY-MM-DD 로 정규화.
+ *
+ * 🚨 게시된 CSV 의 날짜는 **숫자로 온다**(예: `46275`). 구글 시트는 날짜를
+ *    1899-12-30 부터의 경과 일수로 저장하는데, QUERY() 결과 셀에는 표시 서식이
+ *    없어서 원시 값이 그대로 나간다. 시트에서 눈으로 보면 멀쩡한 날짜라
+ *    이걸 모르면 "승인했는데 아무 일도 안 일어난다"로만 보인다(2026-09-04 실제로 겪음).
+ *
+ * 문자열 형태(`2026-09-05`, `2026. 9. 5`)도 함께 받는다 — 시트 수식을 바꿔
+ * TEXT() 로 감싸는 날이 와도 깨지지 않게.
+ */
 function toIsoDate(s) {
-  const t = (s || "").trim();
+  const t = String(s ?? "").trim();
+  if (!t) return null;
+
+  // 시트 일련번호. 소수부(시각)는 버린다. 25569 = 1970-01-01 로 유닉스 epoch 로 옮긴다.
+  if (/^\d+(\.\d+)?$/.test(t)) {
+    const serial = Math.floor(Number(t));
+    if (serial < 20000 || serial > 80000) return null; // 1954~2119 밖이면 날짜가 아니다
+    return new Date((serial - 25569) * 86400000).toISOString().slice(0, 10);
+  }
+
   if (/^\d{4}-\d{2}-\d{2}$/.test(t)) return t;
   const m = t.match(/(\d{4})\D+(\d{1,2})\D+(\d{1,2})/);
   if (!m) return null;
@@ -126,12 +145,34 @@ async function download(fileId, dest) {
   return buf.length;
 }
 
-/** 폭 MAX_WIDTH 로 축소. 이미 작으면 sips 가 그대로 둔다. macOS 전용(self-hosted 맥). */
+/**
+ * 폭이 MAX_WIDTH 를 넘을 때만 줄인다. macOS 전용(self-hosted 맥).
+ *
+ * 🚨 `sips -Z` 는 폭이 아니라 **긴 변**을 맞춘다. 전단은 세로로 길어서
+ *    -Z 1080 을 주면 높이가 1080 이 되고 폭은 740 으로 깎인다 — 전단 글씨가 뭉개진다.
+ *    폭 기준으로 줄이려면 `--resampleWidth` 다.
+ *
+ * 🚨 **이미 작은 이미지는 건드리지 않는다.** 무조건 재인코딩하면 파일이 오히려 커진다
+ *    (2026-09-04 실측: 151KB → 316KB). 커지면 되돌린다.
+ */
 async function shrink(file) {
   try {
-    await run("sips", ["-Z", String(MAX_WIDTH), file], { timeout: 30000 });
+    const { stdout } = await run("sips", ["-g", "pixelWidth", file], { timeout: 15000 });
+    const width = Number(stdout.match(/pixelWidth:\s*(\d+)/)?.[1] || 0);
+    if (!width || width <= MAX_WIDTH) return; // 충분히 작다 — 그대로 두는 게 최선이다
+
+    const before = (await fs.stat(file)).size;
+    const backup = `${file}.orig`;
+    await fs.copyFile(file, backup);
+
+    await run("sips", ["--resampleWidth", String(MAX_WIDTH), file], { timeout: 30000 });
+
+    const after = (await fs.stat(file)).size;
+    if (after >= before) await fs.rename(backup, file); // 줄어들지 않았으면 원본이 낫다
+    else await fs.unlink(backup).catch(() => {});
   } catch {
     // 리사이즈 실패가 제보 전체를 막을 이유는 없다. 원본 크기로 남긴다.
+    await fs.unlink(`${file}.orig`).catch(() => {});
   }
 }
 
