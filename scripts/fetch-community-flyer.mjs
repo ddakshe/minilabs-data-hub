@@ -182,11 +182,15 @@ async function main() {
   if (!res.ok) throw new Error(`CSV HTTP ${res.status} — 게시가 풀렸는지 확인`);
   const rows = parseCsv(await res.text());
 
+  // 🔑 열 **이름**으로 찾는다. 폼에 질문을 추가하면 시트 열이 중간에 끼어들어
+  //    위치가 통째로 밀리는데, 위치로 읽으면 그 순간 조용히 엉뚱한 값을 집는다.
   const header = rows[0] || [];
   const idx = Object.fromEntries(header.map((h, i) => [h.trim(), i]));
   for (const need of ["timestamp", "mart", "region", "start_date", "end_date", "images"]) {
     if (idx[need] == null) throw new Error(`CSV 에 '${need}' 열이 없다 — publish 탭 수식 확인`);
   }
+  // address 는 나중에 추가된 항목이라 없을 수 있다(옛 응답엔 값도 비어 있다).
+  if (idx.address == null) console.warn("  ⚠ address 열이 없다 — 주소 없이 진행한다");
 
   await fs.mkdir(IMG_DIR, { recursive: true });
 
@@ -199,6 +203,7 @@ async function main() {
 
     const mart = (row[idx.mart] || "").trim();
     const regionName = (row[idx.region] || "").trim();
+    const address = idx.address != null ? (row[idx.address] || "").trim() : "";
     const region = REGION_ID[regionName];
     const start = toIsoDate(row[idx.start_date]);
     const end = toIsoDate(row[idx.end_date]);
@@ -246,6 +251,9 @@ async function main() {
       region,
       regionGrade: "exact", // 제보자가 그 점포를 직접 찍은 것이다
       community: true,
+      // 시도만으로는 동네 마트를 특정할 수 없다("경기 식자재마트"로는 어딘지 모른다).
+      // 필터 키가 아니라 **표시·지도 검색용**이다 — 자유 입력이라 필터로는 못 쓴다.
+      ...(address ? { address } : {}),
       period: { start: start || end, end },
       pages,
     });
