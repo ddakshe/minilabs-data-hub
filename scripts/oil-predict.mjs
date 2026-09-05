@@ -387,7 +387,15 @@ await writeFile(join(APP, 'score.json'), JSON.stringify({
   horizon: SH,
   byOrigin: { backtest: summarize(scoreRows.filter((r) => r.origin === 'backtest')),
               live: summarize(scoreRows.filter((r) => r.origin === 'live')) },
-  recent: scoreRows.slice(-12).reverse(),
+  /**
+   * 최근 채점된 예측. **30건**을 낸다 — 앱에서 "최근 N일" 창을 사용자가 고르는데
+   * 최대가 30이기 때문이다. 창별 집계를 서버에서 미리 계산하지 않는 이유는
+   * 사용자가 임의의 N을 고를 수 있어야 해서다.
+   *
+   * ⚠️ 창이 좁으면 표본이 몇 건뿐이라 적중률이 크게 튄다. 화면에서 **분모와
+   *    구성(모의/실제)** 을 반드시 함께 보여줘야 한다.
+   */
+  recent: scoreRows.slice(-30).reverse(),
   /**
    * 최악 손실. **그 시점의 최근 30건 적중률**을 함께 낸다 —
    * 실측해 보니 최악 2건에서 이미 47~50% 로 떨어져 있었다. 국면 경고가 켜졌을
