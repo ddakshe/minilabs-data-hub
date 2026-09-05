@@ -63,6 +63,11 @@ jobs:
           OPINET_API_KEY: ${{ secrets.OPINET_API_KEY }}
         run: node scripts/fetch-oil.mjs
 
+      # 오늘의 예측을 기록하고 지난 예측을 채점한다.
+      # predictions 는 append-only — 이미 있는 날짜는 값이 달라져도 덮지 않는다.
+      - name: Record prediction & score
+        run: node scripts/oil-predict.mjs
+
       # 🚨 diff 판정은 **prices.json 으로만** 한다.
       #    meta.json 에는 fetchedAt 이 있어 매 실행 반드시 바뀐다. 이걸 판정에 넣으면
       #    값이 그대로인 날에도 커밋이 나서 이력이 지저분해진다.
@@ -74,14 +79,28 @@ jobs:
       - name: Check for changes
         id: diff
         run: |
+          # 🚨 기록(predictions/actuals/scoreboard)은 **가격 변화와 무관하게 항상** 올린다.
+          #    "그날 예측을 발표했다"를 증명하는 게 git 커밋 타임스탬프다. 값이 안
+          #    변했다고 건너뛰면 기록에 구멍이 나고, 나중에 채우면 사후 조작과
+          #    구별되지 않는다. 셋 다 결정적이라 내용이 같으면 diff 도 안 생긴다.
+          git add oil/predictions oil/actuals oil/scoreboard.json
+
+          # 시세(prices/meta)만 diff 로 거른다. meta.json 의 fetchedAt 은 매 실행
+          # 바뀌므로 판정에 넣지 않는다.
           git add oil/prices.json
           if git diff --cached --quiet -- oil/prices.json; then
+            echo "No price change."
+            git restore --staged oil/prices.json
+            git checkout -- oil/prices.json oil/meta.json 2>/dev/null || true
+          else
+            git add oil/meta.json
+          fi
+
+          if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
-            echo "No price change — skipping commit."
-            git restore --worktree --staged oil/ 2>/dev/null || git checkout -- oil/
+            echo "Nothing to commit."
           else
             echo "changed=true" >> "$GITHUB_OUTPUT"
-            git add oil/meta.json
             git --no-pager diff --cached --stat oil/
           fi
 
