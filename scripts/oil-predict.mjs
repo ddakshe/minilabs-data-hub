@@ -244,18 +244,27 @@ function spreadPctAt(d) {
 
 /** 국제가 2주 변화율. 예측일 **전날까지**만 본다 — 미래를 훔치지 않는다. */
 const intlDates = Object.keys(intl.series).sort();
-function intlChgBefore(d) {
+/** 그 값이 **어느 날짜의 것인지** 함께 돌려준다. 날짜와 값이 갈리면 라벨이 거짓말한다. */
+function intlBefore(d) {
   for (let i = intlDates.length - 1; i >= 0; i--) {
-    if (intlDates[i] < d) return intl.series[intlDates[i]].chg2w ?? null;
+    if (intlDates[i] < d) return { date: intlDates[i], chg2w: intl.series[intlDates[i]].chg2w ?? null };
   }
-  return null;
+  return { date: null, chg2w: null };
 }
+const intlChgBefore = (d) => intlBefore(d).chg2w;
 
 /**
  * 국제가는 주 1회 갱신이라 국내 시세보다 며칠 묵을 수 있다.
  * **자체 기준일을 함께 낸다** — 화면에서 "오늘 기준"인 것처럼 보이면 안 된다.
+ *
+ * 🚨 `intlAsOf` 를 `intlDates.at(-1)`(가장 최근 국제가 날짜)로 두면 **라벨이 틀린다.**
+ *    실제로 내보내는 `intlChg2w` 는 미래를 훔치지 않으려고 **t−1** 값을 쓰는데,
+ *    기준일만 t 로 적히기 때문이다. 2026-09-05 에 t−1(9/4)의 +8.0% 를 내면서
+ *    화면에는 "(9/5 기준)" 이라고 찍혔다 — 9/5 의 실제 값은 +11.2% 였다.
+ *    **값을 고른 그 날짜를 그대로 적는다.**
  */
-const todayOut = { asOf: today, intlAsOf: intlDates.at(-1) ?? null, products: {} };
+const todayIntl = intlBefore(today);
+const todayOut = { asOf: today, intlAsOf: todayIntl.date, products: {} };
 for (const code of PRODUCTS) {
   const r = preds[`${today}_${code}`];
   if (!r) continue;
@@ -323,8 +332,62 @@ await writeFile(join(APP, 'today.json'), JSON.stringify(todayOut), 'utf-8');
     }
   }
 
+  /**
+   * 국제가 → 국내가 전달 빈도표. **화면 표시용이고 모델에 안 들어간다.**
+   * 재현·판정 근거: oil-tools/scripts/oil_passthrough.py · PROBE-RESULTS.md
+   *
+   * 🚨 이 표를 근거로 모델을 바꾸지 않는다. 서술 통계(walk-forward 아님)이고,
+   *    공정 비교(양쪽 7분위)에서 국내 관성이 75%p vs 79%p 로 여전히 앞선다.
+   *    앱의 7일 지평에서 국제가가 더 얹을 게 없다는 ablation 결론 그대로다.
+   */
+  const PT_BANDS = [[null, -10], [-10, -5], [-5, -2], [-2, 2], [2, 5], [5, 10], [10, null]];
+  const PT_H = 14, PT_L = 14;
+  const passthrough = (() => {
+    const all = Object.keys(dom).sort().filter((d) => intl.series[d]?.g != null);
+    const rows = [];
+    for (let i = PT_L; i < all.length - PT_H; i++) {
+      const g0 = intl.series[all[i - PT_L]].g, d0 = dom[all[i - PT_L]];
+      if (!g0 || !d0) continue;
+      rows.push([
+        ((intl.series[all[i]].g - g0) / g0) * 100,
+        ((dom[all[i + PT_H]] - dom[all[i]]) / dom[all[i]]) * 100,
+      ]);
+    }
+    const bands = [];
+    for (const [lo, hi] of PT_BANDS) {
+      const sel = rows.filter(([c]) => (lo === null || c >= lo) && (hi === null || c < hi));
+      if (sel.length < 30) continue;                       // 표본이 적으면 화면에 안 낸다
+      bands.push({
+        lo, hi, n: sel.length,
+        up: sel.filter(([, f]) => f > 0).length,
+        label: lo === null ? `${hi}% 미만` : hi === null ? `+${lo}% 이상`
+             : `${lo > 0 ? '+' : ''}${lo}~${hi > 0 ? '+' : ''}${hi}%`,
+      });
+    }
+    return { horizon: PT_H, lookback: PT_L, bands };
+  })();
+
+  /**
+   * 🚨 `today.json` 과 **같은 t−1 규칙**을 쓴다. 두 화면이 같은 날의 국제가를
+   *    다른 숫자로 보이면 안 된다(오늘의 판단 카드 +8.0% vs 근거 +11.2%).
+   */
+  const iLast = intlBefore(today).date;
+
   await writeFile(join(APP, 'detail.json'), JSON.stringify({
     asOf: dates.at(-1), product: '휘발유',
+    /**
+     * 국제가 기준일과 원/달러. 🚨 국제가는 **주 1회 수집**이라 국내보다 최대 6일
+     * 묵을 수 있다. 화면이 기준일을 반드시 함께 적어야 한다.
+     */
+    intl: iLast === null ? null : {
+      asOf: iLast,
+      krwPerL: +intl.series[iLast].g.toFixed(1),
+      usd: intl.series[iLast].usd ?? null,
+      chg2w: intl.series[iLast].chg2w ?? null,
+    },
+    passthrough,
+    /** 판단이 나온 규칙 그대로. 화면이 계산식을 적을 때 여기서 읽는다. */
+    rule: { lookback: MODEL.lookback, buckets: MODEL.buckets, fill: MODEL.fill, wait: MODEL.wait },
     dates,
     tracks: [
       { key: 'dom',    name: '국내 소매가',  unit: '원/L', color: 1,
