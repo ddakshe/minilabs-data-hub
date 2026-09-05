@@ -1,13 +1,13 @@
 /**
  * 국내 주유소 평균가 시계열 수집기 — 기름값 예측 미니앱이 쓴다.
  *
- * 출력: oil/prices.json · oil/meta.json
+ * 출력: oil/prices.json · oil/meta.json · oil/regions.json
  *
  * 실행: OPINET_API_KEY=... node scripts/fetch-oil.mjs
  *       키가 없으면 ~/.config/stock-tools/opinet.env 를 읽는다 (러너 파일 방식).
  *
  * 설계 결정:
- *  - **호출은 하루 2건이다.** 오피넷 일반 API 한도가 2026-09-01 부터 1,500 → 300 으로
+ *  - **호출은 하루 6건이다** (시세 2 + 시도별 4유종). 오피넷 일반 API 한도가 2026-09-01 부터 1,500 → 300 으로
  *    내려갔다. 런타임(앱)에서 부르는 설계였다면 그날로 죽었을 것이다. 이 허브의
  *    배치 → 정적 JSON 원칙이 그대로 방어막이 됐다. **앱에서 직접 부르지 말 것.**
  *
@@ -101,6 +101,31 @@ function upsert(series, prodcd, date, price) {
   return before === n ? 0 : 1;
 }
 
+/**
+ * 시도별 평균가. 지역 격차가 **72원**(대구 1,832 vs 서울 1,905)으로 이 앱의 시간축
+ * 이득(7일 +12원)보다 6배 크다 — 감출 이유가 없다.
+ *
+ * 🚨 웹 폼(dopOsPdrgAreaView.do)으로 과거 시계열을 받으려 했으나 파라미터를 맞춰도
+ *    799바이트 빈 응답이 온다. **추측을 늘리지 말고 공식 API 로 매일 쌓는다.**
+ *    과거는 없이 시작하지만 하루씩 붙으면 된다. (prices.json 과 같은 방식)
+ *
+ * 🚨 응답에 **'전국' 행이 섞여 있고 그 DIFF 가 가격값 그대로**다(+1859.37).
+ *    거르지 않으면 지역 목록에 전국이 끼고 전일대비가 터무니없이 찍힌다.
+ */
+async function sido(key, prodcd) {
+  const url = `${BASE}/avgSidoPrice.do?code=${encodeURIComponent(key)}&out=json&prodcd=${prodcd}`;
+  const res = await fetch(url, { headers: { 'User-Agent': 'minilabs-data-hub' } });
+  if (!res.ok) throw new Error(`avgSidoPrice(${prodcd}) → HTTP ${res.status}`);
+  const rows = JSON.parse(await res.text())?.RESULT?.OIL ?? [];
+  const out = {};
+  for (const r of rows) {
+    if (r.SIDONM === '전국') continue;          // ← 위 주석 참고
+    const v = Number(r.PRICE);
+    if (Number.isFinite(v) && v > 0) out[r.SIDONM] = +v.toFixed(2);
+  }
+  return out;
+}
+
 async function main() {
   const key = await apiKey();
   const series = await loadSeries();
@@ -161,6 +186,27 @@ async function main() {
     }),
     'utf-8',
   );
+
+  // ── ③ 시도별 평균가 — 유종별로 1콜씩, 날짜별로 누적한다 ──
+  const REG = join(OUT_DIR, 'regions.json');
+  const regions = await (async () => {
+    try { return JSON.parse(await readFile(REG, 'utf-8')); }
+    catch { return { products: PRODUCTS, series: {} }; }
+  })();
+  for (const code of ['B027', 'B034', 'D047', 'C004']) {
+    await sleep(400);
+    const byS = await sido(key, code);
+    if (Object.keys(byS).length) {
+      ((regions.series[code] ??= {}))[todayDate] = byS;
+    }
+  }
+  for (const code of Object.keys(regions.series)) {
+    regions.series[code] = Object.fromEntries(
+      Object.entries(regions.series[code]).sort(([a], [b]) => a.localeCompare(b)),
+    );
+  }
+  regions.products = PRODUCTS;
+  await writeFile(REG, JSON.stringify(regions), 'utf-8');
 
   const kb = ((await readFile(PRICES, 'utf-8')).length / 1024).toFixed(1);
   console.log(`oil/prices.json — 휘발유 ${out.series.B027 ? Object.keys(out.series.B027).length : 0}일치, ${kb}KB, 변경 ${changed}건`);

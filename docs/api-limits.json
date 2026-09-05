@@ -109,8 +109,8 @@
       "warn": "2026-09-01 부터 1,500 → 300 으로 **하향**됐다. 앱 런타임 호출 금지 — 사용자 100명이 하루 3번 열면 그날로 소진이다. 무료 한도를 5분의 1로 조인 전례가 있으니 받은 과거 데이터는 저장소에 영구 누적한다. 과거 소급은 API가 아니라 웹 폼(scripts/fetch-oil-history.mjs)으로 받으므로 이 한도를 쓰지 않는다.",
       "budget": {
         "fetch-oil.yml": {
-          "callsPerRun": 2,
-          "note": "avgRecentPrice(최근 7일) 1 + avgAllPrice(오늘 잠정) 1. 매일 07:40 KST"
+          "callsPerRun": 6,
+          "note": "avgRecentPrice 1 + avgAllPrice 1 + avgSidoPrice 4유종. 매일 07:40 KST"
         }
       }
     }

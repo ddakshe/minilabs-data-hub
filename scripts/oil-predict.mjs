@@ -304,6 +304,40 @@ for (const code of PRODUCTS) {
 }
 await writeFile(join(APP, 'today.json'), JSON.stringify(todayOut), 'utf-8');
 
+// ── 지역별 (시도) ────────────────────────────────────────────────────
+// 지역 격차가 72~164원으로 시간축 이득(7일 +12원)보다 크다. 감출 이유가 없다.
+// 시계열은 오늘부터 쌓인다 — 웹 폼으로 과거를 못 받아 공식 API 로 누적한다.
+{
+  const reg = await readJson(join(DIR, 'regions.json'), { products: {}, series: {} });
+  const out = { asOf: null, fuels: {} };
+  for (const [code, byDate] of Object.entries(reg.series)) {
+    const days = Object.keys(byDate).sort();
+    const last = days.at(-1);
+    if (!last) continue;
+    out.asOf = out.asOf && out.asOf > last ? out.asOf : last;
+    const cur = byDate[last];
+    const prev = days.length > 1 ? byDate[days.at(-2)] : null;
+    const vals = Object.values(cur);
+    const avg = vals.reduce((a, b) => a + b, 0) / vals.length;
+    const table = Object.entries(cur)
+      .map(([name, price]) => ({
+        name, price,
+        vs: +(price - avg).toFixed(2),
+        // 전일대비는 이틀치가 쌓인 뒤부터 낸다. 없으면 화면에서 감춘다.
+        diff: prev && prev[name] !== undefined ? +(price - prev[name]).toFixed(2) : null,
+      }))
+      .sort((a, b) => a.price - b.price);
+    out.fuels[code] = {
+      name: reg.products[code] ?? code,
+      avg: +avg.toFixed(2),
+      spread: +(table.at(-1).price - table[0].price).toFixed(2),
+      days: days.length,
+      table,
+    };
+  }
+  await writeFile(join(APP, 'regions.json'), JSON.stringify(out), 'utf-8');
+}
+
 // 성적표 — 대표 유종(휘발유) 7일 지평
 const SC = 'B027', SH = 7;
 const scoreRows = [];
