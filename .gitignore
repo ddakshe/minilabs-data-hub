@@ -16,3 +16,7 @@ local-jobs-status.json
 
 # 서브에이전트 실행 스크래치 (커밋하지 않는다)
 .superpowers/
+
+# 튜닝 구간 backtest — 파라미터 적합에만 쓰고 화면에 안 나간다.
+# walk-forward 로 언제든 재생성된다: node scripts/oil-backfill.mjs --tune
+oil/tune/

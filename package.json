@@ -12,7 +12,8 @@
     "fetch:cpo-pw": "node scripts/fetch-cpo-pw.mjs",
     "fetch:benefit-gauge": "node scripts/fetch-benefit-gauge.mjs",
     "fetch:nps": "node scripts/fetch-nps.mjs",
-    "fetch:grocery-deals": "node scripts/fetch-grocery-deals.mjs"
+    "fetch:grocery-deals": "node scripts/fetch-grocery-deals.mjs",
+    "fetch:pokemon": "node scripts/fetch-pokemon.mjs"
   },
   "dependencies": {
     "cheerio": "^1.2.0",

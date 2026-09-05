@@ -21,7 +21,11 @@ import { dirname, join } from 'node:path';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const DIR = join(ROOT, 'oil');
-const P_DIR = join(DIR, 'predictions');
+/**
+ * tune 구간은 **predictions/ 에 넣지 않는다.** git 에 올리지 않는 별도 폴더로 뺀다 —
+ * 화면에 안 나가고 언제든 재생성되는데 3.5MB 를 차지했다.
+ */
+const P_DIR = join(DIR, process.argv.includes('--tune') ? 'tune' : 'predictions');
 
 const MODEL = { v: 'baseline-1', lookback: { 1: 14, 3: 14, 7: 10 }, fill: 0.60, wait: 0.25, buckets: 10 };
 const PRODUCTS = ['B027', 'D047'];
