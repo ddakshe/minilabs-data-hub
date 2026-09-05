@@ -11,7 +11,7 @@
  * 🚨 파싱 함정 둘.
  *   1. 응답의 HTML 표는 **비어 있다.** 데이터는 <script> 안 `chartData` 배열에 있다.
  *   2. 값 키가 **선택한 유종이 아니라 고정 순서**로 붙는다 —
- *      A1 고급휘발유 · A2 보통휘발유 · A3 자동차용경유 · A4 실내등유.
+ *      A1 고급휘발유 · A2 보통휘발유 · A3 자동차용경유 · A4 실내등유 · A5 보일러등유.
  *      B034 만 골라도 A1 이고 B027 만 골라도 A2 다. A2 로 하드코딩하면
  *      고급휘발유에서 조용히 죽는다.
  */
@@ -28,7 +28,7 @@ const URL_ = 'https://www.opinet.co.kr/user/dopostrm/dopOsTrmView.do';
  * 여기 선언 순서는 앱 탭 순서가 되므로 보통휘발유를 먼저 둔다
  * (오늘의 판단 탭과 순서를 맞춘다).
  */
-const FUEL = { B027: 'A2', B034: 'A1' };
+const FUEL = { B027: 'A2', B034: 'A1', D047: 'A3', C004: 'A4' };
 /** 차트에 그릴 5종. 나머지는 표에만 — 계열 색을 9개로 늘리지 않는다. */
 const CHART = ['SK에너지', 'GS칼텍스', 'HD현대오일뱅크', 'S-OIL', '알뜰주유소(전체)'];
 const BRANDS = ['SKE', 'GSC', 'HDO', 'SOL', 'RTO', 'RTE', 'RTX', 'NHO', 'ETC'];
@@ -39,7 +39,7 @@ const body = new URLSearchParams([
   ['END_Y', String(new Date().getFullYear())],
   ['END_M', String(new Date().getMonth() + 1).padStart(2, '0')],
   ['END_D', String(new Date().getDate()).padStart(2, '0')],
-  ['OIL_CD_B034', 'Y'], ['OIL_CD_B027', 'Y'],
+  ['OIL_CD_B034', 'Y'], ['OIL_CD_B027', 'Y'], ['OIL_CD_D047', 'Y'], ['OIL_CD_C004', 'Y'],
   ['INIF_FLAG', 'N'], ['equal', 'Y'],
   ...BRANDS.map((b) => [`POLL_DIV_CD_${b}`, 'Y']),
 ]);

@@ -81,6 +81,8 @@ function verdictOf(week) {
 
 // ── 1) 오늘의 예측 ────────────────────────────────────────────────────
 const prices = JSON.parse(await readFile(join(DIR, 'prices.json'), 'utf-8'));
+/** 국제가는 **모델 입력이 아니라 설명·경보용**이다 (PROBE-RESULTS.md ablation 판정). */
+const intl = await readJson(join(DIR, 'intl.json'), { series: {} });
 const today = Object.keys(prices.series.B027).sort().at(-1);
 
 await mkdir(P_DIR, { recursive: true });
@@ -207,6 +209,24 @@ function runAvgOf(y) {
   return +(runs.reduce((s, v) => s + v, 0) / runs.length).toFixed(1);
 }
 
+/**
+ * 최근 30일 적중률. **급락하면 "지금은 이 모델이 안 통하는 국면"이라는 신호**다.
+ * 예측 불가능한 것을 예측하는 대신, 예측이 안 되는 시기를 감지한다.
+ * 60% 를 경고선으로 잡았다 — 과거 분포의 10~15퍼센타일이고(중앙값 83%),
+ * 전체 시점의 11% 에서만 뜬다. 더 높이면 늘 켜져 있어 무의미해진다.
+ */
+const REGIME_WARN = 0.60;
+const REGIME_WIN = 30;
+
+/** 국제가 2주 변화율. 예측일 **전날까지**만 본다 — 미래를 훔치지 않는다. */
+const intlDates = Object.keys(intl.series).sort();
+function intlChgBefore(d) {
+  for (let i = intlDates.length - 1; i >= 0; i--) {
+    if (intlDates[i] < d) return intl.series[intlDates[i]].chg2w ?? null;
+  }
+  return null;
+}
+
 const todayOut = { asOf: today, products: {} };
 for (const code of PRODUCTS) {
   const r = preds[`${today}_${code}`];
@@ -219,7 +239,39 @@ for (const code of PRODUCTS) {
     horizons: r.horizons, runDays: r.runDays, runUp: r.runUp,
     verdict: r.verdict,
     runAvg: runAvgOf(ds.map((d) => m[d])),
+    /**
+     * 국내 판정과 국제가 방향이 **어긋나는가.** 크게 틀린 날의 절반이 여기 걸린다
+     * (기다리라고 했는데 국제가는 오르는 중이던 2026-03-22~26).
+     * 다만 나머지 절반(국내가 오버슈팅 후 되돌림)은 이걸로 못 잡는다 —
+     * 경고이지 방어막이 아니다.
+     */
+    intlChg2w: intlChgBefore(today),
     spark: ds.slice(-60).map((d) => +m[d].toFixed(2)),
+  };
+}
+// 최근 30건(대표 유종·침묵 제외)의 적중률
+{
+  const done = [];
+  for (const f of (await readdir(P_DIR)).filter((x) => x.endsWith('.json')).sort()) {
+    const rows = await readJson(join(P_DIR, f), {});
+    const acts = await readJson(join(A_DIR, f), {});
+    for (const [key, r] of Object.entries(rows)) {
+      if (r.product !== 'B027' || r.verdict === 'neutral') continue;
+      const a = acts[`${key}_h7`];
+      if (!a) continue;
+      const g = r.verdict === 'fill' ? a.delta : -a.delta;
+      done.push({ date: r.date, hit: g > 0 });
+    }
+  }
+  done.sort((a, b) => a.date.localeCompare(b.date));
+  const win = done.slice(-REGIME_WIN);
+  const hit = win.length ? win.filter((x) => x.hit).length / win.length : null;
+  todayOut.regime = {
+    window: REGIME_WIN, n: win.length,
+    hit: hit === null ? null : +hit.toFixed(3),
+    warn: hit !== null && win.length >= REGIME_WIN && hit < REGIME_WARN,
+    threshold: REGIME_WARN,
+    asOf: win.at(-1)?.date ?? null,
   };
 }
 await writeFile(join(APP, 'today.json'), JSON.stringify(todayOut), 'utf-8');
@@ -237,7 +289,10 @@ for (const f of (await readdir(P_DIR)).filter((x) => x.endsWith('.json'))) {
     const gain = r.verdict === 'fill' ? a.delta : -a.delta;
     const p7 = r.horizons.find((x) => x.h === SH);
     scoreRows.push({ date: r.date, origin: r.origin, verdict: r.verdict, price: r.price,
-                     gain: +gain.toFixed(2), hit: gain > 0, p: p7.p, n: p7.n });
+                     gain: +gain.toFixed(2), hit: gain > 0, p: p7.p, n: p7.n,
+                     // 말한 방향의 확신도. 크게 틀린 날일수록 이 값이 높았다(94~95%).
+                     conf: +(r.verdict === 'fill' ? p7.p : 1 - p7.p).toFixed(3),
+                     intlChg2w: intlChgBefore(r.date) });
   }
 }
 scoreRows.sort((a, b) => a.date.localeCompare(b.date));
