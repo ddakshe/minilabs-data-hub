@@ -1,15 +1,15 @@
 {
-  "updatedAt": "2026-09-04",
+  "updatedAt": "2026-09-05",
   "mall": "kurly",
   "counts": {
-    "total": 525,
+    "total": 518,
     "bySlot": {
-      "soup": 210,
+      "soup": 208,
       "main": 80,
-      "banchan": 67,
-      "kimchi": 100,
-      "tofu": 55,
-      "snack": 13
+      "banchan": 53,
+      "kimchi": 104,
+      "tofu": 58,
+      "snack": 15
     }
   },
   "items": [
@@ -34,6 +34,16 @@
       "slot": "soup"
     },
     {
+      "id": 1001742683,
+      "name": "[경자국밥] 인기 국밥 3종",
+      "price": 7900,
+      "orig": 10000,
+      "rate": 21,
+      "img": "https://product-image.kurly.com/product/image/c5c29711-6b56-401d-8e47-bafeffa606d9.jpg",
+      "url": "https://www.kurly.com/goods/1001742683",
+      "slot": "soup"
+    },
+    {
       "id": 5082996,
       "name": "[집국백서:가마솥 수제국] 사골우거지국",
       "price": 6320,
@@ -51,6 +61,16 @@
       "rate": 20,
       "img": "https://product-image.kurly.com/product/image/68d842fc-9feb-4bb8-a1fd-baa0d244dc21.jpg",
       "url": "https://www.kurly.com/goods/1000232001",
+      "slot": "soup"
+    },
+    {
+      "id": 1000968897,
+      "name": "[오발탄] 얼큰 양해장국",
+      "price": 8090,
+      "orig": 8990,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/fb2ee66e-06a5-4459-941f-e8d8edc0acfe.jpg",
+      "url": "https://www.kurly.com/goods/1000968897",
       "slot": "soup"
     },
     {
@@ -74,6 +94,16 @@
       "slot": "soup"
     },
     {
+      "id": 1000963745,
+      "name": "[골라담기] 마마리 인기 국물요리 7종",
+      "price": 4160,
+      "orig": 5200,
+      "rate": 20,
+      "img": "https://product-image.kurly.com/product/image/7e068dc2-cea8-4307-9604-fdf622e636ad.jpg",
+      "url": "https://www.kurly.com/goods/1000963745",
+      "slot": "soup"
+    },
+    {
       "id": 1000231999,
       "name": "[마마리] 소고기 무국",
       "price": 4960,
@@ -94,16 +124,6 @@
       "slot": "soup"
     },
     {
-      "id": 1000968897,
-      "name": "[오발탄] 얼큰 양해장국",
-      "price": 8090,
-      "orig": 8990,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/fb2ee66e-06a5-4459-941f-e8d8edc0acfe.jpg",
-      "url": "https://www.kurly.com/goods/1000968897",
-      "slot": "soup"
-    },
-    {
       "id": 1001232527,
       "name": "[마마리] 전복미역국",
       "price": 6560,
@@ -111,26 +131,6 @@
       "rate": 20,
       "img": "https://product-image.kurly.com/product/image/4f3a3430-cef3-4872-9fd5-f7a3c553435a.jpg",
       "url": "https://www.kurly.com/goods/1001232527",
-      "slot": "soup"
-    },
-    {
-      "id": 1001449828,
-      "name": "[호밍스 초간편 국물요리] 국물요리 11종",
-      "price": 3780,
-      "orig": 4200,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/ca106509-f7e9-4a59-a32f-8e0eb24ca3ee.jpg",
-      "url": "https://www.kurly.com/goods/1001449828",
-      "slot": "soup"
-    },
-    {
-      "id": 1000130632,
-      "name": "[신의주 찹쌀순대] 얼큰 순대국",
-      "price": 6310,
-      "orig": 7700,
-      "rate": 18,
-      "img": "https://product-image.kurly.com/product/image/1ffa0569-c167-407f-8d08-75341bd13805.jpg",
-      "url": "https://www.kurly.com/goods/1000130632",
       "slot": "soup"
     },
     {
@@ -144,13 +144,23 @@
       "slot": "soup"
     },
     {
-      "id": 1001742683,
-      "name": "[경자국밥] 인기 국밥 3종",
-      "price": 7900,
-      "orig": 10000,
-      "rate": 21,
-      "img": "https://product-image.kurly.com/product/image/c5c29711-6b56-401d-8e47-bafeffa606d9.jpg",
-      "url": "https://www.kurly.com/goods/1001742683",
+      "id": 1000130632,
+      "name": "[신의주 찹쌀순대] 얼큰 순대국",
+      "price": 6310,
+      "orig": 7700,
+      "rate": 18,
+      "img": "https://product-image.kurly.com/product/image/1ffa0569-c167-407f-8d08-75341bd13805.jpg",
+      "url": "https://www.kurly.com/goods/1000130632",
+      "slot": "soup"
+    },
+    {
+      "id": 1001449828,
+      "name": "[호밍스 초간편 국물요리] 국물요리 11종",
+      "price": 3780,
+      "orig": 4200,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/ca106509-f7e9-4a59-a32f-8e0eb24ca3ee.jpg",
+      "url": "https://www.kurly.com/goods/1001449828",
       "slot": "soup"
     },
     {
@@ -164,6 +174,16 @@
       "slot": "soup"
     },
     {
+      "id": 5030966,
+      "name": "[올쿡] 시금치된장국",
+      "price": 6650,
+      "orig": 7000,
+      "rate": 5,
+      "img": "https://img-cf.kurly.com/shop/data/goods/1542250286729l0.jpg",
+      "url": "https://www.kurly.com/goods/5030966",
+      "slot": "soup"
+    },
+    {
       "id": 1001623566,
       "name": "[경자국밥] 살고기국밥",
       "price": 8900,
@@ -171,16 +191,6 @@
       "rate": 19,
       "img": "https://product-image.kurly.com/product/image/cbdf6806-41ad-4774-8ba7-1de2fc009721.jpg",
       "url": "https://www.kurly.com/goods/1001623566",
-      "slot": "soup"
-    },
-    {
-      "id": 5082998,
-      "name": "[집국백서:가마솥 수제국] 소고기무국",
-      "price": 6320,
-      "orig": 6800,
-      "rate": 7,
-      "img": "https://img-cf.kurly.com/shop/data/goods/163038703914l0.jpg",
-      "url": "https://www.kurly.com/goods/5082998",
       "slot": "soup"
     },
     {
@@ -194,36 +204,6 @@
       "slot": "soup"
     },
     {
-      "id": 1001254782,
-      "name": "[청담미역] 소갈비 미역국",
-      "price": 7220,
-      "orig": 8720,
-      "rate": 17,
-      "img": "https://product-image.kurly.com/product/image/c2797513-d9b9-4ab6-b810-96c11b508db6.jpg",
-      "url": "https://www.kurly.com/goods/1001254782",
-      "slot": "soup"
-    },
-    {
-      "id": 5049686,
-      "name": "[미자언니네] 백암 순대국 (2인분)",
-      "price": 8820,
-      "orig": 9800,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/bf323f22-87bb-42a9-ab1f-995ff19216d1.jpeg",
-      "url": "https://www.kurly.com/goods/5049686",
-      "slot": "soup"
-    },
-    {
-      "id": 5030966,
-      "name": "[올쿡] 시금치된장국",
-      "price": 6650,
-      "orig": 7000,
-      "rate": 5,
-      "img": "https://img-cf.kurly.com/shop/data/goods/1542250286729l0.jpg",
-      "url": "https://www.kurly.com/goods/5030966",
-      "slot": "soup"
-    },
-    {
       "id": 5056783,
       "name": "[강창구찹쌀진순대] 찹쌀 진순대국",
       "price": 7040,
@@ -231,6 +211,16 @@
       "rate": 20,
       "img": "https://img-cf.kurly.com/shop/data/goods/1637922127131l0.jpg?v=0531",
       "url": "https://www.kurly.com/goods/5056783",
+      "slot": "soup"
+    },
+    {
+      "id": 5082998,
+      "name": "[집국백서:가마솥 수제국] 소고기무국",
+      "price": 6320,
+      "orig": 6800,
+      "rate": 7,
+      "img": "https://img-cf.kurly.com/shop/data/goods/163038703914l0.jpg",
+      "url": "https://www.kurly.com/goods/5082998",
       "slot": "soup"
     },
     {
@@ -244,33 +234,13 @@
       "slot": "soup"
     },
     {
-      "id": 1002279845,
-      "name": "[달래해장] 소고기 선지해장국",
-      "price": 6320,
-      "orig": 7900,
-      "rate": 20,
-      "img": "https://product-image.kurly.com/product/image/75be3c5f-bf78-4682-9116-3fc538488b6b.jpg",
-      "url": "https://www.kurly.com/goods/1002279845",
-      "slot": "soup"
-    },
-    {
-      "id": 1001882994,
-      "name": "[흑백요리사] 술 빚는 윤주모 국물요리 5종",
-      "price": 6480,
-      "orig": 9980,
-      "rate": 35,
-      "img": "https://product-image.kurly.com/product/image/74efeb82-9433-44b1-8f7e-159b97b9dc11.jpg",
-      "url": "https://www.kurly.com/goods/1001882994",
-      "slot": "soup"
-    },
-    {
-      "id": 5152914,
-      "name": "[자연에찬] 시래기 된장국 700g",
-      "price": 5700,
-      "orig": 6000,
-      "rate": 5,
-      "img": "https://product-image.kurly.com/product/image/83ac6610-6004-46c0-9450-640b79ff8b72.jpg",
-      "url": "https://www.kurly.com/goods/5152914",
+      "id": 5067835,
+      "name": "[신의주 찹쌀순대] 찹쌀 순대국",
+      "price": 6310,
+      "orig": 7700,
+      "rate": 18,
+      "img": "https://img-cf.kurly.com/shop/data/goods/1622539094554l0.jpg",
+      "url": "https://www.kurly.com/goods/5067835",
       "slot": "soup"
     },
     {
@@ -284,23 +254,23 @@
       "slot": "soup"
     },
     {
-      "id": 1001451332,
-      "name": "[신의주 찹쌀순대] 우거지소고기국밥",
-      "price": 7450,
-      "orig": 8200,
-      "rate": 9,
-      "img": "https://product-image.kurly.com/product/image/7d268acc-25db-40aa-8483-a3ab5b7b7ced.jpg",
-      "url": "https://www.kurly.com/goods/1001451332",
-      "slot": "soup"
-    },
-    {
-      "id": 1001970765,
-      "name": "[차려낸] 찹쌀순대로 만든 사골순댓국",
+      "id": 1001989564,
+      "name": "[차려낸] 찹쌀순대로 만든 순댓국 2종 (택1)",
       "price": 5000,
       "orig": 7900,
       "rate": 36,
-      "img": "https://product-image.kurly.com/product/image/25158dc3-277e-41d7-9913-7d08698073a7.jpg",
-      "url": "https://www.kurly.com/goods/1001970765",
+      "img": "https://product-image.kurly.com/product/image/e25f4012-8d04-4f46-ae22-510d08fea83a.jpg",
+      "url": "https://www.kurly.com/goods/1001989564",
+      "slot": "soup"
+    },
+    {
+      "id": 5049686,
+      "name": "[미자언니네] 백암 순대국 (2인분)",
+      "price": 8820,
+      "orig": 9800,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/bf323f22-87bb-42a9-ab1f-995ff19216d1.jpeg",
+      "url": "https://www.kurly.com/goods/5049686",
       "slot": "soup"
     },
     {
@@ -314,33 +284,23 @@
       "slot": "soup"
     },
     {
-      "id": 1001718384,
-      "name": "[쉐프컬렉션] 중앙해장 한우양해장국 450g",
-      "price": 7980,
-      "orig": 8980,
-      "rate": 11,
-      "img": "https://product-image.kurly.com/product/image/6f720d4f-0733-47e2-a8c3-1835b48c2a4e.jpg",
-      "url": "https://www.kurly.com/goods/1001718384",
+      "id": 1001188492,
+      "name": "[비비고] 소고기듬뿍 미역국 460g",
+      "price": 5320,
+      "orig": 7980,
+      "rate": 33,
+      "img": "https://product-image.kurly.com/product/image/0ddf758f-5bb6-4b62-99ec-d2d14988ee61.jpg",
+      "url": "https://www.kurly.com/goods/1001188492",
       "slot": "soup"
     },
     {
-      "id": 1000332776,
-      "name": "[신의주 찹쌀순대] 순대국 2종 (찹쌀/얼큰) (택1)",
-      "price": 6310,
-      "orig": 7700,
-      "rate": 18,
-      "img": "https://product-image.kurly.com/product/image/95a3d246-f787-49e3-b0e9-2e5481ed13a4.jpg",
-      "url": "https://www.kurly.com/goods/1000332776",
-      "slot": "soup"
-    },
-    {
-      "id": 1002159938,
-      "name": "[차려낸] 국물이 구수한 고기설렁탕 500g",
-      "price": 6400,
-      "orig": 8500,
-      "rate": 24,
-      "img": "https://product-image.kurly.com/product/image/3c75cc25-63ad-4c68-abf4-17b269ed7c73.jpg",
-      "url": "https://www.kurly.com/goods/1002159938",
+      "id": 1002279845,
+      "name": "[달래해장] 소고기 선지해장국",
+      "price": 6320,
+      "orig": 7900,
+      "rate": 20,
+      "img": "https://product-image.kurly.com/product/image/75be3c5f-bf78-4682-9116-3fc538488b6b.jpg",
+      "url": "https://www.kurly.com/goods/1002279845",
       "slot": "soup"
     },
     {
@@ -354,23 +314,63 @@
       "slot": "soup"
     },
     {
-      "id": 1001341306,
-      "name": "[하림The미식] 김치콩나물국 350g",
-      "price": 3200,
-      "orig": 4000,
-      "rate": 20,
-      "img": "https://product-image.kurly.com/product/image/10734544-462a-429f-be2d-f0373df01ade.jpg",
-      "url": "https://www.kurly.com/goods/1001341306",
+      "id": 1001451332,
+      "name": "[신의주 찹쌀순대] 우거지소고기국밥",
+      "price": 7450,
+      "orig": 8200,
+      "rate": 9,
+      "img": "https://product-image.kurly.com/product/image/7d268acc-25db-40aa-8483-a3ab5b7b7ced.jpg",
+      "url": "https://www.kurly.com/goods/1001451332",
       "slot": "soup"
     },
     {
-      "id": 1001341312,
-      "name": "[하림 The미식] 황태콩나물국 350g",
-      "price": 3480,
-      "orig": 4000,
-      "rate": 13,
-      "img": "https://product-image.kurly.com/product/image/e20a0dab-cb33-4544-954a-8752f078c679.jpg",
-      "url": "https://www.kurly.com/goods/1001341312",
+      "id": 1001295565,
+      "name": "[올쿡] 봄내음가득 쑥된장국",
+      "price": 7410,
+      "orig": 7800,
+      "rate": 5,
+      "img": "https://product-image.kurly.com/product/image/97b1a035-2a07-4b6f-9745-4df71896e8a2.jpg",
+      "url": "https://www.kurly.com/goods/1001295565",
+      "slot": "soup"
+    },
+    {
+      "id": 1001362704,
+      "name": "[비비고] 황태듬뿍 해장국 460g",
+      "price": 5320,
+      "orig": 7980,
+      "rate": 33,
+      "img": "https://product-image.kurly.com/product/image/8ee124f4-7544-491b-9d03-6c422ffc4d7e.jpg",
+      "url": "https://www.kurly.com/goods/1001362704",
+      "slot": "soup"
+    },
+    {
+      "id": 1002159938,
+      "name": "[차려낸] 국물이 구수한 고기설렁탕 500g",
+      "price": 6400,
+      "orig": 8500,
+      "rate": 24,
+      "img": "https://product-image.kurly.com/product/image/3c75cc25-63ad-4c68-abf4-17b269ed7c73.jpg",
+      "url": "https://www.kurly.com/goods/1002159938",
+      "slot": "soup"
+    },
+    {
+      "id": 1001970765,
+      "name": "[차려낸] 찹쌀순대로 만든 사골순댓국",
+      "price": 5000,
+      "orig": 7900,
+      "rate": 36,
+      "img": "https://product-image.kurly.com/product/image/25158dc3-277e-41d7-9913-7d08698073a7.jpg",
+      "url": "https://www.kurly.com/goods/1001970765",
+      "slot": "soup"
+    },
+    {
+      "id": 5152914,
+      "name": "[자연에찬] 시래기 된장국 700g",
+      "price": 5700,
+      "orig": 6000,
+      "rate": 5,
+      "img": "https://product-image.kurly.com/product/image/83ac6610-6004-46c0-9450-640b79ff8b72.jpg",
+      "url": "https://www.kurly.com/goods/5152914",
       "slot": "soup"
     },
     {
@@ -384,93 +384,33 @@
       "slot": "soup"
     },
     {
-      "id": 5061723,
-      "name": "[동남집] 양지곰탕 600g",
-      "price": 6840,
-      "orig": 7600,
-      "rate": 10,
-      "img": "https://img-cf.kurly.com/shop/data/goods/1637922090901l0.jpg",
-      "url": "https://www.kurly.com/goods/5061723",
+      "id": 1000332776,
+      "name": "[신의주 찹쌀순대] 순대국 2종 (찹쌀/얼큰) (택1)",
+      "price": 6310,
+      "orig": 7700,
+      "rate": 18,
+      "img": "https://product-image.kurly.com/product/image/95a3d246-f787-49e3-b0e9-2e5481ed13a4.jpg",
+      "url": "https://www.kurly.com/goods/1000332776",
       "slot": "soup"
     },
     {
-      "id": 5106623,
-      "name": "[설성목장] 한우 곰탕 600g",
-      "price": 8560,
-      "orig": 11900,
-      "rate": 28,
-      "img": "https://img-cf.kurly.com/shop/data/goods/1642559397919l0.jpg",
-      "url": "https://www.kurly.com/goods/5106623",
-      "slot": "soup"
-    },
-    {
-      "id": 5042765,
-      "name": "[외할머니댁] 차돌 된장찌개",
-      "price": 6970,
-      "orig": 7750,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/1ca094dd-294d-43e0-8d7f-5ce9dcf92260.jpeg?v=0531",
-      "url": "https://www.kurly.com/goods/5042765",
-      "slot": "soup"
-    },
-    {
-      "id": 1000237311,
-      "name": "[마마리] 나주식 한우 곰탕",
-      "price": 6800,
-      "orig": 8500,
-      "rate": 20,
-      "img": "https://product-image.kurly.com/product/image/471ae321-737e-437a-8283-43c146f11a62.jpg",
-      "url": "https://www.kurly.com/goods/1000237311",
-      "slot": "soup"
-    },
-    {
-      "id": 1002279847,
-      "name": "[달래해장] 소 내장탕",
-      "price": 6960,
-      "orig": 8700,
-      "rate": 20,
-      "img": "https://product-image.kurly.com/product/image/8a409eeb-2519-4597-a192-07d985047874.jpg",
-      "url": "https://www.kurly.com/goods/1002279847",
-      "slot": "soup"
-    },
-    {
-      "id": 1002194949,
-      "name": "[한촌설렁탕] 양지 설렁탕",
-      "price": 5920,
-      "orig": 7900,
-      "rate": 25,
-      "img": "https://product-image.kurly.com/product/image/41c211a4-ba93-46b0-a9b8-44f67c766cbf.jpg",
-      "url": "https://www.kurly.com/goods/1002194949",
-      "slot": "soup"
-    },
-    {
-      "id": 1001606890,
-      "name": "[차려낸] 국물이 시원한 바지락 칼국수(4인분)",
-      "price": 10335,
-      "orig": 15900,
+      "id": 1001882994,
+      "name": "[흑백요리사] 술 빚는 윤주모 국물요리 5종",
+      "price": 6480,
+      "orig": 9980,
       "rate": 35,
-      "img": "https://product-image.kurly.com/product/image/aae43e58-cbdf-4e5f-93ae-e630e298e4d9.jpg",
-      "url": "https://www.kurly.com/goods/1001606890",
+      "img": "https://product-image.kurly.com/product/image/74efeb82-9433-44b1-8f7e-159b97b9dc11.jpg",
+      "url": "https://www.kurly.com/goods/1001882994",
       "slot": "soup"
     },
     {
-      "id": 1001047952,
-      "name": "[서대문 평양옥] 닭곰탕",
-      "price": 6040,
-      "orig": 7280,
-      "rate": 17,
-      "img": "https://product-image.kurly.com/product/image/f01fce5f-0458-4a9c-9a1e-76dd35c93c8f.jpg",
-      "url": "https://www.kurly.com/goods/1001047952",
-      "slot": "soup"
-    },
-    {
-      "id": 5026468,
-      "name": "[사미헌] 갈비탕",
-      "price": 13050,
-      "orig": 14500,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/c4d41015-d188-4c68-b3e9-36968bf2110a.jpeg",
-      "url": "https://www.kurly.com/goods/5026468",
+      "id": 1001341306,
+      "name": "[하림The미식] 김치콩나물국 350g",
+      "price": 3200,
+      "orig": 4000,
+      "rate": 20,
+      "img": "https://product-image.kurly.com/product/image/10734544-462a-429f-be2d-f0373df01ade.jpg",
+      "url": "https://www.kurly.com/goods/1001341306",
       "slot": "soup"
     },
     {
@@ -484,6 +424,86 @@
       "slot": "soup"
     },
     {
+      "id": 1000237311,
+      "name": "[마마리] 나주식 한우 곰탕",
+      "price": 6800,
+      "orig": 8500,
+      "rate": 20,
+      "img": "https://product-image.kurly.com/product/image/471ae321-737e-437a-8283-43c146f11a62.jpg",
+      "url": "https://www.kurly.com/goods/1000237311",
+      "slot": "soup"
+    },
+    {
+      "id": 5106623,
+      "name": "[설성목장] 한우 곰탕 600g",
+      "price": 8560,
+      "orig": 11900,
+      "rate": 28,
+      "img": "https://img-cf.kurly.com/shop/data/goods/1642559397919l0.jpg",
+      "url": "https://www.kurly.com/goods/5106623",
+      "slot": "soup"
+    },
+    {
+      "id": 1002194949,
+      "name": "[한촌설렁탕] 양지 설렁탕",
+      "price": 5920,
+      "orig": 7900,
+      "rate": 25,
+      "img": "https://product-image.kurly.com/product/image/41c211a4-ba93-46b0-a9b8-44f67c766cbf.jpg",
+      "url": "https://www.kurly.com/goods/1002194949",
+      "slot": "soup"
+    },
+    {
+      "id": 5061723,
+      "name": "[동남집] 양지곰탕 600g",
+      "price": 6840,
+      "orig": 7600,
+      "rate": 10,
+      "img": "https://img-cf.kurly.com/shop/data/goods/1637922090901l0.jpg",
+      "url": "https://www.kurly.com/goods/5061723",
+      "slot": "soup"
+    },
+    {
+      "id": 1002047307,
+      "name": "[풀무원] 반듯한식 고기듬뿍 소고기 무국 460g",
+      "price": 5979,
+      "orig": 7480,
+      "rate": 20,
+      "img": "https://product-image.kurly.com/product/image/9661beb7-a98f-4cb8-9e47-e42afdcfd5e6.png",
+      "url": "https://www.kurly.com/goods/1002047307",
+      "slot": "soup"
+    },
+    {
+      "id": 1001595579,
+      "name": "[차려낸] 건더기가 풍부한 육개장",
+      "price": 5500,
+      "orig": 6900,
+      "rate": 20,
+      "img": "https://product-image.kurly.com/product/image/d0b06028-4555-4da3-804b-97782deb25b7.jpg",
+      "url": "https://www.kurly.com/goods/1001595579",
+      "slot": "soup"
+    },
+    {
+      "id": 5042765,
+      "name": "[외할머니댁] 차돌 된장찌개",
+      "price": 6970,
+      "orig": 7750,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/1ca094dd-294d-43e0-8d7f-5ce9dcf92260.jpeg?v=0531",
+      "url": "https://www.kurly.com/goods/5042765",
+      "slot": "soup"
+    },
+    {
+      "id": 1000237244,
+      "name": "[마마리] 황태 곰탕",
+      "price": 4720,
+      "orig": 5900,
+      "rate": 20,
+      "img": "https://product-image.kurly.com/product/image/9232e228-839d-46a3-b66e-67b3633fbf42.jpg",
+      "url": "https://www.kurly.com/goods/1000237244",
+      "slot": "soup"
+    },
+    {
       "id": 5053979,
       "name": "[경복궁 BLACK] 사골 도가니탕",
       "price": 9900,
@@ -491,6 +511,26 @@
       "rate": 10,
       "img": "https://product-image.kurly.com/product/image/bf1d6a2f-92a8-439f-82ac-3cfaf852baf0.jpeg?v=0531",
       "url": "https://www.kurly.com/goods/5053979",
+      "slot": "soup"
+    },
+    {
+      "id": 1002358147,
+      "name": "[제주 포도호텔] 고사리육개장",
+      "price": 9350,
+      "orig": 11000,
+      "rate": 15,
+      "img": "https://product-image.kurly.com/product/image/c9e65729-ca9c-4f5d-92f8-619ab9d17372.jpg",
+      "url": "https://www.kurly.com/goods/1002358147",
+      "slot": "soup"
+    },
+    {
+      "id": 5026468,
+      "name": "[사미헌] 갈비탕",
+      "price": 13050,
+      "orig": 14500,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/c4d41015-d188-4c68-b3e9-36968bf2110a.jpeg",
+      "url": "https://www.kurly.com/goods/5026468",
       "slot": "soup"
     },
     {
@@ -504,16 +544,6 @@
       "slot": "soup"
     },
     {
-      "id": 5114853,
-      "name": "[남다른 감자탕] 순살 감자탕",
-      "price": 8820,
-      "orig": 9800,
-      "rate": 10,
-      "img": "https://img-cf.kurly.com/shop/data/goods/1653037529406l0.jpeg",
-      "url": "https://www.kurly.com/goods/5114853",
-      "slot": "soup"
-    },
-    {
       "id": 5061780,
       "name": "[엄마밥상] 사골 황태미역국",
       "price": 6780,
@@ -524,13 +554,23 @@
       "slot": "soup"
     },
     {
-      "id": 1001947124,
-      "name": "[차려낸] 한우 사골 육수 이태원식 부대찌개",
-      "price": 9375,
-      "orig": 12500,
-      "rate": 25,
-      "img": "https://product-image.kurly.com/product/image/ccb47c13-0cb1-4b16-84c8-269d079e8cbb.jpg",
-      "url": "https://www.kurly.com/goods/1001947124",
+      "id": 1001341324,
+      "name": "[하림 The미식] 소고기장터국 350g",
+      "price": 4620,
+      "orig": 6000,
+      "rate": 23,
+      "img": "https://product-image.kurly.com/product/image/1475ad98-449c-49f2-a13e-35b27e10c05b.jpg",
+      "url": "https://www.kurly.com/goods/1001341324",
+      "slot": "soup"
+    },
+    {
+      "id": 1002279847,
+      "name": "[달래해장] 소 내장탕",
+      "price": 6960,
+      "orig": 8700,
+      "rate": 20,
+      "img": "https://product-image.kurly.com/product/image/8a409eeb-2519-4597-a192-07d985047874.jpg",
+      "url": "https://www.kurly.com/goods/1002279847",
       "slot": "soup"
     },
     {
@@ -554,6 +594,26 @@
       "slot": "soup"
     },
     {
+      "id": 1001606890,
+      "name": "[차려낸] 국물이 시원한 바지락 칼국수(4인분)",
+      "price": 10335,
+      "orig": 15900,
+      "rate": 35,
+      "img": "https://product-image.kurly.com/product/image/aae43e58-cbdf-4e5f-93ae-e630e298e4d9.jpg",
+      "url": "https://www.kurly.com/goods/1001606890",
+      "slot": "soup"
+    },
+    {
+      "id": 1001947124,
+      "name": "[차려낸] 한우 사골 육수 이태원식 부대찌개",
+      "price": 9375,
+      "orig": 12500,
+      "rate": 25,
+      "img": "https://product-image.kurly.com/product/image/ccb47c13-0cb1-4b16-84c8-269d079e8cbb.jpg",
+      "url": "https://www.kurly.com/goods/1001947124",
+      "slot": "soup"
+    },
+    {
       "id": 1002318664,
       "name": "[팔팔순대국] 아바이 순대국 4종",
       "price": 5900,
@@ -574,83 +634,13 @@
       "slot": "soup"
     },
     {
-      "id": 1000089159,
-      "name": "[마스터컬렉션] 삼선 해물 누룽지탕",
-      "price": 9330,
-      "orig": 10980,
-      "rate": 15,
-      "img": "https://product-image.kurly.com/product/image/5f46b4b4-2e46-4882-9cb6-b1c602d3316a.jpg",
-      "url": "https://www.kurly.com/goods/1000089159",
-      "slot": "banchan"
-    },
-    {
-      "id": 5067835,
-      "name": "[신의주 찹쌀순대] 찹쌀 순대국",
-      "price": 6310,
-      "orig": 7700,
-      "rate": 18,
-      "img": "https://img-cf.kurly.com/shop/data/goods/1622539094554l0.jpg",
-      "url": "https://www.kurly.com/goods/5067835",
-      "slot": "soup"
-    },
-    {
-      "id": 1001449784,
-      "name": "[호밍스 초간편 국물요리] 우거지 된장국",
-      "price": 3780,
-      "orig": 4200,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/b2732a9e-bf8b-411c-8eb7-c55973c35f37.jpg",
-      "url": "https://www.kurly.com/goods/1001449784",
-      "slot": "soup"
-    },
-    {
-      "id": 1000431400,
-      "name": "[호텔컬렉션] 한우 미역국",
-      "price": 6490,
-      "orig": 6980,
-      "rate": 7,
-      "img": "https://product-image.kurly.com/product/image/fe3e532e-8820-4b8e-a73e-f69db8b2cd61.jpg",
-      "url": "https://www.kurly.com/goods/1000431400",
-      "slot": "soup"
-    },
-    {
-      "id": 1001422960,
-      "name": "[올쿡] 버섯 들깨탕",
-      "price": 7310,
-      "orig": 7700,
-      "rate": 5,
-      "img": "https://product-image.kurly.com/product/image/9e11cf15-cd35-465a-bd4b-9a4daa7bf8f9.jpg",
-      "url": "https://www.kurly.com/goods/1001422960",
-      "slot": "soup"
-    },
-    {
-      "id": 5001235,
-      "name": "[벽제갈비] 한우 설렁탕 & 양곰탕 & 곰탕",
-      "price": 13940,
-      "orig": 17000,
-      "rate": 18,
-      "img": "https://img-cf.kurly.com/shop/data/goods/1481854976669l0.jpg",
-      "url": "https://www.kurly.com/goods/5001235",
-      "slot": "soup"
-    },
-    {
-      "id": 5068968,
-      "name": "[워커힐] 곰탕 ",
-      "price": 10750,
-      "orig": 12500,
-      "rate": 14,
-      "img": "https://img-cf.kurly.com/shop/data/goods/1653039584139l0.jpeg",
-      "url": "https://www.kurly.com/goods/5068968",
-      "slot": "soup"
-    },
-    {
-      "id": 5083000,
-      "name": "[집국백서:가마솥 수제국] 추어탕",
-      "price": 6320,
-      "orig": 6800,
-      "rate": 7,
-      "img": "https://img-cf.kurly.com/shop/data/goods/163038728576l0.jpg",
-      "url": "https://www.kurly.com/goods/5083000",
+      "id": 1001047952,
+      "name": "[서대문 평양옥] 닭곰탕",
+      "price": 6040,
+      "orig": 7280,
+      "rate": 17,
+      "img": "https://product-image.kurly.com/product/image/f01fce5f-0458-4a9c-9a1e-76dd35c93c8f.jpg",
+      "url": "https://www.kurly.com/goods/1001047952",
       "slot": "soup"
     },
     {
@@ -664,23 +654,33 @@
       "slot": "soup"
     },
     {
-      "id": 5044518,
-      "name": "[올쿡] 추어탕",
-      "price": 7880,
-      "orig": 8300,
-      "rate": 5,
-      "img": "https://img-cf.kurly.com/shop/data/goods/1576045123859l0.jpg",
-      "url": "https://www.kurly.com/goods/5044518",
+      "id": 1001254782,
+      "name": "[청담미역] 소갈비 미역국",
+      "price": 7220,
+      "orig": 8720,
+      "rate": 17,
+      "img": "https://product-image.kurly.com/product/image/c2797513-d9b9-4ab6-b810-96c11b508db6.jpg",
+      "url": "https://www.kurly.com/goods/1001254782",
       "slot": "soup"
     },
     {
-      "id": 1002286984,
-      "name": "[사미헌] 시그니처 갈비탕 1kg",
-      "price": 16060,
-      "orig": 18900,
-      "rate": 15,
-      "img": "https://product-image.kurly.com/product/image/966e6f80-74ca-4a56-a432-b6cd26a3b1f3.jpg",
-      "url": "https://www.kurly.com/goods/1002286984",
+      "id": 5114853,
+      "name": "[남다른 감자탕] 순살 감자탕",
+      "price": 8820,
+      "orig": 9800,
+      "rate": 10,
+      "img": "https://img-cf.kurly.com/shop/data/goods/1653037529406l0.jpeg",
+      "url": "https://www.kurly.com/goods/5114853",
+      "slot": "soup"
+    },
+    {
+      "id": 5068968,
+      "name": "[워커힐] 곰탕 ",
+      "price": 10750,
+      "orig": 12500,
+      "rate": 14,
+      "img": "https://img-cf.kurly.com/shop/data/goods/1653039584139l0.jpeg",
+      "url": "https://www.kurly.com/goods/5068968",
       "slot": "soup"
     },
     {
@@ -694,63 +694,13 @@
       "slot": "soup"
     },
     {
-      "id": 5083128,
-      "name": "[연안식당] 알푸짐 알탕",
-      "price": 14310,
-      "orig": 15900,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/0fce338d-b455-4a4b-8757-10414ed4a143.jpg",
-      "url": "https://www.kurly.com/goods/5083128",
-      "slot": "soup"
-    },
-    {
-      "id": 1000237244,
-      "name": "[마마리] 황태 곰탕",
-      "price": 4720,
-      "orig": 5900,
-      "rate": 20,
-      "img": "https://product-image.kurly.com/product/image/9232e228-839d-46a3-b66e-67b3633fbf42.jpg",
-      "url": "https://www.kurly.com/goods/1000237244",
-      "slot": "soup"
-    },
-    {
-      "id": 1001201062,
-      "name": "[오봉집] 시원한 낙지 연포탕",
-      "price": 15100,
-      "orig": 16200,
-      "rate": 6,
-      "img": "https://product-image.kurly.com/product/image/7f6f3303-72fd-4ebe-b8bf-9ca7aa188927.jpg",
-      "url": "https://www.kurly.com/goods/1001201062",
-      "slot": "soup"
-    },
-    {
-      "id": 5034225,
-      "name": "[워커힐] 명월관 갈비탕",
-      "price": 15030,
+      "id": 5001235,
+      "name": "[벽제갈비] 한우 설렁탕 & 양곰탕 & 곰탕",
+      "price": 13940,
       "orig": 17000,
-      "rate": 11,
-      "img": "https://product-image.kurly.com/product/image/ce706b94-b20e-406e-a512-7032bc173c24.jpg",
-      "url": "https://www.kurly.com/goods/5034225",
-      "slot": "soup"
-    },
-    {
-      "id": 1000431404,
-      "name": "[호텔컬렉션 에센셜] 우차돌마라탕",
-      "price": 7420,
-      "orig": 7980,
-      "rate": 7,
-      "img": "https://product-image.kurly.com/product/image/171f0736-bc30-4b08-9dee-1f9daff47766.jpg",
-      "url": "https://www.kurly.com/goods/1000431404",
-      "slot": "soup"
-    },
-    {
-      "id": 5116403,
-      "name": "[피코크] 차돌 짬뽕탕",
-      "price": 6490,
-      "orig": 6980,
-      "rate": 7,
-      "img": "https://product-image.kurly.com/product/image/a8458018-d6a0-42b4-b26e-9fce6ecae358.jpg",
-      "url": "https://www.kurly.com/goods/5116403",
+      "rate": 18,
+      "img": "https://img-cf.kurly.com/shop/data/goods/1481854976669l0.jpg",
+      "url": "https://www.kurly.com/goods/5001235",
       "slot": "soup"
     },
     {
@@ -764,23 +714,13 @@
       "slot": "soup"
     },
     {
-      "id": 1000331408,
-      "name": "[연안식당] 시원칼칼 모듬 조개탕",
-      "price": 10710,
-      "orig": 11900,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/17771090-3042-4362-8fc3-06a3fa0f2559.jpg",
-      "url": "https://www.kurly.com/goods/1000331408",
-      "slot": "soup"
-    },
-    {
-      "id": 1001853611,
-      "name": "[윤서울] 김도윤 셰프의 동태탕",
-      "price": 8990,
-      "orig": 9990,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/db9e22ff-30ae-408c-aeb4-3302f52e25a7.jpg",
-      "url": "https://www.kurly.com/goods/1001853611",
+      "id": 1000431404,
+      "name": "[호텔컬렉션 에센셜] 우차돌마라탕",
+      "price": 7420,
+      "orig": 7980,
+      "rate": 7,
+      "img": "https://product-image.kurly.com/product/image/171f0736-bc30-4b08-9dee-1f9daff47766.jpg",
+      "url": "https://www.kurly.com/goods/1000431404",
       "slot": "soup"
     },
     {
@@ -794,13 +734,113 @@
       "slot": "soup"
     },
     {
-      "id": 1000223632,
-      "name": "[연안식당] 알짜배기 문어해물탕",
+      "id": 5044518,
+      "name": "[올쿡] 추어탕",
+      "price": 7880,
+      "orig": 8300,
+      "rate": 5,
+      "img": "https://img-cf.kurly.com/shop/data/goods/1576045123859l0.jpg",
+      "url": "https://www.kurly.com/goods/5044518",
+      "slot": "soup"
+    },
+    {
+      "id": 1001174753,
+      "name": "[호텔컬렉션] 한우사골추어탕",
+      "price": 7420,
+      "orig": 7980,
+      "rate": 7,
+      "img": "https://product-image.kurly.com/product/image/e60d1f75-7685-4bcc-b998-e2a63b2f4ef3.jpg",
+      "url": "https://www.kurly.com/goods/1001174753",
+      "slot": "soup"
+    },
+    {
+      "id": 5083128,
+      "name": "[연안식당] 알푸짐 알탕",
       "price": 14310,
       "orig": 15900,
       "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/51abe2d2-a796-4a08-a223-8051e6123c79.jpg",
-      "url": "https://www.kurly.com/goods/1000223632",
+      "img": "https://product-image.kurly.com/product/image/0fce338d-b455-4a4b-8757-10414ed4a143.jpg",
+      "url": "https://www.kurly.com/goods/5083128",
+      "slot": "soup"
+    },
+    {
+      "id": 1001471733,
+      "name": "[지호삼계탕] 닭한마리 칼국수",
+      "price": 14365,
+      "orig": 16900,
+      "rate": 15,
+      "img": "https://product-image.kurly.com/product/image/7f5e5f73-1243-4c24-a26f-4115448e188c.jpg",
+      "url": "https://www.kurly.com/goods/1001471733",
+      "slot": "soup"
+    },
+    {
+      "id": 5083000,
+      "name": "[집국백서:가마솥 수제국] 추어탕",
+      "price": 6320,
+      "orig": 6800,
+      "rate": 7,
+      "img": "https://img-cf.kurly.com/shop/data/goods/163038728576l0.jpg",
+      "url": "https://www.kurly.com/goods/5083000",
+      "slot": "soup"
+    },
+    {
+      "id": 5034225,
+      "name": "[워커힐] 명월관 갈비탕",
+      "price": 15030,
+      "orig": 17000,
+      "rate": 11,
+      "img": "https://product-image.kurly.com/product/image/ce706b94-b20e-406e-a512-7032bc173c24.jpg",
+      "url": "https://www.kurly.com/goods/5034225",
+      "slot": "soup"
+    },
+    {
+      "id": 1002286984,
+      "name": "[사미헌] 시그니처 갈비탕 1kg",
+      "price": 16060,
+      "orig": 18900,
+      "rate": 15,
+      "img": "https://product-image.kurly.com/product/image/966e6f80-74ca-4a56-a432-b6cd26a3b1f3.jpg",
+      "url": "https://www.kurly.com/goods/1002286984",
+      "slot": "soup"
+    },
+    {
+      "id": 5116403,
+      "name": "[피코크] 차돌 짬뽕탕",
+      "price": 6490,
+      "orig": 6980,
+      "rate": 7,
+      "img": "https://product-image.kurly.com/product/image/a8458018-d6a0-42b4-b26e-9fce6ecae358.jpg",
+      "url": "https://www.kurly.com/goods/5116403",
+      "slot": "soup"
+    },
+    {
+      "id": 1001422960,
+      "name": "[올쿡] 버섯 들깨탕",
+      "price": 7310,
+      "orig": 7700,
+      "rate": 5,
+      "img": "https://product-image.kurly.com/product/image/9e11cf15-cd35-465a-bd4b-9a4daa7bf8f9.jpg",
+      "url": "https://www.kurly.com/goods/1001422960",
+      "slot": "soup"
+    },
+    {
+      "id": 1001853611,
+      "name": "[윤서울] 김도윤 셰프의 동태탕",
+      "price": 8990,
+      "orig": 9990,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/db9e22ff-30ae-408c-aeb4-3302f52e25a7.jpg",
+      "url": "https://www.kurly.com/goods/1001853611",
+      "slot": "soup"
+    },
+    {
+      "id": 1001362207,
+      "name": "[비비고] 설렁탕 500g",
+      "price": 4320,
+      "orig": 6480,
+      "rate": 33,
+      "img": "https://product-image.kurly.com/product/image/5df0d7c1-b260-4396-9e88-25dc63c1ea54.jpg",
+      "url": "https://www.kurly.com/goods/1001362207",
       "slot": "soup"
     },
     {
@@ -811,6 +851,26 @@
       "rate": 7,
       "img": "https://product-image.kurly.com/product/image/11c524b9-4944-45ad-972d-bf325c39b737.jpeg",
       "url": "https://www.kurly.com/goods/5043112",
+      "slot": "soup"
+    },
+    {
+      "id": 1001201062,
+      "name": "[오봉집] 시원한 낙지 연포탕",
+      "price": 15100,
+      "orig": 16200,
+      "rate": 6,
+      "img": "https://product-image.kurly.com/product/image/7f6f3303-72fd-4ebe-b8bf-9ca7aa188927.jpg",
+      "url": "https://www.kurly.com/goods/1001201062",
+      "slot": "soup"
+    },
+    {
+      "id": 1000223632,
+      "name": "[연안식당] 알짜배기 문어해물탕",
+      "price": 14310,
+      "orig": 15900,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/51abe2d2-a796-4a08-a223-8051e6123c79.jpg",
+      "url": "https://www.kurly.com/goods/1000223632",
       "slot": "soup"
     },
     {
@@ -834,14 +894,34 @@
       "slot": "soup"
     },
     {
-      "id": 1001066083,
-      "name": "[비비고] 한우 사골곰탕 500g",
-      "price": 1680,
-      "orig": 3500,
-      "rate": 52,
-      "img": "https://product-image.kurly.com/product/image/1a518ec1-c660-4186-8bcf-7ab39fde1158.jpg",
-      "url": "https://www.kurly.com/goods/1001066083",
+      "id": 1000331408,
+      "name": "[연안식당] 시원칼칼 모듬 조개탕",
+      "price": 10710,
+      "orig": 11900,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/17771090-3042-4362-8fc3-06a3fa0f2559.jpg",
+      "url": "https://www.kurly.com/goods/1000331408",
       "slot": "soup"
+    },
+    {
+      "id": 1002041191,
+      "name": "[동추원불고기] 한우 맑은곰탕",
+      "price": 7800,
+      "orig": 9800,
+      "rate": 20,
+      "img": "https://product-image.kurly.com/product/image/5af42e27-a4cb-4692-8046-b7d06ea9dc77.jpg",
+      "url": "https://www.kurly.com/goods/1002041191",
+      "slot": "soup"
+    },
+    {
+      "id": 1000089159,
+      "name": "[마스터컬렉션] 삼선 해물 누룽지탕",
+      "price": 9330,
+      "orig": 10980,
+      "rate": 15,
+      "img": "https://product-image.kurly.com/product/image/5f46b4b4-2e46-4882-9cb6-b1c602d3316a.jpg",
+      "url": "https://www.kurly.com/goods/1000089159",
+      "slot": "banchan"
     },
     {
       "id": 1000469993,
@@ -854,13 +934,23 @@
       "slot": "soup"
     },
     {
-      "id": 1001362706,
-      "name": "[비비고] 남도식추어탕 460g",
-      "price": 5320,
-      "orig": 7980,
-      "rate": 33,
-      "img": "https://product-image.kurly.com/product/image/7fe43513-87d3-4c10-90c3-f03c84c8270e.jpg",
-      "url": "https://www.kurly.com/goods/1001362706",
+      "id": 1001793761,
+      "name": "[안유성 명장] 가매일식 모듬 해물탕",
+      "price": 14300,
+      "orig": 16500,
+      "rate": 13,
+      "img": "https://product-image.kurly.com/product/image/7007d19f-4c91-4694-a056-7304cdaa9b88.jpg",
+      "url": "https://www.kurly.com/goods/1001793761",
+      "slot": "soup"
+    },
+    {
+      "id": 1001066083,
+      "name": "[비비고] 한우 사골곰탕 500g",
+      "price": 1680,
+      "orig": 3500,
+      "rate": 52,
+      "img": "https://product-image.kurly.com/product/image/1a518ec1-c660-4186-8bcf-7ab39fde1158.jpg",
+      "url": "https://www.kurly.com/goods/1001066083",
       "slot": "soup"
     },
     {
@@ -874,6 +964,16 @@
       "slot": "soup"
     },
     {
+      "id": 1001584712,
+      "name": "[진가] 삼선 해물 누룽지탕",
+      "price": 12510,
+      "orig": 13900,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/fe58bbb8-ce62-4de1-afb8-3863c79bf433.jpg",
+      "url": "https://www.kurly.com/goods/1001584712",
+      "slot": "banchan"
+    },
+    {
       "id": 1001345252,
       "name": "[달래해장] 속풀리게 맑은 지리탕 2종 (택1)",
       "price": 11610,
@@ -881,16 +981,6 @@
       "rate": 10,
       "img": "https://product-image.kurly.com/product/image/3d2aa2ff-f73e-4937-8569-2a9fbccbf052.jpg",
       "url": "https://www.kurly.com/goods/1001345252",
-      "slot": "soup"
-    },
-    {
-      "id": 1001793761,
-      "name": "[안유성 명장] 가매일식 모듬 해물탕",
-      "price": 14300,
-      "orig": 16500,
-      "rate": 13,
-      "img": "https://product-image.kurly.com/product/image/7007d19f-4c91-4694-a056-7304cdaa9b88.jpg",
-      "url": "https://www.kurly.com/goods/1001793761",
       "slot": "soup"
     },
     {
@@ -924,16 +1014,6 @@
       "slot": "soup"
     },
     {
-      "id": 1001174753,
-      "name": "[호텔컬렉션] 한우사골추어탕",
-      "price": 7420,
-      "orig": 7980,
-      "rate": 7,
-      "img": "https://product-image.kurly.com/product/image/e60d1f75-7685-4bcc-b998-e2a63b2f4ef3.jpg",
-      "url": "https://www.kurly.com/goods/1001174753",
-      "slot": "soup"
-    },
-    {
       "id": 1001465242,
       "name": "[사미헌] 한우곰탕 800g",
       "price": 12660,
@@ -964,16 +1044,6 @@
       "slot": "soup"
     },
     {
-      "id": 1002049373,
-      "name": "[호밍스] 양지설렁탕 700g",
-      "price": 5900,
-      "orig": 9900,
-      "rate": 40,
-      "img": "https://product-image.kurly.com/product/image/fb5fdfe9-0b6c-4b90-8ed1-3a96da787f00.png",
-      "url": "https://www.kurly.com/goods/1002049373",
-      "slot": "soup"
-    },
-    {
       "id": 1002358149,
       "name": "[제주 포도호텔] 한우사골곰탕",
       "price": 9350,
@@ -984,13 +1054,23 @@
       "slot": "soup"
     },
     {
-      "id": 5119615,
-      "name": "[피코크] 금돼지식당 김치찌개",
-      "price": 5080,
-      "orig": 5980,
-      "rate": 15,
-      "img": "https://product-image.kurly.com/product/image/a695cf27-81b4-4ac2-8683-da431feedb75.jpeg",
-      "url": "https://www.kurly.com/goods/5119615",
+      "id": 1002110346,
+      "name": "[송탄 최네집부대찌개] 부대찌개",
+      "price": 8720,
+      "orig": 10900,
+      "rate": 20,
+      "img": "https://product-image.kurly.com/product/image/e6b1cfa7-b2f4-4f4a-bf04-b641731ce0c3.jpg",
+      "url": "https://www.kurly.com/goods/1002110346",
+      "slot": "soup"
+    },
+    {
+      "id": 5116405,
+      "name": "[피코크] 쟌슨빌 부대찌개",
+      "price": 6580,
+      "orig": 7480,
+      "rate": 12,
+      "img": "https://product-image.kurly.com/product/image/9fac8713-1a44-4c5b-aef1-3669c767ca11.jpeg",
+      "url": "https://www.kurly.com/goods/5116405",
       "slot": "soup"
     },
     {
@@ -1014,43 +1094,13 @@
       "slot": "soup"
     },
     {
-      "id": 5116405,
-      "name": "[피코크] 쟌슨빌 부대찌개",
-      "price": 6580,
-      "orig": 7480,
-      "rate": 12,
-      "img": "https://product-image.kurly.com/product/image/9fac8713-1a44-4c5b-aef1-3669c767ca11.jpeg",
-      "url": "https://www.kurly.com/goods/5116405",
-      "slot": "soup"
-    },
-    {
-      "id": 1002110346,
-      "name": "[송탄 최네집부대찌개] 부대찌개",
-      "price": 8720,
-      "orig": 10900,
-      "rate": 20,
-      "img": "https://product-image.kurly.com/product/image/e6b1cfa7-b2f4-4f4a-bf04-b641731ce0c3.jpg",
-      "url": "https://www.kurly.com/goods/1002110346",
-      "slot": "soup"
-    },
-    {
-      "id": 1001801912,
-      "name": "[차려낸] 비법 육수 차돌박이된장찌개",
+      "id": 5082999,
+      "name": "[집국백서:가마솥 수제국] 청국장 찌개",
       "price": 5900,
-      "orig": 7900,
-      "rate": 25,
-      "img": "https://product-image.kurly.com/product/image/81a42adb-c3d7-4b1b-bca6-a31e04ace922.jpg",
-      "url": "https://www.kurly.com/goods/1001801912",
-      "slot": "soup"
-    },
-    {
-      "id": 1002041430,
-      "name": "[김치도가] 고기듬뿍 김치찌개",
-      "price": 5160,
-      "orig": 6450,
-      "rate": 20,
-      "img": "https://product-image.kurly.com/product/image/4a417075-4166-418a-bd18-bab5a8a1d1d3.jpg",
-      "url": "https://www.kurly.com/goods/1002041430",
+      "orig": 6800,
+      "rate": 13,
+      "img": "https://img-cf.kurly.com/shop/data/goods/163038718045l0.jpg",
+      "url": "https://www.kurly.com/goods/5082999",
       "slot": "soup"
     },
     {
@@ -1064,6 +1114,16 @@
       "slot": "soup"
     },
     {
+      "id": 1001207466,
+      "name": "[차려낸] 햄 가득 송탄식 부대찌개",
+      "price": 10335,
+      "orig": 15900,
+      "rate": 35,
+      "img": "https://product-image.kurly.com/product/image/5588e602-4670-4eba-80bd-0d8690493ad3.jpg",
+      "url": "https://www.kurly.com/goods/1001207466",
+      "slot": "soup"
+    },
+    {
       "id": 1001706193,
       "name": "[차려낸] 불맛을 더한 강릉식 짬뽕순두부찌개",
       "price": 8500,
@@ -1074,33 +1134,23 @@
       "slot": "soup"
     },
     {
-      "id": 1001872147,
-      "name": "[우정욱의 수퍼판] 백명란찌개",
-      "price": 8720,
-      "orig": 10900,
+      "id": 1002041430,
+      "name": "[김치도가] 고기듬뿍 김치찌개",
+      "price": 5160,
+      "orig": 6450,
       "rate": 20,
-      "img": "https://product-image.kurly.com/product/image/512441ac-eb22-4cfd-bd45-bf93ebd4abc0.jpg",
-      "url": "https://www.kurly.com/goods/1001872147",
+      "img": "https://product-image.kurly.com/product/image/4a417075-4166-418a-bd18-bab5a8a1d1d3.jpg",
+      "url": "https://www.kurly.com/goods/1002041430",
       "slot": "soup"
     },
     {
-      "id": 5082999,
-      "name": "[집국백서:가마솥 수제국] 청국장 찌개",
+      "id": 1001801912,
+      "name": "[차려낸] 비법 육수 차돌박이된장찌개",
       "price": 5900,
-      "orig": 6800,
-      "rate": 13,
-      "img": "https://img-cf.kurly.com/shop/data/goods/163038718045l0.jpg",
-      "url": "https://www.kurly.com/goods/5082999",
-      "slot": "soup"
-    },
-    {
-      "id": 1001207466,
-      "name": "[차려낸] 햄 가득 송탄식 부대찌개",
-      "price": 10335,
-      "orig": 15900,
-      "rate": 35,
-      "img": "https://product-image.kurly.com/product/image/5588e602-4670-4eba-80bd-0d8690493ad3.jpg",
-      "url": "https://www.kurly.com/goods/1001207466",
+      "orig": 7900,
+      "rate": 25,
+      "img": "https://product-image.kurly.com/product/image/81a42adb-c3d7-4b1b-bca6-a31e04ace922.jpg",
+      "url": "https://www.kurly.com/goods/1001801912",
       "slot": "soup"
     },
     {
@@ -1114,6 +1164,16 @@
       "slot": "soup"
     },
     {
+      "id": 5053932,
+      "name": "[한팟] 치즈 부대찌개 1858g(냉장)",
+      "price": 13299,
+      "orig": 14300,
+      "rate": 7,
+      "img": "https://product-image.kurly.com/product/image/ea301077-e050-4fdc-8e6c-7f216a349ea1.jpeg?v=0531",
+      "url": "https://www.kurly.com/goods/5053932",
+      "slot": "soup"
+    },
+    {
       "id": 5116411,
       "name": "[올쿡] 달래 된장찌개",
       "price": 6950,
@@ -1121,6 +1181,16 @@
       "rate": 12,
       "img": "https://img-cf.kurly.com/shop/data/goods/1647407885598l0.jpg",
       "url": "https://www.kurly.com/goods/5116411",
+      "slot": "soup"
+    },
+    {
+      "id": 1001449788,
+      "name": "[호밍스 초간편 국물요리] 차돌 된장찌개",
+      "price": 5850,
+      "orig": 6500,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/9869f03d-706c-4b61-a279-4d2a4967730d.jpg",
+      "url": "https://www.kurly.com/goods/1001449788",
       "slot": "soup"
     },
     {
@@ -1134,13 +1204,33 @@
       "slot": "soup"
     },
     {
-      "id": 5053932,
-      "name": "[한팟] 치즈 부대찌개 1858g(냉장)",
-      "price": 13299,
-      "orig": 14300,
+      "id": 1002382067,
+      "name": "[호밍스 초간편 국물요리] 냉이 된장찌개",
+      "price": 5850,
+      "orig": 6500,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/80ae5775-8700-4764-93e3-ab286f5f1a1e.jpg",
+      "url": "https://www.kurly.com/goods/1002382067",
+      "slot": "soup"
+    },
+    {
+      "id": 1001872147,
+      "name": "[우정욱의 수퍼판] 백명란찌개",
+      "price": 8720,
+      "orig": 10900,
+      "rate": 20,
+      "img": "https://product-image.kurly.com/product/image/512441ac-eb22-4cfd-bd45-bf93ebd4abc0.jpg",
+      "url": "https://www.kurly.com/goods/1001872147",
+      "slot": "soup"
+    },
+    {
+      "id": 5049682,
+      "name": "[미자언니네] 순살 꼬막 우렁된장찌개",
+      "price": 8640,
+      "orig": 9300,
       "rate": 7,
-      "img": "https://product-image.kurly.com/product/image/ea301077-e050-4fdc-8e6c-7f216a349ea1.jpeg?v=0531",
-      "url": "https://www.kurly.com/goods/5053932",
+      "img": "https://img-cf.kurly.com/shop/data/goods/1594357401237l0.jpg",
+      "url": "https://www.kurly.com/goods/5049682",
       "slot": "soup"
     },
     {
@@ -1164,46 +1254,6 @@
       "slot": "soup"
     },
     {
-      "id": 1001341330,
-      "name": "[하림 The미식] 큰 부대찌개 500g",
-      "price": 6375,
-      "orig": 7500,
-      "rate": 15,
-      "img": "https://product-image.kurly.com/product/image/939bfc54-2e9d-4783-a77f-a2aae1f9f1e3.jpg",
-      "url": "https://www.kurly.com/goods/1001341330",
-      "slot": "soup"
-    },
-    {
-      "id": 1002382067,
-      "name": "[호밍스 초간편 국물요리] 냉이 된장찌개",
-      "price": 5850,
-      "orig": 6500,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/80ae5775-8700-4764-93e3-ab286f5f1a1e.jpg",
-      "url": "https://www.kurly.com/goods/1002382067",
-      "slot": "soup"
-    },
-    {
-      "id": 1001188498,
-      "name": "[비비고] 두부듬뿍 김치찌개 460g",
-      "price": 4320,
-      "orig": 6480,
-      "rate": 33,
-      "img": "https://product-image.kurly.com/product/image/4984f9a6-3869-4c2d-8cd3-60205a527a2d.jpg",
-      "url": "https://www.kurly.com/goods/1001188498",
-      "slot": "soup"
-    },
-    {
-      "id": 5049680,
-      "name": "[미자언니네] 하얀 우리콩 비지찌개",
-      "price": 8270,
-      "orig": 8900,
-      "rate": 7,
-      "img": "https://img-cf.kurly.com/shop/data/goods/1600741201149l0.jpg",
-      "url": "https://www.kurly.com/goods/5049680",
-      "slot": "soup"
-    },
-    {
       "id": 1002382088,
       "name": "[천상현셰프] 돼지고기 듬뿍 고추장찌개(2인분)",
       "price": 10965,
@@ -1211,16 +1261,6 @@
       "rate": 15,
       "img": "https://product-image.kurly.com/product/image/547d3a6a-2613-4f7f-b74c-73a8c31795a8.jpg",
       "url": "https://www.kurly.com/goods/1002382088",
-      "slot": "soup"
-    },
-    {
-      "id": 5049682,
-      "name": "[미자언니네] 순살 꼬막 우렁된장찌개",
-      "price": 8640,
-      "orig": 9300,
-      "rate": 7,
-      "img": "https://img-cf.kurly.com/shop/data/goods/1594357401237l0.jpg",
-      "url": "https://www.kurly.com/goods/5049682",
       "slot": "soup"
     },
     {
@@ -1234,13 +1274,13 @@
       "slot": "soup"
     },
     {
-      "id": 1001853607,
-      "name": "[윤서울] 김도윤 셰프의 꽃게된장찌개",
-      "price": 11900,
-      "orig": 13300,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/60d6019b-f90f-406a-91cd-0ed273adccb0.jpg",
-      "url": "https://www.kurly.com/goods/1001853607",
+      "id": 1001341330,
+      "name": "[하림 The미식] 큰 부대찌개 500g",
+      "price": 6375,
+      "orig": 7500,
+      "rate": 15,
+      "img": "https://product-image.kurly.com/product/image/939bfc54-2e9d-4783-a77f-a2aae1f9f1e3.jpg",
+      "url": "https://www.kurly.com/goods/1001341330",
       "slot": "soup"
     },
     {
@@ -1264,6 +1304,26 @@
       "slot": "soup"
     },
     {
+      "id": 1001381957,
+      "name": "[CJ] 행복한콩 찌개두부 380g",
+      "price": 1290,
+      "orig": 1800,
+      "rate": 28,
+      "img": "https://product-image.kurly.com/product/image/74c9afd3-fa46-45d8-8531-b20f9567a7af.jpg",
+      "url": "https://www.kurly.com/goods/1001381957",
+      "slot": "tofu"
+    },
+    {
+      "id": 1001853607,
+      "name": "[윤서울] 김도윤 셰프의 꽃게된장찌개",
+      "price": 11900,
+      "orig": 13300,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/60d6019b-f90f-406a-91cd-0ed273adccb0.jpg",
+      "url": "https://www.kurly.com/goods/1001853607",
+      "slot": "soup"
+    },
+    {
       "id": 1000431398,
       "name": "[호텔컬렉션 에센셜] 우차돌짬뽕탕",
       "price": 7420,
@@ -1271,16 +1331,6 @@
       "rate": 7,
       "img": "https://product-image.kurly.com/product/image/7576c368-a82c-4877-8970-e93647f068c9.jpg",
       "url": "https://www.kurly.com/goods/1000431398",
-      "slot": "soup"
-    },
-    {
-      "id": 5048172,
-      "name": "[한팟] 속시원한 알알이 가득 알탕 (리뉴얼)",
-      "price": 12665,
-      "orig": 14900,
-      "rate": 15,
-      "img": "https://product-image.kurly.com/product/image/a99fc4c7-5502-4311-bb74-75b82a3f09df.jpg",
-      "url": "https://www.kurly.com/goods/5048172",
       "slot": "soup"
     },
     {
@@ -1294,23 +1344,13 @@
       "slot": "soup"
     },
     {
-      "id": 5095179,
-      "name": "[풀무원] 정통 순두부찌개 KIT",
-      "price": 3600,
-      "orig": 4500,
+      "id": 1001872145,
+      "name": "[우정욱의 수퍼판] 한우양지무국 600g",
+      "price": 5760,
+      "orig": 7200,
       "rate": 20,
-      "img": "https://img-cf.kurly.com/shop/data/goods/1636437164709l0.jpg",
-      "url": "https://www.kurly.com/goods/5095179",
-      "slot": "soup"
-    },
-    {
-      "id": 1001819656,
-      "name": "[온하루] 한돈 되비지찌개",
-      "price": 7120,
-      "orig": 8900,
-      "rate": 20,
-      "img": "https://product-image.kurly.com/product/image/46e4d438-2bcb-4634-bcb0-fa4743d43e8b.jpg",
-      "url": "https://www.kurly.com/goods/1001819656",
+      "img": "https://product-image.kurly.com/product/image/87e7b681-644d-4833-a867-3c4fa900f349.jpg",
+      "url": "https://www.kurly.com/goods/1001872145",
       "slot": "soup"
     },
     {
@@ -1334,23 +1374,13 @@
       "slot": "soup"
     },
     {
-      "id": 1001174766,
-      "name": "[호텔컬렉션 에센셜] 대파육개장",
-      "price": 3980,
-      "orig": 4980,
-      "rate": 20,
-      "img": "https://product-image.kurly.com/product/image/e0b9709b-f121-4c85-8280-ccec81696eb5.jpg",
-      "url": "https://www.kurly.com/goods/1001174766",
-      "slot": "soup"
-    },
-    {
-      "id": 1001449788,
-      "name": "[호밍스 초간편 국물요리] 차돌 된장찌개",
-      "price": 5850,
-      "orig": 6500,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/9869f03d-706c-4b61-a279-4d2a4967730d.jpg",
-      "url": "https://www.kurly.com/goods/1001449788",
+      "id": 1001188498,
+      "name": "[비비고] 두부듬뿍 김치찌개 460g",
+      "price": 4320,
+      "orig": 6480,
+      "rate": 33,
+      "img": "https://product-image.kurly.com/product/image/4984f9a6-3869-4c2d-8cd3-60205a527a2d.jpg",
+      "url": "https://www.kurly.com/goods/1001188498",
       "slot": "soup"
     },
     {
@@ -1384,16 +1414,6 @@
       "slot": "soup"
     },
     {
-      "id": 1000963745,
-      "name": "[골라담기] 마마리 인기 국물요리 7종",
-      "price": 4160,
-      "orig": 5200,
-      "rate": 20,
-      "img": "https://product-image.kurly.com/product/image/7e068dc2-cea8-4307-9604-fdf622e636ad.jpg",
-      "url": "https://www.kurly.com/goods/1000963745",
-      "slot": "soup"
-    },
-    {
       "id": 1001449780,
       "name": "[호밍스 초간편 국물요리] 소고기 미역국",
       "price": 3780,
@@ -1406,11 +1426,21 @@
     {
       "id": 5050290,
       "name": "[올마레] 춘천 국물 닭갈비 떡볶이",
-      "price": 9900,
+      "price": 12900,
       "orig": 14900,
-      "rate": 33,
+      "rate": 13,
       "img": "https://product-image.kurly.com/product/image/13d061a1-df1f-4e36-a676-03f687036cb1.jpeg?v=0531",
       "url": "https://www.kurly.com/goods/5050290",
+      "slot": "soup"
+    },
+    {
+      "id": 1001449784,
+      "name": "[호밍스 초간편 국물요리] 우거지 된장국",
+      "price": 3780,
+      "orig": 4200,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/b2732a9e-bf8b-411c-8eb7-c55973c35f37.jpg",
+      "url": "https://www.kurly.com/goods/1001449784",
       "slot": "soup"
     },
     {
@@ -1484,6 +1514,16 @@
       "slot": "soup"
     },
     {
+      "id": 1001635041,
+      "name": "[백년밥상] 아롱사태 스지 전골",
+      "price": 16900,
+      "orig": 19900,
+      "rate": 15,
+      "img": "https://product-image.kurly.com/product/image/594dce3b-060f-4fe4-a292-c49f292557aa.jpg",
+      "url": "https://www.kurly.com/goods/1001635041",
+      "slot": "soup"
+    },
+    {
       "id": 1000572062,
       "name": "[사리원] 소불고기 전골",
       "price": 12720,
@@ -1494,33 +1534,13 @@
       "slot": "soup"
     },
     {
-      "id": 5090388,
-      "name": "[고래사어묵] 김치 우동 전골",
-      "price": 9720,
-      "orig": 10800,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/6adf930f-ec7f-48bb-9014-aafe3c81f9bb.jpg",
-      "url": "https://www.kurly.com/goods/5090388",
-      "slot": "soup"
-    },
-    {
-      "id": 1001803394,
-      "name": "[신의주 찹쌀순대] 얼큰 곱창 순대전골(2~3인분)",
-      "price": 16110,
-      "orig": 17900,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/6f1aa44d-5c33-4380-98ff-14895e0d12c1.jpg",
-      "url": "https://www.kurly.com/goods/1001803394",
-      "slot": "soup"
-    },
-    {
-      "id": 1001635041,
-      "name": "[백년밥상] 아롱사태 스지 전골",
-      "price": 16900,
+      "id": 1001194490,
+      "name": "[백년밥상] 스지 바지락 칼국수 전골",
+      "price": 17900,
       "orig": 19900,
-      "rate": 15,
-      "img": "https://product-image.kurly.com/product/image/594dce3b-060f-4fe4-a292-c49f292557aa.jpg",
-      "url": "https://www.kurly.com/goods/1001635041",
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/0c49d0c9-8045-48a5-aa64-6aa7074102d7.jpg",
+      "url": "https://www.kurly.com/goods/1001194490",
       "slot": "soup"
     },
     {
@@ -1544,13 +1564,13 @@
       "slot": "soup"
     },
     {
-      "id": 1001194490,
-      "name": "[백년밥상] 스지 바지락 칼국수 전골",
-      "price": 17900,
-      "orig": 19900,
+      "id": 5090388,
+      "name": "[고래사어묵] 김치 우동 전골",
+      "price": 9720,
+      "orig": 10800,
       "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/0c49d0c9-8045-48a5-aa64-6aa7074102d7.jpg",
-      "url": "https://www.kurly.com/goods/1001194490",
+      "img": "https://product-image.kurly.com/product/image/6adf930f-ec7f-48bb-9014-aafe3c81f9bb.jpg",
+      "url": "https://www.kurly.com/goods/5090388",
       "slot": "soup"
     },
     {
@@ -1574,6 +1594,16 @@
       "slot": "soup"
     },
     {
+      "id": 1001803394,
+      "name": "[신의주 찹쌀순대] 얼큰 곱창 순대전골(2~3인분)",
+      "price": 16110,
+      "orig": 17900,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/6f1aa44d-5c33-4380-98ff-14895e0d12c1.jpg",
+      "url": "https://www.kurly.com/goods/1001803394",
+      "slot": "soup"
+    },
+    {
       "id": 5095789,
       "name": "[하코야] 와카메 어묵탕 전골 KIT",
       "price": 10115,
@@ -1591,6 +1621,16 @@
       "rate": 20,
       "img": "https://product-image.kurly.com/product/image/c30f17c8-49f5-46c1-b1fb-d9342dd6af76.jpg",
       "url": "https://www.kurly.com/goods/1001146746",
+      "slot": "soup"
+    },
+    {
+      "id": 1001207468,
+      "name": "[차려낸] 비법 양념 서울식 소불고기전골",
+      "price": 13900,
+      "orig": 16900,
+      "rate": 17,
+      "img": "https://product-image.kurly.com/product/image/0c0e0538-2090-4233-ae0f-f24a7c6e08fb.jpg",
+      "url": "https://www.kurly.com/goods/1001207468",
       "slot": "soup"
     },
     {
@@ -1624,26 +1664,6 @@
       "slot": "soup"
     },
     {
-      "id": 1002376243,
-      "name": "[우정] 한우스지 된장전골 600g",
-      "price": 11680,
-      "orig": 12980,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/f6d1a4ed-412b-4073-9b8c-87b70647fa01.jpg",
-      "url": "https://www.kurly.com/goods/1002376243",
-      "slot": "soup"
-    },
-    {
-      "id": 1001207468,
-      "name": "[차려낸] 비법 양념 서울식 소불고기전골",
-      "price": 13900,
-      "orig": 16900,
-      "rate": 17,
-      "img": "https://product-image.kurly.com/product/image/0c0e0538-2090-4233-ae0f-f24a7c6e08fb.jpg",
-      "url": "https://www.kurly.com/goods/1001207468",
-      "slot": "soup"
-    },
-    {
       "id": 1001631930,
       "name": "[곱창고] 푸짐한 소곱창전골",
       "price": 17925,
@@ -1664,16 +1684,6 @@
       "slot": "soup"
     },
     {
-      "id": 1001235624,
-      "name": "[고래주방] 한입꽃게 꼬치어묵전골",
-      "price": 9990,
-      "orig": 12900,
-      "rate": 22,
-      "img": "https://product-image.kurly.com/product/image/b8aef009-fdfc-4f8d-a60e-5d96cbe270f9.jpg",
-      "url": "https://www.kurly.com/goods/1001235624",
-      "slot": "soup"
-    },
-    {
       "id": 1001371924,
       "name": "[달래해장] 속 풀리는 우삼겹 소곱창전골",
       "price": 13410,
@@ -1684,43 +1694,23 @@
       "slot": "soup"
     },
     {
-      "id": 5138689,
-      "name": "[호밍스] 낙곱새전골 650g",
-      "price": 12900,
-      "orig": 14500,
-      "rate": 11,
-      "img": "https://product-image.kurly.com/product/image/fd3c4507-cd48-42a2-86c1-be3630c15002.jpg",
-      "url": "https://www.kurly.com/goods/5138689",
-      "slot": "soup"
-    },
-    {
-      "id": 1001460626,
-      "name": "[수린] 1++ 한우국수전골 & 한우사골솥밥 2종 (택1)",
-      "price": 17010,
-      "orig": 18900,
+      "id": 1002376243,
+      "name": "[우정] 한우스지 된장전골 600g",
+      "price": 11680,
+      "orig": 12980,
       "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/f5ed1dd4-6f30-48e6-9b46-5df435d66d8c.jpg",
-      "url": "https://www.kurly.com/goods/1001460626",
+      "img": "https://product-image.kurly.com/product/image/f6d1a4ed-412b-4073-9b8c-87b70647fa01.jpg",
+      "url": "https://www.kurly.com/goods/1002376243",
       "slot": "soup"
     },
     {
-      "id": 1001838201,
-      "name": "[장호준셰프] 모던 오뎅나베",
-      "price": 13515,
-      "orig": 15900,
-      "rate": 15,
-      "img": "https://product-image.kurly.com/product/image/61f41279-063a-49c2-a35d-ad55985e62f4.jpg",
-      "url": "https://www.kurly.com/goods/1001838201",
-      "slot": "soup"
-    },
-    {
-      "id": 1001959290,
-      "name": "[청도미나리식당] 청도미나리 샤브샤브&칼국수",
-      "price": 15717,
-      "orig": 16900,
-      "rate": 7,
-      "img": "https://product-image.kurly.com/product/image/bb65d9d7-ab74-432a-b120-20c2a373b7af.jpg",
-      "url": "https://www.kurly.com/goods/1001959290",
+      "id": 1001235624,
+      "name": "[고래주방] 한입꽃게 꼬치어묵전골",
+      "price": 9990,
+      "orig": 12900,
+      "rate": 22,
+      "img": "https://product-image.kurly.com/product/image/b8aef009-fdfc-4f8d-a60e-5d96cbe270f9.jpg",
+      "url": "https://www.kurly.com/goods/1001235624",
       "slot": "soup"
     },
     {
@@ -1734,23 +1724,33 @@
       "slot": "soup"
     },
     {
-      "id": 1000756142,
-      "name": "[채선당] 소고기 버섯 샤브샤브 밀키트",
+      "id": 1001460626,
+      "name": "[수린] 1++ 한우국수전골 & 한우사골솥밥 2종 (택1)",
       "price": 17010,
       "orig": 18900,
       "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/9c1129f9-9153-4209-a7bc-b2002de29304.jpg",
-      "url": "https://www.kurly.com/goods/1000756142",
+      "img": "https://product-image.kurly.com/product/image/f5ed1dd4-6f30-48e6-9b46-5df435d66d8c.jpg",
+      "url": "https://www.kurly.com/goods/1001460626",
       "slot": "soup"
     },
     {
-      "id": 1002433096,
-      "name": "[사리원] 대표 밀키트 3종 (택1)",
-      "price": 10115,
-      "orig": 11900,
-      "rate": 15,
-      "img": "https://product-image.kurly.com/product/image/70d44881-2a38-4ecd-8ece-a8a6b1e34458.jpg",
-      "url": "https://www.kurly.com/goods/1002433096",
+      "id": 5138689,
+      "name": "[호밍스] 낙곱새전골 650g",
+      "price": 12900,
+      "orig": 14500,
+      "rate": 11,
+      "img": "https://product-image.kurly.com/product/image/fd3c4507-cd48-42a2-86c1-be3630c15002.jpg",
+      "url": "https://www.kurly.com/goods/5138689",
+      "slot": "soup"
+    },
+    {
+      "id": 1001959290,
+      "name": "[청도미나리식당] 청도미나리 샤브샤브&칼국수",
+      "price": 15717,
+      "orig": 16900,
+      "rate": 7,
+      "img": "https://product-image.kurly.com/product/image/bb65d9d7-ab74-432a-b120-20c2a373b7af.jpg",
+      "url": "https://www.kurly.com/goods/1001959290",
       "slot": "soup"
     },
     {
@@ -1764,6 +1764,36 @@
       "slot": "soup"
     },
     {
+      "id": 1002433096,
+      "name": "[사리원] 대표 밀키트 3종 (택1)",
+      "price": 13515,
+      "orig": 15900,
+      "rate": 15,
+      "img": "https://product-image.kurly.com/product/image/70d44881-2a38-4ecd-8ece-a8a6b1e34458.jpg",
+      "url": "https://www.kurly.com/goods/1002433096",
+      "slot": "soup"
+    },
+    {
+      "id": 1001838201,
+      "name": "[장호준셰프] 모던 오뎅나베",
+      "price": 13515,
+      "orig": 15900,
+      "rate": 15,
+      "img": "https://product-image.kurly.com/product/image/61f41279-063a-49c2-a35d-ad55985e62f4.jpg",
+      "url": "https://www.kurly.com/goods/1001838201",
+      "slot": "soup"
+    },
+    {
+      "id": 1000756142,
+      "name": "[채선당] 소고기 버섯 샤브샤브 밀키트",
+      "price": 17010,
+      "orig": 18900,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/9c1129f9-9153-4209-a7bc-b2002de29304.jpg",
+      "url": "https://www.kurly.com/goods/1000756142",
+      "slot": "soup"
+    },
+    {
       "id": 1001249400,
       "name": "[호밍스] 부산식곱창전골",
       "price": 12500,
@@ -1774,16 +1804,6 @@
       "slot": "soup"
     },
     {
-      "id": 1000811962,
-      "name": "[일상식탁] 부산식 얼큰 낙곱새",
-      "price": 16443,
-      "orig": 18900,
-      "rate": 13,
-      "img": "https://product-image.kurly.com/product/image/39b48630-0359-4f08-aea3-8193aea1fc52.jpg",
-      "url": "https://www.kurly.com/goods/1000811962",
-      "slot": "soup"
-    },
-    {
       "id": 1001866269,
       "name": "[채선당] 샤브샤브 밀키트(2인분)",
       "price": 18810,
@@ -1791,6 +1811,16 @@
       "rate": 10,
       "img": "https://product-image.kurly.com/product/image/8a93c024-48e4-4e90-a6a5-665dda325398.jpg",
       "url": "https://www.kurly.com/goods/1001866269",
+      "slot": "soup"
+    },
+    {
+      "id": 1000811962,
+      "name": "[일상식탁] 부산식 얼큰 낙곱새",
+      "price": 16443,
+      "orig": 18900,
+      "rate": 13,
+      "img": "https://product-image.kurly.com/product/image/39b48630-0359-4f08-aea3-8193aea1fc52.jpg",
+      "url": "https://www.kurly.com/goods/1000811962",
       "slot": "soup"
     },
     {
@@ -1834,6 +1864,16 @@
       "slot": "soup"
     },
     {
+      "id": 5081090,
+      "name": "[KF365] 양념 소불고기 4종 (택1)",
+      "price": 12460,
+      "orig": 15200,
+      "rate": 18,
+      "img": "https://product-image.kurly.com/product/image/d5c78505-e1a2-43df-9be7-d544960f01cb.jpg",
+      "url": "https://www.kurly.com/goods/5081090",
+      "slot": "main"
+    },
+    {
       "id": 1001694461,
       "name": "[한팟] 미나리 듬뿍 얼큰 소고기 샤브샤브",
       "price": 14365,
@@ -1854,16 +1894,6 @@
       "slot": "soup"
     },
     {
-      "id": 5081090,
-      "name": "[KF365] 양념 소불고기 4종 (택1)",
-      "price": 12460,
-      "orig": 15200,
-      "rate": 18,
-      "img": "https://product-image.kurly.com/product/image/d5c78505-e1a2-43df-9be7-d544960f01cb.jpg",
-      "url": "https://www.kurly.com/goods/5081090",
-      "slot": "main"
-    },
-    {
       "id": 1002101849,
       "name": "[동원] 바른 전골용 350g",
       "price": 4480,
@@ -1876,21 +1906,11 @@
     {
       "id": 1002458801,
       "name": "[소바쥬] 무쇠팔 박주성 셰프의 밀키트 2종 (택1)",
-      "price": 14365,
-      "orig": 16900,
-      "rate": 15,
+      "price": 10320,
+      "orig": 12900,
+      "rate": 20,
       "img": "https://product-image.kurly.com/product/image/4eb56869-d555-4654-a092-f76d23217583.jpg",
       "url": "https://www.kurly.com/goods/1002458801",
-      "slot": "soup"
-    },
-    {
-      "id": 1002081876,
-      "name": "[차려낸] 특제 양지육수 샤브샤브",
-      "price": 13900,
-      "orig": 19900,
-      "rate": 30,
-      "img": "https://product-image.kurly.com/product/image/e01b02ca-5c4b-4a6c-9a56-7bc2abd8261b.jpg",
-      "url": "https://www.kurly.com/goods/1002081876",
       "slot": "soup"
     },
     {
@@ -1944,16 +1964,6 @@
       "slot": "main"
     },
     {
-      "id": 1000351606,
-      "name": "[숭의가든] 옛날 소 불고기 / 한돈 목살 양념 구이 (택 1)",
-      "price": 14390,
-      "orig": 15990,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/b0c6e133-af61-41fe-9747-e5372fb21a63.jpg",
-      "url": "https://www.kurly.com/goods/1000351606",
-      "slot": "main"
-    },
-    {
       "id": 5106461,
       "name": "[사미헌] 야채담은 소불고기 400g (냉동)",
       "price": 11362,
@@ -1974,16 +1984,6 @@
       "slot": "main"
     },
     {
-      "id": 1000167910,
-      "name": "[담양갈비창고] 바싹불고기 2종",
-      "price": 9000,
-      "orig": 12000,
-      "rate": 25,
-      "img": "https://product-image.kurly.com/product/image/617cfc1f-ccbb-474f-bb32-8fc0e73a0fda.jpg",
-      "url": "https://www.kurly.com/goods/1000167910",
-      "slot": "main"
-    },
-    {
       "id": 1001465908,
       "name": "[윤서울] 김도윤 셰프의 인기 불고기 3종(택1)",
       "price": 8091,
@@ -1994,13 +1994,33 @@
       "slot": "soup"
     },
     {
-      "id": 5157171,
-      "name": "[담양갈비창고] 한돈 한판 바싹불고기 360g",
-      "price": 9000,
-      "orig": 12000,
-      "rate": 25,
-      "img": "https://product-image.kurly.com/product/image/6db17f84-7c4a-4bba-bc1e-8deb6248a4e6.jpg?v=0418",
-      "url": "https://www.kurly.com/goods/5157171",
+      "id": 1001398968,
+      "name": "[윤서울] 김도윤 셰프의 한돈 고추장불고기",
+      "price": 8091,
+      "orig": 8990,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/35e257a8-40f7-4d11-90d8-cdd2b5319a27.jpg",
+      "url": "https://www.kurly.com/goods/1001398968",
+      "slot": "soup"
+    },
+    {
+      "id": 1001403607,
+      "name": "[윤서울] 김도윤 셰프의 한돈 간장불고기",
+      "price": 8091,
+      "orig": 8990,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/f9d887b5-5e34-4f03-a657-02147b812b5b.jpg",
+      "url": "https://www.kurly.com/goods/1001403607",
+      "slot": "soup"
+    },
+    {
+      "id": 1000351606,
+      "name": "[숭의가든] 옛날 소 불고기 / 한돈 목살 양념 구이 (택 1)",
+      "price": 14390,
+      "orig": 15990,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/b0c6e133-af61-41fe-9747-e5372fb21a63.jpg",
+      "url": "https://www.kurly.com/goods/1000351606",
       "slot": "main"
     },
     {
@@ -2014,6 +2034,26 @@
       "slot": "main"
     },
     {
+      "id": 1000167910,
+      "name": "[담양갈비창고] 바싹불고기 2종",
+      "price": 9000,
+      "orig": 12000,
+      "rate": 25,
+      "img": "https://product-image.kurly.com/product/image/617cfc1f-ccbb-474f-bb32-8fc0e73a0fda.jpg",
+      "url": "https://www.kurly.com/goods/1000167910",
+      "slot": "main"
+    },
+    {
+      "id": 1001353387,
+      "name": "[쉐프컬렉션] 배 소불고기 200g",
+      "price": 6490,
+      "orig": 6980,
+      "rate": 7,
+      "img": "https://product-image.kurly.com/product/image/bb6a3a3d-ab4e-496c-aabf-f8ce9b8f0e68.jpg",
+      "url": "https://www.kurly.com/goods/1001353387",
+      "slot": "main"
+    },
+    {
       "id": 5106460,
       "name": "[사미헌] 마늘듬뿍 소불고기 340g",
       "price": 13205,
@@ -2024,43 +2064,13 @@
       "slot": "main"
     },
     {
-      "id": 1001398968,
-      "name": "[윤서울] 김도윤 셰프의 한돈 고추장불고기",
-      "price": 8091,
-      "orig": 8990,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/35e257a8-40f7-4d11-90d8-cdd2b5319a27.jpg",
-      "url": "https://www.kurly.com/goods/1001398968",
-      "slot": "soup"
-    },
-    {
-      "id": 1000568194,
-      "name": "[둥구나무] 간편 주먹밥 세트 (밥새우/불고기/묵은지)",
-      "price": 7340,
-      "orig": 7900,
-      "rate": 7,
-      "img": "https://product-image.kurly.com/product/image/58b9a4cb-0418-4e03-8816-18975551aa96.jpg",
-      "url": "https://www.kurly.com/goods/1000568194",
-      "slot": "banchan"
-    },
-    {
-      "id": 1001403607,
-      "name": "[윤서울] 김도윤 셰프의 한돈 간장불고기",
-      "price": 8091,
-      "orig": 8990,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/f9d887b5-5e34-4f03-a657-02147b812b5b.jpg",
-      "url": "https://www.kurly.com/goods/1001403607",
-      "slot": "soup"
-    },
-    {
-      "id": 1001353387,
-      "name": "[쉐프컬렉션] 배 소불고기 200g",
-      "price": 6490,
-      "orig": 6980,
-      "rate": 7,
-      "img": "https://product-image.kurly.com/product/image/bb6a3a3d-ab4e-496c-aabf-f8ce9b8f0e68.jpg",
-      "url": "https://www.kurly.com/goods/1001353387",
+      "id": 5157171,
+      "name": "[담양갈비창고] 한돈 한판 바싹불고기 360g",
+      "price": 9000,
+      "orig": 12000,
+      "rate": 25,
+      "img": "https://product-image.kurly.com/product/image/6db17f84-7c4a-4bba-bc1e-8deb6248a4e6.jpg?v=0418",
+      "url": "https://www.kurly.com/goods/5157171",
       "slot": "main"
     },
     {
@@ -2074,6 +2084,16 @@
       "slot": "main"
     },
     {
+      "id": 1000553729,
+      "name": "[KF365] 한돈 고추장양념 돼지불고기 (냉동) 1.2kg (300g*4ea)",
+      "price": 14680,
+      "orig": 18350,
+      "rate": 20,
+      "img": "https://product-image.kurly.com/product/image/1fe8c497-320b-4407-bc91-3752d073b73d.jpg",
+      "url": "https://www.kurly.com/goods/1000553729",
+      "slot": "main"
+    },
+    {
       "id": 1001099771,
       "name": "고기반찬 골라담기 10종",
       "price": 10620,
@@ -2084,14 +2104,14 @@
       "slot": "main"
     },
     {
-      "id": 1002249680,
-      "name": "[저당미식] 설탕을 넣지 않은 돼지불고기 2종 (택1)",
-      "price": 7900,
-      "orig": 9900,
-      "rate": 20,
-      "img": "https://product-image.kurly.com/product/image/017e64d1-121b-4a5c-aa70-c6b0c0a0016e.jpg",
-      "url": "https://www.kurly.com/goods/1002249680",
-      "slot": "main"
+      "id": 1000568194,
+      "name": "[둥구나무] 간편 주먹밥 세트 (밥새우/불고기/묵은지)",
+      "price": 7340,
+      "orig": 7900,
+      "rate": 7,
+      "img": "https://product-image.kurly.com/product/image/58b9a4cb-0418-4e03-8816-18975551aa96.jpg",
+      "url": "https://www.kurly.com/goods/1000568194",
+      "slot": "banchan"
     },
     {
       "id": 1001353385,
@@ -2124,13 +2144,23 @@
       "slot": "soup"
     },
     {
-      "id": 1000553729,
-      "name": "[KF365] 한돈 고추장양념 돼지불고기 (냉동) 1.2kg (300g*4ea)",
-      "price": 14680,
-      "orig": 18350,
+      "id": 1002249680,
+      "name": "[저당미식] 설탕을 넣지 않은 돼지불고기 2종 (택1)",
+      "price": 7900,
+      "orig": 9900,
       "rate": 20,
-      "img": "https://product-image.kurly.com/product/image/1fe8c497-320b-4407-bc91-3752d073b73d.jpg",
-      "url": "https://www.kurly.com/goods/1000553729",
+      "img": "https://product-image.kurly.com/product/image/017e64d1-121b-4a5c-aa70-c6b0c0a0016e.jpg",
+      "url": "https://www.kurly.com/goods/1002249680",
+      "slot": "main"
+    },
+    {
+      "id": 1001353383,
+      "name": "[올반] 바짝 고추장오리불고기 200g",
+      "price": 5520,
+      "orig": 6500,
+      "rate": 15,
+      "img": "https://product-image.kurly.com/product/image/87dfd57f-9f26-44f2-94bb-28198f455fa6.jpg",
+      "url": "https://www.kurly.com/goods/1001353383",
       "slot": "main"
     },
     {
@@ -2144,16 +2174,6 @@
       "slot": "soup"
     },
     {
-      "id": 1001353383,
-      "name": "[올반] 바짝 고추장오리불고기 200g",
-      "price": 5520,
-      "orig": 6500,
-      "rate": 15,
-      "img": "https://product-image.kurly.com/product/image/87dfd57f-9f26-44f2-94bb-28198f455fa6.jpg",
-      "url": "https://www.kurly.com/goods/1001353383",
-      "slot": "main"
-    },
-    {
       "id": 1001366276,
       "name": "[정다운] 더 얇아서 맛있는 오리주물럭 불고기맛 500g (냉장)",
       "price": 10900,
@@ -2161,16 +2181,6 @@
       "rate": 8,
       "img": "https://product-image.kurly.com/product/image/128e3cae-2408-49af-94fd-1f620abef9d0.jpg",
       "url": "https://www.kurly.com/goods/1001366276",
-      "slot": "main"
-    },
-    {
-      "id": 1001202465,
-      "name": "[KF365] 온 가족 함께 즐기는 고기반찬 8종 모음 (택 1) ",
-      "price": 14190,
-      "orig": 17990,
-      "rate": 21,
-      "img": "https://product-image.kurly.com/product/image/dfbbc76a-3c99-4d0a-8890-7ae196accde3.jpg",
-      "url": "https://www.kurly.com/goods/1001202465",
       "slot": "main"
     },
     {
@@ -2184,13 +2194,13 @@
       "slot": "main"
     },
     {
-      "id": 1000417443,
-      "name": "[KF365] 오리주물럭 600g (200gX3개입)",
-      "price": 15210,
-      "orig": 16900,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/e6be4634-87e1-4b41-9ee8-0bad8c1e0a32.jpg",
-      "url": "https://www.kurly.com/goods/1000417443",
+      "id": 1001202465,
+      "name": "[KF365] 온 가족 함께 즐기는 고기반찬 8종 모음 (택 1) ",
+      "price": 14190,
+      "orig": 17990,
+      "rate": 21,
+      "img": "https://product-image.kurly.com/product/image/dfbbc76a-3c99-4d0a-8890-7ae196accde3.jpg",
+      "url": "https://www.kurly.com/goods/1001202465",
       "slot": "main"
     },
     {
@@ -2201,6 +2211,16 @@
       "rate": 8,
       "img": "https://product-image.kurly.com/product/image/79a25a83-529b-4be2-b67f-e62bdc235f9a.jpg",
       "url": "https://www.kurly.com/goods/1000315120",
+      "slot": "main"
+    },
+    {
+      "id": 1000417443,
+      "name": "[KF365] 오리주물럭 600g (200gX3개입)",
+      "price": 15210,
+      "orig": 16900,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/e6be4634-87e1-4b41-9ee8-0bad8c1e0a32.jpg",
+      "url": "https://www.kurly.com/goods/1000417443",
       "slot": "main"
     },
     {
@@ -2254,6 +2274,16 @@
       "slot": "soup"
     },
     {
+      "id": 1001516984,
+      "name": " [포천이동갈비] 깊은 맛의 숙성 양념구이 골라담기 2종 (택1)",
+      "price": 19541,
+      "orig": 22990,
+      "rate": 15,
+      "img": "https://product-image.kurly.com/product/image/c9505cf5-f0cb-46a9-9980-03e60aba34db.jpg",
+      "url": "https://www.kurly.com/goods/1001516984",
+      "slot": "main"
+    },
+    {
       "id": 5025888,
       "name": "[숭의가든] 한돈 목살 양념 구이 690g",
       "price": 14390,
@@ -2264,6 +2294,16 @@
       "slot": "main"
     },
     {
+      "id": 1002295904,
+      "name": "[숭의가든] 전통 갈비탕 1KG",
+      "price": 11900,
+      "orig": 13900,
+      "rate": 14,
+      "img": "https://product-image.kurly.com/product/image/a2ff21ba-d177-46a7-82c9-740e3bfcdf1d.jpg",
+      "url": "https://www.kurly.com/goods/1002295904",
+      "slot": "soup"
+    },
+    {
       "id": 1000420040,
       "name": "[KF365] 양념 칼집 목살구이1kg (냉동)",
       "price": 14180,
@@ -2271,6 +2311,16 @@
       "rate": 14,
       "img": "https://product-image.kurly.com/product/image/7a011680-610b-4940-8d83-d2bb9e5b5f41.jpg",
       "url": "https://www.kurly.com/goods/1000420040",
+      "slot": "main"
+    },
+    {
+      "id": 5085771,
+      "name": "[KF365] 춘천식 닭갈비 2종 (냉장) (택1)",
+      "price": 6900,
+      "orig": 9700,
+      "rate": 28,
+      "img": "https://product-image.kurly.com/product/image/b815843d-c550-48ea-ac79-3def6c73633e.jpg",
+      "url": "https://www.kurly.com/goods/5085771",
       "slot": "main"
     },
     {
@@ -2294,36 +2344,6 @@
       "slot": "main"
     },
     {
-      "id": 1002295904,
-      "name": "[숭의가든] 전통 갈비탕 1KG",
-      "price": 11900,
-      "orig": 13900,
-      "rate": 14,
-      "img": "https://product-image.kurly.com/product/image/a2ff21ba-d177-46a7-82c9-740e3bfcdf1d.jpg",
-      "url": "https://www.kurly.com/goods/1002295904",
-      "slot": "soup"
-    },
-    {
-      "id": 5085771,
-      "name": "[KF365] 춘천식 닭갈비 2종 (냉장) (택1)",
-      "price": 6900,
-      "orig": 9700,
-      "rate": 28,
-      "img": "https://product-image.kurly.com/product/image/b815843d-c550-48ea-ac79-3def6c73633e.jpg",
-      "url": "https://www.kurly.com/goods/5085771",
-      "slot": "main"
-    },
-    {
-      "id": 1001516984,
-      "name": " [포천이동갈비] 깊은 맛의 숙성 양념구이 골라담기 2종 (택1)",
-      "price": 19541,
-      "orig": 22990,
-      "rate": 15,
-      "img": "https://product-image.kurly.com/product/image/c9505cf5-f0cb-46a9-9980-03e60aba34db.jpg",
-      "url": "https://www.kurly.com/goods/1001516984",
-      "slot": "main"
-    },
-    {
       "id": 1001353836,
       "name": "[KF365] 닭가슴살로 만든 닭갈비 600g (300g*2ea)",
       "price": 10190,
@@ -2344,13 +2364,13 @@
       "slot": "main"
     },
     {
-      "id": 1002361581,
-      "name": "[차려낸] 간편하게 즐기는 순살 임연수구이 80g",
-      "price": 4890,
-      "orig": 5990,
-      "rate": 18,
-      "img": "https://product-image.kurly.com/product/image/fbcbe161-6029-4683-9aa5-6f03a037c18b.jpg",
-      "url": "https://www.kurly.com/goods/1002361581",
+      "id": 5043699,
+      "name": "[비비고] 노릇하게 구운 가자미 구이",
+      "price": 3980,
+      "orig": 4980,
+      "rate": 20,
+      "img": "https://product-image.kurly.com/product/image/45037f6f-44f2-45b3-8b2f-5980ed9d7ded.jpg",
+      "url": "https://www.kurly.com/goods/5043699",
       "slot": "main"
     },
     {
@@ -2364,13 +2384,13 @@
       "slot": "tofu"
     },
     {
-      "id": 5043699,
-      "name": "[비비고] 노릇하게 구운 가자미 구이",
-      "price": 3980,
-      "orig": 4980,
-      "rate": 20,
-      "img": "https://product-image.kurly.com/product/image/45037f6f-44f2-45b3-8b2f-5980ed9d7ded.jpg",
-      "url": "https://www.kurly.com/goods/5043699",
+      "id": 5090290,
+      "name": "[비비고] 노릇하게 구운 갈치구이",
+      "price": 4980,
+      "orig": 5480,
+      "rate": 9,
+      "img": "https://product-image.kurly.com/product/image/67a450a0-a77f-4679-aa83-513c7f6323ff.jpg",
+      "url": "https://www.kurly.com/goods/5090290",
       "slot": "main"
     },
     {
@@ -2384,6 +2404,16 @@
       "slot": "main"
     },
     {
+      "id": 1002361581,
+      "name": "[차려낸] 간편하게 즐기는 순살 임연수구이 80g",
+      "price": 4890,
+      "orig": 5990,
+      "rate": 18,
+      "img": "https://product-image.kurly.com/product/image/fbcbe161-6029-4683-9aa5-6f03a037c18b.jpg",
+      "url": "https://www.kurly.com/goods/1002361581",
+      "slot": "main"
+    },
+    {
       "id": 1001450174,
       "name": "[차려낸] 간편하게 즐기는 순살 고등어구이 80g (택1)",
       "price": 4890,
@@ -2391,16 +2421,6 @@
       "rate": 18,
       "img": "https://product-image.kurly.com/product/image/320a0427-0927-4db8-9790-3ab99269cfb8.jpg",
       "url": "https://www.kurly.com/goods/1001450174",
-      "slot": "main"
-    },
-    {
-      "id": 5090290,
-      "name": "[비비고] 노릇하게 구운 갈치구이",
-      "price": 4980,
-      "orig": 5480,
-      "rate": 9,
-      "img": "https://product-image.kurly.com/product/image/67a450a0-a77f-4679-aa83-513c7f6323ff.jpg",
-      "url": "https://www.kurly.com/goods/5090290",
       "slot": "main"
     },
     {
@@ -2414,14 +2434,14 @@
       "slot": "main"
     },
     {
-      "id": 1000930043,
-      "name": "[KF365] 에어프라이어용 생선까스",
-      "price": 9000,
-      "orig": 13500,
-      "rate": 33,
-      "img": "https://product-image.kurly.com/product/image/1fe6b715-b684-4c14-9348-1e4a8ec2c60d.jpg",
-      "url": "https://www.kurly.com/goods/1000930043",
-      "slot": "main"
+      "id": 1002324063,
+      "name": "[이금선명인] 국산 가자미식해",
+      "price": 6900,
+      "orig": 7500,
+      "rate": 8,
+      "img": "https://product-image.kurly.com/product/image/dfab61d6-e252-4acc-9ea5-b0734a75d2e5.jpg",
+      "url": "https://www.kurly.com/goods/1002324063",
+      "slot": "kimchi"
     },
     {
       "id": 1000118076,
@@ -2431,16 +2451,6 @@
       "rate": 15,
       "img": "https://product-image.kurly.com/product/image/79a48b4c-2c8b-4e52-be6f-cc00c21552a5.jpg",
       "url": "https://www.kurly.com/goods/1000118076",
-      "slot": "kimchi"
-    },
-    {
-      "id": 1002324063,
-      "name": "[이금선명인] 국산 가자미식해",
-      "price": 6900,
-      "orig": 7500,
-      "rate": 8,
-      "img": "https://product-image.kurly.com/product/image/dfab61d6-e252-4acc-9ea5-b0734a75d2e5.jpg",
-      "url": "https://www.kurly.com/goods/1002324063",
       "slot": "kimchi"
     },
     {
@@ -2462,6 +2472,16 @@
       "img": "https://product-image.kurly.com/product/image/3825052d-7464-44b5-8751-60758debe881.jpg",
       "url": "https://www.kurly.com/goods/1001249260",
       "slot": "kimchi"
+    },
+    {
+      "id": 1000930043,
+      "name": "[KF365] 에어프라이어용 생선까스",
+      "price": 9000,
+      "orig": 13500,
+      "rate": 33,
+      "img": "https://product-image.kurly.com/product/image/1fe6b715-b684-4c14-9348-1e4a8ec2c60d.jpg",
+      "url": "https://www.kurly.com/goods/1000930043",
+      "slot": "main"
     },
     {
       "id": 5135994,
@@ -2486,9 +2506,9 @@
     {
       "id": 1000304161,
       "name": "[KF365] 에어프라이어용 미니 돈까스 2종",
-      "price": 6990,
+      "price": 6790,
       "orig": 9990,
-      "rate": 30,
+      "rate": 32,
       "img": "https://product-image.kurly.com/product/image/58230886-e3b4-4a17-9bfe-d65ca03d6517.jpg",
       "url": "https://www.kurly.com/goods/1000304161",
       "slot": "main"
@@ -2496,21 +2516,11 @@
     {
       "id": 1000391155,
       "name": "[KF365] 에어프라이어용 치즈 폭탄 돈까스 300g (모짜렐라)",
-      "price": 7990,
+      "price": 8490,
       "orig": 9990,
-      "rate": 20,
+      "rate": 15,
       "img": "https://product-image.kurly.com/product/image/1cde10b6-3b02-4838-97ee-522574f54d94.jpg",
       "url": "https://www.kurly.com/goods/1000391155",
-      "slot": "main"
-    },
-    {
-      "id": 5125377,
-      "name": "[부엉이돈가스] 더티 치즈 돈가스",
-      "price": 8990,
-      "orig": 9590,
-      "rate": 6,
-      "img": "https://img-cf.kurly.com/shop/data/goods/1652260826388l0.jpg",
-      "url": "https://www.kurly.com/goods/5125377",
       "slot": "main"
     },
     {
@@ -2544,36 +2554,6 @@
       "slot": "main"
     },
     {
-      "id": 1001029618,
-      "name": "[미식당] 덮밥용 돈카츠 (가츠동 소스 포함)",
-      "price": 6990,
-      "orig": 9990,
-      "rate": 30,
-      "img": "https://product-image.kurly.com/product/image/8f228f9f-f0d4-426e-87b2-a76fc62706b7.jpg",
-      "url": "https://www.kurly.com/goods/1001029618",
-      "slot": "main"
-    },
-    {
-      "id": 1002099871,
-      "name": "[동원] 미니돈까스 900g",
-      "price": 6980,
-      "orig": 8980,
-      "rate": 22,
-      "img": "https://product-image.kurly.com/product/image/05c003d6-873f-4599-9577-2075083a4dd3.png",
-      "url": "https://www.kurly.com/goods/1002099871",
-      "slot": "main"
-    },
-    {
-      "id": 5037880,
-      "name": "[고메공방] 미친 치즈돈까스",
-      "price": 13410,
-      "orig": 14900,
-      "rate": 10,
-      "img": "https://img-cf.kurly.com/shop/data/goods/1563242231409l0.jpg",
-      "url": "https://www.kurly.com/goods/5037880",
-      "slot": "main"
-    },
-    {
       "id": 1000746954,
       "name": "[KF365] 생 안심 돈까스 480g (120g*4입)(냉장)",
       "price": 10710,
@@ -2581,26 +2561,6 @@
       "rate": 10,
       "img": "https://product-image.kurly.com/product/image/3b597b29-a338-4b61-a68f-f4d1b6b89782.jpg",
       "url": "https://www.kurly.com/goods/1000746954",
-      "slot": "main"
-    },
-    {
-      "id": 5131216,
-      "name": "[미식당] 등심 돈카츠 180g * 2입 (소스포함)",
-      "price": 9990,
-      "orig": 10990,
-      "rate": 9,
-      "img": "https://product-image.kurly.com/product/image/68f77a3a-b8b9-4daf-aeaa-f9d7df028181.jpg",
-      "url": "https://www.kurly.com/goods/5131216",
-      "slot": "main"
-    },
-    {
-      "id": 1002427580,
-      "name": "[미식당] 등심 스틱 돈까스 370g",
-      "price": 7990,
-      "orig": 9990,
-      "rate": 20,
-      "img": "https://product-image.kurly.com/product/image/c2e66d3d-760f-4beb-aa15-1336f7102ca6.jpg",
-      "url": "https://www.kurly.com/goods/1002427580",
       "slot": "main"
     },
     {
@@ -2614,6 +2574,26 @@
       "slot": "main"
     },
     {
+      "id": 1002427580,
+      "name": "[미식당] 등심 스틱 돈까스 370g",
+      "price": 7990,
+      "orig": 9990,
+      "rate": 20,
+      "img": "https://product-image.kurly.com/product/image/c2e66d3d-760f-4beb-aa15-1336f7102ca6.jpg",
+      "url": "https://www.kurly.com/goods/1002427580",
+      "slot": "main"
+    },
+    {
+      "id": 5131216,
+      "name": "[미식당] 등심 돈카츠 180g * 2입 (소스포함)",
+      "price": 9990,
+      "orig": 10990,
+      "rate": 9,
+      "img": "https://product-image.kurly.com/product/image/68f77a3a-b8b9-4daf-aeaa-f9d7df028181.jpg",
+      "url": "https://www.kurly.com/goods/5131216",
+      "slot": "main"
+    },
+    {
       "id": 1000643217,
       "name": "[KF365] 생 등심 치즈돈까스 4입 400g (냉장)",
       "price": 9900,
@@ -2624,33 +2604,13 @@
       "slot": "main"
     },
     {
-      "id": 1000743035,
-      "name": "[KF365] 에어프라이어용 통 닭가슴살 치킨까스 120g*5pk",
-      "price": 11900,
-      "orig": 13590,
-      "rate": 12,
-      "img": "https://product-image.kurly.com/product/image/0e09613b-fba9-4615-b6db-d4376645cfaf.jpg",
-      "url": "https://www.kurly.com/goods/1000743035",
-      "slot": "main"
-    },
-    {
-      "id": 1002002546,
-      "name": "[부엉이돈가스] 멘치카츠 320g (4개입)",
-      "price": 8990,
-      "orig": 9590,
-      "rate": 6,
-      "img": "https://product-image.kurly.com/product/image/1ad3f887-026d-49dc-a389-20b648f73ee4.jpg",
-      "url": "https://www.kurly.com/goods/1002002546",
-      "slot": "main"
-    },
-    {
-      "id": 1001353834,
-      "name": "[KF365] 에어프라이어용 통안심카츠 280g(70g*4ea)",
-      "price": 7900,
-      "orig": 9900,
-      "rate": 20,
-      "img": "https://product-image.kurly.com/product/image/2f9f4262-4a14-4555-a80e-53623bade4e3.jpg",
-      "url": "https://www.kurly.com/goods/1001353834",
+      "id": 5037880,
+      "name": "[고메공방] 미친 치즈돈까스",
+      "price": 13410,
+      "orig": 14900,
+      "rate": 10,
+      "img": "https://img-cf.kurly.com/shop/data/goods/1563242231409l0.jpg",
+      "url": "https://www.kurly.com/goods/5037880",
       "slot": "main"
     },
     {
@@ -2664,6 +2624,76 @@
       "slot": "main"
     },
     {
+      "id": 1002057704,
+      "name": "[CJ] 꼬마 돈까스 1kg",
+      "price": 12820,
+      "orig": 13980,
+      "rate": 8,
+      "img": "https://product-image.kurly.com/product/image/df174c5e-29b8-4a5f-8b3d-f21352f1713d.png",
+      "url": "https://www.kurly.com/goods/1002057704",
+      "slot": "main"
+    },
+    {
+      "id": 1001029618,
+      "name": "[미식당] 덮밥용 돈카츠 (가츠동 소스 포함)",
+      "price": 6990,
+      "orig": 9990,
+      "rate": 30,
+      "img": "https://product-image.kurly.com/product/image/8f228f9f-f0d4-426e-87b2-a76fc62706b7.jpg",
+      "url": "https://www.kurly.com/goods/1001029618",
+      "slot": "main"
+    },
+    {
+      "id": 1001353838,
+      "name": "[KF365] 에어프라이어용 통등심 롱카츠 450g",
+      "price": 9990,
+      "orig": 12500,
+      "rate": 20,
+      "img": "https://product-image.kurly.com/product/image/18c3d6fa-394f-4dd3-a525-4d5c593f7d56.jpg",
+      "url": "https://www.kurly.com/goods/1001353838",
+      "slot": "main"
+    },
+    {
+      "id": 1002002546,
+      "name": "[부엉이돈가스] 멘치카츠 320g (4개입)",
+      "price": 8990,
+      "orig": 9590,
+      "rate": 6,
+      "img": "https://product-image.kurly.com/product/image/1ad3f887-026d-49dc-a389-20b648f73ee4.jpg",
+      "url": "https://www.kurly.com/goods/1002002546",
+      "slot": "main"
+    },
+    {
+      "id": 1000743035,
+      "name": "[KF365] 에어프라이어용 통 닭가슴살 치킨까스 120g*5pk",
+      "price": 11900,
+      "orig": 13590,
+      "rate": 12,
+      "img": "https://product-image.kurly.com/product/image/0e09613b-fba9-4615-b6db-d4376645cfaf.jpg",
+      "url": "https://www.kurly.com/goods/1000743035",
+      "slot": "main"
+    },
+    {
+      "id": 1001353834,
+      "name": "[KF365] 에어프라이어용 통안심카츠 280g(70g*4ea)",
+      "price": 7900,
+      "orig": 9900,
+      "rate": 20,
+      "img": "https://product-image.kurly.com/product/image/2f9f4262-4a14-4555-a80e-53623bade4e3.jpg",
+      "url": "https://www.kurly.com/goods/1001353834",
+      "slot": "main"
+    },
+    {
+      "id": 1002049353,
+      "name": "[청정원] 미니돈카츠 340g",
+      "price": 6580,
+      "orig": 7580,
+      "rate": 13,
+      "img": "https://product-image.kurly.com/product/image/0ecbd88d-b039-4c0a-bda6-d27f55d33417.png",
+      "url": "https://www.kurly.com/goods/1002049353",
+      "slot": "main"
+    },
+    {
       "id": 1001371948,
       "name": "[KF365] 에어프라이어용 통 닭안심살 치킨까스 500g",
       "price": 9300,
@@ -2674,13 +2704,13 @@
       "slot": "main"
     },
     {
-      "id": 1002057704,
-      "name": "[CJ] 꼬마 돈까스 1kg",
-      "price": 12820,
-      "orig": 13980,
-      "rate": 8,
-      "img": "https://product-image.kurly.com/product/image/df174c5e-29b8-4a5f-8b3d-f21352f1713d.png",
-      "url": "https://www.kurly.com/goods/1002057704",
+      "id": 1001541618,
+      "name": "[KF365] 에어프라이어용 닭가슴살 미니 카츠 500g",
+      "price": 7900,
+      "orig": 9900,
+      "rate": 20,
+      "img": "https://product-image.kurly.com/product/image/3d5f801e-3989-4654-9d66-c0d980467199.jpg",
+      "url": "https://www.kurly.com/goods/1001541618",
       "slot": "main"
     },
     {
@@ -2694,13 +2724,13 @@
       "slot": "soup"
     },
     {
-      "id": 1001541618,
-      "name": "[KF365] 에어프라이어용 닭가슴살 미니 카츠 500g",
-      "price": 7900,
-      "orig": 9900,
-      "rate": 20,
-      "img": "https://product-image.kurly.com/product/image/3d5f801e-3989-4654-9d66-c0d980467199.jpg",
-      "url": "https://www.kurly.com/goods/1001541618",
+      "id": 1000224109,
+      "name": "[조선호텔] 멘치카츠 500g",
+      "price": 8460,
+      "orig": 9400,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/c1cf9d87-074b-41bc-a491-903c1393d8d8.jpg",
+      "url": "https://www.kurly.com/goods/1000224109",
       "slot": "main"
     },
     {
@@ -2711,16 +2741,6 @@
       "rate": 20,
       "img": "https://product-image.kurly.com/product/image/e9ad1ce7-12b9-4a94-832d-61d1ed1f3a41.jpg",
       "url": "https://www.kurly.com/goods/1001075191",
-      "slot": "main"
-    },
-    {
-      "id": 1000224109,
-      "name": "[조선호텔] 멘치카츠 500g",
-      "price": 8460,
-      "orig": 9400,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/c1cf9d87-074b-41bc-a491-903c1393d8d8.jpg",
-      "url": "https://www.kurly.com/goods/1000224109",
       "slot": "main"
     },
     {
@@ -2755,10 +2775,10 @@
     },
     {
       "id": 5097405,
-      "name": "[3개이상 구매시 33%][정호영셰프의 우동카덴] 오리지널 우동",
-      "price": 4020,
+      "name": "[정호영셰프의 우동카덴] 오리지널 우동",
+      "price": 4200,
       "orig": 6000,
-      "rate": 33,
+      "rate": 30,
       "img": "https://product-image.kurly.com/product/image/682bfbd7-26cb-4e37-8a00-6aeacdd354f0.jpg?v=0531",
       "url": "https://www.kurly.com/goods/5097405",
       "slot": "soup"
@@ -2784,16 +2804,6 @@
       "slot": "main"
     },
     {
-      "id": 1002131884,
-      "name": "[슈퍼키친] 함박스테이크정식",
-      "price": 7560,
-      "orig": 8400,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/5e2a7672-7349-40c2-81cd-95fd4c9df6dd.jpg",
-      "url": "https://www.kurly.com/goods/1002131884",
-      "slot": "banchan"
-    },
-    {
       "id": 1002043343,
       "name": "[본죽] 소고기 장조림 130g",
       "price": 4410,
@@ -2814,16 +2824,6 @@
       "slot": "banchan"
     },
     {
-      "id": 5040717,
-      "name": "[본죽] 메추리알 쇠고기 장조림 (냉장)",
-      "price": 7110,
-      "orig": 7900,
-      "rate": 10,
-      "img": "https://img-cf.kurly.com/shop/data/goods/1645666118666l0.jpg",
-      "url": "https://www.kurly.com/goods/5040717",
-      "slot": "banchan"
-    },
-    {
       "id": 5053841,
       "name": "[누테이블] 소고기 메추리알 장조림 250g",
       "price": 3995,
@@ -2834,13 +2834,13 @@
       "slot": "banchan"
     },
     {
-      "id": 5049949,
-      "name": "[비비고] 소고기 장조림",
-      "price": 3500,
-      "orig": 3880,
-      "rate": 9,
-      "img": "https://product-image.kurly.com/product/image/6814ae17-f258-426a-8376-d15d85b917de.jpg",
-      "url": "https://www.kurly.com/goods/5049949",
+      "id": 5040717,
+      "name": "[본죽] 메추리알 쇠고기 장조림 (냉장)",
+      "price": 7110,
+      "orig": 7900,
+      "rate": 10,
+      "img": "https://img-cf.kurly.com/shop/data/goods/1645666118666l0.jpg",
+      "url": "https://www.kurly.com/goods/5040717",
       "slot": "banchan"
     },
     {
@@ -2854,6 +2854,16 @@
       "slot": "banchan"
     },
     {
+      "id": 5049949,
+      "name": "[비비고] 소고기 장조림",
+      "price": 3500,
+      "orig": 3880,
+      "rate": 9,
+      "img": "https://product-image.kurly.com/product/image/6814ae17-f258-426a-8376-d15d85b917de.jpg",
+      "url": "https://www.kurly.com/goods/5049949",
+      "slot": "banchan"
+    },
+    {
       "id": 1000347356,
       "name": "[본죽] 메추리알 장조림 1kg",
       "price": 8990,
@@ -2861,16 +2871,6 @@
       "rate": 17,
       "img": "https://product-image.kurly.com/product/image/b4f210d2-b6b0-4328-9357-c96a875d5b29.jpg",
       "url": "https://www.kurly.com/goods/1000347356",
-      "slot": "banchan"
-    },
-    {
-      "id": 1002476222,
-      "name": "[비비고] 돼지고기 장조림 370g ",
-      "price": 7980,
-      "orig": 9980,
-      "rate": 20,
-      "img": "https://product-image.kurly.com/product/image/02996804-277e-40b0-be24-bfa162951660.jpg",
-      "url": "https://www.kurly.com/goods/1002476222",
       "slot": "banchan"
     },
     {
@@ -2884,6 +2884,16 @@
       "slot": "banchan"
     },
     {
+      "id": 1002476222,
+      "name": "[비비고] 돼지고기 장조림 370g ",
+      "price": 7980,
+      "orig": 9980,
+      "rate": 20,
+      "img": "https://product-image.kurly.com/product/image/02996804-277e-40b0-be24-bfa162951660.jpg",
+      "url": "https://www.kurly.com/goods/1002476222",
+      "slot": "banchan"
+    },
+    {
       "id": 1000307663,
       "name": "[비비고] 메추리알장조림170G",
       "price": 3500,
@@ -2891,26 +2901,6 @@
       "rate": 9,
       "img": "https://product-image.kurly.com/product/image/10b97b12-c053-42af-ad55-b71b1c963cfa.jpg",
       "url": "https://www.kurly.com/goods/1000307663",
-      "slot": "banchan"
-    },
-    {
-      "id": 1000898770,
-      "name": "[온하루] 섭산적 장조림",
-      "price": 6975,
-      "orig": 7500,
-      "rate": 7,
-      "img": "https://product-image.kurly.com/product/image/ecf525cc-2319-4311-a19f-84b9389ffbc4.jpg",
-      "url": "https://www.kurly.com/goods/1000898770",
-      "slot": "banchan"
-    },
-    {
-      "id": 5048528,
-      "name": "[누테이블] 비빔 반숙 계란장",
-      "price": 3825,
-      "orig": 4500,
-      "rate": 15,
-      "img": "https://product-image.kurly.com/product/image/749daf8d-c89d-4a29-a168-b845a2758724.jpeg",
-      "url": "https://www.kurly.com/goods/5048528",
       "slot": "banchan"
     },
     {
@@ -2974,13 +2964,13 @@
       "slot": "banchan"
     },
     {
-      "id": 1001291796,
-      "name": "[온하루] 밑반찬 16종 골라담기 (택1)",
-      "price": 3825,
-      "orig": 4500,
-      "rate": 15,
-      "img": "https://product-image.kurly.com/product/image/f2a6689b-0d63-4aa0-b6b8-56ffccbc3c72.jpg",
-      "url": "https://www.kurly.com/goods/1001291796",
+      "id": 1001695665,
+      "name": "[슈퍼키친] 언양식소고기산적구이",
+      "price": 12510,
+      "orig": 13900,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/a9bc521d-dbd8-4134-9fd5-7ff42c1fc2d0.jpg",
+      "url": "https://www.kurly.com/goods/1001695665",
       "slot": "banchan"
     },
     {
@@ -3024,16 +3014,6 @@
       "slot": "banchan"
     },
     {
-      "id": 5041693,
-      "name": "[올반] 숙성 고추장돼지불백 180gx3팩",
-      "price": 11620,
-      "orig": 12500,
-      "rate": 7,
-      "img": "https://img-cf.kurly.com/shop/data/goods/1569908367599l0.jpg",
-      "url": "https://www.kurly.com/goods/5041693",
-      "slot": "main"
-    },
-    {
       "id": 1001326985,
       "name": "[오봉집] 인기 메뉴 7종, 택1",
       "price": 7300,
@@ -3044,6 +3024,16 @@
       "slot": "kimchi"
     },
     {
+      "id": 5041693,
+      "name": "[올반] 숙성 고추장돼지불백 180gx3팩",
+      "price": 11620,
+      "orig": 12500,
+      "rate": 7,
+      "img": "https://img-cf.kurly.com/shop/data/goods/1569908367599l0.jpg",
+      "url": "https://www.kurly.com/goods/5041693",
+      "slot": "main"
+    },
+    {
       "id": 1000484539,
       "name": "[궁] 양념육 3종 골라담기",
       "price": 9100,
@@ -3051,6 +3041,16 @@
       "rate": 8,
       "img": "https://product-image.kurly.com/product/image/2f28134f-889b-445e-9113-3190209feabe.jpg",
       "url": "https://www.kurly.com/goods/1000484539",
+      "slot": "main"
+    },
+    {
+      "id": 1001853597,
+      "name": "[저당미식] 설탕을 넣지 않은 간장 돼지불고기 500g (냉동)",
+      "price": 7900,
+      "orig": 9900,
+      "rate": 20,
+      "img": "https://product-image.kurly.com/product/image/4cfe1677-0c23-4dae-8ad7-b6a747ee356a.jpg",
+      "url": "https://www.kurly.com/goods/1001853597",
       "slot": "main"
     },
     {
@@ -3074,16 +3074,6 @@
       "slot": "main"
     },
     {
-      "id": 1001853597,
-      "name": "[저당미식] 설탕을 넣지 않은 간장 돼지불고기 500g (냉동)",
-      "price": 7900,
-      "orig": 9900,
-      "rate": 20,
-      "img": "https://product-image.kurly.com/product/image/4cfe1677-0c23-4dae-8ad7-b6a747ee356a.jpg",
-      "url": "https://www.kurly.com/goods/1001853597",
-      "slot": "main"
-    },
-    {
       "id": 1001935330,
       "name": "[달래해장] 입맛 돋는 오삼불고기 2종, 택1",
       "price": 8400,
@@ -3104,14 +3094,14 @@
       "slot": "main"
     },
     {
-      "id": 1001417487,
-      "name": "[사리원] 소불고기 잡채 500g",
-      "price": 10115,
-      "orig": 11900,
+      "id": 1001291796,
+      "name": "[온하루] 밑반찬 16종 골라담기 (택1)",
+      "price": 5100,
+      "orig": 6000,
       "rate": 15,
-      "img": "https://product-image.kurly.com/product/image/f9c8f6ed-e156-43d7-90ad-eca0a36cd09c.jpg",
-      "url": "https://www.kurly.com/goods/1001417487",
-      "slot": "soup"
+      "img": "https://product-image.kurly.com/product/image/f2a6689b-0d63-4aa0-b6b8-56ffccbc3c72.jpg",
+      "url": "https://www.kurly.com/goods/1001291796",
+      "slot": "banchan"
     },
     {
       "id": 5068510,
@@ -3154,16 +3144,6 @@
       "slot": "banchan"
     },
     {
-      "id": 1000898772,
-      "name": "[온하루] 잣 멸치볶음",
-      "price": 5115,
-      "orig": 5500,
-      "rate": 7,
-      "img": "https://product-image.kurly.com/product/image/c717d18e-fb09-43b8-9b1a-01e32d993c41.jpg",
-      "url": "https://www.kurly.com/goods/1000898772",
-      "slot": "banchan"
-    },
-    {
       "id": 1000016987,
       "name": "[슈퍼키친] 참깨소스닭가슴살버무리",
       "price": 4500,
@@ -3171,16 +3151,6 @@
       "rate": 10,
       "img": "https://product-image.kurly.com/product/image/b13304f1-99b8-48dd-9d7e-136e35d1666a.jpg",
       "url": "https://www.kurly.com/goods/1000016987",
-      "slot": "banchan"
-    },
-    {
-      "id": 1001912781,
-      "name": "[미자언니네] 인기 밑반찬 7종 골라담기 (택1)",
-      "price": 5394,
-      "orig": 5800,
-      "rate": 7,
-      "img": "https://product-image.kurly.com/product/image/6d5b9824-6982-44c6-969c-3d4b0e007fc1.jpg",
-      "url": "https://www.kurly.com/goods/1001912781",
       "slot": "banchan"
     },
     {
@@ -3194,16 +3164,6 @@
       "slot": "banchan"
     },
     {
-      "id": 1001208111,
-      "name": "[온하루] 고구마순 나물",
-      "price": 4250,
-      "orig": 5000,
-      "rate": 15,
-      "img": "https://product-image.kurly.com/product/image/e2497808-8e9f-4e81-821a-fd3a29a72853.jpg",
-      "url": "https://www.kurly.com/goods/1001208111",
-      "slot": "banchan"
-    },
-    {
       "id": 5114802,
       "name": "[둥구나무] 산채나물 비빔밥 세트",
       "price": 10690,
@@ -3211,36 +3171,6 @@
       "rate": 7,
       "img": "https://img-cf.kurly.com/shop/data/goods/164697584545l0.jpg",
       "url": "https://www.kurly.com/goods/5114802",
-      "slot": "banchan"
-    },
-    {
-      "id": 1001208115,
-      "name": "[온하루] 시래기나물",
-      "price": 3825,
-      "orig": 4500,
-      "rate": 15,
-      "img": "https://product-image.kurly.com/product/image/b4e6ee34-31e3-4e97-a4ed-3dae73635262.jpg",
-      "url": "https://www.kurly.com/goods/1001208115",
-      "slot": "banchan"
-    },
-    {
-      "id": 1001208107,
-      "name": "[온하루] 무나물",
-      "price": 3825,
-      "orig": 4500,
-      "rate": 15,
-      "img": "https://product-image.kurly.com/product/image/7fce066c-af9f-4614-ac7d-0121590efc56.jpg",
-      "url": "https://www.kurly.com/goods/1001208107",
-      "slot": "banchan"
-    },
-    {
-      "id": 1000899277,
-      "name": "[온하루] 들깨 토란대나물",
-      "price": 4675,
-      "orig": 5500,
-      "rate": 15,
-      "img": "https://product-image.kurly.com/product/image/0c557c3d-0579-46f0-80d5-407d0979c4ea.jpg",
-      "url": "https://www.kurly.com/goods/1000899277",
       "slot": "banchan"
     },
     {
@@ -3264,16 +3194,6 @@
       "slot": "banchan"
     },
     {
-      "id": 1001208113,
-      "name": "[온하루] 고사리나물",
-      "price": 5850,
-      "orig": 6500,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/ae9891a2-50f5-4cc5-8cae-debfe8395f56.jpg",
-      "url": "https://www.kurly.com/goods/1001208113",
-      "slot": "banchan"
-    },
-    {
       "id": 1000963147,
       "name": "[모현상회] 인기 무침류 5종, 택1 (냉장)",
       "price": 9900,
@@ -3281,16 +3201,6 @@
       "rate": 9,
       "img": "https://product-image.kurly.com/product/image/35d29c43-73e2-4063-bc36-1b250d74cb44.jpg",
       "url": "https://www.kurly.com/goods/1000963147",
-      "slot": "kimchi"
-    },
-    {
-      "id": 5059958,
-      "name": "[모현상회] 갑오징어 무침 300g (냉장)",
-      "price": 11500,
-      "orig": 12800,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/6f8d24d1-eda0-4d99-a059-dd4c717cb943.jpeg",
-      "url": "https://www.kurly.com/goods/5059958",
       "slot": "kimchi"
     },
     {
@@ -3314,6 +3224,16 @@
       "slot": "kimchi"
     },
     {
+      "id": 5059958,
+      "name": "[모현상회] 갑오징어 무침 300g (냉장)",
+      "price": 11500,
+      "orig": 12800,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/6f8d24d1-eda0-4d99-a059-dd4c717cb943.jpeg",
+      "url": "https://www.kurly.com/goods/5059958",
+      "slot": "kimchi"
+    },
+    {
       "id": 5059957,
       "name": "[모현상회] 참소라 무침 300g (냉장)",
       "price": 10590,
@@ -3334,16 +3254,6 @@
       "slot": "kimchi"
     },
     {
-      "id": 1001544833,
-      "name": "[비움반찬] 아귀채 무침",
-      "price": 5220,
-      "orig": 5800,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/96a655f6-9de7-4ea9-b180-620f87960139.jpg",
-      "url": "https://www.kurly.com/goods/1001544833",
-      "slot": "banchan"
-    },
-    {
       "id": 1001703110,
       "name": "[영산홍어] 국내산 홍어무침 150g",
       "price": 9100,
@@ -3352,6 +3262,16 @@
       "img": "https://product-image.kurly.com/product/image/930abad3-7ab7-45a1-9138-b2fb2bc0ec55.jpg",
       "url": "https://www.kurly.com/goods/1001703110",
       "slot": "kimchi"
+    },
+    {
+      "id": 1001544833,
+      "name": "[비움반찬] 아귀채 무침",
+      "price": 5220,
+      "orig": 5800,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/96a655f6-9de7-4ea9-b180-620f87960139.jpg",
+      "url": "https://www.kurly.com/goods/1001544833",
+      "slot": "banchan"
     },
     {
       "id": 1002403577,
@@ -3404,36 +3324,6 @@
       "slot": "banchan"
     },
     {
-      "id": 1000899279,
-      "name": "[온하루] 황태채무침",
-      "price": 5950,
-      "orig": 7000,
-      "rate": 15,
-      "img": "https://product-image.kurly.com/product/image/c6416a8d-2635-4a46-bafa-4df6c8dbf676.jpg",
-      "url": "https://www.kurly.com/goods/1000899279",
-      "slot": "banchan"
-    },
-    {
-      "id": 5052878,
-      "name": "[미자언니네] 무말랭이 진미무침",
-      "price": 6324,
-      "orig": 6800,
-      "rate": 7,
-      "img": "https://img-cf.kurly.com/shop/data/goods/1590741664504l0.jpg",
-      "url": "https://www.kurly.com/goods/5052878",
-      "slot": "banchan"
-    },
-    {
-      "id": 1002238592,
-      "name": "[마마리] 새송이 들깨 무침",
-      "price": 4870,
-      "orig": 5300,
-      "rate": 8,
-      "img": "https://product-image.kurly.com/product/image/1a8e8781-f90a-40b7-86f9-d7746dfa8a8f.jpg",
-      "url": "https://www.kurly.com/goods/1002238592",
-      "slot": "banchan"
-    },
-    {
       "id": 1002324071,
       "name": "[삼삼물산] 미나리 꼬막무침",
       "price": 7590,
@@ -3454,16 +3344,6 @@
       "slot": "banchan"
     },
     {
-      "id": 5030251,
-      "name": "[미자언니네] 애호박나물볶음",
-      "price": 4929,
-      "orig": 5300,
-      "rate": 7,
-      "img": "https://img-cf.kurly.com/shop/data/goods/1538725388149l0.jpg",
-      "url": "https://www.kurly.com/goods/5030251",
-      "slot": "banchan"
-    },
-    {
       "id": 1001717896,
       "name": "[영산홍어] 인기 홍어회 & 무침 4종, 택1",
       "price": 9100,
@@ -3471,6 +3351,26 @@
       "rate": 8,
       "img": "https://product-image.kurly.com/product/image/148a3fc3-c259-40da-83dd-4718ba57b835.jpg",
       "url": "https://www.kurly.com/goods/1001717896",
+      "slot": "kimchi"
+    },
+    {
+      "id": 1001974706,
+      "name": "[이금선명인] 비빔오징어젓",
+      "price": 5900,
+      "orig": 6500,
+      "rate": 9,
+      "img": "https://product-image.kurly.com/product/image/ecfb7568-3176-45f1-af64-7f991e3dd88c.jpg",
+      "url": "https://www.kurly.com/goods/1001974706",
+      "slot": "kimchi"
+    },
+    {
+      "id": 1002324159,
+      "name": "[삼삼물산] 미나리 멍게/꼬막무침 2종, 택1",
+      "price": 7590,
+      "orig": 8590,
+      "rate": 11,
+      "img": "https://product-image.kurly.com/product/image/81c2689a-9cf2-4b0b-b40d-49ad765c0e89.jpg",
+      "url": "https://www.kurly.com/goods/1002324159",
       "slot": "kimchi"
     },
     {
@@ -3494,16 +3394,6 @@
       "slot": "banchan"
     },
     {
-      "id": 1000898774,
-      "name": "[온하루] 아귀포 생땅콩 호두조림",
-      "price": 5780,
-      "orig": 6800,
-      "rate": 15,
-      "img": "https://product-image.kurly.com/product/image/270ef0ef-83f6-4e4c-bad3-2d497216d754.jpg",
-      "url": "https://www.kurly.com/goods/1000898774",
-      "slot": "banchan"
-    },
-    {
       "id": 1000246945,
       "name": "[슈퍼키친] 새우해파리냉채",
       "price": 6696,
@@ -3511,16 +3401,6 @@
       "rate": 7,
       "img": "https://product-image.kurly.com/product/image/fec146e5-679d-46d2-8f39-9f10a2de2b39.jpg",
       "url": "https://www.kurly.com/goods/1000246945",
-      "slot": "banchan"
-    },
-    {
-      "id": 1001197004,
-      "name": "[온하루] 한우연근조림",
-      "price": 4950,
-      "orig": 5500,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/ba217303-7d77-46fe-bb92-85756bd2e0b3.jpg",
-      "url": "https://www.kurly.com/goods/1001197004",
       "slot": "banchan"
     },
     {
@@ -3534,43 +3414,23 @@
       "slot": "kimchi"
     },
     {
-      "id": 5035006,
-      "name": "[바비엔] 오징어 볶음 2종, 택1",
-      "price": 8900,
-      "orig": 9900,
-      "rate": 10,
-      "img": "https://img-cf.kurly.com/shop/data/goods/1653037345236l0.jpeg",
-      "url": "https://www.kurly.com/goods/5035006",
-      "slot": "kimchi"
-    },
-    {
-      "id": 1001109604,
-      "name": "[압구정오징어] 갑오징어 볶음 2종, 택1",
+      "id": 1000270110,
+      "name": "[압구정오징어] 오징어 볶음 2종, 택1",
       "price": 7500,
-      "orig": 10900,
-      "rate": 31,
-      "img": "https://product-image.kurly.com/product/image/568c9a24-18ca-40c4-b9e0-950f59a025b9.jpg",
-      "url": "https://www.kurly.com/goods/1001109604",
+      "orig": 9900,
+      "rate": 24,
+      "img": "https://product-image.kurly.com/product/image/1d30b3cd-b14f-434f-8520-44091c08002a.jpg",
+      "url": "https://www.kurly.com/goods/1000270110",
       "slot": "kimchi"
     },
     {
-      "id": 5035000,
-      "name": "[바비엔] 낙지 볶음 2종, 택1",
+      "id": 1001171277,
+      "name": "[오봉집] 주꾸미 볶음 2종, 택1",
       "price": 7990,
       "orig": 8990,
       "rate": 11,
-      "img": "https://img-cf.kurly.com/shop/data/goods/1648206507716l0.jpeg",
-      "url": "https://www.kurly.com/goods/5035000",
-      "slot": "kimchi"
-    },
-    {
-      "id": 1000185200,
-      "name": "[압구정주꾸미] 주꾸미 볶음 2종, 택1",
-      "price": 7800,
-      "orig": 9900,
-      "rate": 21,
-      "img": "https://product-image.kurly.com/product/image/3df368c8-e124-4d06-a9e9-af4c10d01b53.jpeg?v=0531",
-      "url": "https://www.kurly.com/goods/1000185200",
+      "img": "https://product-image.kurly.com/product/image/0ffa0932-0af4-4014-b42d-b2a4cb9d7d15.jpg",
+      "url": "https://www.kurly.com/goods/1001171277",
       "slot": "kimchi"
     },
     {
@@ -3584,13 +3444,43 @@
       "slot": "kimchi"
     },
     {
-      "id": 1000270110,
-      "name": "[압구정오징어] 오징어 볶음 2종, 택1",
-      "price": 7500,
+      "id": 5035000,
+      "name": "[바비엔] 낙지 볶음 2종, 택1",
+      "price": 7990,
+      "orig": 8990,
+      "rate": 11,
+      "img": "https://img-cf.kurly.com/shop/data/goods/1648206507716l0.jpeg",
+      "url": "https://www.kurly.com/goods/5035000",
+      "slot": "kimchi"
+    },
+    {
+      "id": 5035006,
+      "name": "[바비엔] 오징어 볶음 2종, 택1",
+      "price": 8900,
       "orig": 9900,
-      "rate": 24,
-      "img": "https://product-image.kurly.com/product/image/1d30b3cd-b14f-434f-8520-44091c08002a.jpg",
-      "url": "https://www.kurly.com/goods/1000270110",
+      "rate": 10,
+      "img": "https://img-cf.kurly.com/shop/data/goods/1653037345236l0.jpeg",
+      "url": "https://www.kurly.com/goods/5035006",
+      "slot": "kimchi"
+    },
+    {
+      "id": 1000185200,
+      "name": "[압구정주꾸미] 주꾸미 볶음 2종, 택1",
+      "price": 7800,
+      "orig": 9900,
+      "rate": 21,
+      "img": "https://product-image.kurly.com/product/image/3df368c8-e124-4d06-a9e9-af4c10d01b53.jpeg?v=0531",
+      "url": "https://www.kurly.com/goods/1000185200",
+      "slot": "kimchi"
+    },
+    {
+      "id": 1001109604,
+      "name": "[압구정오징어] 갑오징어 볶음 2종, 택1",
+      "price": 7500,
+      "orig": 10900,
+      "rate": 31,
+      "img": "https://product-image.kurly.com/product/image/568c9a24-18ca-40c4-b9e0-950f59a025b9.jpg",
+      "url": "https://www.kurly.com/goods/1001109604",
       "slot": "kimchi"
     },
     {
@@ -3604,6 +3494,16 @@
       "slot": "kimchi"
     },
     {
+      "id": 1002340520,
+      "name": "[하남오징어] 오징어볶음",
+      "price": 8910,
+      "orig": 9900,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/49e2a507-73a3-4029-b871-1882cbc4de18.jpg",
+      "url": "https://www.kurly.com/goods/1002340520",
+      "slot": "kimchi"
+    },
+    {
       "id": 1002301464,
       "name": "[중식의 여왕] 정지선의 우삼겹건두부볶음면 (2인분)",
       "price": 11815,
@@ -3614,16 +3514,6 @@
       "slot": "soup"
     },
     {
-      "id": 1001171277,
-      "name": "[오봉집] 주꾸미 볶음 2종, 택1",
-      "price": 7990,
-      "orig": 8990,
-      "rate": 11,
-      "img": "https://product-image.kurly.com/product/image/0ffa0932-0af4-4014-b42d-b2a4cb9d7d15.jpg",
-      "url": "https://www.kurly.com/goods/1001171277",
-      "slot": "kimchi"
-    },
-    {
       "id": 1002301466,
       "name": "[중식의 여왕] 정지선의 어향육사 2인분 (중화 돼지고기 볶음)",
       "price": 11815,
@@ -3631,16 +3521,6 @@
       "rate": 15,
       "img": "https://product-image.kurly.com/product/image/89e59f24-2d96-4836-a4f2-5c72e7d23ff8.jpg",
       "url": "https://www.kurly.com/goods/1002301466",
-      "slot": "soup"
-    },
-    {
-      "id": 1001479519,
-      "name": "[신의주 찹쌀순대] 들깨 가득 백순대 볶음 915g",
-      "price": 13410,
-      "orig": 14900,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/6df0ba21-49f6-429f-a9c3-b739789e0719.jpg",
-      "url": "https://www.kurly.com/goods/1001479519",
       "slot": "soup"
     },
     {
@@ -3674,6 +3554,16 @@
       "slot": "soup"
     },
     {
+      "id": 1001479519,
+      "name": "[신의주 찹쌀순대] 들깨 가득 백순대 볶음 915g",
+      "price": 13410,
+      "orig": 14900,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/6df0ba21-49f6-429f-a9c3-b739789e0719.jpg",
+      "url": "https://www.kurly.com/goods/1001479519",
+      "slot": "soup"
+    },
+    {
       "id": 5049951,
       "name": "[비비고] 견과류 멸치볶음",
       "price": 3500,
@@ -3694,16 +3584,6 @@
       "slot": "banchan"
     },
     {
-      "id": 1002340520,
-      "name": "[하남오징어] 오징어볶음",
-      "price": 8910,
-      "orig": 9900,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/49e2a507-73a3-4029-b871-1882cbc4de18.jpg",
-      "url": "https://www.kurly.com/goods/1002340520",
-      "slot": "kimchi"
-    },
-    {
       "id": 5097299,
       "name": "[Kurly's] 감칠맛 볶음김치",
       "price": 2890,
@@ -3712,16 +3592,6 @@
       "img": "https://img-cf.kurly.com/shop/data/goods/1645755030483l0.jpg",
       "url": "https://www.kurly.com/goods/5097299",
       "slot": "kimchi"
-    },
-    {
-      "id": 1001512083,
-      "name": "[신의주 찹쌀순대] 인기 순대볶음 3종 (택1)",
-      "price": 13410,
-      "orig": 14900,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/9b689a44-519a-4f98-99d4-fc418196197a.jpg",
-      "url": "https://www.kurly.com/goods/1001512083",
-      "slot": "soup"
     },
     {
       "id": 1001959426,
@@ -3774,6 +3644,16 @@
       "slot": "banchan"
     },
     {
+      "id": 1001512083,
+      "name": "[신의주 찹쌀순대] 인기 순대볶음 3종 (택1)",
+      "price": 13410,
+      "orig": 14900,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/9b689a44-519a-4f98-99d4-fc418196197a.jpg",
+      "url": "https://www.kurly.com/goods/1001512083",
+      "slot": "soup"
+    },
+    {
       "id": 5156432,
       "name": "[조선호텔김치] 프리미엄 겉절이 500g",
       "price": 15300,
@@ -3814,6 +3694,16 @@
       "slot": "kimchi"
     },
     {
+      "id": 5156390,
+      "name": "[한국농협김치] 썰은배추김치 400g",
+      "price": 5500,
+      "orig": 6480,
+      "rate": 15,
+      "img": "https://img-cf.kurly.com/shop/data/goods/1657604925195l0.jpg",
+      "url": "https://www.kurly.com/goods/5156390",
+      "slot": "kimchi"
+    },
+    {
       "id": 1001552480,
       "name": "[제일맞게컬리] 매일 맛있는 김치 2종 (택1)",
       "price": 14900,
@@ -3824,13 +3714,13 @@
       "slot": "kimchi"
     },
     {
-      "id": 5156390,
-      "name": "[한국농협김치] 썰은배추김치 400g",
-      "price": 5500,
-      "orig": 6480,
-      "rate": 15,
-      "img": "https://img-cf.kurly.com/shop/data/goods/1657604925195l0.jpg",
-      "url": "https://www.kurly.com/goods/5156390",
+      "id": 1000305041,
+      "name": "[비비고] 썰은배추김치 300G",
+      "price": 5480,
+      "orig": 8770,
+      "rate": 37,
+      "img": "https://product-image.kurly.com/product/image/718eeb2a-8f43-4640-ade8-3afb925d3bf6.jpg",
+      "url": "https://www.kurly.com/goods/1000305041",
       "slot": "kimchi"
     },
     {
@@ -3854,13 +3744,23 @@
       "slot": "kimchi"
     },
     {
-      "id": 1000305041,
-      "name": "[비비고] 썰은배추김치 300G",
-      "price": 5480,
-      "orig": 8770,
-      "rate": 37,
-      "img": "https://product-image.kurly.com/product/image/718eeb2a-8f43-4640-ade8-3afb925d3bf6.jpg",
-      "url": "https://www.kurly.com/goods/1000305041",
+      "id": 5141785,
+      "name": "[비비고] 열무김치 1.5kg",
+      "price": 19800,
+      "orig": 21900,
+      "rate": 9,
+      "img": "https://product-image.kurly.com/product/image/a3e35f0b-0285-4426-a34e-1164ded984e2.jpg",
+      "url": "https://www.kurly.com/goods/5141785",
+      "slot": "kimchi"
+    },
+    {
+      "id": 1000305039,
+      "name": "[비비고] 총각김치 900g",
+      "price": 12900,
+      "orig": 15900,
+      "rate": 18,
+      "img": "https://product-image.kurly.com/product/image/85971419-289d-4d3b-9301-c18524ff7d1a.jpg",
+      "url": "https://www.kurly.com/goods/1000305039",
       "slot": "kimchi"
     },
     {
@@ -3884,23 +3784,13 @@
       "slot": "kimchi"
     },
     {
-      "id": 1000305039,
-      "name": "[비비고] 총각김치 900g",
-      "price": 12900,
-      "orig": 15900,
-      "rate": 18,
-      "img": "https://product-image.kurly.com/product/image/85971419-289d-4d3b-9301-c18524ff7d1a.jpg",
-      "url": "https://www.kurly.com/goods/1000305039",
-      "slot": "kimchi"
-    },
-    {
-      "id": 1000305043,
-      "name": "[비비고] 포기배추김치 900G",
-      "price": 12900,
-      "orig": 15900,
-      "rate": 18,
-      "img": "https://product-image.kurly.com/product/image/38413807-ba6f-48f6-8d46-f3f169d59f12.jpg",
-      "url": "https://www.kurly.com/goods/1000305043",
+      "id": 5156485,
+      "name": "[비비고] 썰은 배추김치 500g",
+      "price": 7180,
+      "orig": 9350,
+      "rate": 23,
+      "img": "https://product-image.kurly.com/product/image/47bf4a38-9c3f-4234-a22f-7198a8ad5b7f.jpg",
+      "url": "https://www.kurly.com/goods/5156485",
       "slot": "kimchi"
     },
     {
@@ -3914,23 +3804,23 @@
       "slot": "kimchi"
     },
     {
-      "id": 5156485,
-      "name": "[비비고] 썰은 배추김치 500g",
-      "price": 7180,
-      "orig": 9350,
-      "rate": 23,
-      "img": "https://product-image.kurly.com/product/image/47bf4a38-9c3f-4234-a22f-7198a8ad5b7f.jpg",
-      "url": "https://www.kurly.com/goods/5156485",
+      "id": 5156526,
+      "name": "[해담촌] 포기김치 350g",
+      "price": 6745,
+      "orig": 7100,
+      "rate": 5,
+      "img": "https://img-cf.kurly.com/shop/data/goods/1657275752813l0.jpg",
+      "url": "https://www.kurly.com/goods/5156526",
       "slot": "kimchi"
     },
     {
-      "id": 5156401,
-      "name": "[왕애밥상] 매운실비김치 2종 (택1)",
-      "price": 12150,
-      "orig": 13500,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/6c1d42dd-2895-448f-a045-2ee1762a7ab7.jpg",
-      "url": "https://www.kurly.com/goods/5156401",
+      "id": 1002099511,
+      "name": "[비비고] 썰은 배추김치 200g",
+      "price": 3580,
+      "orig": 4180,
+      "rate": 14,
+      "img": "https://product-image.kurly.com/product/image/07806731-5ffe-4b20-a858-7cc9a00abd4f.png",
+      "url": "https://www.kurly.com/goods/1002099511",
       "slot": "kimchi"
     },
     {
@@ -3954,6 +3844,46 @@
       "slot": "kimchi"
     },
     {
+      "id": 1000463983,
+      "name": "[종가] 전라도포기김치 900g",
+      "price": 11900,
+      "orig": 13900,
+      "rate": 14,
+      "img": "https://product-image.kurly.com/product/image/38034fb8-22a2-416b-a907-2ebfaffe86f4.jpg",
+      "url": "https://www.kurly.com/goods/1000463983",
+      "slot": "kimchi"
+    },
+    {
+      "id": 1000305043,
+      "name": "[비비고] 포기배추김치 900G",
+      "price": 12900,
+      "orig": 15900,
+      "rate": 18,
+      "img": "https://product-image.kurly.com/product/image/38413807-ba6f-48f6-8d46-f3f169d59f12.jpg",
+      "url": "https://www.kurly.com/goods/1000305043",
+      "slot": "kimchi"
+    },
+    {
+      "id": 1001897375,
+      "name": "[흑백요리사] 해남재 파김치/갓김치 2종 (택1)",
+      "price": 7700,
+      "orig": 8690,
+      "rate": 11,
+      "img": "https://product-image.kurly.com/product/image/e6494778-c29f-4911-9218-0afc572b8a04.jpg",
+      "url": "https://www.kurly.com/goods/1001897375",
+      "slot": "kimchi"
+    },
+    {
+      "id": 5156401,
+      "name": "[왕애밥상] 매운실비김치 2종 (택1)",
+      "price": 12150,
+      "orig": 13500,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/6c1d42dd-2895-448f-a045-2ee1762a7ab7.jpg",
+      "url": "https://www.kurly.com/goods/5156401",
+      "slot": "kimchi"
+    },
+    {
       "id": 1002099515,
       "name": "[비비고] 남도식 썰은 배추김치 1.2kg",
       "price": 14900,
@@ -3961,76 +3891,6 @@
       "rate": 31,
       "img": "https://product-image.kurly.com/product/image/6cc41fb1-6fc8-4214-b13a-bb7d911f1235.png",
       "url": "https://www.kurly.com/goods/1002099515",
-      "slot": "kimchi"
-    },
-    {
-      "id": 5156493,
-      "name": "[비비고] 백김치 500g",
-      "price": 7680,
-      "orig": 8770,
-      "rate": 12,
-      "img": "https://product-image.kurly.com/product/image/684ba28a-a5b0-4553-8c9f-3f0640883e8e.jpg",
-      "url": "https://www.kurly.com/goods/5156493",
-      "slot": "kimchi"
-    },
-    {
-      "id": 1000463966,
-      "name": "[종가] 열무김치 900g",
-      "price": 10900,
-      "orig": 14900,
-      "rate": 26,
-      "img": "https://product-image.kurly.com/product/image/1dd22eca-7584-4ccd-adca-62004917cc50.jpg",
-      "url": "https://www.kurly.com/goods/1000463966",
-      "slot": "kimchi"
-    },
-    {
-      "id": 1002099511,
-      "name": "[비비고] 썰은 배추김치 200g",
-      "price": 3580,
-      "orig": 4180,
-      "rate": 14,
-      "img": "https://product-image.kurly.com/product/image/07806731-5ffe-4b20-a858-7cc9a00abd4f.png",
-      "url": "https://www.kurly.com/goods/1002099511",
-      "slot": "kimchi"
-    },
-    {
-      "id": 5156488,
-      "name": "[비비고] 열무김치 400g",
-      "price": 9300,
-      "orig": 10450,
-      "rate": 11,
-      "img": "https://product-image.kurly.com/product/image/435a535e-4201-4a42-8bd1-3941e685c5fb.jpg",
-      "url": "https://www.kurly.com/goods/5156488",
-      "slot": "kimchi"
-    },
-    {
-      "id": 1001761118,
-      "name": "[엄마밥상] 김치청국장",
-      "price": 7110,
-      "orig": 7900,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/6e21e5f9-55b3-4fae-bddb-b1e57c401b4c.jpg",
-      "url": "https://www.kurly.com/goods/1001761118",
-      "slot": "soup"
-    },
-    {
-      "id": 1000205863,
-      "name": "[비비고] 썰은배추김치 900G",
-      "price": 12900,
-      "orig": 15900,
-      "rate": 18,
-      "img": "https://product-image.kurly.com/product/image/673d4cac-0b42-4953-8d55-f8f820eec7a1.jpg",
-      "url": "https://www.kurly.com/goods/1000205863",
-      "slot": "kimchi"
-    },
-    {
-      "id": 5156489,
-      "name": "[비비고] 우리아이 한입 썰은김치",
-      "price": 4380,
-      "orig": 4730,
-      "rate": 7,
-      "img": "https://product-image.kurly.com/product/image/ef9d289b-8ade-428b-876a-18c80371b041.jpg",
-      "url": "https://www.kurly.com/goods/5156489",
       "slot": "kimchi"
     },
     {
@@ -4044,53 +3904,33 @@
       "slot": "kimchi"
     },
     {
-      "id": 1002092228,
-      "name": "[풀무원] 톡톡 썰어담은 김치 400g",
-      "price": 6980,
-      "orig": 8360,
-      "rate": 16,
-      "img": "https://product-image.kurly.com/product/image/73df58c2-5a36-48a7-9683-47d92bf94108.jpg",
-      "url": "https://www.kurly.com/goods/1002092228",
+      "id": 1000463966,
+      "name": "[종가] 열무김치 900g",
+      "price": 10900,
+      "orig": 14900,
+      "rate": 26,
+      "img": "https://product-image.kurly.com/product/image/1dd22eca-7584-4ccd-adca-62004917cc50.jpg",
+      "url": "https://www.kurly.com/goods/1000463966",
       "slot": "kimchi"
     },
     {
-      "id": 5090288,
-      "name": "[비비고] 남도식 썰은배추김치 900g",
-      "price": 12900,
-      "orig": 15900,
-      "rate": 18,
-      "img": "https://product-image.kurly.com/product/image/c8039bf4-0212-4f8b-a826-8ede81ec796a.jpg",
-      "url": "https://www.kurly.com/goods/5090288",
-      "slot": "kimchi"
-    },
-    {
-      "id": 1002425109,
-      "name": "[양반] 실속 김치 900g 4종 (택1)",
-      "price": 8980,
-      "orig": 15980,
-      "rate": 43,
-      "img": "https://product-image.kurly.com/product/image/ed09d22b-89f6-4cbf-be7a-74aed6c567b0.jpg",
-      "url": "https://www.kurly.com/goods/1002425109",
-      "slot": "kimchi"
-    },
-    {
-      "id": 1002333009,
-      "name": "[양반] 썰은김치 300g",
-      "price": 4880,
-      "orig": 5380,
-      "rate": 9,
-      "img": "https://product-image.kurly.com/product/image/650bfa17-64a9-4b6c-a487-894637d86dbd.jpg",
-      "url": "https://www.kurly.com/goods/1002333009",
-      "slot": "kimchi"
-    },
-    {
-      "id": 1002104636,
-      "name": "[풀무원] 톡톡 썰은김치 400g",
+      "id": 1002333011,
+      "name": "[양반] 썰은김치 500g",
       "price": 5980,
       "orig": 6980,
       "rate": 14,
-      "img": "https://product-image.kurly.com/product/image/2287f658-1ecc-4696-9187-c71d9a42a206.jpg",
-      "url": "https://www.kurly.com/goods/1002104636",
+      "img": "https://product-image.kurly.com/product/image/f889cf93-5c56-4050-bc02-9399f37673b2.jpg",
+      "url": "https://www.kurly.com/goods/1002333011",
+      "slot": "kimchi"
+    },
+    {
+      "id": 1001441938,
+      "name": "[비비고] 베이직 포기김치 2.3kg",
+      "price": 19980,
+      "orig": 23900,
+      "rate": 16,
+      "img": "https://product-image.kurly.com/product/image/fb04f540-9ba7-437d-90c8-5eca2c7958c3.jpg",
+      "url": "https://www.kurly.com/goods/1001441938",
       "slot": "kimchi"
     },
     {
@@ -4104,6 +3944,66 @@
       "slot": "kimchi"
     },
     {
+      "id": 1001530443,
+      "name": "[제일맞게컬리] 매일 맛있는 총각김치 1kg",
+      "price": 14900,
+      "orig": 17700,
+      "rate": 15,
+      "img": "https://product-image.kurly.com/product/image/f38d9b11-0f5b-4c83-beca-550e61ddb5b0.jpg",
+      "url": "https://www.kurly.com/goods/1001530443",
+      "slot": "kimchi"
+    },
+    {
+      "id": 1002333042,
+      "name": "[양반] 나박김치 1.2kg (PET)",
+      "price": 8980,
+      "orig": 10980,
+      "rate": 18,
+      "img": "https://product-image.kurly.com/product/image/c242ce12-985b-4c9c-af53-6c054c5dfdd3.jpg",
+      "url": "https://www.kurly.com/goods/1002333042",
+      "slot": "kimchi"
+    },
+    {
+      "id": 1001729529,
+      "name": "[CJ] 습 맵찔이 실비김치 400g",
+      "price": 7980,
+      "orig": 10890,
+      "rate": 26,
+      "img": "https://product-image.kurly.com/product/image/e47dcefe-2f8d-4cf7-8085-ca1a18513d7a.jpg",
+      "url": "https://www.kurly.com/goods/1001729529",
+      "slot": "kimchi"
+    },
+    {
+      "id": 1002333009,
+      "name": "[양반] 썰은김치 300g",
+      "price": 4880,
+      "orig": 5380,
+      "rate": 9,
+      "img": "https://product-image.kurly.com/product/image/650bfa17-64a9-4b6c-a487-894637d86dbd.jpg",
+      "url": "https://www.kurly.com/goods/1002333009",
+      "slot": "kimchi"
+    },
+    {
+      "id": 1002099507,
+      "name": "[비비고] 열무김치 900g",
+      "price": 12900,
+      "orig": 15900,
+      "rate": 18,
+      "img": "https://product-image.kurly.com/product/image/152fcd9b-f69c-4c81-8bb4-a7a8a7b6334a.png",
+      "url": "https://www.kurly.com/goods/1002099507",
+      "slot": "kimchi"
+    },
+    {
+      "id": 1000205863,
+      "name": "[비비고] 썰은배추김치 900G",
+      "price": 12900,
+      "orig": 15900,
+      "rate": 18,
+      "img": "https://product-image.kurly.com/product/image/673d4cac-0b42-4953-8d55-f8f820eec7a1.jpg",
+      "url": "https://www.kurly.com/goods/1000205863",
+      "slot": "kimchi"
+    },
+    {
       "id": 1002099513,
       "name": "[비비고] 썰은 배추김치 400g",
       "price": 6580,
@@ -4114,23 +4014,23 @@
       "slot": "kimchi"
     },
     {
-      "id": 1002333013,
-      "name": "[양반] 포기김치1.9kg",
-      "price": 18980,
-      "orig": 19980,
-      "rate": 5,
-      "img": "https://product-image.kurly.com/product/image/2219a81b-a2de-4a17-956b-99e30644ef5a.jpg",
-      "url": "https://www.kurly.com/goods/1002333013",
+      "id": 1002104636,
+      "name": "[풀무원] 톡톡 썰은김치 400g",
+      "price": 5980,
+      "orig": 6980,
+      "rate": 14,
+      "img": "https://product-image.kurly.com/product/image/2287f658-1ecc-4696-9187-c71d9a42a206.jpg",
+      "url": "https://www.kurly.com/goods/1002104636",
       "slot": "kimchi"
     },
     {
-      "id": 1001530443,
-      "name": "[제일맞게컬리] 매일 맛있는 총각김치 1kg",
-      "price": 14900,
-      "orig": 17700,
-      "rate": 15,
-      "img": "https://product-image.kurly.com/product/image/f38d9b11-0f5b-4c83-beca-550e61ddb5b0.jpg",
-      "url": "https://www.kurly.com/goods/1001530443",
+      "id": 5090289,
+      "name": "[비비고] 묵은지900G",
+      "price": 12900,
+      "orig": 15900,
+      "rate": 18,
+      "img": "https://product-image.kurly.com/product/image/8b51ca09-61b7-4814-aab8-f1618c49c622.jpg",
+      "url": "https://www.kurly.com/goods/5090289",
       "slot": "kimchi"
     },
     {
@@ -4144,16 +4044,6 @@
       "slot": "kimchi"
     },
     {
-      "id": 1002333050,
-      "name": "[양반] 석박지 1.2kg (PET)",
-      "price": 11900,
-      "orig": 12900,
-      "rate": 7,
-      "img": "https://product-image.kurly.com/product/image/31addaee-fee4-4958-91f0-f6a6b62d4f43.jpg",
-      "url": "https://www.kurly.com/goods/1002333050",
-      "slot": "kimchi"
-    },
-    {
       "id": 1002100082,
       "name": "[이금선명인] 인기 젓갈 4종, 택1",
       "price": 5900,
@@ -4161,16 +4051,6 @@
       "rate": 9,
       "img": "https://product-image.kurly.com/product/image/b9b998e1-ecdb-4f28-8621-861e5d4aae70.jpg",
       "url": "https://www.kurly.com/goods/1002100082",
-      "slot": "kimchi"
-    },
-    {
-      "id": 1001590341,
-      "name": "[광령] 제주 양념젓갈 80g 4종, 택1",
-      "price": 4750,
-      "orig": 5500,
-      "rate": 13,
-      "img": "https://product-image.kurly.com/product/image/35f39b17-2e59-43c7-a435-62b5ba234d4d.jpg",
-      "url": "https://www.kurly.com/goods/1001590341",
       "slot": "kimchi"
     },
     {
@@ -4194,13 +4074,13 @@
       "slot": "kimchi"
     },
     {
-      "id": 1001974706,
-      "name": "[이금선명인] 비빔오징어젓",
-      "price": 5900,
-      "orig": 6500,
-      "rate": 9,
-      "img": "https://product-image.kurly.com/product/image/ecfb7568-3176-45f1-af64-7f991e3dd88c.jpg",
-      "url": "https://www.kurly.com/goods/1001974706",
+      "id": 1001590341,
+      "name": "[광령] 제주 양념젓갈 80g 4종, 택1",
+      "price": 4750,
+      "orig": 5500,
+      "rate": 13,
+      "img": "https://product-image.kurly.com/product/image/35f39b17-2e59-43c7-a435-62b5ba234d4d.jpg",
+      "url": "https://www.kurly.com/goods/1001590341",
       "slot": "kimchi"
     },
     {
@@ -4214,26 +4094,6 @@
       "slot": "kimchi"
     },
     {
-      "id": 1001974704,
-      "name": "[이금선명인] 비빔낙지젓",
-      "price": 6300,
-      "orig": 6900,
-      "rate": 8,
-      "img": "https://product-image.kurly.com/product/image/2689e2d9-f421-4909-aa31-aa4f133fc385.jpg",
-      "url": "https://www.kurly.com/goods/1001974704",
-      "slot": "kimchi"
-    },
-    {
-      "id": 1002408043,
-      "name": "[엄지네포장마차] 인기 꼬막/가리비장 3종, 택1",
-      "price": 5900,
-      "orig": 6900,
-      "rate": 14,
-      "img": "https://product-image.kurly.com/product/image/5cae18b1-dd98-49a2-b2a9-b3f4aca09f64.jpg",
-      "url": "https://www.kurly.com/goods/1002408043",
-      "slot": "kimchi"
-    },
-    {
       "id": 5156666,
       "name": "[속초해품] 청어알젓",
       "price": 7400,
@@ -4244,13 +4104,13 @@
       "slot": "kimchi"
     },
     {
-      "id": 5156659,
-      "name": "[속초해품] 비빔낙지젓 160g",
+      "id": 1001974704,
+      "name": "[이금선명인] 비빔낙지젓",
       "price": 6300,
       "orig": 6900,
       "rate": 8,
-      "img": "https://img-cf.kurly.com/shop/data/goods/165784998144l0.jpg",
-      "url": "https://www.kurly.com/goods/5156659",
+      "img": "https://product-image.kurly.com/product/image/2689e2d9-f421-4909-aa31-aa4f133fc385.jpg",
+      "url": "https://www.kurly.com/goods/1001974704",
       "slot": "kimchi"
     },
     {
@@ -4264,6 +4124,46 @@
       "slot": "kimchi"
     },
     {
+      "id": 5156659,
+      "name": "[속초해품] 비빔낙지젓 160g",
+      "price": 6300,
+      "orig": 6900,
+      "rate": 8,
+      "img": "https://img-cf.kurly.com/shop/data/goods/165784998144l0.jpg",
+      "url": "https://www.kurly.com/goods/5156659",
+      "slot": "kimchi"
+    },
+    {
+      "id": 1001544658,
+      "name": "[광령] 제주 꽃멸치양념젓 2종, 택1",
+      "price": 4750,
+      "orig": 5500,
+      "rate": 13,
+      "img": "https://product-image.kurly.com/product/image/f4369683-30e2-4f1a-8298-24e2bfb19a6a.jpg",
+      "url": "https://www.kurly.com/goods/1001544658",
+      "slot": "kimchi"
+    },
+    {
+      "id": 1002408043,
+      "name": "[엄지네포장마차] 인기 꼬막/가리비장 3종, 택1",
+      "price": 5900,
+      "orig": 6900,
+      "rate": 14,
+      "img": "https://product-image.kurly.com/product/image/5cae18b1-dd98-49a2-b2a9-b3f4aca09f64.jpg",
+      "url": "https://www.kurly.com/goods/1002408043",
+      "slot": "kimchi"
+    },
+    {
+      "id": 1001957879,
+      "name": "[속초해품] 실속형 명란 3종, 택1",
+      "price": 6900,
+      "orig": 7900,
+      "rate": 12,
+      "img": "https://product-image.kurly.com/product/image/b3d9b36e-c648-47e4-8805-b962b8c68a13.jpg",
+      "url": "https://www.kurly.com/goods/1001957879",
+      "slot": "kimchi"
+    },
+    {
       "id": 5156660,
       "name": "[속초해품] 명란젓 160g",
       "price": 7900,
@@ -4271,6 +4171,16 @@
       "rate": 11,
       "img": "https://img-cf.kurly.com/shop/data/goods/1657850773740l0.jpg",
       "url": "https://www.kurly.com/goods/5156660",
+      "slot": "kimchi"
+    },
+    {
+      "id": 5156643,
+      "name": "[맛의명태자] 냉장 명란 120g",
+      "price": 8500,
+      "orig": 9500,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/990b86f5-2831-444c-bdd8-1037817dca5a.jpg",
+      "url": "https://www.kurly.com/goods/5156643",
       "slot": "kimchi"
     },
     {
@@ -4294,36 +4204,6 @@
       "slot": "kimchi"
     },
     {
-      "id": 1001957879,
-      "name": "[속초해품] 실속형 명란 3종, 택1",
-      "price": 6900,
-      "orig": 7900,
-      "rate": 12,
-      "img": "https://product-image.kurly.com/product/image/b3d9b36e-c648-47e4-8805-b962b8c68a13.jpg",
-      "url": "https://www.kurly.com/goods/1001957879",
-      "slot": "kimchi"
-    },
-    {
-      "id": 5156643,
-      "name": "[맛의명태자] 냉장 명란 120g",
-      "price": 8500,
-      "orig": 9500,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/990b86f5-2831-444c-bdd8-1037817dca5a.jpg",
-      "url": "https://www.kurly.com/goods/5156643",
-      "slot": "kimchi"
-    },
-    {
-      "id": 1001241970,
-      "name": "[보물섬] 완도 순살 전복장 300g (냉장)",
-      "price": 11900,
-      "orig": 14500,
-      "rate": 17,
-      "img": "https://product-image.kurly.com/product/image/b8ca085f-ef13-448f-93ce-978468c4c6ca.jpg",
-      "url": "https://www.kurly.com/goods/1001241970",
-      "slot": "kimchi"
-    },
-    {
       "id": 5156661,
       "name": "[속초해품] 백명란젓 160g",
       "price": 8200,
@@ -4331,26 +4211,6 @@
       "rate": 8,
       "img": "https://img-cf.kurly.com/shop/data/goods/1657701303128l0.jpg",
       "url": "https://www.kurly.com/goods/5156661",
-      "slot": "kimchi"
-    },
-    {
-      "id": 1001544658,
-      "name": "[광령] 제주 꽃멸치양념젓 2종, 택1",
-      "price": 4750,
-      "orig": 5500,
-      "rate": 13,
-      "img": "https://product-image.kurly.com/product/image/f4369683-30e2-4f1a-8298-24e2bfb19a6a.jpg",
-      "url": "https://www.kurly.com/goods/1001544658",
-      "slot": "kimchi"
-    },
-    {
-      "id": 1002273875,
-      "name": "[속초해품] 실속형 스틱 명란 (20g X 10개입)",
-      "price": 11500,
-      "orig": 12500,
-      "rate": 8,
-      "img": "https://product-image.kurly.com/product/image/1ef42343-9467-4598-a024-db543702e4d3.jpg",
-      "url": "https://www.kurly.com/goods/1002273875",
       "slot": "kimchi"
     },
     {
@@ -4364,13 +4224,23 @@
       "slot": "kimchi"
     },
     {
-      "id": 1002324065,
-      "name": "[이금선명인] 오징어밥식해",
-      "price": 6300,
-      "orig": 6900,
+      "id": 1001241970,
+      "name": "[보물섬] 완도 순살 전복장 300g (냉장)",
+      "price": 11900,
+      "orig": 14500,
+      "rate": 17,
+      "img": "https://product-image.kurly.com/product/image/b8ca085f-ef13-448f-93ce-978468c4c6ca.jpg",
+      "url": "https://www.kurly.com/goods/1001241970",
+      "slot": "kimchi"
+    },
+    {
+      "id": 1002273875,
+      "name": "[속초해품] 실속형 스틱 명란 (20g X 10개입)",
+      "price": 11500,
+      "orig": 12500,
       "rate": 8,
-      "img": "https://product-image.kurly.com/product/image/fed1dab1-09c7-4f71-83d7-7300f79dd3a8.jpg",
-      "url": "https://www.kurly.com/goods/1002324065",
+      "img": "https://product-image.kurly.com/product/image/1ef42343-9467-4598-a024-db543702e4d3.jpg",
+      "url": "https://www.kurly.com/goods/1002273875",
       "slot": "kimchi"
     },
     {
@@ -4384,13 +4254,23 @@
       "slot": "kimchi"
     },
     {
-      "id": 1002324078,
-      "name": "[이금선명인] 고급 식해 2종, 택1",
+      "id": 1001241974,
+      "name": "[보물섬] 간장 깐새우장 300g (냉장)",
+      "price": 9300,
+      "orig": 10500,
+      "rate": 11,
+      "img": "https://product-image.kurly.com/product/image/7c8044c7-d69c-4c37-a7f1-cc396c2b8e5b.jpg",
+      "url": "https://www.kurly.com/goods/1001241974",
+      "slot": "kimchi"
+    },
+    {
+      "id": 1002324065,
+      "name": "[이금선명인] 오징어밥식해",
       "price": 6300,
       "orig": 6900,
       "rate": 8,
-      "img": "https://product-image.kurly.com/product/image/116c881d-0afe-44d2-8581-c8e3e73f568b.jpg",
-      "url": "https://www.kurly.com/goods/1002324078",
+      "img": "https://product-image.kurly.com/product/image/fed1dab1-09c7-4f71-83d7-7300f79dd3a8.jpg",
+      "url": "https://www.kurly.com/goods/1002324065",
       "slot": "kimchi"
     },
     {
@@ -4404,13 +4284,23 @@
       "slot": "kimchi"
     },
     {
-      "id": 5156668,
-      "name": "[속초해품] 명란젓 400g",
-      "price": 14900,
-      "orig": 16900,
+      "id": 1002324078,
+      "name": "[이금선명인] 고급 식해 2종, 택1",
+      "price": 6300,
+      "orig": 6900,
+      "rate": 8,
+      "img": "https://product-image.kurly.com/product/image/116c881d-0afe-44d2-8581-c8e3e73f568b.jpg",
+      "url": "https://www.kurly.com/goods/1002324078",
+      "slot": "kimchi"
+    },
+    {
+      "id": 5156667,
+      "name": "[속초해품] 백명란젓 400g",
+      "price": 14700,
+      "orig": 16700,
       "rate": 11,
-      "img": "https://img-cf.kurly.com/shop/data/goods/1658224213423l0.jpg",
-      "url": "https://www.kurly.com/goods/5156668",
+      "img": "https://product-image.kurly.com/product/image/31e965f7-4000-40ce-8efa-1a22bc5c8907.jpeg",
+      "url": "https://www.kurly.com/goods/5156667",
       "slot": "kimchi"
     },
     {
@@ -4424,6 +4314,16 @@
       "slot": "kimchi"
     },
     {
+      "id": 5156668,
+      "name": "[속초해품] 명란젓 400g",
+      "price": 14900,
+      "orig": 16900,
+      "rate": 11,
+      "img": "https://img-cf.kurly.com/shop/data/goods/1658224213423l0.jpg",
+      "url": "https://www.kurly.com/goods/5156668",
+      "slot": "kimchi"
+    },
+    {
       "id": 1001996989,
       "name": "[안유성 명장] 간장 깐새우장 750g",
       "price": 17100,
@@ -4434,31 +4334,21 @@
       "slot": "kimchi"
     },
     {
-      "id": 1000202810,
-      "name": "[맛의명태자] 인기 명란 4종, 택1 (냉동)",
-      "price": 7990,
-      "orig": 9500,
-      "rate": 15,
-      "img": "https://product-image.kurly.com/product/image/e7b541ef-fea5-4c9c-b747-82ddb7d7f5db.jpg",
-      "url": "https://www.kurly.com/goods/1000202810",
-      "slot": "kimchi"
-    },
-    {
-      "id": 1002324159,
-      "name": "[삼삼물산] 미나리 멍게/꼬막무침 2종, 택1",
-      "price": 7590,
-      "orig": 8590,
-      "rate": 11,
-      "img": "https://product-image.kurly.com/product/image/81c2689a-9cf2-4b0b-b40d-49ad765c0e89.jpg",
-      "url": "https://www.kurly.com/goods/1002324159",
+      "id": 5156655,
+      "name": "[아라찬] 블럭 명란젓 110g",
+      "price": 7200,
+      "orig": 7500,
+      "rate": 4,
+      "img": "https://img-cf.kurly.com/shop/data/goods/1657759755580l0.jpg",
+      "url": "https://www.kurly.com/goods/5156655",
       "slot": "kimchi"
     },
     {
       "id": 1002246031,
       "name": "[하나원] 모닝고추 장아찌S",
-      "price": 8460,
+      "price": 8930,
       "orig": 9400,
-      "rate": 10,
+      "rate": 5,
       "img": "https://product-image.kurly.com/product/image/13183e77-e19a-44b8-ae52-ce03692f47a2.jpg",
       "url": "https://www.kurly.com/goods/1002246031",
       "slot": "banchan"
@@ -4484,16 +4374,6 @@
       "slot": "tofu"
     },
     {
-      "id": 1001381957,
-      "name": "[CJ] 행복한콩 찌개두부 380g",
-      "price": 1290,
-      "orig": 1800,
-      "rate": 28,
-      "img": "https://product-image.kurly.com/product/image/74c9afd3-fa46-45d8-8531-b20f9567a7af.jpg",
-      "url": "https://www.kurly.com/goods/1001381957",
-      "slot": "tofu"
-    },
-    {
       "id": 5070652,
       "name": "[풀무원] 소가 부드러운 찌개두부 300g",
       "price": 1500,
@@ -4514,6 +4394,16 @@
       "slot": "tofu"
     },
     {
+      "id": 1000106175,
+      "name": "[CJ] 행복한콩 큰두부 1kg",
+      "price": 3280,
+      "orig": 3580,
+      "rate": 8,
+      "img": "https://product-image.kurly.com/product/image/8dd05f39-c3b0-4426-89c7-01b07d64e5bb.png",
+      "url": "https://www.kurly.com/goods/1000106175",
+      "slot": "tofu"
+    },
+    {
       "id": 5070654,
       "name": "[풀무원] 한끼 연두부 2개입",
       "price": 2680,
@@ -4521,26 +4411,6 @@
       "rate": 3,
       "img": "https://product-image.kurly.com/product/image/42eeb5d0-c909-4822-b97f-50dbba19bd54.jpg",
       "url": "https://www.kurly.com/goods/5070654",
-      "slot": "tofu"
-    },
-    {
-      "id": 1001381963,
-      "name": "[CJ] 행복한콩 국산콩 두부 부침용 380g",
-      "price": 2680,
-      "orig": 3480,
-      "rate": 22,
-      "img": "https://product-image.kurly.com/product/image/01cdc8d9-5847-4ff8-874c-d4f93fe4aa37.jpg",
-      "url": "https://www.kurly.com/goods/1001381963",
-      "slot": "tofu"
-    },
-    {
-      "id": 1001901819,
-      "name": "[풀무원] 고농도 두부 4종 (택1)",
-      "price": 1780,
-      "orig": 2190,
-      "rate": 18,
-      "img": "https://product-image.kurly.com/product/image/3ccdf360-007b-4bd3-9b2e-f6c1300187f3.jpg",
-      "url": "https://www.kurly.com/goods/1001901819",
       "slot": "tofu"
     },
     {
@@ -4554,13 +4424,13 @@
       "slot": "tofu"
     },
     {
-      "id": 1000106175,
-      "name": "[CJ] 행복한콩 큰두부 1kg",
-      "price": 3280,
-      "orig": 3580,
-      "rate": 8,
-      "img": "https://product-image.kurly.com/product/image/8dd05f39-c3b0-4426-89c7-01b07d64e5bb.png",
-      "url": "https://www.kurly.com/goods/1000106175",
+      "id": 1001381963,
+      "name": "[CJ] 행복한콩 국산콩 두부 부침용 380g",
+      "price": 2680,
+      "orig": 3480,
+      "rate": 22,
+      "img": "https://product-image.kurly.com/product/image/01cdc8d9-5847-4ff8-874c-d4f93fe4aa37.jpg",
+      "url": "https://www.kurly.com/goods/1001381963",
       "slot": "tofu"
     },
     {
@@ -4574,13 +4444,23 @@
       "slot": "tofu"
     },
     {
-      "id": 1000229309,
-      "name": "[CJ] 행복한콩 반모두부(150G+150G)",
-      "price": 1500,
-      "orig": 1700,
-      "rate": 11,
-      "img": "https://product-image.kurly.com/product/image/7c845011-96cb-442a-b658-956731211e9b.jpg",
-      "url": "https://www.kurly.com/goods/1000229309",
+      "id": 1001901819,
+      "name": "[풀무원] 고농도 두부 4종 (택1)",
+      "price": 1780,
+      "orig": 2190,
+      "rate": 18,
+      "img": "https://product-image.kurly.com/product/image/3ccdf360-007b-4bd3-9b2e-f6c1300187f3.jpg",
+      "url": "https://www.kurly.com/goods/1001901819",
+      "slot": "tofu"
+    },
+    {
+      "id": 1000331925,
+      "name": "[풀무원] 고소한 유기농 순두부 (2개입)",
+      "price": 2380,
+      "orig": 3400,
+      "rate": 30,
+      "img": "https://product-image.kurly.com/product/image/8ea77362-eb12-4b57-bd0d-a417fd2e4e8c.jpg",
+      "url": "https://www.kurly.com/goods/1000331925",
       "slot": "tofu"
     },
     {
@@ -4594,13 +4474,13 @@
       "slot": "tofu"
     },
     {
-      "id": 1000331925,
-      "name": "[풀무원] 고소한 유기농 순두부 (2개입)",
-      "price": 2380,
-      "orig": 3400,
-      "rate": 30,
-      "img": "https://product-image.kurly.com/product/image/8ea77362-eb12-4b57-bd0d-a417fd2e4e8c.jpg",
-      "url": "https://www.kurly.com/goods/1000331925",
+      "id": 1000229309,
+      "name": "[CJ] 행복한콩 반모두부(150G+150G)",
+      "price": 1500,
+      "orig": 1700,
+      "rate": 11,
+      "img": "https://product-image.kurly.com/product/image/7c845011-96cb-442a-b658-956731211e9b.jpg",
+      "url": "https://www.kurly.com/goods/1000229309",
       "slot": "tofu"
     },
     {
@@ -4644,13 +4524,13 @@
       "slot": "tofu"
     },
     {
-      "id": 5070653,
-      "name": "[풀무원] 소가 단단한 부침두부 300g",
-      "price": 1600,
-      "orig": 1700,
-      "rate": 5,
-      "img": "https://product-image.kurly.com/product/image/49aaa8ae-a2b3-491d-8485-1d3d95a52769.jpg",
-      "url": "https://www.kurly.com/goods/5070653",
+      "id": 1001381953,
+      "name": "[CJ] 행복한콩 고소한 촌두부 300g",
+      "price": 1980,
+      "orig": 2480,
+      "rate": 20,
+      "img": "https://product-image.kurly.com/product/image/ad4f76e6-5a80-4457-bed1-1b76897012ae.jpg",
+      "url": "https://www.kurly.com/goods/1001381953",
       "slot": "tofu"
     },
     {
@@ -4664,6 +4544,16 @@
       "slot": "tofu"
     },
     {
+      "id": 5070653,
+      "name": "[풀무원] 소가 단단한 부침두부 300g",
+      "price": 1600,
+      "orig": 1700,
+      "rate": 5,
+      "img": "https://product-image.kurly.com/product/image/49aaa8ae-a2b3-491d-8485-1d3d95a52769.jpg",
+      "url": "https://www.kurly.com/goods/5070653",
+      "slot": "tofu"
+    },
+    {
       "id": 1002068712,
       "name": "[행복한콩] 행복한콩 큰두부 520g",
       "price": 1980,
@@ -4674,43 +4564,13 @@
       "slot": "tofu"
     },
     {
-      "id": 1001553845,
-      "name": "[풀무원] 지구식단 크리스피 한입 두부 탕수육",
-      "price": 4490,
-      "orig": 9980,
-      "rate": 55,
-      "img": "https://product-image.kurly.com/product/image/5df5cadf-c57e-474f-a3c0-968be88038d5.jpg",
-      "url": "https://www.kurly.com/goods/1001553845",
-      "slot": "tofu"
-    },
-    {
-      "id": 1000778899,
-      "name": "[CJ] 행복한콩 모닝두부 3종 (택1)",
-      "price": 1500,
-      "orig": 1680,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/9c8a1a1f-40d9-4099-8355-e9bca2e9ebae.jpg",
-      "url": "https://www.kurly.com/goods/1000778899",
-      "slot": "tofu"
-    },
-    {
-      "id": 1001879304,
-      "name": "[풀무원] 특등급 국산콩 고농도 진한두부",
-      "price": 4480,
-      "orig": 5190,
-      "rate": 13,
-      "img": "https://product-image.kurly.com/product/image/8e4cb3d8-9427-42f4-9280-321ba449f3e3.jpg",
-      "url": "https://www.kurly.com/goods/1001879304",
-      "slot": "tofu"
-    },
-    {
-      "id": 1001381965,
-      "name": "[CJ] 행복한콩 고소한 순두부 350g*2",
-      "price": 2180,
-      "orig": 2480,
-      "rate": 12,
-      "img": "https://product-image.kurly.com/product/image/b8285e18-13e8-438b-afbb-2f0baf22c596.jpg",
-      "url": "https://www.kurly.com/goods/1001381965",
+      "id": 1002092230,
+      "name": "[풀무원] 고소한 유기농 두부 부침용 290g",
+      "price": 2680,
+      "orig": 2880,
+      "rate": 6,
+      "img": "https://product-image.kurly.com/product/image/87de0a7e-c5ef-47fd-8185-23a000a3cc35.jpg",
+      "url": "https://www.kurly.com/goods/1002092230",
       "slot": "tofu"
     },
     {
@@ -4724,6 +4584,26 @@
       "slot": "tofu"
     },
     {
+      "id": 1001879304,
+      "name": "[풀무원] 특등급 국산콩 고농도 진한두부",
+      "price": 4480,
+      "orig": 5190,
+      "rate": 13,
+      "img": "https://product-image.kurly.com/product/image/8e4cb3d8-9427-42f4-9280-321ba449f3e3.jpg",
+      "url": "https://www.kurly.com/goods/1001879304",
+      "slot": "tofu"
+    },
+    {
+      "id": 1000778899,
+      "name": "[CJ] 행복한콩 모닝두부 3종 (택1)",
+      "price": 1500,
+      "orig": 1680,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/9c8a1a1f-40d9-4099-8355-e9bca2e9ebae.jpg",
+      "url": "https://www.kurly.com/goods/1000778899",
+      "slot": "tofu"
+    },
+    {
       "id": 1001445406,
       "name": "[한팟] 대전식 오징어 두부두루치기 2인분",
       "price": 9265,
@@ -4734,14 +4614,34 @@
       "slot": "soup"
     },
     {
-      "id": 1000178881,
-      "name": "[풀무원] 달콤한 두부 도너츠 2종 (택1)",
-      "price": 7080,
-      "orig": 7980,
-      "rate": 11,
-      "img": "https://product-image.kurly.com/product/image/7eb3013d-9d36-4553-b0db-7f22dfcecc98.jpg",
-      "url": "https://www.kurly.com/goods/1000178881",
-      "slot": "snack"
+      "id": 1002092232,
+      "name": "[풀무원] 고소한 유기농 두부 찌개용 290g",
+      "price": 2580,
+      "orig": 2780,
+      "rate": 7,
+      "img": "https://product-image.kurly.com/product/image/6a638fb5-e750-4b47-bf09-bca96cdecff5.jpg",
+      "url": "https://www.kurly.com/goods/1002092232",
+      "slot": "tofu"
+    },
+    {
+      "id": 1001553845,
+      "name": "[풀무원] 지구식단 크리스피 한입 두부 탕수육",
+      "price": 7980,
+      "orig": 9980,
+      "rate": 20,
+      "img": "https://product-image.kurly.com/product/image/5df5cadf-c57e-474f-a3c0-968be88038d5.jpg",
+      "url": "https://www.kurly.com/goods/1001553845",
+      "slot": "tofu"
+    },
+    {
+      "id": 1000285472,
+      "name": "[풀무원] 식물성 지구식단 두부면 100g 2종 (택1)",
+      "price": 2280,
+      "orig": 2780,
+      "rate": 17,
+      "img": "https://product-image.kurly.com/product/image/54d95b2e-0192-477d-a115-01c485233b59.jpg",
+      "url": "https://www.kurly.com/goods/1000285472",
+      "slot": "tofu"
     },
     {
       "id": 1001541179,
@@ -4754,6 +4654,16 @@
       "slot": "banchan"
     },
     {
+      "id": 1000258347,
+      "name": "[일일특가][풀무원] 인기 두부텐더 & 냉면 6종 (택1)",
+      "price": 7980,
+      "orig": 9980,
+      "rate": 20,
+      "img": "https://product-image.kurly.com/product/image/1ebf1c7e-cfdd-4c92-a646-9b6a0f1afec4.jpg",
+      "url": "https://www.kurly.com/goods/1000258347",
+      "slot": "tofu"
+    },
+    {
       "id": 1000759237,
       "name": "[CJ] 행복한콩 국산콩 연두부",
       "price": 1200,
@@ -4762,6 +4672,16 @@
       "img": "https://product-image.kurly.com/product/image/580f9281-bab8-45d2-9828-a330837dac43.jpg",
       "url": "https://www.kurly.com/goods/1000759237",
       "slot": "tofu"
+    },
+    {
+      "id": 1001631052,
+      "name": "[원조화심두부] 고기 순두부",
+      "price": 8415,
+      "orig": 9900,
+      "rate": 15,
+      "img": "https://product-image.kurly.com/product/image/4a52356a-9dc8-44a0-8bcf-120a55623a2b.jpg",
+      "url": "https://www.kurly.com/goods/1001631052",
+      "slot": "soup"
     },
     {
       "id": 5070786,
@@ -4794,36 +4714,6 @@
       "slot": "tofu"
     },
     {
-      "id": 1000229606,
-      "name": "[삼호] 정통어묵탕 336G",
-      "price": 3980,
-      "orig": 4580,
-      "rate": 13,
-      "img": "https://product-image.kurly.com/product/image/59260110-8b44-46ac-8982-a54173e6fc73.jpg",
-      "url": "https://www.kurly.com/goods/1000229606",
-      "slot": "tofu"
-    },
-    {
-      "id": 1002099808,
-      "name": "[삼호] 부산어묵 골드 사각 200g",
-      "price": 1780,
-      "orig": 1980,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/9910ab57-26c8-4b0c-8041-4a92dcccb1a1.png",
-      "url": "https://www.kurly.com/goods/1002099808",
-      "slot": "tofu"
-    },
-    {
-      "id": 1001235753,
-      "name": "[동원] 바른어묵 85% 사각 2종 (갈치/실꼬리돔)",
-      "price": 2480,
-      "orig": 2980,
-      "rate": 16,
-      "img": "https://product-image.kurly.com/product/image/e0875831-d2a6-42b8-b825-72334df19390.jpg",
-      "url": "https://www.kurly.com/goods/1001235753",
-      "slot": "tofu"
-    },
-    {
       "id": 5052322,
       "name": "[오마뎅] 파 어묵",
       "price": 5630,
@@ -4834,13 +4724,13 @@
       "slot": "tofu"
     },
     {
-      "id": 1000307677,
-      "name": "[삼호] 안심부산어묵 얇은사각 200g*2",
+      "id": 1000229606,
+      "name": "[삼호] 정통어묵탕 336G",
       "price": 3980,
-      "orig": 4680,
-      "rate": 14,
-      "img": "https://product-image.kurly.com/product/image/e5974622-011c-4869-b1c5-178863110399.jpg",
-      "url": "https://www.kurly.com/goods/1000307677",
+      "orig": 4580,
+      "rate": 13,
+      "img": "https://product-image.kurly.com/product/image/59260110-8b44-46ac-8982-a54173e6fc73.jpg",
+      "url": "https://www.kurly.com/goods/1000229606",
       "slot": "tofu"
     },
     {
@@ -4854,6 +4744,36 @@
       "slot": "tofu"
     },
     {
+      "id": 5068030,
+      "name": "[오마뎅] 모듬 어묵탕",
+      "price": 10890,
+      "orig": 12100,
+      "rate": 10,
+      "img": "https://img-cf.kurly.com/shop/data/goods/1616656012474l0.jpg",
+      "url": "https://www.kurly.com/goods/5068030",
+      "slot": "tofu"
+    },
+    {
+      "id": 1001235753,
+      "name": "[동원] 바른어묵 85% 사각 2종 (갈치/실꼬리돔)",
+      "price": 2480,
+      "orig": 2980,
+      "rate": 16,
+      "img": "https://product-image.kurly.com/product/image/e0875831-d2a6-42b8-b825-72334df19390.jpg",
+      "url": "https://www.kurly.com/goods/1001235753",
+      "slot": "tofu"
+    },
+    {
+      "id": 1002099808,
+      "name": "[삼호] 부산어묵 골드 사각 200g",
+      "price": 1780,
+      "orig": 1980,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/9910ab57-26c8-4b0c-8041-4a92dcccb1a1.png",
+      "url": "https://www.kurly.com/goods/1002099808",
+      "slot": "tofu"
+    },
+    {
       "id": 1001370839,
       "name": "[삼호] 순살가득담은어묵 오리지널 240g",
       "price": 3780,
@@ -4861,36 +4781,6 @@
       "rate": 7,
       "img": "https://product-image.kurly.com/product/image/a92d099f-a111-47c1-99b5-9c2ad712e4e0.jpg",
       "url": "https://www.kurly.com/goods/1001370839",
-      "slot": "tofu"
-    },
-    {
-      "id": 1000307675,
-      "name": "[삼호] 안심모듬어묵 종합 276g*2",
-      "price": 5480,
-      "orig": 5880,
-      "rate": 6,
-      "img": "https://product-image.kurly.com/product/image/c771a47f-1348-4192-88d4-997a14a1e0b8.jpg",
-      "url": "https://www.kurly.com/goods/1000307675",
-      "slot": "tofu"
-    },
-    {
-      "id": 1002092200,
-      "name": "[삼호] 두부 어묵",
-      "price": 2800,
-      "orig": 3500,
-      "rate": 20,
-      "img": "https://product-image.kurly.com/product/image/65150f2a-b166-4e85-8007-f45f8680f043.jpg",
-      "url": "https://www.kurly.com/goods/1002092200",
-      "slot": "tofu"
-    },
-    {
-      "id": 1001370847,
-      "name": "[삼호] 부산어묵 골드 사각 450g",
-      "price": 3980,
-      "orig": 4480,
-      "rate": 11,
-      "img": "https://product-image.kurly.com/product/image/f065b0a5-2bdd-4c67-9825-849341d92e25.jpg",
-      "url": "https://www.kurly.com/goods/1001370847",
       "slot": "tofu"
     },
     {
@@ -4904,63 +4794,23 @@
       "slot": "tofu"
     },
     {
-      "id": 1002299782,
-      "name": "[삼호] 쫀득 어묵",
-      "price": 5520,
-      "orig": 6900,
-      "rate": 20,
-      "img": "https://product-image.kurly.com/product/image/f030a79d-bd53-46f9-8eaf-b709789f07c0.jpg",
-      "url": "https://www.kurly.com/goods/1002299782",
+      "id": 1000307677,
+      "name": "[삼호] 안심부산어묵 얇은사각 200g*2",
+      "price": 3980,
+      "orig": 4680,
+      "rate": 14,
+      "img": "https://product-image.kurly.com/product/image/e5974622-011c-4869-b1c5-178863110399.jpg",
+      "url": "https://www.kurly.com/goods/1000307677",
       "slot": "tofu"
     },
     {
-      "id": 1001795105,
-      "name": "[오마뎅] 하얀 순살 사각어묵",
-      "price": 4590,
-      "orig": 5400,
-      "rate": 15,
-      "img": "https://product-image.kurly.com/product/image/fd64ed87-96b0-4aaf-b224-7ded88f43f24.jpg",
-      "url": "https://www.kurly.com/goods/1001795105",
-      "slot": "tofu"
-    },
-    {
-      "id": 1001370845,
-      "name": "[삼호] 부산어묵 골드 중봉 360g",
-      "price": 4180,
-      "orig": 4980,
-      "rate": 16,
-      "img": "https://product-image.kurly.com/product/image/708e88f1-bb75-4ff1-893c-9fd3df4708a2.jpg",
-      "url": "https://www.kurly.com/goods/1001370845",
-      "slot": "tofu"
-    },
-    {
-      "id": 1001479690,
-      "name": "[오마뎅] 짧은 꼬치어묵",
-      "price": 10800,
-      "orig": 12000,
-      "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/a8d7b655-adbe-40e9-b7b1-b765020ecacb.jpg",
-      "url": "https://www.kurly.com/goods/1001479690",
-      "slot": "tofu"
-    },
-    {
-      "id": 1000307679,
-      "name": "[삼호] 안심부산어묵 도톰쫄깃 240g*2",
-      "price": 4980,
-      "orig": 5380,
-      "rate": 7,
-      "img": "https://product-image.kurly.com/product/image/ecf34e5b-cead-49da-b3a1-ec186c4d887e.jpg",
-      "url": "https://www.kurly.com/goods/1000307679",
-      "slot": "tofu"
-    },
-    {
-      "id": 1000210842,
-      "name": "[오마뎅] 진짜 쫄깃한 꼬치어묵",
-      "price": 12930,
-      "orig": 14700,
-      "rate": 12,
-      "img": "https://product-image.kurly.com/product/image/aff198eb-9676-4204-8d62-3bad74ced0a4.jpg",
-      "url": "https://www.kurly.com/goods/1000210842",
+      "id": 1001370847,
+      "name": "[삼호] 부산어묵 골드 사각 450g",
+      "price": 3980,
+      "orig": 4480,
+      "rate": 11,
+      "img": "https://product-image.kurly.com/product/image/f065b0a5-2bdd-4c67-9825-849341d92e25.jpg",
+      "url": "https://www.kurly.com/goods/1001370847",
       "slot": "tofu"
     },
     {
@@ -4974,24 +4824,84 @@
       "slot": "tofu"
     },
     {
-      "id": 1001542446,
-      "name": "[차려낸] 쫄깃하고 통통한 꼬치어묵",
-      "price": 7900,
-      "orig": 9900,
-      "rate": 20,
-      "img": "https://product-image.kurly.com/product/image/0137bb0d-31ee-4d67-89ed-2c57c4f7b732.jpg",
-      "url": "https://www.kurly.com/goods/1001542446",
+      "id": 1001795105,
+      "name": "[오마뎅] 하얀 순살 사각어묵",
+      "price": 4590,
+      "orig": 5400,
+      "rate": 15,
+      "img": "https://product-image.kurly.com/product/image/fd64ed87-96b0-4aaf-b224-7ded88f43f24.jpg",
+      "url": "https://www.kurly.com/goods/1001795105",
       "slot": "tofu"
     },
     {
-      "id": 1001203615,
-      "name": "[고래주방] 유부주머니 떡볶이와 어묵탕",
-      "price": 7480,
-      "orig": 8400,
+      "id": 1002092200,
+      "name": "[삼호] 두부 어묵",
+      "price": 2800,
+      "orig": 3500,
+      "rate": 20,
+      "img": "https://product-image.kurly.com/product/image/65150f2a-b166-4e85-8007-f45f8680f043.jpg",
+      "url": "https://www.kurly.com/goods/1002092200",
+      "slot": "tofu"
+    },
+    {
+      "id": 1000307679,
+      "name": "[삼호] 안심부산어묵 도톰쫄깃 240g*2",
+      "price": 4980,
+      "orig": 5380,
+      "rate": 7,
+      "img": "https://product-image.kurly.com/product/image/ecf34e5b-cead-49da-b3a1-ec186c4d887e.jpg",
+      "url": "https://www.kurly.com/goods/1000307679",
+      "slot": "tofu"
+    },
+    {
+      "id": 1001479690,
+      "name": "[오마뎅] 짧은 꼬치어묵",
+      "price": 10800,
+      "orig": 12000,
       "rate": 10,
-      "img": "https://product-image.kurly.com/product/image/42a2d863-edb4-4d73-849c-a7ac082f65bd.jpg",
-      "url": "https://www.kurly.com/goods/1001203615",
-      "slot": "soup"
+      "img": "https://product-image.kurly.com/product/image/a8d7b655-adbe-40e9-b7b1-b765020ecacb.jpg",
+      "url": "https://www.kurly.com/goods/1001479690",
+      "slot": "tofu"
+    },
+    {
+      "id": 1001370845,
+      "name": "[삼호] 부산어묵 골드 중봉 360g",
+      "price": 4180,
+      "orig": 4980,
+      "rate": 16,
+      "img": "https://product-image.kurly.com/product/image/708e88f1-bb75-4ff1-893c-9fd3df4708a2.jpg",
+      "url": "https://www.kurly.com/goods/1001370845",
+      "slot": "tofu"
+    },
+    {
+      "id": 1002299782,
+      "name": "[삼호] 쫀득 어묵",
+      "price": 5520,
+      "orig": 6900,
+      "rate": 20,
+      "img": "https://product-image.kurly.com/product/image/f030a79d-bd53-46f9-8eaf-b709789f07c0.jpg",
+      "url": "https://www.kurly.com/goods/1002299782",
+      "slot": "tofu"
+    },
+    {
+      "id": 1000210842,
+      "name": "[오마뎅] 진짜 쫄깃한 꼬치어묵",
+      "price": 12930,
+      "orig": 14700,
+      "rate": 12,
+      "img": "https://product-image.kurly.com/product/image/aff198eb-9676-4204-8d62-3bad74ced0a4.jpg",
+      "url": "https://www.kurly.com/goods/1000210842",
+      "slot": "tofu"
+    },
+    {
+      "id": 1000307675,
+      "name": "[삼호] 안심모듬어묵 종합 276g*2",
+      "price": 5480,
+      "orig": 5880,
+      "rate": 6,
+      "img": "https://product-image.kurly.com/product/image/c771a47f-1348-4192-88d4-997a14a1e0b8.jpg",
+      "url": "https://www.kurly.com/goods/1000307675",
+      "slot": "tofu"
     },
     {
       "id": 1001982497,
@@ -5004,13 +4914,13 @@
       "slot": "tofu"
     },
     {
-      "id": 1001235742,
-      "name": "[동원] 추억부산 사각 150+100g",
-      "price": 1990,
-      "orig": 2290,
-      "rate": 13,
-      "img": "https://product-image.kurly.com/product/image/70f446ba-1c5d-4205-b1ff-5f56ce29425b.jpg",
-      "url": "https://www.kurly.com/goods/1001235742",
+      "id": 1001434527,
+      "name": "[CJ] 삼호 인기 어묵 골라담기 4종 (택1)",
+      "price": 4980,
+      "orig": 5980,
+      "rate": 16,
+      "img": "https://product-image.kurly.com/product/image/fab109a7-309d-4637-8fb0-2c5f5d5eee83.jpg",
+      "url": "https://www.kurly.com/goods/1001434527",
       "slot": "tofu"
     },
     {
@@ -5021,16 +4931,6 @@
       "rate": 15,
       "img": "https://product-image.kurly.com/product/image/23441cba-9054-468d-87c2-3787513b690b.png",
       "url": "https://www.kurly.com/goods/1002099813",
-      "slot": "tofu"
-    },
-    {
-      "id": 1002496946,
-      "name": "[한성] 크래미 180g (90g 증정)",
-      "price": 5184,
-      "orig": 6480,
-      "rate": 20,
-      "img": "https://product-image.kurly.com/product/image/fef8a979-b024-4ce6-9bbf-4cd6b2964056.jpg",
-      "url": "https://www.kurly.com/goods/1002496946",
       "slot": "tofu"
     },
     {
@@ -5064,13 +4964,13 @@
       "slot": "banchan"
     },
     {
-      "id": 1002049381,
-      "name": "[풀무원] 철판 도톰 녹두전 300g",
-      "price": 4980,
-      "orig": 6980,
-      "rate": 28,
-      "img": "https://product-image.kurly.com/product/image/db0809a4-da33-4e78-9570-d4c05876bab3.jpg",
-      "url": "https://www.kurly.com/goods/1002049381",
+      "id": 5047892,
+      "name": "[미자언니네] 녹두전 반죽 (냉동)",
+      "price": 8920,
+      "orig": 10500,
+      "rate": 15,
+      "img": "https://img-cf.kurly.com/shop/data/goods/1578647136873l0.jpg",
+      "url": "https://www.kurly.com/goods/5047892",
       "slot": "banchan"
     },
     {
@@ -5084,13 +4984,13 @@
       "slot": "banchan"
     },
     {
-      "id": 5047892,
-      "name": "[미자언니네] 녹두전 반죽 (냉동)",
-      "price": 8920,
-      "orig": 10500,
-      "rate": 15,
-      "img": "https://img-cf.kurly.com/shop/data/goods/1578647136873l0.jpg",
-      "url": "https://www.kurly.com/goods/5047892",
+      "id": 1002049381,
+      "name": "[풀무원] 철판 도톰 녹두전 300g",
+      "price": 4980,
+      "orig": 6980,
+      "rate": 28,
+      "img": "https://product-image.kurly.com/product/image/db0809a4-da33-4e78-9570-d4c05876bab3.jpg",
+      "url": "https://www.kurly.com/goods/1002049381",
       "slot": "banchan"
     },
     {
@@ -5144,21 +5044,21 @@
       "slot": "main"
     },
     {
-      "id": 1001980617,
-      "name": "[베이키드콘] 오븐에 구운 군옥수수 스낵 2종 (택1)",
-      "price": 6630,
-      "orig": 6800,
-      "rate": 2,
-      "img": "https://product-image.kurly.com/product/image/e96fca8a-3560-4702-a684-5cbe8d9b61ed.jpg",
-      "url": "https://www.kurly.com/goods/1001980617",
+      "id": 1002422233,
+      "name": "[크라운] 쿠크다스 쵸코케이크 202g",
+      "price": 4230,
+      "orig": 4480,
+      "rate": 5,
+      "img": "https://product-image.kurly.com/product/image/0cdb7e0e-2e9d-49aa-a297-8c8b7825f68b.jpg",
+      "url": "https://www.kurly.com/goods/1002422233",
       "slot": "snack"
     },
     {
       "id": 1002014581,
       "name": "[ALLO] 하몽 크래커 319g",
-      "price": 4950,
+      "price": 4400,
       "orig": 6000,
-      "rate": 17,
+      "rate": 26,
       "img": "https://product-image.kurly.com/product/image/d159ea8d-49c7-4a46-af3a-d759c3c33371.jpg",
       "url": "https://www.kurly.com/goods/1002014581",
       "slot": "snack"
@@ -5174,6 +5074,16 @@
       "slot": "snack"
     },
     {
+      "id": 1001391059,
+      "name": "[롯데] 씨리얼 초코 42g",
+      "price": 1080,
+      "orig": 1200,
+      "rate": 10,
+      "img": "https://product-image.kurly.com/product/image/7920625d-b521-407d-a14e-e55087a79ec3.jpg",
+      "url": "https://www.kurly.com/goods/1001391059",
+      "slot": "snack"
+    },
+    {
       "id": 1000213879,
       "name": "찐한 더블 크림치즈 소시지 400g",
       "price": 6280,
@@ -5181,6 +5091,16 @@
       "rate": 10,
       "img": "https://product-image.kurly.com/product/image/fd80b30f-3f94-4a3b-b5bc-46bd63d4e653.jpg",
       "url": "https://www.kurly.com/goods/1000213879",
+      "slot": "snack"
+    },
+    {
+      "id": 5077641,
+      "name": "[CJ] 맛군밤 4개입",
+      "price": 7080,
+      "orig": 9150,
+      "rate": 22,
+      "img": "https://img-cf.kurly.com/shop/data/goods/1637806458575l0.jpg",
+      "url": "https://www.kurly.com/goods/5077641",
       "slot": "snack"
     },
     {
@@ -5204,6 +5124,16 @@
       "slot": "snack"
     },
     {
+      "id": 5081478,
+      "name": "[크라운] 참 크래커 280g (18.67g x 15입)",
+      "price": 3010,
+      "orig": 3360,
+      "rate": 10,
+      "img": "https://img-cf.kurly.com/shop/data/goods/1629261931142l0.jpg",
+      "url": "https://www.kurly.com/goods/5081478",
+      "slot": "snack"
+    },
+    {
       "id": 1000178191,
       "name": "[크라운] 참쌀선과 253g (44봉)",
       "price": 4150,
@@ -5214,23 +5144,43 @@
       "slot": "snack"
     },
     {
-      "id": 1002380797,
-      "name": "[우리밀] 우리 농산물로 만든 스낵 3종, 택1",
-      "price": 2120,
-      "orig": 2300,
-      "rate": 7,
-      "img": "https://product-image.kurly.com/product/image/34d488ac-9050-4d30-bc5a-dabcc8e2f433.jpg",
-      "url": "https://www.kurly.com/goods/1002380797",
+      "id": 1001980617,
+      "name": "[베이키드콘] 오븐에 구운 군옥수수 스낵 2종 (택1)",
+      "price": 6630,
+      "orig": 6800,
+      "rate": 2,
+      "img": "https://product-image.kurly.com/product/image/e96fca8a-3560-4702-a684-5cbe8d9b61ed.jpg",
+      "url": "https://www.kurly.com/goods/1001980617",
       "slot": "snack"
     },
     {
-      "id": 5077641,
-      "name": "[CJ] 맛군밤 4개입",
-      "price": 7080,
-      "orig": 9150,
-      "rate": 22,
-      "img": "https://img-cf.kurly.com/shop/data/goods/1637806458575l0.jpg",
-      "url": "https://www.kurly.com/goods/5077641",
+      "id": 1000235857,
+      "name": "[르 와플] 길거리 와플 3종 (2개입) (택1)",
+      "price": 6390,
+      "orig": 6900,
+      "rate": 7,
+      "img": "https://product-image.kurly.com/product/image/bc25c39f-0daf-464d-b284-ac084b3d85e9.jpg",
+      "url": "https://www.kurly.com/goods/1000235857",
+      "slot": "snack"
+    },
+    {
+      "id": 5122986,
+      "name": "[크리스피크림도넛] 오리지널 글레이즈드 (47g X 9개)",
+      "price": 14000,
+      "orig": 16200,
+      "rate": 13,
+      "img": "https://img-cf.kurly.com/shop/data/goods/164870681737l0.jpg",
+      "url": "https://www.kurly.com/goods/5122986",
+      "slot": "snack"
+    },
+    {
+      "id": 1001073370,
+      "name": "[곡물그대로21] 크리스피롤 3종 (택1)",
+      "price": 3325,
+      "orig": 3500,
+      "rate": 5,
+      "img": "https://product-image.kurly.com/product/image/b643dd4d-5f24-46ae-820e-6f848db277a6.jpg",
+      "url": "https://www.kurly.com/goods/1001073370",
       "slot": "snack"
     },
     {
@@ -5241,26 +5191,6 @@
       "rate": 10,
       "img": "https://product-image.kurly.com/product/image/f728d9b6-a3ed-476b-b9a2-8aaafdc0c6b9.jpg",
       "url": "https://www.kurly.com/goods/5057184",
-      "slot": "snack"
-    },
-    {
-      "id": 1002035528,
-      "name": "[농심] 바삭츄리 고튀 90g",
-      "price": 2250,
-      "orig": 2700,
-      "rate": 16,
-      "img": "https://product-image.kurly.com/product/image/9781a1b8-33a0-4c5c-af3c-779e0ed9c725.jpg",
-      "url": "https://www.kurly.com/goods/1002035528",
-      "slot": "snack"
-    },
-    {
-      "id": 1002038536,
-      "name": "[크라운] 버터와플 with 이즈니생메르 버터 316g",
-      "price": 6780,
-      "orig": 7080,
-      "rate": 4,
-      "img": "https://product-image.kurly.com/product/image/5c0a3fca-6f96-46e4-ac6c-a30806ac9f06.jpg",
-      "url": "https://www.kurly.com/goods/1002038536",
       "slot": "snack"
     }
   ]
