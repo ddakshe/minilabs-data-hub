@@ -228,7 +228,11 @@ function intlChgBefore(d) {
   return null;
 }
 
-const todayOut = { asOf: today, products: {} };
+/**
+ * 국제가는 주 1회 갱신이라 국내 시세보다 며칠 묵을 수 있다.
+ * **자체 기준일을 함께 낸다** — 화면에서 "오늘 기준"인 것처럼 보이면 안 된다.
+ */
+const todayOut = { asOf: today, intlAsOf: intlDates.at(-1) ?? null, products: {} };
 for (const code of PRODUCTS) {
   const r = preds[`${today}_${code}`];
   if (!r) continue;

@@ -82,6 +82,10 @@
       "budget": {
         "fetch-fx.yml": {
           "callsPerRun": 6
+        },
+        "fetch-oil-weekly.yml": {
+          "callsPerRun": 20,
+          "note": "원/달러 일별 2010~ 을 1000행씩 페이지로 받는다(약 17페이지). 주 1회"
         }
       }
     },

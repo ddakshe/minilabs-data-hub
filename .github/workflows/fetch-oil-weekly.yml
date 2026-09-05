@@ -1,0 +1,99 @@
+name: Fetch Oil Weekly (정유사별 · 국제가)
+
+# oil-price-mini 의 「정유사별」 화면과 국제가 배경 주석이 쓰는 데이터.
+# 매일 도는 fetch-oil.yml(시세·예측 기록)과 **성격이 다르다.**
+#
+# 🚨 이건 API 가 아니라 **웹 폼 수집**이다(오피넷 「상표별」·「국제유가 CSV」).
+#    API 한도와 무관하지만 상시 수집은 아니다 — **주 1회로 노출을 줄여 둔다.**
+#    (oil-tools/README.md 「오피넷 이용 범위」 결정)
+#
+# 주 1회로 충분한 이유:
+#   - 브랜드 간 격차는 일 단위로 의미 있게 안 변한다(4대 정유사는 오늘 3.9원 차이).
+#   - 국제가는 **모델 입력이 아니라 설명·경보용**이다. 2주 변화율을 쓰므로
+#     하루이틀 묵어도 값의 성격이 바뀌지 않는다.
+#   ⚠️ 대신 앱은 국제가에 **자체 기준일(intl.asOf)** 을 함께 표시해야 한다.
+#      "오늘 기준"인 것처럼 보이면 안 된다.
+#
+# 일요일 08:25 KST. 정각·:10 은 다른 워크플로가 쓰고 있어 비켰다.
+
+on:
+  schedule:
+    - cron: '25 23 * * 0'   # 일요일 08:25 KST
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: '실행 이유 (로그에만 기록, 선택)'
+        required: false
+        default: 'manual refresh'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-oil-weekly
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Show trigger context
+        run: |
+          echo "Event  : ${{ github.event_name }}"
+          echo "Reason : ${{ github.event.inputs.reason || '(scheduled)' }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      - name: Fetch brand prices
+        run: node scripts/fetch-oil-brands.mjs
+
+      - name: Fetch international prices
+        env:
+          ECOS_API_KEY: ${{ secrets.ECOS_API_KEY }}
+        run: node scripts/fetch-oil-intl.mjs
+
+      # 국제가가 새로 들어왔으니 앱용 산출을 다시 만든다.
+      # predictions 는 append-only 라 이 실행으로 덮이지 않는다.
+      - name: Rebuild app data
+        run: node scripts/oil-predict.mjs
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git add oil/app oil/intl.json oil/predictions oil/actuals oil/scoreboard.json
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Nothing to commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --cached --stat oil/
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
+          git commit -m "chore(oil): weekly refresh — 정유사별·국제가 ($DATE_KST)"
+          git push || (git pull --rebase origin main && git push)
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Oil Weekly Summary"
+            echo ""
+            echo "- Trigger: \`${{ github.event_name }}\`"
+            echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
+            echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+          } >> "$GITHUB_STEP_SUMMARY"
