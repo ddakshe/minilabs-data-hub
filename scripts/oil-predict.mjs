@@ -304,6 +304,41 @@ for (const code of PRODUCTS) {
 }
 await writeFile(join(APP, 'today.json'), JSON.stringify(todayOut), 'utf-8');
 
+// ── 근거 상세 (다중 트랙 타임라인) ───────────────────────────────────
+// 국내가·국제가·격차·판정을 **한 시간축**에 올린다. 파이프라인(국제가가 국내로
+// 스며드는 구조)은 겹쳐 놓고 크로스헤어로 같은 날을 동시에 읽을 때만 보인다.
+{
+  const N = 180;
+  const dom = prices.series.B027 ?? {};
+  const dates = Object.keys(dom).sort().slice(-N);
+  const vAt = (d) => (intl.series[d] ? intl.series[d].g : null);
+  // 국제가는 거래 없는 날이 비어 있다 — 직전 값으로 채운다(계단이 아니라 연속선이다).
+  let last = null;
+  const intlV = dates.map((d) => { const v = vAt(d); if (v !== null) last = v; return last; });
+
+  const verdictAt = {};
+  for (const f of (await readdir(P_DIR)).filter((x) => x.endsWith('.json'))) {
+    for (const r of Object.values(await readJson(join(P_DIR, f), {}))) {
+      if (r.product === 'B027') verdictAt[r.date] = r.verdict;
+    }
+  }
+
+  await writeFile(join(APP, 'detail.json'), JSON.stringify({
+    asOf: dates.at(-1), product: '휘발유',
+    dates,
+    tracks: [
+      { key: 'dom',    name: '국내 소매가',  unit: '원/L', color: 1,
+        v: dates.map((d) => +dom[d].toFixed(1)) },
+      { key: 'intl',   name: '국제 제품가',  unit: '원/L', color: 2,
+        v: intlV.map((x) => (x === null ? null : +x.toFixed(1))) },
+      { key: 'spread', name: '국내 − 국제',  unit: '원',   color: 3,
+        v: dates.map((d, i) => (intlV[i] === null ? null : +(dom[d] - intlV[i]).toFixed(1))) },
+    ],
+    // 판정은 값이 아니라 상태다 — 선이 아니라 띠로 그린다.
+    verdicts: dates.map((d) => verdictAt[d] ?? null),
+  }), 'utf-8');
+}
+
 // ── 지역별 (시도) ────────────────────────────────────────────────────
 // 지역 격차가 72~164원으로 시간축 이득(7일 +12원)보다 크다. 감출 이유가 없다.
 // 시계열은 오늘부터 쌓인다 — 웹 폼으로 과거를 못 받아 공식 API 로 누적한다.
