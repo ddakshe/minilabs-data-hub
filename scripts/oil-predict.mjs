@@ -2,6 +2,7 @@
  * 오늘의 예측을 기록하고, 지난 예측을 채점한다.
  *
  * 출력: oil/predictions/{YYYY-MM}.json · oil/actuals/{YYYY-MM}.json · oil/scoreboard.json
+ *       oil/app/today.json · oil/app/score.json   ← 앱이 직접 읽는 파일
  * 실행: node scripts/oil-predict.mjs        (fetch-oil.mjs 다음에 돈다)
  *
  * ┌─ 이 파일의 존재 이유 ────────────────────────────────────────────────┐
@@ -41,7 +42,12 @@ const MODEL = {
   wait: 0.25,
   buckets: 10,
 };
-const PRODUCTS = ['B027', 'D047'];
+/**
+ * 🚨 자동차부탄(K015)은 제외한다 — prices.json 에 8일치뿐이다. 과거 소급에 쓴 웹 폼
+ *    (주유소 평균판매가격)에 LPG 가 없다. LPG 는 「자동차충전소」 별도 화면이라
+ *    소스가 다르다. 이력 없이 확률을 말할 수 없다.
+ */
+const PRODUCTS = ['B027', 'B034', 'D047', 'C004'];
 const HORIZONS = [1, 3, 7];
 
 const ym = (d) => `${d.slice(0, 4)}-${d.slice(4, 6)}`;
@@ -180,9 +186,102 @@ for (const o of Object.values(board.byOrigin)) {
 }
 await writeFile(join(DIR, 'scoreboard.json'), JSON.stringify(board, null, 1), 'utf-8');
 
+// ── 4) 앱이 읽을 파일 ────────────────────────────────────────────────
+// 앱은 이 저장소의 raw URL 을 직접 읽는다. 배치가 값을 고쳐도 앱을 다시 배포할
+// 필요가 없다. (형제 앱 stock-dividend-kr/src/lib/data.ts 와 같은 방식)
+const APP = join(DIR, 'app');
+await mkdir(APP, { recursive: true });
+
+/**
+ * 방향이 한 번 정해지면 평균 며칠 가는가. **유종마다 다르다** —
+ * 휘발유 12.1일 / 고급휘발유 3.0일 / 실내등유 4.4일 (2026-09-05 실측).
+ * 화면에 "평균 12일"을 하드코딩하면 고급휘발유에서 거짓말이 된다.
+ */
+function runAvgOf(y) {
+  const runs = [];
+  let cur = 1;
+  for (let i = 2; i < y.length; i++) {
+    const a = Math.sign(y[i] - y[i - 1]), b = Math.sign(y[i - 1] - y[i - 2]);
+    if (a !== 0 && a === b) cur++; else { runs.push(cur); cur = 1; }
+  }
+  return +(runs.reduce((s, v) => s + v, 0) / runs.length).toFixed(1);
+}
+
+const todayOut = { asOf: today, products: {} };
+for (const code of PRODUCTS) {
+  const r = preds[`${today}_${code}`];
+  if (!r) continue;
+  const m = prices.series[code];
+  const ds = Object.keys(m).sort();
+  todayOut.products[code] = {
+    name: prices.products[code], price: r.price,
+    diff: +(m[ds.at(-1)] - m[ds.at(-2)]).toFixed(2),
+    horizons: r.horizons, runDays: r.runDays, runUp: r.runUp,
+    verdict: r.verdict,
+    runAvg: runAvgOf(ds.map((d) => m[d])),
+    spark: ds.slice(-60).map((d) => +m[d].toFixed(2)),
+  };
+}
+await writeFile(join(APP, 'today.json'), JSON.stringify(todayOut), 'utf-8');
+
+// 성적표 — 대표 유종(휘발유) 7일 지평
+const SC = 'B027', SH = 7;
+const scoreRows = [];
+for (const f of (await readdir(P_DIR)).filter((x) => x.endsWith('.json'))) {
+  const rows = await readJson(join(P_DIR, f), {});
+  const acts = await readJson(join(A_DIR, f), {});
+  for (const [key, r] of Object.entries(rows)) {
+    if (r.product !== SC || r.verdict === 'neutral') continue;
+    const a = acts[`${key}_h${SH}`];
+    if (!a) continue;
+    const gain = r.verdict === 'fill' ? a.delta : -a.delta;
+    const p7 = r.horizons.find((x) => x.h === SH);
+    scoreRows.push({ date: r.date, origin: r.origin, verdict: r.verdict, price: r.price,
+                     gain: +gain.toFixed(2), hit: gain > 0, p: p7.p, n: p7.n });
+  }
+}
+scoreRows.sort((a, b) => a.date.localeCompare(b.date));
+
+const summarize = (rs) => rs.length ? {
+  n: rs.length, hit: +(rs.filter((x) => x.hit).length / rs.length).toFixed(4),
+  ev: +(rs.reduce((a, x) => a + x.gain, 0) / rs.length).toFixed(2),
+  from: rs[0].date, to: rs.at(-1).date,
+} : null;
+
+// 보정도 — 말한 방향의 확신도별 실제 적중률
+const cal = {};
+for (const r of scoreRows) {
+  if (r.origin !== 'backtest') continue;
+  const conf = r.verdict === 'fill' ? r.p : 1 - r.p;
+  const k = Math.min(Math.floor(conf * 10), 9);
+  (cal[k] ??= [0, 0]);
+  cal[k][0]++; if (r.hit) cal[k][1]++;
+}
+
+const pm = prices.series[SC];
+const tail = Object.keys(pm).sort().slice(-180);
+const tailSet = new Set(tail);
+
+await writeFile(join(APP, 'score.json'), JSON.stringify({
+  liveFrom: '20260905',   // 예측 기록 시작일 = 성적표의 출시선
+  horizon: SH,
+  byOrigin: { backtest: summarize(scoreRows.filter((r) => r.origin === 'backtest')),
+              live: summarize(scoreRows.filter((r) => r.origin === 'live')) },
+  recent: scoreRows.slice(-12).reverse(),
+  worst: scoreRows.filter((r) => !r.hit).sort((a, b) => a.gain - b.gain).slice(0, 3),
+  calibration: Object.entries(cal).filter(([, v]) => v[0] >= 30)
+    .map(([k, v]) => ({ band: `${k * 10}~${k * 10 + 9}%`, n: v[0], actual: +(v[1] / v[0]).toFixed(3) })),
+  chart: {
+    dates: tail, price: tail.map((d) => +pm[d].toFixed(2)),
+    marks: scoreRows.filter((r) => tailSet.has(r.date))
+      .map((r) => ({ date: r.date, price: r.price, verdict: r.verdict, hit: r.hit })),
+  },
+}), 'utf-8');
+
 console.log(
   `oil/predictions ${ym(today)} — 신규 ${wrote}건, 기존 보존 ${kept}건 (기준일 ${today})\n` +
   `oil/actuals — 채점 ${scored}건 신규\n` +
   `oil/scoreboard.json — ${Object.entries(board.byOrigin)
-    .map(([k, v]) => `${k}: ${Object.values(v).reduce((a, s) => a + s.n, 0)}건`).join(' · ') || '아직 없음'}`,
+    .map(([k, v]) => `${k}: ${Object.values(v).reduce((a, s) => a + s.n, 0)}건`).join(' · ') || '아직 없음'}\n` +
+  `oil/app/today.json · oil/app/score.json — 앱용 산출`,
 );
