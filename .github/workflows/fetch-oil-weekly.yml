@@ -69,7 +69,12 @@ jobs:
       - name: Check for changes
         id: diff
         run: |
-          git add oil/app oil/intl.json oil/predictions oil/actuals oil/scoreboard.json
+          # 화이트리스트로 나열하지 않는다 — 이유는 fetch-oil.yml 의 같은 단계 참고.
+          # (여기도 oil/regions.json 이 빠져 있었다. 일별 워크플로와 규칙을 맞춘다)
+          #
+          # 이 워크플로는 prices.json 을 건드리지 않으므로 예외 처리가 없다.
+          # meta.json 의 fetchedAt 도 여기선 안 바뀐다.
+          git add oil
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "Nothing to commit."

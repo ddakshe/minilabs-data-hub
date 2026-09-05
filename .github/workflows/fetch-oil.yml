@@ -88,17 +88,26 @@ jobs:
           #    "그날 예측을 발표했다"를 증명하는 게 git 커밋 타임스탬프다. 값이 안
           #    변했다고 건너뛰면 기록에 구멍이 나고, 나중에 채우면 사후 조작과
           #    구별되지 않는다. 셋 다 결정적이라 내용이 같으면 diff 도 안 생긴다.
-          git add oil/predictions oil/actuals oil/scoreboard.json
+          #
+          # 🚨 **화이트리스트로 나열하지 않는다.** 예전엔 여기에 파일명을 적었는데
+          #    새 산출물이 생길 때마다 등록을 잊었다 — 실제로 `oil/app`(앱이 읽는
+          #    today/score/detail/regions)과 `oil/regions.json`(시도별 이력)이 둘 다
+          #    빠져 있었다. 스크립트는 성공하고 워크플로는 초록불인데 파일만 조용히
+          #    버려진다. 실패 신호가 어디에도 없어서 3주를 못 알아챘다.
+          #    (2026-09-06 발견: `oil/regions.json` 은 "매일 쌓는다"면서 하루도 안 쌓였고,
+          #     `oil/app/today.json` 은 주 1회만 갱신돼 앱이 최대 6일 묵은 값을 보였다)
+          #
+          #    → 기본을 **"oil/ 전부 커밋"** 으로 두고, 예외만 아래에서 되돌린다.
+          #      이러면 산출물이 늘어도 등록을 잊을 자리가 없다.
+          git add oil
 
-          # 시세(prices/meta)만 diff 로 거른다. meta.json 의 fetchedAt 은 매 실행
-          # 바뀌므로 판정에 넣지 않는다.
-          git add oil/prices.json
+          # 예외는 시세뿐이다. meta.json 의 fetchedAt 은 매 실행 바뀌므로, 가격이
+          # 그대로인 날엔 이것 때문에 빈 커밋이 나지 않게 둘 다 되돌린다.
+          # 판정을 prices.json 하나로만 하는 이유는 위 주석과 같다.
           if git diff --cached --quiet -- oil/prices.json; then
             echo "No price change."
-            git restore --staged oil/prices.json
+            git restore --staged oil/prices.json oil/meta.json 2>/dev/null || true
             git checkout -- oil/prices.json oil/meta.json 2>/dev/null || true
-          else
-            git add oil/meta.json
           fi
 
           if git diff --cached --quiet; then
