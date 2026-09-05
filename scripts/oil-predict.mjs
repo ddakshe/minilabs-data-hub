@@ -166,6 +166,7 @@ for (const f of (await readdir(P_DIR)).filter((x) => x.endsWith('.json'))) {
   const acts = await readJson(join(A_DIR, f), {});
   for (const [key, r] of Object.entries(rows)) {
     // 🚨 출시 전(backtest)과 출시 후(live)를 절대 합산하지 않는다. 증거력이 다르다.
+    if (r.origin === 'tune') continue;   // scoreboard 에도 넣지 않는다
     const o = (board.byOrigin[r.origin] ??= {});
     for (const h of HORIZONS) {
       const a = acts[`${key}_h${h}`];
@@ -256,7 +257,7 @@ for (const code of PRODUCTS) {
     const rows = await readJson(join(P_DIR, f), {});
     const acts = await readJson(join(A_DIR, f), {});
     for (const [key, r] of Object.entries(rows)) {
-      if (r.product !== 'B027' || r.verdict === 'neutral') continue;
+      if (r.product !== 'B027' || r.verdict === 'neutral' || r.origin === 'tune') continue;
       const a = acts[`${key}_h7`];
       if (!a) continue;
       const g = r.verdict === 'fill' ? a.delta : -a.delta;
@@ -283,7 +284,8 @@ for (const f of (await readdir(P_DIR)).filter((x) => x.endsWith('.json'))) {
   const rows = await readJson(join(P_DIR, f), {});
   const acts = await readJson(join(A_DIR, f), {});
   for (const [key, r] of Object.entries(rows)) {
-    if (r.product !== SC || r.verdict === 'neutral') continue;
+    // 🚨 tune 구간은 화면에서 뺀다 — 파라미터를 고를 때 본 데이터라 성적이 부풀려진다.
+    if (r.product !== SC || r.verdict === 'neutral' || r.origin === 'tune') continue;
     const a = acts[`${key}_h${SH}`];
     if (!a) continue;
     const gain = r.verdict === 'fill' ? a.delta : -a.delta;

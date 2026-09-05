@@ -27,8 +27,16 @@ const MODEL = { v: 'baseline-1', lookback: { 1: 14, 3: 14, 7: 10 }, fill: 0.60, 
 const PRODUCTS = ['B027', 'D047'];
 const HORIZONS = [1, 3, 7];
 
-/** 표시 구간 = 홀드아웃. 파라미터를 고를 때 보지 않은 구간만 보여준다. */
-const SHOW_FROM = '20220101';
+/**
+ * 표시 구간 = 홀드아웃(2022~). 파라미터를 고를 때 보지 않은 구간만 화면에 보여준다.
+ *
+ * `--tune` 을 주면 **그 이전 구간**을 만든다. origin 을 'tune' 으로 박아
+ * 화면 집계에서 빠지게 한다 — 튜닝에 쓴 구간을 성적으로 보여주면 부풀려진다.
+ * 이 구간은 오직 **임계값·보정 곡선을 적합하는 데만** 쓴다.
+ */
+const HOLDOUT_FROM = '20220101';
+const TUNE_MODE = process.argv.includes('--tune');
+const ORIGIN = TUNE_MODE ? 'tune' : 'backtest';
 /** 적합에 쓸 최소 이력. 이보다 적으면 확률이 의미 없다. */
 const MIN_HISTORY = 750;
 
@@ -58,7 +66,7 @@ for (const code of PRODUCTS) {
 
   for (let t = MIN_HISTORY; t <= last; t++) {
     const date = ds[t];
-    if (date < SHOW_FROM) continue;
+    if (TUNE_MODE ? date >= HOLDOUT_FROM : date < HOLDOUT_FROM) continue;
     const key = `${date}_${code}`;
     const f = ym(date);
     const bag = (files[f] ??= {});
@@ -85,7 +93,7 @@ for (const code of PRODUCTS) {
     while (i - 1 > 0 && sgn(y[i], y[i - 1]) === s0 && s0 !== 0) { run++; i--; }
 
     bag[key] = {
-      date, product: code, origin: 'backtest',
+      date, product: code, origin: ORIGIN,
       price: y[t], horizons, verdict, runDays: run, runUp: s0 > 0, model: MODEL.v,
     };
     wrote++;
@@ -95,4 +103,4 @@ for (const code of PRODUCTS) {
 for (const [f, bag] of Object.entries(files)) {
   await writeFile(join(P_DIR, `${f}.json`), JSON.stringify(bag, null, 1), 'utf-8');
 }
-console.log(`backtest 예측 ${wrote}건 생성 · 기존 보존 ${kept}건 · 파일 ${Object.keys(files).length}개`);
+console.log(`${ORIGIN} 예측 ${wrote}건 생성 · 기존 보존 ${kept}건 · 파일 ${Object.keys(files).length}개`);
