@@ -219,6 +219,29 @@ function runAvgOf(y) {
 const REGIME_WARN = 0.60;
 const REGIME_WIN = 30;
 
+/**
+ * 국내 소매가 − 국제가(원/L) 스프레드의 역대 백분위.
+ *
+ * 이게 **왜 틀렸나**를 설명한다. 최악 손실 5건 모두 스프레드가 역대 하위 0~4% 였다 —
+ * 국제가가 폭등했는데 국내가 아직 못 따라간 상태다. 곧 따라잡을 수밖에 없는데
+ * **언제**가 어긋나 7일 지평 밖으로 밀렸다.
+ * (분포: 중앙값 1,028원 · 5% 831원 · 95% 1,160원)
+ */
+const spreadHist = [];
+for (const d of Object.keys(prices.series.B027 ?? {})) {
+  const i = intl.series[d];
+  if (i) spreadHist.push(prices.series.B027[d] - i.g);
+}
+spreadHist.sort((a, b) => a - b);
+function spreadPctAt(d) {
+  const i = intl.series[d];
+  if (!i || !prices.series.B027[d]) return null;
+  const v = prices.series.B027[d] - i.g;
+  let lo = 0;
+  for (const x of spreadHist) { if (x < v) lo++; else break; }
+  return +(lo / spreadHist.length).toFixed(3);
+}
+
 /** 국제가 2주 변화율. 예측일 **전날까지**만 본다 — 미래를 훔치지 않는다. */
 const intlDates = Object.keys(intl.series).sort();
 function intlChgBefore(d) {
@@ -298,7 +321,9 @@ for (const f of (await readdir(P_DIR)).filter((x) => x.endsWith('.json'))) {
                      gain: +gain.toFixed(2), hit: gain > 0, p: p7.p, n: p7.n,
                      // 말한 방향의 확신도. 크게 틀린 날일수록 이 값이 높았다(94~95%).
                      conf: +(r.verdict === 'fill' ? p7.p : 1 - p7.p).toFixed(3),
-                     intlChg2w: intlChgBefore(r.date) });
+                     intlChg2w: intlChgBefore(r.date),
+                     spreadPct: spreadPctAt(r.date),
+                     runDays: r.runDays, runUp: r.runUp });
   }
 }
 scoreRows.sort((a, b) => a.date.localeCompare(b.date));
@@ -329,7 +354,22 @@ await writeFile(join(APP, 'score.json'), JSON.stringify({
   byOrigin: { backtest: summarize(scoreRows.filter((r) => r.origin === 'backtest')),
               live: summarize(scoreRows.filter((r) => r.origin === 'live')) },
   recent: scoreRows.slice(-12).reverse(),
-  worst: scoreRows.filter((r) => !r.hit).sort((a, b) => a.gain - b.gain).slice(0, 3),
+  /**
+   * 최악 손실. **그 시점의 최근 30건 적중률**을 함께 낸다 —
+   * 실측해 보니 최악 2건에서 이미 47~50% 로 떨어져 있었다. 국면 경고가 켜졌을
+   * 상황이라는 뜻이고, 그 장치가 실제로 일한다는 증거다.
+   */
+  worst: (() => {
+    const hist = [];
+    const at = {};
+    for (const r of scoreRows) {
+      at[r.date] = hist.length >= 30
+        ? +(hist.slice(-30).filter(Boolean).length / 30).toFixed(3) : null;
+      hist.push(r.hit);
+    }
+    return scoreRows.filter((r) => !r.hit).sort((a, b) => a.gain - b.gain).slice(0, 3)
+      .map((r) => ({ ...r, hitThen: at[r.date] }));
+  })(),
   calibration: Object.entries(cal).filter(([, v]) => v[0] >= 30)
     .map(([k, v]) => ({ band: `${k * 10}~${k * 10 + 9}%`, n: v[0], actual: +(v[1] / v[0]).toFixed(3) })),
   chart: {
