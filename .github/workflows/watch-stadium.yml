@@ -1,0 +1,143 @@
+name: Watch Stadium (경기장 좌석 출처 · 맥)
+
+# store-apps 의 경기장 좌석 앱이 쓰는 출처 페이지가 바뀌었는지 감시한다.
+#
+# 왜 필요한가: 좌석 가격은 시즌마다 바뀌고, 구단이 배치도 이미지를 새 파일명으로
+# 갈아끼우며(ticket_20260625_01.png → ...), URL 자체가 사라지기도 한다.
+# 데이터는 원격 JSON 이라 스토어 심사 없이 고칠 수 있지만 **바뀐 줄 모르면 고칠 수도 없다.**
+#
+# 🚨 데이터를 만들지 않는다. **바뀌었다는 사실만 알린다.**
+#    구단 좌석 정보는 대부분 이미지 안에 있어 자동 파싱이 안 된다(2026-09-06 조사:
+#    6개 구단 6개 형식, 텍스트로 주는 곳은 3곳뿐). 사람이 읽고 store-apps 를 고쳐야 한다.
+#    fetch-auto-option 의 Guard 와 같은 판단이다 — 틀린 값이 나가는 것보다 늦는 게 낫다.
+
+on:
+  schedule:
+    # 매주 화 05:30 KST. 주말 경기가 끝나고 구단이 다음 라운드 안내를 올린 뒤다.
+    # (fetch-rates 06:00 · fetch-recall 06:30 과 겹치지 않게)
+    - cron: '30 20 * * 1'
+  workflow_dispatch:
+    inputs:
+      save_only:
+        description: '기준선만 갱신 (이슈를 열지 않는다)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: watch-stadium
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    # 🚨 구단 사이트는 해외 IP 에서 어떻게 나오는지 확인하지 않았다.
+    #    fetch-recall 이 consumer.go.kr 로, fetch-market-close 가 data.go.kr 로
+    #    같은 문제를 겪었다(러너 IP 에서 연결 자체가 안 열림). 한국 IP 로 간다.
+    #    또 이 저장소는 GitHub schedule 유실률이 67% 라(2026-08-31 실측)
+    #    주 1회 cron 은 사실상 안 뜬다 — launchd 로 dispatch 를 쏘는 것을 전제로 한다.
+    runs-on: [self-hosted, macOS, ARM64]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Show trigger context
+        run: |
+          echo "Event : ${{ github.event_name }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      # 의존성 없이 Node 내장 fetch 만 쓴다.
+      - name: Watch sources
+        id: watch
+        # 변경이 있으면 종료코드 1 이다. 실패가 아니다.
+        continue-on-error: true
+        run: |
+          set +e
+          node scripts/stadium/watch-sources.mjs > /tmp/stadium-report.txt 2>&1
+          echo "changed=$?" >> "$GITHUB_OUTPUT"
+          {
+            echo 'report<<REPORT_EOF'
+            cat /tmp/stadium-report.txt
+            echo 'REPORT_EOF'
+          } >> "$GITHUB_OUTPUT"
+          cat /tmp/stadium-report.txt
+
+      # ── 변경이 있으면 이슈를 연다. 데이터는 건드리지 않는다. ──────────────
+      - name: Open issue when changed
+        if: steps.watch.outputs.changed == '1' && !inputs.save_only
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPORT: ${{ steps.watch.outputs.report }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
+          {
+            echo "경기장 좌석 데이터의 출처 페이지가 바뀌었습니다."
+            echo ""
+            echo '```'
+            echo "$REPORT"
+            echo '```'
+            echo ""
+            echo "### 확인할 것"
+            echo "1. \`stadium/sources.json\` 에서 해당 출처의 URL 을 연다"
+            echo "   (**\`curl -e <referer>\` 필수** — 없으면 403 이 나는 구단이 있다)"
+            echo "2. 무엇이 바뀌었는지 본다. 좌석 정보는 대부분 **이미지 안**에 있다"
+            echo "3. \`store-apps/core/src/stadium/__fixtures__/kleague.ts\` 를 고친다"
+            echo "4. \`npx vitest run --root core\` 와 \`npx tsc --noEmit -p core\` 통과 확인"
+            echo "5. 이 저장소에서 \`node scripts/stadium/watch-sources.mjs --save\` 로 기준선 갱신"
+            echo ""
+            echo "### 고칠 때 지킬 것"
+            echo "- **출처에 없는 값을 지어내지 않는다.** 구역이 어느 스탠드인지, 지붕 각도가"
+            echo "  몇 도인지는 대부분 공개되지 않는다. 모르면 \`null\` 로 둔다."
+            echo "- \`obstructed: true\` 는 구단이 직접 명시한 경우만 (예: 인천 '프리미엄석 하프(시야 방해석)')"
+            echo "- 가격에는 \`note\` 로 **어떤 조건의 값인지** 적는다 (성인/온라인/주말)"
+            echo "- 구단 **배치도 이미지를 저장소에 넣지 않는다.** 저작물이다"
+            echo ""
+            echo "\`불안정\` 이 떴다면 그 출처에 회전 배너 같은 무작위 영역이 있는 것이다."
+            echo "\`stadium/sources.json\` 의 해당 항목에 \`ignore\` 정규식을 추가한다."
+            echo ""
+            echo "실행 로그: $RUN_URL"
+          } > /tmp/issue.md
+          gh issue create --title "stadium: 좌석 출처 변경 ($DATE_KST)" --body-file /tmp/issue.md
+
+      # 변경이 없을 때만 기준선을 커밋한다.
+      # 변경이 있으면 사람이 확인한 뒤 직접 --save 한다 — 안 그러면
+      # 이슈만 남고 기준선이 넘어가 다음 실행에서 조용해진다.
+      - name: Update baseline when unchanged
+        if: steps.watch.outputs.changed == '0' || inputs.save_only
+        run: |
+          node scripts/stadium/watch-sources.mjs --save || true
+          git add stadium/watch-state.json
+          if git diff --cached --quiet -- stadium/watch-state.json; then
+            echo "기준선 변화 없음 — 커밋 생략."
+            git restore --staged stadium/ || true
+          else
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "chore(stadium): watch baseline ($(TZ=Asia/Seoul date '+%Y-%m-%d'))"
+            git push || (git pull --rebase origin main && git push)
+          fi
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Stadium Source Watch"
+            echo ""
+            echo "- Trigger: \`${{ github.event_name }}\`"
+            echo "- Changed: \`${{ steps.watch.outputs.changed == '1' && 'yes' || 'no' }}\`"
+            echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+            echo ""
+            echo '```'
+            cat /tmp/stadium-report.txt 2>/dev/null || echo '(no report)'
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"

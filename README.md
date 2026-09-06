@@ -17,6 +17,11 @@ MiniLabs 앱들이 사용하는 데이터를 GitHub Actions로 수집하고 저�
 ## 구조
 
 ```
+stadium/                   ← store-apps 경기장 좌석 앱용 (주 1회 변경 감지)
+  sources.json             # 감시할 구단 좌석·티켓 페이지 20곳 (referer·ignore 규칙 포함)
+  watch-state.json         # 정규화 해시 + 이미지 파일명 집합
+                           # 🚨 데이터를 만들지 않는다. 바뀐 사실만 이슈로 알린다 —
+                           #    좌석 정보는 대부분 이미지 안이라 자동 파싱이 안 된다.
 korea-stats/               ← korea-stats-mini 앱용
   stats.json
 subway-congestion/         ← subway-congestion-mini 앱용 (분기별 갱신, 매일 diff 감지)

@@ -36,6 +36,10 @@
 |---|---|---|
 | `com.minilabs.build-wanted-dispatch` | `build-wanted.yml` | 30분 (`StartInterval 1800`) |
 | `com.minilabs.market-close-dispatch` | `fetch-market-close.yml` | 평일 09:30~14:00 **30분마다** (게이트) |
+| `com.minilabs.watch-stadium-dispatch` | `watch-stadium.yml` | 매주 화 05:30 (`StartCalendarInterval`) |
+
+**watch-stadium 은 `StartInterval` 이 아니라 달력 기준이다.** 주 1회를 로드 시점부터
+세면 맥을 재부팅할 때마다 요일이 밀린다. 30분 주기인 build-wanted 와 다른 점이다.
 
 **market-close 는 시각을 고정하지 않는다.** 공개 시각이 날마다 흔들리기 때문이다 —
 실측으로 08-28 은 09:39~10:53, 09-01 은 10:35~10:40 사이였다. 고정 시각은 이른 날엔

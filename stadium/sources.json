@@ -1,0 +1,125 @@
+[
+ {
+  "id": "seoul-park",
+  "name": "서울월드컵 주차",
+  "url": "https://www.sisul.or.kr/open_content/worldcup/guidance/park.jsp?location_div=park1",
+  "referer": "https://www.sisul.or.kr/open_content/worldcup/"
+ },
+ {
+  "id": "seoul-loc",
+  "name": "서울월드컵 교통",
+  "url": "https://www.sisul.or.kr/open_content/worldcup/introduce/location.jsp",
+  "referer": "https://www.sisul.or.kr/open_content/worldcup/"
+ },
+ {
+  "id": "seoul-seat",
+  "name": "서울월드컵 좌석",
+  "url": "https://www.sisul.or.kr/open_content/worldcup/guidance/mainst_seat.jsp",
+  "referer": "https://www.sisul.or.kr/open_content/worldcup/"
+ },
+ {
+  "id": "incheon",
+  "name": "인천 유나이티드",
+  "url": "https://www.incheonutd.com/ticket/ticket_intro.php",
+  "referer": "https://www.incheonutd.com/"
+ },
+ {
+  "id": "suwon-samsung",
+  "name": "수원 삼성",
+  "url": "https://www.bluewings.kr/ticket/main",
+  "referer": "https://www.bluewings.kr/"
+ },
+ {
+  "id": "jeonnam",
+  "name": "전남 드래곤즈",
+  "url": "https://dragons.co.kr/ticket/seats",
+  "referer": "https://dragons.co.kr/"
+ },
+ {
+  "id": "suwonfc",
+  "name": "수원FC",
+  "url": "https://www.suwonfc.com/?p=82",
+  "referer": "https://www.suwonfc.com/"
+ },
+ {
+  "id": "anyang",
+  "name": "FC안양",
+  "url": "https://www.fc-anyang.com/ticket/ticket.asp",
+  "referer": "https://www.fc-anyang.com/"
+ },
+ {
+  "id": "jeju",
+  "name": "제주 SK 좌석뷰",
+  "url": "https://www.jejuskfc.com/reservation/seatView",
+  "referer": "https://www.jejuskfc.com/"
+ },
+ {
+  "id": "ulsan",
+  "name": "울산 HD",
+  "url": "https://www.uhdfc.com/apply/ticket.php",
+  "referer": "https://www.uhdfc.com/"
+ },
+ {
+  "id": "pohang",
+  "name": "포항 스틸러스",
+  "url": "https://www.steelers.co.kr/match/ticket",
+  "referer": "https://www.steelers.co.kr/"
+ },
+ {
+  "id": "gwangju",
+  "name": "광주 FC",
+  "url": "https://www.gwangjufc.com/ticket/ticket.php",
+  "referer": "https://www.gwangjufc.com/"
+ },
+ {
+  "id": "daegu",
+  "name": "대구 FC 좌석",
+  "url": "https://www.daegufc.co.kr/stadium/seat",
+  "referer": "https://www.daegufc.co.kr/"
+ },
+ {
+  "id": "busan",
+  "name": "부산 아이파크",
+  "url": "https://www.busanipark.com/ticket/ticket.php",
+  "referer": "https://www.busanipark.com/"
+ },
+ {
+  "id": "gyeongnam",
+  "name": "경남 FC 경기장",
+  "url": "https://www.gyeongnamfc.com/ticket/stadium_info.php",
+  "referer": "https://www.gyeongnamfc.com/"
+ },
+ {
+  "id": "hwaseong",
+  "name": "화성 FC",
+  "url": "https://www.hwaseongfc.com/ticket/ticket.php",
+  "referer": "https://www.hwaseongfc.com/"
+ },
+ {
+  "id": "daejeon",
+  "name": "대전 하나시티즌",
+  "url": "https://www.dhcfc.kr/ti/ti.php",
+  "referer": "https://www.dhcfc.kr/",
+  "ignore": [
+   "<div class=\"img\"><a href=\"#\"><img src=\"[^\"]*?/shouse/[^\"]*\"[^>]*></a></div>\\s*<div class=\"txt\">[\\s\\S]*?</div>\\s*</div>"
+  ]
+ },
+ {
+  "id": "ansan",
+  "name": "안산 그리너스",
+  "url": "https://www.greenersfc.com/ticket/ticket.php",
+  "referer": "https://www.greenersfc.com/"
+ },
+ {
+  "id": "cheongju",
+  "name": "충북청주",
+  "url": "https://www.chfc.kr/ti/ti_int.php",
+  "referer": "https://www.chfc.kr/"
+ },
+ {
+  "id": "seongnam",
+  "name": "성남 FC",
+  "url": "https://www.seongnamfc.com/fan/seasonticket",
+  "referer": "https://www.seongnamfc.com/"
+ }
+]
