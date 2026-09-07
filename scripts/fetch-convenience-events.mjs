@@ -40,7 +40,11 @@ const ALLOW_SHRINK = process.env.ALLOW_SHRINK === '1'
 // 직전 대비 비율을 보는 SHRINK_LIMIT과 달리 이력이 필요 없고, 첫 실행에서 바로 잡힌다.
 // (2026-07-30 GS25가 708건일 때 사이트는 1665건이라고 답하고 있었다)
 class IncompleteError extends Error {}
-// 이마트24는 바코드 중복 제거분 때문에 totalCount와 몇 건 어긋난다(관측 2364 vs 2361 = 0.13%). 2% 여유.
+// ⚠ 이마트24의 totalCount 는 **중복 제거 전 행 수**다. 같은 바코드가 2~4번씩 실린다
+// (2026-09-07 실측: 237페이지 4737행 = totalCount, 고유 바코드는 2357개 — 딱 절반).
+// 그래서 대조는 '수집한 행 수 vs totalCount' 로 한다. 예전처럼 중복 제거 후 개수와 견주면
+// 사이트가 멀쩡해도 2357 < 4642 라서 **매번 반드시** 완결성 위반이 된다(09-03 실패가 이것이다).
+// 여유 2% 는 페이징 도중 상품이 추가·삭제되는 흔들림용이다.
 const E24_TOLERANCE = 0.02
 const ALLOW_INCOMPLETE = process.env.ALLOW_INCOMPLETE === '1'
 
@@ -376,11 +380,15 @@ function parseE24Block(block) {
   return { id: `emart24-${barcode || name}`, chain: 'EMART24', name, price, eventType, image: img, category: null }
 }
 
-async function scrapeEmart24({ maxPages = 200 } = {}) {
+// maxPages 는 페이지 수 상한이다. 2026-09-07 기준 237페이지(4737행)이므로 200 이면 잘린다 —
+// 실제로 09-03 실행이 200페이지에서 멎었다. 상품이 늘어도 버티도록 넉넉히 잡는다.
+async function scrapeEmart24({ maxPages = 400 } = {}) {
   const out = []
   const seen = new Set()
-  let expected = null // 페이지1 HTML의 totalCount = 전체 행사상품 수
-  let dupRetry = 0
+  let expected = null // 페이지1 HTML의 totalCount = 전체 '행' 수 (중복 포함)
+  let rows = 0 // 수집한 행 수 — totalCount 와 같은 단위라 이 값으로 대조한다
+  let prevSig = null
+  let repeated = 0
   for (let page = 1; page <= maxPages; page++) {
     const { status, text } = await http(
       `${E24_BASE}?search=&category_seq=&base_category_seq=&align=&page=${page}`
@@ -391,25 +399,32 @@ async function scrapeEmart24({ maxPages = 200 } = {}) {
       if (raw) expected = Number(raw.replace(/,/g, ''))
     }
     const blocks = text.split('<div class="itemWrap">').slice(1)
-    if (blocks.length === 0) break // 상품 없는 페이지 = 진짜 끝
-    const parsed = blocks.map(parseE24Block).filter(Boolean)
-    let fresh = 0
-    for (const p of parsed) if (!seen.has(p.id)) (seen.add(p.id), out.push(p), fresh++)
-    // 매핑된 상품이 있는데 전부 중복이면 마지막 페이지 반복 → 종료.
-    // (매핑 안 되는 유형만 있는 페이지는 건너뛰고 계속 진행)
-    if (parsed.length > 0 && fresh === 0) {
-      // 아직 총 개수를 못 채웠다면 서버가 같은 페이지를 되돌려준 일시적 현상일 수 있다 → 다음 페이지로 계속.
-      if (expected != null && out.length < expected && dupRetry < 2) {
-        dupRetry++
-        console.warn(`  이마트24 p${page} 전부 중복 — 다음 페이지로 계속 ${dupRetry}/2 (${out.length}/${expected})`)
+    if (blocks.length === 0) break // 상품 없는 페이지 = 진짜 끝 (238페이지째가 그렇다)
+
+    // 페이지가 끝났는지는 '새 상품이 있나'로 판단하면 안 된다 — 같은 바코드가 여러 페이지에
+    // 흩어져 있어서 한 페이지가 통째로 기존 것일 수 있다. 서버가 같은 페이지를 되돌려주는
+    // 일시적 현상만 걸러내고, 그때는 다음 페이지로 넘어가지 말고 같은 페이지를 다시 부른다.
+    const sig = `${blocks.length}:${blocks[0].match(/<div class="itemtitle">[\s\S]*?<a[^>]*>([^<]+)<\/a>/)?.[1] ?? ''}`
+    if (sig === prevSig) {
+      if (repeated++ < 2) {
+        console.warn(`  이마트24 p${page} 직전 페이지와 동일 — 1초 뒤 재요청 ${repeated}/2 (${rows}/${expected ?? '?'}행)`)
+        await sleep(1000)
+        page--
         continue
       }
       break
     }
+    repeated = 0
+    prevSig = sig
+
+    const parsed = blocks.map(parseE24Block).filter(Boolean)
+    rows += parsed.length
+    for (const p of parsed) if (!seen.has(p.id)) (seen.add(p.id), out.push(p))
   }
-  // 상류가 말한 총 개수에 크게 못 미치면 조기 종료다(중복 제거분만큼의 여유는 둔다).
-  if (expected != null && out.length < Math.floor(expected * (1 - E24_TOLERANCE))) {
-    throw new IncompleteError(`이마트24 ${out.length}/${expected}건만 수집(페이징 조기 종료)`)
+  // 상류가 말한 행 수에 크게 못 미치면 조기 종료다. 중복 제거 후 개수(out.length)가 아니라
+  // 행 수(rows)로 견준다 — 위 E24_TOLERANCE 주석 참고.
+  if (expected != null && rows < Math.floor(expected * (1 - E24_TOLERANCE))) {
+    throw new IncompleteError(`이마트24 ${rows}/${expected}행만 수집(페이징 조기 종료)`)
   }
   return out
 }

@@ -1,4 +1,4 @@
-name: Fetch travel courses (Monthly)
+name: Fetch travel courses (월간 · 맥)
 
 on:
   schedule:
@@ -14,7 +14,10 @@ concurrency:
 
 jobs:
   fetch:
-    runs-on: ubuntu-latest
+    # 🚨 apis.data.go.kr 은 GitHub 러너 IP 에서 연결이 안 열린다. 09-02 실행이
+    #    `ConnectTimeoutError: apis.data.go.kr:80, timeout: 10000ms` 로 죽었다.
+    #    fetch-market-close.yml 이 같은 호스트로 먼저 겪은 문제다.
+    runs-on: [self-hosted, macOS, ARM64]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -26,14 +29,12 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install dependencies
-        run: npm ci
-
       - name: Show trigger context
         run: |
           echo "Event: ${{ github.event_name }}"
           TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
 
+      # 의존성 없이 Node 내장 fetch 만 쓰므로 npm ci 를 생략한다.
       - name: Fetch travel course data
         env:
           KTO_API_KEY: ${{ secrets.KTO_API_KEY }}

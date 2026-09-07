@@ -1,4 +1,4 @@
-name: Fetch cancer-cover data
+name: Fetch cancer-cover data (맥)
 
 # 두 통계 모두 연 1회 갱신이다(국가암등록통계는 2년 시차). 매일 돌 이유가 없어
 # 매달 1일에만 돈다. 새 연도 자료가 올라오면 그달 실행에서 diff 로 잡힌다.
@@ -21,7 +21,9 @@ concurrency:
 
 jobs:
   fetch:
-    runs-on: ubuntu-latest
+    # 🚨 kosis.kr 을 부른다 — fetch-kosis.yml 과 같은 이유로 맥에서 돈다.
+    #    09-02 실행이 `ConnectTimeoutError: kosis.kr:443, timeout: 10000ms` 로 죽었다.
+    runs-on: [self-hosted, macOS, ARM64]
     steps:
       - name: Checkout
         uses: actions/checkout@v4

@@ -181,18 +181,26 @@ function loadKeys() {
 }
 
 /**
- * 연결이 실패하면 잠시 쉬고 다시 시도한다.
+ * 연결이 실패하면 잠시 쉬고 다시 시도한다. **본문을 다 읽는 데까지가 한 번의 시도다.**
  *
  * ⚠ AbortSignal.timeout 만으로는 부족하다. 실제로 죽은 방식은
  * `ConnectTimeoutError (attempted address: www.consumer.go.kr:443, timeout: 10000ms)` 였는데,
  * 이건 undici 의 **연결(connect) 타임아웃**이라 요청 전체에 거는 AbortSignal 이 닿지 않는다.
  * 소비자24가 간헐적으로 해외(Actions) IP 에 늦게 응답하는 것이라 재시도 말고 손쓸 방법이 없다.
+ *
+ * ⚠ 예전에는 `fetch()` 만 감싸고 `res.text()` 는 호출부에 뒀다. 그런데 AbortSignal 은
+ * **본문 수신 중에도** 터진다 — 09-07 실행이 그렇게 죽었다. 헤더는 받았으니 fetch 는
+ * 성공으로 반환됐고, 30초 뒤 `res.text()` 가 `TimeoutError` 를 던지는데 그 줄은 재시도
+ * 바깥이라 경고 한 줄 없이 즉사했다. 그래서 본문 읽기를 이 안으로 들여왔다.
  */
-async function fetchRetry(url, tries = 4) {
+async function fetchTextRetry(url, tries = 4) {
   let last;
   for (let i = 0; i < tries; i++) {
     try {
-      return await fetch(url, { signal: AbortSignal.timeout(30000) });
+      const res = await fetch(url, { signal: AbortSignal.timeout(30000) });
+      // HTTP 오류는 재시도해도 같다. 본문을 읽지 않고 그대로 올려보낸다.
+      if (!res.ok) return { ok: false, status: res.status, text: '' };
+      return { ok: true, status: res.status, text: await res.text() };
     } catch (e) {
       last = e;
       if (i === tries - 1) break;
@@ -208,10 +216,8 @@ async function fetchPage(cat, key, page) {
   const url =
     `${ENDPOINT}?serviceKey=${key}&pageNo=${page}&cntPerPage=${PER_PAGE}&cntntsId=${cat.id}`;
 
-  const res = await fetchRetry(url);
-  if (!res.ok) throw new Error(`${cat.name} p${page}: HTTP ${res.status}`);
-
-  const xml = await res.text();
+  const { ok, status, text: xml } = await fetchTextRetry(url);
+  if (!ok) throw new Error(`${cat.name} p${page}: HTTP ${status}`);
 
   const code = xml.match(/<code>(\d+)<\/code>/)?.[1];
   if (code && code !== '00') {

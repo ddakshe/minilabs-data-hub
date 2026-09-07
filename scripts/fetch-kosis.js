@@ -30,6 +30,34 @@ const YEARLY_HISTORY = 10
 
 // ───────────────────────────── helpers ─────────────────────────────
 
+/**
+ * 전송 계층 실패만 재시도한다. **본문을 다 읽는 데까지가 한 번의 시도다** —
+ * AbortSignal 은 본문 수신 중에도 터지므로 `res.json()` 을 밖에 두면 재시도가 안 걸린다
+ * (fetch-recall.mjs 가 09-07 에 그렇게 죽었다).
+ *
+ * ⚠ HTTP 오류·KOSIS 에러코드·빈 응답은 재시도하지 않는다. 다시 불러도 같은 답이 오고,
+ *   지표가 22개라 헛된 재시도가 곧 몇 분의 실행 시간이다.
+ */
+async function fetchJsonRetry(url, tries = 4) {
+  let last
+  for (let i = 0; i < tries; i++) {
+    try {
+      const res = await fetch(url, { signal: AbortSignal.timeout(30000) })
+      if (!res.ok) return { ok: false, status: res.status, data: null }
+      return { ok: true, status: res.status, data: await res.json() }
+    } catch (e) {
+      last = e
+      if (i === tries - 1) break
+      const wait = 2000 * 2 ** i // 2s → 4s → 8s
+      console.warn(
+        `    ⚠ 연결 실패 (${e.cause?.code ?? e.name}) — ${wait / 1000}초 뒤 재시도 ${i + 2}/${tries}`,
+      )
+      await new Promise((r) => setTimeout(r, wait))
+    }
+  }
+  throw last
+}
+
 async function kosis(params) {
   const qs = new URLSearchParams({
     method: 'getList',
@@ -38,9 +66,8 @@ async function kosis(params) {
     jsonVD: 'Y',
     ...params,
   })
-  const res = await fetch(`${BASE}?${qs}`)
-  if (!res.ok) throw new Error(`HTTP ${res.status}`)
-  const data = await res.json()
+  const { ok, status, data } = await fetchJsonRetry(`${BASE}?${qs}`)
+  if (!ok) throw new Error(`HTTP ${status}`)
   if (data && !Array.isArray(data) && data.err) {
     throw new Error(`KOSIS ${data.err}: ${data.errMsg}`)
   }

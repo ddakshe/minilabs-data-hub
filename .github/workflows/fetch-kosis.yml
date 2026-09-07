@@ -1,4 +1,4 @@
-name: Fetch KOSIS stats
+name: Fetch KOSIS stats (맥)
 
 on:
   schedule:
@@ -19,7 +19,11 @@ concurrency:
 
 jobs:
   fetch:
-    runs-on: ubuntu-latest
+    # 🚨 kosis.kr 은 GitHub 러너(해외) IP 에 연결을 안 열어준다. 09-04·05·06 사흘 연속
+    #    22개 지표가 전부 `fetch failed` 였고, 실패 실행은 4분 10초(지표당 10초 타임아웃),
+    #    성공 실행은 31초로 갈렸다. 같은 시각 이 맥(한국 IP)에서는 정상이다.
+    #    fetch-recall.yml · fetch-market-close.yml 이 먼저 같은 결론에 도달했다.
+    runs-on: [self-hosted, macOS, ARM64]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
