@@ -336,6 +336,22 @@ def build(
             encoding="utf-8",
         )
 
+    # 앱이 부팅하며 받는 시도→시군구 목록. realestate/region-master.json 을 앱이 직접
+    # 읽게 하면 디렉터리 간 결합이 생기고, 실거래 쪽 사정으로 목록이 바뀌면 관리비 앱이
+    # 같이 흔들린다. 여기서 **실제로 데이터가 있는 시군구만** 따로 굽는다(253개 · 15KB).
+    # 표기는 K-apt 엑셀 것을 그대로 쓴다(성남분당구·전남광주통합특별시). region-master 의
+    # 표기로 갈아끼우면 매핑이 한 겹 더 생기고, 화면에 뜨는 이름과 데이터가 어긋난다.
+    regions_out = []
+    for region, codes in sorted(by_region.items()):
+        sample = complexes[codes[0]]
+        regions_out.append(
+            {"code": region, "sido": sample["sido"], "sigungu": sample["sgg"], "n": len(codes)}
+        )
+    (out / "regions.json").write_text(
+        json.dumps(regions_out, ensure_ascii=False, separators=(",", ":")),
+        encoding="utf-8",
+    )
+
     # 앱의 단지 검색용 — 지표는 빼고 이름·주소만.
     (out / "complexes.json").write_text(
         json.dumps(
