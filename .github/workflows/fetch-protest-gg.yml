@@ -1,0 +1,90 @@
+name: Fetch protest schedule (경기남부 · 맥)
+
+# fetch-protest.yml(서울 · ubuntu)의 짝이다. **경기남부만 이 맥에서 돈다.**
+#
+# 왜 호스티드 러너가 아닌가:
+#   경기남부 게시판은 표를 **JPG 한 장으로만** 올린다. 본문에도 HWP/PDF 에도
+#   텍스트가 없어서 OCR 말고는 길이 없다. 그런데 ubuntu 에서 쓸 수 있는
+#   tesseract(kor) 는 이 표에서 못 쓴다 — 시간이 "07:00~" → "955" 로 깨지고,
+#   psm 4 에서는 **인원 30 을 64 로 조용히 오독했다.** 규모 등급이 그 숫자
+#   하나로 갈리므로 조용한 오독이 제일 위험하다.
+#   macOS Vision 은 같은 이미지에서 6행 전 필드가 맞았다. 그래서 맥이다.
+#
+# 서울처럼 하루 3회 돌 필요는 없다. 경기는 **금요일에 토·일·월 3일치를 묶어**
+# 올리고 평일은 당일 아침 한 번이다. 하루 1회면 충분하고, 맥이 꺼져 있어
+# 하루 건너뛰어도 다음 실행이 같은 목록을 다시 읽어 메운다(전량 재수집이라
+# 증분 상태가 없다).
+
+on:
+  schedule:
+    - cron: '0 23 * * *'   # 08:00 KST — 서울(06:00) 뒤, 게시판 갱신 후
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-protest-gg
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: [self-hosted, macOS, ARM64]
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Show trigger context
+        run: |
+          echo "Event : ${{ github.event_name }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+          # Vision 은 Xcode 툴체인의 swiftc 로 빌드한다. 없으면 여기서 드러난다.
+          swiftc --version | head -2
+
+      - name: Fetch 경기남부 protest schedule
+        run: node scripts/fetch-protest-gg.mjs
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git add protest/
+          if git diff --cached --quiet -- protest/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes — skipping commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --cached --stat protest/
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d %H:%M")
+          git commit -m "chore(protest-gg): scheduled refresh ($DATE_KST KST)"
+          # 서울 워크플로가 같은 시간대에 밀어넣을 수 있다. 한 번은 되받아 재시도한다.
+          git push || (git pull --rebase origin main && git push)
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## 경기남부 집회 수집 결과"
+            echo ""
+            echo "- Trigger: \`${{ github.event_name }}\`"
+            echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
+            echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+          } >> "$GITHUB_STEP_SUMMARY"

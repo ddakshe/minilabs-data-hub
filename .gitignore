@@ -20,3 +20,6 @@ local-jobs-status.json
 # 튜닝 구간 backtest — 파라미터 적합에만 쓰고 화면에 안 나간다.
 # walk-forward 로 언제든 재생성된다: node scripts/oil-backfill.mjs --tune
 oil/tune/
+
+# Vision OCR 바이너리 — 플랫폼 종속이라 커밋하지 않는다. 소스에서 다시 빌드된다.
+scripts/lib/ocr-vision
