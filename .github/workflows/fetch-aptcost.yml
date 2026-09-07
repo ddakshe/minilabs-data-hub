@@ -1,0 +1,163 @@
+name: Fetch AptCost (관리비 · 맥)
+
+# 관리비 미니앱이 쓰는 전국 공동주택 관리비.
+#
+# 원본이 OpenAPI 가 아니라 **K-apt 자료실 엑셀**이다. 이유가 분명하다 —
+# 관리비 OpenAPI 는 `단지코드 + 발생년월` 을 하나씩 물어야 하는데 개발계정 한도가
+# 상세기능당 5,000/일이다. 단지가 21,300 곳이니 **항목 하나로 한 달치를 채우는 데만
+# 4.5일**이고, 항목이 스무 개다. 반면 자료실에는 연도별 전 단지·전 항목이 엑셀 한 장
+# (2025년 기준 65MB · 254,882행 · 51열)으로 올라온다.
+#
+# 그래서 이 워크플로는 **data.go.kr 인증키를 쓰지 않는다.** `docs/api-limits.json` 에
+# 신고할 예산이 없다 — api-registry 는 `secrets.*` 와 러너의 stock-tools/*.env 만
+# 스캔하므로 여기에 걸릴 것도 없다. 공유 한도를 한 콜도 먹지 않는다.
+#
+# 월 1회인 이유:
+#   관리비 공개 기한이 **부과한 달의 다음 달 말일**이다(공동주택관리법 시행령).
+#   그래서 이번 달 데이터는 다음 달 말까지 들어오고, 그 다음 달 초에나 채워진다.
+#   2026-09-07 추출 실측 — M-1 1.4% · M-2 83% · M-3 99%.
+#   더 자주 받아도 새로 채워지는 건 지난달 몇 %뿐이라 커밋만 늘어난다.
+#
+# 8일에 도는 이유:
+#   K-apt 는 **매주 금요일**에 재추출해 게시한다. 매월 8일이면 그달 첫 금요일 추출이
+#   이미 올라와 있고, 두 달 전 데이터가 99% 찬 시점이다.
+#   07:00 KST 는 이 허브에서 비어 있는 시간대다 (fetch-rates 06:00 · fetch-recall
+#   06:30 · outlets 09:00 · cpo 09:20 · now-showing 09:30 · fetch-fx 11:00).
+#
+# 정기 실행은 **현재 연도와 직전 연도만** 받는다. 지난 연도 파일도 매주 재추출되지만
+# 실제로 바뀌는 건 최근 몇 달의 지각 제출분이다. 2018~2023 을 매달 받는 건 400MB 낭비다.
+# 과거를 다시 받아야 하면 workflow_dispatch 의 years 로 수동 실행한다.
+
+on:
+  schedule:
+    - cron: '0 22 7 * *'  # 매월 8일 07:00 KST
+  workflow_dispatch:
+    inputs:
+      years:
+        description: "받을 연도 (쉼표 · 'all' 은 2018~현재 전체 · 비우면 올해+작년)"
+        required: false
+        default: ''
+      base:
+        description: "기준 연도 (전체 지표를 싣는 해). 'auto' 는 12개월이 찬 최근 연도"
+        required: false
+        default: 'auto'
+      reason:
+        description: '실행 이유 (로그에만 기록, 선택)'
+        required: false
+        default: 'manual refresh'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-aptcost
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    # 🚨 셀프호스티드(한국 IP)로 돌린다.
+    #    이 허브는 국내 기관 API 가 GitHub 러너 IP 풀의 일부를 막는 걸 여러 번 겪었다
+    #    (consumer.go.kr 연결 타임아웃 ×4 · ecos.bok.or.kr 11초 뒤 fetch failed,
+    #     같은 시각 국내에서는 HTTP 200 · 0.04초). k-apt.go.kr 이 막는지는 확인하지
+    #    않았지만, 한 번 실행에 60MB 를 받는 월 1회 배치라 동전 던지기를 남길 이유가 없다.
+    #    ⚠️ 이 주석은 추정이다 — GitHub 호스티드에서 성공한 실측이 생기면 고칠 것.
+    runs-on: [self-hosted, macOS, ARM64]
+    timeout-minutes: 90
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Show trigger context
+        run: |
+          echo "Event  : ${{ github.event_name }}"
+          echo "Years  : ${{ github.event.inputs.years || '(올해+작년)' }}"
+          echo "Base   : ${{ github.event.inputs.base || 'auto' }}"
+          echo "Reason : ${{ github.event.inputs.reason || '(scheduled)' }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      - name: Ensure openpyxl
+        run: python3 -c "import openpyxl" || python3 -m pip install --user --quiet openpyxl
+
+      # 엑셀은 커밋하지 않는다. 연도 전체가 500MB 라 저장소에 들어갈 물건이 아니고,
+      # 산출물(aptcost/)만 있으면 앱이 돈다. RUNNER_TEMP 는 실행 끝나면 정리된다.
+      - name: Download K-apt workbooks
+        run: |
+          set -euo pipefail
+          RAW="${RUNNER_TEMP}/aptcost-raw"
+          mkdir -p "$RAW"
+          YEARS="${{ github.event.inputs.years }}"
+          if [ -z "$YEARS" ]; then
+            THIS=$(TZ=Asia/Seoul date +%Y)
+            YEARS="$((THIS - 1)),${THIS}"
+          fi
+          echo "받을 연도: $YEARS"
+          python3 scripts/aptcost/kapt_files.py --out "$RAW" --years "$YEARS" --basis --area
+          du -sh "$RAW"
+
+      - name: Build aptcost/
+        run: |
+          set -euo pipefail
+          RAW="${RUNNER_TEMP}/aptcost-raw"
+          BASE="${{ github.event.inputs.base }}"
+          python3 scripts/aptcost/build_aptcost.py \
+            --raw "$RAW" --out aptcost --year "${BASE:-auto}" --trend all
+
+      - name: Drop workbooks
+        if: always()
+        run: rm -rf "${RUNNER_TEMP}/aptcost-raw"
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git add aptcost/
+          if git diff --cached --quiet -- aptcost/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes — skipping commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --cached --stat aptcost/ | tail -5
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            MSG="chore(aptcost): manual refresh ($DATE_KST)"
+          else
+            MSG="chore(aptcost): refresh ($DATE_KST)"
+          fi
+
+          git commit -m "$MSG"
+          # 다른 워크플로가 같은 시간대에 밀어넣을 수 있다. 한 번은 되받아 재시도한다.
+          git push || (git pull --rebase origin main && git push)
+
+      - name: Summary
+        if: always()
+        env:
+          SUMMARY_PY: |
+            import json
+            m = json.load(open('aptcost/meta.json'))
+            print(f"- 기준 연도: `{m['year']}` · 단지 `{m['complexes']:,}` · 시군구 `{m['regions']}`")
+            print(f"- 원본: `{m['sourceFile']}`")
+            rows = list(m.get('monthlyRows', {}).items())[-3:]
+            if rows:
+                print("- 최근 월별 행: " + " · ".join(f"`{k}` {v:,}" for k, v in rows))
+        run: |
+          {
+            echo "## AptCost Fetch Summary"
+            echo ""
+            echo "- Trigger: \`${{ github.event_name }}\`"
+            echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
+            # heredoc 을 쓰면 파이썬 본문이 run 블록 들여쓰기 밖으로 나가 YAML 이 깨진다.
+            if [ -f aptcost/meta.json ]; then
+              python3 -c "$SUMMARY_PY"
+            fi
+            echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+          } >> "$GITHUB_STEP_SUMMARY"
