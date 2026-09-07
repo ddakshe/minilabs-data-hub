@@ -113,6 +113,25 @@ jobs:
         id: diff
         run: |
           git add aptcost/
+
+          # meta.json 의 fetchedAt 은 매 실행마다 바뀐다. 그것만 달라졌다면 "받아봤지만
+          # 내용은 그대로" 라는 뜻이라 커밋하지 않는다 — 안 그러면 이 단계가 장식이 되고
+          # 데이터가 안 변한 달에도 커밋이 남는다. 앱이 화면에 쓰는 기준은 수집 시각이
+          # 아니라 meta.json 의 year·monthlyRows 라서 잃는 정보도 없다.
+          # (첫 실행 실측: CI 산출물이 로컬 빌드와 fetchedAt 한 줄만 달랐다)
+          FILES=$(git diff --cached --name-only -- aptcost/)
+          if [ "$FILES" = "aptcost/meta.json" ]; then
+            OTHER=$(git diff --cached -U0 -- aptcost/meta.json \
+                    | grep -E '^[+-]' | grep -vE '^(\+\+\+|---)' \
+                    | grep -vc 'fetchedAt' || true)
+            if [ "${OTHER:-0}" -eq 0 ]; then
+              git restore --staged --worktree aptcost/meta.json
+              echo "changed=false" >> "$GITHUB_OUTPUT"
+              echo "fetchedAt 만 변경 — 커밋 건너뜀."
+              exit 0
+            fi
+          fi
+
           if git diff --cached --quiet -- aptcost/; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No changes — skipping commit."
