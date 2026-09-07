@@ -1,0 +1,97 @@
+{
+  "updatedAt": "2026-09-07",
+  "source": {
+    "name": "서울경찰청 오늘의 집회/시위",
+    "url": "https://www.smpa.go.kr/user/nd54882.do",
+    "note": "신고 기준이며 실제 개최 여부·규모는 다를 수 있음. 주최·목적 정보는 원문에 없음."
+  },
+  "scaleLabels": {
+    "small": "소규모",
+    "medium": "보통",
+    "large": "대규모",
+    "huge": "초대형"
+  },
+  "days": [
+    {
+      "date": "2026-09-07",
+      "boardNo": "00340056",
+      "title": "오늘의 집회 260907 월",
+      "postedAt": "2026-09-04",
+      "url": "https://www.smpa.go.kr/user/nd54882.do?View&boardNo=00340056",
+      "items": [
+        {
+          "time": "08:00~12:00",
+          "startTime": "08:00",
+          "endTime": "12:00",
+          "place": "대우건설 앞 인도",
+          "dong": "을지로4가",
+          "people": 100,
+          "peopleText": "100명",
+          "stations": [
+            "중부"
+          ],
+          "districts": [
+            "중구"
+          ],
+          "station": "중부",
+          "district": "중구",
+          "scale": "small"
+        },
+        {
+          "time": "11:00~13:00",
+          "startTime": "11:00",
+          "endTime": "13:00",
+          "place": "구 효자치안센터 앞",
+          "dong": "효자동",
+          "people": 500,
+          "peopleText": "500명",
+          "stations": [
+            "종로"
+          ],
+          "districts": [
+            "종로구"
+          ],
+          "station": "종로",
+          "district": "종로구",
+          "scale": "medium"
+        },
+        {
+          "time": "14:00~20:00",
+          "startTime": "14:00",
+          "endTime": "20:00",
+          "place": "교대역 7번 출구 앞 이면도로",
+          "dong": "서초동",
+          "people": 1000,
+          "peopleText": "1,000명",
+          "stations": [
+            "서초"
+          ],
+          "districts": [
+            "서초구"
+          ],
+          "station": "서초",
+          "district": "서초구",
+          "scale": "medium"
+        },
+        {
+          "time": "17:00~18:00",
+          "startTime": "17:00",
+          "endTime": "18:00",
+          "place": "광진구청 앞 인도",
+          "dong": "자양동",
+          "people": 1000,
+          "peopleText": "1,000명",
+          "stations": [
+            "광진"
+          ],
+          "districts": [
+            "광진구"
+          ],
+          "station": "광진",
+          "district": "광진구",
+          "scale": "medium"
+        }
+      ]
+    }
+  ]
+}

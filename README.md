@@ -36,6 +36,8 @@ convenience-events/        ← convenience-events-mini 앱용 (편의점 3사 �
   products.json            # CU·GS25·세븐일레븐 1+1/2+1/증정/할인 (5천여건, 가격·카테고리 포함)
 chicken-events/            ← chicken-event-mini 앱용 (치킨 브랜드 진행중 이벤트, 매주 월)
   events.json              # 브랜드별 이벤트(제목·기간·플랫폼). 어댑터 레지스트리 방식, 어댑터 없는 브랜드는 링크전용
+protest/                   ← hansanhae-mini(한산해) 집회 섹션용 (서울경찰청 게시판, 매일 3회)
+  assemblies.json          # 서울 집회 신고 현황 (오늘~+7일). 일시/장소/인원/관할서 + 자치구·규모등급 파생
 recall/                    ← recall-mini(리콜모아) 앱용 (소비자24, 매일 diff 감지)
   recalls.json             # 국내 리콜 1,700여건 (9개 카테고리 × 최근 300건, 최신순)
   meta.json                # 수집 시각·카테고리별 건수. 앱이 "기준일" 표시에 쓴다
@@ -170,6 +172,7 @@ https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/rate-lens/rates
 https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/benefit-gauge/benefits.json
 https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/recall/recalls.json
 https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/recall/meta.json
+https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/protest/assemblies.json
 ```
 
 ## 데이터 갱신

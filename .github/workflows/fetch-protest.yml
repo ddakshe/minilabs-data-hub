@@ -1,0 +1,90 @@
+name: Fetch protest schedule
+
+# 서울경찰청 "오늘의 집회/시위" 게시판 수집.
+# 금요일에 토·일·월 3일치가 한꺼번에 올라오지만, 당일 아침에 항목이 추가·수정되는
+# 경우가 있어 하루 3회 돈다. (소스가 게시판이라 변경 시각이 일정하지 않다)
+on:
+  schedule:
+    - cron: '0 21 * * *'   # 06:00 KST
+    - cron: '0 2 * * *'    # 11:00 KST
+    - cron: '0 8 * * *'    # 17:00 KST
+  workflow_dispatch:
+    inputs:
+      horizon:
+        description: '수집할 앞으로의 일수 (기본 7)'
+        required: false
+        default: '7'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-protest
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Show trigger context
+        run: |
+          echo "Event   : ${{ github.event_name }}"
+          echo "Horizon : ${{ github.event.inputs.horizon || '7' }}"
+          date -u "+UTC: %Y-%m-%d %H:%M:%S"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      - name: Fetch protest schedule
+        run: node scripts/fetch-protest.mjs "${{ github.event.inputs.horizon || '7' }}"
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git add protest/
+          if git diff --cached --quiet -- protest/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes — skipping commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --cached --stat protest/
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d %H:%M")
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            MSG="chore(protest): manual refresh ($DATE_KST KST)"
+          else
+            MSG="chore(protest): scheduled refresh ($DATE_KST KST)"
+          fi
+
+          git commit -m "$MSG"
+          # 다른 워크플로가 같은 시간대에 밀어넣을 수 있다. 한 번은 되받아 재시도한다.
+          git push || (git pull --rebase origin main && git push)
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## 집회 일정 수집 결과"
+            echo ""
+            echo "- Trigger: \`${{ github.event_name }}\`"
+            echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
+            echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+          } >> "$GITHUB_STEP_SUMMARY"
