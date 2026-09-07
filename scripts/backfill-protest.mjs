@@ -37,6 +37,14 @@ const DAYS_DIR = path.resolve(__dirname, '../protest/days')
 const BOARD_URL = 'https://www.smpa.go.kr/user/nd54882.do'
 const YEARS = Number(process.argv[2]) || 2
 const RESUME = process.argv.includes('--resume')
+// 네트워크 없이 history-raw.json 에서 출력물만 다시 만든다. 열람 범위를 바꿀 때 쓴다.
+const REBUILD = process.argv.includes('--rebuild')
+
+// 열람용 days/ 는 최근 N개월만 낸다. 지난 집회를 몇 달 전까지 뒤지는 사용자는
+// 없고, 달마다 파일이 하나씩 늘면 앱이 받을 것만 많아진다.
+// 반면 패턴 집계(history.json)는 장소별 요약이라 기간이 길어도 거의 안 커지므로
+// 수집한 전 기간을 그대로 쓴다.
+const DAYS_MONTHS = Number(process.env['PROTEST_DAYS_MONTHS'] ?? 2)
 
 const UA =
   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Safari/605.1.15'
@@ -415,6 +423,19 @@ async function main() {
   const cutoff = minusYears(today, YEARS)
   console.log(`백필 대상: ${cutoff} ~ ${today} (${YEARS}년)`)
 
+  if (REBUILD) {
+    const raw = await readExistingRaw()
+    if (!raw) {
+      console.error('history-raw.json 이 없다. 먼저 수집해야 한다.')
+      process.exit(1)
+    }
+    const byDate = new Map(Object.entries(raw.days))
+    console.log(`재생성: 날짜 ${byDate.size}일 · 열람용 최근 ${DAYS_MONTHS}개월`)
+    await save(byDate, new Set(raw.boardNos), today, cutoff, 0)
+    console.log('\n✅ 재생성 완료 (네트워크 사용 안 함)')
+    return
+  }
+
   const existing = RESUME ? await readExistingRaw() : null
   const seen = new Set(existing?.boardNos ?? [])
   if (existing) console.log(`이어붙이기: 기존 ${seen.size}개 글 건너뜀`)
@@ -521,14 +542,13 @@ async function save(byDate, boardNos, today, cutoff, failed) {
       const dates = [...new Set(a.dates)].sort()
       return {
         key: a.key,
-        place: a.place,
         districts: [...a.districts],
         count: a.dates.length,
         days: dates.length,
         first: dates[0],
         last: dates[dates.length - 1],
-        // 최근 10회만 남긴다. 전부 실으면 파일이 감당이 안 된다.
-        recent: dates.slice(-10),
+        // 최근 6회만. 상세 화면이 그 이상 보여주지 않는다.
+        recent: dates.slice(-6),
         weekdays: a.weekdays,
         peopleAvg: Math.round(
           a.people.filter((p) => p != null).reduce((s, p) => s + p, 0) /
@@ -539,9 +559,17 @@ async function save(byDate, boardNos, today, cutoff, failed) {
     })
     .sort((x, y) => y.count - x.count)
 
+  // cutoff 는 "몇 년치를 요청했는가"지 "실제로 뭐가 잡혔는가"가 아니다.
+  // 2025-12 이전 글은 본문이 비어 있어(첨부만) 실제 수집 시작일이 훨씬 늦다.
+  // 여기에 cutoff 를 쓰면 앱이 "2024년 9월 이후 279일 중" 이라고 말하게 되는데,
+  // 실제로는 281일 중 279일이라 빈도를 2.6배 축소해 보여주게 된다.
+  const collected = [...byDate.keys()].sort()
+  const from = collected[0] ?? cutoff
+  const to = collected[collected.length - 1] ?? today
+
   const out = {
     generatedAt: today,
-    range: { from: cutoff, to: today },
+    range: { from, to },
     note:
       '원문에 주최·목적이 없어 "같은 집회"를 식별할 수 없다. 모든 집계는 장소 기준이다.',
     postCount: boardNos.size,
@@ -551,7 +579,8 @@ async function save(byDate, boardNos, today, cutoff, failed) {
   }
 
   await fs.mkdir(path.dirname(OUTPUT_PATH), { recursive: true })
-  await fs.writeFile(OUTPUT_PATH, JSON.stringify(out, null, 2) + '\n', 'utf8')
+  // 앱이 매일 받는 파일이라 들여쓰기를 넣지 않는다 (297KB → 138KB).
+  await fs.writeFile(OUTPUT_PATH, JSON.stringify(out) + '\n', 'utf8')
 
   // 월별 파일 — 앱이 과거 날짜를 볼 때 이 달치만 받는다
   await fs.mkdir(DAYS_DIR, { recursive: true })
@@ -561,17 +590,25 @@ async function save(byDate, boardNos, today, cutoff, failed) {
     if (!byMonth.has(m)) byMonth.set(m, {})
     byMonth.get(m)[date] = items
   }
-  const months = [...byMonth.keys()].sort()
-  for (const [m, days] of byMonth) {
+  const allMonths = [...byMonth.keys()].sort()
+  const months = allMonths.slice(-DAYS_MONTHS)
+
+  // 범위 밖 달 파일은 지운다. 남겨두면 앱 index 에는 없는데 파일만 굴러다닌다.
+  for (const f of await fs.readdir(DAYS_DIR).catch(() => [])) {
+    const m = f.match(/^(\d{4}-\d{2})\.json$/)?.[1]
+    if (m && !months.includes(m)) await fs.rm(path.join(DAYS_DIR, f), { force: true })
+  }
+
+  for (const m of months) {
     await fs.writeFile(
       path.join(DAYS_DIR, `${m}.json`),
-      JSON.stringify({ month: m, days }) + '\n',
+      JSON.stringify({ month: m, days: byMonth.get(m) }) + '\n',
       'utf8',
     )
   }
   await fs.writeFile(
     path.join(DAYS_DIR, 'index.json'),
-    JSON.stringify({ generatedAt: today, months }, null, 2) + '\n',
+    JSON.stringify({ generatedAt: today, months }) + '\n',
     'utf8',
   )
 
