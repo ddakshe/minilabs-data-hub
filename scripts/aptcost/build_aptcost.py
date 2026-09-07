@@ -74,18 +74,30 @@ def _rows(path: Path):
 
 
 def load_area(path: Path) -> dict[str, dict]:
-    """단지코드 → 관리비부과면적·세대수. 단지당 여러 행이라 첫 행만 쓴다."""
+    """단지코드 → 관리비부과면적·세대수.
+
+    🚨 이 엑셀은 **단지당 여러 행**이다 — 주거전용면적 구간(59㎡·84㎡…)마다 한 행씩.
+       `관리비부과면적` 은 단지 총계라 어느 행에서 읽어도 같지만, `세대수` 는
+       **그 면적 구간의 세대수**다. 첫 행만 쓰면 단지 세대수가 아니라 한 평형의
+       세대수를 쓰게 된다(그랑빌 3,000세대급이 725로 나왔다).
+       세대수는 구간을 전부 더한다.
+    """
     header, it = _rows(path)
     H = {h: i for i, h in enumerate(header)}
     out: dict[str, dict] = {}
     for r in it:
         code = r[H["단지코드"]]
-        if not code or code in out:
+        if not code:
             continue
         area = _num(r[H["관리비부과면적"]])
-        if area <= 0:
-            continue
-        out[code] = {"area": round(area, 1), "hh": int(_num(r[H["세대수"]]))}
+        hh = int(_num(r[H["세대수"]]))
+        cur = out.get(code)
+        if cur is None:
+            if area <= 0:
+                continue
+            out[code] = {"area": round(area, 1), "hh": hh}
+        else:
+            cur["hh"] += hh
     return out
 
 
@@ -110,12 +122,35 @@ def load_basis(path: Path) -> dict[str, dict]:
             continue
         used = str(g(r, "사용승인일") or "")
         out[code] = {
+            "_name": g(r, "단지명"),
+            "_sido": g(r, "시도"),
+            "_sgg": g(r, "시군구"),
+            "_dong": g(r, "동리") or g(r, "읍면") or "",
             "heatType": g(r, "난방방식"),
             "mgmtType": g(r, "관리방식"),
             "builtYear": int(used[:4]) if used[:4].isdigit() else None,
             "guardCnt": int(_num(g(r, "경비관리-인원"))),
             "cleanCnt": int(_num(g(r, "청소관리-인원"))),
+            # 금액만 보여주면 "비싸다" 가 비난이 된다. 경비를 몇 명 두는지, 승강기가
+            # 몇 대인지를 같이 주면 **선택의 결과**로 읽힌다 — 경비 인원이 많은 건
+            # 낭비가 아니라 서비스 수준일 수 있다. 이 뉘앙스가 없으면 앱이
+            # 관리사무소 분쟁 도구가 된다.
+            "elevCnt": sum(
+                int(_num(g(r, c)))
+                for c in (
+                    "승강기(승객용)",
+                    "승강기(화물용)",
+                    "승강기(승객+화물)",
+                    "승강기(장애인)",
+                    "승강기(비상용)",
+                    "승강기(기타)",
+                )
+            ),
+            "parkCnt": int(_num(g(r, "총주차대수"))),
+            "cctvCnt": int(_num(g(r, "CCTV대수"))),
             "kind": g(r, "단지분류"),
+            # 세대수의 진실원. 면적정보의 구간 합계와 어긋나면 이쪽을 쓴다.
+            "hh": int(_num(g(r, "세대수"))),
         }
     return out
 
@@ -135,10 +170,11 @@ def load_cost(path: Path) -> tuple[dict[str, dict], collections.Counter, dict[st
         code = r[H["단지코드"]]
         if not code:
             continue
-        months[str(r[H["발생년월(YYYYMM)"]])] += 1
+        ym = str(r[H["발생년월(YYYYMM)"]])
+        months[ym] += 1
         a = agg.get(code)
         if a is None:
-            a = agg[code] = {"n": 0, **{k: 0.0 for k in COST_FIELDS}}
+            a = agg[code] = {"n": 0, "by_month": {}, **{k: 0.0 for k in COST_FIELDS}}
             where[code] = {
                 "name": r[H["단지명"]],
                 "sido": r[H["시도"]],
@@ -146,6 +182,9 @@ def load_cost(path: Path) -> tuple[dict[str, dict], collections.Counter, dict[st
                 "dong": r[H["동리"]] or r[H["읍면"]] or "",
             }
         a["n"] += 1
+        # 월별 공용·개별. 12개월 평균만 실으면 겨울 트리거("난방비가 두 배인데
+        # 우리만 이런가")에 답할 수 없다. 계절이 이 도메인의 절반이다.
+        a["by_month"][ym[4:]] = (_num(r[H["공용관리비계"]]), _num(r[H["개별사용료계"]]))
         for key, col in COST_FIELDS.items():
             a[key] += _num(r[H[col]])
     return agg, months, where
@@ -304,12 +343,20 @@ def build(
             "sgg": w["sgg"],
             "dong": w["dong"],
             "region": region,
-            "hh": area[code]["hh"],
+            # 기본정보 세대수를 우선한다(면적 구간 합계는 누락 구간이 있을 수 있다)
+            "hh": int(basis.get(code, {}).get("hh") or area[code]["hh"]),
             "area": m2,
             "months": a["n"],
             **{k: round(a[k] / a["n"] / m2, 1) for k in COST_FIELDS},
-            **{k: v for k, v in basis.get(code, {}).items() if v is not None},
+            **{k: v for k, v in basis.get(code, {}).items() if v is not None and k != "hh" and not k.startswith("_")},
         }
+        # 월별 원/㎡ — "01".."12" 키. 단지당 숫자 24개라 파일이 크게 늘지 않는다.
+        by_month = a.get("by_month") or {}
+        if by_month:
+            rec["m"] = {
+                mm: [round(cg / m2, 1), round(ig / m2, 1)]
+                for mm, (cg, ig) in sorted(by_month.items())
+            }
         if code in trend:
             # [공용, 개별, 개월수] — 연도를 키로. 앱은 개월수로 진행 중인 해를 가린다.
             # 기준 연도는 대표 지표로 따로 실리므로 추이에서 뺀다(복구분에 섞여 들어온다).
@@ -319,6 +366,31 @@ def build(
         complexes[code] = rec
         by_region[region].append(code)
 
+    # 🚨 관리비 자료가 없는 단지도 목록에는 띄운다.
+    #
+    #    K-apt 에 단지는 등록돼 있는데 관리비를 안 올린 곳이 있다(공개 의무가 없는
+    #    소규모 단지, 최근 가입 단지). 그런 단지를 목록에서 통째로 빼면 사용자는
+    #    "우리 아파트가 왜 없지" 하고 **검색이 고장난 줄 안다.**
+    #    이름은 띄우고 자료가 없다는 사실을 말해주는 게 정직하고, 헤매지 않게 한다.
+    no_data = 0
+    for code, b in basis.items():
+        if code in complexes:
+            continue
+        region = code_of.get((b.get("_sido"), b.get("_sgg")))
+        if region is None or not b.get("_name"):
+            continue
+        complexes[code] = {
+            "name": b["_name"],
+            "sido": b["_sido"],
+            "sgg": b["_sgg"],
+            "dong": b["_dong"],
+            "region": region,
+            "hh": int(b.get("hh") or 0),
+            "nd": 1,  # no data — 앱이 이걸 보고 회색 처리한다
+        }
+        by_region[region].append(code)
+        no_data += 1
+
     # 시군구별 파일. 앱은 자기 시군구 하나만 받는다.
     stats_dir = out / "stats"
     stats_dir.mkdir(parents=True, exist_ok=True)
@@ -326,8 +398,10 @@ def build(
         old.unlink()
     for region, codes in by_region.items():
         rows = {c: complexes[c] for c in codes}
+        # 자료 없는 단지는 분포에 넣지 않는다 — 0 으로 세면 중앙값이 끌려 내려간다
+        withData = [r for r in rows.values() if not r.get("nd")]
         dist = {
-            key: percentiles([r[key] for r in rows.values() if r[key] > 0])
+            key: percentiles([r[key] for r in withData if r.get(key, 0) > 0])
             for key in COST_FIELDS
         }
         (stats_dir / f"{region}.json").write_text(
@@ -362,15 +436,17 @@ def build(
         encoding="utf-8",
     )
 
+    haveData = [r for r in complexes.values() if not r.get("nd")]
+
     trend_count: collections.Counter = collections.Counter()
     trend_months: dict[int, int] = {}
-    for r in complexes.values():
+    for r in haveData:
         for y, v in (r.get("trend") or {}).items():
             trend_count[int(y)] += 1
             trend_months[int(y)] = max(trend_months.get(int(y), 0), v[2])
 
     nationwide = {
-        key: percentiles([r[key] for r in complexes.values() if r[key] > 0])
+        key: percentiles([r[key] for r in haveData if r.get(key, 0) > 0])
         for key in COST_FIELDS
     }
     (out / "meta.json").write_text(
@@ -401,7 +477,8 @@ def build(
         encoding="utf-8",
     )
 
-    print(f"단지 {len(complexes):,} · 시군구 {len(by_region)} · {stats_dir}")
+    print(f"단지 {len(complexes):,} (자료 있음 {len(complexes) - no_data:,} · 자료 없음 {no_data:,})"
+          f" · 시군구 {len(by_region)} · {stats_dir}")
     if unmatched:
         print("지역 매칭 실패:", dict(unmatched.most_common(8)))
     print("전국 공용관리비 원/㎡·월:", nationwide["common"])
