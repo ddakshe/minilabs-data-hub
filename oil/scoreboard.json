@@ -1,5 +1,5 @@
 {
- "asOf": "20260906",
+ "asOf": "20260907",
  "byOrigin": {
   "backtest": {
    "1": {
@@ -44,17 +44,17 @@
   },
   "live": {
    "1": {
-    "n": 2,
-    "hit": 2,
-    "sum": 0.43,
-    "win": 2,
-    "winSum": 0.43,
-    "lose": 0,
-    "loseSum": 0,
-    "hitRate": 1,
-    "ev": 0.215,
-    "winAvg": 0.21,
-    "loseAvg": 0
+    "n": 4,
+    "hit": 3,
+    "sum": 0.45,
+    "win": 3,
+    "winSum": 0.48,
+    "lose": 1,
+    "loseSum": -0.03,
+    "hitRate": 0.75,
+    "ev": 0.113,
+    "winAvg": 0.16,
+    "loseAvg": -0.03
    }
   }
  }
