@@ -1,0 +1,101 @@
+{
+  "code": "108490",
+  "name": "로보티즈",
+  "market": "KOSDAQ",
+  "basDt": "20260713",
+  "price": {
+    "code": "108490",
+    "name": "로보티즈",
+    "market": "KOSDAQ",
+    "basDt": "20260713",
+    "close": 206000,
+    "vs": -12000,
+    "fltRt": -5.5,
+    "open": 217000,
+    "high": 235000,
+    "low": 201500,
+    "prevClose": 218000,
+    "volume": 165265,
+    "tradeValue": 35796625000,
+    "week52": {
+      "low": 73200,
+      "high": 405000,
+      "position": 0.4002411091018686,
+      "days": 244,
+      "from": "20250714"
+    },
+    "recent5": [
+      {
+        "basDt": "20260707",
+        "fltRt": -5.99,
+        "open": 221000,
+        "high": 231500,
+        "low": 202000,
+        "close": 212000
+      },
+      {
+        "basDt": "20260708",
+        "fltRt": -8.3,
+        "open": 202500,
+        "high": 214000,
+        "low": 191200,
+        "close": 194400
+      },
+      {
+        "basDt": "20260709",
+        "fltRt": 4.94,
+        "open": 193400,
+        "high": 214000,
+        "low": 192400,
+        "close": 204000
+      },
+      {
+        "basDt": "20260710",
+        "fltRt": 6.86,
+        "open": 206000,
+        "high": 225500,
+        "low": 204500,
+        "close": 218000
+      },
+      {
+        "basDt": "20260713",
+        "fltRt": -5.5,
+        "open": 217000,
+        "high": 235000,
+        "low": 201500,
+        "close": 206000
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 174662,
+      "ratio": 0.95
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 532,
+      "rows52w": 243
+    },
+    "generatedAt": "2026-09-08T06:45:52.119Z"
+  },
+  "facts": [
+    "코스닥보다 0.95%p 낮았어요.",
+    "거래량은 20일 평균의 0.9배예요.",
+    "시가보다 11,000원 낮게 마감했어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 799.36,
+    "vs": -38.07,
+    "fltRt": -4.55
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null,
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-09-08T06:45:52.119Z"
+}
