@@ -36,19 +36,35 @@ warnings.filterwarnings("ignore", category=UserWarning, module="openpyxl")
 
 KST = timezone(timedelta(hours=9))
 
-# 관리비 엑셀에서 쓸 컬럼. 51개 전부 넣으면 파일이 커지고, 앱이 실제로 보여주는 건
-# 이 넷이다. 세부 항목(인건비·피복비…)은 "왜 비싼가"를 파고들 때 추가한다.
-COST_FIELDS = {
-    "common": "공용관리비계",
-    "guard": "경비비",
-    "clean": "청소비",
-    "elev": "승강기유지비",
-    "repair": "수선비",
-    "indiv": "개별사용료계",
-    "heat": "난방비(전용)",
-    "elec": "전기료(전용)",
-    "ltrf": "장충금 월부과액",
+# 관리비 엑셀에서 쓸 컬럼. 52개 전부 넣으면 파일이 커지고, 앱이 실제로 보여주는 건
+# 이 아홉이다. 세부 항목(인건비·피복비…)은 "왜 비싼가"를 파고들 때 추가한다.
+#
+# 🚨 **컬럼 이름을 여러 개 받는다.** K-apt 가 서식을 예고 없이 바꾼다 —
+#    2026-09-07 추출본의 `공용관리비계`·`일반관리비계` 가 2026-09-09 추출본에서
+#    `공용관리비(합계)`·`일반관리비(합계)` 로 바뀌었고 `수선유지비(합계)` 가 신설됐다
+#    (51열 → 52열). 이틀 만이다.
+#    이름을 하나만 두고 `.get()` 에 기본값을 주면 **에러 없이 전부 0** 이 되어
+#    모든 단지가 "해당 없음" 으로 나온다. 그래서 후보를 나열하고, 하나도 못 찾으면
+#    아래에서 **죽는다**. 조용히 틀린 값을 내보내느니 멈추는 게 낫다.
+COST_FIELDS: dict[str, tuple[str, ...]] = {
+    "common": ("공용관리비(합계)", "공용관리비계"),
+    "guard": ("경비비",),
+    "clean": ("청소비",),
+    "elev": ("승강기유지비",),
+    "repair": ("수선비",),
+    "indiv": ("개별사용료계", "개별사용료(합계)"),
+    "heat": ("난방비(전용)",),
+    "elec": ("전기료(전용)",),
+    "ltrf": ("장충금 월부과액",),
 }
+
+
+def _pick(H: dict, names: tuple[str, ...]) -> int | None:
+    """후보 이름 중 실제로 있는 컬럼의 인덱스."""
+    for n in names:
+        if n in H:
+            return H[n]
+    return None
 
 
 def _num(v) -> float:
@@ -74,13 +90,21 @@ def _rows(path: Path):
 
 
 def load_area(path: Path) -> dict[str, dict]:
-    """단지코드 → 관리비부과면적·세대수.
+    """단지코드 → 관리비부과면적·세대수·평형 목록.
 
     🚨 이 엑셀은 **단지당 여러 행**이다 — 주거전용면적 구간(59㎡·84㎡…)마다 한 행씩.
        `관리비부과면적` 은 단지 총계라 어느 행에서 읽어도 같지만, `세대수` 는
        **그 면적 구간의 세대수**다. 첫 행만 쓰면 단지 세대수가 아니라 한 평형의
        세대수를 쓰게 된다(그랑빌 3,000세대급이 725로 나왔다).
        세대수는 구간을 전부 더한다.
+
+    평형 목록(`sz`)을 같이 싣는다. 앱이 "우리 집 평형" 을 고르게 하려면 필요하다 —
+    자유 입력을 받으면 오타와 검증이 따라오는데, 그 단지에 실제로 있는 평형만
+    보여주면 탭 한 번으로 끝난다.
+
+    ⚠️ 지표의 분모는 **관리비부과면적**이고 사용자가 아는 건 **전용면적**이다.
+       둘은 다르다(부과면적이 공용분을 포함해 더 크다). 단지 총계 비율
+       `관리비부과면적 / 주거전용면적합` 을 `far` 로 실어 앱이 환산하게 한다.
     """
     header, it = _rows(path)
     H = {h: i for i, h in enumerate(header)}
@@ -91,13 +115,28 @@ def load_area(path: Path) -> dict[str, dict]:
             continue
         area = _num(r[H["관리비부과면적"]])
         hh = int(_num(r[H["세대수"]]))
+        priv = _num(r[H["주거전용면적(세부)"]])
         cur = out.get(code)
         if cur is None:
             if area <= 0:
                 continue
-            out[code] = {"area": round(area, 1), "hh": hh}
+            total_priv = _num(r[H["주거전용면적(단지합계)"]])
+            cur = out[code] = {
+                "area": round(area, 1),
+                "hh": hh,
+                "far": round(area / total_priv, 3) if total_priv > 0 else None,
+                "sz": [],
+            }
         else:
             cur["hh"] += hh
+        if priv > 0 and hh > 0:
+            cur["sz"].append([round(priv, 1), hh])
+    for v in out.values():
+        # 같은 평형이 여러 행으로 쪼개져 오기도 한다 — 합치고 면적순으로 세운다
+        merged: dict[float, int] = {}
+        for a, n in v["sz"]:
+            merged[a] = merged.get(a, 0) + n
+        v["sz"] = [[a, n] for a, n in sorted(merged.items())]
     return out
 
 
@@ -159,9 +198,16 @@ def load_cost(path: Path) -> tuple[dict[str, dict], collections.Counter, dict[st
     """단지코드 → 항목별 12개월 합계. 월별 커버리지도 같이 센다."""
     header, it = _rows(path)
     H = {h: i for i, h in enumerate(header)}
-    missing = [c for c in COST_FIELDS.values() if c not in H]
+    idx = {k: _pick(H, names) for k, names in COST_FIELDS.items()}
+    missing = {k: COST_FIELDS[k] for k, i in idx.items() if i is None}
     if missing:
-        raise RuntimeError(f"관리비 엑셀에 없는 컬럼: {missing}")
+        raise RuntimeError(
+            f"관리비 엑셀에서 컬럼을 못 찾았다: {missing}\n"
+            f"실제 헤더: {[h for h in header if h]}\n"
+            "→ K-apt 가 서식을 바꿨을 수 있다. COST_FIELDS 에 새 이름을 추가한다."
+        )
+    common_i = _pick(H, COST_FIELDS["common"])
+    indiv_i = _pick(H, COST_FIELDS["indiv"])
 
     agg: dict[str, dict] = {}
     months = collections.Counter()
@@ -184,9 +230,9 @@ def load_cost(path: Path) -> tuple[dict[str, dict], collections.Counter, dict[st
         a["n"] += 1
         # 월별 공용·개별. 12개월 평균만 실으면 겨울 트리거("난방비가 두 배인데
         # 우리만 이런가")에 답할 수 없다. 계절이 이 도메인의 절반이다.
-        a["by_month"][ym[4:]] = (_num(r[H["공용관리비계"]]), _num(r[H["개별사용료계"]]))
-        for key, col in COST_FIELDS.items():
-            a[key] += _num(r[H[col]])
+        a["by_month"][ym[4:]] = (_num(r[common_i]), _num(r[indiv_i]))
+        for key, i in idx.items():
+            a[key] += _num(r[i])
     return agg, months, where
 
 
@@ -350,6 +396,12 @@ def build(
             **{k: round(a[k] / a["n"] / m2, 1) for k in COST_FIELDS},
             **{k: v for k, v in basis.get(code, {}).items() if v is not None and k != "hh" and not k.startswith("_")},
         }
+        # 평형 목록과 부과/전용 면적비 — 앱이 "우리 집 평형" 을 고르는 데 쓴다
+        if area[code].get("sz"):
+            rec["sz"] = area[code]["sz"]
+        if area[code].get("far"):
+            rec["far"] = area[code]["far"]
+
         # 월별 원/㎡ — "01".."12" 키. 단지당 숫자 24개라 파일이 크게 늘지 않는다.
         by_month = a.get("by_month") or {}
         if by_month:
