@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-08T00:00:00Z",
+  "generatedAt": "2026-09-09T00:00:00Z",
   "source": "SEC EDGAR",
   "sourceUrl": "https://www.sec.gov/edgar",
-  "usdKrw": 1347.93,
+  "usdKrw": 1341.67,
   "listed": [
     {
       "cik": "0002145659",
@@ -115,6 +115,65 @@
   ],
   "upcoming": [
     {
+      "cik": "0002104277",
+      "name": "Holtec Nuclear Corp",
+      "ticker": "HNUC",
+      "filedAt": "2026-09-08",
+      "isSpac": false,
+      "sic": "1700",
+      "industry": "건설",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002104277&type=S-1"
+    },
+    {
+      "cik": "0001866226",
+      "name": "Evolution Metals & Technologies Corp.",
+      "ticker": "EMAT",
+      "filedAt": "2026-09-08",
+      "isSpac": false,
+      "sic": "3690",
+      "industry": "제조",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": null,
+        "netIncome": -1789441,
+        "assets": 6610223
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001866226&type=S-1"
+    },
+    {
+      "cik": "0001736243",
+      "name": "Acurx Pharmaceuticals, Inc.",
+      "ticker": "ACXP",
+      "filedAt": "2026-09-08",
+      "isSpac": false,
+      "sic": "2834",
+      "industry": "제약·바이오",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": null,
+        "netIncome": -7966538,
+        "assets": 7689535
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001736243&type=S-1"
+    },
+    {
+      "cik": "0001896212",
+      "name": "CDT Equity Inc.",
+      "ticker": "CDT",
+      "filedAt": "2026-09-08",
+      "isSpac": false,
+      "sic": "2834",
+      "industry": "제약·바이오",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": null,
+        "netIncome": -39224000,
+        "assets": 5650000
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001896212&type=S-1"
+    },
+    {
       "cik": "0002133037",
       "name": "SB Energy, Inc.",
       "ticker": null,
@@ -135,6 +194,17 @@
       "industry": "SPAC",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002148245&type=S-1"
+    },
+    {
+      "cik": "0002108671",
+      "name": "Rothe Development, Inc.",
+      "ticker": null,
+      "filedAt": "2026-09-04",
+      "isSpac": false,
+      "sic": "3760",
+      "industry": "제조",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002108671&type=S-1"
     },
     {
       "cik": "0002111846",
@@ -711,17 +781,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002147219&type=S-1"
     },
     {
-      "cik": "0002104277",
-      "name": "Holtec Nuclear Corp",
-      "ticker": "HNUC",
-      "filedAt": "2026-08-24",
-      "isSpac": false,
-      "sic": "1700",
-      "industry": "건설",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002104277&type=S-1"
-    },
-    {
       "cik": "0001604191",
       "name": "GridAI Technologies Corp.",
       "ticker": "GRDX",
@@ -898,7 +957,7 @@
     {
       "cik": "0002064768",
       "name": "Canary Staked TRX ETF",
-      "ticker": null,
+      "ticker": "TRXS",
       "filedAt": "2026-08-19",
       "isSpac": false,
       "sic": "6221",
@@ -2285,22 +2344,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002125567&type=S-1"
     },
     {
-      "cik": "0001866226",
-      "name": "Evolution Metals & Technologies Corp.",
-      "ticker": "EMAT",
-      "filedAt": "2026-07-08",
-      "isSpac": false,
-      "sic": "3690",
-      "industry": "제조",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": null,
-        "netIncome": -1789441,
-        "assets": 6610223
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001866226&type=S-1"
-    },
-    {
       "cik": "0001849380",
       "name": "OneMedNet Corp",
       "ticker": "ONMDW",
@@ -3041,71 +3084,6 @@
       "industry": "제약·바이오",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002123613&type=S-1"
-    },
-    {
-      "cik": "0002092574",
-      "name": "Swarmer, Inc",
-      "ticker": "SWMR",
-      "filedAt": "2026-06-10",
-      "isSpac": false,
-      "sic": "7372",
-      "industry": "소프트웨어·IT",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002092574&type=S-1"
-    },
-    {
-      "cik": "0002111009",
-      "name": "American Ventures Acquisition Corp. I",
-      "ticker": null,
-      "filedAt": "2026-06-10",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002111009&type=S-1"
-    },
-    {
-      "cik": "0002036307",
-      "name": "OFA Group",
-      "ticker": "OFAL",
-      "filedAt": "2026-06-10",
-      "isSpac": false,
-      "sic": "8711",
-      "industry": "기타",
-      "financials": {
-        "fiscalEnd": "2026-03-31",
-        "revenue": 716885,
-        "netIncome": -8022816,
-        "assets": 21607285
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002036307&type=S-1"
-    },
-    {
-      "cik": "0001918102",
-      "name": "DEEP FISSION, INC.",
-      "ticker": "FISN",
-      "filedAt": "2026-06-10",
-      "isSpac": false,
-      "sic": "4911",
-      "industry": "에너지·유틸리티",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": null,
-        "netIncome": -61002954,
-        "assets": 24691085
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001918102&type=S-1"
-    },
-    {
-      "cik": "0002089969",
-      "name": "iShares Bitcoin Premium Income ETF",
-      "ticker": "BITA",
-      "filedAt": "2026-06-10",
-      "isSpac": false,
-      "sic": "6221",
-      "industry": "금융·부동산",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002089969&type=S-1"
     }
   ]
 }
