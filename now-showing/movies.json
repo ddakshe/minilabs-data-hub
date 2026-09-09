@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-09-08",
+  "updatedAt": "2026-09-09",
   "counts": {
-    "nowShowing": 68,
-    "upcoming": 20
+    "nowShowing": 75,
+    "upcoming": 16
   },
   "nowShowing": [
     {
@@ -32,10 +32,10 @@
       "boxOffice": {
         "rank": 1,
         "rankInten": 0,
-        "audiCnt": 87379,
-        "audiAcc": 10115349
+        "audiCnt": 76681,
+        "audiAcc": 10192023
       },
-      "bookingRate": 55.41,
+      "bookingRate": 50.62,
       "availableAt": [
         "lotte",
         "megabox",
@@ -72,11 +72,11 @@
       "kmdbId": "F-66840",
       "boxOffice": {
         "rank": 3,
-        "rankInten": -1,
-        "audiCnt": 13865,
-        "audiAcc": 8805891
+        "rankInten": 0,
+        "audiCnt": 13287,
+        "audiAcc": 8819175
       },
-      "bookingRate": 2.69,
+      "bookingRate": 2.34,
       "availableAt": [
         "lotte",
         "megabox"
@@ -84,6 +84,47 @@
       "booking": {
         "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24329",
         "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26028000"
+      }
+    },
+    {
+      "movieCd": "20204641",
+      "title": "비광",
+      "titleEn": "비광",
+      "openDt": "2026-09-02",
+      "genre": "드라마, 가족",
+      "runtime": 109,
+      "grade": "15세이상관람가",
+      "nation": "한국",
+      "directors": [
+        "이지원"
+      ],
+      "actors": [
+        "류승룡",
+        "하지원",
+        "김시아",
+        "김해숙",
+        "김선영",
+        "김영민"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202609/24648_103_1.jpg",
+      "plot": "한국 야구의 간판스타 중구와 올 타임 레전드 배우 남미.스포트라이트를 받으며 화려한 톱스타 부부의 삶을 살던 두 사람은 갑자기 나타난 중구의 딸 동주로 인해 파경을 맞는다.차마 동주를 외면할 수 없던 중구와 아이의 존재만으로 상처받은 남미가 각자의 삶을 살던 8년 후 어느 날 우림천 여중생 사망 사건이 발생한다.모두를 충격에 빠트린 사건의 유력 용의자로 지목된 동주.중구와 가족들은 벼랑 끝에 몰린 동주를 구하기 위해 필사적으로 매달리고, 남미는 자신들을 추락시킨 8년 전 악연이 현재까지 이어져 있음을 알게 되는데…",
+      "keywords": null,
+      "kmdbId": "K-26975",
+      "boxOffice": {
+        "rank": 4,
+        "rankInten": 2,
+        "audiCnt": 6559,
+        "audiAcc": 82428
+      },
+      "bookingRate": 2.5,
+      "availableAt": [
+        "lotte",
+        "megabox",
+        "cgv"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24648",
+        "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26046500"
       }
     },
     {
@@ -107,12 +148,12 @@
       "keywords": null,
       "kmdbId": "F-68111",
       "boxOffice": {
-        "rank": 4,
-        "rankInten": 2,
-        "audiCnt": 5860,
-        "audiAcc": 61791
+        "rank": 5,
+        "rankInten": -1,
+        "audiCnt": 5490,
+        "audiAcc": 67281
       },
-      "bookingRate": 6.8,
+      "bookingRate": 5.1,
       "availableAt": [
         "lotte",
         "megabox",
@@ -147,12 +188,12 @@
       "keywords": null,
       "kmdbId": "K-41153",
       "boxOffice": {
-        "rank": 5,
+        "rank": 6,
         "rankInten": -1,
-        "audiCnt": 5805,
-        "audiAcc": 303399
+        "audiCnt": 4926,
+        "audiAcc": 308324
       },
-      "bookingRate": 1.39,
+      "bookingRate": 0.88,
       "availableAt": [
         "lotte",
         "megabox",
@@ -161,47 +202,6 @@
       "booking": {
         "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24674",
         "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26047200"
-      }
-    },
-    {
-      "movieCd": "20204641",
-      "title": "비광",
-      "titleEn": "비광",
-      "openDt": "2026-09-02",
-      "genre": "드라마, 가족",
-      "runtime": 109,
-      "grade": "15세이상관람가",
-      "nation": "한국",
-      "directors": [
-        "이지원"
-      ],
-      "actors": [
-        "류승룡",
-        "하지원",
-        "김시아",
-        "김해숙",
-        "김선영",
-        "김영민"
-      ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202609/24648_103_1.jpg",
-      "plot": "한국 야구의 간판스타 중구와 올 타임 레전드 배우 남미.스포트라이트를 받으며 화려한 톱스타 부부의 삶을 살던 두 사람은 갑자기 나타난 중구의 딸 동주로 인해 파경을 맞는다.차마 동주를 외면할 수 없던 중구와 아이의 존재만으로 상처받은 남미가 각자의 삶을 살던 8년 후 어느 날 우림천 여중생 사망 사건이 발생한다.모두를 충격에 빠트린 사건의 유력 용의자로 지목된 동주.중구와 가족들은 벼랑 끝에 몰린 동주를 구하기 위해 필사적으로 매달리고, 남미는 자신들을 추락시킨 8년 전 악연이 현재까지 이어져 있음을 알게 되는데…",
-      "keywords": null,
-      "kmdbId": "K-26975",
-      "boxOffice": {
-        "rank": 6,
-        "rankInten": -1,
-        "audiCnt": 4477,
-        "audiAcc": 75869
-      },
-      "bookingRate": 1.99,
-      "availableAt": [
-        "lotte",
-        "megabox",
-        "cgv"
-      ],
-      "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24648",
-        "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26046500"
       }
     },
     {
@@ -225,12 +225,12 @@
       "keywords": null,
       "kmdbId": "F-67938",
       "boxOffice": {
-        "rank": 7,
-        "rankInten": 2,
-        "audiCnt": 1089,
-        "audiAcc": 131591
+        "rank": 8,
+        "rankInten": -1,
+        "audiCnt": 1032,
+        "audiAcc": 132622
       },
-      "bookingRate": 0.05,
+      "bookingRate": 0.01,
       "availableAt": [
         "lotte",
         "cgv"
@@ -240,34 +240,97 @@
       }
     },
     {
-      "movieCd": "20264635",
-      "title": "명탐정 코난: 하이웨이의 타천사",
-      "titleEn": "명탐정 코난: 하이웨이의 타천사",
-      "openDt": "2026-08-12",
-      "genre": "애니메이션",
-      "runtime": 109,
+      "movieCd": "20255509",
+      "title": "사진의 얼굴",
+      "titleEn": "사진의 얼굴",
+      "openDt": "2026-09-02",
+      "genre": "다큐멘터리",
+      "runtime": 98,
       "grade": "12세이상관람가",
-      "nation": "일본",
-      "directors": [],
+      "nation": "한국",
+      "directors": [
+        "고희영"
+      ],
       "actors": [],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202608/24619_103_1.jpg",
-      "plot": "‘모터 사이클 페스티벌’이 열리는 요코하마로 향하던 코난 일행은 폭주하는 검은 오토바이 사건에 휘말리고 범인을 쫓던 ‘바람의 여신’ 가나가와현경 교통기동대 하기와라 치하야 경부보와 재회한다.경찰의 추적을 모두 뿌리친 폭주 오토바이는 도쿄 시내에도 출물하고, 연쇄적으로 사상자가 발생한다.이러한 가운데 최첨단 AI 기술을 탑재한 싸이카 ‘엔젤’과 폭주 오토바이가 매우 유사하다는 점이 밝혀지고, 이 정체불명의 존재를 ‘루시퍼’라고 명명, 점차 포위망을 좁혀간다.한편, 사건을 쫓던 치하야는 문득 7년 전 11월 7일, 폭탄을 해체하다 순직한 남동생 하기와라 켄지와,그의 죽음으로부터 4년 후 11월 7일, 같은 범인을 쫓다가 순직한 켄지의 친구이자 동료 마츠다 진페이에 대한 기억이 떠오르는데….도시를 위협하는 ‘루시퍼’에 맞서 ‘바람의 여신’ 치하야와 코난의 질주가 시작된다!바람의 여신, 엔젤 VS 어둠의 타락천사, 루시퍼초고속으로 질주하는 극한의 레이스 스타트!",
-      "keywords": "만화원작",
-      "kmdbId": "F-67882",
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202609/24737_103_1.jpg",
+      "plot": "일본의 보도 사진작가 구와바라 시세이가 한국행 비행기에 오른다. 1964년, 27세의 청년 시절 처음으로 한국을 방문한 이래로 시세이는 60년간 청계천, 기지촌, 월남 파병, 민주화 운동 등 한국 근현대사의 격동 현장을 기록해 왔다. 이제 노인이 된 그는 어쩌면 마지막이 될지도 모른다는 마음으로 다시 한국을 찾는다. 그에게는 꼭 다시 밟아야 할 장소들과 반드시 만나야 할 사람들이 있다. 영화는 사진작가의 발자취를 따라 현장을 찾는다.",
+      "keywords": null,
+      "kmdbId": "A-13955",
       "boxOffice": {
-        "rank": 8,
-        "rankInten": 0,
-        "audiCnt": 905,
-        "audiAcc": 421534
+        "rank": 10,
+        "rankInten": 1,
+        "audiCnt": 801,
+        "audiAcc": 4831
       },
-      "bookingRate": 0.7,
+      "bookingRate": 0.06,
       "availableAt": [
         "lotte",
-        "megabox"
+        "cgv"
       ],
       "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24619",
-        "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26042500"
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24737"
+      }
+    },
+    {
+      "movieCd": "20265423",
+      "title": "더 드라마",
+      "titleEn": "더 드라마",
+      "openDt": "2026-09-09",
+      "genre": "드라마, 멜로/로맨스",
+      "runtime": 106,
+      "grade": "15세이상관람가",
+      "nation": "미국",
+      "directors": [
+        "크리스토퍼 보글리"
+      ],
+      "actors": [
+        "젠데이아 콜먼",
+        "로버트 패틴슨"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202609/24746_103_1.jpg",
+      "plot": "“왜 나쁜 짓 한 번 안 한 사람처럼 그래?”결혼식을 일주일 앞둔 행복한 커플 엠마(젠데이아)와 찰리(로버트 패틴슨).우연히 알게 된 상대방의 비밀로 인해 단단했던 믿음이 흔들린다.첫만남부터 서로를 완벽히 안다고 생각했던 두 사람, 작은 균열은 걷잡을 수 없이 커진 채 모두의 모습을 비추고…2026년 가을을 뒤흔들 로맨스릴러.당신을 정중히 초대합니다.",
+      "keywords": null,
+      "kmdbId": "F-68198",
+      "boxOffice": null,
+      "bookingRate": 7.3,
+      "availableAt": [
+        "lotte",
+        "megabox",
+        "cgv"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24746",
+        "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26056000"
+      }
+    },
+    {
+      "movieCd": "20265344",
+      "title": "오아시스: 돈 룩 백 인 앵거",
+      "titleEn": "오아시스: 돈 룩 백 인 앵거",
+      "openDt": "2026-09-09",
+      "genre": "다큐멘터리",
+      "runtime": 122,
+      "grade": "15세이상관람가",
+      "nation": "미국",
+      "directors": [
+        "딜리안 서던",
+        "윌 로벨라스"
+      ],
+      "actors": [
+        "노엘 갤러거",
+        "리암 갤러거"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202609/24931_103_1.jpg",
+      "plot": "Don’t Look Back in Anger전 세계가 다시 오아시스를 외치기 시작했다! 2009년 해체 이후 각자의 길을 걸어온 노엘과 리암 갤러거는 전 세계가 기다려온 ‘Oasis Live ’25 Tour’를 통해 다시 한 무대에 선다. 수많은 팬들의 함성으로 가득 찬 월드 투어와 서울 공연 현장, 그리고 어디에서도 볼 수 없었던 리허설과 백스테이지, 20여 년 만에 함께한 두 형제의 공동 인터뷰까지. 세대를 넘어 전 세계를 하나로 만든 오아시스의 가장 뜨거운 순간이 펼쳐진다!",
+      "keywords": null,
+      "kmdbId": "B-12304",
+      "boxOffice": null,
+      "bookingRate": 5.68,
+      "availableAt": [
+        "lotte"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24931"
       }
     },
     {
@@ -295,7 +358,7 @@
       "keywords": null,
       "kmdbId": "K-40120",
       "boxOffice": null,
-      "bookingRate": 4.51,
+      "bookingRate": 5.02,
       "availableAt": [
         "lotte",
         "megabox",
@@ -322,7 +385,141 @@
       "keywords": null,
       "kmdbId": "F-66840",
       "boxOffice": null,
-      "bookingRate": 2.57,
+      "bookingRate": 4.67,
+      "availableAt": [
+        "cgv"
+      ],
+      "booking": {}
+    },
+    {
+      "movieCd": "20266148",
+      "title": "아버지의 집밥",
+      "titleEn": "아버지의 집밥",
+      "openDt": "2026-09-09",
+      "genre": "드라마",
+      "runtime": 146,
+      "grade": "12세이상관람가",
+      "nation": "한국",
+      "directors": [
+        "이준익"
+      ],
+      "actors": [
+        "정진영",
+        "이정은",
+        "변요한",
+        "박지연",
+        "강형석",
+        "박세준"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202609/24872_103_1.jpg",
+      "plot": "평생 밥상머리에서 군림하던 아버지 하응은, 사고 후 요리만 기억하지 못하게 된 아내 순애를 위해 난생 처음 주방에 선다.된장찌개부터 도시락까지 매번 실패하는 서툰 요리 속에서, 그는 아내가 40년간 홀로 감당해온 삶의 무게를 뒤늦게 깨닫는다. 하지만 순애는 그의 요리에 벌점을 매기며 10점이면 이혼이라고 선언한다. 그러던 중 순애가 갑자기 실종되고, 결국 알츠하이머 초기 진단이 내려지면서 가족은 충격에 빠진다. 하응은 잃어가는 아내의 기억을 붙잡기 위해 매일 집밥을 차리며, 상처받은 가족을 다시 한 식탁으로 모으는 늦은 화해의 여정을 시작한다.",
+      "keywords": "웹툰원작",
+      "kmdbId": "K-41636",
+      "boxOffice": null,
+      "bookingRate": 3.7,
+      "availableAt": [
+        "lotte"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24872"
+      }
+    },
+    {
+      "movieCd": null,
+      "title": "이누야샤 극장판-시대를 초월한 마음",
+      "titleEn": "",
+      "openDt": "2026-09-09",
+      "genre": "애니메이션",
+      "runtime": null,
+      "grade": "12세이상관람가",
+      "nation": null,
+      "directors": [],
+      "actors": [],
+      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001449/30001449_320.jpg",
+      "plot": "먼 옛날, 대륙에서 원(元)의 대군이 일본으로 쳐들어왔을 때 함께 일본으로 건너온 대륙 요괴 군단의 수령·메노마루.그는 어째서인지 ‘사혼의 구슬’이 아니라, ‘이누야샤’가 지닌 검 ‘철쇄아’를 노린다.격렬한 싸움 속에서 멀어져 가는 ‘이누야샤’와 ‘카고메’.그리고 절체절명의 위기가 닥쳐온다. 서로를 향한 마음은 끝내 닿을 수 있을까…?과연 두 사람의 운명은…쇼가쿠칸 「주간 소년 선데이」 연재, 타카하시 루미코 원작 만화의 극장판 애니메이션.",
+      "keywords": "만화원작",
+      "kmdbId": "F-68552",
+      "boxOffice": null,
+      "bookingRate": 3.07,
+      "availableAt": [
+        "cgv"
+      ],
+      "booking": {}
+    },
+    {
+      "movieCd": "20265275",
+      "title": "네 얼굴로는 울 수 없어",
+      "titleEn": "네 얼굴로는 울 수 없어",
+      "openDt": "2026-09-09",
+      "genre": "드라마, 판타지",
+      "runtime": 123,
+      "grade": "12세이상관람가",
+      "nation": "일본",
+      "directors": [
+        "사카시타 유이치로"
+      ],
+      "actors": [
+        "요시네 쿄코",
+        "타카하시 카이토"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202609/24749_103_1.jpg",
+      "plot": "열다섯 살 여름, ‘리쿠’와 ‘마나미’는 우연한 사고로 몸이 뒤바뀐다.하루면 끝날 줄 알았던 시간은 어느새 15년이 되고,첫사랑과 꿈, 취업과 연애까지가장 소중한 순간들을 서로의 삶으로 살아가게 된다.내 얼굴로 웃을 수도, 네 얼굴로 울 수도 없었던 시간.그리고 15년 후, 다시 찾아온 여름은 두 사람의 운명을 다시 흔들기 시작하는데….세상에 오직 둘만이 공유하는 비밀서로였기에 다행이었던 두 사람의 애틋한 청춘 스토리!",
+      "keywords": "소설원작",
+      "kmdbId": "F-68201",
+      "boxOffice": null,
+      "bookingRate": 2.8,
+      "availableAt": [
+        "lotte",
+        "megabox",
+        "cgv"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24749",
+        "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26047500"
+      }
+    },
+    {
+      "movieCd": null,
+      "title": "카를로비바리",
+      "titleEn": "",
+      "openDt": "2026-09-09",
+      "genre": "코미디, 드라마",
+      "runtime": null,
+      "grade": "15세이상관람가",
+      "nation": null,
+      "directors": [],
+      "actors": [],
+      "poster": "https://img.megabox.co.kr/SharedImg/2026/09/07/nn6NVt4sKGGvxy3LNeeDOTapPU0wJMkK.png",
+      "plot": "체코 서부에 위치한 아름다운 도시, 카를로비바리. 영화감독 ‘성재’는 카를로비바리를 배경으로 대본을 완성하고, 이후 그의 작품은 각종 공모전 수상, 그리고 영화제작까지 투자를 받게 된다! 국내 세트장 촬영을 모두 마치고, 드디어 현지 촬영만을 남겨 둔 상황. 그런데… 투자받은 제작비가 모두 사라져 버린다! 투자금을 토해내지 않기 위해서는 무슨 일을 써서라도 반드시 영화를 완성해야 하는 상황! 과연 성재와 친구들은 카를로비바리를 가지 않고 무사히 영화를 완성할 수 있을까?",
+      "keywords": null,
+      "kmdbId": "K-39910",
+      "boxOffice": null,
+      "bookingRate": 2.6,
+      "availableAt": [
+        "megabox",
+        "cgv"
+      ],
+      "booking": {
+        "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26059200"
+      }
+    },
+    {
+      "movieCd": null,
+      "title": "딥 워터",
+      "titleEn": "",
+      "openDt": "2026-09-09",
+      "genre": "스릴러, 공포(호러)",
+      "runtime": null,
+      "grade": "15세이상관람가",
+      "nation": null,
+      "directors": [],
+      "actors": [],
+      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001353/30001353_320.jpg",
+      "plot": "로스앤젤레스발 상하이행 여객기가 화재로 폭발하며 태평양 한복판에 추락한다.기적적으로 살아남은 승객들그러나 침몰하는 기체, 굶주린 식인 상어 떼 속에서 이제부터는 진짜 기적을 바라야 하는데...가라앉기 전에, 잡아 먹히기 전에 탈출하라!",
+      "keywords": null,
+      "kmdbId": "F-68113",
+      "boxOffice": null,
+      "bookingRate": 2.01,
       "availableAt": [
         "cgv"
       ],
@@ -344,12 +541,48 @@
       "keywords": null,
       "kmdbId": "F-68236",
       "boxOffice": null,
-      "bookingRate": 2.3,
+      "bookingRate": 1.9,
       "availableAt": [
         "megabox"
       ],
       "booking": {
         "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26056700"
+      }
+    },
+    {
+      "movieCd": "20224597",
+      "title": "아가미",
+      "titleEn": "아가미",
+      "openDt": "2026-09-09",
+      "genre": "애니메이션",
+      "runtime": 105,
+      "grade": "15세이상관람가",
+      "nation": "한국",
+      "directors": [
+        "안재훈"
+      ],
+      "actors": [
+        "정해인",
+        "강하늘",
+        "이청아",
+        "유재명",
+        "김선영",
+        "원옥화"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202609/24829_103_1.jpg",
+      "plot": "병든 어머니로 인해 삶의 한 발짝도 자기 의지대로 살지 못하는 ‘해류’는 어느 날 실수로 다리 위에서 물속으로 떨어지게 된다.죽음을 떠올릴 만큼 위태로운 상황에서 ‘해류’는 물고기 떼와 함께 나타난 신비로운 남자, ‘곤’에 의해 구조되고 그 순간, 남자의 귀 밑에 달린 ‘아가미’를 보게 된다.이후 자신의 목숨을 구한 남자를 찾기 시작한 해류는 우연히 강하를 만나게 되며 그에게서 곤의 과거 이야기를 듣게 된다.",
+      "keywords": "베스트셀러원작",
+      "kmdbId": "K-28757",
+      "boxOffice": null,
+      "bookingRate": 1.4,
+      "availableAt": [
+        "lotte",
+        "megabox",
+        "cgv"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24829",
+        "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26057500"
       }
     },
     {
@@ -368,7 +601,7 @@
       "keywords": null,
       "kmdbId": "F-67881",
       "boxOffice": null,
-      "bookingRate": 1.7,
+      "bookingRate": 0.9,
       "availableAt": [
         "megabox"
       ],
@@ -377,33 +610,77 @@
       }
     },
     {
-      "movieCd": "20255509",
-      "title": "사진의 얼굴",
-      "titleEn": "사진의 얼굴",
-      "openDt": "2026-09-02",
+      "movieCd": "20266709",
+      "title": "올공, 2030 나라를 살리다",
+      "titleEn": "올공, 2030 나라를 살리다",
+      "openDt": "2026-09-09",
       "genre": "다큐멘터리",
-      "runtime": 98,
+      "runtime": 142,
       "grade": "12세이상관람가",
       "nation": "한국",
-      "directors": [
-        "고희영"
-      ],
+      "directors": [],
       "actors": [],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202609/24737_103_1.jpg",
-      "plot": "일본의 보도 사진작가 구와바라 시세이가 한국행 비행기에 오른다. 1964년, 27세의 청년 시절 처음으로 한국을 방문한 이래로 시세이는 60년간 청계천, 기지촌, 월남 파병, 민주화 운동 등 한국 근현대사의 격동 현장을 기록해 왔다. 이제 노인이 된 그는 어쩌면 마지막이 될지도 모른다는 마음으로 다시 한국을 찾는다. 그에게는 꼭 다시 밟아야 할 장소들과 반드시 만나야 할 사람들이 있다. 영화는 사진작가의 발자취를 따라 현장을 찾는다.",
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202609/24956_103_1.jpg",
+      "plot": "2026년 6월 3일, 서울 송파구 잠실7동 제2투표소에서 투표용지 부족 사태가 벌어졌다. 유권자들은 돌아서지 않았다. 그날 밤 스레드에 올라온 한 문장 — 지금 송파로 출발하겠다. 좋아요 2만. 이 한 문장이 한국 사회의 지도를 다시 그렸다.경찰이 강제해산에 나서자 투표함은 올림픽공원 핸드볼경기장으로 이송되었고, 봉쇄가 시작됐다. 다음 날 6만명인 넘는 청년들이(경찰추산3만 3천 3백 명, 그 다음 날 3만 8천 7백 명)이 모였다. 그 중 20대가 34.2퍼센트, 30대가 24.1퍼센트 — 두 세대의 합이 58.3퍼센트였다.그러나 정작 그들의 이재명 지지율은 20대 36퍼센트, 30대 47퍼센트에 그쳤다. 4050의 60퍼센트대에 훨씬 못 미치는, 정부에 가장 냉담한 세대였다. 이 모순이 이 다큐멘터리의 출발점이다.청년들의 올공 선거혁명은 올공이라는 지역적 협의를 넘어 정치권에도 큰 영향을 끼치게 된다. 특히 선관위특검은 2030의 ‘부정선거 재선거 당일투표 수개표’ 부르짖음이 만들어낸 결과물이다. 대한민국 선거제도 변화의 기폭제가 된 올공혁명은 올공에서 비롯된 각종 변화를 심층 취재했다. 올공의 2030이 대한민국을 어떻게 변화시키고 있나? 이 현장과제를 영화는 충실히 수행한 것이다.이영돈 감독은 6월 3일부터 7월 2일까지 30일 동안 잠실7동에서 올림픽공원으로 이어진 봉쇄의 광장을 현장 기록했다. 주최자도, 대표도, 깃발도 없이 오직 개인이 있었고, 오직 참정권이 있었으며, 오직 지키다 라는 동사가 있었다. 그들이 지킨 것은 정권이 아니라 나라였고, 정치가 아니라 참정권이었으며, 이재명이 아니라 대한민국이었다. 이것이 6·3 선거혁명이며, 소셜 시티즌의 시간이다.",
       "keywords": null,
-      "kmdbId": "A-13955",
+      "kmdbId": "A-14236",
       "boxOffice": null,
-      "bookingRate": 0.6,
+      "bookingRate": 0.51,
       "availableAt": [
         "lotte",
-        "megabox",
         "cgv"
       ],
       "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24737",
-        "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26049500"
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24956"
       }
+    },
+    {
+      "movieCd": "20264635",
+      "title": "명탐정 코난: 하이웨이의 타천사",
+      "titleEn": "명탐정 코난: 하이웨이의 타천사",
+      "openDt": "2026-08-12",
+      "genre": "애니메이션",
+      "runtime": 109,
+      "grade": "12세이상관람가",
+      "nation": "일본",
+      "directors": [],
+      "actors": [],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202608/24619_103_1.jpg",
+      "plot": "‘모터 사이클 페스티벌’이 열리는 요코하마로 향하던 코난 일행은 폭주하는 검은 오토바이 사건에 휘말리고 범인을 쫓던 ‘바람의 여신’ 가나가와현경 교통기동대 하기와라 치하야 경부보와 재회한다.경찰의 추적을 모두 뿌리친 폭주 오토바이는 도쿄 시내에도 출물하고, 연쇄적으로 사상자가 발생한다.이러한 가운데 최첨단 AI 기술을 탑재한 싸이카 ‘엔젤’과 폭주 오토바이가 매우 유사하다는 점이 밝혀지고, 이 정체불명의 존재를 ‘루시퍼’라고 명명, 점차 포위망을 좁혀간다.한편, 사건을 쫓던 치하야는 문득 7년 전 11월 7일, 폭탄을 해체하다 순직한 남동생 하기와라 켄지와,그의 죽음으로부터 4년 후 11월 7일, 같은 범인을 쫓다가 순직한 켄지의 친구이자 동료 마츠다 진페이에 대한 기억이 떠오르는데….도시를 위협하는 ‘루시퍼’에 맞서 ‘바람의 여신’ 치하야와 코난의 질주가 시작된다!바람의 여신, 엔젤 VS 어둠의 타락천사, 루시퍼초고속으로 질주하는 극한의 레이스 스타트!",
+      "keywords": "만화원작",
+      "kmdbId": "F-67882",
+      "boxOffice": null,
+      "bookingRate": 0.5,
+      "availableAt": [
+        "lotte",
+        "megabox"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24619",
+        "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26042500"
+      }
+    },
+    {
+      "movieCd": null,
+      "title": "모모와 다락방의 수상한 요괴들",
+      "titleEn": "",
+      "openDt": "2012-07-05",
+      "genre": "애니메이션, 드라마, 가족, 판타지",
+      "runtime": null,
+      "grade": "전체관람가",
+      "nation": null,
+      "directors": [],
+      "actors": [],
+      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/000076/76431/76431_320.jpg",
+      "plot": "우리집 다락방에 요괴가 산다?! 엄마를 따라 작은 섬 이오지마로 이사 온 11살 도시소녀 모모. 이사온 첫날, 모모는 다락방에서 오래된 그림책 한 권을 발견한다. 그날 이후, 다락방에서 이상한 소리가 들리는가 하면, 냉장고 속 간식이 사라지고, 급기야 그림책 속 요괴들이 모모의 눈앞에 나타나는데... 내 눈에만 보이는 사고뭉치 요괴 3인방~! 모모 덕에 봉인된 그림책에서 나왔다며 자신들을 소개하는 이와, 카와, 마메! 외모와는 다르게 은근 소심하고 먹보에 어리바리하기까지. 자칭 수호신이라며 큰 소리치지만 사고투성인 요괴 3인방과 웃지 못할 한집살이를 시작한 모모에게 어느 날 예상치 못한 위기가 찾아오는데... 도시소녀 모모에게 찾아온 수상한 요괴 3인방! 그들의 초특급 모험이 시작된다!",
+      "keywords": "다락방,요괴,이오지마,소녀",
+      "kmdbId": "F-29729",
+      "boxOffice": null,
+      "bookingRate": 0.48,
+      "availableAt": [
+        "cgv"
+      ],
+      "booking": {}
     },
     {
       "movieCd": null,
@@ -429,27 +706,47 @@
     },
     {
       "movieCd": null,
-      "title": "킹 오브 프리즘 -유어 엔드리스 콜- 모두 빛나라! 프리즘 투어즈",
+      "title": "리틀 드래곤-몬스터섬의 비밀",
       "titleEn": "",
-      "openDt": "2025-07-18",
-      "genre": null,
+      "openDt": "2026-09-09",
+      "genre": "애니메이션",
       "runtime": null,
       "grade": "전체관람가",
       "nation": null,
       "directors": [],
       "actors": [],
-      "poster": "https://img.megabox.co.kr/SharedImg/2025/07/03/0GoAHTskX2dA7wpSPXOtsf8XTq5hvf9e.jpg",
-      "plot": "프리즘 쇼. 그것은 노래, 댄스, 프리즘 점프를 결합한 종합 엔터테인먼트 쇼!은 그런 프리즘 쇼에 매료된 개성 넘치는 소년들이 관객을 더욱 설레게 하는 “프리즘스타”를 목표로 성장해 가는 이야기이번 킹프리는 “프리즘☆투어즈”!프리즘스타로서 만개하여 유닛을 결성한 SePTENTRION의 이치죠 신 등 7명이타임머신을 타고 시간, 세계를 초월하여 프리즘 쇼의 시작점으로 여행을 떠납니다.",
+      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001344/30001344_320.jpg",
+      "plot": "수영을 못 하는 바다 드래곤 루피는 할머니와 단둘이 살아가고 있다.어느 날, 연기를 내뿜어 인간으로부터 바다 괴물 섬을 지키는 세르팡의 마법목도리가 망가지고, 루드비그는 감기에 걸려 연기를 내뿜지 못한다.루피는 오래전 섬을 떠난 자신의 이모할머니가 루드비그에게 목도리를 선물했다는 사실을 알게 되고, 할머니와 바다 몬스터 섬을 지키기 위해 이모할머니를 찾아 떠난다.고래택시를 타고 육지에 도착하고 육지에서 사자,꼬끼리,거북이 등을 만나 그들과 함께 동물원을 탈출하여 다시 몬스터섬으로 돌아와 위기를 극복한다.",
       "keywords": null,
-      "kmdbId": "F-64056",
+      "kmdbId": "F-68005",
       "boxOffice": null,
       "bookingRate": 0.4,
       "availableAt": [
-        "megabox"
+        "cgv"
       ],
-      "booking": {
-        "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=25044400"
-      }
+      "booking": {}
+    },
+    {
+      "movieCd": null,
+      "title": "시간을 달리는 소녀",
+      "titleEn": "",
+      "openDt": "2016-01-14",
+      "genre": "애니메이션",
+      "runtime": null,
+      "grade": "전체관람가",
+      "nation": null,
+      "directors": [],
+      "actors": [],
+      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/000078/78718/78718_320.jpg",
+      "plot": "",
+      "keywords": null,
+      "kmdbId": null,
+      "boxOffice": null,
+      "bookingRate": 0.31,
+      "availableAt": [
+        "cgv"
+      ],
+      "booking": {}
     },
     {
       "movieCd": null,
@@ -467,7 +764,7 @@
       "keywords": "오컬트,무당,묘지,풍수지리,지관,도깨비불,빙의",
       "kmdbId": "K-35655",
       "boxOffice": null,
-      "bookingRate": 0.28,
+      "bookingRate": 0.23,
       "availableAt": [
         "cgv"
       ],
@@ -497,21 +794,65 @@
     },
     {
       "movieCd": null,
-      "title": "모모와 다락방의 수상한 요괴들",
+      "title": "신극장판 은혼-요시와라 대염상",
       "titleEn": "",
-      "openDt": "2012-07-05",
-      "genre": "애니메이션, 드라마, 가족, 판타지",
+      "openDt": "2026-05-20",
+      "genre": "애니메이션",
       "runtime": null,
-      "grade": "전체관람가",
+      "grade": "15세이상관람가",
       "nation": null,
       "directors": [],
       "actors": [],
-      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/000076/76431/76431_320.jpg",
-      "plot": "우리집 다락방에 요괴가 산다?! 엄마를 따라 작은 섬 이오지마로 이사 온 11살 도시소녀 모모. 이사온 첫날, 모모는 다락방에서 오래된 그림책 한 권을 발견한다. 그날 이후, 다락방에서 이상한 소리가 들리는가 하면, 냉장고 속 간식이 사라지고, 급기야 그림책 속 요괴들이 모모의 눈앞에 나타나는데... 내 눈에만 보이는 사고뭉치 요괴 3인방~! 모모 덕에 봉인된 그림책에서 나왔다며 자신들을 소개하는 이와, 카와, 마메! 외모와는 다르게 은근 소심하고 먹보에 어리바리하기까지. 자칭 수호신이라며 큰 소리치지만 사고투성인 요괴 3인방과 웃지 못할 한집살이를 시작한 모모에게 어느 날 예상치 못한 위기가 찾아오는데... 도시소녀 모모에게 찾아온 수상한 요괴 3인방! 그들의 초특급 모험이 시작된다!",
-      "keywords": "다락방,요괴,이오지마,소녀",
-      "kmdbId": "F-29729",
+      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001088/30001088_320.jpg",
+      "plot": "해결사 사무소를 운영하는 ‘사카타 긴토키’.어느 날, 그는 소매치기로 생계를 이어가던 고아 소년 ‘세이타’를 만나게 된다.‘세이타’의 소원은 단 하나.어릴 적 헤어진 어머니 ‘히노와’를 다시 만나는 것.하지만 ‘히노와’가 있는 곳은 야왕 ‘호우센’이 군림하는 지상의 법이 통하지 않는 지하도시 요시와라 도원향.‘세이타’의 간절한 소원을 외면할 수 없었던 ‘긴토키’와 해결사 일행은 요시와라에 발을 들인다.그 선택은 도시를 뒤흔드는 거대한 충돌로 번지는데…어둠을 단칼에 베어라.",
+      "keywords": null,
+      "kmdbId": "F-67040",
       "boxOffice": null,
-      "bookingRate": 0.19,
+      "bookingRate": 0.14,
+      "availableAt": [
+        "cgv"
+      ],
+      "booking": {}
+    },
+    {
+      "movieCd": null,
+      "title": "곤지암",
+      "titleEn": "",
+      "openDt": "2018-03-28",
+      "genre": "공포(호러), 스릴러",
+      "runtime": null,
+      "grade": "15세이상관람가",
+      "nation": null,
+      "directors": [],
+      "actors": [],
+      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/000080/80557/80557_320.jpg",
+      "plot": "공포 체험의 성지 ‘곤지암 정신병원’1979년 환자 42명의 집단 자살과 병원장의 실종 이후, 섬뜩한 괴담으로 둘러싸인 곤지암 정신병원으로 공포체험을 떠난 7명의 멤버들 원장실, 집단 치료실, 실험실, 열리지 않는 402호 괴담의 실체를 담아내기 위해 병원 내부를 촬영하기 시작하던 멤버들에게 상상도 못한 기이하고 공포스러운 일들이 실제로 벌어지기 시작 하는데… 가지 말라는 곳에는 반드시 이유가 있다. 소름 끼치는 ‘곤지암 정신병원’ 의 실체를 체험하라!",
+      "keywords": "곤지암정신병원,집단자살,실종,생중계,폐가,공포체험",
+      "kmdbId": "K-16933",
+      "boxOffice": null,
+      "bookingRate": 0.11,
+      "availableAt": [
+        "cgv"
+      ],
+      "booking": {}
+    },
+    {
+      "movieCd": null,
+      "title": "살목지",
+      "titleEn": "",
+      "openDt": "2026-04-08",
+      "genre": "공포(호러), 스릴러",
+      "runtime": null,
+      "grade": "15세이상관람가",
+      "nation": null,
+      "directors": [],
+      "actors": [],
+      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001042/30001042_320.jpg",
+      "plot": "기이한 소문이 끊이지 않는 저수지 살목지의 로드뷰 화면에 촬영한 적 없는 정체불명의 형체가 포착된다.오늘 안에 반드시 재촬영을 끝내야 하는 상황 속에 살목지로 향한 PD ‘수인’(김혜윤)과 촬영팀. 촬영이 시작되자 행방이 묘연했던 선배 ‘교식’(김준한)이 등장하고, 설명되지 않는 일들이 연달아 벌어지며 촬영팀은 점점 아비규환에 빠진다.휘몰아치는 공포 속 ‘기태’(이종원)는 ‘수인’을 향해 내달리지만 빠져나오려 할수록 이들은 점점 더 깊은 곳으로 끌려 들어가게 되는데…거긴, 절대 살아서는 못 나와",
+      "keywords": null,
+      "kmdbId": "K-40854",
+      "boxOffice": null,
+      "bookingRate": 0.1,
       "availableAt": [
         "cgv"
       ],
@@ -542,7 +883,7 @@
       "keywords": null,
       "kmdbId": "K-41814",
       "boxOffice": null,
-      "bookingRate": 0.16,
+      "bookingRate": 0.09,
       "availableAt": [
         "lotte"
       ],
@@ -552,21 +893,43 @@
     },
     {
       "movieCd": null,
-      "title": "WANNA ONE GO in LA",
+      "title": "사랑의 하츄핑-고래보석의 전설",
       "titleEn": "",
-      "openDt": "2026-09-01",
-      "genre": "이벤트",
+      "openDt": "2026-08-05",
+      "genre": "애니메이션",
       "runtime": null,
-      "grade": "15세이상관람가",
+      "grade": "전체관람가",
       "nation": null,
       "directors": [],
       "actors": [],
-      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001416/30001416_320.jpg",
-      "plot": "",
+      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001045/30001045_320.jpg",
+      "plot": "바다 너머, 가장 큰 사랑이 기다린다!이번엔, 반드시 구할거야!하츄핑과 단짝이 된 로미는 행복한 나날을 보내고 있지만 하고 싶은 일과 해야만 하는 일 사이에 매번 엄마(벨리타)와 의견이 달라 다투게 되고…그러던 어느 날, 바다를 뒤흔드는 사건과 함께 엄마는 흔적도 없이 바닷속으로 사라진다.한 마디 사과도, 한 번의 포옹도 건네지 못한 채 엄마를 잃은 로미.처음 만나는 바다 앞에서 단짝 하츄핑, 바다소년 카이트, 세 마리의 티니핑들과 함께 용기를 내보는데…찬란한 바다 도시, 거대한 심해 생명체들과 맞서야 하는 이들.마침내 로미는 엄마가 한 번도 들려준 적 없던 비밀을 마주하게 된다.",
       "keywords": null,
-      "kmdbId": null,
+      "kmdbId": "K-41066",
       "boxOffice": null,
-      "bookingRate": 0.16,
+      "bookingRate": 0.08,
+      "availableAt": [
+        "cgv"
+      ],
+      "booking": {}
+    },
+    {
+      "movieCd": null,
+      "title": "프랙티컬 매직-새로운 챕터",
+      "titleEn": "",
+      "openDt": "2026-09-09",
+      "genre": "액션",
+      "runtime": null,
+      "grade": "12세이상관람가",
+      "nation": null,
+      "directors": [],
+      "actors": [],
+      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001443/30001443_320.jpg",
+      "plot": "운명도, 저주도, 마녀들을 막을 수 없다!사랑하면 파멸한다는 가문의 저주에 맞서는 오웬스 자매들의 이야기마법의 능력과 저주를 타고난 오웬스 가문의 자매 샐리(산드라 블록)와 질리언(니콜 키드먼)은 다사다난했던 지난 과거를 묻고 살아가고 있다.한편, 자신의 혈통과 저주를 모른 채 평범한 삶을 살던 샐리의 딸 카일리(조이 킹)는 갑작스러운 사고를 당한 남자친구 때문에 혼란스러운 마음을 자매인 안토니아(메이지 윌리엄스)에게 털어놓는다.결국 가문의 비밀은 새로운 세대에게까지 전해지게 되고, 사랑을 쟁취하기 위해 다시 한번 운명에 맞서게 된 오웬스 자매들.과연 이번엔 저주를 완벽히 끝낼 수 있을까?",
+      "keywords": "소설원작",
+      "kmdbId": "F-68550",
+      "boxOffice": null,
+      "bookingRate": 0.08,
       "availableAt": [
         "cgv"
       ],
@@ -588,268 +951,39 @@
       "keywords": null,
       "kmdbId": "F-37638",
       "boxOffice": null,
-      "bookingRate": 0.15,
+      "bookingRate": 0.08,
       "availableAt": [
         "cgv"
       ],
       "booking": {}
     },
     {
-      "movieCd": null,
-      "title": "신극장판 은혼-요시와라 대염상",
-      "titleEn": "",
-      "openDt": "2026-05-20",
-      "genre": "애니메이션",
-      "runtime": null,
-      "grade": "15세이상관람가",
-      "nation": null,
-      "directors": [],
-      "actors": [],
-      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001088/30001088_320.jpg",
-      "plot": "해결사 사무소를 운영하는 ‘사카타 긴토키’.어느 날, 그는 소매치기로 생계를 이어가던 고아 소년 ‘세이타’를 만나게 된다.‘세이타’의 소원은 단 하나.어릴 적 헤어진 어머니 ‘히노와’를 다시 만나는 것.하지만 ‘히노와’가 있는 곳은 야왕 ‘호우센’이 군림하는 지상의 법이 통하지 않는 지하도시 요시와라 도원향.‘세이타’의 간절한 소원을 외면할 수 없었던 ‘긴토키’와 해결사 일행은 요시와라에 발을 들인다.그 선택은 도시를 뒤흔드는 거대한 충돌로 번지는데…어둠을 단칼에 베어라.",
-      "keywords": null,
-      "kmdbId": "F-67040",
-      "boxOffice": null,
-      "bookingRate": 0.14,
-      "availableAt": [
-        "cgv"
-      ],
-      "booking": {}
-    },
-    {
-      "movieCd": "20249080",
-      "title": "캐리어를 끄는 소녀",
-      "titleEn": "캐리어를 끄는 소녀",
-      "openDt": "2026-09-02",
-      "genre": "드라마",
-      "runtime": 106,
+      "movieCd": "20249409",
+      "title": "담요를 입은 사람",
+      "titleEn": "담요를 입은 사람",
+      "openDt": "2026-09-09",
+      "genre": "다큐멘터리",
+      "runtime": 116,
       "grade": "12세이상관람가",
       "nation": "한국",
       "directors": [
-        "윤심경"
+        "박정미"
       ],
       "actors": [
-        "최명빈",
-        "문승아",
-        "김태훈",
-        "유다인",
-        "임승민",
-        "정지인"
+        "박정미"
       ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202609/24748_103_1.jpg",
-      "plot": "양부모에게 버려져 갈 곳 없는 열다섯 살 소녀 영선은 테니스 훈련 파트너로 만난 수아의 집에서 잠시 지내게 된다. 수아 집에서 오래 오래 살고 싶은 영선은 가족이 되기 위해 노력하지만, 수아와 가족들은 그런 영선이 부담스럽다.",
-      "keywords": "가족,꿈,빈곤,가난,성장,청춘,스포츠,아동,여성,우정",
-      "kmdbId": "K-39070",
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202609/24833_103_1.jpg",
+      "plot": "주인공은 돈을 사용하지 않고 생존할 방법을 찾아 나선다. 빈 건물을 무단 점거하는 스퀏팅과 버려진 음식을 주워 먹는 스킵다이빙으로 먹거리를 구하고, 공짜로 얻은 자전거를 타고 자급자족 공동체를 다닌다. 영국을 떠나선 히치하이크로 여행한다. 스무 명의 히피와 카라반으로 여행하며 자연과의 연결을 회복하고 평화의 길을 찾기 위한 흐름에 자신을 맡긴다. 돈과 계획 없이 튀르키예, 이란, 인도를 여행하며 삶의 목적과 존재의 이유에 대한 답을 찾아간다.",
+      "keywords": "사사로운영화리스트",
+      "kmdbId": "A-12753",
       "boxOffice": null,
-      "bookingRate": 0.13,
+      "bookingRate": 0.05,
       "availableAt": [
         "lotte",
         "cgv"
       ],
       "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24748"
-      }
-    },
-    {
-      "movieCd": null,
-      "title": "곤지암",
-      "titleEn": "",
-      "openDt": "2018-03-28",
-      "genre": "공포(호러), 스릴러",
-      "runtime": null,
-      "grade": "15세이상관람가",
-      "nation": null,
-      "directors": [],
-      "actors": [],
-      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/000080/80557/80557_320.jpg",
-      "plot": "공포 체험의 성지 ‘곤지암 정신병원’1979년 환자 42명의 집단 자살과 병원장의 실종 이후, 섬뜩한 괴담으로 둘러싸인 곤지암 정신병원으로 공포체험을 떠난 7명의 멤버들 원장실, 집단 치료실, 실험실, 열리지 않는 402호 괴담의 실체를 담아내기 위해 병원 내부를 촬영하기 시작하던 멤버들에게 상상도 못한 기이하고 공포스러운 일들이 실제로 벌어지기 시작 하는데… 가지 말라는 곳에는 반드시 이유가 있다. 소름 끼치는 ‘곤지암 정신병원’ 의 실체를 체험하라!",
-      "keywords": "곤지암정신병원,집단자살,실종,생중계,폐가,공포체험",
-      "kmdbId": "K-16933",
-      "boxOffice": null,
-      "bookingRate": 0.12,
-      "availableAt": [
-        "cgv"
-      ],
-      "booking": {}
-    },
-    {
-      "movieCd": null,
-      "title": "살목지",
-      "titleEn": "",
-      "openDt": "2026-04-08",
-      "genre": "공포(호러), 스릴러",
-      "runtime": null,
-      "grade": "15세이상관람가",
-      "nation": null,
-      "directors": [],
-      "actors": [],
-      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001042/30001042_320.jpg",
-      "plot": "기이한 소문이 끊이지 않는 저수지 살목지의 로드뷰 화면에 촬영한 적 없는 정체불명의 형체가 포착된다.오늘 안에 반드시 재촬영을 끝내야 하는 상황 속에 살목지로 향한 PD ‘수인’(김혜윤)과 촬영팀. 촬영이 시작되자 행방이 묘연했던 선배 ‘교식’(김준한)이 등장하고, 설명되지 않는 일들이 연달아 벌어지며 촬영팀은 점점 아비규환에 빠진다.휘몰아치는 공포 속 ‘기태’(이종원)는 ‘수인’을 향해 내달리지만 빠져나오려 할수록 이들은 점점 더 깊은 곳으로 끌려 들어가게 되는데…거긴, 절대 살아서는 못 나와",
-      "keywords": null,
-      "kmdbId": "K-40854",
-      "boxOffice": null,
-      "bookingRate": 0.09,
-      "availableAt": [
-        "cgv"
-      ],
-      "booking": {}
-    },
-    {
-      "movieCd": null,
-      "title": "드라큘라-러브 테일",
-      "titleEn": "",
-      "openDt": "2026-08-26",
-      "genre": "판타지, 멜로/로맨스, 공포(호러)",
-      "runtime": null,
-      "grade": "15세이상관람가",
-      "nation": null,
-      "directors": [],
-      "actors": [],
-      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001311/30001311_320.jpg",
-      "plot": "그녀를 위해, 신을 버렸다15세기, 전쟁으로 연인을 잃은 남자.신을 버린 저주로 불멸의 드라큘라가 되고 그녀를 되찾기 위해 세상을 떠돈다.400년의 기다림.죽음도, 시간도, 신의 저주도 끝내 막지 못한 운명을 다시 만나는데…뤽 베송의 ‘다크 판타지 로맨스’가 온다",
-      "keywords": "소설원작",
-      "kmdbId": "F-67937",
-      "boxOffice": null,
-      "bookingRate": 0.07,
-      "availableAt": [
-        "cgv"
-      ],
-      "booking": {}
-    },
-    {
-      "movieCd": "20253289",
-      "title": "극장판 귀멸의 칼날: 무한성편",
-      "titleEn": "극장판 귀멸의 칼날: 무한성편",
-      "openDt": "2025-08-22",
-      "genre": "애니메이션",
-      "runtime": 155,
-      "grade": "15세이상관람가",
-      "nation": "일본",
-      "directors": [
-        "소토자키 하루오"
-      ],
-      "actors": [
-        "하나에 나츠키",
-        "키토 아카리",
-        "시모노 히로",
-        "마츠오카 요시츠구",
-        "오카모토 노부히코",
-        "사쿠라이 타카히로"
-      ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202508/22879_103_1.jpg",
-      "plot": "다가오는 혈귀와의 결전을 대비해 대원들과 함께 ‘주(柱)’들의 합동 강화 훈련인 「주 훈련」에 임하던 중, 귀살대 본부인 우부야시키 저택에 귀살대의 숙적 키부츠지 무잔이 나타난다.우부야시키를 구하기 위해 달려온 주(柱)들과 탄지로였지만, 무잔의 손에 의해 정체불명의 공간으로 떨어지고 만다.탄지로 일행이 떨어진 곳은 바로 혈귀의 본거지 ≪무한성≫―‘귀살대’와 ‘혈귀’의 최종 결전의 막이 오른다!",
-      "keywords": "만화원작,사사로운영화리스트",
-      "kmdbId": "F-63242",
-      "boxOffice": null,
-      "bookingRate": 0.06,
-      "availableAt": [
-        "lotte"
-      ],
-      "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|22879"
-      }
-    },
-    {
-      "movieCd": null,
-      "title": "어떻게 해야 했을까",
-      "titleEn": "",
-      "openDt": "2026-07-29",
-      "genre": "다큐멘터리",
-      "runtime": null,
-      "grade": "12세이상관람가",
-      "nation": null,
-      "directors": [],
-      "actors": [],
-      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001329/30001329_320.jpg",
-      "plot": "“20년 간 기록된, 가장 사적이고 충격적인 가족의 초상 스물넷, 다정하고 촉망받던 누나에게 조현병 증상이 나타난다.부모님은 병원 대신 현관문에 자물쇠를 채우는 것을 택한다.그렇게 닫힌 문 안에서, 가족은 20여 년간 서로에게 침묵했다.더는 외면할 수 없었던 남동생은 카메라를 들고 그 침묵 속으로 들어간다.누나에게, 부모에게, 그리고 자기 자신에게 묻기 위해.그리고 끝내 우리에게 묻는다.“어떻게 해야 했을까?",
-      "keywords": null,
-      "kmdbId": "B-12274",
-      "boxOffice": null,
-      "bookingRate": 0.06,
-      "availableAt": [
-        "cgv"
-      ],
-      "booking": {}
-    },
-    {
-      "movieCd": null,
-      "title": "사랑의 하츄핑-고래보석의 전설",
-      "titleEn": "",
-      "openDt": "2026-08-05",
-      "genre": "애니메이션",
-      "runtime": null,
-      "grade": "전체관람가",
-      "nation": null,
-      "directors": [],
-      "actors": [],
-      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001045/30001045_320.jpg",
-      "plot": "바다 너머, 가장 큰 사랑이 기다린다!이번엔, 반드시 구할거야!하츄핑과 단짝이 된 로미는 행복한 나날을 보내고 있지만 하고 싶은 일과 해야만 하는 일 사이에 매번 엄마(벨리타)와 의견이 달라 다투게 되고…그러던 어느 날, 바다를 뒤흔드는 사건과 함께 엄마는 흔적도 없이 바닷속으로 사라진다.한 마디 사과도, 한 번의 포옹도 건네지 못한 채 엄마를 잃은 로미.처음 만나는 바다 앞에서 단짝 하츄핑, 바다소년 카이트, 세 마리의 티니핑들과 함께 용기를 내보는데…찬란한 바다 도시, 거대한 심해 생명체들과 맞서야 하는 이들.마침내 로미는 엄마가 한 번도 들려준 적 없던 비밀을 마주하게 된다.",
-      "keywords": null,
-      "kmdbId": "K-41066",
-      "boxOffice": null,
-      "bookingRate": 0.05,
-      "availableAt": [
-        "cgv"
-      ],
-      "booking": {}
-    },
-    {
-      "movieCd": "20255467",
-      "title": "길 위의 뭉치",
-      "titleEn": "길 위의 뭉치",
-      "openDt": "2026-08-19",
-      "genre": "애니메이션",
-      "runtime": 93,
-      "grade": "전체관람가",
-      "nation": "한국",
-      "directors": [
-        "오성윤",
-        "이춘백"
-      ],
-      "actors": [
-        "도경수",
-        "박소담",
-        "박철민",
-        "강석",
-        "이준혁"
-      ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202510/23071_103_1.jpg",
-      "plot": "“버려진 ‘개’ 아냐! 내 진짜 주인은 바로 나”하루아침에 주인에게 버려져 길 위에 놓인 신세가 된 '뭉치'. 거리 생활의 고참 '짱아'가 나타나, “기다리라”는 주인의 말을 철썩 같이 믿고 있던 뭉치의 믿음을 와르르 무너뜨린다. 냉혹한 현실을 받아들이고, 짱아 무리와 함께 거리 생활에 적응해가던 뭉치는 숲 속에서 야생성을 잃지 않고 살아가는 들개 '밤이' 무리를 만나, 처음으로 진짜 자유를 꿈꾸게 된다. 어느 날, 뭉치와 짱아 무리가 살던 아지트가 인간들에 의해 파괴된다. 밤이 무리 또한 잔혹한 개 사냥꾼에게 쫓기게 되면서, 위험천만한 도로와 날카로운 철조망을 넘어 조금씩 조금씩 북쪽 방향으로 모험을 떠나게 되는데... 뭉치와 친구들은 인간들이 살지 않고, 아름다운 풀밭과 반딧불만 가득하다는 '그곳’에 무사히 도착할 수 있을까?",
-      "keywords": "유기견",
-      "kmdbId": "K-39541",
-      "boxOffice": null,
-      "bookingRate": 0.04,
-      "availableAt": [
-        "lotte"
-      ],
-      "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|23071"
-      }
-    },
-    {
-      "movieCd": "20262381",
-      "title": "사랑의 하츄핑: 고래보석의 전설",
-      "titleEn": "사랑의 하츄핑: 고래보석의 전설",
-      "openDt": "2026-08-05",
-      "genre": "애니메이션",
-      "runtime": 105,
-      "grade": "전체관람가",
-      "nation": "한국",
-      "directors": [
-        "김수훈"
-      ],
-      "actors": [],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202608/24440_103_1.jpg",
-      "plot": "바다 너머, 가장 큰 사랑이 기다린다!이번엔, 반드시 구할거야!하츄핑과 단짝이 된 로미는 행복한 나날을 보내고 있지만 하고 싶은 일과 해야만 하는 일 사이에 매번 엄마(벨리타)와 의견이 달라 다투게 되고…그러던 어느 날, 바다를 뒤흔드는 사건과 함께 엄마는 흔적도 없이 바닷속으로 사라진다.한 마디 사과도, 한 번의 포옹도 건네지 못한 채 엄마를 잃은 로미.처음 만나는 바다 앞에서 단짝 하츄핑, 바다소년 카이트, 세 마리의 티니핑들과 함께 용기를 내보는데…찬란한 바다 도시, 거대한 심해 생명체들과 맞서야 하는 이들.마침내 로미는 엄마가 한 번도 들려준 적 없던 비밀을 마주하게 된다.",
-      "keywords": null,
-      "kmdbId": "K-41066",
-      "boxOffice": null,
-      "bookingRate": 0.04,
-      "availableAt": [
-        "lotte"
-      ],
-      "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24440"
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24833"
       }
     },
     {
@@ -920,22 +1054,116 @@
       }
     },
     {
-      "movieCd": null,
-      "title": "스파이의 아내",
-      "titleEn": "",
-      "openDt": "2021-03-25",
+      "movieCd": "20262381",
+      "title": "사랑의 하츄핑: 고래보석의 전설",
+      "titleEn": "사랑의 하츄핑: 고래보석의 전설",
+      "openDt": "2026-08-05",
+      "genre": "애니메이션",
+      "runtime": 105,
+      "grade": "전체관람가",
+      "nation": "한국",
+      "directors": [
+        "김수훈"
+      ],
+      "actors": [
+        "이지현",
+        "조경이",
+        "여민정",
+        "심규혁",
+        "유혜지",
+        "장예나"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202608/24440_103_1.jpg",
+      "plot": "바다 너머, 가장 큰 사랑이 기다린다!이번엔, 반드시 구할거야!하츄핑과 단짝이 된 로미는 행복한 나날을 보내고 있지만 하고 싶은 일과 해야만 하는 일 사이에 매번 엄마(벨리타)와 의견이 달라 다투게 되고…그러던 어느 날, 바다를 뒤흔드는 사건과 함께 엄마는 흔적도 없이 바닷속으로 사라진다.한 마디 사과도, 한 번의 포옹도 건네지 못한 채 엄마를 잃은 로미.처음 만나는 바다 앞에서 단짝 하츄핑, 바다소년 카이트, 세 마리의 티니핑들과 함께 용기를 내보는데…찬란한 바다 도시, 거대한 심해 생명체들과 맞서야 하는 이들.마침내 로미는 엄마가 한 번도 들려준 적 없던 비밀을 마주하게 된다.",
+      "keywords": null,
+      "kmdbId": "K-41066",
+      "boxOffice": null,
+      "bookingRate": 0.03,
+      "availableAt": [
+        "lotte"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24440"
+      }
+    },
+    {
+      "movieCd": "20265963",
+      "title": "프랙티컬 매직: 새로운 챕터",
+      "titleEn": "프랙티컬 매직: 새로운 챕터",
+      "openDt": "2026-09-09",
+      "genre": "판타지, 멜로/로맨스",
+      "runtime": 129,
+      "grade": "12세이상관람가",
+      "nation": "미국",
+      "directors": [
+        "수잔 비에르"
+      ],
+      "actors": [
+        "산드라 블록",
+        "니콜 키드먼",
+        "스톡카드 채닝"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202609/24895_103_1.jpg",
+      "plot": "운명도, 저주도, 마녀들을 막을 수 없다!사랑하면 파멸한다는 가문의 저주에 맞서는 오웬스 자매들의 이야기마법의 능력과 저주를 타고난 오웬스 가문의 자매 샐리(산드라 블록)와 질리언(니콜 키드먼)은 다사다난했던 지난 과거를 묻고 살아가고 있다.한편, 자신의 혈통과 저주를 모른 채 평범한 삶을 살던 샐리의 딸 카일리(조이 킹)는 갑작스러운 사고를 당한 남자친구 때문에 혼란스러운 마음을 자매인 안토니아(메이지 윌리엄스)에게 털어놓는다.결국 가문의 비밀은 새로운 세대에게까지 전해지게 되고, 사랑을 쟁취하기 위해 다시 한번 운명에 맞서게 된 오웬스 자매들.과연 이번엔 저주를 완벽히 끝낼 수 있을까?",
+      "keywords": "소설원작",
+      "kmdbId": "F-68550",
+      "boxOffice": null,
+      "bookingRate": 0.03,
+      "availableAt": [
+        "lotte"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24895"
+      }
+    },
+    {
+      "movieCd": "20244567",
+      "title": "환희의 얼굴",
+      "titleEn": "환희의 얼굴",
+      "openDt": "2026-09-09",
       "genre": "드라마",
+      "runtime": 125,
+      "grade": "12세이상관람가",
+      "nation": "한국",
+      "directors": [
+        "이제한"
+      ],
+      "actors": [
+        "정이주",
+        "김시은",
+        "황미영"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202609/24752_103_1.jpg",
+      "plot": "안녕, 모순의 동반자들여기 네 개의 이야기가 있고, 이야기 안에는 환희가 있다.환희는 그 이야기 안에서 동정과 관심을 갈구하기도 하고, 자신이 머물 새로운 장소를 염원하기도 하며, 자신도 믿을 수 없는 배신을 저지르기도 한다.그녀는 때론 냉정하고, 어떨 땐 희생적이며, 누군가에겐 사랑도 베푼다.오해와 이해로 만들어진 매일의 표정들 환희의 얼굴 2026.9.9",
+      "keywords": null,
+      "kmdbId": "K-37522",
+      "boxOffice": null,
+      "bookingRate": 0.03,
+      "availableAt": [
+        "lotte",
+        "cgv"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24752"
+      }
+    },
+    {
+      "movieCd": null,
+      "title": "어떻게 해야 했을까",
+      "titleEn": "",
+      "openDt": "2026-07-29",
+      "genre": "다큐멘터리",
       "runtime": null,
       "grade": "12세이상관람가",
       "nation": null,
       "directors": [],
       "actors": [],
-      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/000084/84435/84435_320.jpg",
-      "plot": "태평양전쟁 직전인 1940년, 아내 사토코와 행복하게 살던 고베의 무역상 유사쿠는 사업 차 만주에 갔다가, 그곳에서 엄청난 만행의 현장을 목격 하고 이를 세상에 알리기로 결심한다. 사토코는 남편의 비밀이 그들의 완벽한 가정을 위협할 것이라 생각하여 결사적으로 유사쿠를 말리지만 결국 그의 대의에 동참하여 기꺼이 ‘스파이의 아내’가 되기로 한다. 우리 시대의 거장 구로사와 기요시 감독은 1940년 일본이라는 시공간의 불안과 불온의 공기를 배경이자 주제로 삼아, 세 남녀의 얽히고설킨 애정과 신념을 긴장감 넘치는 스릴러로 완성했다. 기요시 감독이 하마 구치 류스케, 노하라 타다시와 함께 각본을 썼고, 아오이 유우, 타카하시 잇세이, 히가시데 마사히로 등의 스타배우들이 출연했다. 이 영화는 올해 6월 NHK에서 방영했던 스페셜 드라마를 영화로 재제작한 것이다. (박선영)",
+      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001329/30001329_320.jpg",
+      "plot": "“20년 간 기록된, 가장 사적이고 충격적인 가족의 초상 스물넷, 다정하고 촉망받던 누나에게 조현병 증상이 나타난다.부모님은 병원 대신 현관문에 자물쇠를 채우는 것을 택한다.그렇게 닫힌 문 안에서, 가족은 20여 년간 서로에게 침묵했다.더는 외면할 수 없었던 남동생은 카메라를 들고 그 침묵 속으로 들어간다.누나에게, 부모에게, 그리고 자기 자신에게 묻기 위해.그리고 끝내 우리에게 묻는다.“어떻게 해야 했을까?",
       "keywords": null,
-      "kmdbId": "F-52144",
+      "kmdbId": "B-12274",
       "boxOffice": null,
-      "bookingRate": 0.04,
+      "bookingRate": 0.03,
       "availableAt": [
         "cgv"
       ],
@@ -957,7 +1185,7 @@
       "keywords": null,
       "kmdbId": "B-12274",
       "boxOffice": null,
-      "bookingRate": 0.03,
+      "bookingRate": 0.02,
       "availableAt": [
         "lotte"
       ],
@@ -966,22 +1194,90 @@
       }
     },
     {
+      "movieCd": "20249080",
+      "title": "캐리어를 끄는 소녀",
+      "titleEn": "캐리어를 끄는 소녀",
+      "openDt": "2026-09-02",
+      "genre": "드라마",
+      "runtime": 106,
+      "grade": "12세이상관람가",
+      "nation": "한국",
+      "directors": [
+        "윤심경"
+      ],
+      "actors": [
+        "최명빈",
+        "문승아",
+        "김태훈",
+        "유다인",
+        "임승민",
+        "정지인"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202609/24748_103_1.jpg",
+      "plot": "양부모에게 버려져 갈 곳 없는 열다섯 살 소녀 영선은 테니스 훈련 파트너로 만난 수아의 집에서 잠시 지내게 된다. 수아 집에서 오래 오래 살고 싶은 영선은 가족이 되기 위해 노력하지만, 수아와 가족들은 그런 영선이 부담스럽다.",
+      "keywords": "가족,꿈,빈곤,가난,성장,청춘,스포츠,아동,여성,우정",
+      "kmdbId": "K-39070",
+      "boxOffice": null,
+      "bookingRate": 0.02,
+      "availableAt": [
+        "lotte",
+        "cgv"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24748"
+      }
+    },
+    {
+      "movieCd": "20250203",
+      "title": "트루먼의 사랑",
+      "titleEn": "트루먼의 사랑",
+      "openDt": "2026-08-26",
+      "genre": "SF, 멜로/로맨스",
+      "runtime": 146,
+      "grade": "12세이상관람가",
+      "nation": "한국",
+      "directors": [
+        "김덕중"
+      ],
+      "actors": [
+        "배유람",
+        "이주우",
+        "김신비",
+        "강진아",
+        "장근영",
+        "정수지"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202608/24698_103_1.jpg",
+      "plot": "당신도 트루먼인가요?속기사 지연은 어느 날부터 세상이 멈추는 이상 현상을 목격한다.‘에러’가 발생하면 모두가 하던 행동을 멈추고 굳어버리지만, 트루먼인 지연만은 그 세계에 종속되지 않고 자유롭게 움직일 수 있다.혼자가 아니라는 걸 확인하고 싶었던 지연은 또다른 트루먼을 찾아 헤매다 현식과 문성을 만난다.셋은 이 거짓 세계의 바깥을 향해 함께 떠나려 하지만, 지연을 사이에 두고 두 남자 사이에 균열이 생기기 시작하는데…",
+      "keywords": null,
+      "kmdbId": "K-40105",
+      "boxOffice": null,
+      "bookingRate": 0.02,
+      "availableAt": [
+        "lotte",
+        "cgv"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24698"
+      }
+    },
+    {
       "movieCd": null,
-      "title": "극장판 귀멸의 칼날-무한성편",
+      "title": "97 혜자, 표류기",
       "titleEn": "",
-      "openDt": "2025-08-22",
-      "genre": "애니메이션",
+      "openDt": "2026-09-09",
+      "genre": "드라마",
       "runtime": null,
       "grade": "15세이상관람가",
       "nation": null,
       "directors": [],
       "actors": [],
-      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/000089/89833/89833_320.jpg",
-      "plot": "다가오는 혈귀와의 결전을 대비해 대원들과 함께 ‘주(柱)’들의 합동 강화 훈련인 「주 훈련」에 임하던 중, 귀살대 본부인 우부야시키 저택에 귀살대의 숙적 키부츠지 무잔이 나타난다.우부야시키를 구하기 위해 달려온 주(柱)들과 탄지로였지만, 무잔의 손에 의해 정체불명의 공간으로 떨어지고 만다.탄지로 일행이 떨어진 곳은 바로 혈귀의 본거지 ≪무한성≫―‘귀살대’와 ‘혈귀’의 최종 결전의 막이 오른다!",
-      "keywords": "만화원작,사사로운영화리스트",
-      "kmdbId": "F-63242",
+      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001419/30001419_320.jpg",
+      "plot": "서울에 취직하여 고군분투 중인 혜자는 반지하에서 오피스텔로 올라가기를 꿈꾼다. 보험사 콜센터에서 일하는 혜자는 거친 사투리와 불같은 성격 때문에 회사에서 어려움이 많다. 며칠 뒤, 오피스텔로 가기로 결심한 혜자는 엄마에게 돈을 빌리기 위해 부산행 기차를 탄다. 부산에 도착한 혜자는 아무리 문을 두드려도 엄마가 나오지 않자, 엄마의 친구 희숙에게 전화를 건다.",
+      "keywords": null,
+      "kmdbId": "K-39060",
       "boxOffice": null,
-      "bookingRate": 0.03,
+      "bookingRate": 0.02,
       "availableAt": [
         "cgv"
       ],
@@ -989,65 +1285,65 @@
     },
     {
       "movieCd": null,
-      "title": "담요를 입은 사람",
+      "title": "드라큘라-러브 테일",
       "titleEn": "",
-      "openDt": "2024-11-07",
+      "openDt": "2026-08-26",
+      "genre": "판타지, 멜로/로맨스, 공포(호러)",
+      "runtime": null,
+      "grade": "15세이상관람가",
+      "nation": null,
+      "directors": [],
+      "actors": [],
+      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001311/30001311_320.jpg",
+      "plot": "그녀를 위해, 신을 버렸다15세기, 전쟁으로 연인을 잃은 남자.신을 버린 저주로 불멸의 드라큘라가 되고 그녀를 되찾기 위해 세상을 떠돈다.400년의 기다림.죽음도, 시간도, 신의 저주도 끝내 막지 못한 운명을 다시 만나는데…뤽 베송의 ‘다크 판타지 로맨스’가 온다",
+      "keywords": "소설원작",
+      "kmdbId": "F-67937",
+      "boxOffice": null,
+      "bookingRate": 0.02,
+      "availableAt": [
+        "cgv"
+      ],
+      "booking": {}
+    },
+    {
+      "movieCd": null,
+      "title": "스파이의 아내",
+      "titleEn": "",
+      "openDt": "2021-03-25",
+      "genre": "드라마",
+      "runtime": null,
+      "grade": "12세이상관람가",
+      "nation": null,
+      "directors": [],
+      "actors": [],
+      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/000084/84435/84435_320.jpg",
+      "plot": "태평양전쟁 직전인 1940년, 아내 사토코와 행복하게 살던 고베의 무역상 유사쿠는 사업 차 만주에 갔다가, 그곳에서 엄청난 만행의 현장을 목격 하고 이를 세상에 알리기로 결심한다. 사토코는 남편의 비밀이 그들의 완벽한 가정을 위협할 것이라 생각하여 결사적으로 유사쿠를 말리지만 결국 그의 대의에 동참하여 기꺼이 ‘스파이의 아내’가 되기로 한다. 우리 시대의 거장 구로사와 기요시 감독은 1940년 일본이라는 시공간의 불안과 불온의 공기를 배경이자 주제로 삼아, 세 남녀의 얽히고설킨 애정과 신념을 긴장감 넘치는 스릴러로 완성했다. 기요시 감독이 하마 구치 류스케, 노하라 타다시와 함께 각본을 썼고, 아오이 유우, 타카하시 잇세이, 히가시데 마사히로 등의 스타배우들이 출연했다. 이 영화는 올해 6월 NHK에서 방영했던 스페셜 드라마를 영화로 재제작한 것이다. (박선영)",
+      "keywords": null,
+      "kmdbId": "F-52144",
+      "boxOffice": null,
+      "bookingRate": 0.02,
+      "availableAt": [
+        "cgv"
+      ],
+      "booking": {}
+    },
+    {
+      "movieCd": null,
+      "title": "콘크리트 녹색섬",
+      "titleEn": "",
+      "openDt": "2026-08-19",
       "genre": "다큐멘터리",
       "runtime": null,
-      "grade": "12세이상관람가",
+      "grade": "전체관람가",
       "nation": null,
       "directors": [],
       "actors": [],
-      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/000089/89029/89029_320.jpg",
-      "plot": "",
+      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001362/30001362_320.jpg",
+      "plot": "도시의 나무들은 재건축이 될 때마다 계속 사라져야 할까? 기억과 기록으로 시작된 프로젝트는 점점 다양한 분야의 사람들을 만나 나무의 보존을 위한 실질적인 방법을 모색하는 데 이른다. 영화는 콘크리트 폐허 속 녹색섬에 살았던 나무들이 모두 어디로 사라지는지 마지막까지 그 행방을 쫓아간다.",
       "keywords": null,
-      "kmdbId": null,
+      "kmdbId": "A-12434",
       "boxOffice": null,
-      "bookingRate": 0.03,
-      "availableAt": [
-        "cgv"
-      ],
-      "booking": {}
-    },
-    {
-      "movieCd": null,
-      "title": "파라노만",
-      "titleEn": "",
-      "openDt": "2013-02-11",
-      "genre": "애니메이션",
-      "runtime": null,
-      "grade": "12세이상관람가",
-      "nation": null,
-      "directors": [],
-      "actors": [],
-      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/000076/76813/76813_320.jpg",
-      "plot": "화려한 비주얼과 세심한 작업으로 탄생한 3D 스톱모션 애니메이션! 노만과 친구들의 하룻밤 신나는 모험으로 놀러오세요! 어린시절부터 유령을 볼 수 있는 아이 노만은 어느 날 돌아가신 삼촌으로부터 오늘 밤 마을에 좀비들이 일어날 것이라는 예언을 듣는다. 이를 막기 위해서 노만은 왕따 친구들과 함께 좀비를 없앨 수 있는 주문서를 찾고, 모험을 시작한다. 밤이 되자 좀비들이 마을을 가득 채우고, 노만과 친구들은 주문서를 찾았지만, 도무지 저주를 없애는 주문이 무엇인지 알지 못한 채 허둥지둥 하고, 이 사이 좀비들은 마을을 아수라장으로 만드는데... 노만과 친구들은 마을에서 좀비들을 몰아낼 수 있을까? 비밀의 주문서는 어떻게 시용해야 하는 것일까?",
-      "keywords": "유령,좀비,예언,왕따",
-      "kmdbId": "F-30403",
-      "boxOffice": null,
-      "bookingRate": 0.03,
-      "availableAt": [
-        "cgv"
-      ],
-      "booking": {}
-    },
-    {
-      "movieCd": null,
-      "title": "파뿌리 24- 좀비 아일랜드",
-      "titleEn": "",
-      "openDt": "2026-08-22",
-      "genre": "스릴러",
-      "runtime": null,
-      "grade": "12세이상관람가",
-      "nation": null,
-      "directors": [],
-      "actors": [],
-      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001302/30001302_320.png",
-      "plot": "1,000만 조회수 달성 리벤지!!파뿌리 무인도 편이 스크린으로 돌아왔다!'무인도 리벤지 챌린지' 촬영을 위해 무인도에 입도한 파뿌리 완전체 (강호이, 진렬이, 노랭이, 신짜오, 짱배)! 근데 얘들아, 이 섬... 뭔가 이상한데?! 단순 예능 촬영으로 왔던 그 무인도는 과거 정체불명의 바이러스가 퍼져 수많은 사람들이 좀비로 변했던 섬이었다!대한민국 정부가 즉각 봉쇄하고 국가기밀로 숨겨온 광기 어린 과학자의 '좀비 아일랜드'!좀비로 가득한 고립된 섬에서 펼쳐지는 좀비 리얼 추리 서바이벌!과연 파뿌리 멤버들은 24시간 안에 숨겨진 음모를 파헤치고, 좀비의 위협을 뚫고 무사히 탈출할 수 있을 것인가!",
-      "keywords": null,
-      "kmdbId": "A-14227",
-      "boxOffice": null,
-      "bookingRate": 0.03,
+      "bookingRate": 0.02,
       "availableAt": [
         "cgv"
       ],
@@ -1077,209 +1373,13 @@
       "keywords": null,
       "kmdbId": null,
       "boxOffice": null,
-      "bookingRate": 0.02,
+      "bookingRate": 0.01,
       "availableAt": [
         "lotte",
         "cgv"
       ],
       "booking": {
         "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|13136"
-      }
-    },
-    {
-      "movieCd": "20233757",
-      "title": "콘크리트 녹색섬",
-      "titleEn": "콘크리트 녹색섬",
-      "openDt": "2026-08-19",
-      "genre": "다큐멘터리",
-      "runtime": 103,
-      "grade": "전체관람가",
-      "nation": "한국",
-      "directors": [
-        "이성민"
-      ],
-      "actors": [
-        "이성민",
-        "우종영"
-      ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202608/24696_103_1.jpg",
-      "plot": "도시의 나무들은 재건축이 될 때마다 계속 사라져야 할까? 기억과 기록으로 시작된 프로젝트는 점점 다양한 분야의 사람들을 만나 나무의 보존을 위한 실질적인 방법을 모색하는 데 이른다. 영화는 콘크리트 폐허 속 녹색섬에 살았던 나무들이 모두 어디로 사라지는지 마지막까지 그 행방을 쫓아간다.",
-      "keywords": null,
-      "kmdbId": "A-12434",
-      "boxOffice": null,
-      "bookingRate": 0.02,
-      "availableAt": [
-        "lotte",
-        "cgv"
-      ],
-      "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24696"
-      }
-    },
-    {
-      "movieCd": null,
-      "title": "산산조각",
-      "titleEn": "",
-      "openDt": "2026-08-26",
-      "genre": "공연",
-      "runtime": null,
-      "grade": "전체관람가",
-      "nation": null,
-      "directors": [],
-      "actors": [],
-      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001401/30001401_320.jpg",
-      "plot": "",
-      "keywords": null,
-      "kmdbId": null,
-      "boxOffice": null,
-      "bookingRate": 0.02,
-      "availableAt": [
-        "cgv"
-      ],
-      "booking": {}
-    },
-    {
-      "movieCd": null,
-      "title": "인시디어스-그들이 넘어왔다",
-      "titleEn": "",
-      "openDt": "2026-08-20",
-      "genre": "공포(호러), 스릴러",
-      "runtime": null,
-      "grade": "15세이상관람가",
-      "nation": null,
-      "directors": [],
-      "actors": [],
-      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001222/30001222_320.jpg",
-      "plot": "죽은 자들의 영역 ‘더 먼 곳’을 넘나들 수 있는 능력을 가진 ‘젬마’아무 것도 모른 채 평범한 일상을 살던 ‘젬마’와 딸 ‘마야’의 주변에 어느 날부터 섬뜩한 악령의 환영들이 들이닥친다.집과 일터를 가리지 않고 출몰하는 기괴한 악령들로 인해 위험에 처했던 ‘젬마’는 영매사 ‘엘리스’를 만나고 자신이 ‘더 먼 곳’의 악령들을 현실로 불러들이는 ‘운반자’라는 사실을 알게 된다.악령들은 ‘젬마’를 통로 삼아 진짜 목적을 드러내기 시작하고 ‘더 먼 곳’과 현실의 경계는 점점 무너지는데…끝내 현실로 넘어온 공포의 실체!악의 문이 열리고, 모든 것이 뒤집힌다!",
-      "keywords": null,
-      "kmdbId": "F-67237",
-      "boxOffice": null,
-      "bookingRate": 0.02,
-      "availableAt": [
-        "cgv"
-      ],
-      "booking": {}
-    },
-    {
-      "movieCd": "20264910",
-      "title": "귀향: 언니야 이제 집에가자",
-      "titleEn": "귀향: 언니야 이제 집에가자",
-      "openDt": "2026-08-26",
-      "genre": "드라마",
-      "runtime": 132,
-      "grade": "15세이상관람가",
-      "nation": "한국",
-      "directors": [
-        "조정래"
-      ],
-      "actors": [
-        "지윤재"
-      ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202608/24577_103_1.jpg",
-      "plot": "",
-      "keywords": null,
-      "kmdbId": null,
-      "boxOffice": null,
-      "bookingRate": 0.01,
-      "availableAt": [
-        "lotte"
-      ],
-      "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24577"
-      }
-    },
-    {
-      "movieCd": "20264027",
-      "title": "극장판 도라에몽: 신 진구의 해저비밀성",
-      "titleEn": "극장판 도라에몽: 신 진구의 해저비밀성",
-      "openDt": "2026-07-01",
-      "genre": "애니메이션",
-      "runtime": 101,
-      "grade": "전체관람가",
-      "nation": "일본",
-      "directors": [
-        "야지마 테츠오"
-      ],
-      "actors": [
-        "윤아영",
-        "김정아",
-        "조현정",
-        "이현주",
-        "최낙윤"
-      ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202607/24379_103_1.jpg",
-      "plot": "이번 여름방학은 바닷속 캠핑이다!숨이 멎을 듯한 놀라움이 가득한 두근두근 해저 대모험!여름방학 캠핑 장소를 두고 의견이 갈린 진구와 친구들은 도라에몽의 제안으로 바다 한가운데로 여행을 떠나기로 한다.도라에몽의 비밀도구 ‘수중 버기’와 ‘적응총’을 사용해 다양한 해양 생물도 만나고 바비큐도 하며 즐거운 시간을 보내던 중, 수상한 침몰선과 미스터리한 소년 ‘엘’과 만난다.신비로운 해저 도시 ‘무대륙’에서는 육지인들을 싫어해 쉽게 마음을 열지 않는데…그때, 수수께끼의 ‘귀암성’이 활동을 시작했다는 긴급한 소식이 전해지고 육지와 바다 모두가 위험에 처하고 만다!소중한 우정을 가슴에 품고, 지구의 운명을 건 환상적인 모험이 지금 시작된다!",
-      "keywords": null,
-      "kmdbId": "F-67608",
-      "boxOffice": null,
-      "bookingRate": 0.01,
-      "availableAt": [
-        "lotte"
-      ],
-      "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24379"
-      }
-    },
-    {
-      "movieCd": "20263307",
-      "title": "도그 스타: 마지막 희망",
-      "titleEn": "도그 스타: 마지막 희망",
-      "openDt": "2026-08-26",
-      "genre": "액션, SF",
-      "runtime": 118,
-      "grade": "15세이상관람가",
-      "nation": "미국",
-      "directors": [
-        "리들리 스콧"
-      ],
-      "actors": [
-        "제이콥 엘로디",
-        "조슈 브롤린",
-        "마가렛 퀄리",
-        "앨리슨 제니",
-        "가이 피어스"
-      ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202608/24680_103_1.jpg",
-      "plot": "인류를 휩쓴 대재앙으로 문명이 무너지고 폐허가 된 세상.임신한 아내를 잃은 파일럿 힉(제이콥 엘로디)은 반려견 재스퍼와 함께 살아남기 위해 매일 목숨을 건 사투를 벌이고, 생존을 위해서는 누군가를 죽여야만 하는 냉혹한 현실 속에서 점점 삶의 희망마저 잃어간다. 어느 날, 다른 구역에서 들려온 의문의 라디오 무전은 힉에게 새로운 땅과 삶에 대한 희망을 안겨준다.유일한 이웃인 뱅리(조슈 브롤린)의 염세적인 만류에도 불구하고 무전의 발신지를 찾아 길을 떠난 힉은 다른 구역의 생존자 시마(마가렛 퀄리)와 팝스(가이 피어스)를 만나 오랜만에 인간다운 온기와 희망을 되찾는다. 그러나 평화도 잠시, 야만적인 생존자들의 위협이 그들을 덮치고 힉과 동료들은 살아남기 위한 마지막 사투에 뛰어든다.",
-      "keywords": "소설원작",
-      "kmdbId": "F-67275",
-      "boxOffice": null,
-      "bookingRate": 0.01,
-      "availableAt": [
-        "lotte"
-      ],
-      "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24680"
-      }
-    },
-    {
-      "movieCd": "20264035",
-      "title": "인시디어스: 그들이 넘어왔다",
-      "titleEn": "인시디어스: 그들이 넘어왔다",
-      "openDt": "2026-08-20",
-      "genre": "공포(호러), 미스터리, 스릴러",
-      "runtime": 105,
-      "grade": "15세이상관람가",
-      "nation": "미국",
-      "directors": [
-        "제이콥 체이스"
-      ],
-      "actors": [
-        "브랜든 페레아",
-        "로라 고든",
-        "린 샤예"
-      ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202608/24384_103_1.jpg",
-      "plot": "죽은 자들의 영역 ‘더 먼 곳’을 넘나들 수 있는 능력을 가진 ‘젬마’아무 것도 모른 채 평범한 일상을 살던 ‘젬마’와 딸 ‘마야’의 주변에 어느 날부터 섬뜩한 악령의 환영들이 들이닥친다.집과 일터를 가리지 않고 출몰하는 기괴한 악령들로 인해 위험에 처했던 ‘젬마’는 영매사 ‘엘리스’를 만나고 자신이 ‘더 먼 곳’의 악령들을 현실로 불러들이는 ‘운반자’라는 사실을 알게 된다.악령들은 ‘젬마’를 통로 삼아 진짜 목적을 드러내기 시작하고 ‘더 먼 곳’과 현실의 경계는 점점 무너지는데…끝내 현실로 넘어온 공포의 실체!악의 문이 열리고, 모든 것이 뒤집힌다!",
-      "keywords": null,
-      "kmdbId": "F-67237",
-      "boxOffice": null,
-      "bookingRate": 0.01,
-      "availableAt": [
-        "lotte"
-      ],
-      "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24384"
       }
     },
     {
@@ -1314,29 +1414,22 @@
       }
     },
     {
-      "movieCd": "20250203",
-      "title": "트루먼의 사랑",
-      "titleEn": "트루먼의 사랑",
-      "openDt": "2026-08-26",
-      "genre": "SF, 멜로/로맨스",
-      "runtime": 146,
-      "grade": "12세이상관람가",
+      "movieCd": "20242232",
+      "title": "퍼펙트슛",
+      "titleEn": "퍼펙트슛",
+      "openDt": "2026-09-09",
+      "genre": "다큐멘터리",
+      "runtime": 88,
+      "grade": "전체관람가",
       "nation": "한국",
       "directors": [
-        "김덕중"
+        "오규익"
       ],
-      "actors": [
-        "배유람",
-        "이주우",
-        "김신비",
-        "강진아",
-        "장근영",
-        "정수지"
-      ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202608/24698_103_1.jpg",
-      "plot": "당신도 트루먼인가요?속기사 지연은 어느 날부터 세상이 멈추는 이상 현상을 목격한다.‘에러’가 발생하면 모두가 하던 행동을 멈추고 굳어버리지만, 트루먼인 지연만은 그 세계에 종속되지 않고 자유롭게 움직일 수 있다.혼자가 아니라는 걸 확인하고 싶었던 지연은 또다른 트루먼을 찾아 헤매다 현식과 문성을 만난다.셋은 이 거짓 세계의 바깥을 향해 함께 떠나려 하지만, 지연을 사이에 두고 두 남자 사이에 균열이 생기기 시작하는데…",
+      "actors": [],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202609/24937_103_1.jpg",
+      "plot": "발달장애인들이 난생처음 핸드볼 공을 잡는다. 국내 최초의 발달장애인 핸드볼 팀인 충북 청주 행복모아 챌린저스를 비롯해 전국 10개의 발달장애인 핸드볼 팀이 창단되고, 이들의 첫 리그 도전이 시작된다. 4남매 모두 장애를 가진 청주 팀 주장 생수, 자폐 장애를 가진 열일곱 살 안동 팀 수일, 운동에 진심인 안양 팀 범준 등 선수들은 저마다의 꿈을 품은 채 핸드볼 코트에 오른다. 하지만 리그가 다가올수록 장애라는 한계의 벽에 부딪히며, 꿈에 대한 내적 갈증은 더욱 커져만 가는데. 과연 핸드볼이라는 낯선 스포츠를 통해 자신만의 완벽한 슛을 던지고자 하는 이들의 기적과도 같은 리그는 순탄하게 치러질 수 있을까? 국가대표가 되어 태극마크를 가슴에 달겠다는 이들의 꿈은 과연 이루어질 수 있을까?",
       "keywords": null,
-      "kmdbId": "K-40105",
+      "kmdbId": "A-13062",
       "boxOffice": null,
       "bookingRate": 0.01,
       "availableAt": [
@@ -1344,43 +1437,21 @@
         "cgv"
       ],
       "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24698"
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24937"
       }
     },
     {
       "movieCd": null,
-      "title": "고양이를 놓아줘",
+      "title": "산산조각",
       "titleEn": "",
       "openDt": "2026-08-26",
-      "genre": "드라마",
+      "genre": "공연",
       "runtime": null,
-      "grade": "12세이상관람가",
+      "grade": "전체관람가",
       "nation": null,
       "directors": [],
       "actors": [],
-      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001393/30001393_320.jpg",
-      "plot": "음악을 하는 ‘모리’와 사진을 찍는 ‘마이코’.지친 마음을 달래기 위해 휴직 중이지만 제대로 된 음악 작업도 하지 못한 채 시간만 보내고 있는 ‘모리’와 다르게 ‘마이코’는 개인전까지 열며 성공한 사진작가에 한 발 더 다가선다.‘마이코’의 전시회 마지막 날, 우연히 과거에 만났던 ‘아사코’와 재회하고 과거의 기억을 떠올리는 ‘모리’.더 이상 존재하지 않는 과거와 현재 사이에서 ‘모리’는 미처 알아보지 못했던 사랑의 흔적과 마주하게 되는데…“다시 괜찮아질 수 있을까?”",
-      "keywords": null,
-      "kmdbId": "F-68292",
-      "boxOffice": null,
-      "bookingRate": 0.01,
-      "availableAt": [
-        "cgv"
-      ],
-      "booking": {}
-    },
-    {
-      "movieCd": null,
-      "title": "귀향-언니야 이제 집에 가자",
-      "titleEn": "",
-      "openDt": "2026-08-26",
-      "genre": "드라마",
-      "runtime": null,
-      "grade": "15세이상관람가",
-      "nation": null,
-      "directors": [],
-      "actors": [],
-      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001368/30001368_320.jpg",
+      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001401/30001401_320.jpg",
       "plot": "",
       "keywords": null,
       "kmdbId": null,
@@ -1393,19 +1464,63 @@
     },
     {
       "movieCd": null,
-      "title": "도그 스타-마지막 희망",
+      "title": "인시디어스-그들이 넘어왔다",
       "titleEn": "",
-      "openDt": "2026-08-26",
-      "genre": "액션, SF",
+      "openDt": "2026-08-20",
+      "genre": "공포(호러), 스릴러",
       "runtime": null,
       "grade": "15세이상관람가",
       "nation": null,
       "directors": [],
       "actors": [],
-      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001352/30001352_320.jpg",
-      "plot": "인류를 휩쓴 대재앙으로 문명이 무너지고 폐허가 된 세상.임신한 아내를 잃은 파일럿 힉(제이콥 엘로디)은 반려견 재스퍼와 함께 살아남기 위해 매일 목숨을 건 사투를 벌이고, 생존을 위해서는 누군가를 죽여야만 하는 냉혹한 현실 속에서 점점 삶의 희망마저 잃어간다. 어느 날, 다른 구역에서 들려온 의문의 라디오 무전은 힉에게 새로운 땅과 삶에 대한 희망을 안겨준다.유일한 이웃인 뱅리(조슈 브롤린)의 염세적인 만류에도 불구하고 무전의 발신지를 찾아 길을 떠난 힉은 다른 구역의 생존자 시마(마가렛 퀄리)와 팝스(가이 피어스)를 만나 오랜만에 인간다운 온기와 희망을 되찾는다. 그러나 평화도 잠시, 야만적인 생존자들의 위협이 그들을 덮치고 힉과 동료들은 살아남기 위한 마지막 사투에 뛰어든다.",
-      "keywords": "소설원작",
-      "kmdbId": "F-67275",
+      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001222/30001222_320.jpg",
+      "plot": "죽은 자들의 영역 ‘더 먼 곳’을 넘나들 수 있는 능력을 가진 ‘젬마’아무 것도 모른 채 평범한 일상을 살던 ‘젬마’와 딸 ‘마야’의 주변에 어느 날부터 섬뜩한 악령의 환영들이 들이닥친다.집과 일터를 가리지 않고 출몰하는 기괴한 악령들로 인해 위험에 처했던 ‘젬마’는 영매사 ‘엘리스’를 만나고 자신이 ‘더 먼 곳’의 악령들을 현실로 불러들이는 ‘운반자’라는 사실을 알게 된다.악령들은 ‘젬마’를 통로 삼아 진짜 목적을 드러내기 시작하고 ‘더 먼 곳’과 현실의 경계는 점점 무너지는데…끝내 현실로 넘어온 공포의 실체!악의 문이 열리고, 모든 것이 뒤집힌다!",
+      "keywords": null,
+      "kmdbId": "F-67237",
+      "boxOffice": null,
+      "bookingRate": 0.01,
+      "availableAt": [
+        "cgv"
+      ],
+      "booking": {}
+    },
+    {
+      "movieCd": null,
+      "title": "퇴마록",
+      "titleEn": "",
+      "openDt": "2025-02-21",
+      "genre": "애니메이션, 액션, 미스터리",
+      "runtime": null,
+      "grade": "12세이상관람가",
+      "nation": null,
+      "directors": [],
+      "actors": [],
+      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/000089/89386/89386_320.jpg",
+      "plot": "삼백이 반으로 나뉘고, 다섯이 모자랄 때 불씨가 하늘을 모두 태우리라 수백 년간 은거하던 해동밀교의 145대 교주가 생명을 제물로 바쳐 절대 악(惡)의 힘을 얻기 위한 의식을 시작한다.해동밀교의 다섯 호법들은 그를 막기 위해 힘을 보태줄 새로운 인물을 찾아나서고,파문 당한 신부 박윤규, 무공을 위해 밀교를 찾은 현암, 사건의 중심에 있는 예언의 아이 준후가 합세해 거대한 악에 맞서는데...하늘이 불타던 날,새로운 전설이 시작된다!",
+      "keywords": "오컬트,소설원작",
+      "kmdbId": "K-37869",
+      "boxOffice": null,
+      "bookingRate": 0.01,
+      "availableAt": [
+        "cgv"
+      ],
+      "booking": {}
+    },
+    {
+      "movieCd": null,
+      "title": "파뿌리 24- 좀비 아일랜드",
+      "titleEn": "",
+      "openDt": "2026-08-22",
+      "genre": "스릴러",
+      "runtime": null,
+      "grade": "12세이상관람가",
+      "nation": null,
+      "directors": [],
+      "actors": [],
+      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001302/30001302_320.png",
+      "plot": "1,000만 조회수 달성 리벤지!!파뿌리 무인도 편이 스크린으로 돌아왔다!'무인도 리벤지 챌린지' 촬영을 위해 무인도에 입도한 파뿌리 완전체 (강호이, 진렬이, 노랭이, 신짜오, 짱배)! 근데 얘들아, 이 섬... 뭔가 이상한데?! 단순 예능 촬영으로 왔던 그 무인도는 과거 정체불명의 바이러스가 퍼져 수많은 사람들이 좀비로 변했던 섬이었다!대한민국 정부가 즉각 봉쇄하고 국가기밀로 숨겨온 광기 어린 과학자의 '좀비 아일랜드'!좀비로 가득한 고립된 섬에서 펼쳐지는 좀비 리얼 추리 서바이벌!과연 파뿌리 멤버들은 24시간 안에 숨겨진 음모를 파헤치고, 좀비의 위협을 뚫고 무사히 탈출할 수 있을 것인가!",
+      "keywords": null,
+      "kmdbId": "A-14227",
       "boxOffice": null,
       "bookingRate": 0.01,
       "availableAt": [
@@ -1441,6 +1556,34 @@
       }
     },
     {
+      "movieCd": "20264910",
+      "title": "귀향: 언니야 이제 집에가자",
+      "titleEn": "귀향: 언니야 이제 집에가자",
+      "openDt": "2026-08-26",
+      "genre": "드라마",
+      "runtime": 132,
+      "grade": "15세이상관람가",
+      "nation": "한국",
+      "directors": [
+        "조정래"
+      ],
+      "actors": [
+        "지윤재"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202608/24577_103_1.jpg",
+      "plot": "",
+      "keywords": null,
+      "kmdbId": null,
+      "boxOffice": null,
+      "bookingRate": 0,
+      "availableAt": [
+        "lotte"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24577"
+      }
+    },
+    {
       "movieCd": "20245245",
       "title": "그림자 아이",
       "titleEn": "그림자 아이",
@@ -1469,6 +1612,103 @@
       ],
       "booking": {
         "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24439"
+      }
+    },
+    {
+      "movieCd": "20264027",
+      "title": "극장판 도라에몽: 신 진구의 해저비밀성",
+      "titleEn": "극장판 도라에몽: 신 진구의 해저비밀성",
+      "openDt": "2026-07-01",
+      "genre": "애니메이션",
+      "runtime": 101,
+      "grade": "전체관람가",
+      "nation": "일본",
+      "directors": [
+        "야지마 테츠오"
+      ],
+      "actors": [
+        "윤아영",
+        "김정아",
+        "조현정",
+        "이현주",
+        "최낙윤"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202607/24379_103_1.jpg",
+      "plot": "이번 여름방학은 바닷속 캠핑이다!숨이 멎을 듯한 놀라움이 가득한 두근두근 해저 대모험!여름방학 캠핑 장소를 두고 의견이 갈린 진구와 친구들은 도라에몽의 제안으로 바다 한가운데로 여행을 떠나기로 한다.도라에몽의 비밀도구 ‘수중 버기’와 ‘적응총’을 사용해 다양한 해양 생물도 만나고 바비큐도 하며 즐거운 시간을 보내던 중, 수상한 침몰선과 미스터리한 소년 ‘엘’과 만난다.신비로운 해저 도시 ‘무대륙’에서는 육지인들을 싫어해 쉽게 마음을 열지 않는데…그때, 수수께끼의 ‘귀암성’이 활동을 시작했다는 긴급한 소식이 전해지고 육지와 바다 모두가 위험에 처하고 만다!소중한 우정을 가슴에 품고, 지구의 운명을 건 환상적인 모험이 지금 시작된다!",
+      "keywords": null,
+      "kmdbId": "F-67608",
+      "boxOffice": null,
+      "bookingRate": 0,
+      "availableAt": [
+        "lotte"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24379"
+      }
+    },
+    {
+      "movieCd": "20255467",
+      "title": "길 위의 뭉치",
+      "titleEn": "길 위의 뭉치",
+      "openDt": "2026-08-19",
+      "genre": "애니메이션",
+      "runtime": 93,
+      "grade": "전체관람가",
+      "nation": "한국",
+      "directors": [
+        "오성윤",
+        "이춘백"
+      ],
+      "actors": [
+        "도경수",
+        "박소담",
+        "박철민",
+        "강석",
+        "이준혁"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202510/23071_103_1.jpg",
+      "plot": "“버려진 ‘개’ 아냐! 내 진짜 주인은 바로 나”하루아침에 주인에게 버려져 길 위에 놓인 신세가 된 '뭉치'. 거리 생활의 고참 '짱아'가 나타나, “기다리라”는 주인의 말을 철썩 같이 믿고 있던 뭉치의 믿음을 와르르 무너뜨린다. 냉혹한 현실을 받아들이고, 짱아 무리와 함께 거리 생활에 적응해가던 뭉치는 숲 속에서 야생성을 잃지 않고 살아가는 들개 '밤이' 무리를 만나, 처음으로 진짜 자유를 꿈꾸게 된다. 어느 날, 뭉치와 짱아 무리가 살던 아지트가 인간들에 의해 파괴된다. 밤이 무리 또한 잔혹한 개 사냥꾼에게 쫓기게 되면서, 위험천만한 도로와 날카로운 철조망을 넘어 조금씩 조금씩 북쪽 방향으로 모험을 떠나게 되는데... 뭉치와 친구들은 인간들이 살지 않고, 아름다운 풀밭과 반딧불만 가득하다는 '그곳’에 무사히 도착할 수 있을까?",
+      "keywords": "유기견",
+      "kmdbId": "K-39541",
+      "boxOffice": null,
+      "bookingRate": 0,
+      "availableAt": [
+        "lotte"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|23071"
+      }
+    },
+    {
+      "movieCd": "20263307",
+      "title": "도그 스타: 마지막 희망",
+      "titleEn": "도그 스타: 마지막 희망",
+      "openDt": "2026-08-26",
+      "genre": "액션, SF",
+      "runtime": 118,
+      "grade": "15세이상관람가",
+      "nation": "미국",
+      "directors": [
+        "리들리 스콧"
+      ],
+      "actors": [
+        "제이콥 엘로디",
+        "조슈 브롤린",
+        "마가렛 퀄리",
+        "앨리슨 제니",
+        "가이 피어스"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202608/24680_103_1.jpg",
+      "plot": "인류를 휩쓴 대재앙으로 문명이 무너지고 폐허가 된 세상.임신한 아내를 잃은 파일럿 힉(제이콥 엘로디)은 반려견 재스퍼와 함께 살아남기 위해 매일 목숨을 건 사투를 벌이고, 생존을 위해서는 누군가를 죽여야만 하는 냉혹한 현실 속에서 점점 삶의 희망마저 잃어간다. 어느 날, 다른 구역에서 들려온 의문의 라디오 무전은 힉에게 새로운 땅과 삶에 대한 희망을 안겨준다.유일한 이웃인 뱅리(조슈 브롤린)의 염세적인 만류에도 불구하고 무전의 발신지를 찾아 길을 떠난 힉은 다른 구역의 생존자 시마(마가렛 퀄리)와 팝스(가이 피어스)를 만나 오랜만에 인간다운 온기와 희망을 되찾는다. 그러나 평화도 잠시, 야만적인 생존자들의 위협이 그들을 덮치고 힉과 동료들은 살아남기 위한 마지막 사투에 뛰어든다.",
+      "keywords": "소설원작",
+      "kmdbId": "F-67275",
+      "boxOffice": null,
+      "bookingRate": 0,
+      "availableAt": [
+        "lotte"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24680"
       }
     },
     {
@@ -1547,8 +1787,7 @@
       "boxOffice": null,
       "bookingRate": 0,
       "availableAt": [
-        "lotte",
-        "cgv"
+        "lotte"
       ],
       "booking": {
         "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24675"
@@ -1588,6 +1827,36 @@
       }
     },
     {
+      "movieCd": "20264035",
+      "title": "인시디어스: 그들이 넘어왔다",
+      "titleEn": "인시디어스: 그들이 넘어왔다",
+      "openDt": "2026-08-20",
+      "genre": "공포(호러), 미스터리, 스릴러",
+      "runtime": 105,
+      "grade": "15세이상관람가",
+      "nation": "미국",
+      "directors": [
+        "제이콥 체이스"
+      ],
+      "actors": [
+        "브랜든 페레아",
+        "로라 고든",
+        "린 샤예"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202608/24384_103_1.jpg",
+      "plot": "죽은 자들의 영역 ‘더 먼 곳’을 넘나들 수 있는 능력을 가진 ‘젬마’아무 것도 모른 채 평범한 일상을 살던 ‘젬마’와 딸 ‘마야’의 주변에 어느 날부터 섬뜩한 악령의 환영들이 들이닥친다.집과 일터를 가리지 않고 출몰하는 기괴한 악령들로 인해 위험에 처했던 ‘젬마’는 영매사 ‘엘리스’를 만나고 자신이 ‘더 먼 곳’의 악령들을 현실로 불러들이는 ‘운반자’라는 사실을 알게 된다.악령들은 ‘젬마’를 통로 삼아 진짜 목적을 드러내기 시작하고 ‘더 먼 곳’과 현실의 경계는 점점 무너지는데…끝내 현실로 넘어온 공포의 실체!악의 문이 열리고, 모든 것이 뒤집힌다!",
+      "keywords": null,
+      "kmdbId": "F-67237",
+      "boxOffice": null,
+      "bookingRate": 0,
+      "availableAt": [
+        "lotte"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24384"
+      }
+    },
+    {
       "movieCd": "20234716",
       "title": "지난 여름",
       "titleEn": "지난 여름",
@@ -1614,38 +1883,6 @@
       ],
       "booking": {
         "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24914"
-      }
-    },
-    {
-      "movieCd": "20259551",
-      "title": "파리의 사생활",
-      "titleEn": "파리의 사생활",
-      "openDt": "2026-07-15",
-      "genre": "드라마",
-      "runtime": 102,
-      "grade": "15세이상관람가",
-      "nation": "영국",
-      "directors": [
-        "레베카 즐로토브스키"
-      ],
-      "actors": [
-        "조디 포스터",
-        "비르지니 에피라",
-        "마티유 아말릭",
-        "다니엘 오떼유"
-      ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202607/24465_103_1.jpg",
-      "plot": "파리에 사는 정신과 의사 릴리안(조디 포스터)은 9년 간 담당한 환자 폴라(비르지니 에피라)가 죽었다는 소식을 듣고 충격에 빠진다.그날 이후, 알 수 없는 이유로 계속해서 눈물이 흐르고 안과 의사인 전남편에 이어 궁여지책으로 최면술사를 찾는다.최면술사는 릴리안에게 예상치 못한 이야기를 들려주고, 그녀는 폴라의 죽음을 직접 파헤쳐 보겠다고 결심하는데...의심과 죄책감 사이,릴리안의 세계가 뒤집힌다!",
-      "keywords": null,
-      "kmdbId": "F-66392",
-      "boxOffice": null,
-      "bookingRate": 0,
-      "availableAt": [
-        "lotte",
-        "cgv"
-      ],
-      "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24465"
       }
     },
     {
@@ -1715,6 +1952,28 @@
     },
     {
       "movieCd": null,
+      "title": "고양이를 놓아줘",
+      "titleEn": "",
+      "openDt": "2026-08-26",
+      "genre": "드라마",
+      "runtime": null,
+      "grade": "12세이상관람가",
+      "nation": null,
+      "directors": [],
+      "actors": [],
+      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001393/30001393_320.jpg",
+      "plot": "음악을 하는 ‘모리’와 사진을 찍는 ‘마이코’.지친 마음을 달래기 위해 휴직 중이지만 제대로 된 음악 작업도 하지 못한 채 시간만 보내고 있는 ‘모리’와 다르게 ‘마이코’는 개인전까지 열며 성공한 사진작가에 한 발 더 다가선다.‘마이코’의 전시회 마지막 날, 우연히 과거에 만났던 ‘아사코’와 재회하고 과거의 기억을 떠올리는 ‘모리’.더 이상 존재하지 않는 과거와 현재 사이에서 ‘모리’는 미처 알아보지 못했던 사랑의 흔적과 마주하게 되는데…“다시 괜찮아질 수 있을까?”",
+      "keywords": null,
+      "kmdbId": "F-68292",
+      "boxOffice": null,
+      "bookingRate": 0,
+      "availableAt": [
+        "cgv"
+      ],
+      "booking": {}
+    },
+    {
+      "movieCd": null,
       "title": "다윗",
       "titleEn": "",
       "openDt": "2026-07-10",
@@ -1759,63 +2018,41 @@
     },
     {
       "movieCd": null,
-      "title": "스파이에어 저스트 라이크 디스 2025",
+      "title": "파라노만",
       "titleEn": "",
-      "openDt": "2026-08-26",
-      "genre": "공연",
-      "runtime": null,
-      "grade": "전체관람가",
-      "nation": null,
-      "directors": [],
-      "actors": [],
-      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001421/30001421_320.jpg",
-      "plot": "2015년, 후지큐 하이랜드에서 처음 시작된 스파이에어의 시그니처 야외 단독 라이브 ‘JUST LIKE THIS’.그로부터 10년 뒤 2025년, 후지산 아래에서 다시 모였다!데뷔 15주년을 맞아 펼쳐진 이틀 간의 ‘JUST LIKE THIS 2025’ 공연 중 인기 애니메이션 OST를 총망라한 두번째 날의 무대 ‘History of ANIME’가 스크린에서 생생하게 펼쳐진다!무대 위 멤버들의 폭발적인 에너지와 관객들이 함께 만든 현장의 열기까지!2026년 돌아온 우리의 여름, 다시 SPYAIR를 만날 시간!",
-      "keywords": null,
-      "kmdbId": "B-12312",
-      "boxOffice": null,
-      "bookingRate": 0,
-      "availableAt": [
-        "cgv"
-      ],
-      "booking": {}
-    },
-    {
-      "movieCd": null,
-      "title": "시간을 달리는 소녀",
-      "titleEn": "",
-      "openDt": "2016-01-14",
+      "openDt": "2013-02-11",
       "genre": "애니메이션",
-      "runtime": null,
-      "grade": "전체관람가",
-      "nation": null,
-      "directors": [],
-      "actors": [],
-      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/000078/78718/78718_320.jpg",
-      "plot": "",
-      "keywords": null,
-      "kmdbId": null,
-      "boxOffice": null,
-      "bookingRate": 0,
-      "availableAt": [
-        "cgv"
-      ],
-      "booking": {}
-    },
-    {
-      "movieCd": null,
-      "title": "퇴마록",
-      "titleEn": "",
-      "openDt": "2025-02-21",
-      "genre": "애니메이션, 액션, 미스터리",
       "runtime": null,
       "grade": "12세이상관람가",
       "nation": null,
       "directors": [],
       "actors": [],
-      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/000089/89386/89386_320.jpg",
-      "plot": "삼백이 반으로 나뉘고, 다섯이 모자랄 때 불씨가 하늘을 모두 태우리라 수백 년간 은거하던 해동밀교의 145대 교주가 생명을 제물로 바쳐 절대 악(惡)의 힘을 얻기 위한 의식을 시작한다.해동밀교의 다섯 호법들은 그를 막기 위해 힘을 보태줄 새로운 인물을 찾아나서고,파문 당한 신부 박윤규, 무공을 위해 밀교를 찾은 현암, 사건의 중심에 있는 예언의 아이 준후가 합세해 거대한 악에 맞서는데...하늘이 불타던 날,새로운 전설이 시작된다!",
-      "keywords": "오컬트,소설원작",
-      "kmdbId": "K-37869",
+      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/000076/76813/76813_320.jpg",
+      "plot": "화려한 비주얼과 세심한 작업으로 탄생한 3D 스톱모션 애니메이션! 노만과 친구들의 하룻밤 신나는 모험으로 놀러오세요! 어린시절부터 유령을 볼 수 있는 아이 노만은 어느 날 돌아가신 삼촌으로부터 오늘 밤 마을에 좀비들이 일어날 것이라는 예언을 듣는다. 이를 막기 위해서 노만은 왕따 친구들과 함께 좀비를 없앨 수 있는 주문서를 찾고, 모험을 시작한다. 밤이 되자 좀비들이 마을을 가득 채우고, 노만과 친구들은 주문서를 찾았지만, 도무지 저주를 없애는 주문이 무엇인지 알지 못한 채 허둥지둥 하고, 이 사이 좀비들은 마을을 아수라장으로 만드는데... 노만과 친구들은 마을에서 좀비들을 몰아낼 수 있을까? 비밀의 주문서는 어떻게 시용해야 하는 것일까?",
+      "keywords": "유령,좀비,예언,왕따",
+      "kmdbId": "F-30403",
+      "boxOffice": null,
+      "bookingRate": 0,
+      "availableAt": [
+        "cgv"
+      ],
+      "booking": {}
+    },
+    {
+      "movieCd": null,
+      "title": "파리의 사생활",
+      "titleEn": "",
+      "openDt": "2026-07-15",
+      "genre": "드라마",
+      "runtime": null,
+      "grade": "15세이상관람가",
+      "nation": null,
+      "directors": [],
+      "actors": [],
+      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001275/30001275_320.jpg",
+      "plot": "파리에 사는 정신과 의사 릴리안(조디 포스터)은 9년 간 담당한 환자 폴라(비르지니 에피라)가 죽었다는 소식을 듣고 충격에 빠진다.그날 이후, 알 수 없는 이유로 계속해서 눈물이 흐르고 안과 의사인 전남편에 이어 궁여지책으로 최면술사를 찾는다.최면술사는 릴리안에게 예상치 못한 이야기를 들려주고, 그녀는 폴라의 죽음을 직접 파헤쳐 보겠다고 결심하는데...의심과 죄책감 사이,릴리안의 세계가 뒤집힌다!",
+      "keywords": null,
+      "kmdbId": "F-66392",
       "boxOffice": null,
       "bookingRate": 0,
       "availableAt": [
@@ -1844,397 +2081,9 @@
         "cgv"
       ],
       "booking": {}
-    },
-    {
-      "movieCd": null,
-      "title": "현재를 위하여",
-      "titleEn": "",
-      "openDt": "2026-06-17",
-      "genre": "드라마",
-      "runtime": null,
-      "grade": "15세이상관람가",
-      "nation": null,
-      "directors": [],
-      "actors": [],
-      "poster": "https://cdn.cgv.co.kr/cgvpomsfilm/Movie/Thumbnail/Poster/030001/30001267/30001267_320.jpg",
-      "plot": "아름다운 목소리를 가진 현재는 아버지 일순의 가정 폭력에서 벗어나기 위해, 10년 전 실종된 딸을 찾고 있는 해인을 자신의 계획 속에 끌어들인다. 자신을 아버지의 폭력으로부터 구해준 해인을 보며 해인이 자신의 엄마이길 바라는 현재. 결국 현재는 자신의 가족을 버리기로 결심한다.",
-      "keywords": "가족,꿈,미래,성장,청춘,심리,우정,치유",
-      "kmdbId": "K-41190",
-      "boxOffice": null,
-      "bookingRate": 0,
-      "availableAt": [
-        "cgv"
-      ],
-      "booking": {}
     }
   ],
   "upcoming": [
-    {
-      "movieCd": "20265344",
-      "title": "오아시스: 돈 룩 백 인 앵거",
-      "titleEn": "OASIS: DON’T LOOK BACK IN ANGER",
-      "openDt": "2026-09-09",
-      "genre": "다큐멘터리",
-      "runtime": 122,
-      "grade": "15세이상관람가",
-      "nation": "미국",
-      "directors": [
-        "딜리안 서던",
-        "윌 로벨라스"
-      ],
-      "actors": [
-        "노엘 갤러거",
-        "리암 갤러거"
-      ],
-      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/56/tn_DPB001992.jpg",
-      "plot": "Don’t Look Back in Anger전 세계가 다시 오아시스를 외치기 시작했다! 2009년 해체 이후 각자의 길을 걸어온 노엘과 리암 갤러거는 전 세계가 기다려온 ‘Oasis Live ’25 Tour’를 통해 다시 한 무대에 선다. 수많은 팬들의 함성으로 가득 찬 월드 투어와 서울 공연 현장, 그리고 어디에서도 볼 수 없었던 리허설과 백스테이지, 20여 년 만에 함께한 두 형제의 공동 인터뷰까지. 세대를 넘어 전 세계를 하나로 만든 오아시스의 가장 뜨거운 순간이 펼쳐진다!",
-      "keywords": null,
-      "kmdbId": "B-12304",
-      "boxOffice": null,
-      "bookingRate": null,
-      "availableAt": []
-    },
-    {
-      "movieCd": "20255100",
-      "title": "97 혜자, 표류기",
-      "titleEn": "Drifting",
-      "openDt": "2026-09-09",
-      "genre": "드라마",
-      "runtime": 122,
-      "grade": "15세이상관람가",
-      "nation": "한국",
-      "directors": [
-        "정기혁"
-      ],
-      "actors": [
-        "정은지",
-        "이혜",
-        "우주영"
-      ],
-      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/55/tn_DPK026357.jpg",
-      "plot": "서울에 취직하여 고군분투 중인 혜자는 반지하에서 오피스텔로 올라가기를 꿈꾼다. 보험사 콜센터에서 일하는 혜자는 거친 사투리와 불같은 성격 때문에 회사에서 어려움이 많다. 며칠 뒤, 오피스텔로 가기로 결심한 혜자는 엄마에게 돈을 빌리기 위해 부산행 기차를 탄다. 부산에 도착한 혜자는 아무리 문을 두드려도 엄마가 나오지 않자, 엄마의 친구 희숙에게 전화를 건다.",
-      "keywords": null,
-      "kmdbId": "K-39060",
-      "boxOffice": null,
-      "bookingRate": null,
-      "availableAt": []
-    },
-    {
-      "movieCd": "20264915",
-      "title": "딥 워터",
-      "titleEn": "Deep water",
-      "openDt": "2026-09-09",
-      "genre": "스릴러, 공포(호러)",
-      "runtime": 106,
-      "grade": "15세이상관람가",
-      "nation": "미국",
-      "directors": [
-        "레니 할린"
-      ],
-      "actors": [
-        "아론 에크하트",
-        "벤 킹슬리"
-      ],
-      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/54/tn_DPF033817.jpg",
-      "plot": "로스앤젤레스발 상하이행 여객기가 화재로 폭발하며 태평양 한복판에 추락한다.기적적으로 살아남은 승객들그러나 침몰하는 기체, 굶주린 식인 상어 떼 속에서 이제부터는 진짜 기적을 바라야 하는데...가라앉기 전에, 잡아 먹히기 전에 탈출하라!",
-      "keywords": null,
-      "kmdbId": "F-68113",
-      "boxOffice": null,
-      "bookingRate": null,
-      "availableAt": []
-    },
-    {
-      "movieCd": "20224597",
-      "title": "아가미",
-      "titleEn": "Gill",
-      "openDt": "2026-09-09",
-      "genre": "애니메이션",
-      "runtime": 105,
-      "grade": "15세이상관람가",
-      "nation": "한국",
-      "directors": [
-        "안재훈"
-      ],
-      "actors": [
-        "정해인",
-        "강하늘",
-        "이청아",
-        "유재명",
-        "김선영",
-        "원옥화"
-      ],
-      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/54/tn_DPK026322.jpg",
-      "plot": "병든 어머니로 인해 삶의 한 발짝도 자기 의지대로 살지 못하는 ‘해류’는 어느 날 실수로 다리 위에서 물속으로 떨어지게 된다.죽음을 떠올릴 만큼 위태로운 상황에서 ‘해류’는 물고기 떼와 함께 나타난 신비로운 남자, ‘곤’에 의해 구조되고 그 순간, 남자의 귀 밑에 달린 ‘아가미’를 보게 된다.이후 자신의 목숨을 구한 남자를 찾기 시작한 해류는 우연히 강하를 만나게 되며 그에게서 곤의 과거 이야기를 듣게 된다.",
-      "keywords": "베스트셀러원작",
-      "kmdbId": "K-28757",
-      "boxOffice": null,
-      "bookingRate": null,
-      "availableAt": []
-    },
-    {
-      "movieCd": "20264917",
-      "title": "리틀 드래곤: 몬스터 섬의 비밀",
-      "titleEn": "RUFUS_ THE SEAMONSTER WHO COULDN'T SWIM",
-      "openDt": "2026-09-09",
-      "genre": "애니메이션",
-      "runtime": 74,
-      "grade": "전체관람가",
-      "nation": "독일",
-      "directors": [],
-      "actors": [],
-      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/48/tn_DPF033564.jpg",
-      "plot": "수영을 못 하는 바다 드래곤 루피는 할머니와 단둘이 살아가고 있다.어느 날, 연기를 내뿜어 인간으로부터 바다 괴물 섬을 지키는 세르팡의 마법목도리가 망가지고, 루드비그는 감기에 걸려 연기를 내뿜지 못한다.루피는 오래전 섬을 떠난 자신의 이모할머니가 루드비그에게 목도리를 선물했다는 사실을 알게 되고, 할머니와 바다 몬스터 섬을 지키기 위해 이모할머니를 찾아 떠난다.고래택시를 타고 육지에 도착하고 육지에서 사자,꼬끼리,거북이 등을 만나 그들과 함께 동물원을 탈출하여 다시 몬스터섬으로 돌아와 위기를 극복한다.",
-      "keywords": null,
-      "kmdbId": "F-68005",
-      "boxOffice": null,
-      "bookingRate": null,
-      "availableAt": []
-    },
-    {
-      "movieCd": "20265921",
-      "title": "웃으면 복이 와요: 내 이름은 수한무",
-      "titleEn": "",
-      "openDt": "2026-09-09",
-      "genre": "코미디",
-      "runtime": 72,
-      "grade": "전체관람가",
-      "nation": "한국",
-      "directors": [],
-      "actors": [
-        "구봉서",
-        "노원재",
-        "최소연",
-        "김돈호",
-        "서성금",
-        "안일권"
-      ],
-      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/55/tn_DPK026374.jpg",
-      "plot": "조선 시대, 한 양반가의 5대 독자 아들.그의 이름을 잘못 부르면… 큰일 난다?!서 선비는 아들의 장수와 무병장수를 위해 최고의 사주 작명가 구봉서를 찾아가지만,돌아온 건 숨이 막히도록 긴, 상상을 초월한 이름.“서수한무 거북이와 두루미… 삼천갑자 동방삭… 구름이 허리케인에 담벼락…서생원에 고양이엔 바둑이 바둑이는 돌돌이!”이름 하나 외우는 것만으로도 숨이 차오른다.부모와 하인이 함께 리듬을 타며 춤추듯 이름을 부르고, 실수하면 재채기까지!아슬아슬한 긴장 속, 결국 아들이 우물에 빠지고, 모두가 달려간다.과장된 리듬과 몸짓, 웃음과 긴장이 폭발하는 조선 시대 초특급 코미디가 펼쳐진다!",
-      "keywords": "생성형 AI 기술,AI",
-      "kmdbId": "K-42298",
-      "boxOffice": null,
-      "bookingRate": null,
-      "availableAt": []
-    },
-    {
-      "movieCd": "20244567",
-      "title": "환희의 얼굴",
-      "titleEn": "The face of Hwanhee",
-      "openDt": "2026-09-09",
-      "genre": "드라마",
-      "runtime": 125,
-      "grade": "12세이상관람가",
-      "nation": "한국",
-      "directors": [
-        "이제한"
-      ],
-      "actors": [
-        "정이주",
-        "김시은",
-        "황미영"
-      ],
-      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/55/tn_DPK026355.jpg",
-      "plot": "안녕, 모순의 동반자들여기 네 개의 이야기가 있고, 이야기 안에는 환희가 있다.환희는 그 이야기 안에서 동정과 관심을 갈구하기도 하고, 자신이 머물 새로운 장소를 염원하기도 하며, 자신도 믿을 수 없는 배신을 저지르기도 한다.그녀는 때론 냉정하고, 어떨 땐 희생적이며, 누군가에겐 사랑도 베푼다.오해와 이해로 만들어진 매일의 표정들 환희의 얼굴 2026.9.9",
-      "keywords": null,
-      "kmdbId": "K-37522",
-      "boxOffice": null,
-      "bookingRate": null,
-      "availableAt": []
-    },
-    {
-      "movieCd": "20266148",
-      "title": "아버지의 집밥",
-      "titleEn": "My Father’s Table ",
-      "openDt": "2026-09-09",
-      "genre": "드라마",
-      "runtime": 146,
-      "grade": "12세이상관람가",
-      "nation": "한국",
-      "directors": [
-        "이준익"
-      ],
-      "actors": [
-        "정진영",
-        "이정은",
-        "변요한",
-        "박지연",
-        "강형석",
-        "박세준"
-      ],
-      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/53/tn_DPK026302.jpg",
-      "plot": "평생 밥상머리에서 군림하던 아버지 하응은, 사고 후 요리만 기억하지 못하게 된 아내 순애를 위해 난생 처음 주방에 선다.된장찌개부터 도시락까지 매번 실패하는 서툰 요리 속에서, 그는 아내가 40년간 홀로 감당해온 삶의 무게를 뒤늦게 깨닫는다. 하지만 순애는 그의 요리에 벌점을 매기며 10점이면 이혼이라고 선언한다. 그러던 중 순애가 갑자기 실종되고, 결국 알츠하이머 초기 진단이 내려지면서 가족은 충격에 빠진다. 하응은 잃어가는 아내의 기억을 붙잡기 위해 매일 집밥을 차리며, 상처받은 가족을 다시 한 식탁으로 모으는 늦은 화해의 여정을 시작한다.",
-      "keywords": "웹툰원작",
-      "kmdbId": "K-41636",
-      "boxOffice": null,
-      "bookingRate": null,
-      "availableAt": []
-    },
-    {
-      "movieCd": "20265963",
-      "title": "프랙티컬 매직: 새로운 챕터",
-      "titleEn": "Practical Magic 2",
-      "openDt": "2026-09-09",
-      "genre": "판타지, 멜로/로맨스",
-      "runtime": 129,
-      "grade": "12세이상관람가",
-      "nation": "미국",
-      "directors": [
-        "수잔 비에르"
-      ],
-      "actors": [
-        "산드라 블록",
-        "니콜 키드먼",
-        "스톡카드 채닝"
-      ],
-      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/53/tn_DPF033780.jpg",
-      "plot": "운명도, 저주도, 마녀들을 막을 수 없다!사랑하면 파멸한다는 가문의 저주에 맞서는 오웬스 자매들의 이야기마법의 능력과 저주를 타고난 오웬스 가문의 자매 샐리(산드라 블록)와 질리언(니콜 키드먼)은 다사다난했던 지난 과거를 묻고 살아가고 있다.한편, 자신의 혈통과 저주를 모른 채 평범한 삶을 살던 샐리의 딸 카일리(조이 킹)는 갑작스러운 사고를 당한 남자친구 때문에 혼란스러운 마음을 자매인 안토니아(메이지 윌리엄스)에게 털어놓는다.결국 가문의 비밀은 새로운 세대에게까지 전해지게 되고, 사랑을 쟁취하기 위해 다시 한번 운명에 맞서게 된 오웬스 자매들.과연 이번엔 저주를 완벽히 끝낼 수 있을까?",
-      "keywords": "소설원작",
-      "kmdbId": "F-68550",
-      "boxOffice": null,
-      "bookingRate": null,
-      "availableAt": []
-    },
-    {
-      "movieCd": "20265423",
-      "title": "더 드라마",
-      "titleEn": "The Drama",
-      "openDt": "2026-09-09",
-      "genre": "드라마, 멜로/로맨스",
-      "runtime": 106,
-      "grade": "15세이상관람가",
-      "nation": "미국",
-      "directors": [
-        "크리스토퍼 보글리"
-      ],
-      "actors": [
-        "젠데이아 콜먼",
-        "로버트 패틴슨"
-      ],
-      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/55/tn_DPF033838.jpg",
-      "plot": "“왜 나쁜 짓 한 번 안 한 사람처럼 그래?”결혼식을 일주일 앞둔 행복한 커플 엠마(젠데이아)와 찰리(로버트 패틴슨).우연히 알게 된 상대방의 비밀로 인해 단단했던 믿음이 흔들린다.첫만남부터 서로를 완벽히 안다고 생각했던 두 사람, 작은 균열은 걷잡을 수 없이 커진 채 모두의 모습을 비추고…2026년 가을을 뒤흔들 로맨스릴러.당신을 정중히 초대합니다.",
-      "keywords": null,
-      "kmdbId": "F-68198",
-      "boxOffice": null,
-      "bookingRate": null,
-      "availableAt": []
-    },
-    {
-      "movieCd": "20265275",
-      "title": "네 얼굴로는 울 수 없어",
-      "titleEn": "Can't Cry with Your Face",
-      "openDt": "2026-09-09",
-      "genre": "드라마, 판타지",
-      "runtime": 123,
-      "grade": "12세이상관람가",
-      "nation": "일본",
-      "directors": [
-        "사카시타 유이치로"
-      ],
-      "actors": [
-        "요시네 쿄코",
-        "타카하시 카이토"
-      ],
-      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/55/tn_DPF033837.jpg",
-      "plot": "열다섯 살 여름, ‘리쿠’와 ‘마나미’는 우연한 사고로 몸이 뒤바뀐다.하루면 끝날 줄 알았던 시간은 어느새 15년이 되고,첫사랑과 꿈, 취업과 연애까지가장 소중한 순간들을 서로의 삶으로 살아가게 된다.내 얼굴로 웃을 수도, 네 얼굴로 울 수도 없었던 시간.그리고 15년 후, 다시 찾아온 여름은 두 사람의 운명을 다시 흔들기 시작하는데….세상에 오직 둘만이 공유하는 비밀서로였기에 다행이었던 두 사람의 애틋한 청춘 스토리!",
-      "keywords": "소설원작",
-      "kmdbId": "F-68201",
-      "boxOffice": null,
-      "bookingRate": null,
-      "availableAt": []
-    },
-    {
-      "movieCd": "20242232",
-      "title": "퍼펙트슛",
-      "titleEn": "Perfect Shoot",
-      "openDt": "2026-09-09",
-      "genre": "다큐멘터리",
-      "runtime": 88,
-      "grade": "전체관람가",
-      "nation": "한국",
-      "directors": [
-        "오규익"
-      ],
-      "actors": [],
-      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/54/tn_DPA002543.jpg",
-      "plot": "발달장애인들이 난생처음 핸드볼 공을 잡는다. 국내 최초의 발달장애인 핸드볼 팀인 충북 청주 행복모아 챌린저스를 비롯해 전국 10개의 발달장애인 핸드볼 팀이 창단되고, 이들의 첫 리그 도전이 시작된다. 4남매 모두 장애를 가진 청주 팀 주장 생수, 자폐 장애를 가진 열일곱 살 안동 팀 수일, 운동에 진심인 안양 팀 범준 등 선수들은 저마다의 꿈을 품은 채 핸드볼 코트에 오른다. 하지만 리그가 다가올수록 장애라는 한계의 벽에 부딪히며, 꿈에 대한 내적 갈증은 더욱 커져만 가는데. 과연 핸드볼이라는 낯선 스포츠를 통해 자신만의 완벽한 슛을 던지고자 하는 이들의 기적과도 같은 리그는 순탄하게 치러질 수 있을까? 국가대표가 되어 태극마크를 가슴에 달겠다는 이들의 꿈은 과연 이루어질 수 있을까?",
-      "keywords": null,
-      "kmdbId": "A-13062",
-      "boxOffice": null,
-      "bookingRate": null,
-      "availableAt": []
-    },
-    {
-      "movieCd": "20249409",
-      "title": "담요를 입은 사람",
-      "titleEn": "Blanket Wearer",
-      "openDt": "2026-09-09",
-      "genre": "다큐멘터리",
-      "runtime": 116,
-      "grade": "12세이상관람가",
-      "nation": "한국",
-      "directors": [
-        "박정미"
-      ],
-      "actors": [
-        "박정미"
-      ],
-      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/54/tn_DPA002540.jpg",
-      "plot": "주인공은 돈을 사용하지 않고 생존할 방법을 찾아 나선다. 빈 건물을 무단 점거하는 스퀏팅과 버려진 음식을 주워 먹는 스킵다이빙으로 먹거리를 구하고, 공짜로 얻은 자전거를 타고 자급자족 공동체를 다닌다. 영국을 떠나선 히치하이크로 여행한다. 스무 명의 히피와 카라반으로 여행하며 자연과의 연결을 회복하고 평화의 길을 찾기 위한 흐름에 자신을 맡긴다. 돈과 계획 없이 튀르키예, 이란, 인도를 여행하며 삶의 목적과 존재의 이유에 대한 답을 찾아간다.",
-      "keywords": "사사로운영화리스트",
-      "kmdbId": "A-12753",
-      "boxOffice": null,
-      "bookingRate": null,
-      "availableAt": []
-    },
-    {
-      "movieCd": "20262005",
-      "title": "카를로비바리",
-      "titleEn": "KARLOVY VARY",
-      "openDt": "2026-09-09",
-      "genre": "코미디, 드라마",
-      "runtime": 119,
-      "grade": "15세이상관람가",
-      "nation": "한국",
-      "directors": [
-        "이용석"
-      ],
-      "actors": [
-        "이제연",
-        "오지호",
-        "신지원"
-      ],
-      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/54/tn_DPK026308.jpg",
-      "plot": "체코 서부에 위치한 아름다운 도시, 카를로비바리. 영화감독 ‘성재’는 카를로비바리를 배경으로 대본을 완성하고, 이후 그의 작품은 각종 공모전 수상, 그리고 영화제작까지 투자를 받게 된다! 국내 세트장 촬영을 모두 마치고, 드디어 현지 촬영만을 남겨 둔 상황. 그런데… 투자받은 제작비가 모두 사라져 버린다! 투자금을 토해내지 않기 위해서는 무슨 일을 써서라도 반드시 영화를 완성해야 하는 상황! 과연 성재와 친구들은 카를로비바리를 가지 않고 무사히 영화를 완성할 수 있을까?",
-      "keywords": null,
-      "kmdbId": "K-39910",
-      "boxOffice": null,
-      "bookingRate": null,
-      "availableAt": []
-    },
-    {
-      "movieCd": "20018158",
-      "title": "이누야샤 극장판: 시대를 초월한 마음",
-      "titleEn": "INUYASHA THE MOVIE: AFFECTIONS TOUCHING ACROSS TIME",
-      "openDt": "2026-09-09",
-      "genre": "애니메이션, 액션, 어드벤처, 판타지",
-      "runtime": 100,
-      "grade": "12세이상관람가",
-      "nation": "일본",
-      "directors": [
-        "시노하라 토시야"
-      ],
-      "actors": [
-        "야마구치 캇페이",
-        "유키노 사츠키"
-      ],
-      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/54/tn_DPF033802.jpg",
-      "plot": "먼 옛날, 대륙에서 원(元)의 대군이 일본으로 쳐들어왔을 때 함께 일본으로 건너온 대륙 요괴 군단의 수령·메노마루.그는 어째서인지 ‘사혼의 구슬’이 아니라, ‘이누야샤’가 지닌 검 ‘철쇄아’를 노린다.격렬한 싸움 속에서 멀어져 가는 ‘이누야샤’와 ‘카고메’.그리고 절체절명의 위기가 닥쳐온다. 서로를 향한 마음은 끝내 닿을 수 있을까…?과연 두 사람의 운명은…쇼가쿠칸 「주간 소년 선데이」 연재, 타카하시 루미코 원작 만화의 극장판 애니메이션.",
-      "keywords": "만화원작",
-      "kmdbId": "F-68552",
-      "boxOffice": null,
-      "bookingRate": null,
-      "availableAt": []
-    },
     {
       "movieCd": "20204561",
       "title": "착지연습",
@@ -2353,6 +2202,283 @@
       "plot": "그 시절, 우리는 모두 선택받은 아이들이었다!디지털 월드에서의 모험 전, 디지몬과의 신비롭고 운명적인 첫 만남.모험이 끝난 후, 다시 한 번 함께 싸우는 디지몬과 아이들.영원히 잊지 못할 눈부신 추억이 지금 다시 스크린에서 깨어난다!",
       "keywords": null,
       "kmdbId": "F-67578",
+      "boxOffice": null,
+      "bookingRate": null,
+      "availableAt": []
+    },
+    {
+      "movieCd": "20255033",
+      "title": "암살자(들)",
+      "titleEn": "The Assassin(s)",
+      "openDt": "2026-09-23",
+      "genre": "범죄, 드라마",
+      "runtime": 130,
+      "grade": "12세이상관람가",
+      "nation": "한국",
+      "directors": [
+        "허진호"
+      ],
+      "actors": [
+        "유해진",
+        "박해일",
+        "이민호"
+      ],
+      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/54/tn_DPK026317.jpg",
+      "plot": "6발의 총성, 발견된 4개의 탄환. 그리고 공식 기록에서 사라진 두 발의 행방. 1974년 8월 15일, 제29회 광복절 경축식. 전 국민이 지켜보는 생중계 현장에서 영부인이 저격당하는 초유의 사태가 발생한다. 순식간에 아수라장이 된 식장에서 용의자가 체포되고, 사건은 국가적 비극으로 기록되며 서둘러 종결된다. 하지만, 현장 경호를 담당했던 형사 ‘철구’, 사건의 이면을 응시하던 신문사 사회부 부장 ‘재환’, 그날의 혼란을 직접 목격한 신입 기자 ‘영일’은 발표된 수사 결과와 실제 정황 사이, 지워지지 않는 의문을 품기 시작하는데… 전국에 생중계된 충격적인 사건. 모두가 보았지만 누구도 몰랐던 그날의 진실. 대한민국을 뒤흔든 사건의 배후는 누구인가!",
+      "keywords": null,
+      "kmdbId": "K-41776",
+      "boxOffice": null,
+      "bookingRate": null,
+      "availableAt": []
+    },
+    {
+      "movieCd": "20255210",
+      "title": "친숙한 손길",
+      "titleEn": "FAMILIAR TOUCH",
+      "openDt": "2026-09-23",
+      "genre": "드라마",
+      "runtime": 91,
+      "grade": "12세이상관람가",
+      "nation": "미국",
+      "directors": [
+        "사라 프리들랜드"
+      ],
+      "actors": [
+        "캐슬린 찰팬트"
+      ],
+      "poster": "https://file.koreafilm.or.kr/thm/02/99/18/56/tn_DPF030044.jpg",
+      "plot": "변화하는 기억 속, 요양 시설에서 새로운 삶을 시작하게 된 루스.낯선 일상 속에서도 삶을 향한 열정을 잃지 않은 그녀는 새로운 관계를 맺으며 자신의 나이와 욕망을 다시금 마주한다.",
+      "keywords": null,
+      "kmdbId": "F-61962",
+      "boxOffice": null,
+      "bookingRate": null,
+      "availableAt": []
+    },
+    {
+      "movieCd": "20266267",
+      "title": "나의 사적인 예술가",
+      "titleEn": "LATE FAME",
+      "openDt": "2026-09-23",
+      "genre": "드라마",
+      "runtime": 96,
+      "grade": "15세이상관람가",
+      "nation": "미국",
+      "directors": [
+        "켄트 존스"
+      ],
+      "actors": [
+        "윌렘 데포",
+        "그레타 리"
+      ],
+      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/54/tn_DPF033816.jpg",
+      "plot": "과거 시집 한 권을 출간했지만 지금은 뉴욕의 우체국에서 일하며 평범한 일상을 살아가는 ‘에드 색스버거’.어느 날, 그의 앞에 자신의 시에 매료된 젊은 예술 모임의 리더 ‘마이어스’가 찾아오고 그들의 모임에 ‘에드’를 초대한다.뒤늦은 찬사 속에 잊고 있던 날들을 다시 떠올리게 된 ‘에드’.그러나 점차 그들의 젊음과 부, 자신의 현실이 교차하고 마음 속에 예상치 못한 감정들이 피어나게 되는데...",
+      "keywords": null,
+      "kmdbId": "F-68603",
+      "boxOffice": null,
+      "bookingRate": null,
+      "availableAt": []
+    },
+    {
+      "movieCd": "20264801",
+      "title": "포가튼 아일랜드",
+      "titleEn": "Forgotten Island",
+      "openDt": "2026-09-23",
+      "genre": "판타지, 코미디, 어드벤처",
+      "runtime": 108,
+      "grade": "12세이상관람가",
+      "nation": "미국",
+      "directors": [
+        "조엘 크로포드",
+        "제뉴얼 메르카도"
+      ],
+      "actors": [
+        "H.E.R",
+        "라이자 소베라노",
+        "데이브 프랭코",
+        "제니 슬레이트",
+        "매니 자신토",
+        "돌리 데 레온"
+      ],
+      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/53/tn_DPF033783.jpg",
+      "plot": "기억이 사라지는 신비의 섬에서 영원히 기억될 모험이 시작된다!성격은 달라도 마음만큼은 누구보다 잘 통했던 ‘조’와 ‘라이사’는 최고의 베프로 모든 순간을 함께하며 둘만의 기억을 쌓아간다. 그러나 졸업과 함께 서로 다른 환경을 살아가던 두 사람의 우정은 조금씩 흔들리기 시작한다.그러던 어느 날, 전설처럼 전해지던 신비한 포털을 발견한 두 사람은 기억이 사라지는 세계, ‘포가튼 아일랜드’로 빨려 들어가게 되고, 시공간의 경계를 넘나드는 이 섬을 떠나기 위해선 가장 소중한 추억을 포기해야 하는 규칙이 주어진다.기억을 훔치는 섬의 지배자 ‘마낭’이 두 사람을 위협하는 가운데 ‘조’와 ‘라이사’는 섬에서 만난 새로운 친구들과 비밀을 쫓기 시작하지만 진실에 가까워질수록 두 사람의 기억은 사라질 위기에 처하는데…",
+      "keywords": null,
+      "kmdbId": "F-67887",
+      "boxOffice": null,
+      "bookingRate": null,
+      "availableAt": []
+    },
+    {
+      "movieCd": "20266051",
+      "title": "바다 탐험대 옥토넛 어보브 앤 비욘드 : 두근두근 대자연 어드벤처",
+      "titleEn": "Octonauts: Above and Beyond – Season 2",
+      "openDt": "2026-09-23",
+      "genre": "애니메이션, 액션, 어드벤처",
+      "runtime": 56,
+      "grade": "전체관람가",
+      "nation": "영국",
+      "directors": [],
+      "actors": [
+        "하성용",
+        "정재헌",
+        "엄상현",
+        "윤승희",
+        "김율",
+        "유동균"
+      ],
+      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/55/tn_DPF033829.jpg",
+      "plot": "#1. 마다가스카르 칭기마다가스카르에 식물 탐사를 나간 옥토요원 셀바.포사에게 쫓기다 발을 다친 어린 텐렉을 만나게 되고, 옥토경보를 울린다.이에 마다가스카르로 출동한 페이소!하지만 위험천만한 바위산, 칭기가 앞을 가로막는데...#2. 이구아수 폭포지도를 만들기 위해 이구아수 폭포로 향한 민 박사님과 포니.폭포 안에는 천적을 피해 숨어 있는 검정칼새들이 있다.그런데 폭풍으로 나무들이 강물 쪽으로 쓰러지자, 칼새들이 위험에 처한다!옥토요원들은 즉시 보호에 나서는데...#3. 고비 사막사막화 되는 고비 사막에 테라 8호를 동원해 나무심기에 나선 옥토넛.나무를 심던 중 길 잃은 어린 몽골가젤이 다가와 옥토넛에게 도움을 청한다.수색을 시작하려던 순간, 엄청난 모래폭풍이 불어오기 시작하는데...#4. 빌라봉의 수수께끼호주의 빌라봉으로 조류 탐사를 떠난 트래커와 코쉬.사랑앵무들을 찾다 우연히 알 하나를 줍게 되고, 엄마를 찾아주려 돌아다닌다.하지만 알의 정체는 점점 알 수 없는 수수께끼가 되어 가는데...#5. 태양 폭풍지구의 자기장을 교란시키고, 컴퓨터와 통신시스템을 먹통으로 만드는 태양 폭풍.전 세계에서 방향감각을 잃고 해변에 갇힌 고래들 소식이 전해지지만 지도와 장비가 작동되지 않아 옥토넛도 구조가 쉽지 않다.한편, 셸링턴과 셀바가 길 잃은 귀신고래 남매를 찾아 삼각주에 도착하는데…",
+      "keywords": null,
+      "kmdbId": "F-68585",
+      "boxOffice": null,
+      "bookingRate": null,
+      "availableAt": []
+    },
+    {
+      "movieCd": "20262961",
+      "title": "이방인",
+      "titleEn": "The Stranger",
+      "openDt": "2026-09-30",
+      "genre": "드라마",
+      "runtime": 122,
+      "grade": "15세이상관람가",
+      "nation": "프랑스",
+      "directors": [
+        "프랑수아 오종"
+      ],
+      "actors": [
+        "벤자민 부아쟁",
+        "드니 라방",
+        "스완 아를로"
+      ],
+      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/55/tn_DPF033882.jpg",
+      "plot": "청년 ‘뫼르소’는 어머니의 부고 소식을 듣고 장례를 치르지만 어딘가 무감하다.집으로 돌아온 그는 해수욕장에서 옛 동료 ‘마리’를 우연히 만나 사랑을 나눈다.이웃 ‘레몽’과 가깝게 지내던 ‘뫼르소’는 예상치 못한 비극에 휘말린다.부조리문학의 거장 알베르 카뮈그가 남긴 가장 위대한 걸작의 귀환",
+      "keywords": "소설원작",
+      "kmdbId": "F-67596",
+      "boxOffice": null,
+      "bookingRate": null,
+      "availableAt": []
+    },
+    {
+      "movieCd": "20261807",
+      "title": "극장판 치이카와: 인어 섬의 비밀",
+      "titleEn": "Chiikawa the Movie: The Secret of the Mermaid Island",
+      "openDt": "2026-09-30",
+      "genre": "애니메이션",
+      "runtime": 98,
+      "grade": "전체관람가",
+      "nation": "일본",
+      "directors": [
+        "오이카와 케이"
+      ],
+      "actors": [
+        "아오키 하루카",
+        "타나카 마코토",
+        "오자와 아리"
+      ],
+      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/55/tn_DPF033835.jpg",
+      "plot": "어느 날, 광장에서 쉬고 있던 치이카와와 가르마 앞에 얼굴에 전단지를 붙인 토끼가 나타난다.그곳엔 “특별한 섬으로의 초대”라는 글귀가 적혀 있는데...“섬에서 간단한 토벌만 해도 보수 100배!”“한정 섬라멘과 한정 디저트까지, 달콤한 것도 매콤한 것도 사실상 무료”솔깃한 문구에 이끌린 치이카와와 친구들은 섬에서 열리는 행사에 참가하기로 한다.초대장의 내용이 어딘가 수상하다고 느끼는 해달과, 부푼 마음으로 배에 오르는 치이카와와 친구들.모두가 기대를 안은 채 특별한 섬에 도착하는데! 과연 그 섬에는 어떤 비밀이 숨겨져 있을까...?!",
+      "keywords": null,
+      "kmdbId": "F-68144",
+      "boxOffice": null,
+      "bookingRate": null,
+      "availableAt": []
+    },
+    {
+      "movieCd": "20224573",
+      "title": "부활남: 더 레드",
+      "titleEn": "REAWAKENED MAN",
+      "openDt": "2026-09-30",
+      "genre": "액션",
+      "runtime": 101,
+      "grade": "15세이상관람가",
+      "nation": "한국",
+      "directors": [
+        "백"
+      ],
+      "actors": [
+        "구교환",
+        "신승호",
+        "강기영",
+        "김시아",
+        "김성령"
+      ],
+      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/51/tn_DPK026222.jpg",
+      "plot": "절친 ‘영하’(강기영)의 현실적인 쓴소리와 동생 ‘예린’(김시아)의 든든한 지원에도 면접에서 떨어지기 일쑤인 취업 준비생 ‘석환’(구교환). 여느 때와 다름없이 면접을 망치고 집으로 돌아온 그날 밤, ‘석환’은 낯선 이들의 습격을 받고 목숨을 잃는다. 하지만 죽은 지 72시간 뒤, 아무렇지 않게 눈을 뜬 ‘석환’.죽어도 다시 부활하는 특별한 능력을 가졌다는 사실을 알게 된 것도 잠시, 그의 존재를 알아챈 의문의 인물 ‘블랙’(신승호)의 추격이 시작된다. 하지만 ‘석환’은 부활을 거듭하며 더욱 강력한 힘을 발휘하게 되는데…! 죽을수록 강해지는 ‘석환’, 그의 목숨을 건(?) 반격이 시작된다! “걱정 마. 나는 죽어도 다시 살아나니까!”",
+      "keywords": "웹툰원작",
+      "kmdbId": "K-41779",
+      "boxOffice": null,
+      "bookingRate": null,
+      "availableAt": []
+    },
+    {
+      "movieCd": "20261068",
+      "title": "가족여행",
+      "titleEn": "SUNSHINE ON THE ROAD",
+      "openDt": "2026-09-30",
+      "genre": "가족, 드라마",
+      "runtime": 108,
+      "grade": "12세이상관람가",
+      "nation": "한국",
+      "directors": [
+        "김정태",
+        "정종섭"
+      ],
+      "actors": [
+        "이휘향",
+        "서영희",
+        "김정태",
+        "남경읍",
+        "홍정민",
+        "박상면"
+      ],
+      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/46/tn_DPK026026.jpg",
+      "plot": "목적지는 하나, 속마음은 다섯!“진짜 가족여행 같은 건 없어!”무늬만 영화감독인 남편, 뱀파이어 코스프레에 진심인 딸, 베트남 참전용사 시아버지, 그리고 치매에 걸린 시어머니까지.이 문제적 가족의 생계를 책임지며 모두를 돌보던 며느리 ‘영주’는 보호센터로부터 더 이상 시어머니 ‘순임’을 맡을 수 없다는 통보를 받는다. ‘순임’의 생일을 기념하고자 부산으로 떠난 즉흥 가족 여행.급하게 빌린 낡은 승합차가 위태롭게 고속도로를 달릴수록 감춰졌던 여행의 진짜 목적과 비밀들이 하나씩 드러나기 시작하는데…",
+      "keywords": null,
+      "kmdbId": "K-41399",
+      "boxOffice": null,
+      "bookingRate": null,
+      "availableAt": []
+    },
+    {
+      "movieCd": "20264847",
+      "title": "알파",
+      "titleEn": "Alpha",
+      "openDt": "2026-09-30",
+      "genre": "드라마",
+      "runtime": 127,
+      "grade": "15세이상관람가",
+      "nation": "프랑스",
+      "directors": [
+        "줄리아 뒤쿠르노"
+      ],
+      "actors": [
+        "멜리사 보로스",
+        "골시프테 파라하니",
+        "타하르 라힘"
+      ],
+      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/55/tn_DPF033848.jpg",
+      "plot": "몸을 석고처럼 굳게 만드는 혈액 매개 바이러스가 퍼지는 도시.13세 소녀 알파는 친구들과의 파티에서 의문의 'A'자 문신을 새긴 채 집으로 돌아오고, 의사인 엄마는 알파가 바이러스에 감염됐을지 모른다는 불안감에 휩싸인다.감염 여부 결과를 기다리는 2주 사이, 학교에는 소문이 퍼지기 시작하고 소문은 곧 낙인이 되어 알파를 옭아맨다.그리고 삼촌의 등장은 알파와 엄마의 불안을 증폭시키는데…",
+      "keywords": "사사로운영화리스트",
+      "kmdbId": "F-63895",
+      "boxOffice": null,
+      "bookingRate": null,
+      "availableAt": []
+    },
+    {
+      "movieCd": "20262729",
+      "title": "다이노 패밀리: 사고뭉치 공룡 탐험대",
+      "titleEn": "The Dino Family",
+      "openDt": "2026-10-07",
+      "genre": "애니메이션",
+      "runtime": 93,
+      "grade": "전체관람가",
+      "nation": "러시아",
+      "directors": [],
+      "actors": [],
+      "poster": "https://file.koreafilm.or.kr/thm/02/99/19/55/tn_DPF033877.jpg",
+      "plot": "공룡을 싫어하던 고생물학 박물관의 외아들 필립은 가문의 신비스러운 보물 '이카 스톤'의 사고로 아빠 디노사우루스 박사, 친구 리나네 가족과 함께 1억 년 전 진짜 공룡 시대로 빨려 들어간다.낯선 시대에 흩어진 두 가족은 수다쟁이 채식주의자 '비건', 순둥이 '브롱키', 엄청난 먹보 '보스' 등 제각각의 매력을 가진 공룡들을 만나며 서로를 찾아 나선다.하지만 공룡 세계의 거대한 악당 '티타노보아'가 이들의 앞길을 막아서는데...과연 두 가족은 위험천만한 공룡 세계를 헤쳐 나가 무사히 집으로 돌아갈 수 있을까?차원이 다른 예측불가 다이노 어드벤처가 시작된다!",
+      "keywords": null,
+      "kmdbId": "F-66643",
       "boxOffice": null,
       "bookingRate": null,
       "availableAt": []
