@@ -1,5 +1,5 @@
 {
- "asOf": "20260908",
+ "asOf": "20260909",
  "byOrigin": {
   "backtest": {
    "1": {
@@ -44,29 +44,29 @@
   },
   "live": {
    "1": {
-    "n": 5,
-    "hit": 3,
-    "sum": 0.13,
-    "win": 3,
-    "winSum": 0.48,
+    "n": 6,
+    "hit": 4,
+    "sum": 0.47000000000000003,
+    "win": 4,
+    "winSum": 0.8200000000000001,
     "lose": 2,
     "loseSum": -0.35,
-    "hitRate": 0.6,
-    "ev": 0.026,
-    "winAvg": 0.16,
+    "hitRate": 0.6667,
+    "ev": 0.078,
+    "winAvg": 0.21,
     "loseAvg": -0.17
    },
    "3": {
-    "n": 2,
-    "hit": 2,
-    "sum": 0.47,
-    "win": 2,
-    "winSum": 0.47,
+    "n": 4,
+    "hit": 4,
+    "sum": 2.1,
+    "win": 4,
+    "winSum": 2.1,
     "lose": 0,
     "loseSum": 0,
     "hitRate": 1,
-    "ev": 0.235,
-    "winAvg": 0.23,
+    "ev": 0.525,
+    "winAvg": 0.53,
     "loseAvg": 0
    }
   }
