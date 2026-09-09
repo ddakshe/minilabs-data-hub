@@ -24,7 +24,14 @@ concurrency:
 
 jobs:
   fetch:
-    runs-on: ubuntu-latest
+    # 🚨 원인이 두 개 겹쳐 있었다.
+    #  ① 쿠키 루프 — smpa.go.kr 앞단 F5(TMOS)가 307+Set-Cookie 로 같은 URL 에 되돌린다.
+    #     어디서 돌리든 죽는다. fetch-protest.mjs 의 httpText 가 쿠키를 물고 따라가게 고쳤다.
+    #  ② 그걸 고치고 나니 그 아래 IP 차단이 드러났다 — GitHub 러너에서는
+    #     `ConnectTimeoutError: www.smpa.go.kr:443, timeout: 10000ms` 로 연결 자체가 안 열린다
+    #     (09-09 실측). 같은 코드가 한국 IP 인 맥에서는 집회 4건을 정상 수집한다.
+    #     경기남부를 긁는 fetch-protest-gg 도 같은 이유로 맥에 있다.
+    runs-on: [self-hosted, macOS, ARM64]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
