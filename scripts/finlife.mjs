@@ -83,12 +83,38 @@ export function loadApiKey() {
  * finlife 는 브라우저가 아닌 User-Agent 를 https 단계에서 끊는다. UA 없이 부르면 응답이
  * 비어서 네트워크 장애로 오해하게 된다. http:// 는 307 로 https 리다이렉트되며 fetch 가 따라간다.
  */
+/**
+ * 전송 계층 실패만 재시도한다. **본문을 다 읽는 데까지가 한 번의 시도다** —
+ * AbortSignal 은 본문 수신 중에도 터지므로 `res.text()` 를 밖에 두면 재시도가 안 걸린다.
+ *
+ * 9/9 연속 성공하다 09-09 에 `fetch failed` 한 번으로 실행 전체가 죽었다. 이 스크립트의
+ * 네트워크 지점은 여기 하나뿐인데 맨 fetch 한 줄이라, 한 번 튕기면 그날 금리가 통째로 빈다.
+ * finlife 는 해외 IP 를 막지는 않으므로(평소엔 잘 된다) 러너를 옮길 일은 아니고 재시도면 족하다.
+ */
+async function fetchTextRetry(url, headers, tries = 4) {
+  let last;
+  for (let i = 0; i < tries; i++) {
+    try {
+      const res = await fetch(url, { headers, signal: AbortSignal.timeout(30000) });
+      // HTTP 오류는 재시도해도 같다. 본문을 읽지 않고 상태만 올려보낸다.
+      if (!res.ok) return { ok: false, status: res.status, text: '' };
+      return { ok: true, status: res.status, text: await res.text() };
+    } catch (e) {
+      last = e;
+      if (i === tries - 1) break;
+      const wait = 2000 * 2 ** i; // 2s → 4s → 8s
+      console.error(`  ⚠ 연결 실패 (${e.cause?.code ?? e.name}) — ${wait / 1000}초 뒤 재시도 ${i + 2}/${tries}`);
+      await new Promise((r) => setTimeout(r, wait));
+    }
+  }
+  throw last;
+}
+
 export async function fetchPage(endpoint, topFinGrpNo, pageNo, apiKey) {
   const url = `${BASE_URL}/${endpoint}.json?auth=${apiKey}&topFinGrpNo=${topFinGrpNo}&pageNo=${pageNo}`;
-  const res = await fetch(url, { headers: { 'User-Agent': UA, Accept: 'application/json' } });
-  if (!res.ok) throw new Error(`${endpoint}/${topFinGrpNo} p${pageNo}: HTTP ${res.status}`);
+  const { ok, status, text } = await fetchTextRetry(url, { 'User-Agent': UA, Accept: 'application/json' });
+  if (!ok) throw new Error(`${endpoint}/${topFinGrpNo} p${pageNo}: HTTP ${status}`);
 
-  const text = await res.text();
   const result = parseLenientJson(text)?.result;
   if (!result) throw new Error(`${endpoint}/${topFinGrpNo} p${pageNo}: result 없음`);
   // err_cd 는 HTTP 200 본문 안에 담겨 온다. 인증키 오류·일일 호출 한도 초과도 여기로 떨어진다.

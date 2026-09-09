@@ -46,6 +46,30 @@ function extractRegion(address) {
 
 // ───────────────────────────── API 호출 ─────────────────────────────
 
+/**
+ * 전송 계층 실패만 재시도한다. **본문을 다 읽는 데까지가 한 번의 시도다** —
+ * AbortSignal 은 본문 수신 중에도 터지므로 `res.json()` 을 밖에 두면 재시도가 안 걸린다.
+ *
+ * ⚠ HTTP 오류와 API 거부(cmmMsgHeader)는 재시도하지 않는다. 다시 불러도 같은 답이 온다.
+ */
+async function fetchJsonRetry(url, tries = 4) {
+  let last
+  for (let i = 0; i < tries; i++) {
+    try {
+      const res = await fetch(url, { signal: AbortSignal.timeout(30000) })
+      if (!res.ok) return { ok: false, status: res.status, json: null }
+      return { ok: true, status: res.status, json: await res.json() }
+    } catch (e) {
+      last = e
+      if (i === tries - 1) break
+      const wait = 2000 * 2 ** i // 2s → 4s → 8s
+      console.error(`  ⚠ 연결 실패 (${e.cause?.code ?? e.name}) — ${wait / 1000}초 뒤 재시도 ${i + 2}/${tries}`)
+      await new Promise((r) => setTimeout(r, wait))
+    }
+  }
+  throw last
+}
+
 async function fetchPage(pageNo) {
   const params = new URLSearchParams({
     serviceKey: API_KEY,
@@ -55,10 +79,9 @@ async function fetchPage(pageNo) {
   })
 
   const url = `${ENDPOINT}?${params}`
-  const res = await fetch(url)
-  if (!res.ok) throw new Error(`HTTP ${res.status}`)
+  const { ok, status, json } = await fetchJsonRetry(url)
+  if (!ok) throw new Error(`HTTP ${status}`)
 
-  const json = await res.json()
 
   // 인증 실패·트래픽 초과는 아래 정상 스키마가 아니라 이 모양으로 온다.
   // 먼저 걸러내지 않으면 '알 수 없는 응답' 으로 뭉개져 원인을 못 찾는다.

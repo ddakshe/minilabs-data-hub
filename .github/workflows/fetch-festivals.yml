@@ -19,7 +19,10 @@ concurrency:
 
 jobs:
   fetch:
-    runs-on: ubuntu-latest
+    # 🚨 api.data.go.kr 은 GitHub 러너 IP 에서 자주 끊긴다 — 최근 5회 중 3회가 `fetch failed`
+    #    (08-17·08-24·09-07 실패, 08-28·08-31 성공). fetch-travel-courses 가 같은 호스트
+    #    계열(apis.data.go.kr)로 먼저 같은 결론에 도달했다.
+    runs-on: [self-hosted, macOS, ARM64]
     steps:
       - name: Checkout
         uses: actions/checkout@v4

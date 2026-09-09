@@ -49,16 +49,57 @@ function addDays(isoDate, n) {
   return d.toISOString().slice(0, 10)
 }
 
-async function httpText(url, { retries = 3, timeoutMs = 30000 } = {}) {
+/**
+ * 🔑 이 사이트는 쿠키를 되돌려줘야 본문을 준다.
+ *
+ * smpa.go.kr 앞단의 F5(TMOS)가 첫 요청에 `307 + Set-Cookie: TMOSHCooKie` 를 주고
+ * **같은 URL 로** 되돌린다. 그 쿠키를 실어 다시 부르면 200 이다. 그런데 Node 의 fetch 에는
+ * 쿠키 저장소가 없어서 기본값(redirect: 'follow')으로 두면 쿠키 없이 같은 곳을 계속 두드리다
+ * `redirect count exceeded` 로 죽는다 — 09-05~09-09 다섯 번 연속 실패가 이것이다.
+ * (GitHub 러너에서는 같은 상황이 `SocketError: other side closed` 로 보여서 IP 차단처럼 읽혔다.
+ *  한국 IP 인 맥에서도 똑같이 죽는 걸 확인했다 — 러너를 옮길 문제가 아니었다.)
+ *
+ * 그래서 리다이렉트를 직접 따라가면서 받은 쿠키를 계속 실어 보낸다.
+ */
+let cookieJar = ''
+
+function rememberCookies(res) {
+  const raw = res.headers.getSetCookie?.() ?? []
+  if (!raw.length) return
+  const jar = new Map(cookieJar ? cookieJar.split('; ').map((c) => [c.split('=')[0], c]) : [])
+  for (const c of raw) {
+    const kv = c.split(';')[0]
+    jar.set(kv.split('=')[0], kv)
+  }
+  cookieJar = [...jar.values()].join('; ')
+}
+
+async function httpText(url, { retries = 3, timeoutMs = 30000, hops = 5 } = {}) {
   let lastErr
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
-      const res = await fetch(url, {
-        headers: { 'User-Agent': UA, 'Accept-Language': 'ko-KR,ko;q=0.9' },
-        signal: AbortSignal.timeout(timeoutMs),
-      })
-      if (!res.ok) throw new Error(`HTTP ${res.status}`)
-      return await res.text()
+      let target = url
+      for (let hop = 0; hop <= hops; hop++) {
+        const res = await fetch(target, {
+          headers: {
+            'User-Agent': UA,
+            'Accept-Language': 'ko-KR,ko;q=0.9',
+            ...(cookieJar ? { Cookie: cookieJar } : {}),
+          },
+          redirect: 'manual',
+          signal: AbortSignal.timeout(timeoutMs),
+        })
+        rememberCookies(res)
+        if (res.status >= 300 && res.status < 400) {
+          const loc = res.headers.get('location')
+          if (!loc) throw new Error(`HTTP ${res.status} — Location 이 없다`)
+          target = new URL(loc, target).toString()
+          continue
+        }
+        if (!res.ok) throw new Error(`HTTP ${res.status}`)
+        return await res.text()
+      }
+      throw new Error(`리다이렉트가 ${hops}번 안에 안 끝난다 — 쿠키를 안 받아주는 것이다`)
     } catch (err) {
       lastErr = err
       if (attempt < retries) await sleep(500 * 2 ** attempt)
