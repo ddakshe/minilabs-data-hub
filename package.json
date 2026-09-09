@@ -14,7 +14,9 @@
     "fetch:nps": "node scripts/fetch-nps.mjs",
     "fetch:grocery-deals": "node scripts/fetch-grocery-deals.mjs",
     "fetch:pokemon": "node scripts/fetch-pokemon.mjs",
-    "fetch:school-zones": "node scripts/fetch-school-zones.mjs"
+    "fetch:school-zones": "node scripts/fetch-school-zones.mjs",
+    "build:admissions": "node scripts/build-admissions.mjs",
+    "build:school-zones-app": "node scripts/build-school-zones-app.mjs"
   },
   "dependencies": {
     "cheerio": "^1.2.0",
