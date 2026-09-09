@@ -3,10 +3,18 @@
   "name": "한국항공우주",
   "market": "KOSPI",
   "retainDays": 120,
-  "firstBasDt": "20260316",
-  "lastBasDt": "20260907",
+  "firstBasDt": "20260317",
+  "lastBasDt": "20260908",
   "count": 120,
   "days": [
+    {
+      "basDt": "20260908",
+      "close": 127800,
+      "fltRt": -1.24,
+      "headline": "코스피보다 0.66%p 낮았어요.",
+      "newsCount": 7,
+      "dartCount": 0
+    },
     {
       "basDt": "20260907",
       "close": 129400,
@@ -1069,16 +1077,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260316",
-      "close": 191200,
-      "fltRt": 4.65,
-      "headline": "코스피보다 3.51%p 높았어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-09-08T06:45:52.164Z"
+  "updatedAt": "2026-09-09T06:55:05.584Z"
 }

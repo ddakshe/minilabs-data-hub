@@ -1,0 +1,101 @@
+{
+  "code": "403870",
+  "name": "HPSP",
+  "market": "KOSDAQ",
+  "basDt": "20260424",
+  "price": {
+    "code": "403870",
+    "name": "HPSP",
+    "market": "KOSDAQ",
+    "basDt": "20260424",
+    "close": 53400,
+    "vs": 2400,
+    "fltRt": 4.71,
+    "open": 51600,
+    "high": 55400,
+    "low": 50200,
+    "prevClose": 51000,
+    "volume": 6316011,
+    "tradeValue": 334827562750,
+    "week52": {
+      "low": 21300,
+      "high": 53400,
+      "position": 1,
+      "days": 244,
+      "from": "20250424"
+    },
+    "recent5": [
+      {
+        "basDt": "20260420",
+        "fltRt": 2.7,
+        "open": 44500,
+        "high": 47900,
+        "low": 43500,
+        "close": 45700
+      },
+      {
+        "basDt": "20260421",
+        "fltRt": 1.97,
+        "open": 45950,
+        "high": 46600,
+        "low": 45250,
+        "close": 46600
+      },
+      {
+        "basDt": "20260422",
+        "fltRt": 3,
+        "open": 46800,
+        "high": 48450,
+        "low": 45300,
+        "close": 48000
+      },
+      {
+        "basDt": "20260423",
+        "fltRt": 6.25,
+        "open": 48900,
+        "high": 53200,
+        "low": 47400,
+        "close": 51000
+      },
+      {
+        "basDt": "20260424",
+        "fltRt": 4.71,
+        "open": 51600,
+        "high": 55400,
+        "low": 50200,
+        "close": 53400
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 2583204,
+      "ratio": 2.45
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 533,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-09-09T06:55:05.507Z"
+  },
+  "facts": [
+    "코스닥보다 2.2%p 높았어요.",
+    "거래량은 20일 평균의 2.5배예요.",
+    "시가보다 1,800원 높게 마감했어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 1203.84,
+    "vs": 29.53,
+    "fltRt": 2.51
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null,
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-09-09T06:55:05.507Z"
+}
