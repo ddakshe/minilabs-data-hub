@@ -3,10 +3,18 @@
   "name": "한화투자증권",
   "market": "KOSPI",
   "retainDays": 120,
-  "firstBasDt": "20260317",
-  "lastBasDt": "20260908",
+  "firstBasDt": "20260318",
+  "lastBasDt": "20260909",
   "count": 120,
   "days": [
+    {
+      "basDt": "20260909",
+      "close": 4845,
+      "fltRt": -0.51,
+      "headline": "코스피보다 1.91%p 낮았어요.",
+      "newsCount": 4,
+      "dartCount": 8
+    },
     {
       "basDt": "20260908",
       "close": 4870,
@@ -1067,16 +1075,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260317",
-      "close": 7420,
-      "fltRt": 0,
-      "headline": "시가 7,760원보다 340원 낮게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-09-09T06:55:05.540Z"
+  "updatedAt": "2026-09-10T06:51:14.925Z"
 }
