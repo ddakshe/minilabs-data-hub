@@ -19,8 +19,19 @@
  *    **시군구 중심점**으로 떨어뜨리고 precision:'sigungu' 를 단다 — 앱이 "대략 위치"로 표기한다.
  *    시군구 중심은 허브의 학교 위치(school-zones/schools.json, 12,011곳 · 모든 시군구에 있다)
  *    평균으로 만든다. 행정구역 경계 데이터가 허브에 없어서 택한 근사다.
+ *
+ * ── 주소 단위로 올리는 단계 (도로명주소 API, business.juso.go.kr) ─────────────
+ * 5) **검색 API**(키 JUSO_SEARCH_KEY): 주소 → 행정구역코드·도로명코드·건물번호. 2026-09-10 실측 179건 중
+ *    그대로 124건, "~번지 일원" 꼬리를 떼면 +26건 = 150건. 나머지는 건물 없는 지번이라 못 찾는다.
+ *    결과는 urban-plan/cache/renewal-juso.json 에 남겨 **주소가 바뀐 항목만** 다시 부른다.
+ *    검색 결과가 여러 건이면 시군구와 번지가 입력과 맞는 첫 건만 받는다 — 아니면 '모호함'으로 둔다.
+ * 6) **좌표제공 API**(키 JUSO_COORD_KEY, 운영용만 있어 심사 중): 5) 의 코드 → UTM-K 좌표.
+ *    ⚠️ 응답을 실제로 본 적이 없어 **아직 구현하지 않는다.** 키가 오면 첫 응답을 보고 채운다.
+ *    그 전까지 precision 은 'sigungu' 그대로다. 앱은 precision 으로 그리는 법을 가른다.
+ * 키가 없으면 5)·6) 을 조용히 건너뛴다 — 주소 API 장애로 도시재생 데이터 전체가 멈추면 안 된다.
  */
 import fs from 'node:fs/promises'
+import os from 'node:os'
 import crypto from 'node:crypto'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -125,6 +136,102 @@ function build(rows, centers) {
   return { items, miss, baseDate }
 }
 
+
+// ─── 도로명주소 검색 (함정 5) ──────────────────────────────────────────
+
+const JUSO_CACHE = path.join(ROOT, 'urban-plan', 'cache', 'renewal-juso.json')
+
+/** CI 는 env, 로컬·셀프호스티드 러너는 ~/.config/credentials/keys.env 에서 읽는다 */
+async function readKey(name) {
+  if (process.env[name]) return process.env[name]
+  try {
+    const env = await fs.readFile(path.join(os.homedir(), '.config', 'credentials', 'keys.env'), 'utf8')
+    return env.match(new RegExp(`^${name}=(.+)$`, 'm'))?.[1].trim() ?? null
+  } catch {
+    return null
+  }
+}
+
+/** "1594-73번지일원" · "280 일원" · "(OO동)" · "외 3필지" 를 뗀다 */
+function cleanAddr(a) {
+  return a
+    .replace(/\s*(번지)?\s*일원.*$/, '')
+    .replace(/번지$/, '')
+    .replace(/\s*\(.*?\)/g, '')
+    .replace(/\s*외\s*\d+\s*필지.*$/, '')
+    .trim()
+}
+
+async function jusoSearch(key, keyword) {
+  const q = new URLSearchParams({ confmKey: key, currentPage: '1', countPerPage: '5', keyword, resultType: 'json' })
+  const res = await fetch(`https://business.juso.go.kr/addrlink/addrLinkApi.do?${q}`, { headers: { 'User-Agent': 'minilabs-data-hub' } })
+  if (!res.ok) throw new Error(`juso HTTP ${res.status}`)
+  const { results } = await res.json()
+  if (results.common.errorCode !== '0') throw new Error(`juso ${results.common.errorCode} ${results.common.errorMessage}`)
+  return results.juso ?? []
+}
+
+/** 여러 건이면 시군구 끝 토큰과 입력의 번지가 모두 들어 있는 첫 건만 받는다 */
+function pickJuso(list, item, keyword) {
+  if (list.length === 1) return list[0]
+  const sgg = item.sigungu.split(/\s+/).at(-1)
+  const num = keyword.match(/(\d+(?:-\d+)?)\s*$/)?.[1]
+  return list.find((j) => (j.roadAddr + ' ' + j.jibunAddr).includes(sgg) && (!num || (j.roadAddr + ' ' + j.jibunAddr).includes(num))) ?? null
+}
+
+async function refineWithJuso(items) {
+  const key = await readKey('JUSO_SEARCH_KEY')
+  if (!key) {
+    console.log('  · JUSO_SEARCH_KEY 없음 — 주소 검색 단계 건너뜀 (좌표는 시군구 중심 그대로)')
+    return null
+  }
+  const cache = JSON.parse(await fs.readFile(JUSO_CACHE, 'utf8').catch(() => '{}'))
+  const next = {}
+  const stat = { reused: 0, found: 0, ambiguous: 0, notFound: 0, failed: 0 }
+  for (const it of items) {
+    const prev = cache[it.id]
+    if (prev && prev.addr === it.addr) {
+      next[it.id] = prev
+      stat.reused++
+      continue
+    }
+    const tries = [...new Set([it.addr, cleanAddr(it.addr)])].filter(Boolean)
+    let entry = { addr: it.addr, status: 'notFound' }
+    try {
+      for (const kw of tries) {
+        const list = await jusoSearch(key, kw)
+        if (!list.length) continue
+        const j = pickJuso(list, it, kw)
+        entry = j
+          ? { addr: it.addr, status: 'found', query: kw, roadAddr: j.roadAddr, admCd: j.admCd, rnMgtSn: j.rnMgtSn, udrtYn: j.udrtYn, buldMnnm: j.buldMnnm, buldSlno: j.buldSlno }
+          : { addr: it.addr, status: 'ambiguous', query: kw, candidates: list.length }
+        break
+      }
+    } catch (e) {
+      // 한 건 실패로 전체를 멈추지 않는다. 캐시에 남기지 않아 다음 달에 다시 부른다.
+      stat.failed++
+      console.warn(`  ! juso 실패 ${it.id}: ${e.message}`)
+      continue
+    }
+    next[it.id] = entry
+    stat[entry.status]++
+    await new Promise((r) => setTimeout(r, 100))
+  }
+  await fs.mkdir(path.dirname(JUSO_CACHE), { recursive: true })
+  await fs.writeFile(JUSO_CACHE, JSON.stringify(next, null, 1))
+  const found = Object.values(next).filter((e) => e.status === 'found').length
+  console.log(`  · 주소 검색 ${found}/${items.length} 매칭 (재사용 ${stat.reused} · 새로 찾음 ${stat.found} · 모호 ${stat.ambiguous} · 못 찾음 ${stat.notFound} · 실패 ${stat.failed})`)
+  return next
+}
+
+/** 함정 6 — 좌표제공 API. 응답을 확인하기 전에는 구현하지 않는다(추측한 응답 형태로 틀린 좌표를 내지 않기 위해). */
+async function applyCoordinates(items, codes) {
+  if (!codes) return
+  if (await readKey('JUSO_COORD_KEY')) {
+    console.warn('  ! JUSO_COORD_KEY 가 있지만 좌표 단계는 아직 구현 전이다 — 첫 응답을 확인하고 applyCoordinates() 를 채울 것')
+  }
+}
+
 function validate({ items, miss }) {
   const fail = []
   if (items.length < 100 || items.length > 600) fail.push(`${items.length}건 — 100~600 범위 밖 (2026-09 실측 179)`)
@@ -140,6 +247,7 @@ function validate({ items, miss }) {
 const rows = await download()
 const built = build(rows, await sigunguCenters())
 validate(built)
+await applyCoordinates(built.items, await refineWithJuso(built.items))
 await fs.mkdir(path.dirname(OUT), { recursive: true })
 await fs.writeFile(OUT, JSON.stringify({
   source: '전국도시재생사업정보표준데이터 (공공데이터포털)',
