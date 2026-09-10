@@ -22,23 +22,62 @@ def _get(path, key, **params):
         return json.loads(r.read().decode('utf-8'))
 
 
+# 🚨 목록 한 번에 받는 페이지 한도. DART 는 최신순으로 주므로 한도에서 멈추면
+#    **오래된 공시가 조용히 빠진다.** 2026-09-10 까지 이 함수가 85일 창을 한 번에 불러
+#    6,598건 중 2,000건(약 2개월치)만 봤다 — 딜리셔스(7/31 확정·8월 상장)가 앱에 한 번도
+#    나오지 않았고, 확정 공시가 잘린 곳은 공모가가 비었다.
+MAX_PAGES = 20
+# 비상장 법인(E)만 불러도 85일에 3,176건이라 한도를 넘는다. 21일로 나누면 약 780건.
+SLICE_DAYS = 21
+
+
+class ListingTruncated(RuntimeError):
+    """목록이 한도에서 잘렸다. 조용히 넘기지 않고 배치를 멈춘다 — 어제 파일이 남는다."""
+
+
+def date_slices(bgn, end, days=SLICE_DAYS):
+    """'YYYYMMDD' 기간을 days 일씩 겹치지 않게 자른다."""
+    from datetime import datetime, timedelta
+    b = datetime.strptime(bgn, '%Y%m%d')
+    e = datetime.strptime(end, '%Y%m%d')
+    out = []
+    while b <= e:
+        s = min(b + timedelta(days=days - 1), e)
+        out.append((b.strftime('%Y%m%d'), s.strftime('%Y%m%d')))
+        b = s + timedelta(days=1)
+    return out
+
+
 def _fetch_filings(key, bgn, end):
     """발행공시(pblntf_ty=C) 중 증권신고서(지분증권)만 모은다.
 
-    corp_code 없이 조회하면 검색기간 3개월 제한이 걸린다 (status 100).
+    - corp_code 없이 조회하면 검색기간 3개월 제한이 걸린다 (status 100).
+    - **비상장 법인(corp_cls=E)만** 부른다. 공모주 판정(is_ipo)이 어차피 '종목코드 없음' 이라
+      상장사 공시(일괄신고서·파생결합증권 — 전체의 절반)는 받아도 버려진다.
+    - 기간을 SLICE_DAYS 로 나눠 각 조각이 페이지 한도 안에 들게 한다.
+    - 🚨 조각이 한도에 걸리거나 중간 페이지가 실패하면 **예외로 멈춘다.**
+      예전에는 조용히 break 해서 잘린 목록으로 파일을 덮었다.
     """
     out = []
-    for page in range(1, 21):
-        d = _get('list.json', key, bgn_de=bgn, end_de=end, pblntf_ty='C',
-                 page_count='100', page_no=str(page))
-        if d.get('status') != '000':
-            if page == 1:
-                print(f'  [list.json] {d.get("status")} {d.get("message")}')
-            break
-        out += d['list']
-        if page >= int(d.get('total_page', 1)):
-            break
-        time.sleep(0.1)
+    for s_bgn, s_end in date_slices(bgn, end):
+        for page in range(1, MAX_PAGES + 1):
+            d = _get('list.json', key, bgn_de=s_bgn, end_de=s_end, pblntf_ty='C',
+                     corp_cls='E', page_count='100', page_no=str(page))
+            status = d.get('status')
+            if status == '013' and page == 1:   # 그 조각에 공시가 없다 — 정상
+                break
+            if status != '000':
+                raise ListingTruncated(
+                    f'list.json {s_bgn}~{s_end} p{page}: {status} {d.get("message")}')
+            out += d['list']
+            total = int(d.get('total_page', 1))
+            if page >= total:
+                break
+            if page == MAX_PAGES:
+                raise ListingTruncated(
+                    f'list.json {s_bgn}~{s_end}: {total}페이지인데 {MAX_PAGES}에서 멈춘다 '
+                    f'— SLICE_DAYS 를 줄일 것')
+            time.sleep(0.1)
     return [i for i in out if '증권신고서(지분증권)' in i['report_nm']]
 
 
@@ -196,9 +235,14 @@ def fetch_company(key, corp_code):
     }
 
 
-def fetch_ipos(key, bgn, end):
-    """기간 내 IPO 목록을 반환한다. 공모가 미확정 건도 포함한다."""
-    filings = _fetch_filings(key, bgn, end)
+def fetch_ipos(key, bgn, end, predicate=is_ipo, filings=None):
+    """기간 내 IPO 목록을 반환한다. 공모가 미확정 건도 포함한다.
+
+    predicate·filings 는 백필(ipo_backfill.py)용이다. 평소에는 넘기지 않는다 —
+    백필은 이미 상장해 종목코드가 생긴 회사를 되찾아야 해서 is_ipo 를 쓸 수 없다.
+    """
+    if filings is None:
+        filings = _fetch_filings(key, bgn, end)
     print(f'  증권신고서(지분증권) {len(filings)}건')
 
     companies = {}
@@ -208,7 +252,7 @@ def fetch_ipos(key, bgn, end):
         if is_price_confirmed(f['report_nm']):
             confirmed.setdefault(f['corp_code'], f['rcept_no'])
 
-    ipos = [c for c in companies.values() if is_ipo(c)]
+    ipos = [c for c in companies.values() if predicate(c)]
     print(f'  비상장(IPO) {len(ipos)} / 상장(유상증자) {len(companies) - len(ipos)}')
     print(f'  발행조건확정 공시 {len(confirmed)}건')
 

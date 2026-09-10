@@ -62,5 +62,11 @@ def is_ipo(filing):
 
 
 def is_spac(corp_name):
-    """SPAC(기업인수목적회사) 판별. IPO 건수의 절반가량을 차지한다."""
-    return '기업인수목적' in (corp_name or '')
+    """SPAC(기업인수목적회사) 판별. IPO 건수의 절반가량을 차지한다.
+
+    🚨 DART 법인명이 「○○기업인수목적N호」 만 있는 게 아니다. 「메리츠제2호스팩」·
+       「한국제16호스팩」 처럼 **스팩** 으로 끝나는 곳도 있다 (2026-09-10 백필에서 3곳).
+       '기업인수목적' 만 보면 이들이 일반 공모주로 들어가 SPAC 표시가 빠진다.
+    """
+    name = corp_name or ''
+    return '기업인수목적' in name or '스팩' in name or 'SPAC' in name.upper()

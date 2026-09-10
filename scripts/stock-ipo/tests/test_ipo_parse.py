@@ -75,3 +75,13 @@ def test_is_spac_detects_by_name():
 def test_is_spac_false_for_normal_company():
     assert is_spac('브릴스') is False
     assert is_spac('') is False
+
+
+def test_is_spac_catches_names_ending_in_spac():
+    """2026-09-10 백필: DART 법인명이 '기업인수목적' 없이 '스팩' 으로 끝나는 곳이 3곳 있었다."""
+    from ipo_parse import is_spac
+    assert is_spac('엔에이치기업인수목적34호')
+    assert is_spac('메리츠제2호스팩')
+    assert is_spac('대신밸런스제20호스팩')
+    assert not is_spac('스카이랩스')
+    assert not is_spac('해치텍')
