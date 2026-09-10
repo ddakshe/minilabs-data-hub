@@ -1,9 +1,9 @@
 /*
- * school-zones/{schools,zones,chain,admissions}.json → school-zones/app/*
+ * school-zones/{schools,zones,chain,admissions,stats,careers}.json → school-zones/app/*
  *
  * 사용법:
  *   node scripts/build-school-zones-app.mjs
- *   (fetch:school-zones → build:admissions 를 먼저 돌린 뒤에 실행한다)
+ *   (fetch:school-zones → fetch:school-stats → fetch:school-careers → build:admissions 뒤에 실행한다)
  *
  * 소비자: 「내 학군 찾기」 미니앱.
  *
@@ -65,6 +65,13 @@ async function main() {
   const admissions = await readOpt('admissions.json')
   const statsFile = await readOpt('stats.json')
   const stats = statsFile?.stats ?? {}
+  const careersFile = await readOpt('careers.json')
+  const careers = careersFile?.careers ?? {}
+  /** 앱에 보내는 진로 한 줄 — 유형(t)은 허브가 학교군 요약을 낼 때만 쓴다 */
+  const careerOf = (id) => {
+    const { t, ...cr } = careers[id]
+    return cr
+  }
 
   const zoneById = new Map(zones.map((z) => [z.id, z]))
   const schoolById = new Map(schools.map((s) => [s.id, s]))
@@ -87,12 +94,29 @@ async function main() {
   const brief = (id) => {
     const s = schoolById.get(id)
     if (!s) return null
-    const st = stats[id]
-    return st ? { i: s.id, n: s.name, e: s.estab, st } : { i: s.id, n: s.name, e: s.estab }
+    const out = { i: s.id, n: s.name, e: s.estab }
+    if (stats[id]) out.st = stats[id]
+    if (careers[id]) out.cr = careerOf(id)
+    return out
   }
+
+  // 학교군 진로 요약 — **추첨 배정 일반고 · 졸업생 30명 이상**의 4년제 진학 비율 범위.
+  // 특성화고(취업 중심)·특목고·자사고를 섞으면 범위가 0~100% 로 벌어져 아무 말도 안 하게 되고,
+  // 졸업생이 적은 학교는 한두 명에 비율이 크게 흔들린다. **평균 하나로 뭉치지 않는다** —
+  // 같은 학교군 안에서도 학교끼리 24%p 쯤 벌어진다(2025 실측 중앙값).
+  const MIN_GRAD = 30
+  const rangeOf = (z, assigned) => {
+    const pcts = z.highSchools
+      .filter((id) => assigned.has(id) && careers[id]?.t === '일반' && careers[id].g >= MIN_GRAD)
+      .map((id) => Math.round((careers[id].u / careers[id].g) * 100))
+    return pcts.length ? { lo: Math.min(...pcts), hi: Math.max(...pcts), n: pcts.length } : null
+  }
+  const zoneRange = new Map()
   let zoneBytes = 0
   for (const z of chain.highZones) {
     const assigned = new Set(z.assignedHighSchools)
+    const careerRange = careersFile ? rangeOf(z, assigned) : null
+    zoneRange.set(z.id, careerRange)
     // 이 학교군에 물리는 중학교들이 속한 학구 — 요약만 싣는다(전체는 mid 샤드).
     const midMap = new Map()
     for (const id of z.middleSchools) {
@@ -112,6 +136,7 @@ async function main() {
       }).filter((x) => x?.i),
       midZones: [...midMap].map(([id, n]) => ({ i: id, n: zoneName(id), c: n })),
       elemCount: z.elemSchools.length,
+      careerRange,
     })
   }
 
@@ -159,10 +184,31 @@ async function main() {
     midBytes += await writeJson(`mid/${z.id}.json`, {
       id: z.id, name: z.name, sido: z.sido, office: z.office, shared: !!z.shared,
       highZone: up, highZoneName: up ? zoneName(up) : null,
+      highCareerRange: up ? zoneRange.get(up) ?? null : null,
       middle: mids, elem: elems,
     })
     midCount++
   }
+
+  // ── 고교 샤드 (학교 ID 끝자리 0~9) ──────────────────────
+  // 비평준화 고교 871곳은 학교군 샤드가 없어서 상세 화면이 지표·진로를 가져올 곳이 없었다.
+  // ID 끝자리로 나누면 앱이 **ID 만으로** 샤드를 고른다 — 따로 인덱스를 받을 필요가 없다.
+  // 빈 버킷도 파일을 쓴다(앱이 404 를 에러로 보지 않게).
+  const highBuckets = Object.fromEntries([...'0123456789'].map((d) => [d, {}]))
+  let highEntries = 0
+  for (const s of schools) {
+    if (s.level !== '고') continue
+    const entry = {}
+    if (stats[s.id]) entry.st = stats[s.id]
+    if (careers[s.id]) entry.cr = careerOf(s.id)
+    if (!entry.st && !entry.cr) continue
+    const d = s.id.slice(-1)
+    if (!highBuckets[d]) throw new Error(`학교 ID 끝자리가 숫자가 아니다: ${s.id}`)
+    highBuckets[d][s.id] = entry
+    highEntries++
+  }
+  let highBytes = 0
+  for (const [d, obj] of Object.entries(highBuckets)) highBytes += await writeJson(`high/${d}.json`, obj)
 
   // ── 랭킹 (시드가 비어 있으면 빈 배열로 나간다 — 앱이 빈 상태를 그린다) ──
   // 랭킹 행이 들고 있는 highZone 은 ID 다. 앱에는 ID→이름 표가 없으므로(학교군 샤드를
@@ -193,6 +239,9 @@ async function main() {
     statsSource: statsFile
       ? { source: statsFile.source, license: statsFile.license, pbanYr: statsFile.pbanYr, fields: statsFile.fields }
       : null,
+    careersSource: careersFile
+      ? { source: careersFile.source, license: careersFile.license, year: careersFile.year, graduatedIn: careersFile.graduatedIn }
+      : null,
     license: '공공누리 제1유형 — 출처 표시',
     counts,
     // 앱이 화면에 그대로 지켜야 하는 것들. 어기면 앱이 거짓말을 한다.
@@ -200,6 +249,7 @@ async function main() {
       zone: '학군은 교육청이 정한 배정 구역이다. 개인의 실제 진학 경로가 아니다.',
       admissions: '목록에 없는 학교는 0명이 아니라 미공개다.',
       nonLevelled: '비평준화 지역 고교는 학교군이 없어 드릴다운이 불가능하다.',
+      careers: '진학은 졸업한 해 대학에 등록한 학생만 센다. 재수생은 기타에 들어가 선호 학군일수록 진학 비율이 낮게 나온다. 진학 비율로 학교 순위를 매기지 않는다.',
     },
   })
 
@@ -210,8 +260,10 @@ async function main() {
   console.log(`✓ app/zones-index.json ${kb(zonesIndexBytes)} — 시도 ${sidos.length}곳 · 학교군 ${indexed}개`)
   console.log(`✓ app/zone/*.json      ${kb(zoneBytes)} / ${chain.highZones.length}개 (평균 ${kb(zoneBytes / chain.highZones.length)})`)
   console.log(`✓ app/mid/*.json       ${kb(midBytes)} / ${midCount}개 (평균 ${kb(midBytes / midCount)})`)
+  console.log(`✓ app/high/*.json      ${kb(highBytes)} / 10개 — 고교 ${highEntries}곳`)
   console.log(`✓ app/admissions.json  ${kb(admBytes)}${admissions ? '' : ' (시드 없음 — 빈 상태)'}`)
   console.log(`  지표 있는 학교 ${Object.keys(stats).length}곳${statsFile ? ` (${statsFile.pbanYr}년 공시)` : ' — stats.json 없음'}`)
+  console.log(`  진로 있는 고교 ${Object.keys(careers).length}곳${careersFile ? ` (${careersFile.year}년 조사)` : ' — careers.json 없음'} · 학교군 범위 ${[...zoneRange.values()].filter(Boolean).length}/${chain.highZones.length}`)
   console.log(`  초 ${counts.schools.초} · 중 ${counts.schools.중} · 고 ${counts.schools.고} (비평준화 ${counts.nonLevelledHigh})`)
 }
 

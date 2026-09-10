@@ -17,6 +17,7 @@
     "fetch:school-zones": "node scripts/fetch-school-zones.mjs",
     "build:admissions": "node scripts/build-admissions.mjs",
     "fetch:school-stats": "node scripts/fetch-school-stats.mjs",
+    "fetch:school-careers": "node scripts/fetch-school-careers.mjs",
     "build:school-zones-app": "node scripts/build-school-zones-app.mjs"
   },
   "dependencies": {
