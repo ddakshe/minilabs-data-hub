@@ -1,0 +1,104 @@
+name: Fetch Urban Plan (도시계획 지도 · 맥)
+
+# 도시계획 지도(city-plan-map) 미니앱이 쓰는 urban-plan/ 을 굽는다.
+#
+#   1) 택지정보시스템(jigu.go.kr) 개발사업지구 — 무인증 · 세션 쿠키 필수 · 월 1회 갱신
+#   2) 전국도시재생사업정보표준데이터 — data.go.kr 다운로드 AJAX(무인증) · 매월 초 병합
+#   3) GTX seed 검증 — 네트워크 없음. seed 를 손으로 고쳤을 때 여기서 한 번 더 막힌다
+#
+# 인증키를 하나도 쓰지 않는다 → docs/api-limits.json 에 신고할 예산이 없다.
+#
+# 10일에 도는 이유:
+#   택지정보시스템 기준일은 전월 말일이다(2026-09-10 에 2026-08-31 파일이 이미 올라와 있었다).
+#   게시되는 정확한 날짜는 아직 실측하지 않았다 — 첫 달에 meta.json 의 stdrDe 로 확인할 것.
+#   07:30 KST 는 매일 22:00 UTC 배치 두 개와 aptcost(8일 07:00)를 피한 자리다.
+#
+# 셀프호스티드(한국 IP)로 돌린다. 이 허브는 국내 기관이 GitHub 러너 IP 일부를 막는 걸
+# 여러 번 겪었다(fetch-aptcost.yml 주석 참고). jigu 는 해외 IP 에서 열린 기록도 있지만
+# WAF 가 까다로운 사이트라 동전 던지기를 남기지 않는다.
+
+on:
+  schedule:
+    - cron: '30 22 9 * *'  # 매월 10일 07:30 KST
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: '실행 이유 (로그에만 기록, 선택)'
+        required: false
+        default: 'manual refresh'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-urban-plan
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: [self-hosted, macOS, ARM64]
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          # Headers.getSetCookie() 가 필요하다 (Node 19.7+)
+          node-version: '20'
+
+      - name: Show trigger context
+        run: |
+          echo "Event  : ${{ github.event_name }}"
+          echo "Reason : ${{ github.event.inputs.reason || '(scheduled)' }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      - name: 개발사업지구 (택지정보시스템)
+        run: node scripts/fetch-urban-plan.mjs
+
+      - name: 도시재생 사업지
+        run: node scripts/fetch-urban-renewal.mjs
+
+      - name: GTX seed 검증
+        run: node scripts/build-urban-gtx.mjs
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git add urban-plan/
+
+          # meta.json 의 generatedAt 은 매 실행마다 바뀐다. 그것만 달라졌다면 커밋하지 않는다.
+          FILES=$(git diff --cached --name-only -- urban-plan/)
+          if [ "$FILES" = "urban-plan/meta.json" ]; then
+            OTHER=$(git diff --cached -U0 -- urban-plan/meta.json \
+                    | grep -E '^[+-]' | grep -vE '^(\+\+\+|---)' \
+                    | grep -vc 'generatedAt' || true)
+            if [ "${OTHER:-0}" -eq 0 ]; then
+              git restore --staged --worktree urban-plan/meta.json
+              echo "changed=false" >> "$GITHUB_OUTPUT"
+              echo "generatedAt 만 변경 — 커밋 건너뜀."
+              exit 0
+            fi
+          fi
+
+          if git diff --cached --quiet -- urban-plan/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes — skipping commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --cached --stat urban-plan/ | tail -5
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
+          git commit -m "chore(urban-plan): monthly refresh ($DATE_KST)"
+          # 다른 워크플로가 같은 시간대에 밀어넣을 수 있다. 한 번은 되받아 재시도한다.
+          git push || (git pull --rebase origin main && git push)

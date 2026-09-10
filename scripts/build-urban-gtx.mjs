@@ -1,0 +1,50 @@
+#!/usr/bin/env node
+/*
+ * 도시계획 지도(city-plan-map) — GTX 계획노선 seed 검증 → urban-plan/gtx.json
+ *
+ *   node scripts/build-urban-gtx.mjs
+ *
+ * GTX 노선·역은 정형 공공데이터가 없다(data.go.kr 에서 GTX·수도권광역급행철도 오픈API 0건).
+ * 그래서 urban-plan/seed/gtx.json 을 사람이 고치고, 이 스크립트는 **틀린 값이 앱에 가지 않게만** 막는다.
+ * 네트워크 호출 없음 — CI 없이 로컬에서 seed 를 고친 뒤 돌린다.
+ */
+import fs from 'node:fs/promises'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
+const SEED = path.join(ROOT, 'urban-plan', 'seed', 'gtx.json')
+const OUT = path.join(ROOT, 'urban-plan', 'gtx.json')
+const STATUS = new Set(['운행', '공사', '계획'])
+
+const seed = JSON.parse(await fs.readFile(SEED, 'utf8'))
+const fail = []
+const inKorea = ([lat, lng]) => lat > 33 && lat < 39 && lng > 124.5 && lng < 131
+
+if (!/^\d{4}-\d{2}-\d{2}$/.test(seed.updated ?? '')) fail.push('updated 가 YYYY-MM-DD 가 아니다')
+if (!seed.sources?.length) fail.push('sources 가 비었다')
+for (const line of seed.lines ?? []) {
+  if (!STATUS.has(line.status)) fail.push(`${line.id}: status '${line.status}'`)
+  if ((line.stations ?? []).length < 2) fail.push(`${line.id}: 역이 2개 미만`)
+  for (const s of line.stations ?? []) {
+    if (!Array.isArray(s.at) || s.at.length !== 2 || !inKorea(s.at)) fail.push(`${line.id} ${s.name}: 좌표 ${JSON.stringify(s.at)} — [lat,lng] 순서 확인`)
+    if (!STATUS.has(s.status)) fail.push(`${line.id} ${s.name}: status '${s.status}'`)
+    if (typeof s.approx !== 'boolean') fail.push(`${line.id} ${s.name}: approx 가 boolean 이 아니다`)
+  }
+  // 이웃 역이 30km 넘게 떨어져 있으면 순서나 좌표가 틀렸을 가능성이 크다
+  const st = line.stations ?? []
+  for (let i = 1; i < st.length; i++) {
+    const [a, b] = [st[i - 1].at, st[i].at]
+    const km = Math.hypot((a[0] - b[0]) * 111, (a[1] - b[1]) * 88)
+    if (km > 30) fail.push(`${line.id}: ${st[i - 1].name}→${st[i].name} ${km.toFixed(0)}km — 순서·좌표 확인`)
+  }
+}
+if (fail.length) {
+  console.error('✗ gtx seed 검증 실패\n  - ' + fail.join('\n  - '))
+  process.exit(1)
+}
+
+const { _about, _verify, ...out } = seed
+if (_verify) console.warn(`⚠ 대조 미완료: ${_verify}`)
+await fs.writeFile(OUT, JSON.stringify(out))
+console.log(`✓ gtx.json — ${out.lines.map((l) => `${l.name} ${l.stations.length}역`).join(' · ')} · 미확정 ${out.undecided.length}`)
