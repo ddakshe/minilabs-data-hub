@@ -68,6 +68,13 @@ for (const p of seed.undecided ?? []) {
   if (!p.id || !p.name || !p.stage || !p.summary || !p.note) fail.push(`미확정 ${p.id}: id·name·stage·summary·note 필요`)
   for (const m of p.milestones ?? []) if (!/^\d{4}-\d{2}-\d{2}$/.test(m.date ?? '') || !m.text) fail.push(`미확정 ${p.id}: 경과 날짜·내용 확인`)
   if (!(p.sources ?? []).length) fail.push(`미확정 ${p.id}: sources 가 비었다`)
+  // 발표 지역 점 — 선은 여전히 긋지 않는다. 좌표를 특정할 수 있는 곳만 찍고, 무엇을 근거로 찍었는지 적는다.
+  for (const a of p.areaPoints ?? []) {
+    if (!a.name || !a.basis) fail.push(`미확정 ${p.id}: areaPoints 에 name·basis 필요`)
+    if (!Array.isArray(a.at) || a.at.length !== 2 || !inKorea(a.at)) fail.push(`미확정 ${p.id} ${a.name}: 좌표 ${JSON.stringify(a.at)} — [lat,lng] 순서 확인`)
+    // 발표에 나온 지역 이름과 이어져야 한다 — 없는 지역에 점을 찍으면 발표 내용과 어긋난다
+    if (!(p.areas ?? []).includes(a.name)) fail.push(`미확정 ${p.id}: areaPoints '${a.name}' 이 areas 에 없다`)
+  }
 }
 if (fail.length) {
   console.error('✗ gtx seed 검증 실패\n  - ' + fail.join('\n  - '))
