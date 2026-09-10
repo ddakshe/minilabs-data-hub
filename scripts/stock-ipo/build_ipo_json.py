@@ -4,13 +4,16 @@
     export DART_API_KEY=...
     export TOSS_CLIENT_ID=tsck_live_...      # 없으면 상장일 없이 진행
     export TOSS_CLIENT_SECRET=tssk_live_...
+    export DATA_GO_KR_KEY=...                # 없으면 상장 후 성적 없이 진행
     python3 scripts/stock-ipo/build_ipo_json.py
+    python3 scripts/stock-ipo/build_ipo_json.py --backfill-days 100   # 처음 한 번
 
 일 1회 실행한다. 공모가는 [기재정정] 공시로 청약 며칠 전에 확정되므로
 주 단위로 돌리면 '확정 전'인 채로 청약이 시작되는 구간이 생긴다.
 
 ⚠️ 토스 호출은 허용 IP 사전 등록이 필요하다.
 """
+import argparse
 import json
 import os
 import sys
@@ -19,7 +22,10 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from ipo_dart import fetch_ipos
+from ipo_backfill import find_recent_listed
+from ipo_dart import _get, fetch_ipos
+from ipo_listed import attach_performance, lookup_stock_codes, retain_previous
+from ipo_parse import is_spac
 from ipo_paths import OUT
 from ipo_document import enrich
 from ipo_toss import attach_list_dates, fetch_scheduled
@@ -27,10 +33,28 @@ from ipo_toss import attach_list_dates, fetch_scheduled
 KST = timezone(timedelta(hours=9))
 
 
+def _load_previous():
+    """어제 파일. 상장해서 수집분에서 빠진 공모주의 '기억' 이다 (ipo_listed.py 머리말)."""
+    if not OUT.exists():
+        return []
+    try:
+        return json.loads(OUT.read_text(encoding='utf-8')).get('items', [])
+    except (OSError, ValueError) as e:
+        print(f'  [어제 파일] 읽기 실패 — 되살림 없이 진행한다: {e}')
+        return []
+
+
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--backfill-days', type=int, default=0,
+                    help='이미 상장해 빠진 최근 공모주를 N일치 되찾는다 (처음 한 번)')
+    args = ap.parse_args()
+
     dart_key = os.environ.get('DART_API_KEY')
     if not dart_key:
         sys.exit('DART_API_KEY 환경변수가 필요합니다.')
+    price_key = os.environ.get('DATA_GO_KR_KEY')
+    previous = _load_previous()
 
     today = date.today()
     # corp_code 없이 조회하면 3개월 제한이 걸린다 (status 100)
@@ -60,9 +84,37 @@ def main():
 
     items = attach_list_dates(ipos, scheduled)
 
-    # 청약이 끝난 건도 남긴다 — "최근에 뭐가 있었나"가 앱의 절반이다.
-    # DART 조회창(85일)이 곧 '최근'의 범위가 된다.
+    if args.backfill_days:
+        if not price_key:
+            sys.exit('--backfill-days 는 DATA_GO_KR_KEY 가 필요합니다.')
+        picked, codes, start = find_recent_listed(dart_key, price_key, today, args.backfill_days)
+        extra = fetch_ipos(dart_key, start.strftime('%Y%m%d'), end,
+                           predicate=lambda c: True, filings=picked)
+        extra = attach_list_dates(enrich(dart_key, extra), scheduled)
+        have = {i['corpCode'] for i in items}
+        for e in extra:
+            e['stockCode'] = codes.get(e['corpCode'])
+            if e['corpCode'] not in have:
+                items.append(e)
+
+    # 🚨 청약이 끝난 건을 남기는 건 DART 조회창이 아니라 **어제 파일**이다.
+    #    is_ipo 가 '종목코드 없음' 이라 상장하는 날 수집분에서 빠지기 때문이다
+    #    (2026-09-10 확인 — 그 전까지는 청약 종료 후 약 1주에 사라졌다).
+    items, kept = retain_previous(items, previous, today)
+    print(f'  [상장 후] 어제 파일에서 되살림 {kept}건')
+    calls, found = lookup_stock_codes(dart_key, items, today, _get)
+    print(f'  [상장 후] 종목코드 확인 {calls}건 → 새로 찾음 {found}건')
+    if price_key:
+        ok, fail = attach_performance(price_key, items)
+        print(f'  [시세] 성공 {ok} / 실패 {fail}')
+    else:
+        print('  [시세] DATA_GO_KR_KEY 없음 — 성적 없이 진행한다')
+
     keep = list(items)
+    # 어제 파일·백필에서 온 항목은 is_spac 을 다시 거치지 않는다. 판정 규칙이 바뀌면
+    # 옛 값이 남으므로 저장 직전에 이름으로 다시 맞춘다 (네트워크 없음)
+    for it in keep:
+        it['isSpac'] = is_spac(it.get('corpName'))
     keep.sort(key=lambda i: (i['subscriptionStart'] or '9999-99-99', i['corpName']))
 
     payload = {
@@ -79,8 +131,12 @@ def main():
     print(f'\n저장: {OUT}')
     print(f'  총 {len(keep)}건')
     print(f'  공모가 확정 {confirmed} / 미확정 {len(keep) - confirmed}')
-    print(f'  청약 마감 {closed} / 진행·예정 {confirmed - closed}')
+    upcoming = sum(1 for i in keep
+                   if i['subscriptionEnd'] and i['subscriptionEnd'] >= today.isoformat())
+    # 예전에는 '확정 − 마감' 으로 셌다. 공모가 없는 마감 건이 섞이면 음수가 된다 (-5 를 봤다)
+    print(f'  청약 마감 {closed} / 진행·예정 {upcoming}')
     print(f'  상장일 확정 {dated}')
+    print(f"  상장 후 성적 {sum(1 for i in keep if i.get('performance'))}건")
 
 
 if __name__ == '__main__':

@@ -13,6 +13,10 @@ name: Fetch Stock IPO
 #
 # 토스증권 API 는 허용 IP 사전 등록이 필수라 Actions 에서 호출할 수 없다.
 # 상장일 보강은 고정 IP 머신에서 따로 돌린다 (없어도 배치는 정상 동작).
+#
+# 상장 후 성적(공모가 대비 시세)은 공공데이터포털 주식시세를 쓴다. 허용 IP 가 없어
+# Actions 에서 그대로 돈다 — 원래 기획에서 이 탭을 뺀 이유(토스 IP)가 사라졌다.
+# 시세는 하루 늦다. 앱이 기준일을 함께 쓴다.
 
 on:
   schedule:
@@ -60,6 +64,7 @@ jobs:
       - name: Fetch IPO data
         env:
           DART_API_KEY: ${{ secrets.DART_API_KEY }}
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
         run: python3 scripts/stock-ipo/build_ipo_json.py
 
       - name: Check for changes
