@@ -31,6 +31,24 @@ for (const line of seed.lines ?? []) {
     if (!STATUS.has(s.status)) fail.push(`${line.id} ${s.name}: status '${s.status}'`)
     if (typeof s.approx !== 'boolean') fail.push(`${line.id} ${s.name}: approx 가 boolean 이 아니다`)
   }
+  // 지선(예: GTX-C 금정→상록수) — 본선의 분기역에서 이어진다
+  for (const br of line.branches ?? []) {
+    if (!(line.stations ?? []).some((s) => s.name === br.from)) fail.push(`${line.id}: 지선 분기역 '${br.from}' 이 본선에 없다`)
+    if (!(br.stations ?? []).length) fail.push(`${line.id}: '${br.from}' 지선에 역이 없다`)
+    for (const s of br.stations ?? []) {
+      if (!Array.isArray(s.at) || s.at.length !== 2 || !inKorea(s.at)) fail.push(`${line.id} 지선 ${s.name}: 좌표 ${JSON.stringify(s.at)}`)
+      if (!STATUS.has(s.status)) fail.push(`${line.id} 지선 ${s.name}: status '${s.status}'`)
+      if (typeof s.approx !== 'boolean') fail.push(`${line.id} 지선 ${s.name}: approx 가 boolean 이 아니다`)
+    }
+  }
+  // 구간 상태 — 지도는 이걸로 운행/공사/계획을 나눠 그린다. 역 이름은 본선·지선 역을 가리켜야 한다.
+  const known = new Set([...(line.stations ?? []), ...(line.branches ?? []).flatMap((b) => b.stations ?? [])].map((s) => s.name))
+  if (!(line.sections ?? []).length) fail.push(`${line.id}: sections 가 없다`)
+  for (const sec of line.sections ?? []) {
+    if (!STATUS.has(sec.status)) fail.push(`${line.id}: 구간 status '${sec.status}'`)
+    if ((sec.stations ?? []).length < 2) fail.push(`${line.id}: 구간에 역이 2개 미만`)
+    for (const n of sec.stations ?? []) if (!known.has(n)) fail.push(`${line.id}: 구간의 역 '${n}' 이 역 목록에 없다`)
+  }
   // 이웃 역이 30km 넘게 떨어져 있으면 순서나 좌표가 틀렸을 가능성이 크다
   const st = line.stations ?? []
   for (let i = 1; i < st.length; i++) {
@@ -47,4 +65,4 @@ if (fail.length) {
 const { _about, _verify, ...out } = seed
 if (_verify) console.warn(`⚠ 대조 미완료: ${_verify}`)
 await fs.writeFile(OUT, JSON.stringify(out))
-console.log(`✓ gtx.json — ${out.lines.map((l) => `${l.name} ${l.stations.length}역`).join(' · ')} · 미확정 ${out.undecided.length}`)
+console.log(`✓ gtx.json — ${out.lines.map((l) => `${l.name} ${l.stations.length + (l.branches ?? []).reduce((a, b) => a + b.stations.length, 0)}역`).join(' · ')} · 미확정 ${out.undecided.length}`)
