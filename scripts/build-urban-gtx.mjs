@@ -57,6 +57,12 @@ for (const line of seed.lines ?? []) {
     if (km > 30) fail.push(`${line.id}: ${st[i - 1].name}→${st[i].name} ${km.toFixed(0)}km — 순서·좌표 확인`)
   }
 }
+// 노선 미확정(D·E·F) — 선은 긋지 않고 발표 내용·경과·출처만 보여준다. 출처 없는 문장은 싣지 않는다.
+for (const p of seed.undecided ?? []) {
+  if (!p.id || !p.name || !p.stage || !p.summary || !p.note) fail.push(`미확정 ${p.id}: id·name·stage·summary·note 필요`)
+  for (const m of p.milestones ?? []) if (!/^\d{4}-\d{2}-\d{2}$/.test(m.date ?? '') || !m.text) fail.push(`미확정 ${p.id}: 경과 날짜·내용 확인`)
+  if (!(p.sources ?? []).length) fail.push(`미확정 ${p.id}: sources 가 비었다`)
+}
 if (fail.length) {
   console.error('✗ gtx seed 검증 실패\n  - ' + fail.join('\n  - '))
   process.exit(1)
