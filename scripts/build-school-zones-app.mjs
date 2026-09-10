@@ -63,6 +63,8 @@ async function main() {
   const { zones } = await read('zones.json')
   const chain = await read('chain.json')
   const admissions = await readOpt('admissions.json')
+  const statsFile = await readOpt('stats.json')
+  const stats = statsFile?.stats ?? {}
 
   const zoneById = new Map(zones.map((z) => [z.id, z]))
   const schoolById = new Map(schools.map((s) => [s.id, s]))
@@ -80,9 +82,13 @@ async function main() {
   })
 
   // ── 고교 학교군 샤드 ────────────────────────────────────
+  // 학교 한 줄. 지표(stats)는 **샤드에만** 얹는다 — 12,011줄짜리 검색 인덱스에
+  // 넣으면 첫 검색에 받는 용량이 그만큼 늘어난다. 상세 화면은 어차피 샤드를 받는다.
   const brief = (id) => {
     const s = schoolById.get(id)
-    return s ? { i: s.id, n: s.name, e: s.estab } : null
+    if (!s) return null
+    const st = stats[id]
+    return st ? { i: s.id, n: s.name, e: s.estab, st } : { i: s.id, n: s.name, e: s.estab }
   }
   let zoneBytes = 0
   for (const z of chain.highZones) {
@@ -102,8 +108,8 @@ async function main() {
       high: z.highSchools.map((id) => ({ ...brief(id), a: assigned.has(id) })).filter((x) => x.i),
       middle: z.middleSchools.map((id) => {
         const m = schoolById.get(id)
-        return m ? { i: m.id, n: m.name, e: m.estab, mz: m.midZone ?? null } : null
-      }).filter(Boolean),
+        return m ? { ...brief(id), mz: m.midZone ?? null } : null
+      }).filter((x) => x?.i),
       midZones: [...midMap].map(([id, n]) => ({ i: id, n: zoneName(id), c: n })),
       elemCount: z.elemSchools.length,
     })
@@ -114,8 +120,8 @@ async function main() {
   for (const z of chain.midZones) {
     const elems = z.elemSchools.map((id) => {
       const e = schoolById.get(id)
-      return e ? { i: e.id, n: e.name, e: e.estab, ez: e.elemZone ? zoneName(e.elemZone) : null } : null
-    }).filter(Boolean)
+      return e ? { ...brief(id), ez: e.elemZone ? zoneName(e.elemZone) : null } : null
+    }).filter((x) => x?.i)
     const mids = z.middleSchools.map(brief).filter(Boolean)
     if (!mids.length && !elems.length) continue
     // 이 학구의 중학교가 속한 고교 학교군 (되짚어 올라가기용)
@@ -129,6 +135,14 @@ async function main() {
   }
 
   // ── 랭킹 (시드가 비어 있으면 빈 배열로 나간다 — 앱이 빈 상태를 그린다) ──
+  // 랭킹 행이 들고 있는 highZone 은 ID 다. 앱에는 ID→이름 표가 없으므로(학교군 샤드를
+  // 73개나 받을 수는 없다) 여기서 이름을 얹어 보낸다.
+  if (admissions) {
+    for (const d of admissions.datasets ?? []) {
+      for (const r of d.schools ?? []) r.highZoneName = r.highZone ? zoneName(r.highZone) : null
+    }
+  }
+
   const admBytes = await writeJson('admissions.json', admissions ?? {
     coverageNote: '공개된 상위 학교만 실려 있다. 목록에 없는 학교는 0명이 아니라 미공개다.',
     comparisonNote: 'basis 가 다르면 대학끼리·연도끼리 합산하지 말고 따로 보여준다.',
@@ -146,6 +160,9 @@ async function main() {
   await writeJson('meta.json', {
     baseDate,
     source: '학구도안내서비스(한국교육시설안전원) 공공데이터',
+    statsSource: statsFile
+      ? { source: statsFile.source, license: statsFile.license, pbanYr: statsFile.pbanYr, fields: statsFile.fields }
+      : null,
     license: '공공누리 제1유형 — 출처 표시',
     counts,
     // 앱이 화면에 그대로 지켜야 하는 것들. 어기면 앱이 거짓말을 한다.
@@ -163,6 +180,7 @@ async function main() {
   console.log(`✓ app/zone/*.json      ${kb(zoneBytes)} / ${chain.highZones.length}개 (평균 ${kb(zoneBytes / chain.highZones.length)})`)
   console.log(`✓ app/mid/*.json       ${kb(midBytes)} / ${midCount}개 (평균 ${kb(midBytes / midCount)})`)
   console.log(`✓ app/admissions.json  ${kb(admBytes)}${admissions ? '' : ' (시드 없음 — 빈 상태)'}`)
+  console.log(`  지표 있는 학교 ${Object.keys(stats).length}곳${statsFile ? ` (${statsFile.pbanYr}년 공시)` : ' — stats.json 없음'}`)
   console.log(`  초 ${counts.schools.초} · 중 ${counts.schools.중} · 고 ${counts.schools.고} (비평준화 ${counts.nonLevelledHigh})`)
 }
 

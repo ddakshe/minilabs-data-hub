@@ -19,8 +19,12 @@
  * 갱신은 연 2회 수준(2025-09, 2026-03)이므로 이 스크립트도 그 주기로 돌리면 된다.
  *
  * ── 이 도메인의 함정 (전부 실측) ──────────────────────────────
- * 1) **학교알리미에는 진학 데이터가 없다.** 공시항목 62개를 전수 확인했다 — 대량다운로드에도
- *    OpenAPI 제공목록에도 「졸업생의 진로 현황」이 없다. 진학률을 찾아 거기로 가지 말 것.
+ * 1) **학교알리미에서 진학 데이터를 자동으로 받을 수 없다.** 세 가지를 구분해야 한다 —
+ *    「졸업생의 진로 현황」은 **법정 공시항목이 맞고**(중·고 · 연1회 11월) 학교별 웹페이지에
+ *    공시되지만, **OpenAPI 제공목록 34개에도 대량다운로드 목록에도 없다**(2026-09-10 실측:
+ *    `pnnggo_a01_l0.do` 의 loadOpenApi() 링크 전수). 게다가 그 항목은 대학 '유형'별
+ *    (전문대/4년제/국외)이라 학교명 단위도 아니다.
+ *
  * 2) **제공기관 이름이 릴리스마다 바뀐다.** 2025-09 은 「한국지방교육행정연구재단」,
  *    2026-03 은 「한국교육시설안전원」이다. **기관명이 아니라 데이터 종류로 매칭한다.**
  * 3) **CSV 두 개의 인코딩이 서로 다르다.** 학교위치는 UTF-8(BOM), 연계정보는 CP949 다.
@@ -246,7 +250,16 @@ function build(sources) {
     })
   }
 
-  return { schools, zones, baseDate: schoolRows[0]?.['데이터기준일자'] ?? null }
+  // 학교알리미 OpenAPI 는 시·군·구 파라미터가 필수다(2026-01-01 이후 발급 키).
+  // 그 코드 체계가 학구도 폴리곤의 SD_CD+SGG_CD 와 같으므로 여기서 뽑아 남긴다.
+  const sggMap = new Map()
+  for (const r of layers['초'].rows) {
+    if (!r.SGG_CD) continue
+    sggMap.set(r.SD_CD + r.SGG_CD, { sido: r.SD_CD, sgg: r.SD_CD + r.SGG_CD, office: r.EDU_UP_NM })
+  }
+  const sigungu = [...sggMap.values()].sort((a, b) => a.sgg.localeCompare(b.sgg))
+
+  return { schools, zones, sigungu, baseDate: schoolRows[0]?.['데이터기준일자'] ?? null }
 }
 
 /** 고교 학교군 → 중학교 학구 → 초등 통학구역 드릴다운 인덱스 */
@@ -364,6 +377,12 @@ async function main() {
   await write('schools.json', { baseDate, count: data.schools.length, schools: data.schools })
   await write('zones.json', { baseDate, count: data.zones.length, zones: data.zones })
   await write('chain.json', { baseDate, ...chain })
+  await write('sigungu.json', {
+    baseDate,
+    note: '학교알리미 OpenAPI 의 sidoCode(2자리) / sggCode(5자리) 로 그대로 쓴다.',
+    count: data.sigungu.length,
+    list: data.sigungu,
+  })
   await write('meta.json', {
     baseDate,
     source: '학구도안내서비스(한국교육시설안전원) 공공데이터',
@@ -378,6 +397,7 @@ async function main() {
   console.log(`✓ school-zones/schools.json — 초 ${n.초} · 중 ${n.중} · 고 ${n.고} (기준 ${baseDate})`)
   console.log(`  고교 중 학교군 배정 ${data.schools.filter((s) => s.level === '고' && s.highZone).length} · 비평준화 ${nonLev}`)
   console.log(`✓ school-zones/zones.json — 학구 ${data.zones.length}개`)
+  console.log(`✓ school-zones/sigungu.json — 시군구 ${data.sigungu.length}개`)
   console.log(`✓ school-zones/chain.json — 고교 학교군 ${chain.highZones.length} · 중학교 학구 ${chain.midZones.length}`)
   const sample = chain.highZones.find((z) => z.name === '강남서초학교군')
   if (sample) console.log(`  예) ${sample.name} — 고교 ${sample.highSchools.length} · 중학교 ${sample.middleSchools.length} · 초등 ${sample.elemSchools.length}`)
