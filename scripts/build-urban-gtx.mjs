@@ -49,6 +49,12 @@ for (const line of seed.lines ?? []) {
     if ((sec.stations ?? []).length < 2) fail.push(`${line.id}: 구간에 역이 2개 미만`)
     for (const n of sec.stations ?? []) if (!known.has(n)) fail.push(`${line.id}: 구간의 역 '${n}' 이 역 목록에 없다`)
   }
+  // 연장 계획 — 선은 긋지 않고 상세에 단계·경과·출처만. 출처 없는 연장은 싣지 않는다
+  for (const ext of line.extensions ?? []) {
+    if (!ext.id || !ext.section || !ext.stage) fail.push(`${line.id} 연장: id·section·stage 필요`)
+    for (const m of ext.milestones ?? []) if (!/^\d{4}-\d{2}-\d{2}$/.test(m.date ?? '') || !m.text) fail.push(`${line.id} 연장 ${ext.id}: 경과 날짜·내용 확인`)
+    if (!(ext.sources ?? []).length) fail.push(`${line.id} 연장 ${ext.id}: sources 가 비었다`)
+  }
   // 이웃 역이 30km 넘게 떨어져 있으면 순서나 좌표가 틀렸을 가능성이 크다
   const st = line.stations ?? []
   for (let i = 1; i < st.length; i++) {
