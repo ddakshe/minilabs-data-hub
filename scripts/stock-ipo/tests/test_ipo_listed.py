@@ -124,3 +124,10 @@ def test_legacy_items_does_not_mutate_v2_items():
     it = item('FRESH', stockCode='X', performance={'lastDate': '2026-09-09'})
     legacy_items([it], {'FRESH'})
     assert it['stockCode'] == 'X' and it['performance'] == {'lastDate': '2026-09-09'}
+
+
+def test_listed_item_counts_from_listing_day_not_subscription_end():
+    """피스피스스튜디오: 5/27 청약 종료 → 6/8 상장. 9/11 에 청약 기준이면 107일, 상장 기준이면 95일."""
+    p = item('PIECE', subscriptionEnd='2026-05-27', performance={'firstDate': '2026-06-08'})
+    out, kept = retain_previous([], [p], date(2026, 9, 11))
+    assert kept == 1

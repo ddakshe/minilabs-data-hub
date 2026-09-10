@@ -28,8 +28,14 @@ DART_GAP = 0.3
 
 
 def _anchor(item):
-    """남길지 판단하는 날짜. 청약 종료일이 없으면 첫 거래일로 본다."""
-    return item.get('subscriptionEnd') or (item.get('performance') or {}).get('firstDate')
+    """남길지 판단하는 날짜. **상장했으면 상장일(첫 거래일)**, 아니면 청약 종료일.
+
+    화면 문구가 「최근 약 3개월 안에 상장한 종목」 이다. 청약 종료일로 세면 청약과 상장 사이가
+    긴 종목이 문구보다 먼저 빠진다 — 피스피스스튜디오(5/27 청약 종료 → 6/8 상장)가 상장 95일째에
+    빠졌다 (2026-09-11 실측).
+    """
+    perf = item.get('performance') or {}
+    return perf.get('firstDate') or item.get('subscriptionEnd')
 
 
 def retain_previous(fresh, previous, today, keep_days=KEEP_DAYS):
