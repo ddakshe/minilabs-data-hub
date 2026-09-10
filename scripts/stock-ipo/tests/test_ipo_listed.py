@@ -106,3 +106,21 @@ def test_attach_performance_skips_without_offer_price(monkeypatch):
     items = [item('A', stockCode='417030', offerPrice=None)]
     attach_performance('k', items, fetch=lambda *a: called.append(a) or [])
     assert called == []
+
+
+def test_legacy_items_keep_only_todays_fresh_and_strip_v2_fields():
+    """옛 앱은 시세 붙은 건을 청약 목록 「청약 마감」 에 섞는다 — ipo.json 에 싣지 않는다."""
+    from ipo_listed import legacy_items
+    perf = {'firstDate': '2026-08-21', 'lastDate': '2026-09-09'}
+    fresh = item('FRESH')
+    listed = item('LISTED', stockCode='282620', performance=perf)
+    out = legacy_items([fresh, listed], {'FRESH'})
+    assert [i['corpCode'] for i in out] == ['FRESH']
+    assert 'stockCode' not in out[0] and 'performance' not in out[0]
+
+
+def test_legacy_items_does_not_mutate_v2_items():
+    from ipo_listed import legacy_items
+    it = item('FRESH', stockCode='X', performance={'lastDate': '2026-09-09'})
+    legacy_items([it], {'FRESH'})
+    assert it['stockCode'] == 'X' and it['performance'] == {'lastDate': '2026-09-09'}

@@ -24,9 +24,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from ipo_backfill import find_recent_listed
 from ipo_dart import _get, fetch_ipos
-from ipo_listed import attach_performance, lookup_stock_codes, retain_previous
+from ipo_listed import attach_performance, legacy_items, lookup_stock_codes, retain_previous
 from ipo_parse import is_spac
-from ipo_paths import OUT
+from ipo_paths import OUT, OUT_V2
 from ipo_document import enrich
 from ipo_toss import attach_list_dates, fetch_scheduled
 
@@ -34,13 +34,18 @@ KST = timezone(timedelta(hours=9))
 
 
 def _load_previous():
-    """어제 파일. 상장해서 수집분에서 빠진 공모주의 '기억' 이다 (ipo_listed.py 머리말)."""
-    if not OUT.exists():
+    """어제 파일. 상장해서 수집분에서 빠진 공모주의 '기억' 이다 (ipo_listed.py 머리말).
+
+    🚨 **v2 를 읽는다.** ipo.json 에는 상장 건을 싣지 않으므로 거기서 읽으면 기억이 하루 만에
+       사라진다. v2 가 아직 없을 때(처음 한 번)만 ipo.json 으로 떨어진다.
+    """
+    src = OUT_V2 if OUT_V2.exists() else OUT
+    if not src.exists():
         return []
     try:
-        return json.loads(OUT.read_text(encoding='utf-8')).get('items', [])
+        return json.loads(src.read_text(encoding='utf-8')).get('items', [])
     except (OSError, ValueError) as e:
-        print(f'  [어제 파일] 읽기 실패 — 되살림 없이 진행한다: {e}')
+        print(f'  [어제 파일] {src.name} 읽기 실패 — 되살림 없이 진행한다: {e}')
         return []
 
 
@@ -83,6 +88,8 @@ def main():
     ipos = enrich(dart_key, ipos)
 
     items = attach_list_dates(ipos, scheduled)
+    # 오늘 DART 에서 공모주로 잡힌 것 — 옛 판(ipo.json)은 이것만 싣는다
+    fresh_codes = {i['corpCode'] for i in items}
 
     if args.backfill_days:
         if not price_key:
@@ -117,18 +124,22 @@ def main():
         it['isSpac'] = is_spac(it.get('corpName'))
     keep.sort(key=lambda i: (i['subscriptionStart'] or '9999-99-99', i['corpName']))
 
-    payload = {
-        'generatedAt': datetime.now(KST).isoformat(timespec='seconds'),
-        'items': keep,
-    }
+    generated = datetime.now(KST).isoformat(timespec='seconds')
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding='utf-8')
+    # v2 — 「최근 성적」 탭이 있는 앱 버전이 읽는다. 되살린 상장 건 · 시세 포함
+    OUT_V2.write_text(json.dumps({'generatedAt': generated, 'items': keep},
+                                 ensure_ascii=False, indent=2), encoding='utf-8')
+    # 옛 판 — 라이브 중인 옛 앱 버전이 읽는다. 오늘 수집분만 (legacy_items 주석)
+    legacy = legacy_items(keep, fresh_codes)
+    OUT.write_text(json.dumps({'generatedAt': generated, 'items': legacy},
+                              ensure_ascii=False, indent=2), encoding='utf-8')
 
     confirmed = sum(1 for i in keep if i['offerPrice'] is not None)
     dated = sum(1 for i in keep if i['listDate'])
     closed = sum(1 for i in keep
                  if i['subscriptionEnd'] and i['subscriptionEnd'] < today.isoformat())
-    print(f'\n저장: {OUT}')
+    print(f'\n저장: {OUT_V2}  (v2 — 최근 성적 포함)')
+    print(f'      {OUT}  (옛 판 — 오늘 수집분 {len(legacy)}건만)')
     print(f'  총 {len(keep)}건')
     print(f'  공모가 확정 {confirmed} / 미확정 {len(keep) - confirmed}')
     upcoming = sum(1 for i in keep

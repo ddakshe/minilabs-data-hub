@@ -163,3 +163,22 @@ def attach_performance(service_key, items, fetch=fetch_prices):
             it['performance'] = perf
         time.sleep(PRICE_GAP)
     return ok, fail
+
+
+# 옛 판(ipo.json)에는 없던 필드. 옛 앱이 모르는 값을 굳이 싣지 않는다
+V2_ONLY_FIELDS = ('stockCode', 'performance')
+
+
+def legacy_items(items, fresh_codes):
+    """옛 앱 버전이 읽는 ipo.json 의 항목 — **오늘 DART 수집분만**, v2 전용 필드는 뺀다.
+
+    되살린 상장 건·백필 건은 넣지 않는다. 옛 앱의 groupItems 는 시세 붙은 건을 따로 가르지
+    못해 청약 목록의 「청약 마감」 에 섞는다. v2 쪽 항목은 건드리지 않도록 복사해서 뺀다.
+    """
+    out = []
+    for it in items:
+        if it.get('corpCode') not in fresh_codes:
+            continue
+        copy = {k: v for k, v in it.items() if k not in V2_ONLY_FIELDS}
+        out.append(copy)
+    return out
