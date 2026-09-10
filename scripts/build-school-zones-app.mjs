@@ -115,6 +115,36 @@ async function main() {
     })
   }
 
+  // ── 홈 「지역에서 찾기」 인덱스 ─────────────────────────
+  // 고교 학교군 73개를 시도별로 묶는다. 검색 말고 **이름을 몰라도 들어갈 수 있는** 두 번째
+  // 진입로다. 학교군이 없는 시도(전 지역 비평준화)는 싣지 않는다 — 그 지역은 검색으로 찾는다.
+  // h(고교 수)는 zone 샤드와 같은 위치 기준(자사고·특목고 포함)이라 학교군 화면 숫자와 맞는다.
+  const SIDO_SHORT = {
+    서울특별시: '서울', 부산광역시: '부산', 대구광역시: '대구', 인천광역시: '인천',
+    광주광역시: '광주', 대전광역시: '대전', 울산광역시: '울산', 세종특별자치시: '세종',
+    경기도: '경기', 강원특별자치도: '강원', 충청북도: '충북', 충청남도: '충남',
+    전북특별자치도: '전북', 전라남도: '전남', 경상북도: '경북', 경상남도: '경남', 제주특별자치도: '제주',
+  }
+  const order = Object.keys(SIDO_SHORT)
+  const bySido = new Map()
+  for (const z of chain.highZones) {
+    if (!bySido.has(z.sido)) bySido.set(z.sido, [])
+    bySido.get(z.sido).push({ i: z.id, n: z.name, h: z.highSchools.length, m: z.middleSchools.length })
+  }
+  const rank = (sido) => (order.indexOf(sido) === -1 ? 999 : order.indexOf(sido))
+  const sidos = [...bySido]
+    .sort((a, b) => rank(a[0]) - rank(b[0]) || a[0].localeCompare(b[0], 'ko'))
+    .map(([sido, zones]) => ({
+      sido,
+      label: SIDO_SHORT[sido] ?? sido,
+      zones: zones.sort((a, b) => a.n.localeCompare(b.n, 'ko')),
+    }))
+  const indexed = sidos.reduce((n, x) => n + x.zones.length, 0)
+  if (indexed !== chain.highZones.length) {
+    throw new Error(`학교군 인덱스 ${indexed}개 ≠ 원본 ${chain.highZones.length}개`)
+  }
+  const zonesIndexBytes = await writeJson('zones-index.json', { baseDate, sidos })
+
   // ── 중학교 학구 샤드 (설계 3) ───────────────────────────
   let midBytes = 0, midCount = 0
   for (const z of chain.midZones) {
@@ -177,6 +207,7 @@ async function main() {
   const gzKb = async (rel) => (zlib.gzipSync(await fs.readFile(path.join(APP, rel))).length / 1024).toFixed(0) + 'KB'
 
   console.log(`✓ app/search.json      ${kb(indexBytes)} (gzip ${await gzKb('search.json')}) — ${index.length}개교`)
+  console.log(`✓ app/zones-index.json ${kb(zonesIndexBytes)} — 시도 ${sidos.length}곳 · 학교군 ${indexed}개`)
   console.log(`✓ app/zone/*.json      ${kb(zoneBytes)} / ${chain.highZones.length}개 (평균 ${kb(zoneBytes / chain.highZones.length)})`)
   console.log(`✓ app/mid/*.json       ${kb(midBytes)} / ${midCount}개 (평균 ${kb(midBytes / midCount)})`)
   console.log(`✓ app/admissions.json  ${kb(admBytes)}${admissions ? '' : ' (시드 없음 — 빈 상태)'}`)
