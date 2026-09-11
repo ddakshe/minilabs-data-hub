@@ -1,0 +1,37 @@
+{
+  "code": "11680",
+  "sido": "서울특별시",
+  "sigungu": "강남구",
+  "status": "verified",
+  "dumping": {
+    "method": "table",
+    "rates": null,
+    "fixedWon": null,
+    "examples": null,
+    "caps": { "monthWon": 500000, "yearWon": null, "monthCount": null, "yearCount": null, "note": "1인당 월 50만원까지" },
+    "deadlineDays": 14,
+    "residency": null,
+    "payment": ["본인 명의 은행계좌 (통장이 없으면 직접 지급)"],
+    "channels": ["신고서(별지 제2호서식)와 증거물을 구청에 제출"],
+    "exclusions": [
+      "환경미화원 등 관계자가 직무와 관련해 신고한 경우",
+      "이미 신고됐거나 과태료 처분이 진행·완료된 경우",
+      "신고자와 투기자 사이에 분쟁이 생긴 경우",
+      "증거가 부족해 과태료를 부과하지 않은 경우"
+    ],
+    "tableOnly": true
+  },
+  "sources": [
+    {
+      "title": "서울특별시 강남구 폐기물 관리 조례",
+      "kind": "조례",
+      "ordinId": "2072588",
+      "mst": "2147835",
+      "articles": ["제36조", "제37조", "별표 5"],
+      "promulgatedAt": "2026-07-10",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=2147835"
+    }
+  ],
+  "note": "금액은 별표 5(한글 파일)에 있다. 과태료를 부과한 뒤 예산 범위에서 지급.",
+  "checkedAt": "2026-09-11"
+}

@@ -1,0 +1,41 @@
+{
+  "code": "51720",
+  "sido": "강원특별자치도",
+  "sigungu": "홍천군",
+  "status": "verified",
+  "dumping": {
+    "method": "table",
+    "rates": null,
+    "fixedWon": null,
+    "examples": null,
+    "caps": { "monthWon": null, "yearWon": null, "monthCount": null, "yearCount": null, "note": "위반행위 유형별로 1인 연 2건까지" },
+    "deadlineDays": 10,
+    "residency": "신고일 6개월 전부터 홍천군에 주민등록",
+    "payment": ["현금", "홍천상품권 등 현물"],
+    "channels": ["위반행위를 입증할 사진 또는 영상과 함께 신고"],
+    "exclusions": ["과태료 처분으로 이어지지 않은 경우", "익명·가명·타인 명의로 신고한 경우"],
+    "tableOnly": true
+  },
+  "sources": [
+    {
+      "title": "홍천군 폐기물 관리 조례",
+      "kind": "조례",
+      "ordinId": "2137858",
+      "mst": "2083847",
+      "articles": ["제16조"],
+      "promulgatedAt": "2025-11-10",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=2083847"
+    },
+    {
+      "title": "홍천군 폐기물 관리 조례 시행규칙",
+      "kind": "규칙",
+      "ordinId": "2137859",
+      "mst": "1710969",
+      "articles": ["제8조", "별표 3"],
+      "promulgatedAt": "2022-05-31",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=1710969"
+    }
+  ],
+  "note": "금액은 시행규칙 별표 3(한글 파일)에 있다. 조례는 기한·증거를, 규칙은 지급 기준·자격을 정한다.",
+  "checkedAt": "2026-09-11"
+}

@@ -89,6 +89,14 @@ auto-option/               ← auto-option-mini(옵션 계산기) 앱용 (기아
   models.json              # 28종. 옵션마다 트림별 상태(불가/기본/유료)
   meta.json                # 수집 시각·건수 + **빠진 차종과 그 이유**
   sources.json             # 차종별 현행 PDF 주소·ETag·수정일. **변경 감지의 기준선**
+report-reward/             ← report-reward-mini(신고하고 포상금받자) 앱용 (국가법령정보 자치법규, 사람이 검수해 점진 추가)
+  COLLECT.md               # 🚨 수집 안내서 — 채우기 전에 반드시 읽는다. 틀린 값이 재배포 없이 바로 앱에 간다
+  regions/{code}.json      # 기초자치단체별 쓰레기 무단투기 신고포상금 (지급률·상한·기한·자격·출처 조례 mst)
+                           # code = region-master 5자리, 일반구는 모시(앞 4자리+0), 세종 36110·제주 50000
+                           # 파일이 없는 곳은 「미수집」이지 「제도 없음」이 아니다 (없음은 status none)
+  regions/index.json       # 전 기초자치단체 × status — build-report-reward.mjs 가 만든다. 앱 동네 시트가 읽는다
+  meta.json                # 건수(verified·stale·none·미수집)·caveats
+  _work/                   # (gitignore) collect-report-reward.mjs 가 받은 조례 원문 재료
 ```
 
 `auto-option/` 은 **월 1회 Actions 가 갱신한다**(`fetch-auto-option.yml`, 1일 09:00 KST).

@@ -21,5 +21,8 @@ local-jobs-status.json
 # walk-forward 로 언제든 재생성된다: node scripts/oil-backfill.mjs --tune
 oil/tune/
 
+# report-reward 조례 원문 재료 — collect-report-reward.mjs 가 만들고 사람이 읽은 뒤 regions/ 로 옮긴다
+report-reward/_work/
+
 # Vision OCR 바이너리 — 플랫폼 종속이라 커밋하지 않는다. 소스에서 다시 빌드된다.
 scripts/lib/ocr-vision
