@@ -1,0 +1,60 @@
+{
+  "code": "11320",
+  "sido": "서울특별시",
+  "sigungu": "도봉구",
+  "status": "verified",
+  "dumping": {
+    "method": "table",
+    "rates": null,
+    "fixedWon": null,
+    "examples": [
+      { "item": "별도 기구 없이 담배꽁초, 껌, 휴지 등을 버리는 행위", "fineWon": 50000, "rewardWon": 20000 },
+      { "item": "간이보관기구(비닐봉지, 천보자기 등)를 이용해 폐기물을 버리는 행위", "fineWon": 200000, "rewardWon": 80000 }
+    ],
+    "caps": null,
+    "deadlineDays": null,
+    "residency": null,
+    "payment": [
+      "신고인 은행계좌 입금"
+    ],
+    "channels": [
+      "전화·팩스·전자우편·방문·서면으로 별지 제5호서식에 따라 신고",
+      "신고인 성명·주소·전화번호, 투기행위자 인적사항, 위반 일시·장소·내용, 사진·동영상 등 입증자료를 포함해야 한다"
+    ],
+    "exclusions": [
+      "최초 신고자가 아닌 경우",
+      "환경미화원, 청소 및 환경분야 관계자 등이 직무와 관련해 신고하는 사항",
+      "이미 신고됐거나 인지되어 과태료 처분이 진행 중이거나 완료된 사항",
+      "입증자료 부족 등으로 과태료가 부과되지 않은 경우",
+      "투기행위가 확인된 날부터 1개월이 지난 경우"
+    ],
+    "tableOnly": false
+  },
+  "sources": [
+    {
+      "title": "서울특별시 도봉구 폐기물 관리 조례",
+      "kind": "조례",
+      "ordinId": "2075743",
+      "mst": "2037461",
+      "articles": [
+        "제38조"
+      ],
+      "promulgatedAt": "2025-05-15",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=2037461"
+    },
+    {
+      "title": "서울특별시 도봉구 폐기물 관리 조례 시행규칙",
+      "kind": "규칙",
+      "ordinId": "2075744",
+      "mst": "1964633",
+      "articles": [
+        "제6조",
+        "별표 3"
+      ],
+      "promulgatedAt": "2024-08-29",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=1964633"
+    }
+  ],
+  "note": "투기행위가 확인된 날부터 1개월이 지나면 지급하지 않아요. 금액이 정해진 유형은 담배꽁초 등과 비닐봉지 두 가지뿐이에요.",
+  "checkedAt": "2026-09-11"
+}

@@ -1,0 +1,55 @@
+{
+  "code": "11110",
+  "sido": "서울특별시",
+  "sigungu": "종로구",
+  "status": "verified",
+  "dumping": {
+    "method": "table",
+    "rates": null,
+    "fixedWon": null,
+    "examples": [
+      { "item": "담배꽁초, 휴지 등 폐기물을 버리는 행위", "fineWon": null, "rewardWon": 10000 },
+      { "item": "비닐봉지, 천보자기 등 간이보관기구를 이용해 버리는 행위", "fineWon": null, "rewardWon": 40000 },
+      { "item": "휴식 또는 행락 중 발생한 쓰레기를 버린 행위", "fineWon": null, "rewardWon": 40000 },
+      { "item": "차량, 손수레 등 운반장비를 이용해 버리는 행위", "fineWon": null, "rewardWon": 100000 },
+      { "item": "사업활동 과정에서 발생한 폐기물(건축물 폐재류 등)을 버리는 행위", "fineWon": null, "rewardWon": 200000 },
+      { "item": "주거생활 관련 생활폐기물 분리보관·배출방법 위반", "fineWon": null, "rewardWon": 20000 }
+    ],
+    "caps": { "monthWon": null, "yearWon": null, "monthCount": null, "yearCount": null, "note": "표에 없는 유형은 1명당 월 30만원까지" },
+    "deadlineDays": null,
+    "residency": null,
+    "payment": null,
+    "channels": [
+      "행위자의 인적사항과 위반내역을 정확히 신고해야 한다"
+    ],
+    "exclusions": null,
+    "tableOnly": false
+  },
+  "sources": [
+    {
+      "title": "서울특별시 종로구 폐기물 관리 조례",
+      "kind": "조례",
+      "ordinId": "2080148",
+      "mst": "2096877",
+      "articles": [
+        "제41조"
+      ],
+      "promulgatedAt": "2025-12-26",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=2096877"
+    },
+    {
+      "title": "서울특별시 종로구 폐기물 관리 조례 시행규칙",
+      "kind": "규칙",
+      "ordinId": "2080149",
+      "mst": "2096883",
+      "articles": [
+        "제5조",
+        "별표 5"
+      ],
+      "promulgatedAt": "2025-12-26",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=2096883"
+    }
+  ],
+  "note": "표에 없는 유형은 과태료의 20%를 지급해요. 같은 건을 여러 명이 신고하면 신고자 수로 나눠서 지급해요.",
+  "checkedAt": "2026-09-11"
+}

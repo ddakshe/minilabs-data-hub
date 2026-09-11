@@ -1,0 +1,57 @@
+{
+  "code": "11305",
+  "sido": "서울특별시",
+  "sigungu": "강북구",
+  "status": "verified",
+  "dumping": {
+    "method": "rate",
+    "rates": [
+      { "item": "과태료 부과금액", "rate": 0.1 }
+    ],
+    "fixedWon": null,
+    "examples": null,
+    "caps": { "monthWon": null, "yearWon": null, "monthCount": 10, "yearCount": null, "note": "신고인 1명당 월 10건까지" },
+    "deadlineDays": 30,
+    "residency": null,
+    "payment": [
+      "신고인 은행계좌 입금"
+    ],
+    "channels": [
+      "위반행위 적발일부터 30일 이내에 전화·팩스·전자우편·방문·서면으로 신고",
+      "신고인 성명·주소·전화번호, 투기행위자 인적사항, 위반 일시·장소·내용, 사진·동영상 등 입증자료를 포함해야 한다"
+    ],
+    "exclusions": [
+      "최초 신고자가 아닌 경우",
+      "청소 및 환경 분야 관계자 등이 직무와 관련해 신고한 사항",
+      "이미 신고했거나 인지되어 과태료 처분이 진행 중이거나 완료된 사항",
+      "입증자료 부족 등으로 과태료가 부과되지 않은 경우"
+    ],
+    "tableOnly": false
+  },
+  "sources": [
+    {
+      "title": "서울특별시 강북구 폐기물 관리 조례",
+      "kind": "조례",
+      "ordinId": "2073463",
+      "mst": "2115267",
+      "articles": [
+        "제46조"
+      ],
+      "promulgatedAt": "2026-03-13",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=2115267"
+    },
+    {
+      "title": "서울특별시 강북구 폐기물 관리 조례 시행규칙",
+      "kind": "규칙",
+      "ordinId": "2150282",
+      "mst": "2082667",
+      "articles": [
+        "제8조"
+      ],
+      "promulgatedAt": "2025-11-07",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=2082667"
+    }
+  ],
+  "note": "과태료 금액의 10% 범위에서 지급하되 최저 3만원이에요. 과태료를 부과한 날부터 1개월 안에 지급해요.",
+  "checkedAt": "2026-09-11"
+}
