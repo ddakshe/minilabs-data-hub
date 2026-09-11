@@ -1,0 +1,63 @@
+{
+  "code": "11545",
+  "sido": "서울특별시",
+  "sigungu": "금천구",
+  "status": "verified",
+  "dumping": {
+    "method": "rate",
+    "rates": [
+      { "item": "과태료 금액", "rate": 0.4 },
+      { "item": "담배꽁초·휴지 등 휴대하던 생활폐기물을 버린 경우", "rate": 0.2 }
+    ],
+    "fixedWon": null,
+    "examples": null,
+    "caps": { "monthWon": 500000, "yearWon": null, "monthCount": null, "yearCount": null, "note": "1명당 월 50만원까지" },
+    "deadlineDays": 14,
+    "residency": null,
+    "payment": [
+      "신고자 은행계좌 입금"
+    ],
+    "channels": [
+      "위반행위를 발견한 날부터 14일 이내에 별지 제6호서식으로 청소행정과에 신고",
+      "직접방문·우편·전화·팩스·인터넷으로 실명 신고",
+      "위반자에 대한 객관적이고 명확한 증거물·증빙자료를 제출해야 한다"
+    ],
+    "exclusions": [
+      "1명당 신고포상금 지급액이 월 50만원을 넘는 경우",
+      "환경미화원, 청소 및 환경분야 관계자 등이 직무와 관련해 신고하는 사항",
+      "이미 신고됐거나 인지되어 과태료 처분이 진행·완료된 사항",
+      "입증자료가 불충분해 과태료 처분을 할 수 없는 사항",
+      "같은 건을 중복 신고한 경우(최초 신고자 1명만 지급)",
+      "같은 사람이 같은 날짜·장소·위반행위를 신고하면 1건으로만 지급"
+    ],
+    "tableOnly": false
+  },
+  "sources": [
+    {
+      "title": "서울특별시 금천구 폐기물 관리 조례",
+      "kind": "조례",
+      "ordinId": "2074916",
+      "mst": "2106685",
+      "articles": [
+        "제4조"
+      ],
+      "promulgatedAt": "2026-01-08",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=2106685"
+    },
+    {
+      "title": "서울특별시 금천구 폐기물 관리 조례 시행규칙",
+      "kind": "규칙",
+      "ordinId": "2074917",
+      "mst": "2165347",
+      "articles": [
+        "제11조",
+        "제12조",
+        "제13조"
+      ],
+      "promulgatedAt": "2026-08-27",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=2165347"
+    }
+  ],
+  "note": "과태료 금액의 40%를 지급하고, 담배꽁초·휴지처럼 휴대하던 쓰레기를 버린 경우만 20%예요. 과태료 이의신청 기간이 지난 뒤 계좌로 입금해요.",
+  "checkedAt": "2026-09-11"
+}

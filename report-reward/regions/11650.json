@@ -1,0 +1,70 @@
+{
+  "code": "11650",
+  "sido": "서울특별시",
+  "sigungu": "서초구",
+  "status": "verified",
+  "dumping": {
+    "method": "table",
+    "rates": null,
+    "fixedWon": null,
+    "examples": [
+      { "item": "담배꽁초, 휴지 등 휴대하던 폐기물을 버린 행위", "fineWon": null, "rewardWon": 10000 },
+      { "item": "비닐봉지, 천보자기 등 간이보관기구를 이용해 폐기물을 버린 행위", "fineWon": null, "rewardWon": 100000 },
+      { "item": "휴식 또는 행락 중 발생한 쓰레기를 버린 경우", "fineWon": null, "rewardWon": 100000 },
+      { "item": "차량, 손수레 등 운반장비를 이용해 폐기물을 버린 경우", "fineWon": null, "rewardWon": 250000 },
+      { "item": "사업활동 과정에서 발생하는 생활폐기물을 버린 경우", "fineWon": null, "rewardWon": 500000 },
+      { "item": "생활폐기물을 매립한 경우", "fineWon": null, "rewardWon": 350000 },
+      { "item": "생활폐기물을 소각한 경우", "fineWon": null, "rewardWon": 250000 },
+      { "item": "가정용 생활폐기물을 혼합배출하거나 배출 시간·장소를 위반한 경우", "fineWon": null, "rewardWon": 50000 }
+    ],
+    "caps": { "monthWon": 500000, "yearWon": null, "monthCount": null, "yearCount": null, "note": "1명당 월 50만원까지" },
+    "deadlineDays": null,
+    "residency": null,
+    "payment": [
+      "신고자 예금계좌 입금"
+    ],
+    "channels": [
+      "위반행위일부터 1개월 이내에 신고해야 한다",
+      "방문·우편·전화·팩스·인터넷·휴대전화로 신고 (방문은 청소행정과 또는 위반행위 관할 동 주민센터)",
+      "위반자 인적사항과 위반 사실을 증명할 사진·영상 등 객관적이고 명확한 입증자료를 첨부해 본인 실명으로 신고"
+    ],
+    "exclusions": [
+      "최초 신고자가 아닌 경우",
+      "환경공무관, 청소 및 환경분야 관계자 등이 직무와 관련해 신고하는 사항",
+      "이미 신고됐거나 인지되어 과태료 처분이 진행·완료된 사항",
+      "위반자 인적사항이 명확하지 않거나 입증자료가 불충분해 과태료 처분을 할 수 없는 사항",
+      "신고자 본인의 실명으로 신고하지 않은 경우",
+      "보완 요구를 받고 10일 안에 보완하지 않은 경우"
+    ],
+    "tableOnly": false
+  },
+  "sources": [
+    {
+      "title": "서울특별시 서초구 폐기물관리 조례",
+      "kind": "조례",
+      "ordinId": "2145974",
+      "mst": "1993571",
+      "articles": [
+        "제35조"
+      ],
+      "promulgatedAt": "2024-12-19",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=1993571"
+    },
+    {
+      "title": "서울특별시 서초구 폐기물관리 조례 시행규칙",
+      "kind": "규칙",
+      "ordinId": "2141336",
+      "mst": "2022751",
+      "articles": [
+        "제6조",
+        "제7조",
+        "제8조",
+        "별표 4"
+      ],
+      "promulgatedAt": "2025-03-20",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=2022751"
+    }
+  ],
+  "note": "무단투기뿐 아니라 혼합배출·배출시간 위반 신고도 포상금 대상이에요. 과태료 이의신청 기간이 지난 뒤 예금계좌로 지급해요.",
+  "checkedAt": "2026-09-11"
+}

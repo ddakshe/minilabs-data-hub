@@ -1,0 +1,46 @@
+{
+  "code": "11470",
+  "sido": "서울특별시",
+  "sigungu": "양천구",
+  "status": "verified",
+  "dumping": {
+    "method": "table",
+    "rates": null,
+    "fixedWon": null,
+    "examples": [
+      { "item": "별도 기구 없이 담배꽁초, 휴지 등을 버리는 행위", "fineWon": null, "rewardWon": 10000 },
+      { "item": "쓰레기를 비닐봉지에 담아 아무데나 버리는 행위", "fineWon": null, "rewardWon": 50000 },
+      { "item": "쓰레기를 불법으로 소각하는 행위", "fineWon": null, "rewardWon": 50000 },
+      { "item": "공원·유원지 등에서 휴식 또는 행락 중 발생한 쓰레기를 수거하지 않는 행위", "fineWon": null, "rewardWon": 50000 },
+      { "item": "차량, 손수레 등 별도 운반장비를 이용해 폐기물을 버리는 행위", "fineWon": null, "rewardWon": 50000 },
+      { "item": "건축폐기물 등 사업활동 과정에서 발생하는 폐기물을 버리는 행위", "fineWon": null, "rewardWon": 250000 }
+    ],
+    "caps": null,
+    "deadlineDays": null,
+    "residency": null,
+    "payment": [
+      "쓰레기종량제봉투·전화카드·도서상품권 등 포상품으로 대신 지급 가능 (행위유형별 포상금의 일정 비율)"
+    ],
+    "channels": null,
+    "exclusions": null,
+    "tableOnly": false
+  },
+  "sources": [
+    {
+      "title": "서울특별시 양천구 폐기물관리 조례",
+      "kind": "조례",
+      "ordinId": "2078362",
+      "mst": "1987725",
+      "articles": [
+        "제36조",
+        "제37조",
+        "제38조",
+        "별표 5"
+      ],
+      "promulgatedAt": "2024-11-21",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=1987725"
+    }
+  ],
+  "note": "증거가 부족해 적발하지 못했더라도 신고 내용이 정확하다고 확인되면 지급할 수 있어요. 종량제봉투·상품권 같은 포상품은 과태료 부과 여부와 상관없이 투기 사실만 확인되면 받을 수 있어요.",
+  "checkedAt": "2026-09-11"
+}

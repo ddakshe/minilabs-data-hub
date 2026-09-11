@@ -1,0 +1,50 @@
+{
+  "code": "11440",
+  "sido": "서울특별시",
+  "sigungu": "마포구",
+  "status": "verified",
+  "dumping": {
+    "method": "fixed",
+    "rates": null,
+    "fixedWon": 10000,
+    "examples": null,
+    "caps": { "monthWon": 200000, "yearWon": null, "monthCount": null, "yearCount": null, "note": "신고자 1명당 월 20만원까지" },
+    "deadlineDays": null,
+    "residency": null,
+    "payment": [
+      "신고인 본인 명의 은행계좌 입금"
+    ],
+    "channels": [
+      "전화·방문·서면으로 관할 동장 또는 구청장(청소행정과장)에게 신고",
+      "투기행위자 성명·주소, 투기 일시·장소, 투기 내용을 포함해야 한다"
+    ],
+    "exclusions": null,
+    "tableOnly": false
+  },
+  "sources": [
+    {
+      "title": "서울특별시 마포구 폐기물관리 조례",
+      "kind": "조례",
+      "ordinId": "2076474",
+      "mst": "2097023",
+      "articles": [
+        "제41조"
+      ],
+      "promulgatedAt": "2025-12-26",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=2097023"
+    },
+    {
+      "title": "서울특별시 마포구 폐기물관리 조례 시행규칙",
+      "kind": "규칙",
+      "ordinId": "2076475",
+      "mst": "2154035",
+      "articles": [
+        "제9조"
+      ],
+      "promulgatedAt": "2026-07-30",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=2154035"
+    }
+  ],
+  "note": "유형과 상관없이 과태료 부과 건수당 1만원을 지급해요. 투기한 사람에게 과태료를 부과한 뒤 본인 명의 계좌로 받아요.",
+  "checkedAt": "2026-09-11"
+}
