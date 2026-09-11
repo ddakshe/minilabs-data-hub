@@ -1,0 +1,43 @@
+{
+  "code": "28720",
+  "sido": "인천광역시",
+  "sigungu": "옹진군",
+  "status": "verified",
+  "dumping": {
+    "method": "table",
+    "rates": null,
+    "fixedWon": null,
+    "examples": [
+      { "item": "담배꽁초·휴지 등을 버린 경우", "fineWon": null, "rewardWon": 15000 },
+      { "item": "비닐봉지·보자기에 담아 버린 경우", "fineWon": null, "rewardWon": 50000 },
+      { "item": "휴식·행락 중 쓰레기를 버린 경우", "fineWon": null, "rewardWon": 50000 },
+      { "item": "차량·손수레로 버린 경우", "fineWon": null, "rewardWon": 100000 },
+      { "item": "사업활동 폐기물을 버린 경우", "fineWon": null, "rewardWon": 250000 }
+    ],
+    "caps": null,
+    "deadlineDays": null,
+    "residency": null,
+    "payment": null,
+    "channels": null,
+    "exclusions": [
+      "불법투기자에게 과태료를 부과하지 않은 경우"
+    ],
+    "tableOnly": false
+  },
+  "sources": [
+    {
+      "title": "옹진군 폐기물관리에 관한 조례",
+      "kind": "조례",
+      "ordinId": "2098740",
+      "mst": "2004737",
+      "articles": [
+        "제23조",
+        "별표 10"
+      ],
+      "promulgatedAt": "2024-12-31",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=2004737"
+    }
+  ],
+  "note": "불법투기자에게 과태료를 부과한 경우에만 지급해요. 세부 지급기준은 군수가 따로 정해서 조례에는 금액만 있어요.",
+  "checkedAt": "2026-09-11"
+}

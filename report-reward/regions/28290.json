@@ -1,0 +1,54 @@
+{
+  "code": "28290",
+  "sido": "인천광역시",
+  "sigungu": "검단구",
+  "status": "verified",
+  "dumping": {
+    "method": "rate",
+    "rates": [
+      { "item": "모든 무단투기 유형", "rate": 0.2 }
+    ],
+    "fixedWon": null,
+    "examples": null,
+    "caps": null,
+    "deadlineDays": null,
+    "residency": null,
+    "payment": [
+      "신고자 명의 통장 입금 (통장 사본이 필요해요)"
+    ],
+    "channels": [
+      "별지 제8호서식의 신고서로 접수해요"
+    ],
+    "exclusions": [
+      "담배꽁초·휴지 등 개인이 소지하던 폐기물 투기를 신고한 경우는 포상금을 주지 않아요",
+      "피신고자가 이의를 제기해 관할 법원에 과태료 재판이 신청된 경우"
+    ],
+    "tableOnly": false
+  },
+  "sources": [
+    {
+      "title": "인천광역시 검단구 폐기물관리에 관한 조례",
+      "kind": "조례",
+      "ordinId": "2266544",
+      "mst": "2152795",
+      "articles": [
+        "제22조"
+      ],
+      "promulgatedAt": "2026-07-01",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=2152795"
+    },
+    {
+      "title": "인천광역시 검단구 폐기물관리에 관한 조례 시행규칙",
+      "kind": "규칙",
+      "ordinId": "2266144",
+      "mst": "2149049",
+      "articles": [
+        "제8조"
+      ],
+      "promulgatedAt": "2026-07-01",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=2149049"
+    }
+  ],
+  "note": "조례는 50% 이내라고 정하고 시행규칙이 20%로 확정했어요. 과태료 부과일부터 1개월 안에 통장으로 받아요.",
+  "checkedAt": "2026-09-11"
+}

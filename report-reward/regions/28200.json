@@ -1,0 +1,60 @@
+{
+  "code": "28200",
+  "sido": "인천광역시",
+  "sigungu": "남동구",
+  "status": "verified",
+  "dumping": {
+    "method": "rate",
+    "rates": [
+      { "item": "그 밖의 무단투기", "rate": 0.2 },
+      { "item": "담배꽁초·휴지 등을 버린 경우", "rate": 0.1 }
+    ],
+    "fixedWon": null,
+    "examples": null,
+    "caps": { "monthWon": null, "yearWon": 500000, "monthCount": null, "yearCount": 30, "note": "배우자·직계존비속을 합쳐 연 30건·연 50만원까지" },
+    "deadlineDays": null,
+    "residency": null,
+    "payment": null,
+    "channels": [
+      "투기행위 적발일부터 1개월 안에 신고해야 해요",
+      "버린 사람의 인적사항과 투기 내용을 정확히 알려야 해요"
+    ],
+    "exclusions": [
+      "폐기물 관련 업무를 담당하는 공무원(사회복무요원 포함)이 직무와 관련해 신고한 경우",
+      "환경분야 감시원으로 위촉되어 별도의 수당을 받는 경우",
+      "익명 또는 가명을 사용해 포상금 지급이 불가능한 경우",
+      "이미 조사·수사 중이거나 조치된 사항을 신고한 경우",
+      "포상금을 받을 목적으로 사전공모 등 부정·부당하게 신고한 경우",
+      "위반 대상을 특정할 수 없거나 위반 일시·장소가 명확하지 않아 과태료 부과가 불가능한 경우",
+      "부과된 과태료에 이의를 제기해 과태료 재판을 받게 되는 경우"
+    ],
+    "tableOnly": false
+  },
+  "sources": [
+    {
+      "title": "남동구 폐기물관리에 관한 조례",
+      "kind": "조례",
+      "ordinId": "2109152",
+      "mst": "1732579",
+      "articles": [
+        "제31조"
+      ],
+      "promulgatedAt": "2022-10-06",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=1732579"
+    },
+    {
+      "title": "남동구 폐기물관리에 관한 조례 시행규칙",
+      "kind": "규칙",
+      "ordinId": "2109153",
+      "mst": "1691495",
+      "articles": [
+        "제9조",
+        "제10조"
+      ],
+      "promulgatedAt": "2022-03-17",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=1691495"
+    }
+  ],
+  "note": "과태료의 20%를 지급하고, 담배꽁초·휴지처럼 휴대하던 쓰레기는 10%예요. 과태료 납부기한이 끝난 뒤 7일 안에 받아요.",
+  "checkedAt": "2026-09-11"
+}
