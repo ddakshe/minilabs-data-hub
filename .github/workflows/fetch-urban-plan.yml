@@ -4,7 +4,8 @@ name: Fetch Urban Plan (도시계획 지도 · 맥)
 #
 #   1) 택지정보시스템(jigu.go.kr) 개발사업지구 — 무인증 · 세션 쿠키 필수 · 월 1회 갱신
 #   2) 전국도시재생사업정보표준데이터 — data.go.kr 다운로드 AJAX(무인증) · 매월 초 병합
-#   3) GTX seed 검증 — 네트워크 없음. seed 를 손으로 고쳤을 때 여기서 한 번 더 막힌다
+#   3) 전국도시개발사업정보표준데이터 — 같은 AJAX(무인증). 지자체가 각자 올려 기준일이 행마다 다르다
+#   4) GTX seed 검증 — 네트워크 없음. seed 를 손으로 고쳤을 때 여기서 한 번 더 막힌다
 #
 # 인증키를 하나도 쓰지 않는다 → docs/api-limits.json 에 신고할 예산이 없다.
 #
@@ -62,6 +63,9 @@ jobs:
 
       - name: 도시재생 사업지
         run: node scripts/fetch-urban-renewal.mjs
+
+      - name: 도시개발사업
+        run: node scripts/fetch-urban-develop.mjs
 
       - name: GTX seed 검증
         run: node scripts/build-urban-gtx.mjs

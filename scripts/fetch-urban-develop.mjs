@@ -18,6 +18,10 @@
  * 3) 시군구명에 시도를 붙여 올리는 기관이 있다("경기도 안산시") → 앞 토큰이 시도면 뗀다.
  * 4) 사업기간은 **YYYY-MM** 이다(도시재생은 YYYY). 끝이 비어 있는 곳이 많다 — 그대로 둔다.
  * 5) 경계 폴리곤은 없다. 점만 있다 — 앱은 핀으로만 그리고 "경계 없음"을 표기해야 한다.
+ * 6) 🚨 **기준일(DATA_CRTR_YMD)이 행마다 다르다.** 지자체가 각자 올리기 때문이다 —
+ *    2026-09-11 실측 24가지 날짜, 2025-01 부터 2026-06 까지 흩어져 있다.
+ *    그래서 파일 하나의 `baseDate` 로 "이 데이터는 언제 것"이라고 말할 수 없다.
+ *    항목마다 `baseDate` 를 실어 앱이 사업별로 보여준다. 파일의 `latestDate` 는 그중 가장 최근일 뿐이다.
  *
  * 약관: 공공데이터포털 표준데이터. 가공 산출물만 낸다. 앱에 출처·기준일을 표기한다.
  */
@@ -101,13 +105,16 @@ function build(rows) {
       area: num(r.BZAR),
       households: num(r.ACTC_HH_CNT),
       period: { start: ym(r.BIZ_BGNG_YM), end: ym(r.BIZ_END_YM) },
+      // 행마다 다르다(함정 6) — 사업별로 보여줘야 정확하다
+      baseDate: (r.DATA_CRTR_YMD ?? '').trim() || null,
       method: (r.BIZ_MTH_SE_NM ?? '').trim() || null,
       developer: (r.BIZ_DVLR_NM ?? '').trim() || null,
       agency: (r.INSTT_NM ?? '').trim() || null,
     }
   })
-  const baseDate = rows.map((r) => r.DATA_CRTR_YMD).filter(Boolean).sort().at(-1) ?? null
-  return { items, noPoint, baseDate }
+  // 파일 전체의 기준일이 아니다 — 가장 최근에 올라온 한 건의 날짜다(함정 6)
+  const latestDate = rows.map((r) => r.DATA_CRTR_YMD).filter(Boolean).sort().at(-1) ?? null
+  return { items, noPoint, latestDate }
 }
 
 // ─── 실행 ───────────────────────────────────────────────────────────────
@@ -116,7 +123,7 @@ const rows = await download()
 const built = build(rows)
 
 const fail = []
-if (!built.baseDate) fail.push('baseDate 를 못 뽑았다')
+if (!built.latestDate) fail.push('latestDate 를 못 뽑았다')
 if (built.items.length < 100) fail.push(`건수 ${built.items.length} — 2026-09-11 실측 189건보다 크게 적다`)
 for (const it of built.items) {
   if (!it.id || !it.name) fail.push(`id·name 이 비었다: ${JSON.stringify(it).slice(0, 80)}`)
@@ -132,10 +139,12 @@ if (fail.length) {
 const out = path.join(ROOT, 'urban-plan', 'develop.json')
 await fs.writeFile(out, JSON.stringify({
   source: '전국도시개발사업정보표준데이터 (공공데이터포털)',
-  baseDate: built.baseDate,
+  /** 가장 최근에 올라온 한 건의 날짜. 파일 전체의 기준일이 아니다 — 항목마다 baseDate 가 따로 있다 */
+  latestDate: built.latestDate,
   items: built.items,
 }))
 
 const bySido = built.items.reduce((a, i) => ((a[i.sido] = (a[i.sido] ?? 0) + 1), a), {})
-console.log(`✓ develop.json — ${built.items.length}건 · 기준일 ${built.baseDate} · 좌표 없음 ${built.noPoint.length}`)
+const dates = new Set(built.items.map((i) => i.baseDate).filter(Boolean))
+console.log(`✓ develop.json — ${built.items.length}건 · 최근 등록 ${built.latestDate} · 등록일 ${dates.size}가지 · 좌표 없음 ${built.noPoint.length}`)
 console.log(`  시도 ${JSON.stringify(bySido)}`)
