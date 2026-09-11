@@ -8,13 +8,13 @@
     "rates": null,
     "fixedWon": null,
     "examples": [
-      { "item": "별도 기구 없이 휴대하던 폐기물(담배꽁초, 휴지 등)을 버리는 행위", "fineWon": 50000, "rewardWon": 5000 },
-      { "item": "간이보관기구(비닐봉지, 보자기 등)를 이용해 폐기물을 버리는 행위", "fineWon": 200000, "rewardWon": 100000 },
-      { "item": "대형폐기물을 버리는 행위", "fineWon": 100000, "rewardWon": 50000 },
-      { "item": "휴식 또는 행락 중 발생한 쓰레기를 수거하지 않는 행위", "fineWon": 200000, "rewardWon": 100000 },
-      { "item": "차량, 손수레 등 별도 운반장비를 이용해 폐기물을 버리는 행위", "fineWon": 500000, "rewardWon": 100000 },
-      { "item": "사업활동 과정에서 발생하는 생활폐기물을 버리는 행위", "fineWon": 1000000, "rewardWon": 300000 },
-      { "item": "폐기물을 불법 소각하는 행위", "fineWon": 500000, "rewardWon": 100000 }
+      { "item": "담배꽁초·휴지 등을 버린 경우", "fineWon": 50000, "rewardWon": 5000 },
+      { "item": "비닐봉지·보자기에 담아 버린 경우", "fineWon": 200000, "rewardWon": 100000 },
+      { "item": "대형폐기물을 버린 경우", "fineWon": 100000, "rewardWon": 50000 },
+      { "item": "휴식·행락 중 쓰레기를 버린 경우", "fineWon": 200000, "rewardWon": 100000 },
+      { "item": "차량·손수레로 버린 경우", "fineWon": 500000, "rewardWon": 100000 },
+      { "item": "사업활동 폐기물을 버린 경우", "fineWon": 1000000, "rewardWon": 300000 },
+      { "item": "쓰레기를 불법 소각한 경우", "fineWon": 500000, "rewardWon": 100000 }
     ],
     "caps": { "monthWon": 200000, "yearWon": null, "monthCount": 5, "yearCount": null, "note": "생활쓰레기 무단투기는 1명당 매월 최초신고 기준 5건·20만원까지" },
     "deadlineDays": 14,
@@ -22,7 +22,7 @@
     "payment": null,
     "channels": [
       "방문·전화·팩스·우편으로 신고",
-      "신고자는 별지 제1호서식을 작성해야 한다"
+      "신고자는 별지 제1호서식을 작성해야 해요"
     ],
     "exclusions": [
       "이미 신고됐거나 인지되어 과태료 처분이 진행·완료된 사항",

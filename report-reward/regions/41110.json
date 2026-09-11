@@ -5,13 +5,17 @@
   "status": "verified",
   "dumping": {
     "method": "rate",
-    "rates": [{ "item": "과태료 부과금액", "rate": 0.2 }],
+    "rates": [
+      { "item": "과태료 부과금액", "rate": 0.2 }
+    ],
     "fixedWon": null,
     "examples": null,
     "caps": { "monthWon": 500000, "yearWon": null, "monthCount": null, "yearCount": null, "note": "주민등록 세대당 월 50만원까지" },
     "deadlineDays": 10,
     "residency": "신고일 1개월 전부터 수원시에 주민등록",
-    "payment": ["현금 (계좌이체)"],
+    "payment": [
+      "현금 (계좌이체)"
+    ],
     "channels": null,
     "exclusions": [
       "과태료를 부과하지 않은 경우",
@@ -27,7 +31,10 @@
       "kind": "조례",
       "ordinId": "2083628",
       "mst": "1440613",
-      "articles": ["제10조", "제11조"],
+      "articles": [
+        "제10조",
+        "제11조"
+      ],
       "promulgatedAt": "2019-12-31",
       "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=1440613"
     }

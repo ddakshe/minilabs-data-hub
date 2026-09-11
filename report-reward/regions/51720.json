@@ -7,14 +7,33 @@
     "method": "table",
     "rates": null,
     "fixedWon": null,
-    "examples": null,
+    "examples": [
+      { "item": "담배꽁초·휴지 등을 버린 경우", "fineWon": null, "rewardWon": 10000 },
+      { "item": "비닐봉지·보자기에 담아 버린 경우", "fineWon": null, "rewardWon": 40000 },
+      { "item": "휴식·행락 중 쓰레기를 버린 경우", "fineWon": null, "rewardWon": 40000 },
+      { "item": "차량·손수레로 버린 경우", "fineWon": null, "rewardWon": 100000 },
+      { "item": "생활폐기물을 매립한 경우", "fineWon": null, "rewardWon": 140000 },
+      { "item": "생활폐기물을 소각한 경우", "fineWon": null, "rewardWon": 100000 },
+      { "item": "사업활동 폐기물 투기·매립·소각", "fineWon": null, "rewardWon": 200000 },
+      { "item": "종량제봉투를 쓰지 않은 경우", "fineWon": null, "rewardWon": 20000 },
+      { "item": "재활용품에 쓰레기를 섞어 배출한 경우", "fineWon": null, "rewardWon": 20000 },
+      { "item": "성상별 미분리·지정장소 외 배출", "fineWon": null, "rewardWon": 20000 }
+    ],
     "caps": { "monthWon": null, "yearWon": null, "monthCount": null, "yearCount": null, "note": "위반행위 유형별로 1인 연 2건까지" },
     "deadlineDays": 10,
     "residency": "신고일 6개월 전부터 홍천군에 주민등록",
-    "payment": ["현금", "홍천상품권 등 현물"],
-    "channels": ["위반행위를 입증할 사진 또는 영상과 함께 신고"],
-    "exclusions": ["과태료 처분으로 이어지지 않은 경우", "익명·가명·타인 명의로 신고한 경우"],
-    "tableOnly": true
+    "payment": [
+      "현금",
+      "홍천상품권 등 현물"
+    ],
+    "channels": [
+      "위반행위를 입증할 사진 또는 영상과 함께 신고"
+    ],
+    "exclusions": [
+      "과태료 처분으로 이어지지 않은 경우",
+      "익명·가명·타인 명의로 신고한 경우"
+    ],
+    "tableOnly": false
   },
   "sources": [
     {
@@ -22,7 +41,9 @@
       "kind": "조례",
       "ordinId": "2137858",
       "mst": "2083847",
-      "articles": ["제16조"],
+      "articles": [
+        "제16조"
+      ],
       "promulgatedAt": "2025-11-10",
       "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=2083847"
     },
@@ -31,7 +52,10 @@
       "kind": "규칙",
       "ordinId": "2137859",
       "mst": "1710969",
-      "articles": ["제8조", "별표 3"],
+      "articles": [
+        "제8조",
+        "별표 3"
+      ],
       "promulgatedAt": "2022-05-31",
       "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=1710969"
     }

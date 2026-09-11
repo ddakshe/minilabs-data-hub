@@ -8,12 +8,12 @@
     "rates": null,
     "fixedWon": null,
     "examples": [
-      { "item": "별도 기구 없이 휴대하던 폐기물(껌, 담배꽁초, 휴지 등)을 버리는 행위", "fineWon": 50000, "rewardWon": 10000 },
-      { "item": "간이보관기구(비닐봉지, 천보자기 등)를 이용해 폐기물을 버리는 행위", "fineWon": 200000, "rewardWon": 30000 },
-      { "item": "생활폐기물을 불법으로 소각하는 행위", "fineWon": 500000, "rewardWon": 30000 },
-      { "item": "휴식 또는 행락 중 발생한 쓰레기를 수거하지 않고 버리는 행위", "fineWon": 200000, "rewardWon": 30000 },
-      { "item": "차량, 손수레 등 별도 운반장비를 이용해 폐기물을 버리는 행위", "fineWon": 500000, "rewardWon": 50000 },
-      { "item": "사업활동 과정에서 발생하는 폐기물(건축폐재류 등)을 버리는 행위", "fineWon": 1000000, "rewardWon": 200000 }
+      { "item": "담배꽁초·휴지 등을 버린 경우", "fineWon": 50000, "rewardWon": 10000 },
+      { "item": "비닐봉지·보자기에 담아 버린 경우", "fineWon": 200000, "rewardWon": 30000 },
+      { "item": "쓰레기를 불법 소각한 경우", "fineWon": 500000, "rewardWon": 30000 },
+      { "item": "휴식·행락 중 쓰레기를 버린 경우", "fineWon": 200000, "rewardWon": 30000 },
+      { "item": "차량·손수레로 버린 경우", "fineWon": 500000, "rewardWon": 50000 },
+      { "item": "사업활동 폐기물을 버린 경우", "fineWon": 1000000, "rewardWon": 200000 }
     ],
     "caps": { "monthWon": null, "yearWon": 1000000, "monthCount": 50, "yearCount": null, "note": "1명당 해당 연도 100만원까지, 월 50건까지" },
     "deadlineDays": null,
@@ -22,7 +22,7 @@
       "신고자 은행계좌 입금 원칙 (계좌입금이 불가능하면 예외)"
     ],
     "channels": [
-      "객관적이고 명확한 증거자료를 제출해야 한다"
+      "객관적이고 명확한 증거자료를 제출해야 해요"
     ],
     "exclusions": [
       "최초 신고자가 아닌 경우",

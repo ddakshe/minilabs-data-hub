@@ -8,13 +8,13 @@
     "rates": null,
     "fixedWon": null,
     "examples": [
-      { "item": "별도 기구 없이 휴대하던 폐기물(담배꽁초, 휴지 등)을 버리는 행위", "fineWon": null, "rewardWon": 10000 },
-      { "item": "폐기물을 불법으로 소각하는 행위", "fineWon": null, "rewardWon": 30000 },
-      { "item": "간이보관기구(비닐봉지, 천보자기 등)를 이용해 폐기물을 버리는 행위", "fineWon": null, "rewardWon": 30000 },
-      { "item": "휴식 또는 행락 중 발생한 쓰레기를 수거하지 않은 경우", "fineWon": null, "rewardWon": 30000 },
+      { "item": "담배꽁초·휴지 등을 버린 경우", "fineWon": null, "rewardWon": 10000 },
+      { "item": "쓰레기를 불법 소각한 경우", "fineWon": null, "rewardWon": 30000 },
+      { "item": "비닐봉지·보자기에 담아 버린 경우", "fineWon": null, "rewardWon": 30000 },
+      { "item": "휴식·행락 중 쓰레기를 버린 경우", "fineWon": null, "rewardWon": 30000 },
       { "item": "대형폐기물을 버린 경우", "fineWon": null, "rewardWon": 60000 },
-      { "item": "차량, 손수레 등 별도 운반장비를 이용해 폐기물을 버리는 행위", "fineWon": null, "rewardWon": 100000 },
-      { "item": "사업활동 과정에서 폐기물(건축폐재류 등)을 버린 경우", "fineWon": null, "rewardWon": 200000 }
+      { "item": "차량·손수레로 버린 경우", "fineWon": null, "rewardWon": 100000 },
+      { "item": "사업활동 폐기물을 버린 경우", "fineWon": null, "rewardWon": 200000 }
     ],
     "caps": { "monthWon": null, "yearWon": null, "monthCount": null, "yearCount": null, "note": "배우자·직계존비속을 합쳐 분기 10건까지" },
     "deadlineDays": 15,
@@ -24,8 +24,8 @@
     ],
     "channels": [
       "위반행위 15일 이내에 방문·우편·정보통신망 등으로 신고",
-      "신고인 성명·생년월일·주소·전화번호·직업, 피신고인 성명·주소 또는 업소 명칭과 위치, 신고 장소와 적발내용을 포함해야 한다",
-      "육하원칙에 따라 신고하고 객관적이고 명백한 증거품·증거자료를 제출해야 한다"
+      "신고인 성명·생년월일·주소·전화번호·직업, 버린 사람 성명·주소 또는 업소 명칭과 위치, 신고 장소와 적발내용을 포함해야 해요",
+      "육하원칙에 따라 신고하고 객관적이고 명백한 증거품·증거자료를 제출해야 해요"
     ],
     "exclusions": [
       "신고자가 중복되면 최초 신고자에게만 지급",

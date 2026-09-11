@@ -8,14 +8,14 @@
     "rates": null,
     "fixedWon": null,
     "examples": [
-      { "item": "담배꽁초, 휴지 등 휴대하던 생활폐기물을 버린 경우", "fineWon": null, "rewardWon": 6000 },
-      { "item": "비닐봉지, 천보자기 등 간이보관기구를 이용해 생활폐기물을 버린 경우", "fineWon": null, "rewardWon": 40000 },
+      { "item": "담배꽁초·휴지 등을 버린 경우", "fineWon": null, "rewardWon": 6000 },
+      { "item": "비닐봉지·보자기에 담아 버린 경우", "fineWon": null, "rewardWon": 40000 },
       { "item": "휴식 또는 행락 중 발생한 쓰레기를 버린 경우", "fineWon": null, "rewardWon": 40000 },
-      { "item": "차량, 손수레 등 운반장비를 이용해 생활폐기물을 버린 경우", "fineWon": null, "rewardWon": 100000 },
-      { "item": "사업활동 과정에서 발생하는 생활폐기물을 버린 경우", "fineWon": null, "rewardWon": 200000 },
-      { "item": "사업활동 과정에서 발생하는 생활폐기물을 매립한 경우", "fineWon": null, "rewardWon": 200000 },
+      { "item": "차량·손수레로 버린 경우", "fineWon": null, "rewardWon": 100000 },
+      { "item": "사업활동 폐기물을 버린 경우", "fineWon": null, "rewardWon": 200000 },
+      { "item": "사업활동 폐기물을 매립한 경우", "fineWon": null, "rewardWon": 200000 },
       { "item": "그 밖의 생활폐기물을 매립한 경우", "fineWon": null, "rewardWon": 140000 },
-      { "item": "사업활동 과정에서 발생하는 생활폐기물을 소각한 경우", "fineWon": null, "rewardWon": 200000 },
+      { "item": "사업활동 폐기물을 소각한 경우", "fineWon": null, "rewardWon": 200000 },
       { "item": "그 밖의 생활폐기물을 소각한 경우", "fineWon": null, "rewardWon": 100000 }
     ],
     "caps": { "monthWon": 1000000, "yearWon": 5000000, "monthCount": 30, "yearCount": null, "note": "배우자와 본인·배우자의 직계존비속을 합쳐 월 30건·월 100만원·연 500만원까지" },
@@ -24,11 +24,11 @@
     "payment": null,
     "channels": [
       "위반행위 적발일부터 14일 이내에 통신망·우편·방문 등으로 신고",
-      "신고자 성명·생년월일·주소·전화번호, 위반행위 증거자료, 위반장소·일시·내용을 포함해야 한다"
+      "신고자 성명·생년월일·주소·전화번호, 위반행위 증거자료, 위반장소·일시·내용을 포함해야 해요"
     ],
     "exclusions": [
-      "피신고자가 불분명해 과태료 부과가 불가능한 경우",
-      "피신고자의 위반행위가 이미 신고 접수됐거나 공무원이 단속한 경우",
+      "버린 사람가 불분명해 과태료 부과가 불가능한 경우",
+      "버린 사람의 위반행위가 이미 신고 접수됐거나 공무원이 단속한 경우",
       "신고자가 익명 또는 가명을 사용해 포상금 지급이 불가능한 경우",
       "환경분야 감시원으로 위촉되어 수당이 지급되는 경우"
     ],
