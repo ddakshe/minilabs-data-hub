@@ -1,14 +1,46 @@
 {
   "updatedAt": "2026-09-11",
   "categories": [
-    { "id": "parking", "label": "불법주정차", "emoji": "🚗" },
-    { "id": "traffic", "label": "교통위반", "emoji": "🚦" },
-    { "id": "dumping", "label": "쓰레기 무단투기", "emoji": "🗑️" },
-    { "id": "environment", "label": "환경오염", "emoji": "🏭" },
-    { "id": "food", "label": "식품 위생", "emoji": "🍱" },
-    { "id": "living", "label": "생활불편", "emoji": "🏘️" },
-    { "id": "safety", "label": "안전위험", "emoji": "⚠️" },
-    { "id": "public", "label": "공익·범죄", "emoji": "📢" }
+    {
+      "id": "parking",
+      "label": "불법주정차",
+      "emoji": "🚗"
+    },
+    {
+      "id": "traffic",
+      "label": "교통위반",
+      "emoji": "🚦"
+    },
+    {
+      "id": "dumping",
+      "label": "쓰레기 무단투기",
+      "emoji": "🗑️"
+    },
+    {
+      "id": "environment",
+      "label": "환경오염",
+      "emoji": "🏭"
+    },
+    {
+      "id": "food",
+      "label": "식품 위생",
+      "emoji": "🍱"
+    },
+    {
+      "id": "living",
+      "label": "생활불편",
+      "emoji": "🏘️"
+    },
+    {
+      "id": "safety",
+      "label": "안전위험",
+      "emoji": "⚠️"
+    },
+    {
+      "id": "public",
+      "label": "공익·범죄",
+      "emoji": "📢"
+    }
   ],
   "items": [
     {
@@ -29,15 +61,40 @@
       ],
       "penalty": "승용차 기준 어린이보호구역 12만 원, 소화전 8만 원, 교차로·버스정류소·횡단보도·인도 4만 원 (승합차는 1만 원 더)",
       "evidence": {
-        "need": ["차량번호가 보이는 사진", "소화전·횡단보도·정류소 표지처럼 위반 장소가 함께 보이는 사진", "1분 뒤 같은 자리에서 찍은 사진 한 장 더"],
-        "rejected": ["갤러리에 저장된 사진이나 다른 앱으로 찍은 사진", "동영상"]
+        "need": [
+          "차량번호가 보이는 사진",
+          "소화전·횡단보도·정류소 표지처럼 위반 장소가 함께 보이는 사진",
+          "1분 뒤 같은 자리에서 찍은 사진 한 장 더"
+        ],
+        "rejected": [
+          "갤러리에 저장된 사진이나 다른 앱으로 찍은 사진",
+          "동영상"
+        ]
       },
-      "reward": { "type": "none", "text": "신고한 사람에게 주는 포상금은 없어요. 위반 차량에 과태료가 부과돼요." },
-      "channels": [{ "label": "안전신문고 앱에서 신고하기", "kind": "store", "value": "safetyreport" }],
+      "reward": {
+        "type": "none",
+        "text": "신고한 사람에게 주는 포상금은 없어요. 위반 차량에 과태료가 부과돼요."
+      },
+      "channels": [
+        {
+          "label": "안전신문고 앱에서 신고하기",
+          "kind": "store",
+          "value": "safetyreport"
+        }
+      ],
       "sources": [
-        { "title": "정책브리핑 — 불법주정차 주민신고제 6대 구역", "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148918697" },
-        { "title": "110 정부민원안내 — 안전신문고 자동차 관련 신고", "url": "https://www.110.go.kr/data/counselView.do?num=A01_659997" },
-        { "title": "법제처 중앙부처 법령해석 — 안전신문고 앱 촬영 사진", "url": "https://www.law.go.kr/LSW/cgmExpcInfoP.do?cgmExpcDatSeq=2286525&mode=2&ofiClsCd=350104" }
+        {
+          "title": "정책브리핑 — 불법주정차 주민신고제 6대 구역",
+          "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148918697"
+        },
+        {
+          "title": "110 정부민원안내 — 안전신문고 자동차 관련 신고",
+          "url": "https://www.110.go.kr/data/counselView.do?num=A01_659997"
+        },
+        {
+          "title": "법제처 중앙부처 법령해석 — 안전신문고 앱 촬영 사진",
+          "url": "https://www.law.go.kr/LSW/cgmExpcInfoP.do?cgmExpcDatSeq=2286525&mode=2&ofiClsCd=350104"
+        }
       ],
       "checkedAt": "2026-09-11"
     },
@@ -46,16 +103,40 @@
       "category": "parking",
       "title": "장애인전용주차구역 주차",
       "summary": "장애인 자동차 표지가 없는 차가 장애인전용주차구역에 서 있으면 신고할 수 있어요.",
-      "when": ["표지 없는 차가 장애인전용주차구역에 서 있을 때", "구역 앞을 막아 다른 차가 주차하지 못하게 할 때"],
-      "conditions": ["앞유리에 표지가 없다는 것과 장애인전용구역 표시가 한 사진에 함께 보여야 해요", "사진 2장 이상"],
+      "when": [
+        "표지 없는 차가 장애인전용주차구역에 서 있을 때",
+        "구역 앞을 막아 다른 차가 주차하지 못하게 할 때"
+      ],
+      "conditions": [
+        "앞유리에 표지가 없다는 것과 장애인전용구역 표시가 한 사진에 함께 보여야 해요",
+        "사진 2장 이상"
+      ],
       "penalty": "주차 10만 원, 주차 방해 50만 원",
       "evidence": {
-        "need": ["앞유리에 장애인 자동차 표지가 없는 사진", "바닥이나 표지판의 전용구역 표시가 함께 나온 사진", "차량번호"],
+        "need": [
+          "앞유리에 장애인 자동차 표지가 없는 사진",
+          "바닥이나 표지판의 전용구역 표시가 함께 나온 사진",
+          "차량번호"
+        ],
         "rejected": []
       },
-      "reward": { "type": "none", "text": "신고한 사람에게 주는 포상금은 없어요." },
-      "channels": [{ "label": "안전신문고 앱에서 신고하기", "kind": "store", "value": "safetyreport" }],
-      "sources": [{ "title": "서울시 스마트불편신고 — 장애인전용주차구역", "url": "https://smartreport.seoul.go.kr/w100/w147.do" }],
+      "reward": {
+        "type": "none",
+        "text": "신고한 사람에게 주는 포상금은 없어요."
+      },
+      "channels": [
+        {
+          "label": "안전신문고 앱에서 신고하기",
+          "kind": "store",
+          "value": "safetyreport"
+        }
+      ],
+      "sources": [
+        {
+          "title": "서울시 스마트불편신고 — 장애인전용주차구역",
+          "url": "https://smartreport.seoul.go.kr/w100/w147.do"
+        }
+      ],
       "checkedAt": "2026-09-11"
     },
     {
@@ -63,18 +144,44 @@
       "category": "parking",
       "title": "전기차 충전구역 주차·충전 방해",
       "summary": "일반 차가 충전구역에 서 있거나, 충전을 마친 전기차가 너무 오래 자리를 차지하면 신고할 수 있어요.",
-      "when": ["전기차가 아닌 차가 충전구역에 서 있을 때", "급속충전기 자리에 1시간 넘게 서 있을 때", "완속충전기 자리에 14시간 넘게 서 있을 때"],
-      "conditions": ["일반 차량은 1분 간격 사진 2장 이상", "급속 충전시간 초과는 1시간 간격 사진 2장", "완속 충전시간 초과는 100세대 이상 아파트 등 일부 시설에만 적용돼요"],
+      "when": [
+        "전기차가 아닌 차가 충전구역에 서 있을 때",
+        "급속충전기 자리에 1시간 넘게 서 있을 때",
+        "완속충전기 자리에 14시간 넘게 서 있을 때"
+      ],
+      "conditions": [
+        "일반 차량은 1분 간격 사진 2장 이상",
+        "급속 충전시간 초과는 1시간 간격 사진 2장",
+        "완속 충전시간 초과는 100세대 이상 아파트 등 일부 시설에만 적용돼요"
+      ],
       "penalty": "과태료 부과 대상이에요 (위반 유형별로 금액이 달라요)",
       "evidence": {
-        "need": ["충전구역 표시와 차량번호가 함께 보이는 사진", "시간 간격을 두고 같은 자리에서 찍은 사진"],
+        "need": [
+          "충전구역 표시와 차량번호가 함께 보이는 사진",
+          "시간 간격을 두고 같은 자리에서 찍은 사진"
+        ],
         "rejected": []
       },
-      "reward": { "type": "none", "text": "신고한 사람에게 주는 포상금은 없어요." },
-      "channels": [{ "label": "안전신문고 앱에서 신고하기", "kind": "store", "value": "safetyreport" }],
+      "reward": {
+        "type": "none",
+        "text": "신고한 사람에게 주는 포상금은 없어요."
+      },
+      "channels": [
+        {
+          "label": "안전신문고 앱에서 신고하기",
+          "kind": "store",
+          "value": "safetyreport"
+        }
+      ],
       "sources": [
-        { "title": "정책브리핑 — 전기차 충전구역 신고 요령", "url": "https://www.korea.kr/news/reporterView.do?newsId=148907012" },
-        { "title": "찾기쉬운 생활법령 — 친환경자동차 충전구역", "url": "https://www.easylaw.go.kr/CSP/CnpClsMainBtr.laf?popMenu=ov&csmSeq=1404&ccfNo=2&cciNo=2&cnpClsNo=2" }
+        {
+          "title": "정책브리핑 — 전기차 충전구역 신고 요령",
+          "url": "https://www.korea.kr/news/reporterView.do?newsId=148907012"
+        },
+        {
+          "title": "찾기쉬운 생활법령 — 친환경자동차 충전구역",
+          "url": "https://www.easylaw.go.kr/CSP/CnpClsMainBtr.laf?popMenu=ov&csmSeq=1404&ccfNo=2&cciNo=2&cnpClsNo=2"
+        }
       ],
       "checkedAt": "2026-09-11"
     },
@@ -83,22 +190,55 @@
       "category": "traffic",
       "title": "신호위반·끼어들기 등 교통법규 위반",
       "summary": "블랙박스나 휴대폰 영상으로 교통법규를 어긴 차를 신고할 수 있어요. 2일 안에 신고해야 처분이 나와요.",
-      "when": ["신호위반, 중앙선 침범, 끼어들기, 진로변경 위반을 봤을 때", "과속하는 차를 영상으로 찍었을 때", "이륜차가 인도로 달리거나 안전모를 쓰지 않았을 때"],
-      "conditions": ["위반한 날부터 2일 안에 신고해야 범칙금·과태료 처분이 돼요", "2일이 지나면 경고 성격의 안내장만 발송돼요"],
+      "when": [
+        "신호위반, 중앙선 침범, 끼어들기, 진로변경 위반을 봤을 때",
+        "과속하는 차를 영상으로 찍었을 때",
+        "이륜차가 인도로 달리거나 안전모를 쓰지 않았을 때"
+      ],
+      "conditions": [
+        "위반한 날부터 2일 안에 신고해야 범칙금·과태료 처분이 돼요",
+        "2일이 지나면 경고 성격의 안내장만 발송돼요"
+      ],
       "penalty": "위반 종류에 따라 범칙금이나 과태료가 부과돼요",
       "evidence": {
-        "need": ["번호판을 알아볼 수 있는 영상", "위반 전후 장면이 함께 담긴 영상", "위반 일시(분 단위)와 장소"],
-        "rejected": ["번호판을 알아볼 수 없는 영상"]
+        "need": [
+          "번호판을 알아볼 수 있는 영상",
+          "위반 전후 장면이 함께 담긴 영상",
+          "위반 일시(분 단위)와 장소"
+        ],
+        "rejected": [
+          "번호판을 알아볼 수 없는 영상"
+        ]
       },
-      "reward": { "type": "none", "text": "신고한 사람에게 주는 포상금은 없어요." },
+      "reward": {
+        "type": "none",
+        "text": "신고한 사람에게 주는 포상금은 없어요."
+      },
       "channels": [
-        { "label": "안전신문고 웹에서 신고하기", "kind": "url", "value": "https://www.safetyreport.go.kr/" },
-        { "label": "안전신문고 앱에서 신고하기", "kind": "store", "value": "safetyreport" }
+        {
+          "label": "안전신문고 웹에서 신고하기",
+          "kind": "url",
+          "value": "https://www.safetyreport.go.kr/"
+        },
+        {
+          "label": "안전신문고 앱에서 신고하기",
+          "kind": "store",
+          "value": "safetyreport"
+        }
       ],
       "sources": [
-        { "title": "경찰민원24 — 교통 제보 안내", "url": "https://minwon24.police.go.kr/epeople/trfcTpof.do" },
-        { "title": "110 정부민원안내 — 안전신문고 자동차 관련 신고", "url": "https://www.110.go.kr/data/counselView.do?num=A01_659997" },
-        { "title": "정책브리핑 — 스마트국민제보, 안전신문고로 통합", "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148928494" }
+        {
+          "title": "경찰민원24 — 교통 제보 안내",
+          "url": "https://minwon24.police.go.kr/epeople/trfcTpof.do"
+        },
+        {
+          "title": "110 정부민원안내 — 안전신문고 자동차 관련 신고",
+          "url": "https://www.110.go.kr/data/counselView.do?num=A01_659997"
+        },
+        {
+          "title": "정책브리핑 — 스마트국민제보, 안전신문고로 통합",
+          "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148928494"
+        }
       ],
       "checkedAt": "2026-09-11"
     },
@@ -107,16 +247,44 @@
       "category": "traffic",
       "title": "난폭·보복운전",
       "summary": "위협하는 난폭·보복운전은 형사처벌 대상이에요. 지금 위험하면 112에 바로 신고하세요.",
-      "when": ["일부러 앞에서 급정거하거나 밀어붙이며 위협할 때", "여러 차로를 오가며 위험하게 달릴 때"],
-      "conditions": ["지금 위험하면 112 긴급신고", "상황이 끝난 뒤에는 안전신문고 자동차·교통위반 메뉴로 영상과 함께 신고"],
-      "penalty": "형사처벌 대상이에요",
-      "evidence": { "need": ["위협 장면 전후가 담긴 블랙박스 영상", "일시와 장소"], "rejected": [] },
-      "reward": { "type": "none", "text": "포상금은 없어요. 내 안전이 먼저예요." },
-      "channels": [
-        { "label": "112 긴급신고 전화하기", "kind": "tel", "value": "112" },
-        { "label": "안전신문고 웹에서 신고하기", "kind": "url", "value": "https://www.safetyreport.go.kr/" }
+      "when": [
+        "일부러 앞에서 급정거하거나 밀어붙이며 위협할 때",
+        "여러 차로를 오가며 위험하게 달릴 때"
       ],
-      "sources": [{ "title": "110 정부민원안내 — 안전신문고 자동차 관련 신고", "url": "https://www.110.go.kr/data/counselView.do?num=A01_659997" }],
+      "conditions": [
+        "지금 위험하면 112 긴급신고",
+        "상황이 끝난 뒤에는 안전신문고 자동차·교통위반 메뉴로 영상과 함께 신고"
+      ],
+      "penalty": "형사처벌 대상이에요",
+      "evidence": {
+        "need": [
+          "위협 장면 전후가 담긴 블랙박스 영상",
+          "일시와 장소"
+        ],
+        "rejected": []
+      },
+      "reward": {
+        "type": "none",
+        "text": "포상금은 없어요. 내 안전이 먼저예요."
+      },
+      "channels": [
+        {
+          "label": "112 긴급신고 전화하기",
+          "kind": "tel",
+          "value": "112"
+        },
+        {
+          "label": "안전신문고 웹에서 신고하기",
+          "kind": "url",
+          "value": "https://www.safetyreport.go.kr/"
+        }
+      ],
+      "sources": [
+        {
+          "title": "110 정부민원안내 — 안전신문고 자동차 관련 신고",
+          "url": "https://www.110.go.kr/data/counselView.do?num=A01_659997"
+        }
+      ],
       "checkedAt": "2026-09-11"
     },
     {
@@ -124,18 +292,48 @@
       "category": "traffic",
       "title": "버스전용차로·번호판 가림·불법 튜닝",
       "summary": "일반도로 버스전용차로 위반, 번호판 가림, 불법 등화·튜닝은 시청·구청이 처리해요.",
-      "when": ["일반도로 버스전용차로를 달리는 차를 봤을 때", "번호판을 가리거나 알아볼 수 없게 한 차", "불법 등화나 튜닝을 한 차"],
-      "conditions": ["안전신문고 자동차·교통위반 메뉴에서 지자체 소관으로 신고해요", "서울시 시민신고제는 적발일부터 3일 안에 신고해야 해요"],
+      "when": [
+        "일반도로 버스전용차로를 달리는 차를 봤을 때",
+        "번호판을 가리거나 알아볼 수 없게 한 차",
+        "불법 등화나 튜닝을 한 차"
+      ],
+      "conditions": [
+        "안전신문고 자동차·교통위반 메뉴에서 지자체 소관으로 신고해요",
+        "서울시 시민신고제는 적발일부터 3일 안에 신고해야 해요"
+      ],
       "penalty": "지자체가 과태료를 부과해요",
-      "evidence": { "need": ["번호판이 보이는 사진이나 영상", "전용차로 표시 등 위반 장소가 함께 보이게"], "rejected": [] },
-      "reward": { "type": "none", "text": "신고한 사람에게 주는 포상금은 없어요." },
+      "evidence": {
+        "need": [
+          "번호판이 보이는 사진이나 영상",
+          "전용차로 표시 등 위반 장소가 함께 보이게"
+        ],
+        "rejected": []
+      },
+      "reward": {
+        "type": "none",
+        "text": "신고한 사람에게 주는 포상금은 없어요."
+      },
       "channels": [
-        { "label": "안전신문고 웹에서 신고하기", "kind": "url", "value": "https://www.safetyreport.go.kr/" },
-        { "label": "안전신문고 앱에서 신고하기", "kind": "store", "value": "safetyreport" }
+        {
+          "label": "안전신문고 웹에서 신고하기",
+          "kind": "url",
+          "value": "https://www.safetyreport.go.kr/"
+        },
+        {
+          "label": "안전신문고 앱에서 신고하기",
+          "kind": "store",
+          "value": "safetyreport"
+        }
       ],
       "sources": [
-        { "title": "110 정부민원안내 — 안전신문고 자동차 관련 신고", "url": "https://www.110.go.kr/data/counselView.do?num=A01_659997" },
-        { "title": "서울시 — 교통법규 위반차량 시민신고제", "url": "https://news.seoul.go.kr/traffic/archives/507047" }
+        {
+          "title": "110 정부민원안내 — 안전신문고 자동차 관련 신고",
+          "url": "https://www.110.go.kr/data/counselView.do?num=A01_659997"
+        },
+        {
+          "title": "서울시 — 교통법규 위반차량 시민신고제",
+          "url": "https://news.seoul.go.kr/traffic/archives/507047"
+        }
       ],
       "checkedAt": "2026-09-11"
     },
@@ -144,7 +342,11 @@
       "category": "dumping",
       "title": "쓰레기 무단투기",
       "summary": "종량제봉투 없이 버리거나 아무 데나 버린 사람을 신고해 과태료가 부과되면 포상금을 받을 수 있어요.",
-      "when": ["봉투에 담지 않은 쓰레기를 몰래 버리는 걸 봤을 때", "차에서 쓰레기나 담배꽁초를 버릴 때", "음식물 쓰레기를 아무 데나 버릴 때"],
+      "when": [
+        "봉투에 담지 않은 쓰레기를 몰래 버리는 걸 봤을 때",
+        "차에서 쓰레기나 담배꽁초를 버릴 때",
+        "음식물 쓰레기를 아무 데나 버릴 때"
+      ],
       "conditions": [
         "누가 버렸는지 알 수 있어야 해요 — 사람이나 차량번호가 특정돼야 과태료가 나와요",
         "신고 기한은 동네마다 7~30일로 달라요",
@@ -152,18 +354,44 @@
       ],
       "penalty": "폐기물관리법에 따라 과태료가 부과돼요",
       "evidence": {
-        "need": ["버리는 모습이나 버린 사람이 보이는 사진·영상", "차에서 버렸다면 차량번호", "일시와 장소"],
-        "rejected": ["버린 사람을 알 수 없는 쓰레기 사진만 있는 경우 — 포상금 대상이 안 될 수 있어요"]
+        "need": [
+          "버리는 모습이나 버린 사람이 보이는 사진·영상",
+          "차에서 버렸다면 차량번호",
+          "일시와 장소"
+        ],
+        "rejected": [
+          "버린 사람을 알 수 없는 쓰레기 사진만 있는 경우 — 포상금 대상이 안 될 수 있어요"
+        ]
       },
-      "reward": { "type": "local", "text": "동네마다 달라요. 보통 과태료의 10~50%이고, 월·연 한도와 주민 자격 조건이 붙어요." },
+      "reward": {
+        "type": "local",
+        "text": "동네마다 달라요. 보통 과태료의 10~50%이고, 월·연 한도와 주민 자격 조건이 붙어요."
+      },
       "channels": [
-        { "label": "안전신문고 웹에서 신고하기", "kind": "url", "value": "https://www.safetyreport.go.kr/" },
-        { "label": "110 정부민원안내 전화하기", "kind": "tel", "value": "110" }
+        {
+          "label": "안전신문고 웹에서 신고하기",
+          "kind": "url",
+          "value": "https://www.safetyreport.go.kr/"
+        },
+        {
+          "label": "110 정부민원안내 전화하기",
+          "kind": "tel",
+          "value": "110"
+        }
       ],
       "sources": [
-        { "title": "인천 부평구 — 쓰레기 무단투기 신고포상금", "url": "https://www.icbp.go.kr/main/life/clean/garbage_abandon.jsp" },
-        { "title": "정부24 — 무단투기 신고포상금 지급", "url": "https://www.gov.kr/portal/service/serviceInfo/PTR000052642" },
-        { "title": "대전 서구 — 무단투기 신고포상금", "url": "https://www.seogu.go.kr/kor/sub06_11_01_03.do" }
+        {
+          "title": "인천 부평구 — 쓰레기 무단투기 신고포상금",
+          "url": "https://www.icbp.go.kr/main/life/clean/garbage_abandon.jsp"
+        },
+        {
+          "title": "정부24 — 무단투기 신고포상금 지급",
+          "url": "https://www.gov.kr/portal/service/serviceInfo/PTR000052642"
+        },
+        {
+          "title": "대전 서구 — 무단투기 신고포상금",
+          "url": "https://www.seogu.go.kr/kor/sub06_11_01_03.do"
+        }
       ],
       "checkedAt": "2026-09-11"
     },
@@ -172,16 +400,47 @@
       "category": "environment",
       "title": "불법소각·폐수·매연·비산먼지",
       "summary": "환경오염 행위는 환경신문고 128로 신고할 수 있고, 위반이 확인되면 포상금이 있어요.",
-      "when": ["쓰레기나 폐기물을 태우는 걸 봤을 때", "하천에 폐수를 흘려보낼 때", "공사장에서 먼지가 날리는데 막지 않을 때", "매연을 심하게 내뿜을 때"],
-      "conditions": ["누가·언제·어디서·어떻게 했는지 알 수 있어야 해요"],
-      "penalty": null,
-      "evidence": { "need": ["오염 행위가 보이는 사진·영상", "장소와 일시", "사업장 이름처럼 행위자를 알 수 있는 정보"], "rejected": [] },
-      "reward": { "type": "national", "text": "위반 유형에 따라 3만~300만 원 (지자체 조례로 달리 정할 수 있어요)" },
-      "channels": [
-        { "label": "환경신문고 128 전화하기", "kind": "tel", "value": "128" },
-        { "label": "안전신문고 웹에서 신고하기", "kind": "url", "value": "https://www.safetyreport.go.kr/" }
+      "when": [
+        "쓰레기나 폐기물을 태우는 걸 봤을 때",
+        "하천에 폐수를 흘려보낼 때",
+        "공사장에서 먼지가 날리는데 막지 않을 때",
+        "매연을 심하게 내뿜을 때"
       ],
-      "sources": [{ "title": "정책브리핑 — 환경오염 신고포상금", "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148938683" }],
+      "conditions": [
+        "누가·언제·어디서·어떻게 했는지 알 수 있어야 해요"
+      ],
+      "penalty": null,
+      "evidence": {
+        "need": [
+          "오염 행위가 보이는 사진·영상",
+          "장소와 일시",
+          "사업장 이름처럼 행위자를 알 수 있는 정보"
+        ],
+        "rejected": []
+      },
+      "reward": {
+        "type": "national",
+        "text": "위반 유형에 따라 3만~300만 원 (지자체 조례로 달리 정할 수 있어요)",
+        "upToWon": 3000000
+      },
+      "channels": [
+        {
+          "label": "환경신문고 128 전화하기",
+          "kind": "tel",
+          "value": "128"
+        },
+        {
+          "label": "안전신문고 웹에서 신고하기",
+          "kind": "url",
+          "value": "https://www.safetyreport.go.kr/"
+        }
+      ],
+      "sources": [
+        {
+          "title": "정책브리핑 — 환경오염 신고포상금",
+          "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148938683"
+        }
+      ],
       "checkedAt": "2026-09-11"
     },
     {
@@ -189,18 +448,49 @@
       "category": "food",
       "title": "부정·불량식품",
       "summary": "유통기한 조작이나 비위생적인 식품 제조·판매를 신고하면 포상금을 받을 수 있어요.",
-      "when": ["유통기한이 지났거나 날짜를 바꿔 붙인 식품을 팔 때", "비위생적으로 음식을 만들거나 보관할 때", "허가 없이 식품을 만들어 팔 때"],
-      "conditions": ["신고하는 사람의 이름·주소·연락처가 필요해요", "업소·제품·위반 내용을 구체적으로 적어야 해요"],
+      "when": [
+        "유통기한이 지났거나 날짜를 바꿔 붙인 식품을 팔 때",
+        "비위생적으로 음식을 만들거나 보관할 때",
+        "허가 없이 식품을 만들어 팔 때"
+      ],
+      "conditions": [
+        "신고하는 사람의 이름·주소·연락처가 필요해요",
+        "업소·제품·위반 내용을 구체적으로 적어야 해요"
+      ],
       "penalty": null,
-      "evidence": { "need": ["업소 이름과 주소, 또는 제품명·제조사", "위반 내용을 보여주는 사진"], "rejected": [] },
-      "reward": { "type": "national", "text": "최대 1천만 원 (위반 내용에 따라 달라요)" },
+      "evidence": {
+        "need": [
+          "업소 이름과 주소, 또는 제품명·제조사",
+          "위반 내용을 보여주는 사진"
+        ],
+        "rejected": []
+      },
+      "reward": {
+        "type": "national",
+        "text": "최대 1천만 원 (위반 내용에 따라 달라요)",
+        "upToWon": 10000000
+      },
       "channels": [
-        { "label": "부정불량식품 신고 1399 전화하기", "kind": "tel", "value": "1399" },
-        { "label": "식품안전나라에서 신고하기", "kind": "url", "value": "https://www.foodsafetykorea.go.kr/portal/complain/complainIntro.do" }
+        {
+          "label": "부정불량식품 신고 1399 전화하기",
+          "kind": "tel",
+          "value": "1399"
+        },
+        {
+          "label": "식품안전나라에서 신고하기",
+          "kind": "url",
+          "value": "https://www.foodsafetykorea.go.kr/portal/complain/complainIntro.do"
+        }
       ],
       "sources": [
-        { "title": "식품안전나라 — 부정불량식품 신고", "url": "https://www.foodsafetykorea.go.kr/portal/complain/complainIntro.do" },
-        { "title": "찾기쉬운 생활법령 — 식품 신고포상금", "url": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=1007&ccfNo=4&cciNo=1&cnpClsNo=1" }
+        {
+          "title": "식품안전나라 — 부정불량식품 신고",
+          "url": "https://www.foodsafetykorea.go.kr/portal/complain/complainIntro.do"
+        },
+        {
+          "title": "찾기쉬운 생활법령 — 식품 신고포상금",
+          "url": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=1007&ccfNo=4&cciNo=1&cnpClsNo=1"
+        }
       ],
       "checkedAt": "2026-09-11"
     },
@@ -209,16 +499,43 @@
       "category": "living",
       "title": "불법 현수막·전단",
       "summary": "허가 없이 매단 현수막이나 뿌린 전단은 안전신문고로 신고할 수 있어요.",
-      "when": ["가로수·전봇대에 현수막을 매달았을 때", "벽이나 차에 전단을 붙이거나 뿌렸을 때"],
-      "conditions": ["광고물이 걸린 위치가 필요해요"],
-      "penalty": null,
-      "evidence": { "need": ["광고물이 보이는 사진", "위치"], "rejected": [] },
-      "reward": { "type": "local", "text": "일부 지자체가 불법 전단·현수막 수거보상제를 운영해요. 기간과 한도는 해마다 공고로 정하고, 예산이 떨어지면 일찍 끝나요." },
-      "channels": [
-        { "label": "안전신문고 웹에서 신고하기", "kind": "url", "value": "https://www.safetyreport.go.kr/" },
-        { "label": "110 정부민원안내 전화하기", "kind": "tel", "value": "110" }
+      "when": [
+        "가로수·전봇대에 현수막을 매달았을 때",
+        "벽이나 차에 전단을 붙이거나 뿌렸을 때"
       ],
-      "sources": [{ "title": "찾기쉬운 생활법령 — 불법광고물 신고", "url": "https://easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=897&ccfNo=5&cciNo=2&cnpClsNo=1" }],
+      "conditions": [
+        "광고물이 걸린 위치가 필요해요"
+      ],
+      "penalty": null,
+      "evidence": {
+        "need": [
+          "광고물이 보이는 사진",
+          "위치"
+        ],
+        "rejected": []
+      },
+      "reward": {
+        "type": "local",
+        "text": "일부 지자체가 불법 전단·현수막 수거보상제를 운영해요. 기간과 한도는 해마다 공고로 정하고, 예산이 떨어지면 일찍 끝나요."
+      },
+      "channels": [
+        {
+          "label": "안전신문고 웹에서 신고하기",
+          "kind": "url",
+          "value": "https://www.safetyreport.go.kr/"
+        },
+        {
+          "label": "110 정부민원안내 전화하기",
+          "kind": "tel",
+          "value": "110"
+        }
+      ],
+      "sources": [
+        {
+          "title": "찾기쉬운 생활법령 — 불법광고물 신고",
+          "url": "https://easylaw.go.kr/CSP/CnpClsMain.laf?popMenu=ov&csmSeq=897&ccfNo=5&cciNo=2&cnpClsNo=1"
+        }
+      ],
       "checkedAt": "2026-09-11"
     },
     {
@@ -226,16 +543,45 @@
       "category": "living",
       "title": "가로등·보안등 고장",
       "summary": "꺼지거나 깜빡이는 가로등은 신고하면 고쳐줘요. 서울은 꾸준히 신고하면 포상금도 있어요.",
-      "when": ["밤에 가로등이나 보안등이 꺼져 있을 때", "불이 계속 깜빡일 때"],
-      "conditions": ["가로등 기둥의 관리번호를 함께 알려주면 빨리 찾아요"],
-      "penalty": null,
-      "evidence": { "need": ["고장 난 가로등 사진", "위치"], "rejected": [] },
-      "reward": { "type": "local", "text": "서울은 반기에 5건 이상 신고하면 2만~20만 원을 줘요. 익명 신고는 빠져요." },
-      "channels": [
-        { "label": "안전신문고 웹에서 신고하기", "kind": "url", "value": "https://www.safetyreport.go.kr/" },
-        { "label": "120 다산콜 전화하기 (서울)", "kind": "tel", "value": "120" }
+      "when": [
+        "밤에 가로등이나 보안등이 꺼져 있을 때",
+        "불이 계속 깜빡일 때"
       ],
-      "sources": [{ "title": "서울시 — 가로등 고장 신고 포상", "url": "https://news.seoul.go.kr/safe/archives/512785" }],
+      "conditions": [
+        "가로등 기둥의 관리번호를 함께 알려주면 빨리 찾아요"
+      ],
+      "penalty": null,
+      "evidence": {
+        "need": [
+          "고장 난 가로등 사진",
+          "위치"
+        ],
+        "rejected": []
+      },
+      "reward": {
+        "type": "local",
+        "text": "서울은 반기에 5건 이상 신고하면 2만~20만 원을 줘요. 익명 신고는 빠져요.",
+        "upToWon": 200000,
+        "scope": "서울"
+      },
+      "channels": [
+        {
+          "label": "안전신문고 웹에서 신고하기",
+          "kind": "url",
+          "value": "https://www.safetyreport.go.kr/"
+        },
+        {
+          "label": "120 다산콜 전화하기 (서울)",
+          "kind": "tel",
+          "value": "120"
+        }
+      ],
+      "sources": [
+        {
+          "title": "서울시 — 가로등 고장 신고 포상",
+          "url": "https://news.seoul.go.kr/safe/archives/512785"
+        }
+      ],
       "checkedAt": "2026-09-11"
     },
     {
@@ -243,13 +589,39 @@
       "category": "living",
       "title": "공유 킥보드 방치",
       "summary": "길을 막고 방치된 공유 킥보드는 신고하면 업체가 치우고, 치우지 않으면 견인돼요.",
-      "when": ["점자블록·횡단보도·버스정류장을 막고 있을 때", "인도 한가운데 쓰러져 있을 때"],
-      "conditions": ["킥보드의 QR코드나 일련번호가 필요해요", "서울은 전용 신고 사이트를 운영해요"],
+      "when": [
+        "점자블록·횡단보도·버스정류장을 막고 있을 때",
+        "인도 한가운데 쓰러져 있을 때"
+      ],
+      "conditions": [
+        "킥보드의 QR코드나 일련번호가 필요해요",
+        "서울은 전용 신고 사이트를 운영해요"
+      ],
       "penalty": "치우지 않으면 견인되고 업체가 견인료를 내요",
-      "evidence": { "need": ["QR코드나 일련번호가 보이는 사진", "방치된 위치"], "rejected": [] },
-      "reward": { "type": "none", "text": "신고한 사람에게 주는 포상금은 없어요." },
-      "channels": [{ "label": "안전신문고 웹에서 신고하기", "kind": "url", "value": "https://www.safetyreport.go.kr/" }],
-      "sources": [{ "title": "서울시 — 공유 전동킥보드 방치 신고", "url": "https://news.seoul.go.kr/traffic/archives/506074" }],
+      "evidence": {
+        "need": [
+          "QR코드나 일련번호가 보이는 사진",
+          "방치된 위치"
+        ],
+        "rejected": []
+      },
+      "reward": {
+        "type": "none",
+        "text": "신고한 사람에게 주는 포상금은 없어요."
+      },
+      "channels": [
+        {
+          "label": "안전신문고 웹에서 신고하기",
+          "kind": "url",
+          "value": "https://www.safetyreport.go.kr/"
+        }
+      ],
+      "sources": [
+        {
+          "title": "서울시 — 공유 전동킥보드 방치 신고",
+          "url": "https://news.seoul.go.kr/traffic/archives/506074"
+        }
+      ],
       "checkedAt": "2026-09-11"
     },
     {
@@ -257,13 +629,37 @@
       "category": "living",
       "title": "층간소음",
       "summary": "층간소음은 이웃사이센터에서 상담과 현장 중재를 받을 수 있어요.",
-      "when": ["위층·아래층 소음이 반복돼 생활이 힘들 때"],
-      "conditions": ["평일 9시~18시에 상담해요", "공사장 소음은 이웃사이센터 대상이 아니에요"],
+      "when": [
+        "위층·아래층 소음이 반복돼 생활이 힘들 때"
+      ],
+      "conditions": [
+        "평일 9시~18시에 상담해요",
+        "공사장 소음은 이웃사이센터 대상이 아니에요"
+      ],
       "penalty": null,
-      "evidence": { "need": ["소음이 나는 날짜·시간 기록"], "rejected": [] },
-      "reward": { "type": "none", "text": "포상금 제도는 없어요. 분쟁을 조정해 주는 곳이에요." },
-      "channels": [{ "label": "층간소음 이웃사이센터 전화하기", "kind": "tel", "value": "1661-2642" }],
-      "sources": [{ "title": "정부24 — 층간소음 이웃사이센터", "url": "https://www.gov.kr/portal/service/serviceInfo/PTR000051966" }],
+      "evidence": {
+        "need": [
+          "소음이 나는 날짜·시간 기록"
+        ],
+        "rejected": []
+      },
+      "reward": {
+        "type": "none",
+        "text": "포상금 제도는 없어요. 분쟁을 조정해 주는 곳이에요."
+      },
+      "channels": [
+        {
+          "label": "층간소음 이웃사이센터 전화하기",
+          "kind": "tel",
+          "value": "1661-2642"
+        }
+      ],
+      "sources": [
+        {
+          "title": "정부24 — 층간소음 이웃사이센터",
+          "url": "https://www.gov.kr/portal/service/serviceInfo/PTR000051966"
+        }
+      ],
       "checkedAt": "2026-09-11"
     },
     {
@@ -271,18 +667,47 @@
       "category": "safety",
       "title": "도로 파손·포트홀",
       "summary": "도로에 난 구멍(포트홀)이나 깨진 보도블록은 안전신문고로 신고하면 고쳐줘요.",
-      "when": ["도로에 구멍이 나 있을 때", "보도블록이 깨져 걸려 넘어질 것 같을 때"],
-      "conditions": ["위치를 정확히 알려야 해요 — 앱으로 신고하면 위치가 함께 들어가요"],
+      "when": [
+        "도로에 구멍이 나 있을 때",
+        "보도블록이 깨져 걸려 넘어질 것 같을 때"
+      ],
+      "conditions": [
+        "위치를 정확히 알려야 해요 — 앱으로 신고하면 위치가 함께 들어가요"
+      ],
       "penalty": null,
-      "evidence": { "need": ["파손 부위 사진", "위치"], "rejected": [] },
-      "reward": { "type": "national", "text": "위험을 크게 줄인 우수 신고로 뽑히면 20만~100만 원 온누리상품권을 받아요." },
+      "evidence": {
+        "need": [
+          "파손 부위 사진",
+          "위치"
+        ],
+        "rejected": []
+      },
+      "reward": {
+        "type": "national",
+        "text": "위험을 크게 줄인 우수 신고로 뽑히면 20만~100만 원 온누리상품권을 받아요.",
+        "upToWon": 1000000
+      },
       "channels": [
-        { "label": "안전신문고 앱에서 신고하기", "kind": "store", "value": "safetyreport" },
-        { "label": "안전신문고 웹에서 신고하기", "kind": "url", "value": "https://www.safetyreport.go.kr/" }
+        {
+          "label": "안전신문고 앱에서 신고하기",
+          "kind": "store",
+          "value": "safetyreport"
+        },
+        {
+          "label": "안전신문고 웹에서 신고하기",
+          "kind": "url",
+          "value": "https://www.safetyreport.go.kr/"
+        }
       ],
       "sources": [
-        { "title": "정책브리핑 — 도로 파손 신고", "url": "https://www.korea.kr/multi/visualNewsView.do?newsId=148916015" },
-        { "title": "정책브리핑 — 안전신고 포상금", "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148926602" }
+        {
+          "title": "정책브리핑 — 도로 파손 신고",
+          "url": "https://www.korea.kr/multi/visualNewsView.do?newsId=148916015"
+        },
+        {
+          "title": "정책브리핑 — 안전신고 포상금",
+          "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148926602"
+        }
       ],
       "checkedAt": "2026-09-11"
     },
@@ -291,18 +716,48 @@
       "category": "safety",
       "title": "생활 속 안전위험",
       "summary": "무너질 것 같은 축대, 안전조치 없는 공사장, 막힌 비상구 같은 위험은 안전신문고로 알릴 수 있어요.",
-      "when": ["건물 외벽이나 축대에 금이 가 무너질 것 같을 때", "공사장에 안전조치가 없어 위험할 때", "비상구가 물건으로 막혀 있을 때"],
-      "conditions": ["위험 요소와 위치를 구체적으로 알려야 해요"],
+      "when": [
+        "건물 외벽이나 축대에 금이 가 무너질 것 같을 때",
+        "공사장에 안전조치가 없어 위험할 때",
+        "비상구가 물건으로 막혀 있을 때"
+      ],
+      "conditions": [
+        "위험 요소와 위치를 구체적으로 알려야 해요"
+      ],
       "penalty": null,
-      "evidence": { "need": ["위험 요소가 보이는 사진", "위치"], "rejected": [] },
-      "reward": { "type": "national", "text": "위험을 크게 줄인 우수 신고로 뽑히면 20만~100만 원 온누리상품권을 받아요." },
+      "evidence": {
+        "need": [
+          "위험 요소가 보이는 사진",
+          "위치"
+        ],
+        "rejected": []
+      },
+      "reward": {
+        "type": "national",
+        "text": "위험을 크게 줄인 우수 신고로 뽑히면 20만~100만 원 온누리상품권을 받아요.",
+        "upToWon": 1000000
+      },
       "channels": [
-        { "label": "안전신문고 앱에서 신고하기", "kind": "store", "value": "safetyreport" },
-        { "label": "안전신문고 웹에서 신고하기", "kind": "url", "value": "https://www.safetyreport.go.kr/" }
+        {
+          "label": "안전신문고 앱에서 신고하기",
+          "kind": "store",
+          "value": "safetyreport"
+        },
+        {
+          "label": "안전신문고 웹에서 신고하기",
+          "kind": "url",
+          "value": "https://www.safetyreport.go.kr/"
+        }
       ],
       "sources": [
-        { "title": "행정안전부 — 안전신문고", "url": "https://www.mois.go.kr/frt/sub/a06/b10/safetyReport/screen.do" },
-        { "title": "정책브리핑 — 안전신고 포상금", "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148926602" }
+        {
+          "title": "행정안전부 — 안전신문고",
+          "url": "https://www.mois.go.kr/frt/sub/a06/b10/safetyReport/screen.do"
+        },
+        {
+          "title": "정책브리핑 — 안전신고 포상금",
+          "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148926602"
+        }
       ],
       "checkedAt": "2026-09-11"
     },
@@ -311,18 +766,49 @@
       "category": "public",
       "title": "공익신고 (기업·기관의 법 위반)",
       "summary": "건강·안전·환경·소비자를 해치는 법 위반을 신고하면 보상금을 받을 수 있고, 신고한 사람은 법으로 보호돼요.",
-      "when": ["회사가 식품·의약품 안전 규정을 어길 때", "환경 규제를 몰래 어길 때", "소비자를 속이는 불법 영업을 할 때"],
-      "conditions": ["공익신고 대상 법률은 495개예요", "변호사를 통해 이름을 밝히지 않고 대리신고할 수 있어요 (국민권익위원회 접수)"],
+      "when": [
+        "회사가 식품·의약품 안전 규정을 어길 때",
+        "환경 규제를 몰래 어길 때",
+        "소비자를 속이는 불법 영업을 할 때"
+      ],
+      "conditions": [
+        "공익신고 대상 법률은 495개예요",
+        "변호사를 통해 이름을 밝히지 않고 대리신고할 수 있어요 (국민권익위원회 접수)"
+      ],
       "penalty": null,
-      "evidence": { "need": ["위반 사실을 보여주는 자료", "누가·언제·어디서 했는지"], "rejected": [] },
-      "reward": { "type": "national", "text": "위반으로 환수된 금액의 30% 이내에서 보상금을 받아요." },
+      "evidence": {
+        "need": [
+          "위반 사실을 보여주는 자료",
+          "누가·언제·어디서 했는지"
+        ],
+        "rejected": []
+      },
+      "reward": {
+        "type": "national",
+        "text": "위반으로 환수된 금액의 30% 이내에서 보상금을 받아요.",
+        "uncapped": true
+      },
       "channels": [
-        { "label": "청렴포털에서 신고하기", "kind": "url", "value": "https://www.clean.go.kr" },
-        { "label": "110 정부민원안내 전화하기", "kind": "tel", "value": "110" }
+        {
+          "label": "청렴포털에서 신고하기",
+          "kind": "url",
+          "value": "https://www.clean.go.kr"
+        },
+        {
+          "label": "110 정부민원안내 전화하기",
+          "kind": "tel",
+          "value": "110"
+        }
       ],
       "sources": [
-        { "title": "국민권익위원회 — 공익신고", "url": "https://www.acrc.go.kr/menu.es?mid=a10202010100" },
-        { "title": "정책브리핑 — 공익신고 보상금", "url": "https://www.korea.kr/policy/civilView.do?newsId=148924765" }
+        {
+          "title": "국민권익위원회 — 공익신고",
+          "url": "https://www.acrc.go.kr/menu.es?mid=a10202010100"
+        },
+        {
+          "title": "정책브리핑 — 공익신고 보상금",
+          "url": "https://www.korea.kr/policy/civilView.do?newsId=148924765"
+        }
       ],
       "checkedAt": "2026-09-11"
     },
@@ -331,17 +817,49 @@
       "category": "public",
       "title": "불법촬영",
       "summary": "불법촬영을 봤거나 피해를 입었다면 112에 신고하고, 퍼진 영상은 삭제 지원을 받을 수 있어요.",
-      "when": ["화장실·탈의실 등에서 몰래 찍는 걸 봤을 때", "내 영상이 동의 없이 퍼졌을 때"],
-      "conditions": ["지금 벌어지는 일이면 112", "퍼진 영상 삭제는 디지털성범죄피해자지원센터나 1377"],
-      "penalty": "형사처벌 대상이에요",
-      "evidence": { "need": ["일시와 장소", "영상이 올라온 주소(삭제 요청 시)"], "rejected": [] },
-      "reward": { "type": "none", "text": "포상금보다 피해 구제가 먼저예요." },
-      "channels": [
-        { "label": "112 신고 전화하기", "kind": "tel", "value": "112" },
-        { "label": "디지털성범죄피해자지원센터 전화하기", "kind": "tel", "value": "02-735-8994" },
-        { "label": "방송통신심의위원회 1377 전화하기", "kind": "tel", "value": "1377" }
+      "when": [
+        "화장실·탈의실 등에서 몰래 찍는 걸 봤을 때",
+        "내 영상이 동의 없이 퍼졌을 때"
       ],
-      "sources": [{ "title": "찾기쉬운 생활법령 — 불법촬영 피해 지원", "url": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?csmSeq=1594&ccfNo=3&cciNo=1&cnpClsNo=1" }],
+      "conditions": [
+        "지금 벌어지는 일이면 112",
+        "퍼진 영상 삭제는 디지털성범죄피해자지원센터나 1377"
+      ],
+      "penalty": "형사처벌 대상이에요",
+      "evidence": {
+        "need": [
+          "일시와 장소",
+          "영상이 올라온 주소(삭제 요청 시)"
+        ],
+        "rejected": []
+      },
+      "reward": {
+        "type": "none",
+        "text": "포상금보다 피해 구제가 먼저예요."
+      },
+      "channels": [
+        {
+          "label": "112 신고 전화하기",
+          "kind": "tel",
+          "value": "112"
+        },
+        {
+          "label": "디지털성범죄피해자지원센터 전화하기",
+          "kind": "tel",
+          "value": "02-735-8994"
+        },
+        {
+          "label": "방송통신심의위원회 1377 전화하기",
+          "kind": "tel",
+          "value": "1377"
+        }
+      ],
+      "sources": [
+        {
+          "title": "찾기쉬운 생활법령 — 불법촬영 피해 지원",
+          "url": "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?csmSeq=1594&ccfNo=3&cciNo=1&cnpClsNo=1"
+        }
+      ],
       "checkedAt": "2026-09-11"
     }
   ]
