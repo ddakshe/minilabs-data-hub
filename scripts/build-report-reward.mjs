@@ -118,8 +118,14 @@ for (const d of done.values()) {
   const texts = [['note', d.note], ['caps.note', m.caps?.note], ['residency', m.residency]]
   for (const k of ['payment', 'channels', 'exclusions']) for (const v of m[k] ?? []) texts.push([k, v])
   for (const [k, v] of texts) if (v && CLAUSE.test(v.trim())) warn.push(`${d.code} ${d.sigungu} ${k}: 조문 말투 — 「${v.slice(0, 40)}」`)
+  const seenItems = new Set()
   for (const e of [...(m.examples ?? []), ...(m.rates ?? [])]) {
     if (e.item.length > 25) warn.push(`${d.code} ${d.sigungu} item ${e.item.length}자 — 「${e.item.slice(0, 30)}…」 (20자 안팎으로)`)
+    // 길이만 보면 「…버리는 행위」가 25자 안이라 안 걸린다(수집 세션 실측 30건) — 끝말도 본다
+    if (/행위$/.test(e.item)) warn.push(`${d.code} ${d.sigungu} item 「${e.item}」 — 「…행위」 대신 「…한 경우」`)
+    // 줄이다가 서로 다른 두 행이 같은 라벨이 되면 앱에서 구분이 사라진다(양주 소각 2행)
+    if (seenItems.has(e.item)) warn.push(`${d.code} ${d.sigungu} item 중복 「${e.item}」 — 두 행을 가르는 말을 남긴다`)
+    seenItems.add(e.item)
   }
 }
 if (warn.length) {
