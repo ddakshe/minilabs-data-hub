@@ -1,0 +1,44 @@
+{
+  "code": "41500",
+  "sido": "경기도",
+  "sigungu": "이천시",
+  "status": "verified",
+  "dumping": {
+    "method": "rate",
+    "rates": [
+      { "item": "과태료 부과금액", "rate": 0.4 }
+    ],
+    "fixedWon": null,
+    "examples": null,
+    "caps": { "monthWon": null, "yearWon": 1000000, "monthCount": 10, "yearCount": null, "note": "배우자·직계존비속을 합쳐 연 100만원·월 10건까지" },
+    "deadlineDays": null,
+    "residency": "신고일 기준 1개월 전부터 이천시에 주민등록",
+    "payment": null,
+    "channels": null,
+    "exclusions": [
+      "증거가 부족하거나 부정확해 과태료 부과가 불가능한 경우",
+      "신고내용이 이미 접수된 사항이거나 공무원이 단속해 적발한 경우",
+      "익명 또는 차명으로 신고하거나 포상금 지급을 거부한 경우",
+      "국가기관·지방자치단체의 환경분야 감시원으로 위촉되어 별도의 수당을 받는 경우",
+      "신고인이 공무원(청원경찰, 사회복무요원, 공공근로자 등 공무 종사자 포함)인 경우",
+      "같은 사안으로 다른 법률 등에서 포상금이 지급된 경우",
+      "고속도로 휴게소나 사용료·관리비를 내고 이용하는 시설·장소에서의 무단투기를 신고한 경우"
+    ],
+    "tableOnly": false
+  },
+  "sources": [
+    {
+      "title": "이천시 폐기물 관리에 관한 조례",
+      "kind": "조례",
+      "ordinId": "2106635",
+      "mst": "2123979",
+      "articles": [
+        "제15조"
+      ],
+      "promulgatedAt": "2026-04-17",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=2123979"
+    }
+  ],
+  "note": "과태료 부과금액의 40%를 지급해요. 고속도로 휴게소처럼 사용료를 내고 쓰는 시설에서 일어난 무단투기 신고는 제외돼요.",
+  "checkedAt": "2026-09-11"
+}

@@ -1,0 +1,51 @@
+{
+  "code": "41590",
+  "sido": "경기도",
+  "sigungu": "화성시",
+  "status": "verified",
+  "dumping": {
+    "method": "table",
+    "rates": null,
+    "fixedWon": null,
+    "examples": [
+      { "item": "담배꽁초, 휴지 등 휴대하던 폐기물을 버린 경우", "fineWon": null, "rewardWon": 10000 },
+      { "item": "비닐봉지, 천보자기 등 간이보관기구를 이용해 버리거나 휴식·행락 중 발생한 쓰레기를 버린 경우", "fineWon": null, "rewardWon": 50000 },
+      { "item": "차량, 손수레 등 운반장비를 이용해 버리거나 사업활동 과정에서 발생하는 생활폐기물을 버린 경우", "fineWon": null, "rewardWon": 70000 },
+      { "item": "생활폐기물을 매립하거나 소각한 경우", "fineWon": null, "rewardWon": 100000 }
+    ],
+    "caps": { "monthWon": 300000, "yearWon": 2000000, "monthCount": null, "yearCount": null, "note": "배우자·직계비속을 합쳐 월 30만원·연 200만원까지" },
+    "deadlineDays": 10,
+    "residency": "신고일 현재 화성시에 6개월 이상 계속 주민등록",
+    "payment": null,
+    "channels": [
+      "법규위반 행위 적발일부터 10일 이내에 통신망·방문·우편 등으로 신고",
+      "신고자 성명·생년월일·주소·직업·전화번호, 피신고자 성명·주소나 구체적 인상착의(또는 업소 명칭과 상세 위치), 위반장소·위반일시·적발내용을 포함해야 한다"
+    ],
+    "exclusions": [
+      "과태료를 부과하지 않은 경우",
+      "이의제기로 비송사건으로 변경된 경우",
+      "위반행위가 중복 신고됐거나 공무원이 단속한 경우",
+      "환경분야 감시원으로 위촉되어 별도의 수당이 지급되는 경우",
+      "이미 수사 또는 조사 중이거나 조치된 사항을 신고한 경우",
+      "익명 또는 가명을 사용해 포상금 지급이 불가능한 경우"
+    ],
+    "tableOnly": false
+  },
+  "sources": [
+    {
+      "title": "화성시 폐기물 관리에 관한 조례",
+      "kind": "조례",
+      "ordinId": "2142417",
+      "mst": "2063085",
+      "articles": [
+        "제33조",
+        "제34조",
+        "별표 9"
+      ],
+      "promulgatedAt": "2025-12-26",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=2063085"
+    }
+  ],
+  "note": "신고일 현재 화성시에 6개월 이상 주민등록이 있어야 받을 수 있어요. 상대가 과태료에 이의제기해 비송사건으로 넘어가면 지급되지 않아요.",
+  "checkedAt": "2026-09-11"
+}

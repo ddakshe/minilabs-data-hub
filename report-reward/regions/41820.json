@@ -1,0 +1,51 @@
+{
+  "code": "41820",
+  "sido": "경기도",
+  "sigungu": "가평군",
+  "status": "verified",
+  "dumping": {
+    "method": "table",
+    "rates": null,
+    "fixedWon": null,
+    "examples": [
+      { "item": "담배꽁초, 휴지 등 휴대하던 생활폐기물을 버린 경우", "fineWon": null, "rewardWon": 10000 },
+      { "item": "비닐봉투, 천보자기 등 간이보관기구를 이용해 생활폐기물을 버린 경우", "fineWon": null, "rewardWon": 30000 },
+      { "item": "휴식 또는 행락 중 발생한 쓰레기를 버린 경우", "fineWon": null, "rewardWon": 30000 },
+      { "item": "차량, 손수레 등 운반장비를 이용해 폐기물을 버린 경우", "fineWon": null, "rewardWon": 30000 },
+      { "item": "그 밖에 법을 위반해 폐기물을 버리거나 매립·소각한 경우로 과태료 50만원 이상인 위반행위", "fineWon": 500000, "rewardWon": 50000 }
+    ],
+    "caps": null,
+    "deadlineDays": 30,
+    "residency": null,
+    "payment": null,
+    "channels": [
+      "불법행위 적발일 또는 증거수집일부터 30일 이내에 신고해야 한다",
+      "육하원칙에 따라 신고하고 객관적이고 명백한 증거품·증거자료를 제출해야 한다"
+    ],
+    "exclusions": [
+      "같은 불법행위를 여럿이 신고하면 최초 신고자에게만 지급",
+      "환경 관련 업무를 담당하는 공무원 및 경찰공무원이 신고한 경우",
+      "환경분야 감시원으로 위촉되어 별도 수당이 지급되는 경우",
+      "거짓이나 익명으로 신고한 경우",
+      "이미 조사·수사 중이거나 조치된 사항을 신고한 경우",
+      "포상 수혜를 목적으로 사전 공모 등 부정·부당하게 신고한 경우"
+    ],
+    "tableOnly": false
+  },
+  "sources": [
+    {
+      "title": "가평군 폐기물 관리에 관한 조례",
+      "kind": "조례",
+      "ordinId": "2020079",
+      "mst": "2013765",
+      "articles": [
+        "제31조",
+        "별표 10"
+      ],
+      "promulgatedAt": "2025-02-05",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=2013765"
+    }
+  ],
+  "note": "행위자에게 과태료 등 처분을 한 뒤, 신고인이 청구하면 지급해요. 적발일이나 증거 수집일부터 30일 안에 신고해야 해요.",
+  "checkedAt": "2026-09-11"
+}

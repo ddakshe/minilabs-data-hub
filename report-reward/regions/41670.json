@@ -1,0 +1,55 @@
+{
+  "code": "41670",
+  "sido": "경기도",
+  "sigungu": "여주시",
+  "status": "verified",
+  "dumping": {
+    "method": "rate",
+    "rates": [
+      { "item": "과태료 부과금액", "rate": 0.4 }
+    ],
+    "fixedWon": null,
+    "examples": null,
+    "caps": { "monthWon": null, "yearWon": null, "monthCount": 5, "yearCount": null, "note": "배우자·직계존비속을 합쳐 월 5회까지" },
+    "deadlineDays": null,
+    "residency": "등록기준지 또는 주민등록이 여주시",
+    "payment": [
+      "신고자 실명계좌 입금"
+    ],
+    "channels": null,
+    "exclusions": [
+      "환경미화원, 청소 및 환경분야 관계자 등이 직무와 관련해 신고하는 경우",
+      "익명 또는 가명을 사용해 신고한 경우",
+      "이미 신고된 사항이거나 공무원이 단속해 적발한 경우",
+      "다른 법령에 따라 포상금이 지급된 경우"
+    ],
+    "tableOnly": false
+  },
+  "sources": [
+    {
+      "title": "여주시 폐기물 관리에 관한 조례",
+      "kind": "조례",
+      "ordinId": "2092291",
+      "mst": "1978851",
+      "articles": [
+        "제13조",
+        "제14조"
+      ],
+      "promulgatedAt": "2024-10-02",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=1978851"
+    },
+    {
+      "title": "여주시 폐기물 관리에 관한 조례 시행규칙",
+      "kind": "규칙",
+      "ordinId": "2092292",
+      "mst": "1941641",
+      "articles": [
+        "제5조"
+      ],
+      "promulgatedAt": "2024-05-30",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=1941641"
+    }
+  ],
+  "note": "과태료 부과금액의 40%를 실명계좌로 입금해요. 등록기준지나 주민등록이 여주시여야 받을 수 있어요.",
+  "checkedAt": "2026-09-11"
+}

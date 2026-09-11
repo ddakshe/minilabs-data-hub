@@ -1,0 +1,69 @@
+{
+  "code": "41460",
+  "sido": "경기도",
+  "sigungu": "용인시",
+  "status": "verified",
+  "dumping": {
+    "method": "table",
+    "rates": null,
+    "fixedWon": null,
+    "examples": [
+      { "item": "담배꽁초, 휴지 등 휴대하던 생활폐기물을 버린 경우", "fineWon": null, "rewardWon": 10000 },
+      { "item": "비닐봉지, 천보자기 등 간이보관기구를 이용해 생활폐기물을 버린 경우", "fineWon": null, "rewardWon": 40000 },
+      { "item": "휴식 또는 행락 중 발생한 쓰레기를 버린 경우", "fineWon": null, "rewardWon": 40000 },
+      { "item": "차량, 손수레 등 운반장비를 이용해 생활폐기물을 버린 경우", "fineWon": null, "rewardWon": 100000 },
+      { "item": "사업활동 과정에서 발생하는 생활폐기물을 버린 경우", "fineWon": null, "rewardWon": 200000 },
+      { "item": "사업활동 과정에서 발생하는 생활폐기물을 매립한 경우", "fineWon": null, "rewardWon": 200000 },
+      { "item": "그 밖의 생활폐기물을 매립한 경우", "fineWon": null, "rewardWon": 140000 },
+      { "item": "사업활동 과정에서 발생하는 생활폐기물을 소각한 경우", "fineWon": null, "rewardWon": 200000 },
+      { "item": "그 밖의 생활폐기물을 소각한 경우", "fineWon": null, "rewardWon": 100000 }
+    ],
+    "caps": { "monthWon": null, "yearWon": 1000000, "monthCount": null, "yearCount": null, "note": "신고자와 가족을 합쳐 연 100만원까지" },
+    "deadlineDays": 7,
+    "residency": null,
+    "payment": [
+      "현금 포상금",
+      "경기용인지역화폐"
+    ],
+    "channels": [
+      "신고인 인적사항, 위반 일시·장소, 위반자와 위반행위를 확인할 수 있는 증명자료를 붙여 신고해야 한다"
+    ],
+    "exclusions": [
+      "환경 관련 업무를 담당하는 공무원 및 경찰공무원이 신고한 경우",
+      "환경 분야 감시원으로 위촉되어 별도의 수당이 지급되는 경우",
+      "허위 또는 익명으로 신고하는 경우",
+      "신고인과 피신고인 사이에 분쟁이 있는 경우",
+      "이미 수사 또는 조사 중이거나 조치된 사항을 신고한 경우",
+      "다른 법령에 따라 보상금이 지급된 경우",
+      "위반행위가 발생한 날부터 7일 이상 지나 신고한 경우"
+    ],
+    "tableOnly": false
+  },
+  "sources": [
+    {
+      "title": "용인시 폐기물 관리에 관한 조례",
+      "kind": "조례",
+      "ordinId": "2142321",
+      "mst": "2047391",
+      "articles": [
+        "제13조"
+      ],
+      "promulgatedAt": "2025-06-30",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=2047391"
+    },
+    {
+      "title": "용인시 폐기물 관리에 관한 조례 시행규칙",
+      "kind": "규칙",
+      "ordinId": "2151812",
+      "mst": "1637349",
+      "articles": [
+        "제4조",
+        "별표 4"
+      ],
+      "promulgatedAt": "2021-11-03",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=1637349"
+    }
+  ],
+  "note": "현금이나 경기용인지역화폐로 받고, 최저 지급액은 1만원이에요. 위반이 있은 날부터 7일 안에 신고해야 해요.",
+  "checkedAt": "2026-09-11"
+}
