@@ -1,0 +1,50 @@
+{
+  "code": "41220",
+  "sido": "경기도",
+  "sigungu": "평택시",
+  "status": "verified",
+  "dumping": {
+    "method": "table",
+    "rates": null,
+    "fixedWon": null,
+    "examples": [
+      { "item": "과태료 10만원 이상", "fineWon": 100000, "rewardWon": 20000 },
+      { "item": "과태료 20만원 이상", "fineWon": 200000, "rewardWon": 50000 },
+      { "item": "과태료 50만원 이상", "fineWon": 500000, "rewardWon": 100000 },
+      { "item": "과태료 70만원 이상", "fineWon": 700000, "rewardWon": 150000 },
+      { "item": "과태료 100만원 이상", "fineWon": 1000000, "rewardWon": 300000 }
+    ],
+    "caps": { "monthWon": 1000000, "yearWon": 10000000, "monthCount": null, "yearCount": null, "note": "배우자와 본인·배우자의 직계존비속을 합쳐 월 100만원·연 1,000만원까지" },
+    "deadlineDays": null,
+    "residency": null,
+    "payment": null,
+    "channels": [
+      "통신망·우편·방문 등으로 신고",
+      "신고자 성명·생년월일·주소·전화번호, 위반행위 증거자료, 위반장소·일시·내용을 포함해야 한다"
+    ],
+    "exclusions": [
+      "피신고자가 불분명해 과태료 부과가 불가능한 경우",
+      "피신고자의 위반행위가 이미 신고 접수됐거나 공무원이 단속한 경우",
+      "신고자가 익명 또는 가명을 사용해 포상금 지급이 불가능한 경우",
+      "환경 분야 감시원으로 위촉되어 수당이 지급되는 경우"
+    ],
+    "tableOnly": false
+  },
+  "sources": [
+    {
+      "title": "평택시 폐기물 관리 조례",
+      "kind": "조례",
+      "ordinId": "2133127",
+      "mst": "2099055",
+      "articles": [
+        "제21조",
+        "제22조",
+        "별표 6"
+      ],
+      "promulgatedAt": "2025-12-29",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=2099055"
+    }
+  ],
+  "note": "투기 유형이 아니라 부과된 과태료 금액 구간으로 포상금이 정해져요. 과태료 10만원 이상이면 2만원, 100만원 이상이면 30만원이에요.",
+  "checkedAt": "2026-09-11"
+}

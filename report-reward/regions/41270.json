@@ -1,0 +1,38 @@
+{
+  "code": "41270",
+  "sido": "경기도",
+  "sigungu": "안산시",
+  "status": "verified",
+  "dumping": {
+    "method": "rate",
+    "rates": [
+      { "item": "과태료 처분 금액 (80% 이내의 상한)", "rate": 0.8 }
+    ],
+    "fixedWon": null,
+    "examples": null,
+    "caps": null,
+    "deadlineDays": null,
+    "residency": null,
+    "payment": null,
+    "channels": null,
+    "exclusions": [
+      "신고로 과태료 처분이 이뤄지지 않은 경우"
+    ],
+    "tableOnly": false
+  },
+  "sources": [
+    {
+      "title": "안산시 폐기물 관리에 관한 조례",
+      "kind": "조례",
+      "ordinId": "2087275",
+      "mst": "1747605",
+      "articles": [
+        "제23조의2"
+      ],
+      "promulgatedAt": "2022-11-14",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=1747605"
+    }
+  ],
+  "note": "과태료 금액의 80% 이내에서 지급해요 — 상한이라 실제 금액은 더 적을 수 있어요. 신고로 피신고자가 고발까지 되면 30만원을 받고, 과태료를 부과하거나 고발한 날부터 1개월 안에 지급해요.",
+  "checkedAt": "2026-09-11"
+}

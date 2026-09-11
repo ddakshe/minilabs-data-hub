@@ -1,0 +1,54 @@
+{
+  "code": "41190",
+  "sido": "경기도",
+  "sigungu": "부천시",
+  "status": "verified",
+  "dumping": {
+    "method": "table",
+    "rates": null,
+    "fixedWon": null,
+    "examples": [
+      { "item": "담배꽁초, 휴지 등 휴대하던 생활폐기물을 버린 경우", "fineWon": null, "rewardWon": 6000 },
+      { "item": "비닐봉지, 천보자기 등 간이보관기구를 이용해 생활폐기물을 버린 경우", "fineWon": null, "rewardWon": 40000 },
+      { "item": "휴식 또는 행락 중 발생한 쓰레기를 버린 경우", "fineWon": null, "rewardWon": 40000 },
+      { "item": "차량, 손수레 등 운반장비를 이용해 생활폐기물을 버린 경우", "fineWon": null, "rewardWon": 100000 },
+      { "item": "사업활동 과정에서 발생하는 생활폐기물을 버린 경우", "fineWon": null, "rewardWon": 200000 },
+      { "item": "사업활동 과정에서 발생하는 생활폐기물을 매립한 경우", "fineWon": null, "rewardWon": 200000 },
+      { "item": "그 밖의 생활폐기물을 매립한 경우", "fineWon": null, "rewardWon": 140000 },
+      { "item": "사업활동 과정에서 발생하는 생활폐기물을 소각한 경우", "fineWon": null, "rewardWon": 200000 },
+      { "item": "그 밖의 생활폐기물을 소각한 경우", "fineWon": null, "rewardWon": 100000 }
+    ],
+    "caps": { "monthWon": 1000000, "yearWon": 5000000, "monthCount": 30, "yearCount": null, "note": "배우자와 본인·배우자의 직계존비속을 합쳐 월 30건·월 100만원·연 500만원까지" },
+    "deadlineDays": 14,
+    "residency": null,
+    "payment": null,
+    "channels": [
+      "위반행위 적발일부터 14일 이내에 통신망·우편·방문 등으로 신고",
+      "신고자 성명·생년월일·주소·전화번호, 위반행위 증거자료, 위반장소·일시·내용을 포함해야 한다"
+    ],
+    "exclusions": [
+      "피신고자가 불분명해 과태료 부과가 불가능한 경우",
+      "피신고자의 위반행위가 이미 신고 접수됐거나 공무원이 단속한 경우",
+      "신고자가 익명 또는 가명을 사용해 포상금 지급이 불가능한 경우",
+      "환경분야 감시원으로 위촉되어 수당이 지급되는 경우"
+    ],
+    "tableOnly": false
+  },
+  "sources": [
+    {
+      "title": "부천시 폐기물관리에 관한 조례",
+      "kind": "조례",
+      "ordinId": "2069604",
+      "mst": "2144511",
+      "articles": [
+        "제30조",
+        "제31조",
+        "별표 5"
+      ],
+      "promulgatedAt": "2026-07-06",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=2144511"
+    }
+  ],
+  "note": "과태료를 부과한 경우에만 지급해요. 배우자와 직계존비속까지 한 사람으로 묶어서 한도를 계산해요.",
+  "checkedAt": "2026-09-11"
+}

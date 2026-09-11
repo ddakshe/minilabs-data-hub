@@ -1,0 +1,52 @@
+{
+  "code": "41410",
+  "sido": "경기도",
+  "sigungu": "군포시",
+  "status": "verified",
+  "dumping": {
+    "method": "table",
+    "rates": null,
+    "fixedWon": null,
+    "examples": [
+      { "item": "담배꽁초, 휴지 등 휴대하던 폐기물을 버리는 행위", "fineWon": null, "rewardWon": 10000 },
+      { "item": "비닐봉지, 천보자기 등 간이보관기구를 이용해 폐기물을 버리는 행위", "fineWon": null, "rewardWon": 40000 },
+      { "item": "휴식 또는 행락 중 발생한 쓰레기를 버리는 행위", "fineWon": null, "rewardWon": 40000 },
+      { "item": "차량, 손수레 등 운반장비를 이용해 폐기물을 버리는 행위", "fineWon": null, "rewardWon": 100000 },
+      { "item": "생활폐기물을 불법으로 소각하는 행위", "fineWon": null, "rewardWon": 100000 },
+      { "item": "사업활동 과정에서 발생하는 생활폐기물을 버리거나 매립·소각하는 행위", "fineWon": null, "rewardWon": 200000 }
+    ],
+    "caps": { "monthWon": null, "yearWon": 500000, "monthCount": null, "yearCount": null, "note": "배우자·직계존비속을 합쳐 분기 10건, 연 50만원까지" },
+    "deadlineDays": 30,
+    "residency": "신고일 기준 1개월 전부터 군포시에 주민등록",
+    "payment": null,
+    "channels": [
+      "육하원칙에 따라 신고하고 객관적이고 명확한 증거품·증거자료를 제출해야 한다"
+    ],
+    "exclusions": [
+      "같은 사안이 이미 조사·처분 중이거나 조치된 사항을 신고한 경우",
+      "익명 또는 차명으로 신고한 것이 확인된 경우",
+      "위반행위를 발견한 날부터 30일이 지난 뒤에 신고한 경우",
+      "국가기관·지방자치단체의 환경분야 감시원으로 위촉되어 별도의 수당을 받는 경우",
+      "공무원(청원경찰, 공무직근로자, 공익근무요원, 공공근로자 등 공무 종사자 포함)으로 확인된 경우",
+      "같은 사안으로 다른 법률 등에서 포상금이 지급된 경우",
+      "포상금을 받을 목적으로 사전공모 등 부정·부당하게 신고한 경우"
+    ],
+    "tableOnly": false
+  },
+  "sources": [
+    {
+      "title": "군포시 폐기물 관리에 관한 조례",
+      "kind": "조례",
+      "ordinId": "2150084",
+      "mst": "1805177",
+      "articles": [
+        "제26조",
+        "별표 5"
+      ],
+      "promulgatedAt": "2023-05-01",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=1805177"
+    }
+  ],
+  "note": "별표 금액은 과태료 부과금액의 20%에 맞춰 정해져 있어요. 신고일 기준 1개월 전부터 군포시에 주민등록이 있어야 받을 수 있어요.",
+  "checkedAt": "2026-09-11"
+}

@@ -1,0 +1,56 @@
+{
+  "code": "41290",
+  "sido": "경기도",
+  "sigungu": "과천시",
+  "status": "verified",
+  "dumping": {
+    "method": "table",
+    "rates": null,
+    "fixedWon": null,
+    "examples": [
+      { "item": "별도 기구 없이 휴대하던 폐기물(담배꽁초, 휴지 등)을 버리는 행위", "fineWon": null, "rewardWon": 10000 },
+      { "item": "간이보관기구(비닐봉지, 천보자기 등)를 이용해 폐기물을 버리는 행위", "fineWon": null, "rewardWon": 30000 },
+      { "item": "휴식 또는 행락 중 발생한 쓰레기를 수거하지 않는 행위", "fineWon": null, "rewardWon": 30000 },
+      { "item": "폐기물을 불법 소각하거나 매립하는 행위", "fineWon": null, "rewardWon": 30000 },
+      { "item": "규격봉투를 쓰지 않거나 분리배출·지정 장소·용기를 지키지 않고 배출하는 행위", "fineWon": null, "rewardWon": 30000 },
+      { "item": "차량, 손수레 등 별도 운반장비를 이용해 폐기물을 버리는 행위", "fineWon": null, "rewardWon": 50000 },
+      { "item": "사업활동 과정에서 발생하는 폐기물(건축폐재류 등)을 버리는 행위", "fineWon": null, "rewardWon": 150000 }
+    ],
+    "caps": { "monthWon": null, "yearWon": 300000, "monthCount": null, "yearCount": null, "note": "신고자 1명당 연 30만원까지" },
+    "deadlineDays": 14,
+    "residency": "과천시 관내 거주",
+    "payment": [
+      "신고자가 미리 신고한 실명계좌 입금 원칙",
+      "현금 외에 상품권 등 현물"
+    ],
+    "channels": [
+      "무단투기·소각·매립 등 불법처리 행위자 신고는 적발한 날부터 14일 이내에 해야 한다"
+    ],
+    "exclusions": [
+      "위반행위를 먼저 신고한 사람이 있는 경우",
+      "신고자가 익명 또는 가명을 사용해 포상금 지급이 불가능한 경우",
+      "포상이나 타인의 영업 방해를 목적으로 사전공모 등 부정·부당하게 신고한 경우",
+      "과천시 관내 이외의 지역 거주자가 신고한 경우"
+    ],
+    "tableOnly": false
+  },
+  "sources": [
+    {
+      "title": "과천시 폐기물 등 과태료 부과ㆍ징수 및 신고포상금 지급 조례",
+      "kind": "조례",
+      "ordinId": "2032128",
+      "mst": "1591743",
+      "articles": [
+        "제12조",
+        "제15조",
+        "제18조",
+        "제19조",
+        "별표 2"
+      ],
+      "promulgatedAt": "2021-04-28",
+      "url": "https://www.law.go.kr/LSW/ordinInfoP.do?ordinSeq=1591743"
+    }
+  ],
+  "note": "과천시에 살아야 받을 수 있고, 한 사람당 연 30만원까지예요. 위반자가 인정하면 감면 과태료 고지서 발급일부터, 다투면 과태료 고지서 발급일부터 7일 안에 지급해요.",
+  "checkedAt": "2026-09-11"
+}
