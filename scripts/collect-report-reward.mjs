@@ -48,8 +48,8 @@ const opt = (name) => {
   return i >= 0 ? args[i + 1] : undefined
 }
 const FORCE = args.includes('--force')
-const BODY_QUERIES = ['무단투기 포상금', '투기 포상금', '폐기물 포상금']
-const REWARD_ARTICLE = /포상/
+// 「포상금」이 아니라 「보상금」이라고 쓰는 조례가 있다(오산·고양 환경오염행위 신고 보상 조례) — 둘 다 줍는다
+const BODY_QUERIES = ['무단투기 포상금', '투기 포상금', '폐기물 포상금', '투기 보상금', '폐기물 보상금', '환경오염 신고 보상']
 const DUMPING = /투기|폐기물|쓰레기|꽁초/
 const GAP_MS = 300
 
@@ -120,30 +120,49 @@ async function bodySearchIndex() {
 }
 
 /**
- * 「포상」만으로 거르면 대행업체 평가 조례의 우수업체 포상, 도시정비 조례의 신고포상금이 섞인다(실측).
- * 조문은 포상 + 신고 + 투기·폐기물, 별표는 [별표 …] 이면서 투기·폐기물·불법행위를 말하는 것만.
+ * 조문·별표 거르기 — 실측으로 세 번 고쳤다.
+ *  1) 「포상」만으로 거르면 대행업체 평가 조례의 우수업체 포상, 도시정비 조례의 신고포상금이 섞인다.
+ *  2) 그런데 조문에 「투기·폐기물」 낱말까지 요구하면 **법 조항 번호로만 대상을 가리키는 조문**을 놓친다
+ *     — 「법 제8조제1항 또는 제2항의 위반행위를 신고한 자」(남양주·고양·하남, 2026-09-11 수집 세션 보고).
+ *     법령 인용이 정확한 조례일수록 빠지는 필터였다. → 법규 제목이 폐기물·청소·투기·환경오염·과태료
+ *     계열이면 조문에는 「포상/보상 + 신고」만 요구하고, 그 밖의 법규에서만 낱말을 요구한다.
+ *  3) 「포상금」 대신 「보상금」이라고 쓰는 조례가 있다(오산).
+ * 별표는 제목에 포상·보상·지급기준이 있거나, 뽑힌 조문이 「별표 N」으로 가리키는 것.
+ * 별표 제목이 그냥 「별표」「별표 3」인 곳이 많다(종로·광진·양천·오산·가평) — 번호로 잇는다. 서식은 뺀다.
  * 조문여부 'N' 은 장·절 제목 행이다.
  */
-function pickArticles(body) {
+const REWARD = /포상|보상/
+const WASTE_TITLE = /폐기물|청소|투기|환경오염|과태료|쓰레기/
+
+function pickArticles(body, ordinTitle) {
+  const titleIsWaste = WASTE_TITLE.test(ordinTitle ?? '')
   const arts = []
   for (const a of list(body?.['조문']?.['조'])) {
     const text = a['조내용'] ?? ''
-    if (a['조문여부'] !== 'Y' || !REWARD_ARTICLE.test(text) || !/신고/.test(text) || !DUMPING.test(text)) continue
+    if (a['조문여부'] !== 'Y' || !REWARD.test(text) || !/신고/.test(text)) continue
+    if (!titleIsWaste && !DUMPING.test(text)) continue
     arts.push({ no: text.match(/^제\d+조(의\d+)?/)?.[0] ?? null, title: a['조제목'] || null, text })
   }
   return arts
 }
 
-function pickTables(body) {
+function pickTables(body, articles) {
+  const referenced = new Set(articles.flatMap((a) => [...a.text.matchAll(/별표\s*(\d+)/g)].map((m) => Number(m[1]))))
   return list(body?.['별표']?.['별표단위'])
-    .filter((t) => /^\[별표/.test(t['별표제목'] ?? '') && REWARD_ARTICLE.test(t['별표제목']) && /투기|폐기물|불법행위|쓰레기/.test(t['별표제목']))
+    .filter((t) => {
+      const title = t['별표제목'] ?? ''
+      if (/서식/.test(title) && !/기준|금액/.test(title)) return false
+      return /포상|보상|지급기준/.test(title) || referenced.has(Number(t['별표번호']))
+    })
     .map((t) => ({ title: t['별표제목'], fileType: t['별표첨부파일구분'] || null, fileUrl: t['별표첨부파일명'] || null, text: t['별표내용'] || null }))
 }
 
 async function collectUnit(unit, bodyHits) {
   const name = shortName(unit)
   // 본문검색에서 이 자치단체 것 + 법규명으로 「○○ 폐기물」 (포상금 조항이 없어도 「없다」 판단의 근거로 남긴다)
-  const byName = (await searchAll(`${name} 폐기물`, 1)).filter((it) => it['지자체기관명'] === unit.orgName)
+  const byName = [...(await searchAll(`${name} 폐기물`, 1)), ...(await searchAll(`${name} 환경오염`, 1))].filter(
+    (it) => it['지자체기관명'] === unit.orgName,
+  )
   const cands = new Map()
   for (const it of [...bodyHits.filter((it) => it['지자체기관명'] === unit.orgName), ...byName]) cands.set(it['자치법규ID'], it)
 
@@ -152,8 +171,8 @@ async function collectUnit(unit, bodyHits) {
     const mst = it['자치법규일련번호']
     const body = (await drf('lawService.do', { MST: mst })).LawService
     const info = body?.['자치법규기본정보'] ?? {}
-    const articles = pickArticles(body)
-    const tables = pickTables(body)
+    const articles = pickArticles(body, info['자치법규명'] ?? it['자치법규명'])
+    const tables = pickTables(body, articles)
     ordinances.push({
       title: info['자치법규명'] ?? it['자치법규명'],
       kind: it['자치법규종류'] ?? null, // 조례 | 규칙

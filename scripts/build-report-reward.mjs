@@ -109,6 +109,23 @@ if (fail.length) {
   process.exit(1)
 }
 
+// 말투·길이 경고 — 앱은 이 문자열들을 가공 없이 보여준다(COLLECT.md 「앱에 보이는 문장」).
+// 규칙으로 완벽히 잡을 수 없어 커밋을 막지는 않고 알린다. 0건이 되게 고친다.
+const CLAUSE = /(한다|된다|있다|없다|않는다|이다|하여야|할 것|포함해야)\s*[.)]?$/
+const warn = []
+for (const d of done.values()) {
+  const m = d.dumping ?? {}
+  const texts = [['note', d.note], ['caps.note', m.caps?.note], ['residency', m.residency]]
+  for (const k of ['payment', 'channels', 'exclusions']) for (const v of m[k] ?? []) texts.push([k, v])
+  for (const [k, v] of texts) if (v && CLAUSE.test(v.trim())) warn.push(`${d.code} ${d.sigungu} ${k}: 조문 말투 — 「${v.slice(0, 40)}」`)
+  for (const e of [...(m.examples ?? []), ...(m.rates ?? [])]) {
+    if (e.item.length > 25) warn.push(`${d.code} ${d.sigungu} item ${e.item.length}자 — 「${e.item.slice(0, 30)}…」 (20자 안팎으로)`)
+  }
+}
+if (warn.length) {
+  console.warn(`⚠ 말투·길이 확인 ${warn.length}건 (커밋은 막지 않는다)\n  - ` + warn.slice(0, 40).join('\n  - ') + (warn.length > 40 ? `\n  … 외 ${warn.length - 40}건` : ''))
+}
+
 const index = units.map((u) => {
   const d = done.get(u.code)
   return { code: u.code, sido: u.sido, sigungu: u.sigungu, status: d?.status ?? null, checkedAt: d?.checkedAt ?? null }

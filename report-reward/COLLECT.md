@@ -89,13 +89,18 @@ cat report-reward/_work/_summary.txt
 - 과태료 조례·신고포상금 조례가 따로 있는 곳이 많다(수원·경기 광주·구리). 폐기물 조례에 없다고 끝내지 않는다.
 - 광역시 조례(「서울특별시 …」)의 조문은 **구 단위 값으로 쓰지 않는다** — 구 조례가 따로 있다.
 - 무단투기가 아닌 포상금(불법소각만, 음식물 재활용 우수 포상 등)은 넣지 않는다. 조문에 투기·무단 버림 신고가 있어야 한다.
+- 조문이 **법 조항 번호로만** 대상을 가리켜도(「법 제8조제1항 또는 제2항의 위반행위를 신고한 자」) 무단투기 포상금이다 — 폐기물관리법 제8조가 무단투기 금지다(남양주·고양·하남).
+- 「포상금」이 아니라 **「보상금」**이라고 쓰는 조례도 있다(오산). 별표 제목이 그냥 「별표」「별표 3」이어도 조문이 가리키면 그 표다.
+- 한도 단위가 스키마에 없으면(분기 10건, 구청별 월 10건) 숫자 칸을 비우거나 맞는 칸만 채우고 **`caps.note` 에 문장으로** 쓴다.
+- 「과태료의 80% 이내」처럼 **상한만 있는 비율**은 `rates[].item` 에 「이내」를 남긴다(앱이 「최대 80%」로 보여준다).
 - 조문이 말하지 않는 건 null. 구청 홈페이지 안내와 다르면 **조례·규칙을 따르고** 차이를 `note` 에.
 
 **금액표(한글 별표) 열기 — 선택**
 `tables[].fileUrl` 이 hwp 다. 열 수 있으면 `examples` 를 채우고 `tableOnly: false`.
 ```bash
-python3 -m venv ~/.venv-hwp && ~/.venv-hwp/bin/pip install pyhwp
-curl -sL "<fileUrl>" -o /tmp/t.hwp && ~/.venv-hwp/bin/hwp5txt /tmp/t.hwp
+python3 -m venv ~/.venv-hwp && ~/.venv-hwp/bin/pip install pyhwp six     # six 가 없으면 import 에서 죽는다
+curl -sL "<fileUrl>" -o /tmp/t.hwp && ~/.venv-hwp/bin/hwp5html --output /tmp/t.html /tmp/t.hwp
+# 표는 /tmp/t.html 의 <table> 에서 읽는다. ⚠ hwp5txt 는 표를 「<표>」 한 글자로 버려서 금액을 못 읽는다
 ```
 안 열리면 `tableOnly: true` 로 두고 넘어간다. 멈추지 않는다.
 
