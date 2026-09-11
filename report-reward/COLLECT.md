@@ -67,7 +67,7 @@ cat report-reward/_work/_summary.txt
 | `dumping.channels` | 신고 방법이 조문에 있으면(서식 제출, 사진·영상 필수, 안전신문고 인정 등). 없으면 null |
 | `dumping.exclusions` | 지급 제외 사유를 짧은 문장 배열로. 없으면 null |
 | `sources[]` | **읽은 법규마다 하나.** `_work` 의 `title·kind·ordinId·mst·promulgatedAt·url` 을 **복사**하고 `articles` 에 조문 번호(`제10조`, `별표 3`)를 적는다. `ordinId·mst` 는 월간 개정 감지의 기준이라 틀리면 안 된다 |
-| `note` | 앱에 그대로 보일 수 있다. 짧고 사실만 |
+| `note` | **앱에 그대로 보인다 → 해요체로 쓴다**(「…에 있어요」「…지급해요」). 한두 문장, 사용자에게 필요한 사실만. 조례 구조 설명(「별도 과태료 조례에 있다」)은 쓰지 않는다 — 그건 `sources` 가 보여준다 |
 | `checkedAt` | 오늘(KST) |
 
 **판단 요령**
