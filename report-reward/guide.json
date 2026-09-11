@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-11T23:00+09:00",
+  "updatedAt": "2026-09-11T23:30+09:00",
   "categories": [
     {
       "id": "parking",
@@ -97,7 +97,8 @@
         }
       ],
       "checkedAt": "2026-09-11",
-      "reportRank": 1
+      "reportRank": 1,
+      "penaltyLabel": "과태료 4만~13만 원"
     },
     {
       "id": "parking-disabled",
@@ -139,7 +140,8 @@
         }
       ],
       "checkedAt": "2026-09-11",
-      "reportRank": 3
+      "reportRank": 3,
+      "penaltyLabel": "과태료 10만~50만 원"
     },
     {
       "id": "parking-ev",
@@ -186,7 +188,8 @@
         }
       ],
       "checkedAt": "2026-09-11",
-      "reportRank": 11
+      "reportRank": 11,
+      "penaltyLabel": "과태료 대상"
     },
     {
       "id": "traffic-violation",
@@ -244,7 +247,8 @@
         }
       ],
       "checkedAt": "2026-09-11",
-      "reportRank": 2
+      "reportRank": 2,
+      "penaltyLabel": "범칙금·과태료"
     },
     {
       "id": "traffic-dangerous",
@@ -290,7 +294,8 @@
         }
       ],
       "checkedAt": "2026-09-11",
-      "reportRank": 13
+      "reportRank": 13,
+      "penaltyLabel": "형사처벌"
     },
     {
       "id": "traffic-local",
@@ -341,7 +346,8 @@
         }
       ],
       "checkedAt": "2026-09-11",
-      "reportRank": 12
+      "reportRank": 12,
+      "penaltyLabel": "과태료 대상"
     },
     {
       "id": "dumping-trash",
@@ -634,7 +640,8 @@
         }
       ],
       "checkedAt": "2026-09-11",
-      "reportRank": 14
+      "reportRank": 14,
+      "penaltyLabel": "견인 대상"
     },
     {
       "id": "living-noise",
@@ -673,7 +680,8 @@
         }
       ],
       "checkedAt": "2026-09-11",
-      "reportRank": 15
+      "reportRank": 15,
+      "penaltyLabel": "분쟁 조정"
     },
     {
       "id": "safety-road",
@@ -938,7 +946,8 @@
         }
       ],
       "checkedAt": "2026-09-11",
-      "reportRank": 16
+      "reportRank": 16,
+      "penaltyLabel": "형사처벌"
     }
   ],
   "reportRankBasis": {
