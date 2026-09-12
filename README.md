@@ -53,6 +53,16 @@ realestate/                ← 부동산 미니앱 2종용 (국토부 실거래�
   trade/{YYYY-MM}.json     앱 A(아파트 매매) 축약본 · trade/latest.json 을 앱이 읽는다
   rent/{YYYY-MM}.json      앱 B(아파트 전월세) 축약본 · 갱신 인상률이 핵심 지표
   meta.json                수집 시각·건수. 앱이 "기준일" 표시에 쓴다
+vaccine/app/               ← flu-shot-mini(우리동네 독감주사) 앱용 (보조금24 + 심평원 비급여, 주 2회 월·목)
+  local-support.json       지자체·중앙 예방접종 지원 서비스 (서비스명 LIKE 인플루엔자·독감·예방접종).
+                           항목마다 scope(national/sido/sigungu)·code(시군구 5자리, report-reward/regions 기준)·
+                           vaccines 태그(flu·zoster·pneumo…)·지원대상/내용 원문. 🚨 전국을 다 담지 않는다 —
+                           보조금24 에 안 올린 지자체는 "등록된 정보 없음"으로 보여야 한다
+  prices.json              백신 종류별 시도 가격 통계 {n, min, p10, med, p90, max} + reported.mainMonth(신고 시점).
+                           독감은 flu / flu-senior(고령자용)로 나눈다. 앱은 p10~p90 을 쓴다(min/max 엔 입력 실수가 섞임)
+                           🚨 **병원급 이상만**(의원 없음) · 제품명은 일부러 뺐다(전문의약품 광고 소지) → meta 에만
+                           🚨 2026-09 실측 독감 가격의 91%가 2025-09 신고분(지난 절기) — 앱은 신고 시점을 붙인다
+  meta.json                기준일·건수·지역 못 맞춘 기관·제품별 행 수(검증용)
 aptcost/                   ← 관리비 미니앱용 (K-apt 자료실 엑셀, 월 1회)
                            🚨 OpenAPI 가 아니라 **엑셀**이 원본이다. 단지 22,298 곳을
                               단지코드 하나씩 부르는 API 로는 한 달치도 못 채운다

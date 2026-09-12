@@ -59,6 +59,11 @@
           "callsPerRun": 60,
           "dataset": "보조금24"
         },
+        "fetch-vaccine.yml": {
+          "callsPerRun": 190,
+          "dataset": "보조금24 + 심평원 비급여",
+          "note": "보조금24 serviceList 3콜(서비스명 LIKE 3종) + 심평원 getNonPaymentItemHospList2 약 187콜(18.6만 행 ÷ 1000). 주 2회"
+        },
         "fetch-realestate.yml": {
           "callsPerRun": 300,
           "dataset": "국토부 실거래가"

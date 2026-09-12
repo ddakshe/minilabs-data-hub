@@ -1,0 +1,94 @@
+name: Fetch Vaccine
+
+on:
+  schedule:
+    # 월·목 06:30 KST. 독감 시즌(9~4월)에 지자체 지원 공고가 수시로 올라오고,
+    # 심평원 비급여 가격도 병원 신고가 쌓이면서 바뀐다. 매일 돌릴 만큼 빠르게 변하지는 않는다.
+    - cron: '30 21 * * 0,3'
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: '실행 이유 (로그에만 기록, 선택)'
+        required: false
+        default: 'manual refresh'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-vaccine
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Show trigger context
+        run: |
+          echo "Event       : ${{ github.event_name }}"
+          echo "Reason      : ${{ github.event.inputs.reason || '(scheduled)' }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      # 스크립트가 표본 수(보조금24 독감 지원 20건 미만, 독감 가격 50행 미만)와
+      # 심평원 수신 행 수(전체의 98% 미만)를 검사하고 어긋나면 exit 1 로 죽는다.
+      # 그러면 아래 커밋 단계로 넘어가지 않는다.
+      - name: Fetch vaccine data
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        run: node scripts/fetch-vaccine.mjs
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git add vaccine/
+          # meta.json 은 fetchedAt 이 매번 바뀌므로 판단 기준에서 뺀다.
+          if git diff --cached --quiet -- vaccine/app/prices.json vaccine/app/local-support.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "변경 없음 — 커밋을 건너뜁니다."
+            git reset -- vaccine/ >/dev/null
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --cached --stat vaccine/
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d")
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            MSG="chore(vaccine): manual refresh ($DATE_KST)"
+          else
+            MSG="chore(vaccine): refresh ($DATE_KST)"
+          fi
+          git add vaccine/
+          git commit -m "$MSG"
+          git push || (git pull --rebase origin main && git push)
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Vaccine Fetch Summary"
+            echo ""
+            echo "- Trigger: \`${{ github.event_name }}\`"
+            echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
+            if [ -f vaccine/app/meta.json ]; then
+              echo ""
+              echo '```json'
+              node -e 'const m=require("./vaccine/app/meta.json");console.log(JSON.stringify({fetchedAt:m.fetchedAt,localSupport:{items:m.localSupport.items,flu:m.localSupport.flu,orgs:m.localSupport.orgs,unmatched:m.localSupport.unmatched.length},prices:{hospitalRows:m.prices.hospitalRows,vaccineRows:m.prices.vaccineRows}},null,2))'
+              echo '```'
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
