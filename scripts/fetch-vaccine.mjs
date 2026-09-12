@@ -133,7 +133,11 @@ async function fetchGov24(regionIndex) {
     if (ANIMAL.test(all)) continue
     const users = String(s['사용자구분'] ?? '')
     if (users && !/개인|가구/.test(users)) continue
-    const vaccines = tagVaccines(all)
+    // 백신 태그는 **앱 화면에 보이는 필드**(서비스명·지원대상·지원내용)에서만 붙인다.
+    // 목적요약·선정기준까지 보면 "관내 모든 감염병 고위험군"(인천 강화군 임시 예방접종 지원)처럼
+    // 화면 어디에도 독감이 없는데 독감 지원으로 잡힌다(2026-09-13 데이터 검증에서 발견).
+    const shown = [s['서비스명'], s['지원대상'], s['지원내용']].join('\n')
+    const vaccines = tagVaccines(shown)
     if (!vaccines.length) continue
 
     const type = s['소관기관유형'] ?? ''
