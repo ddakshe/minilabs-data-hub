@@ -1,5 +1,5 @@
 {
- "asOf": "20260911",
+ "asOf": "20260912",
  "byOrigin": {
   "backtest": {
    "1": {
@@ -44,29 +44,42 @@
   },
   "live": {
    "1": {
-    "n": 9,
+    "n": 10,
     "hit": 6,
-    "sum": 1.17,
+    "sum": 0.6499999999999999,
     "win": 6,
     "winSum": 2.2600000000000002,
-    "lose": 3,
-    "loseSum": -1.0899999999999999,
-    "hitRate": 0.6667,
-    "ev": 0.13,
+    "lose": 4,
+    "loseSum": -1.6099999999999999,
+    "hitRate": 0.6,
+    "ev": 0.065,
     "winAvg": 0.38,
-    "loseAvg": -0.36
+    "loseAvg": -0.4
    },
    "3": {
-    "n": 6,
-    "hit": 6,
-    "sum": 4.76,
-    "win": 6,
-    "winSum": 4.76,
+    "n": 8,
+    "hit": 7,
+    "sum": 4.46,
+    "win": 7,
+    "winSum": 5.68,
+    "lose": 1,
+    "loseSum": -1.22,
+    "hitRate": 0.875,
+    "ev": 0.557,
+    "winAvg": 0.81,
+    "loseAvg": -1.22
+   },
+   "7": {
+    "n": 2,
+    "hit": 2,
+    "sum": 1.76,
+    "win": 2,
+    "winSum": 1.76,
     "lose": 0,
     "loseSum": 0,
     "hitRate": 1,
-    "ev": 0.793,
-    "winAvg": 0.79,
+    "ev": 0.88,
+    "winAvg": 0.88,
     "loseAvg": 0
    }
   }
