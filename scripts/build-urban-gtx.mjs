@@ -13,8 +13,9 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
-const SEED = path.join(ROOT, 'urban-plan', 'seed', 'gtx.json')
-const OUT = path.join(ROOT, 'urban-plan', 'gtx.json')
+// 인자로 다른 seed 를 줄 수 있다 — 지하철 연장(seed/subway.json → subway.json)도 같은 형태·같은 검증을 쓴다 (2026-09-12)
+const SEED = process.argv[2] ? path.resolve(process.argv[2]) : path.join(ROOT, 'urban-plan', 'seed', 'gtx.json')
+const OUT = process.argv[3] ? path.resolve(process.argv[3]) : path.join(ROOT, 'urban-plan', 'gtx.json')
 const STATUS = new Set(['운행', '공사', '계획'])
 
 const seed = JSON.parse(await fs.readFile(SEED, 'utf8'))
