@@ -1,5 +1,5 @@
 {
- "asOf": "20260913",
+ "asOf": "20260914",
  "byOrigin": {
   "backtest": {
    "1": {
@@ -44,42 +44,42 @@
   },
   "live": {
    "1": {
-    "n": 11,
-    "hit": 7,
-    "sum": 0.82,
-    "win": 7,
-    "winSum": 2.43,
+    "n": 12,
+    "hit": 8,
+    "sum": 1.05,
+    "win": 8,
+    "winSum": 2.66,
     "lose": 4,
     "loseSum": -1.6099999999999999,
-    "hitRate": 0.6364,
-    "ev": 0.075,
-    "winAvg": 0.35,
+    "hitRate": 0.6667,
+    "ev": 0.088,
+    "winAvg": 0.33,
     "loseAvg": -0.4
    },
    "3": {
-    "n": 9,
+    "n": 10,
     "hit": 8,
-    "sum": 4.69,
+    "sum": 4.57,
     "win": 8,
     "winSum": 5.91,
-    "lose": 1,
-    "loseSum": -1.22,
-    "hitRate": 0.8889,
-    "ev": 0.521,
+    "lose": 2,
+    "loseSum": -1.3399999999999999,
+    "hitRate": 0.8,
+    "ev": 0.457,
     "winAvg": 0.74,
-    "loseAvg": -1.22
+    "loseAvg": -0.67
    },
    "7": {
-    "n": 4,
-    "hit": 4,
-    "sum": 3.25,
-    "win": 4,
-    "winSum": 3.25,
+    "n": 5,
+    "hit": 5,
+    "sum": 4.59,
+    "win": 5,
+    "winSum": 4.59,
     "lose": 0,
     "loseSum": 0,
     "hitRate": 1,
-    "ev": 0.813,
-    "winAvg": 0.81,
+    "ev": 0.918,
+    "winAvg": 0.92,
     "loseAvg": 0
    }
   }
