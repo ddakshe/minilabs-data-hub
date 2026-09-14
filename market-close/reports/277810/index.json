@@ -3,10 +3,27 @@
   "name": "레인보우로보틱스",
   "market": "KOSDAQ",
   "retainDays": 120,
-  "firstBasDt": "20260318",
-  "lastBasDt": "20260909",
+  "firstBasDt": "20260320",
+  "lastBasDt": "20260911",
   "count": 120,
   "days": [
+    {
+      "basDt": "20260911",
+      "close": 436000,
+      "fltRt": -2.9,
+      "headline": "코스닥보다 0.95%p 낮았어요.",
+      "newsCount": 3,
+      "dartCount": 0
+    },
+    {
+      "basDt": "20260910",
+      "close": 449000,
+      "fltRt": 0.79,
+      "headline": "코스닥이 오른 만큼 올랐어요.",
+      "newsCount": 0,
+      "dartCount": 0,
+      "priceOnly": true
+    },
     {
       "basDt": "20260909",
       "close": 445500,
@@ -1057,25 +1074,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260319",
-      "close": 718000,
-      "fltRt": -2.97,
-      "headline": "시가 719,000원보다 1,000원 낮게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
-    },
-    {
-      "basDt": "20260318",
-      "close": 740000,
-      "fltRt": 2.64,
-      "headline": "시가 743,000원보다 3,000원 낮게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-09-10T06:51:14.887Z"
+  "updatedAt": "2026-09-14T07:22:31.226Z"
 }

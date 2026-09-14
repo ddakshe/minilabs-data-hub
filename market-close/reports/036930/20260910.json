@@ -1,0 +1,101 @@
+{
+  "code": "036930",
+  "name": "주성엔지니어링",
+  "market": "KOSDAQ",
+  "basDt": "20260910",
+  "price": {
+    "code": "036930",
+    "name": "주성엔지니어링",
+    "market": "KOSDAQ",
+    "basDt": "20260910",
+    "close": 221000,
+    "vs": 14500,
+    "fltRt": 7.02,
+    "open": 206500,
+    "high": 239500,
+    "low": 198200,
+    "prevClose": 206500,
+    "volume": 5078610,
+    "tradeValue": 1133698207250,
+    "week52": {
+      "low": 26450,
+      "high": 250500,
+      "position": 0.8683329613925463,
+      "days": 244,
+      "from": "20250910"
+    },
+    "recent5": [
+      {
+        "basDt": "20260904",
+        "fltRt": 6.13,
+        "open": 170100,
+        "high": 179900,
+        "low": 169700,
+        "close": 178300
+      },
+      {
+        "basDt": "20260907",
+        "fltRt": 4.99,
+        "open": 184800,
+        "high": 189800,
+        "low": 182000,
+        "close": 187200
+      },
+      {
+        "basDt": "20260908",
+        "fltRt": 3.95,
+        "open": 190000,
+        "high": 208750,
+        "low": 188900,
+        "close": 194600
+      },
+      {
+        "basDt": "20260909",
+        "fltRt": 6.12,
+        "open": 197000,
+        "high": 212000,
+        "low": 195200,
+        "close": 206500
+      },
+      {
+        "basDt": "20260910",
+        "fltRt": 7.02,
+        "open": 206500,
+        "high": 239500,
+        "low": 198200,
+        "close": 221000
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 1158403,
+      "ratio": 4.38
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 531,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-09-14T07:22:31.216Z"
+  },
+  "facts": [
+    "코스닥보다 6.23%p 높았어요.",
+    "거래량은 20일 평균의 4.4배예요.",
+    "시가보다 14,500원 높게 마감했어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 836.92,
+    "vs": 6.55,
+    "fltRt": 0.79
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null,
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-09-14T07:22:31.216Z"
+}

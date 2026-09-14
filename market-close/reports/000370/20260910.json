@@ -1,0 +1,101 @@
+{
+  "code": "000370",
+  "name": "한화손해보험",
+  "market": "KOSPI",
+  "basDt": "20260910",
+  "price": {
+    "code": "000370",
+    "name": "한화손해보험",
+    "market": "KOSPI",
+    "basDt": "20260910",
+    "close": 8380,
+    "vs": 490,
+    "fltRt": 6.21,
+    "open": 7900,
+    "high": 8580,
+    "low": 7890,
+    "prevClose": 7890,
+    "volume": 1077317,
+    "tradeValue": 8881617800,
+    "week52": {
+      "low": 5100,
+      "high": 9300,
+      "position": 0.780952380952381,
+      "days": 244,
+      "from": "20250910"
+    },
+    "recent5": [
+      {
+        "basDt": "20260904",
+        "fltRt": -5.92,
+        "open": 8930,
+        "high": 8950,
+        "low": 8320,
+        "close": 8420
+      },
+      {
+        "basDt": "20260907",
+        "fltRt": -1.78,
+        "open": 8400,
+        "high": 8490,
+        "low": 8165,
+        "close": 8270
+      },
+      {
+        "basDt": "20260908",
+        "fltRt": -1.45,
+        "open": 8280,
+        "high": 8310,
+        "low": 8110,
+        "close": 8150
+      },
+      {
+        "basDt": "20260909",
+        "fltRt": -3.19,
+        "open": 8110,
+        "high": 8170,
+        "low": 7800,
+        "close": 7890
+      },
+      {
+        "basDt": "20260910",
+        "fltRt": 6.21,
+        "open": 7900,
+        "high": 8580,
+        "low": 7890,
+        "close": 8380
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 1023851,
+      "ratio": 1.05
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 531,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-09-14T07:22:31.273Z"
+  },
+  "facts": [
+    "코스피보다 6.46%p 높았어요.",
+    "거래량은 20일 평균의 1.1배예요.",
+    "시가보다 480원 높게 마감했어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 7033.92,
+    "vs": -17.72,
+    "fltRt": -0.25
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null,
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-09-14T07:22:31.273Z"
+}

@@ -3,10 +3,27 @@
   "name": "원익IPS",
   "market": "KOSDAQ",
   "retainDays": 120,
-  "firstBasDt": "20260318",
-  "lastBasDt": "20260909",
+  "firstBasDt": "20260320",
+  "lastBasDt": "20260911",
   "count": 120,
   "days": [
+    {
+      "basDt": "20260911",
+      "close": 110300,
+      "fltRt": -7.15,
+      "headline": "코스닥보다 5.2%p 낮았어요.",
+      "newsCount": 6,
+      "dartCount": 0
+    },
+    {
+      "basDt": "20260910",
+      "close": 118800,
+      "fltRt": -1.08,
+      "headline": "코스닥보다 1.87%p 낮았어요.",
+      "newsCount": 0,
+      "dartCount": 0,
+      "priceOnly": true
+    },
     {
       "basDt": "20260909",
       "close": 120100,
@@ -1057,25 +1074,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260319",
-      "close": 120900,
-      "fltRt": -2.89,
-      "headline": "시가 121,000원보다 100원 낮게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
-    },
-    {
-      "basDt": "20260318",
-      "close": 124500,
-      "fltRt": 4.97,
-      "headline": "시가 121,500원보다 3,000원 높게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-09-10T06:51:14.892Z"
+  "updatedAt": "2026-09-14T07:22:31.239Z"
 }
