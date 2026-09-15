@@ -3,10 +3,18 @@
   "name": "한화손해보험",
   "market": "KOSPI",
   "retainDays": 120,
-  "firstBasDt": "20260320",
-  "lastBasDt": "20260911",
+  "firstBasDt": "20260323",
+  "lastBasDt": "20260914",
   "count": 120,
   "days": [
+    {
+      "basDt": "20260914",
+      "close": 8500,
+      "fltRt": 0.95,
+      "headline": "코스피보다 4.21%p 높았어요.",
+      "newsCount": 8,
+      "dartCount": 0
+    },
     {
       "basDt": "20260911",
       "close": 8420,
@@ -1065,16 +1073,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260320",
-      "close": 7150,
-      "fltRt": 4.69,
-      "headline": "시가 6,890원보다 260원 높게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-09-14T07:22:31.274Z"
+  "updatedAt": "2026-09-15T06:59:03.205Z"
 }
