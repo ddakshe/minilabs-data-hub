@@ -3,10 +3,18 @@
   "name": "에코프로비엠",
   "market": "KOSDAQ",
   "retainDays": 120,
-  "firstBasDt": "20260323",
-  "lastBasDt": "20260914",
+  "firstBasDt": "20260324",
+  "lastBasDt": "20260915",
   "count": 120,
   "days": [
+    {
+      "basDt": "20260915",
+      "close": 107000,
+      "fltRt": 2.98,
+      "headline": "코스닥보다 2.28%p 높았어요.",
+      "newsCount": 4,
+      "dartCount": 0
+    },
     {
       "basDt": "20260914",
       "close": 103900,
@@ -1064,16 +1072,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260323",
-      "close": 179100,
-      "fltRt": -6.67,
-      "headline": "시가 183,800원보다 4,700원 낮게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-09-15T06:59:03.160Z"
+  "updatedAt": "2026-09-16T07:34:19.878Z"
 }
