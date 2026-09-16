@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-14T00:00:00Z",
+  "generatedAt": "2026-09-16T00:00:00Z",
   "source": "SEC EDGAR",
   "sourceUrl": "https://www.sec.gov/edgar",
-  "usdKrw": 1342.79,
+  "usdKrw": 1359.15,
   "listed": [
     {
       "cik": "0002145659",
@@ -61,15 +61,163 @@
   ],
   "upcoming": [
     {
+      "cik": "0000095572",
+      "name": "KiNRG, Inc.",
+      "ticker": null,
+      "filedAt": "2026-09-15",
+      "isSpac": false,
+      "sic": "1600",
+      "industry": "건설",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": null,
+        "netIncome": -2704605,
+        "assets": 337937
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000095572&type=S-1"
+    },
+    {
+      "cik": "0002143038",
+      "name": "Oceanhawk Acquisition II Corp.",
+      "ticker": null,
+      "filedAt": "2026-09-15",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002143038&type=S-1"
+    },
+    {
       "cik": "0002111838",
       "name": "Haymaker Acquisition Corp V",
       "ticker": "HYAC",
-      "filedAt": "2026-09-11",
+      "filedAt": "2026-09-15",
       "isSpac": true,
       "sic": "6770",
       "industry": "SPAC",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002111838&type=S-1"
+    },
+    {
+      "cik": "0002131303",
+      "name": "SPACCircle Acquisition Corp.",
+      "ticker": null,
+      "filedAt": "2026-09-15",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002131303&type=S-1"
+    },
+    {
+      "cik": "0002091680",
+      "name": "Bitari Inc",
+      "ticker": "BIAI",
+      "filedAt": "2026-09-15",
+      "isSpac": false,
+      "sic": "6221",
+      "industry": "금융·부동산",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002091680&type=S-1"
+    },
+    {
+      "cik": "0002141616",
+      "name": "Amaero Inc.",
+      "ticker": null,
+      "filedAt": "2026-09-15",
+      "isSpac": false,
+      "sic": "3390",
+      "industry": "제조",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002141616&type=S-1"
+    },
+    {
+      "cik": "0002066353",
+      "name": "Canary Staked SEI ETF",
+      "ticker": null,
+      "filedAt": "2026-09-15",
+      "isSpac": false,
+      "sic": "6221",
+      "industry": "금융·부동산",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002066353&type=S-1"
+    },
+    {
+      "cik": "0002125355",
+      "name": "Bamboo Insurance Services, Inc.",
+      "ticker": "BMB",
+      "filedAt": "2026-09-14",
+      "isSpac": false,
+      "sic": "6411",
+      "industry": "금융·부동산",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002125355&type=S-1"
+    },
+    {
+      "cik": "0002109823",
+      "name": "Leader's Advantage Acquisition Corp.",
+      "ticker": "LEDR",
+      "filedAt": "2026-09-14",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002109823&type=S-1"
+    },
+    {
+      "cik": "0002088082",
+      "name": "Electra Therapeutics, Inc.",
+      "ticker": "ETRA",
+      "filedAt": "2026-09-14",
+      "isSpac": false,
+      "sic": "2836",
+      "industry": "제약·바이오",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002088082&type=S-1"
+    },
+    {
+      "cik": "0002065821",
+      "name": "Little West Holdings Inc.",
+      "ticker": null,
+      "filedAt": "2026-09-14",
+      "isSpac": false,
+      "sic": "2080",
+      "industry": "제조",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002065821&type=S-1"
+    },
+    {
+      "cik": "0001802369",
+      "name": "ADARx Pharmaceuticals, Inc.",
+      "ticker": null,
+      "filedAt": "2026-09-14",
+      "isSpac": false,
+      "sic": "2834",
+      "industry": "제약·바이오",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001802369&type=S-1"
+    },
+    {
+      "cik": "0002143067",
+      "name": "Eaglesky Acquisition Corp",
+      "ticker": null,
+      "filedAt": "2026-09-14",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002143067&type=S-1"
+    },
+    {
+      "cik": "0002078149",
+      "name": "Veri MedTech Holdings, Inc.",
+      "ticker": "VRHID",
+      "filedAt": "2026-09-14",
+      "isSpac": false,
+      "sic": "7374",
+      "industry": "소프트웨어·IT",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002078149&type=S-1"
     },
     {
       "cik": "0002105318",
@@ -121,22 +269,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002141406&type=S-1"
     },
     {
-      "cik": "0001468327",
-      "name": "Rent the Runway, Inc.",
-      "ticker": "RENT",
-      "filedAt": "2026-09-11",
-      "isSpac": false,
-      "sic": "5990",
-      "industry": "유통·소매",
-      "financials": {
-        "fiscalEnd": "2026-01-31",
-        "revenue": 329800000,
-        "netIncome": 22600000,
-        "assets": 221000000
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001468327&type=S-1"
-    },
-    {
       "cik": "0002115027",
       "name": "Cryptex Digital Market Cap ETF",
       "ticker": "BAGZ",
@@ -168,17 +300,6 @@
       "industry": "SPAC",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002131124&type=S-1"
-    },
-    {
-      "cik": "0002152644",
-      "name": "Hometown Financial Group, Inc. MD",
-      "ticker": null,
-      "filedAt": "2026-09-10",
-      "isSpac": false,
-      "sic": null,
-      "industry": "기타",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002152644&type=S-1"
     },
     {
       "cik": "0002098410",
@@ -243,29 +364,13 @@
     {
       "cik": "0002124472",
       "name": "Orion180 Insurance Group Inc.",
-      "ticker": null,
+      "ticker": "OIG",
       "filedAt": "2026-09-09",
       "isSpac": false,
       "sic": "6411",
       "industry": "금융·부동산",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002124472&type=S-1"
-    },
-    {
-      "cik": "0001703157",
-      "name": "Securetech Innovations, Inc.",
-      "ticker": "SCTH",
-      "filedAt": "2026-09-09",
-      "isSpac": false,
-      "sic": "3714",
-      "industry": "제조",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 7720757,
-        "netIncome": 203298,
-        "assets": 18889616
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001703157&type=S-1"
     },
     {
       "cik": "0002080215",
@@ -299,54 +404,6 @@
       "industry": "건설",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002104277&type=S-1"
-    },
-    {
-      "cik": "0001866226",
-      "name": "Evolution Metals & Technologies Corp.",
-      "ticker": "EMAT",
-      "filedAt": "2026-09-08",
-      "isSpac": false,
-      "sic": "3690",
-      "industry": "제조",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": null,
-        "netIncome": -1789441,
-        "assets": 6610223
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001866226&type=S-1"
-    },
-    {
-      "cik": "0001736243",
-      "name": "Acurx Pharmaceuticals, Inc.",
-      "ticker": "ACXP",
-      "filedAt": "2026-09-08",
-      "isSpac": false,
-      "sic": "2834",
-      "industry": "제약·바이오",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": null,
-        "netIncome": -7966538,
-        "assets": 7689535
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001736243&type=S-1"
-    },
-    {
-      "cik": "0001896212",
-      "name": "CDT Equity Inc.",
-      "ticker": "CDT",
-      "filedAt": "2026-09-08",
-      "isSpac": false,
-      "sic": "2834",
-      "industry": "제약·바이오",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": null,
-        "netIncome": -39224000,
-        "assets": 5650000
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001896212&type=S-1"
     },
     {
       "cik": "0002133037",
@@ -398,17 +455,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002111846&type=S-1"
     },
     {
-      "cik": "0001802369",
-      "name": "ADARx Pharmaceuticals, Inc.",
-      "ticker": null,
-      "filedAt": "2026-09-04",
-      "isSpac": false,
-      "sic": "2834",
-      "industry": "제약·바이오",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001802369&type=S-1"
-    },
-    {
       "cik": "0002151558",
       "name": "Legion Capital Acquisition Corp.",
       "ticker": null,
@@ -418,22 +464,6 @@
       "industry": "기타",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002151558&type=S-1"
-    },
-    {
-      "cik": "0001807887",
-      "name": "Laser Photonics Corp",
-      "ticker": "LASE",
-      "filedAt": "2026-09-04",
-      "isSpac": false,
-      "sic": "3690",
-      "industry": "제조",
-      "financials": {
-        "fiscalEnd": "2024-12-31",
-        "revenue": 721185,
-        "netIncome": -2518827,
-        "assets": 17152147
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001807887&type=S-1"
     },
     {
       "cik": "0002142855",
@@ -474,38 +504,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002133022&type=S-1"
     },
     {
-      "cik": "0001527352",
-      "name": "Nexalin Technology, Inc.",
-      "ticker": "NXL",
-      "filedAt": "2026-09-03",
-      "isSpac": false,
-      "sic": "3845",
-      "industry": "제조",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 301647,
-        "netIncome": -8222181,
-        "assets": 4635319
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001527352&type=S-1"
-    },
-    {
-      "cik": "0001787518",
-      "name": "T3 Defense Inc.",
-      "ticker": "DFNS",
-      "filedAt": "2026-09-03",
-      "isSpac": false,
-      "sic": "8742",
-      "industry": "기타",
-      "financials": {
-        "fiscalEnd": "2024-09-30",
-        "revenue": 5913461,
-        "netIncome": -8518520,
-        "assets": 984999
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001787518&type=S-1"
-    },
-    {
       "cik": "0002055301",
       "name": "Aura Consolidated Group, Inc.",
       "ticker": null,
@@ -515,22 +513,6 @@
       "industry": "소프트웨어·IT",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002055301&type=S-1"
-    },
-    {
-      "cik": "0001892704",
-      "name": "First Breach, Inc.",
-      "ticker": "FBDT",
-      "filedAt": "2026-09-02",
-      "isSpac": false,
-      "sic": "3480",
-      "industry": "제조",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 384129,
-        "netIncome": -13822121,
-        "assets": 13020782
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001892704&type=S-1"
     },
     {
       "cik": "0002112634",
@@ -580,22 +562,6 @@
         "assets": 1458000
       },
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002032341&type=S-1"
-    },
-    {
-      "cik": "0001602409",
-      "name": "FingerMotion, Inc.",
-      "ticker": "FNGR",
-      "filedAt": "2026-09-01",
-      "isSpac": false,
-      "sic": "7372",
-      "industry": "소프트웨어·IT",
-      "financials": {
-        "fiscalEnd": "2026-02-28",
-        "revenue": 24132261,
-        "netIncome": -7041333,
-        "assets": 60845989
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001602409&type=S-1"
     },
     {
       "cik": "0002045151",
@@ -680,87 +646,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001858939&type=S-1"
     },
     {
-      "cik": "0002125355",
-      "name": "Bamboo Insurance Services, Inc.",
-      "ticker": null,
-      "filedAt": "2026-08-28",
-      "isSpac": false,
-      "sic": "6411",
-      "industry": "금융·부동산",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002125355&type=S-1"
-    },
-    {
-      "cik": "0002088082",
-      "name": "Electra Therapeutics, Inc.",
-      "ticker": null,
-      "filedAt": "2026-08-28",
-      "isSpac": false,
-      "sic": "2836",
-      "industry": "제약·바이오",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002088082&type=S-1"
-    },
-    {
-      "cik": "0002141616",
-      "name": "Amaero Inc.",
-      "ticker": null,
-      "filedAt": "2026-08-28",
-      "isSpac": false,
-      "sic": "3390",
-      "industry": "제조",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002141616&type=S-1"
-    },
-    {
-      "cik": "0002067767",
-      "name": "NextBoat Inc.",
-      "ticker": "NXB",
-      "filedAt": "2026-08-28",
-      "isSpac": false,
-      "sic": "3730",
-      "industry": "제조",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 119866298,
-        "netIncome": -1871797,
-        "assets": 48417557
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002067767&type=S-1"
-    },
-    {
-      "cik": "0001938571",
-      "name": "ADAPTIN BIO, INC.",
-      "ticker": "APTN",
-      "filedAt": "2026-08-28",
-      "isSpac": false,
-      "sic": "2836",
-      "industry": "제약·바이오",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": null,
-        "netIncome": -5167569,
-        "assets": 619159
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001938571&type=S-1"
-    },
-    {
-      "cik": "0001855467",
-      "name": "MOBIX LABS, INC",
-      "ticker": "MOBX",
-      "filedAt": "2026-08-28",
-      "isSpac": false,
-      "sic": "3674",
-      "industry": "반도체·전자",
-      "financials": {
-        "fiscalEnd": "2024-09-30",
-        "revenue": 6442000,
-        "netIncome": -20034000,
-        "assets": 39088000
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001855467&type=S-1"
-    },
-    {
       "cik": "0002067111",
       "name": "Bitwise NEAR ETF",
       "ticker": null,
@@ -818,22 +703,6 @@
         "assets": 28386884
       },
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001947016&type=S-1"
-    },
-    {
-      "cik": "0001956439",
-      "name": "Enhanced Group Inc.",
-      "ticker": "ENHA",
-      "filedAt": "2026-08-25",
-      "isSpac": false,
-      "sic": "7990",
-      "industry": "기타",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": null,
-        "netIncome": 2568594,
-        "assets": 204154720
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001956439&type=S-1"
     },
     {
       "cik": "0001094032",
@@ -945,17 +814,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002128462&type=S-1"
     },
     {
-      "cik": "0002091680",
-      "name": "Bitari Inc",
-      "ticker": null,
-      "filedAt": "2026-08-21",
-      "isSpac": false,
-      "sic": "6221",
-      "industry": "금융·부동산",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002091680&type=S-1"
-    },
-    {
       "cik": "0002131613",
       "name": "CoVolt Power, Inc.",
       "ticker": null,
@@ -967,17 +825,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002131613&type=S-1"
     },
     {
-      "cik": "0002065821",
-      "name": "Little West Holdings Inc.",
-      "ticker": null,
-      "filedAt": "2026-08-21",
-      "isSpac": false,
-      "sic": "2080",
-      "industry": "제조",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002065821&type=S-1"
-    },
-    {
       "cik": "0002073516",
       "name": "ARC Group Acquisition II Corp.",
       "ticker": null,
@@ -987,22 +834,6 @@
       "industry": "SPAC",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002073516&type=S-1"
-    },
-    {
-      "cik": "0001828673",
-      "name": "HCW Biologics Inc.",
-      "ticker": "HCWB",
-      "filedAt": "2026-08-20",
-      "isSpac": false,
-      "sic": "2834",
-      "industry": "제약·바이오",
-      "financials": {
-        "fiscalEnd": "2020-12-31",
-        "revenue": 4099750,
-        "netIncome": -5802201,
-        "assets": 15398086
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001828673&type=S-1"
     },
     {
       "cik": "0000720762",
@@ -1059,22 +890,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002064768&type=S-1"
     },
     {
-      "cik": "0002019793",
-      "name": "XCF Global, Inc.",
-      "ticker": "SAFX",
-      "filedAt": "2026-08-19",
-      "isSpac": false,
-      "sic": "2860",
-      "industry": "제조",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 0,
-        "netIncome": 74004768,
-        "assets": 419472575
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002019793&type=S-1"
-    },
-    {
       "cik": "0002017526",
       "name": "Freenome, Inc.",
       "ticker": "FRNM",
@@ -1124,22 +939,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001880995&type=S-1"
     },
     {
-      "cik": "0001317685",
-      "name": "Alliance Laundry Holdings Inc.",
-      "ticker": "ALH",
-      "filedAt": "2026-08-17",
-      "isSpac": false,
-      "sic": "3580",
-      "industry": "제조",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 1709237000,
-        "netIncome": 101755000,
-        "assets": 2885888000
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001317685&type=S-1"
-    },
-    {
       "cik": "0001893657",
       "name": "Rubber Leaf Inc",
       "ticker": "RLEA",
@@ -1154,38 +953,6 @@
         "assets": 6083266
       },
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001893657&type=S-1"
-    },
-    {
-      "cik": "0002065708",
-      "name": "Andersen Group Inc.",
-      "ticker": "ANDG",
-      "filedAt": "2026-08-17",
-      "isSpac": false,
-      "sic": "7389",
-      "industry": "기타",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 838692000,
-        "netIncome": -2324000,
-        "assets": 565140000
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002065708&type=S-1"
-    },
-    {
-      "cik": "0001793497",
-      "name": "VS Trust",
-      "ticker": "UVIX",
-      "filedAt": "2026-08-17",
-      "isSpac": false,
-      "sic": "6221",
-      "industry": "금융·부동산",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": null,
-        "netIncome": -623535934,
-        "assets": 551040983
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001793497&type=S-1"
     },
     {
       "cik": "0001580149",
@@ -1237,17 +1004,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001670747&type=S-1"
     },
     {
-      "cik": "0002109616",
-      "name": "Fast Finance Pay Corp.",
-      "ticker": null,
-      "filedAt": "2026-08-12",
-      "isSpac": false,
-      "sic": "7389",
-      "industry": "기타",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002109616&type=S-1"
-    },
-    {
       "cik": "0001131903",
       "name": "SPECTRAL CAPITAL Corp",
       "ticker": "FCCN",
@@ -1284,33 +1040,6 @@
       "industry": "SPAC",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002133719&type=S-1"
-    },
-    {
-      "cik": "0001976923",
-      "name": "YOUNEEQAI TECHNICAL SERVICES, INC.",
-      "ticker": null,
-      "filedAt": "2026-08-11",
-      "isSpac": false,
-      "sic": "7371",
-      "industry": "소프트웨어·IT",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001976923&type=S-1"
-    },
-    {
-      "cik": "0001828161",
-      "name": "FTC Solar, Inc.",
-      "ticker": "FTCI",
-      "filedAt": "2026-08-11",
-      "isSpac": false,
-      "sic": "3674",
-      "industry": "반도체·전자",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 99687000,
-        "netIncome": -79577000,
-        "assets": 111812000
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001828161&type=S-1"
     },
     {
       "cik": "0002147267",
@@ -1355,17 +1084,6 @@
       "industry": "제약·바이오",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001903784&type=S-1"
-    },
-    {
-      "cik": "0002143067",
-      "name": "Eaglesky Acquisition Corp",
-      "ticker": null,
-      "filedAt": "2026-08-10",
-      "isSpac": true,
-      "sic": null,
-      "industry": "기타",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002143067&type=S-1"
     },
     {
       "cik": "0002022416",
@@ -1422,22 +1140,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002143156&type=S-1"
     },
     {
-      "cik": "0000095572",
-      "name": "KiNRG, Inc.",
-      "ticker": null,
-      "filedAt": "2026-08-07",
-      "isSpac": false,
-      "sic": "1600",
-      "industry": "건설",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": null,
-        "netIncome": -2704605,
-        "assets": 337937
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000095572&type=S-1"
-    },
-    {
       "cik": "0002108121",
       "name": "Ionetix Corp   DE",
       "ticker": null,
@@ -1454,6 +1156,22 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002108121&type=S-1"
     },
     {
+      "cik": "0001892704",
+      "name": "First Breach, Inc.",
+      "ticker": "FBDT",
+      "filedAt": "2026-08-07",
+      "isSpac": false,
+      "sic": "3480",
+      "industry": "제조",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": 384129,
+        "netIncome": -13822121,
+        "assets": 13020782
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001892704&type=S-1"
+    },
+    {
       "cik": "0002083125",
       "name": "PRESIDIO PRODUCTION Co",
       "ticker": "FTW",
@@ -1463,22 +1181,6 @@
       "industry": "광업·자원",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002083125&type=S-1"
-    },
-    {
-      "cik": "0001827635",
-      "name": "Veradermics, Inc",
-      "ticker": "MANE",
-      "filedAt": "2026-08-07",
-      "isSpac": false,
-      "sic": "2834",
-      "industry": "제약·바이오",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": null,
-        "netIncome": -69995000,
-        "assets": 152619000
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001827635&type=S-1"
     },
     {
       "cik": "0002140030",
@@ -1519,22 +1221,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001911545&type=S-1"
     },
     {
-      "cik": "0001883984",
-      "name": "Alternus Clean Energy, Inc.",
-      "ticker": "ALCE",
-      "filedAt": "2026-08-06",
-      "isSpac": false,
-      "sic": "4931",
-      "industry": "에너지·유틸리티",
-      "financials": {
-        "fiscalEnd": "2024-12-31",
-        "revenue": 311000,
-        "netIncome": 21078000,
-        "assets": 7727000
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001883984&type=S-1"
-    },
-    {
       "cik": "0002123955",
       "name": "Pinnacle Acquisition Corp",
       "ticker": "PNAQ",
@@ -1544,17 +1230,6 @@
       "industry": "SPAC",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002123955&type=S-1"
-    },
-    {
-      "cik": "0002109823",
-      "name": "Leader's Advantage Acquisition Corp.",
-      "ticker": "LEDR",
-      "filedAt": "2026-08-05",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002109823&type=S-1"
     },
     {
       "cik": "0002130219",
@@ -1634,17 +1309,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001875655&type=S-1"
     },
     {
-      "cik": "0002115818",
-      "name": "1776 Acquisition Corp",
-      "ticker": null,
-      "filedAt": "2026-08-03",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002115818&type=S-1"
-    },
-    {
       "cik": "0002075109",
       "name": "Matternet, Inc.",
       "ticker": null,
@@ -1670,17 +1334,6 @@
       "industry": "금융·부동산",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002094496&type=S-1"
-    },
-    {
-      "cik": "0002136571",
-      "name": "Evmand Corp",
-      "ticker": null,
-      "filedAt": "2026-07-31",
-      "isSpac": false,
-      "sic": null,
-      "industry": "기타",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002136571&type=S-1"
     },
     {
       "cik": "0001854963",
@@ -1784,22 +1437,6 @@
       "industry": "운수·통신",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002011617&type=S-1"
-    },
-    {
-      "cik": "0001775734",
-      "name": "Beneficient",
-      "ticker": "BENF",
-      "filedAt": "2026-07-29",
-      "isSpac": false,
-      "sic": "6199",
-      "industry": "금융·부동산",
-      "financials": {
-        "fiscalEnd": "2026-03-31",
-        "revenue": -39125000,
-        "netIncome": -87426000,
-        "assets": 238772000
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001775734&type=S-1"
     },
     {
       "cik": "0002096861",
@@ -1921,54 +1558,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001035422&type=S-1"
     },
     {
-      "cik": "0001838987",
-      "name": "SunPower Inc.",
-      "ticker": "SPWR",
-      "filedAt": "2026-07-24",
-      "isSpac": false,
-      "sic": "1700",
-      "industry": "건설",
-      "financials": {
-        "fiscalEnd": "2025-12-28",
-        "revenue": 300000000,
-        "netIncome": -45354000,
-        "assets": 241187000
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001838987&type=S-1"
-    },
-    {
-      "cik": "0001808377",
-      "name": "Innovative Eyewear Inc",
-      "ticker": "LUCYW",
-      "filedAt": "2026-07-23",
-      "isSpac": false,
-      "sic": "3851",
-      "industry": "제조",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 2661669,
-        "netIncome": -7591189,
-        "assets": 10139933
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001808377&type=S-1"
-    },
-    {
-      "cik": "0001866816",
-      "name": "SYNTEC OPTICS HOLDINGS, INC.",
-      "ticker": "OPTX",
-      "filedAt": "2026-07-23",
-      "isSpac": false,
-      "sic": "3827",
-      "industry": "제조",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 28083985,
-        "netIncome": -1793227,
-        "assets": 24314108
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001866816&type=S-1"
-    },
-    {
       "cik": "0002133136",
       "name": "Market Technology Acquisition Corp",
       "ticker": "MTAK",
@@ -2046,28 +1635,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002127043&type=S-1"
     },
     {
-      "cik": "0002146369",
-      "name": "Londonla Inc.",
-      "ticker": null,
-      "filedAt": "2026-07-20",
-      "isSpac": false,
-      "sic": null,
-      "industry": "기타",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002146369&type=S-1"
-    },
-    {
-      "cik": "0002145351",
-      "name": "Grayscale Worldcoin ETF",
-      "ticker": null,
-      "filedAt": "2026-07-20",
-      "isSpac": false,
-      "sic": null,
-      "industry": "기타",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002145351&type=S-1"
-    },
-    {
       "cik": "0001633369",
       "name": "FreeCast, Inc.",
       "ticker": "CAST",
@@ -2095,22 +1662,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001966126&type=S-1"
     },
     {
-      "cik": "0001862463",
-      "name": "ALPHA MODUS HOLDINGS, INC.",
-      "ticker": "AMOD",
-      "filedAt": "2026-07-17",
-      "isSpac": false,
-      "sic": "6794",
-      "industry": "금융·부동산",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 7138,
-        "netIncome": -8021235,
-        "assets": 815827
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001862463&type=S-1"
-    },
-    {
       "cik": "0001558569",
       "name": "iSpecimen Inc.",
       "ticker": "ISPC",
@@ -2127,17 +1678,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001558569&type=S-1"
     },
     {
-      "cik": "0001954227",
-      "name": "Elements Ventures Group Inc.",
-      "ticker": null,
-      "filedAt": "2026-07-17",
-      "isSpac": false,
-      "sic": "6199",
-      "industry": "금융·부동산",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001954227&type=S-1"
-    },
-    {
       "cik": "0001826011",
       "name": "Banzai International, Inc.",
       "ticker": "PARA",
@@ -2152,22 +1692,6 @@
         "assets": 31631514
       },
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001826011&type=S-1"
-    },
-    {
-      "cik": "0001756064",
-      "name": "Our Bond, Inc.",
-      "ticker": "OBAI",
-      "filedAt": "2026-07-17",
-      "isSpac": false,
-      "sic": "4899",
-      "industry": "운수·통신",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 9972000,
-        "netIncome": -10549000,
-        "assets": 2501000
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001756064&type=S-1"
     },
     {
       "cik": "0002086549",
@@ -2301,22 +1825,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002007691&type=S-1"
     },
     {
-      "cik": "0001814215",
-      "name": "Nuburu, Inc.",
-      "ticker": "BURU",
-      "filedAt": "2026-07-13",
-      "isSpac": false,
-      "sic": "3690",
-      "industry": "제조",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 0,
-        "netIncome": -79071276,
-        "assets": 49819239
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001814215&type=S-1"
-    },
-    {
       "cik": "0002122392",
       "name": "Pelican Acquisition II Corp",
       "ticker": "PLCI",
@@ -2377,20 +1885,20 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001843714&type=S-1"
     },
     {
-      "cik": "0001711141",
-      "name": "Leef Brands Inc.",
-      "ticker": "LEEEF",
+      "cik": "0001855467",
+      "name": "MOBIX LABS, INC",
+      "ticker": "MOBX",
       "filedAt": "2026-07-09",
       "isSpac": false,
-      "sic": "2833",
-      "industry": "제약·바이오",
+      "sic": "3674",
+      "industry": "반도체·전자",
       "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 34787596,
-        "netIncome": -17629675,
-        "assets": 36402878
+        "fiscalEnd": "2024-09-30",
+        "revenue": 6442000,
+        "netIncome": -20034000,
+        "assets": 39088000
       },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001711141&type=S-1"
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001855467&type=S-1"
     },
     {
       "cik": "0002104391",
@@ -2529,22 +2037,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002090646&type=S-1"
     },
     {
-      "cik": "0001868419",
-      "name": "Cycurion, Inc.",
-      "ticker": "CYCU",
-      "filedAt": "2026-07-02",
-      "isSpac": false,
-      "sic": "7371",
-      "industry": "소프트웨어·IT",
-      "financials": {
-        "fiscalEnd": "2024-12-31",
-        "revenue": 17771485,
-        "netIncome": 1229601,
-        "assets": 25562849
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001868419&type=S-1"
-    },
-    {
       "cik": "0002141084",
       "name": "Asia AI Group Inc",
       "ticker": null,
@@ -2565,22 +2057,6 @@
       "industry": "SPAC",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002129659&type=S-1"
-    },
-    {
-      "cik": "0001141284",
-      "name": "ACTELIS NETWORKS INC",
-      "ticker": "ASNS",
-      "filedAt": "2026-07-01",
-      "isSpac": false,
-      "sic": "3669",
-      "industry": "제조",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 3671000,
-        "netIncome": -8261000,
-        "assets": 9530000
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001141284&type=S-1"
     },
     {
       "cik": "0001795851",
@@ -2619,17 +2095,6 @@
       "industry": "SPAC",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002139246&type=S-1"
-    },
-    {
-      "cik": "0001851491",
-      "name": "AMASS BRANDS",
-      "ticker": "AMSS",
-      "filedAt": "2026-06-30",
-      "isSpac": false,
-      "sic": "2080",
-      "industry": "제조",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001851491&type=S-1"
     },
     {
       "cik": "0001263364",
@@ -2694,10 +2159,10 @@
       "sic": "3620",
       "industry": "제조",
       "financials": {
-        "fiscalEnd": "2025-06-30",
-        "revenue": 753188000,
-        "netIncome": null,
-        "assets": 1536686000
+        "fiscalEnd": "2026-06-30",
+        "revenue": 1420059000,
+        "netIncome": 81845000,
+        "assets": 2230765000
       },
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002080126&type=S-1"
     },
@@ -2751,22 +2216,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001560293&type=S-1"
     },
     {
-      "cik": "0001679628",
-      "name": "JUPITER NEUROSCIENCES, INC.",
-      "ticker": "JUNS",
-      "filedAt": "2026-06-26",
-      "isSpac": false,
-      "sic": "2834",
-      "industry": "제약·바이오",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 21796,
-        "netIncome": -8644897,
-        "assets": 5564030
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001679628&type=S-1"
-    },
-    {
       "cik": "0002034161",
       "name": "Boumarang Inc.",
       "ticker": null,
@@ -2816,17 +2265,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002073616&type=S-1"
     },
     {
-      "cik": "0000906205",
-      "name": "LINCOLN BANCORP  IA",
-      "ticker": null,
-      "filedAt": "2026-06-25",
-      "isSpac": false,
-      "sic": "6036",
-      "industry": "금융·부동산",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000906205&type=S-1"
-    },
-    {
       "cik": "0002140700",
       "name": "Hoya Acquisition Corp. I",
       "ticker": null,
@@ -2836,22 +2274,6 @@
       "industry": "기타",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002140700&type=S-1"
-    },
-    {
-      "cik": "0001971387",
-      "name": "Liminatus Pharma, Inc.",
-      "ticker": "LIMN",
-      "filedAt": "2026-06-24",
-      "isSpac": false,
-      "sic": "2836",
-      "industry": "제약·바이오",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": null,
-        "netIncome": -10206517,
-        "assets": 512795
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001971387&type=S-1"
     },
     {
       "cik": "0002093018",
@@ -2881,17 +2303,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002030954&type=S-1"
     },
     {
-      "cik": "0002139511",
-      "name": "Spin AI Inc.",
-      "ticker": null,
-      "filedAt": "2026-06-23",
-      "isSpac": false,
-      "sic": "7372",
-      "industry": "소프트웨어·IT",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002139511&type=S-1"
-    },
-    {
       "cik": "0001699963",
       "name": "Neutron Holdings, Inc.",
       "ticker": "LIME",
@@ -2914,38 +2325,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002107018&type=S-1"
     },
     {
-      "cik": "0002079999",
-      "name": "Cardinal Infrastructure Group Inc.",
-      "ticker": "CDNL",
-      "filedAt": "2026-06-22",
-      "isSpac": false,
-      "sic": "1600",
-      "industry": "건설",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 456045369,
-        "netIncome": 22686057,
-        "assets": 394587355
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002079999&type=S-1"
-    },
-    {
-      "cik": "0001500412",
-      "name": "Ambiq Micro, Inc.",
-      "ticker": "AMBQ",
-      "filedAt": "2026-06-22",
-      "isSpac": false,
-      "sic": "3674",
-      "industry": "반도체·전자",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 72514000,
-        "netIncome": -36461000,
-        "assets": 184680000
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001500412&type=S-1"
-    },
-    {
       "cik": "0002128045",
       "name": "Bleichroeder Acquisition Corp. III",
       "ticker": "BCCQ",
@@ -2955,54 +2334,6 @@
       "industry": "SPAC",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002128045&type=S-1"
-    },
-    {
-      "cik": "0001679817",
-      "name": "OZOP ENERGY SOLUTIONS, INC.",
-      "ticker": "OZSC",
-      "filedAt": "2026-06-18",
-      "isSpac": false,
-      "sic": "3690",
-      "industry": "제조",
-      "financials": {
-        "fiscalEnd": "2018-12-31",
-        "revenue": 157458,
-        "netIncome": -2490705,
-        "assets": 659219
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001679817&type=S-1"
-    },
-    {
-      "cik": "0001895249",
-      "name": "ConnectM Technology Solutions, Inc.",
-      "ticker": "CNTM",
-      "filedAt": "2026-06-17",
-      "isSpac": false,
-      "sic": "1700",
-      "industry": "건설",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 35836809,
-        "netIncome": -16245050,
-        "assets": 36170124
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001895249&type=S-1"
-    },
-    {
-      "cik": "0001712762",
-      "name": "bioAffinity Technologies, Inc.",
-      "ticker": "BIAF",
-      "filedAt": "2026-06-16",
-      "isSpac": false,
-      "sic": "8731",
-      "industry": "제약·바이오",
-      "financials": {
-        "fiscalEnd": "2023-12-31",
-        "revenue": 7900000,
-        "netIncome": -7937011,
-        "assets": 8221552
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001712762&type=S-1"
     }
   ]
 }
