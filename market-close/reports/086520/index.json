@@ -3,10 +3,18 @@
   "name": "에코프로",
   "market": "KOSDAQ",
   "retainDays": 120,
-  "firstBasDt": "20260324",
-  "lastBasDt": "20260915",
+  "firstBasDt": "20260325",
+  "lastBasDt": "20260916",
   "count": 120,
   "days": [
+    {
+      "basDt": "20260916",
+      "close": 82200,
+      "fltRt": -2.61,
+      "headline": "코스닥보다 3.05%p 낮았어요.",
+      "newsCount": 8,
+      "dartCount": 0
+    },
     {
       "basDt": "20260915",
       "close": 84400,
@@ -1063,16 +1071,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260324",
-      "close": 149000,
-      "fltRt": 6.73,
-      "headline": "시가 148,200원보다 800원 높게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-09-16T07:34:19.872Z"
+  "updatedAt": "2026-09-17T06:56:32.154Z"
 }
