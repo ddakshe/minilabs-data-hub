@@ -3,10 +3,18 @@
   "name": "카카오",
   "market": "KOSPI",
   "retainDays": 120,
-  "firstBasDt": "20260325",
-  "lastBasDt": "20260916",
+  "firstBasDt": "20260326",
+  "lastBasDt": "20260917",
   "count": 120,
   "days": [
+    {
+      "basDt": "20260917",
+      "close": 33500,
+      "fltRt": 0,
+      "headline": "코스피보다 0.04%p 높았어요.",
+      "newsCount": 8,
+      "dartCount": 0
+    },
     {
       "basDt": "20260916",
       "close": 33500,
@@ -1063,16 +1071,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260325",
-      "close": 49050,
-      "fltRt": 1.76,
-      "headline": "코스피보다 0.17%p 높았어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-09-17T06:56:32.244Z"
+  "updatedAt": "2026-09-18T06:53:27.943Z"
 }
