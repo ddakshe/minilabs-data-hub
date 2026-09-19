@@ -1,28 +1,18 @@
 {
-  "updatedAt": "2026-09-18",
+  "updatedAt": "2026-09-19",
   "mall": "oasis",
   "counts": {
-    "total": 730,
+    "total": 722,
     "bySlot": {
-      "soup": 77,
-      "main": 39,
-      "banchan": 218,
+      "soup": 76,
+      "main": 41,
+      "banchan": 215,
       "kimchi": 39,
-      "tofu": 131,
-      "snack": 226
+      "tofu": 133,
+      "snack": 218
     }
   },
   "items": [
-    {
-      "id": 99241,
-      "slot": "kimchi",
-      "name": "[품평회 우수상] 청원김치 포기김치 골드 3kg",
-      "price": 18900,
-      "orig": 28900,
-      "rate": 34,
-      "img": "https://oasisprodproduct.edge.naverncp.com/99241/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/99241"
-    },
     {
       "id": 2844,
       "slot": "kimchi",
@@ -32,6 +22,16 @@
       "rate": 25,
       "img": "https://oasisprodproduct.edge.naverncp.com/2844/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/2844"
+    },
+    {
+      "id": 99241,
+      "slot": "kimchi",
+      "name": "[품평회 우수상] 청원김치 포기김치 골드 3kg",
+      "price": 18900,
+      "orig": 28900,
+      "rate": 34,
+      "img": "https://oasisprodproduct.edge.naverncp.com/99241/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/99241"
     },
     {
       "id": 2372,
@@ -184,16 +184,6 @@
       "url": "https://www.oasis.co.kr/product/detail/71716"
     },
     {
-      "id": 57535,
-      "slot": "kimchi",
-      "name": "매콤 명이절임 (200g)",
-      "price": 6000,
-      "orig": 8000,
-      "rate": 25,
-      "img": "https://oasisprodproduct.edge.naverncp.com/57535/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/57535"
-    },
-    {
       "id": 130201,
       "slot": "kimchi",
       "name": "선농원 매실담은 썰은김치 (1.5kg)",
@@ -202,6 +192,16 @@
       "rate": 32,
       "img": "https://oasisprodproduct.edge.naverncp.com/130201/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/130201"
+    },
+    {
+      "id": 57535,
+      "slot": "kimchi",
+      "name": "매콤 명이절임 (200g)",
+      "price": 6000,
+      "orig": 8000,
+      "rate": 25,
+      "img": "https://oasisprodproduct.edge.naverncp.com/57535/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/57535"
     },
     {
       "id": 58421,
@@ -304,16 +304,6 @@
       "url": "https://www.oasis.co.kr/product/detail/129392"
     },
     {
-      "id": 4361,
-      "slot": "kimchi",
-      "name": "정갈한 꼴뚜기젓(200g)",
-      "price": 9600,
-      "orig": 13000,
-      "rate": 26,
-      "img": "https://oasisprodproduct.edge.naverncp.com/4361/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/4361"
-    },
-    {
       "id": 133801,
       "slot": "kimchi",
       "name": "광천 프리미엄 새우젓 (230g)",
@@ -322,6 +312,16 @@
       "rate": 26,
       "img": "https://oasisprodproduct.edge.naverncp.com/133801/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/133801"
+    },
+    {
+      "id": 4361,
+      "slot": "kimchi",
+      "name": "정갈한 꼴뚜기젓(200g)",
+      "price": 9600,
+      "orig": 13000,
+      "rate": 26,
+      "img": "https://oasisprodproduct.edge.naverncp.com/4361/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/4361"
     },
     {
       "id": 129393,
@@ -414,6 +414,16 @@
       "url": "https://www.oasis.co.kr/product/detail/89895"
     },
     {
+      "id": 104196,
+      "slot": "soup",
+      "name": "한식곳간 아롱사태 보양전골 밀키트(700g)",
+      "price": 19900,
+      "orig": 27000,
+      "rate": 26,
+      "img": "https://oasisprodproduct.edge.naverncp.com/104196/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/104196"
+    },
+    {
       "id": 102778,
       "slot": "soup",
       "name": "맛있는 한우 왕교자 만두 (320g X 3개)",
@@ -432,16 +442,6 @@
       "rate": 25,
       "img": "https://oasisprodproduct.edge.naverncp.com/9063/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/9063"
-    },
-    {
-      "id": 104196,
-      "slot": "soup",
-      "name": "한식곳간 아롱사태 보양전골 밀키트(700g)",
-      "price": 19900,
-      "orig": 27000,
-      "rate": 26,
-      "img": "https://oasisprodproduct.edge.naverncp.com/104196/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/104196"
     },
     {
       "id": 35768,
@@ -464,12 +464,22 @@
       "url": "https://www.oasis.co.kr/product/detail/2872"
     },
     {
+      "id": 109863,
+      "slot": "soup",
+      "name": "더진한 한우 사골곰탕 (500g x 4개/냉동)",
+      "price": 12500,
+      "orig": 18000,
+      "rate": 30,
+      "img": "https://oasisprodproduct.edge.naverncp.com/109863/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/109863"
+    },
+    {
       "id": 109862,
       "slot": "soup",
       "name": "더진한 한우 고기곰탕 (500g x 3팩)",
-      "price": 12900,
+      "price": 11700,
       "orig": 19800,
-      "rate": 34,
+      "rate": 40,
       "img": "https://oasisprodproduct.edge.naverncp.com/109862/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/109862"
     },
@@ -477,11 +487,21 @@
       "id": 102162,
       "slot": "soup",
       "name": "엄마표 부대찌개 (700g내외/2인분)",
-      "price": 10200,
+      "price": 9180,
       "orig": 17800,
-      "rate": 42,
+      "rate": 48,
       "img": "https://oasisprodproduct.edge.naverncp.com/102162/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/102162"
+    },
+    {
+      "id": 1778,
+      "slot": "soup",
+      "name": "[특가]우리 한우곰탕(1kg)",
+      "price": 4500,
+      "orig": 8500,
+      "rate": 47,
+      "img": "https://oasisprodproduct.edge.naverncp.com/1778/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/1778"
     },
     {
       "id": 2868,
@@ -494,16 +514,6 @@
       "url": "https://www.oasis.co.kr/product/detail/2868"
     },
     {
-      "id": 1778,
-      "slot": "soup",
-      "name": "[특가]우리 한우곰탕(1kg)",
-      "price": 5500,
-      "orig": 8500,
-      "rate": 35,
-      "img": "https://oasisprodproduct.edge.naverncp.com/1778/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/1778"
-    },
-    {
       "id": 2091,
       "slot": "soup",
       "name": "맛있는집밥 김치찌개 (500g)",
@@ -514,34 +524,14 @@
       "url": "https://www.oasis.co.kr/product/detail/2091"
     },
     {
-      "id": 80007,
-      "slot": "soup",
-      "name": "매콤달콤 닭다리순살 떡볶음탕(1kg) 용량UP",
-      "price": 10500,
-      "orig": 18000,
-      "rate": 41,
-      "img": "https://oasisprodproduct.edge.naverncp.com/80007/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/80007"
-    },
-    {
       "id": 65203,
       "slot": "soup",
       "name": "[쿠폰+특가] 한우 도가니탕 (500g)",
-      "price": 11900,
+      "price": 10900,
       "orig": 18000,
-      "rate": 33,
+      "rate": 39,
       "img": "https://oasisprodproduct.edge.naverncp.com/65203/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/65203"
-    },
-    {
-      "id": 2871,
-      "slot": "soup",
-      "name": "[추석특가] 유기농 한우 진한고기곰탕 ((500ml x 1봉))",
-      "price": 5900,
-      "orig": 10500,
-      "rate": 43,
-      "img": "https://oasisprodproduct.edge.naverncp.com/2871/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/2871"
     },
     {
       "id": 122889,
@@ -564,12 +554,22 @@
       "url": "https://www.oasis.co.kr/product/detail/926"
     },
     {
+      "id": 2871,
+      "slot": "soup",
+      "name": "[추석특가] 유기농 한우 진한고기곰탕 ((500ml x 1봉))",
+      "price": 5900,
+      "orig": 10500,
+      "rate": 43,
+      "img": "https://oasisprodproduct.edge.naverncp.com/2871/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/2871"
+    },
+    {
       "id": 65198,
       "slot": "soup",
       "name": "[쿠폰+특가] 정담우리 한우 설렁탕 (400g)",
-      "price": 4900,
+      "price": 4000,
       "orig": 10000,
-      "rate": 51,
+      "rate": 60,
       "img": "https://oasisprodproduct.edge.naverncp.com/65198/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/65198"
     },
@@ -594,6 +594,16 @@
       "url": "https://www.oasis.co.kr/product/detail/88910"
     },
     {
+      "id": 88915,
+      "slot": "soup",
+      "name": "오마뎅 순살 어묵(190g)",
+      "price": 4900,
+      "orig": 7720,
+      "rate": 36,
+      "img": "https://oasisprodproduct.edge.naverncp.com/88915/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/88915"
+    },
+    {
       "id": 89581,
       "slot": "soup",
       "name": "국내산 손질꽃게 (400g)",
@@ -612,16 +622,6 @@
       "rate": 36,
       "img": "https://oasisprodproduct.edge.naverncp.com/87361/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/87361"
-    },
-    {
-      "id": 88915,
-      "slot": "soup",
-      "name": "오마뎅 순살 어묵(190g)",
-      "price": 4900,
-      "orig": 7720,
-      "rate": 36,
-      "img": "https://oasisprodproduct.edge.naverncp.com/88915/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/88915"
     },
     {
       "id": 75662,
@@ -704,22 +704,12 @@
       "url": "https://www.oasis.co.kr/product/detail/8973"
     },
     {
-      "id": 130857,
-      "slot": "soup",
-      "name": "한우 맑은 소고기뭇국 (600g x 1팩)",
-      "price": 8990,
-      "orig": 13500,
-      "rate": 33,
-      "img": "https://oasisprodproduct.edge.naverncp.com/130857/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/130857"
-    },
-    {
       "id": 65200,
       "slot": "soup",
       "name": "[쿠폰+특가] 국내산 소갈비탕 (500g)",
-      "price": 8900,
+      "price": 8600,
       "orig": 13000,
-      "rate": 31,
+      "rate": 33,
       "img": "https://oasisprodproduct.edge.naverncp.com/65200/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/65200"
     },
@@ -754,6 +744,26 @@
       "url": "https://www.oasis.co.kr/product/detail/92130"
     },
     {
+      "id": 130857,
+      "slot": "soup",
+      "name": "한우 맑은 소고기뭇국 (600g x 1팩)",
+      "price": 8990,
+      "orig": 13500,
+      "rate": 33,
+      "img": "https://oasisprodproduct.edge.naverncp.com/130857/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/130857"
+    },
+    {
+      "id": 99989,
+      "slot": "soup",
+      "name": "[특가] 고래사 채소가득 사각어묵 (225g)",
+      "price": 3490,
+      "orig": 4900,
+      "rate": 28,
+      "img": "https://oasisprodproduct.edge.naverncp.com/99989/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/99989"
+    },
+    {
       "id": 127755,
       "slot": "soup",
       "name": "국산 손질 갈치 (400g)",
@@ -784,44 +794,14 @@
       "url": "https://www.oasis.co.kr/product/detail/92135"
     },
     {
-      "id": 99989,
-      "slot": "soup",
-      "name": "[특가] 고래사 채소가득 사각어묵 (225g)",
-      "price": 3490,
-      "orig": 4900,
-      "rate": 28,
-      "img": "https://oasisprodproduct.edge.naverncp.com/99989/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/99989"
-    },
-    {
       "id": 79394,
       "slot": "soup",
       "name": "[쿠폰+특가] 소고기 얼큰장터국밥(750g)",
-      "price": 7900,
+      "price": 7700,
       "orig": 12900,
-      "rate": 38,
+      "rate": 40,
       "img": "https://oasisprodproduct.edge.naverncp.com/79394/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/79394"
-    },
-    {
-      "id": 104108,
-      "slot": "soup",
-      "name": "[팩당 6,950원] 뼈 없는 한우 갈비탕 (600g x 2팩)",
-      "price": 13900,
-      "orig": 27800,
-      "rate": 50,
-      "img": "https://oasisprodproduct.edge.naverncp.com/104108/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/104108"
-    },
-    {
-      "id": 109861,
-      "slot": "soup",
-      "name": "[리뉴얼] 0.9mm 부드러운 한우 소불고기 (500g)",
-      "price": 14900,
-      "orig": 21900,
-      "rate": 31,
-      "img": "https://oasisprodproduct.edge.naverncp.com/109861/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/109861"
     },
     {
       "id": 53043,
@@ -842,6 +822,16 @@
       "rate": 26,
       "img": "https://oasisprodproduct.edge.naverncp.com/2092/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/2092"
+    },
+    {
+      "id": 104108,
+      "slot": "soup",
+      "name": "[팩당 6,950원] 뼈 없는 한우 갈비탕 (600g x 2팩)",
+      "price": 13900,
+      "orig": 27800,
+      "rate": 50,
+      "img": "https://oasisprodproduct.edge.naverncp.com/104108/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/104108"
     },
     {
       "id": 132378,
@@ -872,6 +862,16 @@
       "rate": 26,
       "img": "https://oasisprodproduct.edge.naverncp.com/95141/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/95141"
+    },
+    {
+      "id": 94858,
+      "slot": "soup",
+      "name": "순살 99.9% 국내산 가시없는 고등어 (400g)",
+      "price": 9250,
+      "orig": 12700,
+      "rate": 27,
+      "img": "https://oasisprodproduct.edge.naverncp.com/94858/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/94858"
     },
     {
       "id": 83872,
@@ -914,20 +914,10 @@
       "url": "https://www.oasis.co.kr/product/detail/123022"
     },
     {
-      "id": 925,
-      "slot": "soup",
-      "name": "섬진강 자연산 다슬기국 350g",
-      "price": 7100,
-      "orig": 9500,
-      "rate": 25,
-      "img": "https://oasisprodproduct.edge.naverncp.com/925/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/925"
-    },
-    {
       "id": 3610,
       "slot": "soup",
       "name": "진한 감칠맛 삼천포 아침 멸치육수",
-      "price": 3790,
+      "price": 3800,
       "orig": 5400,
       "rate": 29,
       "img": "https://oasisprodproduct.edge.naverncp.com/3610/thumb/999",
@@ -942,6 +932,16 @@
       "rate": 26,
       "img": "https://oasisprodproduct.edge.naverncp.com/3749/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/3749"
+    },
+    {
+      "id": 925,
+      "slot": "soup",
+      "name": "섬진강 자연산 다슬기국 350g",
+      "price": 7100,
+      "orig": 9500,
+      "rate": 25,
+      "img": "https://oasisprodproduct.edge.naverncp.com/925/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/925"
     },
     {
       "id": 3614,
@@ -984,6 +984,16 @@
       "url": "https://www.oasis.co.kr/product/detail/3285"
     },
     {
+      "id": 3280,
+      "slot": "soup",
+      "name": "[20%쿠폰] 동트는농가 콩탕 (200g X 2개)",
+      "price": 9200,
+      "orig": 12400,
+      "rate": 25,
+      "img": "https://oasisprodproduct.edge.naverncp.com/3280/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/3280"
+    },
+    {
       "id": 3219,
       "slot": "soup",
       "name": "[함량 UP] 남원골 장어탕 (500g)",
@@ -1002,16 +1012,6 @@
       "rate": 29,
       "img": "https://oasisprodproduct.edge.naverncp.com/3218/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/3218"
-    },
-    {
-      "id": 3280,
-      "slot": "soup",
-      "name": "[20%쿠폰] 동트는농가 콩탕 (200g X 2개)",
-      "price": 9200,
-      "orig": 12400,
-      "rate": 25,
-      "img": "https://oasisprodproduct.edge.naverncp.com/3280/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/3280"
     },
     {
       "id": 3298,
@@ -1052,16 +1052,6 @@
       "rate": 30,
       "img": "https://oasisprodproduct.edge.naverncp.com/3286/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/3286"
-    },
-    {
-      "id": 94858,
-      "slot": "soup",
-      "name": "순살 99.9% 국내산 가시없는 고등어 (400g)",
-      "price": 9250,
-      "orig": 12700,
-      "rate": 27,
-      "img": "https://oasisprodproduct.edge.naverncp.com/94858/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/94858"
     },
     {
       "id": 85189,
@@ -1147,9 +1137,9 @@
       "id": 125874,
       "slot": "soup",
       "name": "[국내산재료]멸치다시마 간편조미스틱 (4g x 30포) (1개)",
-      "price": 7900,
+      "price": 7400,
       "orig": 11500,
-      "rate": 31,
+      "rate": 35,
       "img": "https://oasisprodproduct.edge.naverncp.com/125874/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/125874"
     },
@@ -1167,41 +1157,11 @@
       "id": 131180,
       "slot": "soup",
       "name": "[맛보장] 황금콩밭 돼지고기김치찜 (600g*1개)",
-      "price": 8900,
+      "price": 8600,
       "orig": 14000,
-      "rate": 36,
+      "rate": 38,
       "img": "https://oasisprodproduct.edge.naverncp.com/131180/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/131180"
-    },
-    {
-      "id": 108749,
-      "slot": "tofu",
-      "name": "맑은물에 국산콩 네컵연두부 (90gX4입)",
-      "price": 2800,
-      "orig": 4000,
-      "rate": 30,
-      "img": "https://oasisprodproduct.edge.naverncp.com/108749/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/108749"
-    },
-    {
-      "id": 95014,
-      "slot": "tofu",
-      "name": "맑은물에 국산 콩비지 400g",
-      "price": 3300,
-      "orig": 4720,
-      "rate": 30,
-      "img": "https://oasisprodproduct.edge.naverncp.com/95014/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/95014"
-    },
-    {
-      "id": 97903,
-      "slot": "tofu",
-      "name": "국산콩 쌈두부 100g",
-      "price": 3530,
-      "orig": 5050,
-      "rate": 30,
-      "img": "https://oasisprodproduct.edge.naverncp.com/97903/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/97903"
     },
     {
       "id": 124910,
@@ -1212,6 +1172,36 @@
       "rate": 25,
       "img": "https://oasisprodproduct.edge.naverncp.com/124910/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/124910"
+    },
+    {
+      "id": 95014,
+      "slot": "tofu",
+      "name": "맑은물에 국산 콩비지 400g",
+      "price": 2980,
+      "orig": 4720,
+      "rate": 36,
+      "img": "https://oasisprodproduct.edge.naverncp.com/95014/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/95014"
+    },
+    {
+      "id": 97903,
+      "slot": "tofu",
+      "name": "국산콩 쌈두부 100g",
+      "price": 3190,
+      "orig": 5050,
+      "rate": 36,
+      "img": "https://oasisprodproduct.edge.naverncp.com/97903/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/97903"
+    },
+    {
+      "id": 108749,
+      "slot": "tofu",
+      "name": "맑은물에 국산콩 네컵연두부 (90gX4입)",
+      "price": 2490,
+      "orig": 4000,
+      "rate": 37,
+      "img": "https://oasisprodproduct.edge.naverncp.com/108749/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/108749"
     },
     {
       "id": 103705,
@@ -1257,9 +1247,9 @@
       "id": 99484,
       "slot": "tofu",
       "name": "좋은발효 쥐눈이콩 낫또 (45.5gX2입)",
-      "price": 2990,
+      "price": 2690,
       "orig": 4280,
-      "rate": 30,
+      "rate": 37,
       "img": "https://oasisprodproduct.edge.naverncp.com/99484/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/99484"
     },
@@ -1267,9 +1257,9 @@
       "id": 95013,
       "slot": "tofu",
       "name": "국산콩 넓은 면두부 100g",
-      "price": 3530,
+      "price": 3190,
       "orig": 5050,
-      "rate": 30,
+      "rate": 36,
       "img": "https://oasisprodproduct.edge.naverncp.com/95013/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/95013"
     },
@@ -1277,9 +1267,9 @@
       "id": 95012,
       "slot": "tofu",
       "name": "맑은물에 국산콩 순두부 400g",
-      "price": 1780,
+      "price": 1590,
       "orig": 2550,
-      "rate": 30,
+      "rate": 37,
       "img": "https://oasisprodproduct.edge.naverncp.com/95012/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/95012"
     },
@@ -1316,10 +1306,10 @@
     {
       "id": 64405,
       "slot": "tofu",
-      "name": "국산 데친 우거지 (250g x 1개)",
-      "price": 2600,
+      "name": "[추석특가] 국산 데친 우거지 (250g x 1개)",
+      "price": 2300,
       "orig": 4180,
-      "rate": 37,
+      "rate": 44,
       "img": "https://oasisprodproduct.edge.naverncp.com/64405/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/64405"
     },
@@ -1347,21 +1337,11 @@
       "id": 6931,
       "slot": "tofu",
       "name": "국산 데친 무시래기 (250g x 1개)",
-      "price": 3200,
+      "price": 2900,
       "orig": 4600,
-      "rate": 30,
+      "rate": 36,
       "img": "https://oasisprodproduct.edge.naverncp.com/6931/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/6931"
-    },
-    {
-      "id": 8171,
-      "slot": "tofu",
-      "name": "[1등급 국산콩]시골두부 번들 (300*2개)",
-      "price": 3000,
-      "orig": 4800,
-      "rate": 37,
-      "img": "https://oasisprodproduct.edge.naverncp.com/8171/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/8171"
     },
     {
       "id": 46420,
@@ -1384,6 +1364,16 @@
       "url": "https://www.oasis.co.kr/product/detail/6921"
     },
     {
+      "id": 8171,
+      "slot": "tofu",
+      "name": "[1등급 국산콩]시골두부 번들 (300*2개)",
+      "price": 2700,
+      "orig": 4800,
+      "rate": 43,
+      "img": "https://oasisprodproduct.edge.naverncp.com/8171/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/8171"
+    },
+    {
       "id": 6933,
       "slot": "tofu",
       "name": "국산 데친 생 고구마순 (250g x 1개)",
@@ -1404,16 +1394,6 @@
       "url": "https://www.oasis.co.kr/product/detail/105390"
     },
     {
-      "id": 105317,
-      "slot": "tofu",
-      "name": "국산 데친 비름나물 (250g)",
-      "price": 3500,
-      "orig": 4800,
-      "rate": 27,
-      "img": "https://oasisprodproduct.edge.naverncp.com/105317/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/105317"
-    },
-    {
       "id": 77472,
       "slot": "tofu",
       "name": "강릉 초당 순두부 (400g x 1개)",
@@ -1422,16 +1402,6 @@
       "rate": 26,
       "img": "https://oasisprodproduct.edge.naverncp.com/77472/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/77472"
-    },
-    {
-      "id": 6922,
-      "slot": "tofu",
-      "name": "[쿠폰+특가] 무농약 채도라지 (250g x 1개)",
-      "price": 8100,
-      "orig": 13800,
-      "rate": 41,
-      "img": "https://oasisprodproduct.edge.naverncp.com/6922/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/6922"
     },
     {
       "id": 6924,
@@ -1444,14 +1414,14 @@
       "url": "https://www.oasis.co.kr/product/detail/6924"
     },
     {
-      "id": 6920,
+      "id": 6922,
       "slot": "tofu",
-      "name": "[농할20%쿠폰] 국산 데친 고사리 (250g) (250g x 1개)",
-      "price": 8900,
-      "orig": 13200,
-      "rate": 32,
-      "img": "https://oasisprodproduct.edge.naverncp.com/6920/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/6920"
+      "name": "[쿠폰+특가] 무농약 채도라지 (250g x 1개)",
+      "price": 8100,
+      "orig": 13800,
+      "rate": 41,
+      "img": "https://oasisprodproduct.edge.naverncp.com/6922/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/6922"
     },
     {
       "id": 6932,
@@ -1462,6 +1432,26 @@
       "rate": 38,
       "img": "https://oasisprodproduct.edge.naverncp.com/6932/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/6932"
+    },
+    {
+      "id": 6920,
+      "slot": "tofu",
+      "name": "[농할20%쿠폰] 국산 데친 고사리 (250g) (250g x 1개)",
+      "price": 8900,
+      "orig": 13200,
+      "rate": 32,
+      "img": "https://oasisprodproduct.edge.naverncp.com/6920/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/6920"
+    },
+    {
+      "id": 129144,
+      "slot": "tofu",
+      "name": "비빔밥용 산채나물세트 고추장맛 (125g*2팩)",
+      "price": 12900,
+      "orig": 17500,
+      "rate": 26,
+      "img": "https://oasisprodproduct.edge.naverncp.com/129144/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/129144"
     },
     {
       "id": 131710,
@@ -1484,22 +1474,12 @@
       "url": "https://www.oasis.co.kr/product/detail/96245"
     },
     {
-      "id": 129144,
-      "slot": "tofu",
-      "name": "비빔밥용 산채나물세트 고추장맛 (125g*2팩)",
-      "price": 12900,
-      "orig": 17500,
-      "rate": 26,
-      "img": "https://oasisprodproduct.edge.naverncp.com/129144/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/129144"
-    },
-    {
       "id": 17689,
       "slot": "tofu",
       "name": "국산콩 순두부(튜브형 | 400g)",
-      "price": 1590,
+      "price": 1680,
       "orig": 2400,
-      "rate": 33,
+      "rate": 30,
       "img": "https://oasisprodproduct.edge.naverncp.com/17689/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/17689"
     },
@@ -1512,16 +1492,6 @@
       "rate": 34,
       "img": "https://oasisprodproduct.edge.naverncp.com/73072/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/73072"
-    },
-    {
-      "id": 20362,
-      "slot": "tofu",
-      "name": "제주 무말랭이 150g",
-      "price": 4300,
-      "orig": 6000,
-      "rate": 28,
-      "img": "https://oasisprodproduct.edge.naverncp.com/20362/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/20362"
     },
     {
       "id": 53683,
@@ -1544,16 +1514,6 @@
       "url": "https://www.oasis.co.kr/product/detail/4794"
     },
     {
-      "id": 20347,
-      "slot": "tofu",
-      "name": "제주 건곤드레 80g",
-      "price": 7100,
-      "orig": 9900,
-      "rate": 28,
-      "img": "https://oasisprodproduct.edge.naverncp.com/20347/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/20347"
-    },
-    {
       "id": 131648,
       "slot": "tofu",
       "name": "국산 데침 토란대(400g, 고형량 200g)",
@@ -1562,6 +1522,16 @@
       "rate": 33,
       "img": "https://oasisprodproduct.edge.naverncp.com/131648/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/131648"
+    },
+    {
+      "id": 20347,
+      "slot": "tofu",
+      "name": "제주 건곤드레 80g",
+      "price": 6400,
+      "orig": 9900,
+      "rate": 35,
+      "img": "https://oasisprodproduct.edge.naverncp.com/20347/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/20347"
     },
     {
       "id": 20340,
@@ -1664,16 +1634,6 @@
       "url": "https://www.oasis.co.kr/product/detail/79317"
     },
     {
-      "id": 133691,
-      "slot": "tofu",
-      "name": "국산 서리태 맷돌촌두부 300g",
-      "price": 5000,
-      "orig": 7150,
-      "rate": 30,
-      "img": "https://oasisprodproduct.edge.naverncp.com/133691/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/133691"
-    },
-    {
       "id": 112829,
       "slot": "tofu",
       "name": "국산 공심채 (150g)",
@@ -1684,12 +1644,22 @@
       "url": "https://www.oasis.co.kr/product/detail/112829"
     },
     {
+      "id": 133691,
+      "slot": "tofu",
+      "name": "국산 서리태 맷돌촌두부 300g",
+      "price": 4190,
+      "orig": 7150,
+      "rate": 41,
+      "img": "https://oasisprodproduct.edge.naverncp.com/133691/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/133691"
+    },
+    {
       "id": 133681,
       "slot": "tofu",
       "name": "국산 촌두부 550g",
-      "price": 3600,
+      "price": 3300,
       "orig": 5300,
-      "rate": 32,
+      "rate": 37,
       "img": "https://oasisprodproduct.edge.naverncp.com/133681/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/133681"
     },
@@ -1724,16 +1694,6 @@
       "url": "https://www.oasis.co.kr/product/detail/73071"
     },
     {
-      "id": 133682,
-      "slot": "tofu",
-      "name": "국산콩 맷돌촌두부 300g",
-      "price": 3500,
-      "orig": 5000,
-      "rate": 30,
-      "img": "https://oasisprodproduct.edge.naverncp.com/133682/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/133682"
-    },
-    {
       "id": 96243,
       "slot": "tofu",
       "name": "[농할20%쿠폰] 국산 건고사리 (70g) (70g x 1개)",
@@ -1764,6 +1724,16 @@
       "url": "https://www.oasis.co.kr/product/detail/86755"
     },
     {
+      "id": 133682,
+      "slot": "tofu",
+      "name": "국산콩 맷돌촌두부 300g",
+      "price": 3300,
+      "orig": 5000,
+      "rate": 34,
+      "img": "https://oasisprodproduct.edge.naverncp.com/133682/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/133682"
+    },
+    {
       "id": 73070,
       "slot": "tofu",
       "name": "[특가] 산채비빔밥(간장양념) (215g x 1팩)",
@@ -1772,6 +1742,16 @@
       "rate": 34,
       "img": "https://oasisprodproduct.edge.naverncp.com/73070/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/73070"
+    },
+    {
+      "id": 96391,
+      "slot": "tofu",
+      "name": "[추석특가] 친환경 건곤드레 (50g x 1개)",
+      "price": 4900,
+      "orig": 9200,
+      "rate": 46,
+      "img": "https://oasisprodproduct.edge.naverncp.com/96391/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/96391"
     },
     {
       "id": 2274,
@@ -1784,14 +1764,34 @@
       "url": "https://www.oasis.co.kr/product/detail/2274"
     },
     {
-      "id": 96391,
+      "id": 11775,
       "slot": "tofu",
-      "name": "[추석특가] 친환경 건곤드레 (50g x 1개)",
-      "price": 4900,
-      "orig": 9200,
-      "rate": 46,
-      "img": "https://oasisprodproduct.edge.naverncp.com/96391/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/96391"
+      "name": "[반찬]국내산 고사리 나물(100g)",
+      "price": 5900,
+      "orig": 8500,
+      "rate": 30,
+      "img": "https://oasisprodproduct.edge.naverncp.com/11775/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/11775"
+    },
+    {
+      "id": 11774,
+      "slot": "tofu",
+      "name": "국내산 시금치 나물(100g)",
+      "price": 4980,
+      "orig": 8900,
+      "rate": 44,
+      "img": "https://oasisprodproduct.edge.naverncp.com/11774/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/11774"
+    },
+    {
+      "id": 11776,
+      "slot": "tofu",
+      "name": "[반찬]국내산 도라지 나물(100g)",
+      "price": 5900,
+      "orig": 8800,
+      "rate": 32,
+      "img": "https://oasisprodproduct.edge.naverncp.com/11776/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/11776"
     },
     {
       "id": 2769,
@@ -1814,26 +1814,6 @@
       "url": "https://www.oasis.co.kr/product/detail/2784"
     },
     {
-      "id": 103552,
-      "slot": "tofu",
-      "name": "자숙 전복 슬라이스 (150g)",
-      "price": 13500,
-      "orig": 18000,
-      "rate": 25,
-      "img": "https://oasisprodproduct.edge.naverncp.com/103552/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/103552"
-    },
-    {
-      "id": 24003,
-      "slot": "tofu",
-      "name": "냉장 붉은대게살 (100g x 1개)",
-      "price": 8800,
-      "orig": 13000,
-      "rate": 32,
-      "img": "https://oasisprodproduct.edge.naverncp.com/24003/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/24003"
-    },
-    {
       "id": 9847,
       "slot": "tofu",
       "name": "바로먹는 7보해초 (110g x 1개)",
@@ -1842,6 +1822,16 @@
       "rate": 29,
       "img": "https://oasisprodproduct.edge.naverncp.com/9847/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/9847"
+    },
+    {
+      "id": 24003,
+      "slot": "tofu",
+      "name": "냉장 붉은대게살 (100g x 1개)",
+      "price": 7800,
+      "orig": 13000,
+      "rate": 40,
+      "img": "https://oasisprodproduct.edge.naverncp.com/24003/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/24003"
     },
     {
       "id": 88763,
@@ -1864,6 +1854,16 @@
       "url": "https://www.oasis.co.kr/product/detail/103551"
     },
     {
+      "id": 103552,
+      "slot": "tofu",
+      "name": "자숙 전복 슬라이스 (150g)",
+      "price": 13500,
+      "orig": 18000,
+      "rate": 25,
+      "img": "https://oasisprodproduct.edge.naverncp.com/103552/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/103552"
+    },
+    {
       "id": 67057,
       "slot": "tofu",
       "name": "손질 전복 버터구이, 중/4미 (150g)",
@@ -1872,16 +1872,6 @@
       "rate": 29,
       "img": "https://oasisprodproduct.edge.naverncp.com/67057/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/67057"
-    },
-    {
-      "id": 107121,
-      "slot": "tofu",
-      "name": "국산 가자미구이 (80g, 전자레인지용)",
-      "price": 4050,
-      "orig": 5800,
-      "rate": 30,
-      "img": "https://oasisprodproduct.edge.naverncp.com/107121/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/107121"
     },
     {
       "id": 74255,
@@ -1894,6 +1884,16 @@
       "url": "https://www.oasis.co.kr/product/detail/74255"
     },
     {
+      "id": 107121,
+      "slot": "tofu",
+      "name": "국산 가자미구이 (80g, 전자레인지용)",
+      "price": 4050,
+      "orig": 5800,
+      "rate": 30,
+      "img": "https://oasisprodproduct.edge.naverncp.com/107121/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/107121"
+    },
+    {
       "id": 129212,
       "slot": "tofu",
       "name": "국내산 꽃게 양념게장(500g)",
@@ -1904,16 +1904,6 @@
       "url": "https://www.oasis.co.kr/product/detail/129212"
     },
     {
-      "id": 70637,
-      "slot": "tofu",
-      "name": "붉은대게맛살 (250g) (1개)",
-      "price": 4200,
-      "orig": 6800,
-      "rate": 38,
-      "img": "https://oasisprodproduct.edge.naverncp.com/70637/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/70637"
-    },
-    {
       "id": 9849,
       "slot": "tofu",
       "name": "바로먹는 씨위드 샐러드 (110g x 1개)",
@@ -1922,6 +1912,16 @@
       "rate": 29,
       "img": "https://oasisprodproduct.edge.naverncp.com/9849/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/9849"
+    },
+    {
+      "id": 70637,
+      "slot": "tofu",
+      "name": "붉은대게맛살 (250g) (1개)",
+      "price": 4200,
+      "orig": 6800,
+      "rate": 38,
+      "img": "https://oasisprodproduct.edge.naverncp.com/70637/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/70637"
     },
     {
       "id": 71752,
@@ -1957,9 +1957,9 @@
       "id": 46907,
       "slot": "tofu",
       "name": "정직한 부산어묵 얇은사각 (200g x 3개)",
-      "price": 8400,
+      "price": 4990,
       "orig": 12000,
-      "rate": 30,
+      "rate": 58,
       "img": "https://oasisprodproduct.edge.naverncp.com/46907/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/46907"
     },
@@ -2004,6 +2004,16 @@
       "url": "https://www.oasis.co.kr/product/detail/33125"
     },
     {
+      "id": 63889,
+      "slot": "tofu",
+      "name": "정직한 부산어묵 야채사각 (200g x 3개)",
+      "price": 6500,
+      "orig": 12000,
+      "rate": 45,
+      "img": "https://oasisprodproduct.edge.naverncp.com/63889/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/63889"
+    },
+    {
       "id": 1793,
       "slot": "tofu",
       "name": "새로미 바른 공식0% 게맛살 (180g)",
@@ -2017,9 +2027,9 @@
       "id": 713,
       "slot": "tofu",
       "name": "새로미 바른공식0%UP 봉 어묵 (210g)",
-      "price": 5750,
+      "price": 6700,
       "orig": 9580,
-      "rate": 39,
+      "rate": 30,
       "img": "https://oasisprodproduct.edge.naverncp.com/713/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/713"
     },
@@ -2054,32 +2064,12 @@
       "url": "https://www.oasis.co.kr/product/detail/9846"
     },
     {
-      "id": 53091,
-      "slot": "tofu",
-      "name": "오아시스 땡초부추전 (270g)",
-      "price": 5490,
-      "orig": 8600,
-      "rate": 36,
-      "img": "https://oasisprodproduct.edge.naverncp.com/53091/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/53091"
-    },
-    {
-      "id": 125828,
-      "slot": "tofu",
-      "name": "동물복지 한돈 새우젓으로 맛을 낸 햄 (200g)",
-      "price": 4900,
-      "orig": 7000,
-      "rate": 30,
-      "img": "https://oasisprodproduct.edge.naverncp.com/125828/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/125828"
-    },
-    {
       "id": 64269,
       "slot": "tofu",
       "name": "우리쌀 떡국떡 (1kg X 1개)",
-      "price": 5250,
+      "price": 6500,
       "orig": 9400,
-      "rate": 44,
+      "rate": 30,
       "img": "https://oasisprodproduct.edge.naverncp.com/64269/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/64269"
     },
@@ -2092,6 +2082,26 @@
       "rate": 31,
       "img": "https://oasisprodproduct.edge.naverncp.com/64270/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/64270"
+    },
+    {
+      "id": 125828,
+      "slot": "tofu",
+      "name": "동물복지 한돈 새우젓으로 맛을 낸 햄 (200g)",
+      "price": 4900,
+      "orig": 7000,
+      "rate": 30,
+      "img": "https://oasisprodproduct.edge.naverncp.com/125828/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/125828"
+    },
+    {
+      "id": 53091,
+      "slot": "tofu",
+      "name": "오아시스 땡초부추전 (270g)",
+      "price": 5490,
+      "orig": 8600,
+      "rate": 36,
+      "img": "https://oasisprodproduct.edge.naverncp.com/53091/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/53091"
     },
     {
       "id": 35858,
@@ -2147,9 +2157,9 @@
       "id": 53092,
       "slot": "tofu",
       "name": "오아시스 한입김치전 (270g)",
-      "price": 5780,
+      "price": 6000,
       "orig": 8600,
-      "rate": 32,
+      "rate": 30,
       "img": "https://oasisprodproduct.edge.naverncp.com/53092/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/53092"
     },
@@ -2174,6 +2184,16 @@
       "url": "https://www.oasis.co.kr/product/detail/83141"
     },
     {
+      "id": 83140,
+      "slot": "tofu",
+      "name": "우리쌀 떡볶이떡 (1kg X 1개)",
+      "price": 4900,
+      "orig": 9400,
+      "rate": 47,
+      "img": "https://oasisprodproduct.edge.naverncp.com/83140/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/83140"
+    },
+    {
       "id": 78854,
       "slot": "tofu",
       "name": "부침명장 소고기 육전 (350g)",
@@ -2184,14 +2204,14 @@
       "url": "https://www.oasis.co.kr/product/detail/78854"
     },
     {
-      "id": 83140,
+      "id": 43056,
       "slot": "tofu",
-      "name": "우리쌀 떡볶이떡 (1kg X 1개)",
-      "price": 6400,
-      "orig": 9400,
-      "rate": 31,
-      "img": "https://oasisprodproduct.edge.naverncp.com/83140/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/83140"
+      "name": "[특가]초림단지 명인 도토리묵 (300g * 1개)",
+      "price": 3000,
+      "orig": 4000,
+      "rate": 25,
+      "img": "https://oasisprodproduct.edge.naverncp.com/43056/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/43056"
     },
     {
       "id": 54545,
@@ -2202,16 +2222,6 @@
       "rate": 37,
       "img": "https://oasisprodproduct.edge.naverncp.com/54545/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/54545"
-    },
-    {
-      "id": 43056,
-      "slot": "tofu",
-      "name": "[특가]초림단지 명인 도토리묵 (300g * 1개)",
-      "price": 3000,
-      "orig": 4000,
-      "rate": 25,
-      "img": "https://oasisprodproduct.edge.naverncp.com/43056/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/43056"
     },
     {
       "id": 54544,
@@ -2256,10 +2266,10 @@
     {
       "id": 107888,
       "slot": "tofu",
-      "name": "동물복지 한돈 두툼 동그랑땡 (500g x 1개)",
-      "price": 11800,
-      "orig": 18900,
-      "rate": 37,
+      "name": "[팩당 8,450원] 동물복지 한돈 두툼 동그랑땡 (500g x 2개)",
+      "price": 16900,
+      "orig": 37800,
+      "rate": 55,
       "img": "https://oasisprodproduct.edge.naverncp.com/107888/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/107888"
     },
@@ -2567,9 +2577,9 @@
       "id": 82863,
       "slot": "banchan",
       "name": "평양식 만두(390g)",
-      "price": 6500,
+      "price": 5900,
       "orig": 9900,
-      "rate": 34,
+      "rate": 40,
       "img": "https://oasisprodproduct.edge.naverncp.com/82863/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/82863"
     },
@@ -2604,12 +2614,22 @@
       "url": "https://www.oasis.co.kr/product/detail/96418"
     },
     {
+      "id": 11752,
+      "slot": "banchan",
+      "name": "[특가] 한방육수 양념편육(300g)",
+      "price": 6980,
+      "orig": 9980,
+      "rate": 30,
+      "img": "https://oasisprodproduct.edge.naverncp.com/11752/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/11752"
+    },
+    {
       "id": 75305,
       "slot": "banchan",
       "name": "국산양념으로 만든 홍대쭈꾸미(300g)",
-      "price": 9900,
+      "price": 8900,
       "orig": 13900,
-      "rate": 28,
+      "rate": 35,
       "img": "https://oasisprodproduct.edge.naverncp.com/75305/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/75305"
     },
@@ -2734,16 +2754,6 @@
       "url": "https://www.oasis.co.kr/product/detail/125343"
     },
     {
-      "id": 73354,
-      "slot": "banchan",
-      "name": "한돈수제모듬꼬치(데리야끼 소스 동봉) (290g x 1개)",
-      "price": 10900,
-      "orig": 15000,
-      "rate": 27,
-      "img": "https://oasisprodproduct.edge.naverncp.com/73354/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/73354"
-    },
-    {
       "id": 133066,
       "slot": "banchan",
       "name": "아임닭 [고단백/저당] 탱글탱글 닭가슴살 비엔나 2종 10팩",
@@ -2774,16 +2784,6 @@
       "url": "https://www.oasis.co.kr/product/detail/80484"
     },
     {
-      "id": 50894,
-      "slot": "banchan",
-      "name": "티카마샬라 커리(300g)",
-      "price": 6500,
-      "orig": 9100,
-      "rate": 28,
-      "img": "https://oasisprodproduct.edge.naverncp.com/50894/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/50894"
-    },
-    {
       "id": 50893,
       "slot": "banchan",
       "name": "새우코르마 커리(300g)",
@@ -2794,14 +2794,24 @@
       "url": "https://www.oasis.co.kr/product/detail/50893"
     },
     {
-      "id": 34355,
+      "id": 50894,
       "slot": "banchan",
-      "name": "우리밀 통살텐더 순한맛 (350g x 1개)",
-      "price": 5900,
-      "orig": 8000,
-      "rate": 26,
-      "img": "https://oasisprodproduct.edge.naverncp.com/34355/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/34355"
+      "name": "티카마샬라 커리(300g)",
+      "price": 6500,
+      "orig": 9100,
+      "rate": 28,
+      "img": "https://oasisprodproduct.edge.naverncp.com/50894/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/50894"
+    },
+    {
+      "id": 73354,
+      "slot": "banchan",
+      "name": "한돈수제모듬꼬치(데리야끼 소스 동봉) (290g x 1개)",
+      "price": 10900,
+      "orig": 15000,
+      "rate": 27,
+      "img": "https://oasisprodproduct.edge.naverncp.com/73354/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/73354"
     },
     {
       "id": 101019,
@@ -2817,9 +2827,9 @@
       "id": 108667,
       "slot": "banchan",
       "name": "엄마손 소고기장조림 250g",
-      "price": 9800,
+      "price": 12800,
       "orig": 21500,
-      "rate": 54,
+      "rate": 40,
       "img": "https://oasisprodproduct.edge.naverncp.com/108667/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/108667"
     },
@@ -2837,9 +2847,9 @@
       "id": 108668,
       "slot": "banchan",
       "name": "엄마손 돼지고기장조림 250g",
-      "price": 6890,
+      "price": 5890,
       "orig": 9500,
-      "rate": 27,
+      "rate": 38,
       "img": "https://oasisprodproduct.edge.naverncp.com/108668/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/108668"
     },
@@ -2867,9 +2877,9 @@
       "id": 4414,
       "slot": "banchan",
       "name": "국내산 우엉채조림(100g)",
-      "price": 6200,
+      "price": 5400,
       "orig": 8500,
-      "rate": 27,
+      "rate": 36,
       "img": "https://oasisprodproduct.edge.naverncp.com/4414/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/4414"
     },
@@ -2877,9 +2887,9 @@
       "id": 4406,
       "slot": "banchan",
       "name": "한돈고추장불고기(450g)",
-      "price": 9000,
+      "price": 8100,
       "orig": 15000,
-      "rate": 40,
+      "rate": 46,
       "img": "https://oasisprodproduct.edge.naverncp.com/4406/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/4406"
     },
@@ -2924,26 +2934,6 @@
       "url": "https://www.oasis.co.kr/product/detail/125967"
     },
     {
-      "id": 24652,
-      "slot": "banchan",
-      "name": "무항한돈 담백한 슬라이스햄(10g×10장) (1개)",
-      "price": 2800,
-      "orig": 4200,
-      "rate": 33,
-      "img": "https://oasisprodproduct.edge.naverncp.com/24652/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/24652"
-    },
-    {
-      "id": 91178,
-      "slot": "banchan",
-      "name": "한돈간장불고기/양념육(生)450g",
-      "price": 6750,
-      "orig": 10900,
-      "rate": 38,
-      "img": "https://oasisprodproduct.edge.naverncp.com/91178/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/91178"
-    },
-    {
       "id": 124285,
       "slot": "banchan",
       "name": "우리밀 한돈 동그랑땡(300g)",
@@ -2974,6 +2964,16 @@
       "url": "https://www.oasis.co.kr/product/detail/82654"
     },
     {
+      "id": 91178,
+      "slot": "banchan",
+      "name": "한돈간장불고기/양념육(生)450g",
+      "price": 7500,
+      "orig": 10900,
+      "rate": 31,
+      "img": "https://oasisprodproduct.edge.naverncp.com/91178/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/91178"
+    },
+    {
       "id": 32332,
       "slot": "banchan",
       "name": "우리밀 통살 가라아게 (300g x 1봉)",
@@ -2987,9 +2987,9 @@
       "id": 100170,
       "slot": "banchan",
       "name": "무항한돈 숯불갈비 후랑크 (200g x 1팩)",
-      "price": 3900,
+      "price": 4800,
       "orig": 6500,
-      "rate": 40,
+      "rate": 26,
       "img": "https://oasisprodproduct.edge.naverncp.com/100170/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/100170"
     },
@@ -3047,9 +3047,9 @@
       "id": 3202,
       "slot": "banchan",
       "name": "무항한돈 한입 비엔나 (240g x 1팩)",
-      "price": 4600,
+      "price": 3900,
       "orig": 6200,
-      "rate": 25,
+      "rate": 37,
       "img": "https://oasisprodproduct.edge.naverncp.com/3202/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/3202"
     },
@@ -3094,24 +3094,24 @@
       "url": "https://www.oasis.co.kr/product/detail/125490"
     },
     {
-      "id": 33094,
-      "slot": "banchan",
-      "name": "로제 쉬림프 파스타 (360g x 2개)",
-      "price": 9500,
-      "orig": 13800,
-      "rate": 31,
-      "img": "https://oasisprodproduct.edge.naverncp.com/33094/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/33094"
-    },
-    {
       "id": 126649,
       "slot": "banchan",
       "name": "무항한돈 콰트로치즈 비엔나 (240g x 1팩)",
-      "price": 4600,
+      "price": 3900,
       "orig": 7200,
-      "rate": 36,
+      "rate": 45,
       "img": "https://oasisprodproduct.edge.naverncp.com/126649/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/126649"
+    },
+    {
+      "id": 24652,
+      "slot": "banchan",
+      "name": "무항한돈 담백한 슬라이스햄(10g×10장) (1개)",
+      "price": 2800,
+      "orig": 4200,
+      "rate": 33,
+      "img": "https://oasisprodproduct.edge.naverncp.com/24652/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/24652"
     },
     {
       "id": 115881,
@@ -3147,9 +3147,9 @@
       "id": 82672,
       "slot": "banchan",
       "name": "게랑드 소금 (가는 천일염) (250g X 1개)",
-      "price": 6800,
+      "price": 5500,
       "orig": 11000,
-      "rate": 38,
+      "rate": 50,
       "img": "https://oasisprodproduct.edge.naverncp.com/82672/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/82672"
     },
@@ -3234,16 +3234,6 @@
       "url": "https://www.oasis.co.kr/product/detail/84269"
     },
     {
-      "id": 3163,
-      "slot": "banchan",
-      "name": "염장미역줄기 (400g)",
-      "price": 4100,
-      "orig": 5800,
-      "rate": 29,
-      "img": "https://oasisprodproduct.edge.naverncp.com/3163/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/3163"
-    },
-    {
       "id": 47395,
       "slot": "banchan",
       "name": "돌김자반 볶음 3종 (40g*2개)",
@@ -3252,6 +3242,16 @@
       "rate": 27,
       "img": "https://oasisprodproduct.edge.naverncp.com/47395/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/47395"
+    },
+    {
+      "id": 3163,
+      "slot": "banchan",
+      "name": "염장미역줄기 (400g)",
+      "price": 4100,
+      "orig": 5800,
+      "rate": 29,
+      "img": "https://oasisprodproduct.edge.naverncp.com/3163/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/3163"
     },
     {
       "id": 83880,
@@ -3267,9 +3267,9 @@
       "id": 78797,
       "slot": "banchan",
       "name": "광천김 무조미 구운 곱창김(18g)",
-      "price": 2580,
+      "price": 3000,
       "orig": 4600,
-      "rate": 43,
+      "rate": 34,
       "img": "https://oasisprodproduct.edge.naverncp.com/78797/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/78797"
     },
@@ -3307,9 +3307,9 @@
       "id": 128807,
       "slot": "banchan",
       "name": "[충북20%쿠폰] 무항생제 생 오리 정육 슬라이스 500g",
-      "price": 9500,
+      "price": 8900,
       "orig": 15900,
-      "rate": 40,
+      "rate": 44,
       "img": "https://oasisprodproduct.edge.naverncp.com/128807/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/128807"
     },
@@ -3324,16 +3324,6 @@
       "url": "https://www.oasis.co.kr/product/detail/87360"
     },
     {
-      "id": 129539,
-      "slot": "banchan",
-      "name": "[충북20%쿠폰] 자연키움 고추장 오리주물럭 500g",
-      "price": 12350,
-      "orig": 18500,
-      "rate": 33,
-      "img": "https://oasisprodproduct.edge.naverncp.com/129539/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/129539"
-    },
-    {
       "id": 125286,
       "slot": "banchan",
       "name": "[충북20%쿠폰] 9無 자연키움 훈제오리 400g",
@@ -3342,6 +3332,16 @@
       "rate": 32,
       "img": "https://oasisprodproduct.edge.naverncp.com/125286/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/125286"
+    },
+    {
+      "id": 129539,
+      "slot": "banchan",
+      "name": "[충북20%쿠폰] 자연키움 고추장 오리주물럭 500g",
+      "price": 12350,
+      "orig": 18500,
+      "rate": 33,
+      "img": "https://oasisprodproduct.edge.naverncp.com/129539/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/129539"
     },
     {
       "id": 90186,
@@ -3374,6 +3374,16 @@
       "url": "https://www.oasis.co.kr/product/detail/56274"
     },
     {
+      "id": 100631,
+      "slot": "banchan",
+      "name": "국산 삼치구이 (90g, 전자레인지용)",
+      "price": 3990,
+      "orig": 5400,
+      "rate": 26,
+      "img": "https://oasisprodproduct.edge.naverncp.com/100631/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/100631"
+    },
+    {
       "id": 92906,
       "slot": "banchan",
       "name": "국내산 오징어 듬뿍 해물완자 (400g) (1개)",
@@ -3394,16 +3404,6 @@
       "url": "https://www.oasis.co.kr/product/detail/104270"
     },
     {
-      "id": 100631,
-      "slot": "banchan",
-      "name": "국산 삼치구이 (90g, 전자레인지용)",
-      "price": 3990,
-      "orig": 5400,
-      "rate": 26,
-      "img": "https://oasisprodproduct.edge.naverncp.com/100631/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/100631"
-    },
-    {
       "id": 107889,
       "slot": "banchan",
       "name": "동물복지 한돈 꼬마 돈까스 (500g x 1개)",
@@ -3414,12 +3414,22 @@
       "url": "https://www.oasis.co.kr/product/detail/107889"
     },
     {
+      "id": 20461,
+      "slot": "banchan",
+      "name": "무항한돈 문어모양 비엔나(240g)",
+      "price": 5200,
+      "orig": 7000,
+      "rate": 25,
+      "img": "https://oasisprodproduct.edge.naverncp.com/20461/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/20461"
+    },
+    {
       "id": 56036,
       "slot": "banchan",
       "name": "국산 손질 고등어살(특대)*170g",
-      "price": 5400,
+      "price": 5200,
       "orig": 7300,
-      "rate": 26,
+      "rate": 28,
       "img": "https://oasisprodproduct.edge.naverncp.com/56036/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/56036"
     },
@@ -3452,16 +3462,6 @@
       "rate": 33,
       "img": "https://oasisprodproduct.edge.naverncp.com/50782/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/50782"
-    },
-    {
-      "id": 20461,
-      "slot": "banchan",
-      "name": "무항한돈 문어모양 비엔나(240g)",
-      "price": 5200,
-      "orig": 7000,
-      "rate": 25,
-      "img": "https://oasisprodproduct.edge.naverncp.com/20461/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/20461"
     },
     {
       "id": 56663,
@@ -3522,16 +3522,6 @@
       "rate": 30,
       "img": "https://oasisprodproduct.edge.naverncp.com/126127/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/126127"
-    },
-    {
-      "id": 103869,
-      "slot": "banchan",
-      "name": "아임닭 [고단백/저당]바삭한 크리스피 닭가슴살 5종 (90g×10팩)",
-      "price": 19000,
-      "orig": 34000,
-      "rate": 44,
-      "img": "https://oasisprodproduct.edge.naverncp.com/103869/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/103869"
     },
     {
       "id": 107203,
@@ -3614,6 +3604,16 @@
       "url": "https://www.oasis.co.kr/product/detail/104998"
     },
     {
+      "id": 107198,
+      "slot": "banchan",
+      "name": "아임닭 [저당]닭가슴살 김치 볶음밥 (200g x 10팩)",
+      "price": 16000,
+      "orig": 35000,
+      "rate": 54,
+      "img": "https://oasisprodproduct.edge.naverncp.com/107198/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/107198"
+    },
+    {
       "id": 107202,
       "slot": "banchan",
       "name": "아임닭 [저당] 닭가슴살 야채 볶음밥 (200g×10팩)",
@@ -3622,16 +3622,6 @@
       "rate": 54,
       "img": "https://oasisprodproduct.edge.naverncp.com/107202/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/107202"
-    },
-    {
-      "id": 107198,
-      "slot": "banchan",
-      "name": "아임닭 [저당]닭가슴살 김치 볶음밥 (200g x 10팩)",
-      "price": 14000,
-      "orig": 35000,
-      "rate": 60,
-      "img": "https://oasisprodproduct.edge.naverncp.com/107198/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/107198"
     },
     {
       "id": 104817,
@@ -3667,9 +3657,9 @@
       "id": 115012,
       "slot": "banchan",
       "name": "아임닭 한입 볼 닭가슴살 3종 (100g×6팩)",
-      "price": 9900,
+      "price": 9600,
       "orig": 18000,
-      "rate": 45,
+      "rate": 46,
       "img": "https://oasisprodproduct.edge.naverncp.com/115012/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/115012"
     },
@@ -3764,14 +3754,14 @@
       "url": "https://www.oasis.co.kr/product/detail/105698"
     },
     {
-      "id": 108034,
+      "id": 3585,
       "slot": "banchan",
-      "name": "아임닭 한입쫄깃 닭안심 오리지널 (100g x10개)",
-      "price": 18000,
-      "orig": 35000,
-      "rate": 48,
-      "img": "https://oasisprodproduct.edge.naverncp.com/108034/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/108034"
+      "name": "고야 논 퍼레일 케이퍼 (111g)",
+      "price": 5250,
+      "orig": 7500,
+      "rate": 30,
+      "img": "https://oasisprodproduct.edge.naverncp.com/3585/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/3585"
     },
     {
       "id": 105478,
@@ -3792,16 +3782,6 @@
       "rate": 31,
       "img": "https://oasisprodproduct.edge.naverncp.com/106596/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/106596"
-    },
-    {
-      "id": 3585,
-      "slot": "banchan",
-      "name": "고야 논 퍼레일 케이퍼 (111g)",
-      "price": 5250,
-      "orig": 7500,
-      "rate": 30,
-      "img": "https://oasisprodproduct.edge.naverncp.com/3585/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/3585"
     },
     {
       "id": 105479,
@@ -3877,9 +3857,9 @@
       "id": 115568,
       "slot": "banchan",
       "name": "아임닭 쉐프메이드 시즌2 닭가슴살 3종 (100g×6팩)",
-      "price": 10900,
+      "price": 9900,
       "orig": 19800,
-      "rate": 44,
+      "rate": 50,
       "img": "https://oasisprodproduct.edge.naverncp.com/115568/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/115568"
     },
@@ -3937,21 +3917,11 @@
       "id": 124921,
       "slot": "banchan",
       "name": "아임닭 한입 볼 닭가슴살 떡갈비 (100g x 3개)",
-      "price": 4800,
+      "price": 5100,
       "orig": 9000,
-      "rate": 46,
+      "rate": 43,
       "img": "https://oasisprodproduct.edge.naverncp.com/124921/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/124921"
-    },
-    {
-      "id": 106579,
-      "slot": "banchan",
-      "name": "아임닭 두부 볶음밥 중화짬뽕 (200g x 2개)",
-      "price": 3800,
-      "orig": 7000,
-      "rate": 45,
-      "img": "https://oasisprodproduct.edge.naverncp.com/106579/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/106579"
     },
     {
       "id": 106583,
@@ -3974,12 +3944,22 @@
       "url": "https://www.oasis.co.kr/product/detail/106608"
     },
     {
+      "id": 106579,
+      "slot": "banchan",
+      "name": "아임닭 두부 볶음밥 중화짬뽕 (200g x 2개)",
+      "price": 3800,
+      "orig": 7000,
+      "rate": 45,
+      "img": "https://oasisprodproduct.edge.naverncp.com/106579/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/106579"
+    },
+    {
       "id": 106585,
       "slot": "banchan",
       "name": "아임닭 닭가슴살 소세지 모짜렐라 고구마 핫도그 (80g×5팩)",
-      "price": 8000,
+      "price": 9000,
       "orig": 14000,
-      "rate": 42,
+      "rate": 35,
       "img": "https://oasisprodproduct.edge.naverncp.com/106585/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/106585"
     },
@@ -4022,6 +4002,16 @@
       "rate": 39,
       "img": "https://oasisprodproduct.edge.naverncp.com/130536/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/130536"
+    },
+    {
+      "id": 126142,
+      "slot": "banchan",
+      "name": "고야 슬라이스드블랙올리브 (344g)",
+      "price": 6150,
+      "orig": 8800,
+      "rate": 30,
+      "img": "https://oasisprodproduct.edge.naverncp.com/126142/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/126142"
     },
     {
       "id": 118624,
@@ -4084,26 +4074,6 @@
       "url": "https://www.oasis.co.kr/product/detail/120534"
     },
     {
-      "id": 126142,
-      "slot": "banchan",
-      "name": "고야 슬라이스드블랙올리브 (344g)",
-      "price": 6150,
-      "orig": 8800,
-      "rate": 30,
-      "img": "https://oasisprodproduct.edge.naverncp.com/126142/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/126142"
-    },
-    {
-      "id": 103828,
-      "slot": "banchan",
-      "name": "아임닭 [저당] 맛있는 닭가슴살 볶음밥 6종 (200g×12팩)",
-      "price": 19400,
-      "orig": 31500,
-      "rate": 38,
-      "img": "https://oasisprodproduct.edge.naverncp.com/103828/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/103828"
-    },
-    {
       "id": 133185,
       "slot": "banchan",
       "name": "아임닭 쉐프메이드 닭가슴살 시즌2 구운대파맛 (100g x 10개)",
@@ -4112,6 +4082,16 @@
       "rate": 45,
       "img": "https://oasisprodproduct.edge.naverncp.com/133185/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/133185"
+    },
+    {
+      "id": 103828,
+      "slot": "banchan",
+      "name": "아임닭 [저당] 맛있는 닭가슴살 볶음밥 6종 (200g×12팩)",
+      "price": 17000,
+      "orig": 31500,
+      "rate": 46,
+      "img": "https://oasisprodproduct.edge.naverncp.com/103828/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/103828"
     },
     {
       "id": 130540,
@@ -4134,6 +4114,16 @@
       "url": "https://www.oasis.co.kr/product/detail/118620"
     },
     {
+      "id": 130545,
+      "slot": "banchan",
+      "name": "아임닭 쉐프메이드 닭가슴살 시즌2 오리지널 (100g x 3개)",
+      "price": 5600,
+      "orig": 9900,
+      "rate": 43,
+      "img": "https://oasisprodproduct.edge.naverncp.com/130545/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/130545"
+    },
+    {
       "id": 106573,
       "slot": "banchan",
       "name": "아임닭 두부 볶음밥 부드러운계란 (200g) (200g x 2개)",
@@ -4144,6 +4134,16 @@
       "url": "https://www.oasis.co.kr/product/detail/106573"
     },
     {
+      "id": 108034,
+      "slot": "banchan",
+      "name": "아임닭 한입쫄깃 닭안심 오리지널 (100g x10개)",
+      "price": 18000,
+      "orig": 35000,
+      "rate": 48,
+      "img": "https://oasisprodproduct.edge.naverncp.com/108034/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/108034"
+    },
+    {
       "id": 42169,
       "slot": "banchan",
       "name": "[추석특가] 창화당 납작 고기 왕군만두(500g)",
@@ -4152,16 +4152,6 @@
       "rate": 48,
       "img": "https://oasisprodproduct.edge.naverncp.com/42169/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/42169"
-    },
-    {
-      "id": 34552,
-      "slot": "banchan",
-      "name": "무농약 미니표고버섯 (150g X 1개)",
-      "price": 3600,
-      "orig": 4900,
-      "rate": 26,
-      "img": "https://oasisprodproduct.edge.naverncp.com/34552/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/34552"
     },
     {
       "id": 24263,
@@ -4254,6 +4244,16 @@
       "url": "https://www.oasis.co.kr/product/detail/129538"
     },
     {
+      "id": 91235,
+      "slot": "banchan",
+      "name": "우리쌀 조랭이떡 (500g X 1개)",
+      "price": 3350,
+      "orig": 4900,
+      "rate": 31,
+      "img": "https://oasisprodproduct.edge.naverncp.com/91235/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/91235"
+    },
+    {
       "id": 59771,
       "slot": "banchan",
       "name": "MSC인증 태평양 야채참치 (150g X 5개)",
@@ -4284,16 +4284,6 @@
       "url": "https://www.oasis.co.kr/product/detail/81155"
     },
     {
-      "id": 91235,
-      "slot": "banchan",
-      "name": "우리쌀 조랭이떡 (500g X 1개)",
-      "price": 3350,
-      "orig": 4900,
-      "rate": 31,
-      "img": "https://oasisprodproduct.edge.naverncp.com/91235/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/91235"
-    },
-    {
       "id": 54721,
       "slot": "banchan",
       "name": "간장 닭갈비 2~3인분 (냉장,600gX1개입)",
@@ -4302,16 +4292,6 @@
       "rate": 29,
       "img": "https://oasisprodproduct.edge.naverncp.com/54721/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/54721"
-    },
-    {
-      "id": 95665,
-      "slot": "banchan",
-      "name": "한돈 제육볶음 (650g X 1개)",
-      "price": 9900,
-      "orig": 13500,
-      "rate": 26,
-      "img": "https://oasisprodproduct.edge.naverncp.com/95665/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/95665"
     },
     {
       "id": 90189,
@@ -4364,16 +4344,6 @@
       "url": "https://www.oasis.co.kr/product/detail/83981"
     },
     {
-      "id": 34557,
-      "slot": "banchan",
-      "name": "무농약 하루 표고버섯 (120g X 1개)",
-      "price": 2980,
-      "orig": 4200,
-      "rate": 29,
-      "img": "https://oasisprodproduct.edge.naverncp.com/34557/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/34557"
-    },
-    {
       "id": 107294,
       "slot": "banchan",
       "name": "웜그레인샐러드 블랙트러플크림(195g)",
@@ -4407,9 +4377,9 @@
       "id": 111936,
       "slot": "banchan",
       "name": "양념시간 우리쌀 양송이스프 80g(분말/4인분)",
-      "price": 3400,
+      "price": 3900,
       "orig": 5300,
-      "rate": 35,
+      "rate": 26,
       "img": "https://oasisprodproduct.edge.naverncp.com/111936/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/111936"
     },
@@ -4434,16 +4404,6 @@
       "url": "https://www.oasis.co.kr/product/detail/2731"
     },
     {
-      "id": 2965,
-      "slot": "banchan",
-      "name": "[특가]매콤순대 곱창볶음 (300g)",
-      "price": 6380,
-      "orig": 9000,
-      "rate": 29,
-      "img": "https://oasisprodproduct.edge.naverncp.com/2965/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/2965"
-    },
-    {
       "id": 5859,
       "slot": "banchan",
       "name": "유기농 스위트콘(350g)",
@@ -4454,24 +4414,24 @@
       "url": "https://www.oasis.co.kr/product/detail/5859"
     },
     {
-      "id": 118197,
-      "slot": "banchan",
-      "name": "시원시원 궁중 동치미 2kg",
-      "price": 10900,
-      "orig": 18800,
-      "rate": 42,
-      "img": "https://oasisprodproduct.edge.naverncp.com/118197/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/118197"
-    },
-    {
       "id": 123166,
       "slot": "banchan",
       "name": "한돈 양념 간장불고기 (냉장,550g) (1개)",
-      "price": 8900,
+      "price": 7900,
       "orig": 13500,
-      "rate": 34,
+      "rate": 41,
       "img": "https://oasisprodproduct.edge.naverncp.com/123166/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/123166"
+    },
+    {
+      "id": 118197,
+      "slot": "banchan",
+      "name": "시원시원 궁중 동치미 2kg",
+      "price": 12900,
+      "orig": 18800,
+      "rate": 31,
+      "img": "https://oasisprodproduct.edge.naverncp.com/118197/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/118197"
     },
     {
       "id": 125538,
@@ -4484,16 +4444,6 @@
       "url": "https://www.oasis.co.kr/product/detail/125538"
     },
     {
-      "id": 118196,
-      "slot": "banchan",
-      "name": "시원시원 궁중 나박김치 2kg",
-      "price": 11900,
-      "orig": 17600,
-      "rate": 32,
-      "img": "https://oasisprodproduct.edge.naverncp.com/118196/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/118196"
-    },
-    {
       "id": 85753,
       "slot": "banchan",
       "name": "[추석특가] 가시만 쏙 제거한 삼치살 (320g/2필렛/특대)",
@@ -4502,6 +4452,16 @@
       "rate": 38,
       "img": "https://oasisprodproduct.edge.naverncp.com/85753/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/85753"
+    },
+    {
+      "id": 118196,
+      "slot": "banchan",
+      "name": "시원시원 궁중 나박김치 2kg",
+      "price": 11900,
+      "orig": 17600,
+      "rate": 32,
+      "img": "https://oasisprodproduct.edge.naverncp.com/118196/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/118196"
     },
     {
       "id": 2424,
@@ -4527,9 +4487,9 @@
       "id": 111935,
       "slot": "banchan",
       "name": "양념시간 우리쌀 크림스프 80g(분말/4인분)",
-      "price": 3700,
+      "price": 3200,
       "orig": 5000,
-      "rate": 26,
+      "rate": 36,
       "img": "https://oasisprodproduct.edge.naverncp.com/111935/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/111935"
     },
@@ -4552,6 +4512,16 @@
       "rate": 37,
       "img": "https://oasisprodproduct.edge.naverncp.com/56652/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/56652"
+    },
+    {
+      "id": 2965,
+      "slot": "banchan",
+      "name": "[특가]매콤순대 곱창볶음 (300g)",
+      "price": 6380,
+      "orig": 9000,
+      "rate": 29,
+      "img": "https://oasisprodproduct.edge.naverncp.com/2965/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/2965"
     },
     {
       "id": 37693,
@@ -4592,6 +4562,16 @@
       "rate": 25,
       "img": "https://oasisprodproduct.edge.naverncp.com/120483/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/120483"
+    },
+    {
+      "id": 107320,
+      "slot": "banchan",
+      "name": "양념시간 우리밀 크림분말 100g",
+      "price": 4400,
+      "orig": 6500,
+      "rate": 32,
+      "img": "https://oasisprodproduct.edge.naverncp.com/107320/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/107320"
     },
     {
       "id": 76299,
@@ -4644,14 +4624,14 @@
       "url": "https://www.oasis.co.kr/product/detail/107319"
     },
     {
-      "id": 107320,
+      "id": 34552,
       "slot": "banchan",
-      "name": "양념시간 우리밀 크림분말 100g",
-      "price": 4400,
-      "orig": 6500,
-      "rate": 32,
-      "img": "https://oasisprodproduct.edge.naverncp.com/107320/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/107320"
+      "name": "무농약 미니표고버섯 (150g X 1개)",
+      "price": 3600,
+      "orig": 4900,
+      "rate": 26,
+      "img": "https://oasisprodproduct.edge.naverncp.com/34552/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/34552"
     },
     {
       "id": 129054,
@@ -4734,34 +4714,34 @@
       "url": "https://www.oasis.co.kr/product/detail/57157"
     },
     {
-      "id": 60567,
-      "slot": "main",
-      "name": "춘천 닭갈비의 정석 보통맛(500g)",
-      "price": 8500,
-      "orig": 11500,
-      "rate": 26,
-      "img": "https://oasisprodproduct.edge.naverncp.com/60567/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/60567"
-    },
-    {
       "id": 60568,
       "slot": "main",
       "name": "춘천 닭갈비의 정석 간장맛(500g)",
-      "price": 8500,
+      "price": 8200,
       "orig": 11500,
-      "rate": 26,
+      "rate": 28,
       "img": "https://oasisprodproduct.edge.naverncp.com/60568/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/60568"
     },
     {
-      "id": 83846,
+      "id": 60567,
       "slot": "main",
-      "name": "동물복지 소금구이 닭갈비 (400g)",
-      "price": 5990,
-      "orig": 8500,
-      "rate": 29,
-      "img": "https://oasisprodproduct.edge.naverncp.com/83846/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/83846"
+      "name": "춘천 닭갈비의 정석 보통맛(500g)",
+      "price": 8200,
+      "orig": 11500,
+      "rate": 28,
+      "img": "https://oasisprodproduct.edge.naverncp.com/60567/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/60567"
+    },
+    {
+      "id": 1313,
+      "slot": "main",
+      "name": "[특가] 춘천 순살 닭갈비 (400g)",
+      "price": 6990,
+      "orig": 9990,
+      "rate": 30,
+      "img": "https://oasisprodproduct.edge.naverncp.com/1313/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/1313"
     },
     {
       "id": 93743,
@@ -4784,6 +4764,16 @@
       "url": "https://www.oasis.co.kr/product/detail/93742"
     },
     {
+      "id": 51229,
+      "slot": "main",
+      "name": "제주돼지 양념LA갈비(600g)",
+      "price": 11800,
+      "orig": 17900,
+      "rate": 34,
+      "img": "https://oasisprodproduct.edge.naverncp.com/51229/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/51229"
+    },
+    {
       "id": 84534,
       "slot": "main",
       "name": "한돈 데리야끼 떡갈비 스테이크 (220g * 1팩)",
@@ -4794,16 +4784,6 @@
       "url": "https://www.oasis.co.kr/product/detail/84534"
     },
     {
-      "id": 132058,
-      "slot": "main",
-      "name": "무인산염 새우로 만든 새우만두 (462g x 3개)",
-      "price": 19900,
-      "orig": 36000,
-      "rate": 44,
-      "img": "https://oasisprodproduct.edge.naverncp.com/132058/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/132058"
-    },
-    {
       "id": 123395,
       "slot": "main",
       "name": "우리밀 무항생제 물만두 (500g x 3개)",
@@ -4812,6 +4792,16 @@
       "rate": 44,
       "img": "https://oasisprodproduct.edge.naverncp.com/123395/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/123395"
+    },
+    {
+      "id": 132058,
+      "slot": "main",
+      "name": "무인산염 새우로 만든 새우만두 (462g x 3개)",
+      "price": 19900,
+      "orig": 36000,
+      "rate": 44,
+      "img": "https://oasisprodproduct.edge.naverncp.com/132058/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/132058"
     },
     {
       "id": 123397,
@@ -4904,6 +4894,16 @@
       "url": "https://www.oasis.co.kr/product/detail/98343"
     },
     {
+      "id": 52314,
+      "slot": "main",
+      "name": "우리밀 순한 소시지 핫도그(80gX5입)",
+      "price": 8900,
+      "orig": 12000,
+      "rate": 25,
+      "img": "https://oasisprodproduct.edge.naverncp.com/52314/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/52314"
+    },
+    {
       "id": 94037,
       "slot": "main",
       "name": "양념시간 골드키위 돈까스소스 200g",
@@ -4924,14 +4924,14 @@
       "url": "https://www.oasis.co.kr/product/detail/40236"
     },
     {
-      "id": 4232,
+      "id": 92774,
       "slot": "main",
-      "name": "통영 자연산 손질 바다장어(생물/ 350g)",
-      "price": 11500,
-      "orig": 20000,
-      "rate": 42,
-      "img": "https://oasisprodproduct.edge.naverncp.com/4232/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/4232"
+      "name": "동태 슬라이스(300g)",
+      "price": 6390,
+      "orig": 10000,
+      "rate": 36,
+      "img": "https://oasisprodproduct.edge.naverncp.com/92774/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/92774"
     },
     {
       "id": 2298,
@@ -4944,14 +4944,14 @@
       "url": "https://www.oasis.co.kr/product/detail/2298"
     },
     {
-      "id": 92774,
+      "id": 4232,
       "slot": "main",
-      "name": "동태 슬라이스(300g)",
-      "price": 6390,
-      "orig": 10000,
-      "rate": 36,
-      "img": "https://oasisprodproduct.edge.naverncp.com/92774/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/92774"
+      "name": "통영 자연산 손질 바다장어(생물/ 350g)",
+      "price": 11500,
+      "orig": 20000,
+      "rate": 42,
+      "img": "https://oasisprodproduct.edge.naverncp.com/4232/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/4232"
     },
     {
       "id": 100047,
@@ -5094,16 +5094,6 @@
       "url": "https://www.oasis.co.kr/product/detail/47814"
     },
     {
-      "id": 93040,
-      "slot": "snack",
-      "name": "유기농 식혜(1800ml)",
-      "price": 6490,
-      "orig": 9600,
-      "rate": 32,
-      "img": "https://oasisprodproduct.edge.naverncp.com/93040/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/93040"
-    },
-    {
       "id": 2914,
       "slot": "snack",
       "name": "유기농밀 전병 파래+약콩 (180g)",
@@ -5112,6 +5102,16 @@
       "rate": 38,
       "img": "https://oasisprodproduct.edge.naverncp.com/2914/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/2914"
+    },
+    {
+      "id": 93040,
+      "slot": "snack",
+      "name": "유기농 식혜(1800ml)",
+      "price": 6490,
+      "orig": 9600,
+      "rate": 32,
+      "img": "https://oasisprodproduct.edge.naverncp.com/93040/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/93040"
     },
     {
       "id": 93042,
@@ -5187,9 +5187,9 @@
       "id": 92931,
       "slot": "snack",
       "name": "데라리타 아몬드칩 그릴드스위트콘맛 (25g x 5개)",
-      "price": 10900,
+      "price": 6900,
       "orig": 15000,
-      "rate": 27,
+      "rate": 54,
       "img": "https://oasisprodproduct.edge.naverncp.com/92931/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/92931"
     },
@@ -5247,9 +5247,9 @@
       "id": 66107,
       "slot": "snack",
       "name": "무항생제 임실치즈반반 핫도그 (90gx4입)",
-      "price": 10900,
+      "price": 11900,
       "orig": 16710,
-      "rate": 34,
+      "rate": 28,
       "img": "https://oasisprodproduct.edge.naverncp.com/66107/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/66107"
     },
@@ -5324,14 +5324,14 @@
       "url": "https://www.oasis.co.kr/product/detail/129106"
     },
     {
-      "id": 104246,
+      "id": 35813,
       "slot": "snack",
-      "name": "[1+1] 자연은 더말린 복숭아 제로 (500ml)",
-      "price": 1800,
-      "orig": 2400,
+      "name": "달곰 쌀 오란다(26gx10개입)",
+      "price": 12000,
+      "orig": 16000,
       "rate": 25,
-      "img": "https://oasisprodproduct.edge.naverncp.com/104246/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/104246"
+      "img": "https://oasisprodproduct.edge.naverncp.com/35813/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/35813"
     },
     {
       "id": 130742,
@@ -5354,14 +5354,14 @@
       "url": "https://www.oasis.co.kr/product/detail/87266"
     },
     {
-      "id": 35813,
+      "id": 118766,
       "slot": "snack",
-      "name": "달곰 쌀 오란다(26gx10개입)",
-      "price": 12000,
-      "orig": 16000,
-      "rate": 25,
-      "img": "https://oasisprodproduct.edge.naverncp.com/35813/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/35813"
+      "name": "씨알로 포스트바이오틱스 유산균 시리얼 (560g x 1개)",
+      "price": 5800,
+      "orig": 10000,
+      "rate": 42,
+      "img": "https://oasisprodproduct.edge.naverncp.com/118766/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/118766"
     },
     {
       "id": 73534,
@@ -5384,6 +5384,16 @@
       "url": "https://www.oasis.co.kr/product/detail/104245"
     },
     {
+      "id": 104246,
+      "slot": "snack",
+      "name": "[1+1] 자연은 더말린 복숭아 제로 (500ml)",
+      "price": 1800,
+      "orig": 2400,
+      "rate": 25,
+      "img": "https://oasisprodproduct.edge.naverncp.com/104246/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/104246"
+    },
+    {
       "id": 118752,
       "slot": "snack",
       "name": "유기농 제주 말차 ((20g×2입)×1개)",
@@ -5397,9 +5407,9 @@
       "id": 79888,
       "slot": "snack",
       "name": "[맑은농장] 베리베리주스 (100ml X 10개)",
-      "price": 13000,
+      "price": 13500,
       "orig": 18500,
-      "rate": 29,
+      "rate": 27,
       "img": "https://oasisprodproduct.edge.naverncp.com/79888/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/79888"
     },
@@ -5412,16 +5422,6 @@
       "rate": 27,
       "img": "https://oasisprodproduct.edge.naverncp.com/83902/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/83902"
-    },
-    {
-      "id": 118766,
-      "slot": "snack",
-      "name": "씨알로 포스트바이오틱스 유산균 시리얼 (560g x 1개)",
-      "price": 5800,
-      "orig": 10000,
-      "rate": 42,
-      "img": "https://oasisprodproduct.edge.naverncp.com/118766/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/118766"
     },
     {
       "id": 35815,
@@ -5484,6 +5484,16 @@
       "url": "https://www.oasis.co.kr/product/detail/108897"
     },
     {
+      "id": 91573,
+      "slot": "snack",
+      "name": "당제로 통곡물 시리얼 (300g x 1개)",
+      "price": 8900,
+      "orig": 12900,
+      "rate": 31,
+      "img": "https://oasisprodproduct.edge.naverncp.com/91573/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/91573"
+    },
+    {
       "id": 87359,
       "slot": "snack",
       "name": "오마뎅 진짜 짜장 떡볶이(352g)",
@@ -5514,22 +5524,12 @@
       "url": "https://www.oasis.co.kr/product/detail/104845"
     },
     {
-      "id": 91573,
-      "slot": "snack",
-      "name": "당제로 통곡물 시리얼 (300g x 1개)",
-      "price": 8900,
-      "orig": 12900,
-      "rate": 31,
-      "img": "https://oasisprodproduct.edge.naverncp.com/91573/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/91573"
-    },
-    {
       "id": 56125,
       "slot": "snack",
       "name": "[20%쿠폰] 모짜렐라 치즈가래떡 (235g X 1개)",
-      "price": 3500,
+      "price": 3700,
       "orig": 5200,
-      "rate": 32,
+      "rate": 28,
       "img": "https://oasisprodproduct.edge.naverncp.com/56125/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/56125"
     },
@@ -5554,16 +5554,6 @@
       "url": "https://www.oasis.co.kr/product/detail/104844"
     },
     {
-      "id": 106599,
-      "slot": "snack",
-      "name": "웰콩 서리태볶음(17gX20개입)",
-      "price": 13900,
-      "orig": 19500,
-      "rate": 28,
-      "img": "https://oasisprodproduct.edge.naverncp.com/106599/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/106599"
-    },
-    {
       "id": 74427,
       "slot": "snack",
       "name": "[8잔 분량] 오늘의일상 레몬에이드 원액 (400mL)",
@@ -5572,6 +5562,16 @@
       "rate": 25,
       "img": "https://oasisprodproduct.edge.naverncp.com/74427/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/74427"
+    },
+    {
+      "id": 94036,
+      "slot": "snack",
+      "name": "[특가] 호정가 알콩달콩 우리콩 유과 ( 60g x 1개)",
+      "price": 2300,
+      "orig": 3300,
+      "rate": 30,
+      "img": "https://oasisprodproduct.edge.naverncp.com/94036/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/94036"
     },
     {
       "id": 1327,
@@ -5584,14 +5584,14 @@
       "url": "https://www.oasis.co.kr/product/detail/1327"
     },
     {
-      "id": 2939,
+      "id": 106599,
       "slot": "snack",
-      "name": "하늘청 식혜 ((1.8L x 1병))",
-      "price": 5850,
-      "orig": 7800,
-      "rate": 25,
-      "img": "https://oasisprodproduct.edge.naverncp.com/2939/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/2939"
+      "name": "웰콩 서리태볶음(17gX20개입)",
+      "price": 13900,
+      "orig": 19500,
+      "rate": 28,
+      "img": "https://oasisprodproduct.edge.naverncp.com/106599/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/106599"
     },
     {
       "id": 105507,
@@ -5602,6 +5602,16 @@
       "rate": 37,
       "img": "https://oasisprodproduct.edge.naverncp.com/105507/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/105507"
+    },
+    {
+      "id": 106600,
+      "slot": "snack",
+      "name": "웰콩 병아리콩볶음(20gX20개입)",
+      "price": 11900,
+      "orig": 16000,
+      "rate": 25,
+      "img": "https://oasisprodproduct.edge.naverncp.com/106600/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/106600"
     },
     {
       "id": 106602,
@@ -5622,16 +5632,6 @@
       "rate": 33,
       "img": "https://oasisprodproduct.edge.naverncp.com/102141/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/102141"
-    },
-    {
-      "id": 86642,
-      "slot": "snack",
-      "name": "새싹앤 단백질쉐이크 쑥라떼맛 (200g)",
-      "price": 10990,
-      "orig": 15000,
-      "rate": 26,
-      "img": "https://oasisprodproduct.edge.naverncp.com/86642/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/86642"
     },
     {
       "id": 1325,
@@ -5664,36 +5664,6 @@
       "url": "https://www.oasis.co.kr/product/detail/2687"
     },
     {
-      "id": 1123,
-      "slot": "snack",
-      "name": "정직한 머루포도즙 100ml x 30포",
-      "price": 19900,
-      "orig": 32000,
-      "rate": 37,
-      "img": "https://oasisprodproduct.edge.naverncp.com/1123/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/1123"
-    },
-    {
-      "id": 2998,
-      "slot": "snack",
-      "name": "정직한 도라지배즙(110ml×30포)",
-      "price": 19900,
-      "orig": 32000,
-      "rate": 37,
-      "img": "https://oasisprodproduct.edge.naverncp.com/2998/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/2998"
-    },
-    {
-      "id": 106600,
-      "slot": "snack",
-      "name": "웰콩 병아리콩볶음(20gX20개입)",
-      "price": 11900,
-      "orig": 16000,
-      "rate": 25,
-      "img": "https://oasisprodproduct.edge.naverncp.com/106600/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/106600"
-    },
-    {
       "id": 106601,
       "slot": "snack",
       "name": "웰콩 서리태볶음(250g)",
@@ -5722,6 +5692,16 @@
       "rate": 30,
       "img": "https://oasisprodproduct.edge.naverncp.com/122611/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/122611"
+    },
+    {
+      "id": 2622,
+      "slot": "snack",
+      "name": "구운연유과(120g)",
+      "price": 4700,
+      "orig": 6400,
+      "rate": 26,
+      "img": "https://oasisprodproduct.edge.naverncp.com/2622/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/2622"
     },
     {
       "id": 2093,
@@ -5774,16 +5754,6 @@
       "url": "https://www.oasis.co.kr/product/detail/9185"
     },
     {
-      "id": 2622,
-      "slot": "snack",
-      "name": "구운연유과(120g)",
-      "price": 4700,
-      "orig": 6400,
-      "rate": 26,
-      "img": "https://oasisprodproduct.edge.naverncp.com/2622/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/2622"
-    },
-    {
       "id": 101839,
       "slot": "snack",
       "name": "헬씨 배도라지모과 생강 스틱 (20gX14포)",
@@ -5802,6 +5772,16 @@
       "rate": 39,
       "img": "https://oasisprodproduct.edge.naverncp.com/94535/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/94535"
+    },
+    {
+      "id": 54811,
+      "slot": "snack",
+      "name": "대구약령시 수제 쌍화차 (150ml X 10포)",
+      "price": 17500,
+      "orig": 25000,
+      "rate": 30,
+      "img": "https://oasisprodproduct.edge.naverncp.com/54811/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/54811"
     },
     {
       "id": 67406,
@@ -5824,16 +5804,6 @@
       "url": "https://www.oasis.co.kr/product/detail/107952"
     },
     {
-      "id": 97494,
-      "slot": "snack",
-      "name": "파주장단콩 콩죽 (410g*1개)",
-      "price": 6800,
-      "orig": 9200,
-      "rate": 26,
-      "img": "https://oasisprodproduct.edge.naverncp.com/97494/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/97494"
-    },
-    {
       "id": 19963,
       "slot": "snack",
       "name": "[특가] 구워만든 곡물그대로 21 (150g X 2개)",
@@ -5852,6 +5822,16 @@
       "rate": 25,
       "img": "https://oasisprodproduct.edge.naverncp.com/107951/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/107951"
+    },
+    {
+      "id": 97494,
+      "slot": "snack",
+      "name": "파주장단콩 콩죽 (410g*1개)",
+      "price": 6800,
+      "orig": 9200,
+      "rate": 26,
+      "img": "https://oasisprodproduct.edge.naverncp.com/97494/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/97494"
     },
     {
       "id": 57716,
@@ -5877,9 +5857,9 @@
       "id": 57900,
       "slot": "snack",
       "name": "나랑드사이다 제로 파인애플 (500ml X 1개)",
-      "price": 1150,
+      "price": 1200,
       "orig": 2000,
-      "rate": 42,
+      "rate": 40,
       "img": "https://oasisprodproduct.edge.naverncp.com/57900/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/57900"
     },
@@ -5984,16 +5964,6 @@
       "url": "https://www.oasis.co.kr/product/detail/33156"
     },
     {
-      "id": 83864,
-      "slot": "snack",
-      "name": "따옴 오가닉 유기농 주스(사과 비트 / 120ml*24입)",
-      "price": 15800,
-      "orig": 22900,
-      "rate": 31,
-      "img": "https://oasisprodproduct.edge.naverncp.com/83864/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/83864"
-    },
-    {
       "id": 86539,
       "slot": "snack",
       "name": "벨기에 수제초콜릿 스틱 선물세트 2종",
@@ -6002,6 +5972,16 @@
       "rate": 30,
       "img": "https://oasisprodproduct.edge.naverncp.com/86539/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/86539"
+    },
+    {
+      "id": 83864,
+      "slot": "snack",
+      "name": "따옴 오가닉 유기농 주스(사과 비트 / 120ml*24입)",
+      "price": 16570,
+      "orig": 22900,
+      "rate": 27,
+      "img": "https://oasisprodproduct.edge.naverncp.com/83864/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/83864"
     },
     {
       "id": 79328,
@@ -6022,26 +6002,6 @@
       "rate": 26,
       "img": "https://oasisprodproduct.edge.naverncp.com/64350/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/64350"
-    },
-    {
-      "id": 5777,
-      "slot": "snack",
-      "name": "무농약100% 대학찰옥수수(삶은 옥수수 3개)",
-      "price": 6980,
-      "orig": 9900,
-      "rate": 29,
-      "img": "https://oasisprodproduct.edge.naverncp.com/5777/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/5777"
-    },
-    {
-      "id": 95576,
-      "slot": "snack",
-      "name": "그래놀라하우스 애플시나몬(300g)",
-      "price": 12200,
-      "orig": 16500,
-      "rate": 26,
-      "img": "https://oasisprodproduct.edge.naverncp.com/95576/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/95576"
     },
     {
       "id": 73011,
@@ -6374,16 +6334,6 @@
       "url": "https://www.oasis.co.kr/product/detail/113428"
     },
     {
-      "id": 112821,
-      "slot": "snack",
-      "name": "오아시스 저당 유자차(530g) (1개)",
-      "price": 8950,
-      "orig": 14000,
-      "rate": 36,
-      "img": "https://oasisprodproduct.edge.naverncp.com/112821/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/112821"
-    },
-    {
       "id": 112822,
       "slot": "snack",
       "name": "오아시스 저당 레몬차(530g)",
@@ -6392,6 +6342,16 @@
       "rate": 36,
       "img": "https://oasisprodproduct.edge.naverncp.com/112822/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/112822"
+    },
+    {
+      "id": 112821,
+      "slot": "snack",
+      "name": "오아시스 저당 유자차(530g) (1개)",
+      "price": 8950,
+      "orig": 14000,
+      "rate": 36,
+      "img": "https://oasisprodproduct.edge.naverncp.com/112821/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/112821"
     },
     {
       "id": 112867,
@@ -6484,16 +6444,6 @@
       "url": "https://www.oasis.co.kr/product/detail/89298"
     },
     {
-      "id": 100080,
-      "slot": "snack",
-      "name": "새싹앤 단백질쉐이크 초코맛 (400g)",
-      "price": 18000,
-      "orig": 24000,
-      "rate": 25,
-      "img": "https://oasisprodproduct.edge.naverncp.com/100080/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/100080"
-    },
-    {
       "id": 100077,
       "slot": "snack",
       "name": "새싹앤 단백질쉐이크 딸기맛 (400g)",
@@ -6502,6 +6452,16 @@
       "rate": 25,
       "img": "https://oasisprodproduct.edge.naverncp.com/100077/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/100077"
+    },
+    {
+      "id": 100080,
+      "slot": "snack",
+      "name": "새싹앤 단백질쉐이크 초코맛 (400g)",
+      "price": 18000,
+      "orig": 24000,
+      "rate": 25,
+      "img": "https://oasisprodproduct.edge.naverncp.com/100080/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/100080"
     },
     {
       "id": 86643,
@@ -6544,16 +6504,6 @@
       "url": "https://www.oasis.co.kr/product/detail/3750"
     },
     {
-      "id": 120352,
-      "slot": "snack",
-      "name": "[특가]하늘청 유기농 맑은수정과 ((125ml x 6개))",
-      "price": 4600,
-      "orig": 6540,
-      "rate": 29,
-      "img": "https://oasisprodproduct.edge.naverncp.com/120352/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/120352"
-    },
-    {
       "id": 114249,
       "slot": "snack",
       "name": "김소형원방 100% 국내산 생강 진한 생강청 (500ml)",
@@ -6564,14 +6514,14 @@
       "url": "https://www.oasis.co.kr/product/detail/114249"
     },
     {
-      "id": 94035,
+      "id": 120352,
       "slot": "snack",
-      "name": "[특가] 호정가 왕찹쌀약과 (1봉지 (54g,6개))",
-      "price": 4300,
-      "orig": 6300,
-      "rate": 31,
-      "img": "https://oasisprodproduct.edge.naverncp.com/94035/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/94035"
+      "name": "[특가]하늘청 유기농 맑은수정과 ((125ml x 6개))",
+      "price": 4600,
+      "orig": 6540,
+      "rate": 29,
+      "img": "https://oasisprodproduct.edge.naverncp.com/120352/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/120352"
     },
     {
       "id": 90089,
@@ -6582,26 +6532,6 @@
       "rate": 30,
       "img": "https://oasisprodproduct.edge.naverncp.com/90089/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/90089"
-    },
-    {
-      "id": 70043,
-      "slot": "snack",
-      "name": "고소한 순수콩물(1L)",
-      "price": 4400,
-      "orig": 6500,
-      "rate": 32,
-      "img": "https://oasisprodproduct.edge.naverncp.com/70043/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/70043"
-    },
-    {
-      "id": 5855,
-      "slot": "snack",
-      "name": "[20%쿠폰]고소한 흑임자 콩국물(1L) (1개)",
-      "price": 4800,
-      "orig": 7200,
-      "rate": 33,
-      "img": "https://oasisprodproduct.edge.naverncp.com/5855/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/5855"
     },
     {
       "id": 93979,
@@ -6644,16 +6574,6 @@
       "url": "https://www.oasis.co.kr/product/detail/132482"
     },
     {
-      "id": 132574,
-      "slot": "snack",
-      "name": "마이노멀 국산콩 100% 메밀두부면",
-      "price": 3980,
-      "orig": 5580,
-      "rate": 28,
-      "img": "https://oasisprodproduct.edge.naverncp.com/132574/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/132574"
-    },
-    {
       "id": 132480,
       "slot": "snack",
       "name": "[특가] 폰타나 라치오 베이컨 까르보나라 파스타소스 (430g)",
@@ -6664,14 +6584,14 @@
       "url": "https://www.oasis.co.kr/product/detail/132480"
     },
     {
-      "id": 116434,
+      "id": 132574,
       "slot": "snack",
-      "name": "구운 주먹밥 치킨(100g*5입) (1봉)",
-      "price": 8500,
-      "orig": 12000,
-      "rate": 29,
-      "img": "https://oasisprodproduct.edge.naverncp.com/116434/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/116434"
+      "name": "마이노멀 국산콩 100% 메밀두부면",
+      "price": 3980,
+      "orig": 5580,
+      "rate": 28,
+      "img": "https://oasisprodproduct.edge.naverncp.com/132574/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/132574"
     },
     {
       "id": 61439,
@@ -6682,6 +6602,16 @@
       "rate": 25,
       "img": "https://oasisprodproduct.edge.naverncp.com/61439/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/61439"
+    },
+    {
+      "id": 116434,
+      "slot": "snack",
+      "name": "구운 주먹밥 치킨(100g*5입) (1봉)",
+      "price": 8500,
+      "orig": 12000,
+      "rate": 29,
+      "img": "https://oasisprodproduct.edge.naverncp.com/116434/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/116434"
     },
     {
       "id": 31365,
@@ -6794,6 +6724,16 @@
       "url": "https://www.oasis.co.kr/product/detail/22370"
     },
     {
+      "id": 38449,
+      "slot": "snack",
+      "name": "미주라 통밀 펜네 (500g)",
+      "price": 5200,
+      "orig": 7800,
+      "rate": 33,
+      "img": "https://oasisprodproduct.edge.naverncp.com/38449/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/38449"
+    },
+    {
       "id": 95581,
       "slot": "snack",
       "name": "미미 유니짜장 920g(2인분/냉동)",
@@ -6884,16 +6824,6 @@
       "url": "https://www.oasis.co.kr/product/detail/26530"
     },
     {
-      "id": 123165,
-      "slot": "snack",
-      "name": "한돈 양념 제육볶음 (냉장,550g) (1개)",
-      "price": 9900,
-      "orig": 14500,
-      "rate": 31,
-      "img": "https://oasisprodproduct.edge.naverncp.com/123165/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/123165"
-    },
-    {
       "id": 124376,
       "slot": "snack",
       "name": "김소형원방 본초 달인 저당 보양밥 (120g x 5팩)",
@@ -6937,9 +6867,9 @@
       "id": 2415,
       "slot": "snack",
       "name": "자연실록 치킨스테이크 (250g)",
-      "price": 3990,
+      "price": 4650,
       "orig": 8500,
-      "rate": 53,
+      "rate": 45,
       "img": "https://oasisprodproduct.edge.naverncp.com/2415/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/2415"
     },
@@ -6974,6 +6904,16 @@
       "url": "https://www.oasis.co.kr/product/detail/1938"
     },
     {
+      "id": 34351,
+      "slot": "snack",
+      "name": "우리밀 통살텐더 매운맛 (350g) (350g x 1개)",
+      "price": 5900,
+      "orig": 8000,
+      "rate": 26,
+      "img": "https://oasisprodproduct.edge.naverncp.com/34351/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/34351"
+    },
+    {
       "id": 102897,
       "slot": "snack",
       "name": "유기농 현미 수제비 (500g)",
@@ -6994,22 +6934,12 @@
       "url": "https://www.oasis.co.kr/product/detail/29590"
     },
     {
-      "id": 107595,
-      "slot": "snack",
-      "name": "[세끼판다] 귀리불고기 샐러드 (215g X 1개)",
-      "price": 6500,
-      "orig": 8800,
-      "rate": 26,
-      "img": "https://oasisprodproduct.edge.naverncp.com/107595/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/107595"
-    },
-    {
       "id": 127557,
       "slot": "snack",
       "name": "[미슐랭맛집]황금콩밭 비지탕 500g (500g x 1개)",
-      "price": 6500,
+      "price": 6900,
       "orig": 10900,
-      "rate": 40,
+      "rate": 36,
       "img": "https://oasisprodproduct.edge.naverncp.com/127557/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/127557"
     },
@@ -7044,16 +6974,6 @@
       "url": "https://www.oasis.co.kr/product/detail/107091"
     },
     {
-      "id": 107092,
-      "slot": "snack",
-      "name": "[저스트그린] 하루 샐러드(샐러리&양배추&당근) (95g X 1개)",
-      "price": 2450,
-      "orig": 3300,
-      "rate": 25,
-      "img": "https://oasisprodproduct.edge.naverncp.com/107092/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/107092"
-    },
-    {
       "id": 92771,
       "slot": "snack",
       "name": "초계 메밀 막국수 (645g)",
@@ -7082,26 +7002,6 @@
       "rate": 34,
       "img": "https://oasisprodproduct.edge.naverncp.com/99680/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/99680"
-    },
-    {
-      "id": 132887,
-      "slot": "snack",
-      "name": "[저스트그린] 잠봉 카펠리니누들 샐러드 (190g X 1개)",
-      "price": 7320,
-      "orig": 9900,
-      "rate": 26,
-      "img": "https://oasisprodproduct.edge.naverncp.com/132887/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/132887"
-    },
-    {
-      "id": 107090,
-      "slot": "snack",
-      "name": "[저스트그린] 간편 양배추 샐러드 (280g X 1개)",
-      "price": 2690,
-      "orig": 4000,
-      "rate": 32,
-      "img": "https://oasisprodproduct.edge.naverncp.com/107090/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/107090"
     },
     {
       "id": 33083,
@@ -7224,16 +7124,6 @@
       "url": "https://www.oasis.co.kr/product/detail/88940"
     },
     {
-      "id": 87890,
-      "slot": "snack",
-      "name": "매콤 무뼈닭발(300g)",
-      "price": 8900,
-      "orig": 12000,
-      "rate": 25,
-      "img": "https://oasisprodproduct.edge.naverncp.com/87890/thumb/999",
-      "url": "https://www.oasis.co.kr/product/detail/87890"
-    },
-    {
       "id": 87090,
       "slot": "snack",
       "name": "달콤가득 국내산 단호박죽 (500g X 1봉)",
@@ -7264,6 +7154,16 @@
       "url": "https://www.oasis.co.kr/product/detail/123073"
     },
     {
+      "id": 107595,
+      "slot": "snack",
+      "name": "[세끼판다] 귀리불고기 샐러드 (215g X 1개)",
+      "price": 6500,
+      "orig": 8800,
+      "rate": 26,
+      "img": "https://oasisprodproduct.edge.naverncp.com/107595/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/107595"
+    },
+    {
       "id": 47732,
       "slot": "snack",
       "name": "한입팝콘치킨 (280g X 1개)",
@@ -7272,6 +7172,26 @@
       "rate": 27,
       "img": "https://oasisprodproduct.edge.naverncp.com/47732/thumb/999",
       "url": "https://www.oasis.co.kr/product/detail/47732"
+    },
+    {
+      "id": 132887,
+      "slot": "snack",
+      "name": "[저스트그린] 잠봉 카펠리니누들 샐러드 (190g X 1개)",
+      "price": 7320,
+      "orig": 9900,
+      "rate": 26,
+      "img": "https://oasisprodproduct.edge.naverncp.com/132887/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/132887"
+    },
+    {
+      "id": 107090,
+      "slot": "snack",
+      "name": "[저스트그린] 간편 양배추 샐러드 (280g X 1개)",
+      "price": 2950,
+      "orig": 4000,
+      "rate": 26,
+      "img": "https://oasisprodproduct.edge.naverncp.com/107090/thumb/999",
+      "url": "https://www.oasis.co.kr/product/detail/107090"
     },
     {
       "id": 112828,
