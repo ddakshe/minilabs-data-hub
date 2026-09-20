@@ -1,9 +1,68 @@
 {
-  "generatedAt": "2026-09-19T00:00:00Z",
+  "generatedAt": "2026-09-20T00:00:00Z",
   "source": "SEC EDGAR",
   "sourceUrl": "https://www.sec.gov/edgar",
   "usdKrw": 1388.1,
-  "listed": [],
+  "listed": [
+    {
+      "cik": "0002088082",
+      "name": "Electra Therapeutics, Inc.",
+      "ticker": "ETRA",
+      "exchange": "나스닥",
+      "offerPrice": 15.0,
+      "priceBandLow": 14.0,
+      "priceBandHigh": 16.0,
+      "bandPosition": "within",
+      "sharesOffered": 23333334,
+      "sharesAfterListing": 62766955,
+      "grossProceeds": 350000010,
+      "marketCap": 941504325,
+      "filedAt": "2026-09-18",
+      "isSpac": false,
+      "sic": "2836",
+      "industry": "제약·바이오",
+      "underwriters": [
+        "UNDERWRITER NUMBER OF SHARES Jefferies LLC",
+        "TD Securities",
+        "Evercore Group"
+      ],
+      "businessSummary": "We are a late clinical-stage biopharmaceutical company focused on pioneering a new class of precision medicines for the treatment of immune-mediated diseases and cancer.",
+      "useOfProceeds": "We currently intend to use the net proceeds from this offering, together with our existing cash, cash equivalents, and marketable securities, as follows: approximately $220.",
+      "netResult": null,
+      "netResultYear": null,
+      "lockupDays": null,
+      "location": "SOUTH SAN FRANCISCO, CA",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002088082&type=424B4"
+    },
+    {
+      "cik": "0002145659",
+      "name": "JATT III Acquisition Corp",
+      "ticker": "JTTT",
+      "exchange": "나스닥",
+      "offerPrice": 10.0,
+      "priceBandLow": null,
+      "priceBandHigh": null,
+      "bandPosition": null,
+      "sharesOffered": 6000000,
+      "sharesAfterListing": null,
+      "grossProceeds": 60000000,
+      "marketCap": null,
+      "filedAt": "2026-08-26",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "underwriters": [],
+      "businessSummary": "We are a team of experienced life sciences executives, investors, physicians and entrepreneurs.",
+      "useOfProceeds": null,
+      "netResult": null,
+      "netResultYear": null,
+      "lockupDays": null,
+      "location": "WESTFIELD, NJ",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002145659&type=424B4"
+    }
+  ],
   "upcoming": [
     {
       "cik": "0002115191",
@@ -401,17 +460,6 @@
       "industry": "SPAC",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002109823&type=S-1"
-    },
-    {
-      "cik": "0002088082",
-      "name": "Electra Therapeutics, Inc.",
-      "ticker": "ETRA",
-      "filedAt": "2026-09-14",
-      "isSpac": false,
-      "sic": "2836",
-      "industry": "제약·바이오",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002088082&type=S-1"
     },
     {
       "cik": "0002065821",
@@ -1534,17 +1582,6 @@
       "industry": "기타",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002149294&type=S-1"
-    },
-    {
-      "cik": "0002145659",
-      "name": "JATT III Acquisition Corp",
-      "ticker": "JTTT",
-      "filedAt": "2026-08-10",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002145659&type=S-1"
     },
     {
       "cik": "0001838003",
