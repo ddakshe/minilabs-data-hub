@@ -3,10 +3,18 @@
   "name": "현대차",
   "market": "KOSPI",
   "retainDays": 120,
-  "firstBasDt": "20260327",
-  "lastBasDt": "20260918",
+  "firstBasDt": "20260330",
+  "lastBasDt": "20260921",
   "count": 120,
   "days": [
+    {
+      "basDt": "20260921",
+      "close": 359000,
+      "fltRt": -1.64,
+      "headline": "코스피보다 3.29%p 낮았어요.",
+      "newsCount": 7,
+      "dartCount": 1
+    },
     {
       "basDt": "20260918",
       "close": 365000,
@@ -1060,16 +1068,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260327",
-      "close": 495000,
-      "fltRt": 1.02,
-      "headline": "시가 472,500원보다 22,500원 높게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-09-21T07:26:22.740Z"
+  "updatedAt": "2026-09-22T07:03:37.459Z"
 }

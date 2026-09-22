@@ -3,10 +3,18 @@
   "name": "KT",
   "market": "KOSPI",
   "retainDays": 120,
-  "firstBasDt": "20260327",
-  "lastBasDt": "20260918",
+  "firstBasDt": "20260330",
+  "lastBasDt": "20260921",
   "count": 120,
   "days": [
+    {
+      "basDt": "20260921",
+      "close": 53100,
+      "fltRt": 0.19,
+      "headline": "코스피보다 1.46%p 낮았어요.",
+      "newsCount": 8,
+      "dartCount": 0
+    },
     {
       "basDt": "20260918",
       "close": 53000,
@@ -1061,16 +1069,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260327",
-      "close": 60800,
-      "fltRt": 1.84,
-      "headline": "코스피보다 2.24%p 높았어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-09-21T07:26:22.833Z"
+  "updatedAt": "2026-09-22T07:03:37.632Z"
 }
