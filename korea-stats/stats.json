@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21",
+  "updatedAt": "2026-09-22",
   "source": "KOSIS Open API",
   "categories": [
     {
@@ -32,11 +32,11 @@
       "category": "health"
     },
     {
-      "id": "i_soc_suicide",
+      "id": "i_pop_elderly",
       "emoji": "📈",
-      "title": "자살률 · 10년 최고",
-      "description": "2024년 기준",
-      "category": "health"
+      "title": "고령인구 비율 · 10년 최고",
+      "description": "2026년 기준",
+      "category": "population"
     }
   ],
   "stats": [
@@ -1175,18 +1175,14 @@
       "id": "soc_suicide",
       "category": "health",
       "title": "자살률",
-      "value": 29.1,
+      "value": 27.8,
       "unit": "명",
-      "changePct": 6.6,
+      "changePct": -4.5,
       "decimals": 1,
       "frequency": "Y",
       "source": "통계청 사망원인통계 (인구 10만명당)",
-      "period": "2024년",
+      "period": "2025년",
       "history": [
-        {
-          "prd": "2015",
-          "value": 26.5
-        },
         {
           "prd": "2016",
           "value": 25.6
@@ -1222,6 +1218,10 @@
         {
           "prd": "2024",
           "value": 29.1
+        },
+        {
+          "prd": "2025",
+          "value": 27.8
         }
       ]
     },
