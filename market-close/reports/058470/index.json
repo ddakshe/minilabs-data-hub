@@ -3,10 +3,18 @@
   "name": "리노공업",
   "market": "KOSDAQ",
   "retainDays": 120,
-  "firstBasDt": "20260330",
-  "lastBasDt": "20260921",
+  "firstBasDt": "20260331",
+  "lastBasDt": "20260922",
   "count": 120,
   "days": [
+    {
+      "basDt": "20260922",
+      "close": 75000,
+      "fltRt": 7.45,
+      "headline": "코스닥보다 7.68%p 높았어요.",
+      "newsCount": 8,
+      "dartCount": 0
+    },
     {
       "basDt": "20260921",
       "close": 69800,
@@ -1059,16 +1067,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260330",
-      "close": 98400,
-      "fltRt": -6.2,
-      "headline": "시가 99,000원보다 600원 낮게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-09-22T07:03:37.542Z"
+  "updatedAt": "2026-09-23T06:58:22.100Z"
 }
