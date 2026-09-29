@@ -1,0 +1,101 @@
+{
+  "code": "247540",
+  "name": "에코프로비엠",
+  "market": "KOSDAQ",
+  "basDt": "20260923",
+  "price": {
+    "code": "247540",
+    "name": "에코프로비엠",
+    "market": "KOSDAQ",
+    "basDt": "20260923",
+    "close": 105000,
+    "vs": 700,
+    "fltRt": 0.67,
+    "open": 104400,
+    "high": 107600,
+    "low": 104200,
+    "prevClose": 104300,
+    "volume": 293226,
+    "tradeValue": 30944208600,
+    "week52": {
+      "low": 92600,
+      "high": 246000,
+      "position": 0.08083441981747067,
+      "days": 244,
+      "from": "20250923"
+    },
+    "recent5": [
+      {
+        "basDt": "20260917",
+        "fltRt": -1.34,
+        "open": 104600,
+        "high": 105300,
+        "low": 102200,
+        "close": 102700
+      },
+      {
+        "basDt": "20260918",
+        "fltRt": 2.14,
+        "open": 104800,
+        "high": 105600,
+        "low": 103600,
+        "close": 104900
+      },
+      {
+        "basDt": "20260921",
+        "fltRt": -1.43,
+        "open": 105300,
+        "high": 105500,
+        "low": 102500,
+        "close": 103400
+      },
+      {
+        "basDt": "20260922",
+        "fltRt": 0.87,
+        "open": 104700,
+        "high": 106200,
+        "low": 103400,
+        "close": 104300
+      },
+      {
+        "basDt": "20260923",
+        "fltRt": 0.67,
+        "open": 104400,
+        "high": 107600,
+        "low": 104200,
+        "close": 105000
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 360054,
+      "ratio": 0.81
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 530,
+      "rows52w": 241
+    },
+    "generatedAt": "2026-09-29T07:40:48.926Z"
+  },
+  "facts": [
+    "코스닥보다 0.54%p 낮았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가보다 600원 높게 마감했어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 844.48,
+    "vs": 10.1,
+    "fltRt": 1.21
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null,
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-09-29T07:40:48.926Z"
+}

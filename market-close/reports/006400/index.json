@@ -3,10 +3,27 @@
   "name": "삼성SDI",
   "market": "KOSPI",
   "retainDays": 120,
-  "firstBasDt": "20260331",
-  "lastBasDt": "20260922",
+  "firstBasDt": "20260402",
+  "lastBasDt": "20260928",
   "count": 120,
   "days": [
+    {
+      "basDt": "20260928",
+      "close": 533000,
+      "fltRt": 2.3,
+      "headline": "코스피보다 5%p 높았어요.",
+      "newsCount": 4,
+      "dartCount": 0
+    },
+    {
+      "basDt": "20260923",
+      "close": 521000,
+      "fltRt": -1.51,
+      "headline": "코스피보다 2.41%p 낮았어요.",
+      "newsCount": 0,
+      "dartCount": 0,
+      "priceOnly": true
+    },
     {
       "basDt": "20260922",
       "close": 529000,
@@ -1054,25 +1071,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260401",
-      "close": 432000,
-      "fltRt": 5.88,
-      "headline": "코스피보다 2.56%p 낮았어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
-    },
-    {
-      "basDt": "20260331",
-      "close": 408000,
-      "fltRt": -1.09,
-      "headline": "코스피보다 3.17%p 높았어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-09-25T06:51:55.781Z"
+  "updatedAt": "2026-09-29T07:40:49.000Z"
 }
