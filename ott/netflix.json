@@ -2,7 +2,7 @@
   "service": "netflix",
   "serviceName": "넷플릭스",
   "brandColor": "#E50914",
-  "updatedAt": "2026-09-20",
+  "updatedAt": "2026-09-27",
   "estimated": false,
   "layout": "grid",
   "subscribeUrl": "https://www.netflix.com/kr/",
@@ -12,6 +12,21 @@
       "items": [
         {
           "rank": 1,
+          "title": "대환장 기안장",
+          "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABYWu_6N2FusYRyC7U7uu__odO_53K3-y2S74M-4TkOydVJngkcHxZGOOnIpX_leuSocD85E5ukUQXCSDSzodcB7XIzqWRNPdn5RT.jpg?r=b03",
+          "watchUrl": "https://www.netflix.com/kr/title/81948520",
+          "extra": {
+            "hero": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABYWu_6N2FusYRyC7U7uu__odO_53K3-y2S74M-4TkOydVJngkcHxZGOOnIpX_leuSocD85E5ukUQXCSDSzodcB7XIzqWRNPdn5RT.jpg?r=b03",
+            "ageRating": "12+",
+            "year": 2026,
+            "episodes": 8,
+            "synopsis": "기안84의 기발한 아이디어에 시동이 걸린다! 든든한 직원들과 함께 꾸려가는 세상 단 하나뿐인 민박집. 아이 같은 동심을 깨우는 순간들과 웃음 터지는 대환장 모험 속으로 숙박객들을 초대한다.",
+            "source": "netflix"
+          },
+          "prevRank": null
+        },
+        {
+          "rank": 2,
           "title": "스캔들",
           "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABXOrMEh5iCnLGoKX1jUY1l7txxXfKZCQHthJ_DxjZb5nXChDCXWIw_qC8NFzgcgu8rJcTt0xAhcpz9yIAa8Bx9E1-mcDZZZ4GrLD.jpg?r=63a",
           "watchUrl": "https://www.netflix.com/kr/title/81911391",
@@ -26,7 +41,7 @@
           "prevRank": 1
         },
         {
-          "rank": 2,
+          "rank": 3,
           "title": "포핸즈",
           "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABWfzSnAQmz3Bxlh8dKZI36o7MJRDViIYH9JgIDmj3OCqLTph3RfKmvNDOUy4kDCSV8Y9Io-9YL4DV_SKiEQBoGejz5HFpjfI2wrm.jpg?r=557",
           "watchUrl": "https://www.netflix.com/kr/title/82682405",
@@ -34,14 +49,14 @@
             "hero": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABWfzSnAQmz3Bxlh8dKZI36o7MJRDViIYH9JgIDmj3OCqLTph3RfKmvNDOUy4kDCSV8Y9Io-9YL4DV_SKiEQBoGejz5HFpjfI2wrm.jpg?r=557",
             "ageRating": "15+",
             "year": 2026,
-            "episodes": 8,
+            "episodes": 10,
             "synopsis": "서로 다른 세상에서 살아온 두 피아니스트. 명문 예고에서 우연히 마주한 그날부터, 두 사람의 삶은 한 곡의 멜로디처럼 이어지며 떼어 놓을 수 없는 인연으로 얽혀 가기 시작한다.",
             "source": "netflix"
           },
           "prevRank": 2
         },
         {
-          "rank": 3,
+          "rank": 4,
           "title": "들쥐",
           "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABemF46wZtESrfrjSqwZcp0jX-AtHs-GR7byfGw4HmPr8oHnYESOJR_fBzF7m8WrI-60yBxyEd44JvOUcu46DT3_X6mNPoDgCTLsM.jpg?r=59e",
           "watchUrl": "https://www.netflix.com/kr/title/81991750",
@@ -56,7 +71,7 @@
           "prevRank": 3
         },
         {
-          "rank": 4,
+          "rank": 5,
           "title": "나는 솔로",
           "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABaqGTBiB69twObB8jyPSB_GogouOfDTKqbG--KN0nZCeUVRDuPXGqV2zZncGMs_UFIGO7b1QM2Cjv3axsHUWVaqs7tux-Ax6GoE6.jpg?r=c28",
           "watchUrl": "https://www.netflix.com/kr/title/83124393",
@@ -71,45 +86,30 @@
           "prevRank": 4
         },
         {
-          "rank": 5,
-          "title": "신빨토크쇼 귀묘한 이야기",
-          "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABbX4UvsJsabdKGFjJO-oFtw4dpxCKodpe5iacMF59tKCy_1Bz69ak-471PeKR53kHrC296nWZBxvi5rGhWNrE-AlsQUETKoIOFWZ.jpg?r=246",
-          "watchUrl": "https://www.netflix.com/kr/title/83179290",
-          "extra": {
-            "hero": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABbX4UvsJsabdKGFjJO-oFtw4dpxCKodpe5iacMF59tKCy_1Bz69ak-471PeKR53kHrC296nWZBxvi5rGhWNrE-AlsQUETKoIOFWZ.jpg?r=246",
-            "ageRating": "15+",
-            "year": 2026,
-            "episodes": 2,
-            "synopsis": "기묘하고 불길한 일을 겪은 사람들. 실제로 겪은 오싹한 사건과 불가사의한 경험에 대해 영적인 해답을 얻기 위해 무속인을 찾는다.",
-            "source": "netflix"
-          },
-          "prevRank": 5
-        },
-        {
           "rank": 6,
-          "title": "비서진",
-          "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABXzGwB0Mqsn4h1YvktVmYXjSVCVujXGwiVPW_480YomKM871F8-yna1g3OpPxEYc6d7zyagtuFERUEfrtmZ3x-A4C8S4S6Sg4_pF.jpg?r=63f",
-          "watchUrl": "https://www.netflix.com/kr/title/83114898",
+          "title": "괴물: 리지 보든 이야기",
+          "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABVvVWlD1uWK-eAeBfsuT57uOzTIkMMZw6NYTx3ugWdm0EI4dgzFHDaHSgzMEzqmh7A0JHn3IaXBjl6t_AKZMqeHTGxNkCbA-V_Uo.jpg?r=3c6",
+          "watchUrl": "https://www.netflix.com/kr/title/82068294",
           "extra": {
-            "hero": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABXzGwB0Mqsn4h1YvktVmYXjSVCVujXGwiVPW_480YomKM871F8-yna1g3OpPxEYc6d7zyagtuFERUEfrtmZ3x-A4C8S4S6Sg4_pF.jpg?r=63f",
-            "ageRating": "15+",
+            "hero": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABVvVWlD1uWK-eAeBfsuT57uOzTIkMMZw6NYTx3ugWdm0EI4dgzFHDaHSgzMEzqmh7A0JHn3IaXBjl6t_AKZMqeHTGxNkCbA-V_Uo.jpg?r=3c6",
+            "ageRating": "19+",
             "year": 2026,
-            "episodes": 4,
-            "synopsis": "까칠한 전직 자산운용 본부장과 클럽 웨이터 출신 택시 기사. 이 둘이 스타들의 매니저가 되어 VIP 밀착 케어를 펼치는 예능.",
+            "episodes": 8,
+            "synopsis": "빅토리아 시대, 모진 가정 환경 속에 갇혀 자란 리지 보든. 결국, 도끼로 부모를 잔혹하게 살해해 미국 전역을 충격에 빠뜨린다.",
             "source": "netflix"
           },
-          "prevRank": 6
+          "prevRank": null
         },
         {
           "rank": 7,
           "title": "나는 SOLO, 그 후 사랑은 계속된다",
-          "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABSZPc3VFSAHos5ttHJXZN-Fpixb0GAKNw_xeT44QezI1qyc9w6hlzFzI-HYpJ6Jd4549OyQC8xnj-FxkxoRIRPgPL9xp6z3rRFI2.jpg?r=c6d",
+          "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABYHJS1nvXq5Ctx4Zd_GUIJfP5lJRXCjcuQbYIl5VKk0n8zDomEUr1k3867ub8k8td5tJNZYTggb73seTG-aPsmFHOnvH8pRVejlZ.jpg?r=75a",
           "watchUrl": "https://www.netflix.com/kr/title/83134802",
           "extra": {
-            "hero": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABSZPc3VFSAHos5ttHJXZN-Fpixb0GAKNw_xeT44QezI1qyc9w6hlzFzI-HYpJ6Jd4549OyQC8xnj-FxkxoRIRPgPL9xp6z3rRFI2.jpg?r=c6d",
+            "hero": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABYHJS1nvXq5Ctx4Zd_GUIJfP5lJRXCjcuQbYIl5VKk0n8zDomEUr1k3867ub8k8td5tJNZYTggb73seTG-aPsmFHOnvH8pRVejlZ.jpg?r=75a",
             "ageRating": "15+",
             "year": 2026,
-            "episodes": 7,
+            "episodes": 8,
             "synopsis": "누가 해피 엔딩을 맞이했고, 누가 여전히 진정한 사랑을 기다리고 있을까? 《나는 SOLO》 출연자들이 프로그램 방송 후 지금까지의 근황을 밝힌다.",
             "source": "netflix"
           },
@@ -117,21 +117,6 @@
         },
         {
           "rank": 8,
-          "title": "조춘청랑",
-          "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABaboo3MVQu1ZLH0BR-5qshQ2n6JMwG7nL0_xZ6RpyQAh9Fq4dEW4DO6GbQPfAOqLZVnz7CF7S7KDdj5d8ybMBZnMENwkcvUnxlsA.jpg?r=1d3",
-          "watchUrl": "https://www.netflix.com/kr/title/83067201",
-          "extra": {
-            "hero": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABaboo3MVQu1ZLH0BR-5qshQ2n6JMwG7nL0_xZ6RpyQAh9Fq4dEW4DO6GbQPfAOqLZVnz7CF7S7KDdj5d8ybMBZnMENwkcvUnxlsA.jpg?r=1d3",
-            "ageRating": "15+",
-            "year": 2026,
-            "episodes": 24,
-            "synopsis": "마음 따뜻한 신입 사원과 뛰어난 능력을 갖춘 상사. 숨 돌릴 틈 없는 직장 생활 속에서 분투하는 가운데 모든 것을 무너뜨릴 수 있는 비밀 연애를 이어 간다.",
-            "source": "netflix"
-          },
-          "prevRank": 8
-        },
-        {
-          "rank": 9,
           "title": "참교육",
           "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABWThoxdmClcuBB2gH48RYSJ0SRy0FQxlDWsizGFFUZXgY4wE8-ipN4hqtLTJpvcnMWrbNlnsdYy5pFebwEb_5DbgmRsO-aMDbTvC.jpg?r=db2",
           "watchUrl": "https://www.netflix.com/kr/title/81947301",
@@ -146,19 +131,34 @@
           "prevRank": 9
         },
         {
-          "rank": 10,
-          "title": "피지컬 100: 이탈리아",
-          "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABY5kUiuSRxIpBGonm9N0hFtFKkDviZngbE3uYxjustpJo-cmBo7spc-MmpQ6OGUB5cBsTUKd9UZ1ZL6IdH-mtZLHVoJAOA3qcUeT.jpg?r=b36",
-          "watchUrl": "https://www.netflix.com/kr/title/81771553",
+          "rank": 9,
+          "title": "신빨토크쇼 귀묘한 이야기",
+          "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABbX4UvsJsabdKGFjJO-oFtw4dpxCKodpe5iacMF59tKCy_1Bz69ak-471PeKR53kHrC296nWZBxvi5rGhWNrE-AlsQUETKoIOFWZ.jpg?r=246",
+          "watchUrl": "https://www.netflix.com/kr/title/83179290",
           "extra": {
-            "hero": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABY5kUiuSRxIpBGonm9N0hFtFKkDviZngbE3uYxjustpJo-cmBo7spc-MmpQ6OGUB5cBsTUKd9UZ1ZL6IdH-mtZLHVoJAOA3qcUeT.jpg?r=b36",
-            "ageRating": "15+",
+            "hero": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABbX4UvsJsabdKGFjJO-oFtw4dpxCKodpe5iacMF59tKCy_1Bz69ak-471PeKR53kHrC296nWZBxvi5rGhWNrE-AlsQUETKoIOFWZ.jpg?r=246",
+            "ageRating": "19+",
             "year": 2026,
-            "episodes": 5,
-            "synopsis": "최고의 피지컬을 자랑하는 100인의 이탈리아 참가자. 극한의 육체적 도전에서 끝까지 살아남아 단 한 명의 진정한 챔피언이 되는 영광을 차지하기 위해 치열한 대결을 펼친다.",
+            "episodes": 3,
+            "synopsis": "기묘하고 불길한 일을 겪은 사람들. 실제로 겪은 오싹한 사건과 불가사의한 경험에 대해 영적인 해답을 얻기 위해 무속인을 찾는다.",
             "source": "netflix"
           },
-          "prevRank": 10
+          "prevRank": 5
+        },
+        {
+          "rank": 10,
+          "title": "대환장 기안장",
+          "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABZqAf1wXPc971K5dmjxuszIP7oa5rxXk9yt_orouuGnV-iCtsFomliI_hnE-mqy9X79SaT418B9btd_l4hpbbqMsk7B0FCkaLHKA.jpg?r=97c",
+          "watchUrl": "https://www.netflix.com/kr/title/81902048",
+          "extra": {
+            "hero": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABZqAf1wXPc971K5dmjxuszIP7oa5rxXk9yt_orouuGnV-iCtsFomliI_hnE-mqy9X79SaT418B9btd_l4hpbbqMsk7B0FCkaLHKA.jpg?r=97c",
+            "ageRating": "12+",
+            "year": 2025,
+            "episodes": 9,
+            "synopsis": "기안84의 기발한 아이디어에 시동이 걸린다! 든든한 직원들과 함께 꾸려가는 세상 단 하나뿐인 민박집. 아이 같은 동심을 깨우는 순간들과 웃음 터지는 대환장 모험 속으로 숙박객들을 초대한다.",
+            "source": "netflix"
+          },
+          "prevRank": null
         }
       ]
     },
@@ -167,20 +167,34 @@
       "items": [
         {
           "rank": 1,
-          "title": "무사",
-          "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABXLTv05nF28t_eqpTNWa4MBumJNOSNF3OBppIpzYaUtb4Zgk7TMGCCpsfU1UPGkPtSWMJQ55f0Iql70sjLPunSUIE3OXQJnMIfOx.jpg?r=08d",
-          "watchUrl": "https://www.netflix.com/kr/title/70045579",
+          "title": "끝장수사",
+          "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABbPI1afG5wxDs0Z-wN-ik00iAinx12A9E23qQDXwUNDDD7UXvBSnpCQKjLmWRsH_DwzaIDg8Xk4RsRzvPNBw8LbcGRy0guKp7QuP.jpg?r=4f1",
+          "watchUrl": "https://www.netflix.com/kr/title/81949585",
           "extra": {
-            "hero": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABXLTv05nF28t_eqpTNWa4MBumJNOSNF3OBppIpzYaUtb4Zgk7TMGCCpsfU1UPGkPtSWMJQ55f0Iql70sjLPunSUIE3OXQJnMIfOx.jpg?r=08d",
+            "hero": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABbPI1afG5wxDs0Z-wN-ik00iAinx12A9E23qQDXwUNDDD7UXvBSnpCQKjLmWRsH_DwzaIDg8Xk4RsRzvPNBw8LbcGRy0guKp7QuP.jpg?r=4f1",
             "ageRating": "15+",
-            "year": 2001,
-            "synopsis": "명나라에 외교 사절로 갔다가 첩자 누명을 쓰고 외딴 사막에 버려진 고려 사신단. 자신들에게 닥친 죽음의 운명을 단호히 거부한다.",
+            "year": 2025,
+            "synopsis": "베테랑 형사와 인플루언서 출신 경찰관. 이미 종결된 살인 사건의 핵심 용의자를 체포한 뒤, 진범을 밝히기 위해 서울로 향한다.",
             "source": "netflix"
           },
-          "prevRank": 1
+          "prevRank": null
         },
         {
           "rank": 2,
+          "title": "오케이 마담",
+          "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABWUqmjnUZhAKAiFuDXSHvx5Y2K4Wfw0BjfmJr9yqcD_4tU0buDcXHmbjA-U6yk5YpEDYArkvgA0kPbjB1SAGy5E_aa1zIarqvdvE.jpg?r=172",
+          "watchUrl": "https://www.netflix.com/kr/title/81464337",
+          "extra": {
+            "hero": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABWUqmjnUZhAKAiFuDXSHvx5Y2K4Wfw0BjfmJr9yqcD_4tU0buDcXHmbjA-U6yk5YpEDYArkvgA0kPbjB1SAGy5E_aa1zIarqvdvE.jpg?r=172",
+            "ageRating": "15+",
+            "year": 2020,
+            "synopsis": "꿈에 그리던 하와이 여행길에 올랐는데 공중 납치라니. 아수라장이 된 비행기를 구할 유일한 희망이 된 평범한 부부. 숨겨왔던 실력을 발휘하며 새 작전을 시작한다. 이러다 도착 시간 늦어질라.",
+            "source": "netflix"
+          },
+          "prevRank": null
+        },
+        {
+          "rank": 3,
           "title": "블랙 백",
           "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABf6PFNDbBh6vIa12Y_NMy2G4qejKjn1hmeKAIgLY_2fVo5NY5UZuEjk_IpyZm7ZXf0lQOezZnXm9dIMGVgmVpONmYDqp_JjMuqXB.jpg?r=a1e",
           "watchUrl": "https://www.netflix.com/kr/title/81915934",
@@ -194,49 +208,7 @@
           "prevRank": 2
         },
         {
-          "rank": 3,
-          "title": "트로이",
-          "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABQDHq0hmrC5YaMDczj7_JdHn9-0yJzASqBupWRgWYpfnjpuhRFA2iK6nzboiseqI5Goqyad-JtZ1zWz2x4uXsheSfZWa3WbnYOD4.jpg?r=cf9",
-          "watchUrl": "https://www.netflix.com/kr/title/60034571",
-          "extra": {
-            "hero": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABQDHq0hmrC5YaMDczj7_JdHn9-0yJzASqBupWRgWYpfnjpuhRFA2iK6nzboiseqI5Goqyad-JtZ1zWz2x4uXsheSfZWa3WbnYOD4.jpg?r=cf9",
-            "ageRating": "15+",
-            "year": 2004,
-            "synopsis": "사랑에 빠진 트로이의 파리스 왕자는 스파르타의 왕비 헬레네를 빼앗고, 두 나라는 전쟁에 휘말리고 만다.",
-            "source": "netflix"
-          },
-          "prevRank": 3
-        },
-        {
           "rank": 4,
-          "title": "소실점",
-          "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABYjvPhy8IYOPlhTrvrF2CBzqPWS44oDGzaT1-ZQmbz8YnqKpgjI1S5j7qfbVFY4AjHaPgfyCx3YM7IW2aC2Hzl5q9_r1-tQevWn8.jpg?r=fd7",
-          "watchUrl": "https://www.netflix.com/kr/title/82989353",
-          "extra": {
-            "hero": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABYjvPhy8IYOPlhTrvrF2CBzqPWS44oDGzaT1-ZQmbz8YnqKpgjI1S5j7qfbVFY4AjHaPgfyCx3YM7IW2aC2Hzl5q9_r1-tQevWn8.jpg?r=fd7",
-            "ageRating": "19+",
-            "year": 2026,
-            "synopsis": "숨겨진 시체와 사라진 아이, 미해결 폭행 사건으로 아파트 단지가 요동친다. 이 세 가지 비극을 하나로 묶는 은밀한 연결고리는 무엇일까?",
-            "source": "netflix"
-          },
-          "prevRank": 4
-        },
-        {
-          "rank": 5,
-          "title": "Margaux",
-          "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABa-Jjlw5m7CyG0PmQIxtjK-2-KSp9ROxZiMEXOSiINNQenN6FxjdiBHqUKhVNPKmDsqbA7gS8SJ13GfBGHXqxtd8tDhCExRY1CKc.jpg?r=15b",
-          "watchUrl": "https://www.netflix.com/kr/title/81592913",
-          "extra": {
-            "hero": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABa-Jjlw5m7CyG0PmQIxtjK-2-KSp9ROxZiMEXOSiINNQenN6FxjdiBHqUKhVNPKmDsqbA7gS8SJ13GfBGHXqxtd8tDhCExRY1CKc.jpg?r=15b",
-            "ageRating": "19+",
-            "year": 2022,
-            "synopsis": "호화로운 스마트 하우스를 빌려 봄방학을 즐기러 간 대학생 친구들. 하지만 첨단 기술로 무장한 집이 위협적으로 돌변하면서, AI를 상대로 살아남기 위한 사투를 벌인다.",
-            "source": "netflix"
-          },
-          "prevRank": 5
-        },
-        {
-          "rank": 6,
           "title": "쉘터",
           "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABd4JYyULqxsnAVU9ikdgxru_ITHzYMLXxSd4n3YCdcY55iCyB0UcWQMTtL8btT8O5rYGcUqxKphJCVIKw4hacmVIkRQDQf-v6uD7.jpg?r=d20",
           "watchUrl": "https://www.netflix.com/kr/title/82676951",
@@ -250,49 +222,49 @@
           "prevRank": 6
         },
         {
-          "rank": 7,
-          "title": "허큘리스",
-          "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABXAlWQGnlN8B3VLSOvMdD_N7ojmGsnGDJ1iQy84DzTdlzbf3pekHtifWttDeh4YRsuAaRempDhmQzUaiDMJYwkS6NjL6ZPNJvQ9G.jpg?r=642",
-          "watchUrl": "https://www.netflix.com/kr/title/70301475",
+          "rank": 5,
+          "title": "테넷",
+          "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABRa0rXAVg4xHtzG8YeeCbF9itKFboPvKqQ8qIQyYUu-t1EJ9NURTvG-m4VX5CmL84cbuxu8YJutEPfJfYZd3JDgNmgHTnmvwICEv.jpg?r=7e8",
+          "watchUrl": "https://www.netflix.com/kr/title/81198930",
           "extra": {
-            "hero": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABXAlWQGnlN8B3VLSOvMdD_N7ojmGsnGDJ1iQy84DzTdlzbf3pekHtifWttDeh4YRsuAaRempDhmQzUaiDMJYwkS6NjL6ZPNJvQ9G.jpg?r=642",
-            "ageRating": "15+",
-            "year": 2014,
-            "synopsis": "세상에 지쳐 용병으로 살아가던 허큘리스가 왕에게 고용된다. 그 과정에서 잔인한 군벌에 맞서며 반신으로서의 명예를 되찾으려 한다.",
+            "hero": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABRa0rXAVg4xHtzG8YeeCbF9itKFboPvKqQ8qIQyYUu-t1EJ9NURTvG-m4VX5CmL84cbuxu8YJutEPfJfYZd3JDgNmgHTnmvwICEv.jpg?r=7e8",
+            "ageRating": "12+",
+            "year": 2020,
+            "synopsis": "자신의 가치를 증명한 특수 요원. 미래에서 온 시간 역행 기술을 이용해 전 세계를 파멸로 몰아넣으려는 러시아 재벌의 무자비한 야욕을 저지해야 한다.",
             "source": "netflix"
           },
-          "prevRank": 7
+          "prevRank": null
+        },
+        {
+          "rank": 6,
+          "title": "유나바머: 비밀 실험",
+          "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABR6FS5enCbnqEXw_y2X0MkYAynZHATHzpk2qhfRDs3VwjHBxIKM4k6QXDWVMPwZxHhxwKSNK3j9hqoOFcXSQoWKFFnURsfmwSMgB.jpg?r=c28",
+          "watchUrl": "https://www.netflix.com/kr/title/82010386",
+          "extra": {
+            "hero": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABR6FS5enCbnqEXw_y2X0MkYAynZHATHzpk2qhfRDs3VwjHBxIKM4k6QXDWVMPwZxHhxwKSNK3j9hqoOFcXSQoWKFFnURsfmwSMgB.jpg?r=c28",
+            "ageRating": "15+",
+            "year": 2026,
+            "synopsis": "실화를 바탕으로 한 드라마. 어린 나이에 하버드에 입학한 천재이자 심리 실험에 참여했던 테드 카진스키가 폭탄 테러범 유나바머가 되기까지의 과정과 그를 추적하는 FBI의 수사가 펼쳐진다.",
+            "source": "netflix"
+          },
+          "prevRank": null
+        },
+        {
+          "rank": 7,
+          "title": "트로이",
+          "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABQDHq0hmrC5YaMDczj7_JdHn9-0yJzASqBupWRgWYpfnjpuhRFA2iK6nzboiseqI5Goqyad-JtZ1zWz2x4uXsheSfZWa3WbnYOD4.jpg?r=cf9",
+          "watchUrl": "https://www.netflix.com/kr/title/60034571",
+          "extra": {
+            "hero": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABQDHq0hmrC5YaMDczj7_JdHn9-0yJzASqBupWRgWYpfnjpuhRFA2iK6nzboiseqI5Goqyad-JtZ1zWz2x4uXsheSfZWa3WbnYOD4.jpg?r=cf9",
+            "ageRating": "15+",
+            "year": 2004,
+            "synopsis": "사랑에 빠진 트로이의 파리스 왕자는 스파르타의 왕비 헬레네를 빼앗고, 두 나라는 전쟁에 휘말리고 만다.",
+            "source": "netflix"
+          },
+          "prevRank": 3
         },
         {
           "rank": 8,
-          "title": "글로리데이",
-          "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABQcjmCQQ4ySNx-aNuSZ6X9_cevNjlO1k2qxYDIi-IdSUSYGgNcuNkusKctibdOlzGS5AvBwzPgiMtrNIBe-YGpG-l3YivBTEAr7u.jpg?r=c4c",
-          "watchUrl": "https://www.netflix.com/kr/title/82131526",
-          "extra": {
-            "hero": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABQcjmCQQ4ySNx-aNuSZ6X9_cevNjlO1k2qxYDIi-IdSUSYGgNcuNkusKctibdOlzGS5AvBwzPgiMtrNIBe-YGpG-l3YivBTEAr7u.jpg?r=c4c",
-            "ageRating": "15+",
-            "year": 2016,
-            "synopsis": "함께 마지막 여행을 떠난 네 명의 청춘들. 하지만 폭행 사건이 살인 혐의로 번지자, 두려움과 죄책감 속에 서로의 관계는 파국으로 치닫는다.",
-            "source": "netflix"
-          },
-          "prevRank": 8
-        },
-        {
-          "rank": 9,
-          "title": "신의 악단: 찬가",
-          "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABdCdc9eN0DV5fs9LSkRn_JoO_MEC6OVDXIyNnoinUKyCkDPKalVDM-QuXlfs_mmjgs5QFEiEJR1GifsUgTSpHQhOZ86G9Nz6xhJL.jpg?r=5e7",
-          "watchUrl": "https://www.netflix.com/kr/title/83128221",
-          "extra": {
-            "hero": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABdCdc9eN0DV5fs9LSkRn_JoO_MEC6OVDXIyNnoinUKyCkDPKalVDM-QuXlfs_mmjgs5QFEiEJR1GifsUgTSpHQhOZ86G9Nz6xhJL.jpg?r=5e7",
-            "ageRating": "15+",
-            "year": 2025,
-            "synopsis": "대북 제재로 돈줄이 막힌 북한. 보위부는 해외 원조를 받아 내고자 가짜 찬양단을 만드는 임무를 맡고 급히 이상한 악단을 꾸린다.",
-            "source": "netflix"
-          },
-          "prevRank": 9
-        },
-        {
-          "rank": 10,
           "title": "극장판 귀멸의 칼날: 무한성편 제1장 아카자 재림",
           "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABcQ2tmyfOEklGVSAOfHnDHZjANlro7KSLK9jU6rS6kjM7Rel60X0XBwBY2r8IV9m4cpAdapx9wYVA74xXQCdCcg8XqUB7C1SawYz.jpg?r=779",
           "watchUrl": "https://www.netflix.com/kr/title/82723106",
@@ -304,6 +276,149 @@
             "source": "netflix"
           },
           "prevRank": 10
+        },
+        {
+          "rank": 9,
+          "title": "무사",
+          "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABXLTv05nF28t_eqpTNWa4MBumJNOSNF3OBppIpzYaUtb4Zgk7TMGCCpsfU1UPGkPtSWMJQ55f0Iql70sjLPunSUIE3OXQJnMIfOx.jpg?r=08d",
+          "watchUrl": "https://www.netflix.com/kr/title/70045579",
+          "extra": {
+            "hero": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABXLTv05nF28t_eqpTNWa4MBumJNOSNF3OBppIpzYaUtb4Zgk7TMGCCpsfU1UPGkPtSWMJQ55f0Iql70sjLPunSUIE3OXQJnMIfOx.jpg?r=08d",
+            "ageRating": "15+",
+            "year": 2001,
+            "synopsis": "명나라에 외교 사절로 갔다가 첩자 누명을 쓰고 외딴 사막에 버려진 고려 사신단. 자신들에게 닥친 죽음의 운명을 단호히 거부한다.",
+            "source": "netflix"
+          },
+          "prevRank": 1
+        },
+        {
+          "rank": 10,
+          "title": "타이탄",
+          "poster": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABZ3UrB2jWB360l4vURQ92UduH30foqL451L9S5FRZpSrL7C6_pGGa8gGmxtRo9g0b0eRu2QK5JjZy08O102R5Bf9fTT67kk8DFbn.jpg?r=446",
+          "watchUrl": "https://www.netflix.com/kr/title/70119812",
+          "extra": {
+            "hero": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABZ3UrB2jWB360l4vURQ92UduH30foqL451L9S5FRZpSrL7C6_pGGa8gGmxtRo9g0b0eRu2QK5JjZy08O102R5Bf9fTT67kk8DFbn.jpg?r=446",
+            "ageRating": "12+",
+            "year": 2010,
+            "synopsis": "용맹한 페르세우스는 아름다운 공주 안드로메다의 목숨을 구하기 위해 강력한 적과 맞서 싸워야 한다.",
+            "source": "netflix"
+          },
+          "prevRank": null
+        }
+      ]
+    },
+    {
+      "label": "공개 예정",
+      "items": [
+        {
+          "rank": 1,
+          "title": "에덴의 동쪽",
+          "poster": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABXwHE_cmV-2Xnv0_6i8YKHKRm69wr02a1nSazxVhD8PBChrYWCaTw_5PeKovBqCRxuBHi7Q0C5AjVBMvJl5_2P5flrbjwzu96rKs.jpg?r=25d",
+          "watchUrl": "https://www.netflix.com/kr/title/81611855",
+          "extra": {
+            "releaseDate": "2026-10-01",
+            "source": "netflix"
+          },
+          "prevRank": null
+        },
+        {
+          "rank": 2,
+          "title": "초호화 빈털터리",
+          "poster": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABUD87N6eHeMHCGGB7rjwag-YxfGAFKh6Wf4-C9yFMrQ5JyK23qdQr2eR9EemqXBCDxOWzTTYbcteKCpHrV0J6UtAqtfosIgwV9Ol.jpg?r=aa4",
+          "watchUrl": "https://www.netflix.com/kr/title/81952372",
+          "extra": {
+            "releaseDate": "2026-10-01",
+            "source": "netflix"
+          },
+          "prevRank": null
+        },
+        {
+          "rank": 3,
+          "title": "얼음 성벽",
+          "poster": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABQSaz1GVNnBG0bSw10n_Wo_Zmr-aNzySe_kEVhwzAnZSjlXinGN8oG0xy0OrbCtfor_r8AmQj57eselGKyA1z0n_Gqm6_X8CQkU-.jpg?r=8f5",
+          "watchUrl": "https://www.netflix.com/kr/title/82147777",
+          "extra": {
+            "releaseDate": "2026-10-02",
+            "source": "netflix"
+          },
+          "prevRank": null
+        },
+        {
+          "rank": 4,
+          "title": "#러브",
+          "poster": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABfyauUBoK9PfzQIF1spSG7_uyz-67zPBIt5HwMw8YhktOClt2fgFkyv6P9cnSSJz1KLMPIacJizd_faSuRQsGq7s0Vs5IP0Dkr9m.jpg?r=025",
+          "watchUrl": "https://www.netflix.com/kr/title/81680909",
+          "extra": {
+            "releaseDate": "2026-10-02",
+            "source": "netflix"
+          },
+          "prevRank": null
+        },
+        {
+          "rank": 5,
+          "title": "두잉 라이프",
+          "poster": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABUlRCXjUIJ444GCdmZTzXLTbI2XQF19YK_8pHbpJp0EL-rXRqeYYnolS-aq2MLF-y2TP-mWmwlGd7zWKRM2l8bN2cT3Mvu-1MOWa.jpg?r=b67",
+          "watchUrl": "https://www.netflix.com/kr/title/82023496",
+          "extra": {
+            "releaseDate": "2026-10-02",
+            "source": "netflix"
+          },
+          "prevRank": null
+        },
+        {
+          "rank": 6,
+          "title": "슈마허 '94: 전설의 탄생",
+          "poster": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABUz6eMyiiYlHwn7TiFSba4qmTl3mToXOR9A424IviVWejIUEWDugf-tjZYCMMrbHgOqyuK99PU96MiS-FQC9IoFwsvkbjxdZZC1r.jpg?r=605",
+          "watchUrl": "https://www.netflix.com/kr/title/81916859",
+          "extra": {
+            "releaseDate": "2026-10-02",
+            "source": "netflix"
+          },
+          "prevRank": null
+        },
+        {
+          "rank": 7,
+          "title": "란마1/2",
+          "poster": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABVJHeVnMjg1LlPZfHvjOOR_lggYxXPPUNZ5WwqPBX-cavRtDVkAWAdsHq-22J5GAn4ekTVb_G2OXSoKpy70c06-JcplgQTkFp9sj.jpg?r=b2f",
+          "watchUrl": "https://www.netflix.com/kr/title/82696841",
+          "extra": {
+            "releaseDate": "2026-10-04",
+            "source": "netflix"
+          },
+          "prevRank": null
+        },
+        {
+          "rank": 8,
+          "title": "푸른 상자",
+          "poster": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABRl27D_kBFmj-gvxw7ZCaU3loXbkThbRLgnzVG1pXglYcNszctpBSl3mM2z4PJgJ42VLYB6bDlHOF8ckjcBr6aoWSkvNjPCQdBsK.jpg?r=7c6",
+          "watchUrl": "https://www.netflix.com/kr/title/82715728",
+          "extra": {
+            "releaseDate": "2026-10-04",
+            "source": "netflix"
+          },
+          "prevRank": null
+        },
+        {
+          "rank": 9,
+          "title": "러브 빌리지",
+          "poster": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABSoykPCZ-pMmcTnI7O-FBuYHSSgZDLFJ5VAAcSI0jWvkZ07C18p9Gz2TilAf2FW08dVw8dvn6B1BlKVZBs2tweJ50MGYM5qHsCSp.jpg?r=8e5",
+          "watchUrl": "https://www.netflix.com/kr/title/81948247",
+          "extra": {
+            "releaseDate": "2026-10-06",
+            "source": "netflix"
+          },
+          "prevRank": null
+        },
+        {
+          "rank": 10,
+          "title": "Mojo Brookzz: I Know You Lying",
+          "poster": "https://dnm.nflximg.net/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABQ4z2edXMp7U6qf8v_KFeSi7sJY8c_dNFkg5x8gKBcfvts4P_lbq_5uSFoV2LPwh4PYsVgLb5SBBVWvTFVurHVKuJ9GFLjtih-YB.jpg?r=18d",
+          "watchUrl": "https://www.netflix.com/kr/title/82817098",
+          "extra": {
+            "releaseDate": "2026-10-06",
+            "source": "netflix"
+          },
+          "prevRank": null
         }
       ]
     }
