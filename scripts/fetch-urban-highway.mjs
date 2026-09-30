@@ -21,6 +21,10 @@
  * 5) 공사연장에 "3240.000km" 같은 값이 있다 → 공구 하나가 60km 를 넘으면 버린다.
  * 6) 시도 이름이 옛 이름·약칭·오타로 온다(「충북」「전라님도」「강진구」). 약칭과 시·군 접미사 차이는
  *    흡수하고, 오타는 매칭 실패로 남긴다 — 실패 목록을 출력한다.
+ * 8) **테스트 행이 운영 데이터에 섞여 있다**(2026-09-30 실측: 「test 1~3공구」「테스트공구」 4건, 시공 중으로 올라 있다) → 버린다.
+ * 9) 한 구간에 사업단이 둘 이상인 곳이 있다(세종-안성: 천안안성 18 · 세종천안 4) → 많은 순으로 전부 싣는다.
+ * 10) 공구에 토목뿐 아니라 **전기·조경 공구가 같은 구간에 겹쳐** 있다(「전기 6공구」「조경 2공구」).
+ *     그래서 공구 연장을 더하면 부풀려진다(세종-안성 90km) → 구간 합계를 내지 않는다. 공구별 연장만 싣는다.
  * 7) 2026 개편으로 전남·광주(12)·강원(51)·전북(52)·화성 일반구 코드가 바뀌었다. 중심점 표에 옛·새 코드가
  *    같이 있어 같은 이름이 두 번 걸린다 → 1km 안이면 같은 곳으로 본다.
  *
@@ -149,13 +153,16 @@ const ymRange = (v) => {
 }
 
 function build(rows) {
-  const underway = rows.filter((r) => r.cmcnCstrClssCd === 'C02')
+  const isTest = (r) => /test|테스트/i.test(`${r.bizMgmtName ?? ''} ${r.sectionName ?? ''}`) // 함정 8)
+  const tests = rows.filter(isTest).length
+  const underway = rows.filter((r) => r.cmcnCstrClssCd === 'C02' && !isTest(r))
   const groups = new Map()
   const fails = []
   let office = 0
   for (const r of underway) {
     const key = `${r.routeName.trim()}|${r.sectionName.trim()}`
-    if (!groups.has(key)) groups.set(key, { route: r.routeName.trim(), section: r.sectionName.trim(), agency: r.cnsof?.trim() || null, lots: [] })
+    if (!groups.has(key)) groups.set(key, { route: r.routeName.trim(), section: r.sectionName.trim(), agencies: [], lots: [] })
+    if (r.cnsof?.trim()) groups.get(key).agencies.push(r.cnsof.trim())
     const isOffice = OFFICE(r)
     if (isOffice) office++
     const end = (k) => {
@@ -178,29 +185,28 @@ function build(rows) {
     const ends = g.lots.flatMap((l) => [l.from, l.to]).filter((e) => e?.at)
     // 같은 리·동에 여러 공구가 걸치면 점 하나로
     const points = []
-    for (const e of ends) if (!points.some((p) => p.at[0] === e.at[0] && p.at[1] === e.at[1])) points.push({ at: e.at, lv: e.lv })
+    for (const e of ends) {
+      if (!points.some((p) => p.at[0] === e.at[0] && p.at[1] === e.at[1])) points.push({ at: e.at, lv: e.lv, sido: e.sido, sigungu: e.sigungu })
+    }
     const count = (k) => Object.entries(ends.reduce((a, e) => ((a[e[k]] = (a[e[k]] ?? 0) + 1), a), {})).sort((x, y) => y[1] - x[1]).map(([v]) => v)
     const starts = g.lots.map((l) => l.period.start).filter(Boolean).sort()
     const endsYm = g.lots.map((l) => l.period.end).filter(Boolean).sort()
-    const lens = g.lots.map((l) => l.lengthKm).filter(Boolean)
     return {
       id: crypto.createHash('sha1').update(`${g.route}|${g.section}`).digest('hex').slice(0, 12),
       name: `${g.route} ${g.section}`,
       route: g.route,
       section: g.section,
-      agency: g.agency,
+      /** 사업단 — 공구가 많은 순(함정 9) */
+      agencies: Object.entries(g.agencies.reduce((a, x) => ((a[x] = (a[x] ?? 0) + 1), a), {})).sort((x, y) => y[1] - x[1]).map(([v]) => v),
       sidos: count('sido'),
       sigungus: count('sigungu'),
       period: { start: starts[0] ?? null, end: endsYm.at(-1) ?? null },
       lotCount: g.lots.length,
-      /** 연장이 적힌 공구만 더한 값 — 전체 구간 길이가 아니다 */
-      lengthKm: lens.length ? Math.round(lens.reduce((a, b) => a + b, 0) * 10) / 10 : null,
-      lengthLots: lens.length,
       points,
       lots: g.lots,
     }
   })
-  return { items, fails, office, underway: underway.length }
+  return { items, fails, office, tests, underway: underway.length }
 }
 
 // ─── 실행 ───────────────────────────────────────────────────────────────
@@ -238,5 +244,5 @@ await fs.writeFile(path.join(ROOT, 'urban-plan', 'highway.json'), JSON.stringify
 }))
 
 const pts = built.items.reduce((a, i) => a + i.points.length, 0)
-console.log(`✓ highway.json — 시공 중 ${built.underway}공구 · ${built.items.length}구간(점 있음 ${mapped.length}) · 점 ${pts} · 사무소 주소 제외 ${built.office} · 매칭 실패 ${built.fails.length}`)
+console.log(`✓ highway.json — 시공 중 ${built.underway}공구 · ${built.items.length}구간(점 있음 ${mapped.length}) · 점 ${pts} · 사무소 주소 제외 ${built.office} · 테스트 행 제외 ${built.tests} · 매칭 실패 ${built.fails.length}`)
 if (built.fails.length) console.log('  실패: ' + [...new Set(built.fails)].slice(0, 30).join(' / '))
