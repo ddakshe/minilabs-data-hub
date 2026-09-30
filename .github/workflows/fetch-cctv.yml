@@ -1,0 +1,79 @@
+name: Fetch CCTV (내 CCTV · 맥)
+
+# cctv-mini(내 CCTV) 앱이 쓰는 ITS CCTV 전국 목록과 사진·영상 주소.
+#
+# 🚨 주소는 24시간만 유효하다. 하루라도 빠지면 앱의 모든 칸이 안 나온다.
+#    그래서 하루 두 번(04:10 · 16:10 KST) 돈다 — 한 번 유실돼도 남은 주소가 12시간 이상 버틴다.
+#    GitHub 예약은 이 저장소에서 대량 유실된다(LOCAL_JOBS.md, 08-31 실측 67%). 유실이 이어지면
+#    launchd 대행(scripts/dispatch-workflow.sh)으로 옮긴다.
+#
+# 🚨 ITS API 는 클라우드 IP 에서 연결 타임아웃이다(ITS Q&A 사례: GCP 서울 전부 실패) → 맥 러너 전용.
+#
+# 결과는 main 에 커밋하지 않는다. 약 4MB 가 매일 전부 바뀌어 저장소가 한 해 1GB 넘게 불어난다.
+# 히스토리 없는 `cctv-data` 브랜치에 매번 강제 푸시한다. 앱은
+#   https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/cctv-data/cctv/...
+# 를 읽는다.
+
+on:
+  schedule:
+    - cron: '10 19,7 * * *'  # 04:10 / 16:10 KST
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: '실행 이유 (로그에만 기록, 선택)'
+        required: false
+        default: 'manual refresh'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-cctv
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: [self-hosted, macOS, ARM64]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Show trigger context
+        run: |
+          echo "Event  : ${{ github.event_name }}"
+          echo "Reason : ${{ github.event.inputs.reason || '(scheduled)' }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      # 키는 저장소 시크릿이 있으면 그걸, 없으면 러너의 ~/.config/its-key 를 쓴다.
+      - name: Fetch CCTV
+        env:
+          ITS_API_KEY: ${{ secrets.ITS_API_KEY }}
+        run: |
+          OUT="$RUNNER_TEMP/cctv-out"
+          rm -rf "$OUT" && mkdir -p "$OUT"
+          python3 scripts/fetch-cctv.py "$OUT"
+
+      - name: Push to cctv-data (orphan, force)
+        env:
+          TOKEN: ${{ github.token }}
+        run: |
+          cd "$RUNNER_TEMP/cctv-out"
+          git init -q -b cctv-data
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "chore(cctv): refresh ($(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M'))"
+          git push -q --force "https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git" cctv-data
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## CCTV Fetch Summary"
+            echo ""
+            echo "- Trigger: \`${{ github.event_name }}\`"
+            echo "- Meta: \`$(cat "$RUNNER_TEMP/cctv-out/cctv/meta.json" 2>/dev/null || echo 'n/a')\`"
+            echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+          } >> "$GITHUB_STEP_SUMMARY"
