@@ -60,6 +60,13 @@ jobs:
         run: |
           node scripts/auto-option/bake.mjs /tmp/models.new.json --only "${{ steps.sources.outputs.changed }}"
 
+      # 구운 값이 원본 본문에 **글자로 있는 숫자인지** 대조한다.
+      # bake 안에서 차종별로 이미 보지만, 재사용분까지 한 번 더 훑는다 —
+      # 받아둔 PDF 가 있는 차종만 대조하고, 없으면 조용히 건너뛴다.
+      - name: Verify prices against source PDFs
+        if: steps.sources.outputs.changed != ''
+        run: node scripts/auto-option/verify-prices.mjs /tmp/models.new.json
+
       # 파서는 레이아웃이 바뀌면 에러 없이 쓰레기를 뽑는다. 이전 결과와 비교해
       # 말이 안 되는 변화면 커밋하지 않는다.
       - name: Guard

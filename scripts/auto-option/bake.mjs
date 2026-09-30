@@ -24,6 +24,7 @@ import { existsSync, mkdirSync, readFileSync, statSync, writeFileSync } from 'no
 import path from 'node:path';
 
 import { MODELS as CONFIG } from './models.config.mjs';
+import { verifyModel } from './verify-prices.mjs';
 
 const args = process.argv.slice(2);
 const out = args.find((a) => !a.startsWith('--'));
@@ -150,8 +151,9 @@ for (const cfg of CONFIG) {
   }
 
   let parsed;
+  let pdf;
   try {
-    const pdf = fetchPdf(src.url, cfg.id);
+    pdf = fetchPdf(src.url, cfg.id);
     parsed = JSON.parse(
       execFileSync('node', [new URL(`./${parser}`, import.meta.url).pathname, pdf], {
         encoding: 'utf8',
@@ -230,6 +232,13 @@ for (const cfg of CONFIG) {
   cfg.fix?.(model);
 
   const bad = validate(model);
+  /*
+    마지막 확인 — 트림 기본가가 **원본 본문에 글자로 있는 숫자인지** 본다.
+    위 validate() 는 값이 말이 되는지만 보고, guard 는 지난달과의 차이만 본다.
+    칼럼이 한 칸 밀려 옆 파워트레인의 금액이 들어오면 둘 다 통과한다 — 숫자가
+    그럴듯하고 변화폭도 작기 때문이다. 그때 남는 유일한 근거가 원본 본문이다.
+  */
+  bad.push(...verifyModel(model, pdf));
   if (bad.length > 0) {
     console.error(`✗ ${cfg.label}: ${bad.join(' / ')}`);
     failed += 1;

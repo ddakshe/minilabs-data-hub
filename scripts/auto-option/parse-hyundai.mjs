@@ -42,6 +42,28 @@ const PRICE = /\b(\d{2},\d{3},\d{3})\b/;
 const PICK = /▶\s*([^[\]▶]{2,40}?)\s*\[([\d,]+|추가비용없음)\]/g;
 /** 섹션 머리. 이 네 낱말이 한 줄에 있으면 파워트레인 표의 시작이다. */
 const HEAD = (l) => /구분/.test(l) && /판매가격/.test(l) && /기본\s*품목/.test(l) && /선택\s*품목/.test(l);
+/*
+  ⚠️ 표 머리가 **같은 파워트레인 안에서 다시 나온다.** 한 파워트레인의 트림 사다리가
+  지면을 넘어가면 현대는 머리를 다시 찍는데, 그때 트림명이 **머리보다 위로 밀려난다** —
+  "Calligraphy   차별화된 전용 디자인과 …" 한 줄만 남고 금액은 머리 아래에 온다.
+
+  이걸 새 파워트레인으로 보면 두 가지가 한꺼번에 깨진다.
+    1. 트림명이 머리 위에 있어 아래 anchor 스캔(±4줄)에 안 걸린다 → 트림이 사라진다
+    2. 쪼개진 뒷조각이 "가장 큰 섹션" 경쟁에서 앞조각에 져서 통째로 버려진다
+  그랜저 캘리그래피(5,310만)·블랙잉크(5,400만), 싼타페·아이오닉9 캘리그래피가
+  이렇게 빠져 있었다.
+
+  머리 바로 위 줄이 **라틴 트림명 + 한글 설명문** 이면 이어지는 조각으로 본다.
+  설명문을 요구하는 게 핵심이다 — 아이오닉5 는 "Long Range" 가 머리 위에 홀로 오는데
+  그건 진짜 다른 파워트레인(배터리)이라 합치면 안 된다.
+*/
+const ORPHAN = /^\s{0,14}([A-Z][A-Za-z\-]{1,18}(?: [A-Z][A-Za-z\-]{1,18})?)\s{2,}([가-힣].{9,})$/;
+/*
+  트림 설명문이 아니라 머리글·안내인 줄. 이게 붙어 있으면 이어지는 조각이 아니다.
+  ⚠️ **머리쪽만 본다.** 줄 오른쪽 끝에 "(단위 : 원)" 같은 지면 장식이 같은 줄로
+  따라오기 때문에, 아무 데나 걸리게 두면 진짜 트림 설명문까지 안내로 오인한다.
+*/
+const BOILER = /^\s*(현\s*모델|출시일|단위\s*:|※|■)/;
 
 const won = (s) => Math.round(Number(s.replace(/,/g, '')) / 10_000);
 
@@ -144,7 +166,7 @@ if (heads.length === 0) {
   process.exit(2);
 }
 
-function parseSection(from, to) {
+function parseSection(from, to, seedName = null) {
   const anchors = [];
   for (let i = from + 1; i < to; i += 1) {
     if (!SUPPLY.test(lines[i])) continue;
@@ -181,6 +203,11 @@ function parseSection(from, to) {
       }
       if (price !== null && name) break;
     }
+    /*
+      머리 위로 밀려난 트림명을 여기서 되돌려 놓는다. 금액은 찾았는데 이름이 없고,
+      이 조각의 첫 금액이라면 그 이름은 머리 위에 있던 것이다.
+    */
+    if (!name && price !== null && seedName && anchors.length === 0) name = seedName;
     if (name && price) anchors.push({ line: i, name, price });
   }
   if (anchors.length === 0) return null;
@@ -207,9 +234,61 @@ function parseSection(from, to) {
   return { trims, paid, baseText };
 }
 
-const sections = heads
-  .map((h, i) => parseSection(h, i + 1 < heads.length ? heads[i + 1] : lines.length))
-  .filter((x) => x !== null);
+/** 머리 바로 위의 비어 있지 않은 줄. */
+function above(h) {
+  for (let k = h - 1; k >= 0; k -= 1) {
+    const t = lines[k].replace(/\f/g, '');
+    if (t.trim()) return t;
+  }
+  return '';
+}
+
+/** 이 머리가 앞 조각에서 이어지는 것이면 머리 위로 밀려난 트림명을 준다. */
+function orphanName(h, isFirst) {
+  // 첫 조각은 이어질 앞 조각이 없다. 아이오닉5 "Standard" 오탐을 여기서 막는다.
+  if (isFirst) return null;
+  const m = ORPHAN.exec(above(h));
+  if (!m || BOILER.test(m[2])) return null;
+  return m[1].trim();
+}
+
+const raw = heads.map((h, i) => {
+  const seed = orphanName(h, i === 0);
+  const sec = parseSection(h, i + 1 < heads.length ? heads[i + 1] : lines.length, seed);
+  return sec && { ...sec, seed };
+});
+
+/*
+  이어지는 조각을 앞 조각에 되붙인다.
+
+  ⚠️ 서식만 보고 합치지 않는다. **사다리가 이어지는지**까지 본다 —
+  트림명이 겹치지 않고(겹치면 파워트레인이 다시 시작한 것이다) 값이 앞 조각의
+  제일 비싼 트림보다 비쌀 때만 같은 사다리의 뒷부분으로 인정한다.
+  이 조건이 없으면 쏘나타 N Line(3,726만) 처럼 서식이 닮은 **다른** 표가 붙는다.
+*/
+const sections = [];
+for (const sec of raw) {
+  if (!sec) continue;
+  const prev = sections[sections.length - 1];
+  const contiguous =
+    sec.seed &&
+    prev &&
+    prev.trims.length > 0 &&
+    sec.trims.length > 0 &&
+    !sec.trims.some((t) => prev.trims.some((p) => p.name === t.name)) &&
+    Math.min(...sec.trims.map((t) => t.price)) > Math.max(...prev.trims.map((t) => t.price));
+  if (!contiguous) {
+    sections.push(sec);
+    continue;
+  }
+  prev.trims.push(...sec.trims);
+  for (const [opt, byTrim] of Object.entries(sec.paid)) {
+    prev.paid[opt] = { ...(prev.paid[opt] ?? {}), ...byTrim };
+  }
+  for (const [name, text] of Object.entries(sec.baseText)) {
+    prev.baseText[name] = (prev.baseText[name] ?? '') + '\n' + text;
+  }
+}
 if (sections.length === 0) {
   console.error('⚠️ 트림을 하나도 못 찾았다. 레이아웃을 확인할 것.');
   process.exit(2);
