@@ -139,6 +139,22 @@ function resolve(addr) {
 // ─── 가공 ─────────────────────────────────────────────────────────────
 
 /** 함정 4) 사업단·현장사무소 주소 */
+/**
+ * 화면용 이름 — 원본 노선명 「평택영월선」「경부선」은 철도로 읽혔다(2026-09-30 피드백).
+ * 「○○선」→「○○고속도로」, 「○○선의 지선」→「○○고속도로지선」(법정 명칭과 같은 꼴).
+ * 구간명이 노선명으로 시작하면(「경부선직선화」「오송지선구간」) 겹치는 앞머리를 뗀다.
+ */
+function routeLabel(route) {
+  if (/선의 지선$/.test(route)) return route.replace(/선의 지선$/, '고속도로지선')
+  if (/지선$/.test(route)) return `${route} 고속도로`
+  return route.replace(/선$/, '고속도로')
+}
+function displayName(route, section) {
+  let rest = section.startsWith(route) ? section.slice(route.length).trim() : section
+  if (rest === '구간') rest = ''
+  return [routeLabel(route), rest].filter(Boolean).join(' ')
+}
+
 const OFFICE = (r) => {
   const s = r.cnstnStpntAddr.trim(), e = r.cnstnEnpntAddr.trim()
   return (s && s === e && /(로|길)\s*\d/.test(s)) || /(아파트|캐슬|자이|푸르지오|힐스테이트|래미안)/.test(s + e)
@@ -193,7 +209,9 @@ function build(rows) {
     const endsYm = g.lots.map((l) => l.period.end).filter(Boolean).sort()
     return {
       id: crypto.createHash('sha1').update(`${g.route}|${g.section}`).digest('hex').slice(0, 12),
-      name: `${g.route} ${g.section}`,
+      name: displayName(g.route, g.section),
+      /** 화면용 노선 이름 — 원본 route 는 그대로 둔다(id 가 route|section 해시라 공유 링크가 유지된다) */
+      routeLabel: routeLabel(g.route),
       route: g.route,
       section: g.section,
       /** 사업단 — 공구가 많은 순(함정 9) */
