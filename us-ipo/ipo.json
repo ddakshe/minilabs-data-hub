@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-29T00:00:00Z",
+  "generatedAt": "2026-09-30T00:00:00Z",
   "source": "SEC EDGAR",
   "sourceUrl": "https://www.sec.gov/edgar",
-  "usdKrw": 1357.93,
+  "usdKrw": 1353.36,
   "listed": [
     {
       "cik": "0001802369",
@@ -120,6 +120,55 @@
     }
   ],
   "upcoming": [
+    {
+      "cik": "0002076561",
+      "name": "Pine Tree Acquisition Corp.",
+      "ticker": null,
+      "filedAt": "2026-09-29",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002076561&type=S-1"
+    },
+    {
+      "cik": "0002016072",
+      "name": "Velos Acquisition I Corp.",
+      "ticker": "VLOS",
+      "filedAt": "2026-09-29",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": null,
+        "netIncome": 5778750,
+        "assets": 308181330
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002016072&type=S-1"
+    },
+    {
+      "cik": "0002091680",
+      "name": "Bitari Inc",
+      "ticker": "BIAI",
+      "filedAt": "2026-09-29",
+      "isSpac": false,
+      "sic": "6221",
+      "industry": "금융·부동산",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002091680&type=S-1"
+    },
+    {
+      "cik": "0002116517",
+      "name": "MNBS Acquisition Corp.",
+      "ticker": null,
+      "filedAt": "2026-09-29",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002116517&type=S-1"
+    },
     {
       "cik": "0002154056",
       "name": "Calm Seas Acquisition Corp.",
@@ -514,17 +563,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002115191&type=S-1"
     },
     {
-      "cik": "0002076561",
-      "name": "Pine Tree Acquisition Corp.",
-      "ticker": null,
-      "filedAt": "2026-09-18",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002076561&type=S-1"
-    },
-    {
       "cik": "0002113640",
       "name": "VME Companies, Inc.",
       "ticker": null,
@@ -811,17 +849,6 @@
       "industry": "SPAC",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002131303&type=S-1"
-    },
-    {
-      "cik": "0002091680",
-      "name": "Bitari Inc",
-      "ticker": "BIAI",
-      "filedAt": "2026-09-15",
-      "isSpac": false,
-      "sic": "6221",
-      "industry": "금융·부동산",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002091680&type=S-1"
     },
     {
       "cik": "0002066353",
@@ -1353,22 +1380,6 @@
         "assets": 39088000
       },
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001855467&type=S-1"
-    },
-    {
-      "cik": "0002016072",
-      "name": "Velos Acquisition I Corp.",
-      "ticker": "VLOS",
-      "filedAt": "2026-08-26",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": null,
-        "netIncome": 5778750,
-        "assets": 308181330
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002016072&type=S-1"
     },
     {
       "cik": "0001947016",
@@ -2788,7 +2799,7 @@
     {
       "cik": "0001849380",
       "name": "OneMedNet Corp",
-      "ticker": "ONMDW",
+      "ticker": "ONMD",
       "filedAt": "2026-07-08",
       "isSpac": false,
       "sic": "8731",
@@ -2914,55 +2925,6 @@
         "assets": 25562849
       },
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001868419&type=S-1"
-    },
-    {
-      "cik": "0002141084",
-      "name": "Asia AI Group Inc",
-      "ticker": null,
-      "filedAt": "2026-07-01",
-      "isSpac": false,
-      "sic": "7373",
-      "industry": "소프트웨어·IT",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002141084&type=S-1"
-    },
-    {
-      "cik": "0002129659",
-      "name": "Freedom Metals Acquisition Corp.",
-      "ticker": "FDMM",
-      "filedAt": "2026-07-01",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002129659&type=S-1"
-    },
-    {
-      "cik": "0001141284",
-      "name": "ACTELIS NETWORKS INC",
-      "ticker": "ASNS",
-      "filedAt": "2026-07-01",
-      "isSpac": false,
-      "sic": "3669",
-      "industry": "제조",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 3671000,
-        "netIncome": -8261000,
-        "assets": 9530000
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001141284&type=S-1"
-    },
-    {
-      "cik": "0001795851",
-      "name": "Stewards, Inc.",
-      "ticker": "SWRD",
-      "filedAt": "2026-07-01",
-      "isSpac": false,
-      "sic": "6153",
-      "industry": "금융·부동산",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001795851&type=S-1"
     }
   ]
 }
