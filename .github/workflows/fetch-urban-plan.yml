@@ -5,9 +5,11 @@ name: Fetch Urban Plan (도시계획 지도 · 맥)
 #   1) 택지정보시스템(jigu.go.kr) 개발사업지구 — 무인증 · 세션 쿠키 필수 · 월 1회 갱신
 #   2) 전국도시재생사업정보표준데이터 — data.go.kr 다운로드 AJAX(무인증) · 매월 초 병합
 #   3) 전국도시개발사업정보표준데이터 — 같은 AJAX(무인증). 지자체가 각자 올려 기준일이 행마다 다르다
-#   4) GTX seed 검증 — 네트워크 없음. seed 를 손으로 고쳤을 때 여기서 한 번 더 막힌다
+#   4) 한국도로공사 고속도로 공사현황 — EX_API_KEY(월 1콜, 휴게소 워크플로와 같은 secret).
+#      주소 → 좌표는 urban-plan/cache/bjd-centroids.json(손으로 굽는다, scripts/build-bjd-centroids.py)
+#   5) GTX seed 검증 — 네트워크 없음. seed 를 손으로 고쳤을 때 여기서 한 번 더 막힌다
 #
-# 인증키를 하나도 쓰지 않는다 → docs/api-limits.json 에 신고할 예산이 없다.
+# 인증키는 4) 하나뿐이다 → docs/api-limits.json 의 EX_API_KEY 에 신고했다.
 #
 # 10일에 도는 이유:
 #   택지정보시스템 기준일은 전월 말일이다(2026-09-10 에 2026-08-31 파일이 이미 올라와 있었다).
@@ -66,6 +68,11 @@ jobs:
 
       - name: 도시개발사업
         run: node scripts/fetch-urban-develop.mjs
+
+      - name: 고속도로 공사현황
+        env:
+          EX_API_KEY: ${{ secrets.EX_API_KEY }}
+        run: node scripts/fetch-urban-highway.mjs
 
       - name: GTX seed 검증
         run: node scripts/build-urban-gtx.mjs

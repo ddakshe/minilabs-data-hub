@@ -118,6 +118,18 @@
           "note": "avgRecentPrice 1 + avgAllPrice 1 + avgSidoPrice 4유종. 매일 07:40 KST"
         }
       }
+    },
+    "EX_API_KEY": {
+      "provider": "한국도로공사 고속도로 공공데이터 포털(data.ex.co.kr) OpenAPI",
+      "limitPerDay": 1000,
+      "scope": "키 단위",
+      "warn": "브라우저 UA 없으면 400 Request Blocked. 한도는 포털에 표기가 없어 1000건/일로 보수적으로 가정했다(미확인).",
+      "budget": {
+        "fetch-urban-plan.yml": {
+          "callsPerRun": 1,
+          "note": "공사현황 pagingYN=N 한 번"
+        }
+      }
     }
   }
 }
