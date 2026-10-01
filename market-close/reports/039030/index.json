@@ -3,10 +3,18 @@
   "name": "이오테크닉스",
   "market": "KOSDAQ",
   "retainDays": 120,
-  "firstBasDt": "20260403",
-  "lastBasDt": "20260929",
+  "firstBasDt": "20260406",
+  "lastBasDt": "20260930",
   "count": 120,
   "days": [
+    {
+      "basDt": "20260930",
+      "close": 520000,
+      "fltRt": 4.94,
+      "headline": "코스닥보다 4.22%p 높았어요.",
+      "newsCount": 5,
+      "dartCount": 0
+    },
     {
       "basDt": "20260929",
       "close": 495500,
@@ -1056,16 +1064,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260403",
-      "close": 396000,
-      "fltRt": -0.38,
-      "headline": "시가 404,500원보다 8,500원 낮게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-09-30T07:42:41.228Z"
+  "updatedAt": "2026-10-01T08:00:42.679Z"
 }
