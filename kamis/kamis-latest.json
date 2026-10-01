@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-30T13:18:50.974Z",
+  "generated_at": "2026-10-01T14:08:37.757Z",
   "source": "KAMIS dailySalesList (소매) + dailyPriceByCategoryList (코드·일평년)",
-  "date": "2026-09-30",
+  "date": "2026-10-01",
   "items": [
     {
       "id": "foodcrop:272",
@@ -13,28 +13,53 @@
       "name": "쌀",
       "kind": "",
       "unit": "20kg",
-      "price": 62696,
-      "prevPrice": 62981,
-      "normalPrice": 53887,
+      "price": 63117,
+      "prevPrice": 62696,
+      "normalPrice": 54297,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 63209
+          "date": "2025-10-01",
+          "price": 64345
         },
         {
-          "date": "2026-08-30",
-          "price": 61283
-        },
-        {
-          "date": "2026-09-29",
-          "price": 62981
+          "date": "2026-09-01",
+          "price": 61246
         },
         {
           "date": "2026-09-30",
           "price": 62696
+        },
+        {
+          "date": "2026-10-01",
+          "price": 63117
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
+    },
+    {
+      "id": "foodcrop:273",
+      "category": "foodcrop",
+      "categoryCode": "100",
+      "itemCode": "111",
+      "kindCode": null,
+      "rankCode": null,
+      "name": "쌀",
+      "kind": "20kg(햅쌀)",
+      "unit": "20kg",
+      "price": 65864,
+      "prevPrice": 65864,
+      "normalPrice": 54297,
+      "series": [
+        {
+          "date": "2025-10-01",
+          "price": 69790
+        },
+        {
+          "date": "2026-10-01",
+          "price": 65864
+        }
+      ],
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "foodcrop:1537",
@@ -46,28 +71,53 @@
       "name": "쌀",
       "kind": "",
       "unit": "10kg",
-      "price": 35830,
-      "prevPrice": 35834,
-      "normalPrice": 53887,
+      "price": 34944,
+      "prevPrice": 35830,
+      "normalPrice": 54297,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 34757
+          "date": "2025-10-01",
+          "price": 34580
         },
         {
-          "date": "2026-08-30",
-          "price": 34210
-        },
-        {
-          "date": "2026-09-29",
-          "price": 35834
+          "date": "2026-09-01",
+          "price": 34011
         },
         {
           "date": "2026-09-30",
           "price": 35830
+        },
+        {
+          "date": "2026-10-01",
+          "price": 34944
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
+    },
+    {
+      "id": "foodcrop:1556",
+      "category": "foodcrop",
+      "categoryCode": "100",
+      "itemCode": "111",
+      "kindCode": null,
+      "rankCode": null,
+      "name": "쌀",
+      "kind": "10kg(햅쌀)",
+      "unit": "10kg",
+      "price": 37118,
+      "prevPrice": 37118,
+      "normalPrice": 54297,
+      "series": [
+        {
+          "date": "2025-10-01",
+          "price": 37788
+        },
+        {
+          "date": "2026-10-01",
+          "price": 37118
+        }
+      ],
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "foodcrop:274",
@@ -79,28 +129,28 @@
       "name": "찹쌀",
       "kind": "일반계",
       "unit": "1kg",
-      "price": 5189,
-      "prevPrice": 5215,
-      "normalPrice": 4297,
+      "price": 5195,
+      "prevPrice": 5189,
+      "normalPrice": 4262,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 6417
+          "date": "2025-10-01",
+          "price": 6440
         },
         {
-          "date": "2026-08-30",
-          "price": 5262
-        },
-        {
-          "date": "2026-09-29",
-          "price": 5215
+          "date": "2026-09-01",
+          "price": 5254
         },
         {
           "date": "2026-09-30",
           "price": 5189
+        },
+        {
+          "date": "2026-10-01",
+          "price": 5195
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "foodcrop:3221",
@@ -112,20 +162,20 @@
       "name": "보리쌀",
       "kind": "찰보리",
       "unit": "1kg",
-      "price": 5237,
-      "prevPrice": 5225,
-      "normalPrice": 5237,
+      "price": 5244,
+      "prevPrice": 5237,
+      "normalPrice": 5244,
       "series": [
-        {
-          "date": "2026-09-29",
-          "price": 5225
-        },
         {
           "date": "2026-09-30",
           "price": 5237
+        },
+        {
+          "date": "2026-10-01",
+          "price": 5244
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "foodcrop:3224",
@@ -137,20 +187,20 @@
       "name": "혼식곡",
       "kind": "국산",
       "unit": "1kg",
-      "price": 7852,
-      "prevPrice": 7787,
-      "normalPrice": 7852,
+      "price": 7840,
+      "prevPrice": 7852,
+      "normalPrice": 7840,
       "series": [
-        {
-          "date": "2026-09-29",
-          "price": 7787
-        },
         {
           "date": "2026-09-30",
           "price": 7852
+        },
+        {
+          "date": "2026-10-01",
+          "price": 7840
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "foodcrop:3216",
@@ -163,19 +213,19 @@
       "kind": "찰현미",
       "unit": "1kg",
       "price": 5696,
-      "prevPrice": 5684,
+      "prevPrice": 5696,
       "normalPrice": 5696,
       "series": [
         {
-          "date": "2026-09-29",
-          "price": 5684
+          "date": "2026-09-30",
+          "price": 5696
         },
         {
-          "date": "2026-09-30",
+          "date": "2026-10-01",
           "price": 5696
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "foodcrop:275",
@@ -187,28 +237,28 @@
       "name": "콩",
       "kind": "흰 콩(국산)",
       "unit": "500g",
-      "price": 5066,
-      "prevPrice": 5004,
-      "normalPrice": 5200,
+      "price": 5055,
+      "prevPrice": 5066,
+      "normalPrice": 5242,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 5224
+          "date": "2025-10-01",
+          "price": 5199
         },
         {
-          "date": "2026-08-30",
+          "date": "2026-09-01",
           "price": 5043
-        },
-        {
-          "date": "2026-09-29",
-          "price": 5004
         },
         {
           "date": "2026-09-30",
           "price": 5066
+        },
+        {
+          "date": "2026-10-01",
+          "price": 5055
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "foodcrop:277",
@@ -220,28 +270,28 @@
       "name": "팥",
       "kind": "붉은 팥(국산)",
       "unit": "500g",
-      "price": 13595,
+      "price": 13357,
       "prevPrice": 13595,
-      "normalPrice": 9149,
+      "normalPrice": 9151,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 13865
+          "date": "2025-10-01",
+          "price": 13858
         },
         {
-          "date": "2026-08-30",
-          "price": 13718
-        },
-        {
-          "date": "2026-09-29",
-          "price": 13595
+          "date": "2026-09-01",
+          "price": 13715
         },
         {
           "date": "2026-09-30",
           "price": 13595
+        },
+        {
+          "date": "2026-10-01",
+          "price": 13357
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "foodcrop:279",
@@ -253,28 +303,28 @@
       "name": "녹두",
       "kind": "국산",
       "unit": "500g",
-      "price": 11490,
+      "price": 12199,
       "prevPrice": 11490,
-      "normalPrice": 11238,
+      "normalPrice": 11273,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 10975
+          "date": "2025-10-01",
+          "price": 11096
         },
         {
-          "date": "2026-08-30",
-          "price": 12186
-        },
-        {
-          "date": "2026-09-29",
-          "price": 11490
+          "date": "2026-09-01",
+          "price": 12194
         },
         {
           "date": "2026-09-30",
           "price": 11490
+        },
+        {
+          "date": "2026-10-01",
+          "price": 12199
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "foodcrop:281",
@@ -286,28 +336,28 @@
       "name": "고구마",
       "kind": "밤",
       "unit": "1kg",
-      "price": 5250,
-      "prevPrice": 5115,
-      "normalPrice": 5516,
+      "price": 4610,
+      "prevPrice": 5250,
+      "normalPrice": 5465,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 5134
+          "date": "2025-10-01",
+          "price": 5069
         },
         {
-          "date": "2026-08-30",
-          "price": 5441
-        },
-        {
-          "date": "2026-09-29",
-          "price": 5115
+          "date": "2026-09-01",
+          "price": 5247
         },
         {
           "date": "2026-09-30",
           "price": 5250
+        },
+        {
+          "date": "2026-10-01",
+          "price": 4610
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "foodcrop:285",
@@ -319,28 +369,28 @@
       "name": "감자",
       "kind": "수미(노지)",
       "unit": "100g",
-      "price": 308,
-      "prevPrice": 300,
-      "normalPrice": 343,
+      "price": 329,
+      "prevPrice": 308,
+      "normalPrice": 358,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 371
+          "date": "2025-10-01",
+          "price": 376
         },
         {
-          "date": "2026-08-30",
-          "price": 339
-        },
-        {
-          "date": "2026-09-29",
-          "price": 300
+          "date": "2026-09-01",
+          "price": 336
         },
         {
           "date": "2026-09-30",
           "price": 308
+        },
+        {
+          "date": "2026-10-01",
+          "price": 329
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:291",
@@ -352,28 +402,28 @@
       "name": "배추",
       "kind": "여름(고랭지)",
       "unit": "1포기",
-      "price": 6193,
-      "prevPrice": 6369,
-      "normalPrice": 7106,
+      "price": 6168,
+      "prevPrice": 6193,
+      "normalPrice": 7162,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 6149
+          "date": "2025-10-01",
+          "price": 6455
         },
         {
-          "date": "2026-08-30",
-          "price": 5294
-        },
-        {
-          "date": "2026-09-29",
-          "price": 6369
+          "date": "2026-09-01",
+          "price": 5496
         },
         {
           "date": "2026-09-30",
           "price": 6193
+        },
+        {
+          "date": "2026-10-01",
+          "price": 6168
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:297",
@@ -385,28 +435,28 @@
       "name": "양배추",
       "kind": "양배추",
       "unit": "1포기",
-      "price": 3596,
-      "prevPrice": 3436,
-      "normalPrice": 4259,
+      "price": 3896,
+      "prevPrice": 3596,
+      "normalPrice": 4427,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 4133
+          "date": "2025-10-01",
+          "price": 4121
         },
         {
-          "date": "2026-08-30",
-          "price": 3197
-        },
-        {
-          "date": "2026-09-29",
-          "price": 3436
+          "date": "2026-09-01",
+          "price": 3190
         },
         {
           "date": "2026-09-30",
           "price": 3596
+        },
+        {
+          "date": "2026-10-01",
+          "price": 3896
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:2241",
@@ -418,28 +468,28 @@
       "name": "알배기배추",
       "kind": "알배기배추",
       "unit": "1포기",
-      "price": 4550,
-      "prevPrice": 4588,
-      "normalPrice": 5165,
+      "price": 4612,
+      "prevPrice": 4550,
+      "normalPrice": 5140,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 5068
+          "date": "2025-10-01",
+          "price": 5120
         },
         {
-          "date": "2026-08-30",
-          "price": 4010
-        },
-        {
-          "date": "2026-09-29",
-          "price": 4588
+          "date": "2026-09-01",
+          "price": 4045
         },
         {
           "date": "2026-09-30",
           "price": 4550
+        },
+        {
+          "date": "2026-10-01",
+          "price": 4612
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:2243",
@@ -451,28 +501,28 @@
       "name": "브로콜리",
       "kind": "브로콜리(국산)",
       "unit": "1개",
-      "price": 3465,
-      "prevPrice": 3514,
-      "normalPrice": 4104,
+      "price": 3391,
+      "prevPrice": 3465,
+      "normalPrice": 4004,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 4190
+          "date": "2025-10-01",
+          "price": 4151
         },
         {
-          "date": "2026-08-30",
-          "price": 3371
-        },
-        {
-          "date": "2026-09-29",
-          "price": 3514
+          "date": "2026-09-01",
+          "price": 3418
         },
         {
           "date": "2026-09-30",
           "price": 3465
+        },
+        {
+          "date": "2026-10-01",
+          "price": 3391
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:299",
@@ -484,28 +534,28 @@
       "name": "시금치",
       "kind": "시금치",
       "unit": "100g",
-      "price": 1593,
-      "prevPrice": 1657,
-      "normalPrice": 1849,
+      "price": 1249,
+      "prevPrice": 1593,
+      "normalPrice": 1694,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 1892
+          "date": "2025-10-01",
+          "price": 1896
         },
         {
-          "date": "2026-08-30",
-          "price": 2191
-        },
-        {
-          "date": "2026-09-29",
-          "price": 1657
+          "date": "2026-09-01",
+          "price": 2240
         },
         {
           "date": "2026-09-30",
           "price": 1593
+        },
+        {
+          "date": "2026-10-01",
+          "price": 1249
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:301",
@@ -517,28 +567,28 @@
       "name": "상추",
       "kind": "적",
       "unit": "100g",
-      "price": 1386,
-      "prevPrice": 1443,
-      "normalPrice": 1836,
+      "price": 1123,
+      "prevPrice": 1386,
+      "normalPrice": 1631,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 1999
+          "date": "2025-10-01",
+          "price": 2016
         },
         {
-          "date": "2026-08-30",
-          "price": 1609
-        },
-        {
-          "date": "2026-09-29",
-          "price": 1443
+          "date": "2026-09-01",
+          "price": 1658
         },
         {
           "date": "2026-09-30",
           "price": 1386
+        },
+        {
+          "date": "2026-10-01",
+          "price": 1123
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:303",
@@ -550,28 +600,28 @@
       "name": "상추",
       "kind": "청",
       "unit": "100g",
-      "price": 1313,
-      "prevPrice": 1383,
-      "normalPrice": 1836,
+      "price": 1087,
+      "prevPrice": 1313,
+      "normalPrice": 1631,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 2193
+          "date": "2025-10-01",
+          "price": 2222
         },
         {
-          "date": "2026-08-30",
-          "price": 1579
-        },
-        {
-          "date": "2026-09-29",
-          "price": 1383
+          "date": "2026-09-01",
+          "price": 1631
         },
         {
           "date": "2026-09-30",
           "price": 1313
+        },
+        {
+          "date": "2026-10-01",
+          "price": 1087
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:305",
@@ -583,28 +633,28 @@
       "name": "얼갈이배추",
       "kind": "얼갈이배추",
       "unit": "1kg",
-      "price": 2797,
-      "prevPrice": 2866,
-      "normalPrice": 3709,
+      "price": 2505,
+      "prevPrice": 2797,
+      "normalPrice": 3467,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 3883
+          "date": "2025-10-01",
+          "price": 3861
         },
         {
-          "date": "2026-08-30",
-          "price": 3316
-        },
-        {
-          "date": "2026-09-29",
-          "price": 2866
+          "date": "2026-09-01",
+          "price": 3396
         },
         {
           "date": "2026-09-30",
           "price": 2797
+        },
+        {
+          "date": "2026-10-01",
+          "price": 2505
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:307",
@@ -616,28 +666,28 @@
       "name": "수박",
       "kind": "수박",
       "unit": "1개",
-      "price": 23083,
-      "prevPrice": 23108,
-      "normalPrice": 25397,
+      "price": 23820,
+      "prevPrice": 23083,
+      "normalPrice": 23844,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 28224
+          "date": "2025-10-01",
+          "price": 27238
         },
         {
-          "date": "2026-08-30",
-          "price": 25785
-        },
-        {
-          "date": "2026-09-29",
-          "price": 23108
+          "date": "2026-09-01",
+          "price": 24709
         },
         {
           "date": "2026-09-30",
           "price": 23083
+        },
+        {
+          "date": "2026-10-01",
+          "price": 23820
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:311",
@@ -649,28 +699,28 @@
       "name": "오이",
       "kind": "가시계통",
       "unit": "10개",
-      "price": 9627,
-      "prevPrice": 10257,
-      "normalPrice": 12847,
+      "price": 8508,
+      "prevPrice": 9627,
+      "normalPrice": 13452,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 13950
+          "date": "2025-10-01",
+          "price": 13856
         },
         {
-          "date": "2026-08-30",
-          "price": 11146
-        },
-        {
-          "date": "2026-09-29",
-          "price": 10257
+          "date": "2026-09-01",
+          "price": 11172
         },
         {
           "date": "2026-09-30",
           "price": 9627
+        },
+        {
+          "date": "2026-10-01",
+          "price": 8508
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:313",
@@ -682,28 +732,28 @@
       "name": "오이",
       "kind": "다다기계통",
       "unit": "10개",
-      "price": 7614,
-      "prevPrice": 7880,
-      "normalPrice": 12847,
+      "price": 6669,
+      "prevPrice": 7614,
+      "normalPrice": 13452,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 12308
+          "date": "2025-10-01",
+          "price": 12261
         },
         {
-          "date": "2026-08-30",
-          "price": 9871
-        },
-        {
-          "date": "2026-09-29",
-          "price": 7880
+          "date": "2026-09-01",
+          "price": 10064
         },
         {
           "date": "2026-09-30",
           "price": 7614
+        },
+        {
+          "date": "2026-10-01",
+          "price": 6669
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:315",
@@ -715,28 +765,28 @@
       "name": "오이",
       "kind": "취청",
       "unit": "10개",
-      "price": 12533,
-      "prevPrice": 12764,
-      "normalPrice": 12847,
+      "price": 10260,
+      "prevPrice": 12533,
+      "normalPrice": 13452,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 15779
+          "date": "2025-10-01",
+          "price": 15614
         },
         {
-          "date": "2026-08-30",
-          "price": 15169
-        },
-        {
-          "date": "2026-09-29",
-          "price": 12764
+          "date": "2026-09-01",
+          "price": 15054
         },
         {
           "date": "2026-09-30",
           "price": 12533
+        },
+        {
+          "date": "2026-10-01",
+          "price": 10260
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:317",
@@ -748,28 +798,28 @@
       "name": "호박",
       "kind": "애호박",
       "unit": "1개",
-      "price": 1554,
-      "prevPrice": 1576,
-      "normalPrice": 1812,
+      "price": 1339,
+      "prevPrice": 1554,
+      "normalPrice": 1736,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 1905
+          "date": "2025-10-01",
+          "price": 1937
         },
         {
-          "date": "2026-08-30",
-          "price": 1801
-        },
-        {
-          "date": "2026-09-29",
-          "price": 1576
+          "date": "2026-09-01",
+          "price": 1993
         },
         {
           "date": "2026-09-30",
           "price": 1554
+        },
+        {
+          "date": "2026-10-01",
+          "price": 1339
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:319",
@@ -781,28 +831,28 @@
       "name": "호박",
       "kind": "쥬키니",
       "unit": "1개",
-      "price": 1766,
-      "prevPrice": 1828,
-      "normalPrice": 1812,
+      "price": 1674,
+      "prevPrice": 1766,
+      "normalPrice": 1736,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 2145
+          "date": "2025-10-01",
+          "price": 2139
         },
         {
-          "date": "2026-08-30",
-          "price": 1770
-        },
-        {
-          "date": "2026-09-29",
-          "price": 1828
+          "date": "2026-09-01",
+          "price": 1809
         },
         {
           "date": "2026-09-30",
           "price": 1766
+        },
+        {
+          "date": "2026-10-01",
+          "price": 1674
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:371",
@@ -814,20 +864,20 @@
       "name": "가지",
       "kind": "가지",
       "unit": "3개",
-      "price": 2757,
-      "prevPrice": 2787,
-      "normalPrice": 2757,
+      "price": 2487,
+      "prevPrice": 2757,
+      "normalPrice": 2487,
       "series": [
-        {
-          "date": "2026-09-29",
-          "price": 2787
-        },
         {
           "date": "2026-09-30",
           "price": 2757
+        },
+        {
+          "date": "2026-10-01",
+          "price": 2487
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:377",
@@ -839,20 +889,20 @@
       "name": "부추",
       "kind": "부추",
       "unit": "100g",
-      "price": 896,
-      "prevPrice": 890,
-      "normalPrice": 896,
+      "price": 871,
+      "prevPrice": 896,
+      "normalPrice": 871,
       "series": [
-        {
-          "date": "2026-09-29",
-          "price": 890
-        },
         {
           "date": "2026-09-30",
           "price": 896
+        },
+        {
+          "date": "2026-10-01",
+          "price": 871
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:321",
@@ -864,28 +914,28 @@
       "name": "토마토",
       "kind": "토마토",
       "unit": "1kg",
-      "price": 9046,
-      "prevPrice": 8970,
-      "normalPrice": 7944,
+      "price": 7964,
+      "prevPrice": 9046,
+      "normalPrice": 8401,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 8691
+          "date": "2025-10-01",
+          "price": 8326
         },
         {
-          "date": "2026-08-30",
-          "price": 6679
-        },
-        {
-          "date": "2026-09-29",
-          "price": 8970
+          "date": "2026-09-01",
+          "price": 6775
         },
         {
           "date": "2026-09-30",
           "price": 9046
+        },
+        {
+          "date": "2026-10-01",
+          "price": 7964
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:327",
@@ -897,28 +947,28 @@
       "name": "무",
       "kind": "고랭지",
       "unit": "1개",
-      "price": 2432,
-      "prevPrice": 2296,
-      "normalPrice": 2722,
+      "price": 2810,
+      "prevPrice": 2432,
+      "normalPrice": 2797,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 1955
+          "date": "2025-10-01",
+          "price": 2080
         },
         {
-          "date": "2026-08-30",
-          "price": 2480
-        },
-        {
-          "date": "2026-09-29",
-          "price": 2296
+          "date": "2026-09-01",
+          "price": 2460
         },
         {
           "date": "2026-09-30",
           "price": 2432
+        },
+        {
+          "date": "2026-10-01",
+          "price": 2810
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:335",
@@ -930,28 +980,28 @@
       "name": "당근",
       "kind": "무세척(국산)",
       "unit": "1kg",
-      "price": 4146,
-      "prevPrice": 4103,
-      "normalPrice": 5018,
+      "price": 4289,
+      "prevPrice": 4146,
+      "normalPrice": 5173,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 3700
+          "date": "2025-10-01",
+          "price": 3730
         },
         {
-          "date": "2026-08-30",
-          "price": 3773
-        },
-        {
-          "date": "2026-09-29",
-          "price": 4103
+          "date": "2026-09-01",
+          "price": 3810
         },
         {
           "date": "2026-09-30",
           "price": 4146
+        },
+        {
+          "date": "2026-10-01",
+          "price": 4289
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:339",
@@ -963,28 +1013,28 @@
       "name": "열무",
       "kind": "열무",
       "unit": "1kg",
-      "price": 2693,
-      "prevPrice": 2715,
-      "normalPrice": 3570,
+      "price": 2403,
+      "prevPrice": 2693,
+      "normalPrice": 3352,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 3599
+          "date": "2025-10-01",
+          "price": 3600
         },
         {
-          "date": "2026-08-30",
-          "price": 3502
-        },
-        {
-          "date": "2026-09-29",
-          "price": 2715
+          "date": "2026-09-01",
+          "price": 3576
         },
         {
           "date": "2026-09-30",
           "price": 2693
+        },
+        {
+          "date": "2026-10-01",
+          "price": 2403
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:341",
@@ -996,28 +1046,28 @@
       "name": "건고추",
       "kind": "화건",
       "unit": "600g",
-      "price": 17708,
-      "prevPrice": 17578,
-      "normalPrice": 17283,
+      "price": 17911,
+      "prevPrice": 17708,
+      "normalPrice": 17142,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 16688
+          "date": "2025-10-01",
+          "price": 16664
         },
         {
-          "date": "2026-08-30",
-          "price": 18029
-        },
-        {
-          "date": "2026-09-29",
-          "price": 17578
+          "date": "2026-09-01",
+          "price": 18025
         },
         {
           "date": "2026-09-30",
           "price": 17708
+        },
+        {
+          "date": "2026-10-01",
+          "price": 17911
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:349",
@@ -1029,28 +1079,28 @@
       "name": "풋고추",
       "kind": "풋고추(녹광 등)",
       "unit": "100g",
-      "price": 1922,
-      "prevPrice": 1929,
-      "normalPrice": 1706,
+      "price": 1722,
+      "prevPrice": 1922,
+      "normalPrice": 1656,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 1971
+          "date": "2025-10-01",
+          "price": 2026
         },
         {
-          "date": "2026-08-30",
-          "price": 1639
-        },
-        {
-          "date": "2026-09-29",
-          "price": 1929
+          "date": "2026-09-01",
+          "price": 1633
         },
         {
           "date": "2026-09-30",
           "price": 1922
+        },
+        {
+          "date": "2026-10-01",
+          "price": 1722
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:351",
@@ -1062,28 +1112,28 @@
       "name": "풋고추",
       "kind": "꽈리고추",
       "unit": "100g",
-      "price": 1797,
-      "prevPrice": 1817,
-      "normalPrice": 1706,
+      "price": 1610,
+      "prevPrice": 1797,
+      "normalPrice": 1656,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 1900
+          "date": "2025-10-01",
+          "price": 1930
         },
         {
-          "date": "2026-08-30",
-          "price": 1368
-        },
-        {
-          "date": "2026-09-29",
-          "price": 1817
+          "date": "2026-09-01",
+          "price": 1369
         },
         {
           "date": "2026-09-30",
           "price": 1797
+        },
+        {
+          "date": "2026-10-01",
+          "price": 1610
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:353",
@@ -1095,28 +1145,28 @@
       "name": "풋고추",
       "kind": "청양고추",
       "unit": "100g",
-      "price": 1268,
-      "prevPrice": 1286,
-      "normalPrice": 1706,
+      "price": 1405,
+      "prevPrice": 1268,
+      "normalPrice": 1656,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 1503
+          "date": "2025-10-01",
+          "price": 1494
         },
         {
-          "date": "2026-08-30",
-          "price": 1139
-        },
-        {
-          "date": "2026-09-29",
-          "price": 1286
+          "date": "2026-09-01",
+          "price": 1144
         },
         {
           "date": "2026-09-30",
           "price": 1268
+        },
+        {
+          "date": "2026-10-01",
+          "price": 1405
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:1998",
@@ -1128,28 +1178,28 @@
       "name": "풋고추",
       "kind": "오이맛고추",
       "unit": "100g",
-      "price": 1369,
-      "prevPrice": 1396,
-      "normalPrice": 1706,
+      "price": 1266,
+      "prevPrice": 1369,
+      "normalPrice": 1656,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 1373
+          "date": "2025-10-01",
+          "price": 1386
         },
         {
-          "date": "2026-08-30",
+          "date": "2026-09-01",
           "price": 1076
-        },
-        {
-          "date": "2026-09-29",
-          "price": 1396
         },
         {
           "date": "2026-09-30",
           "price": 1369
+        },
+        {
+          "date": "2026-10-01",
+          "price": 1266
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:355",
@@ -1161,28 +1211,28 @@
       "name": "붉은고추",
       "kind": "붉은고추",
       "unit": "100g",
-      "price": 2856,
-      "prevPrice": 2755,
-      "normalPrice": 1973,
+      "price": 2904,
+      "prevPrice": 2856,
+      "normalPrice": 2120,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 2136
+          "date": "2025-10-01",
+          "price": 2143
         },
         {
-          "date": "2026-08-30",
-          "price": 1879
-        },
-        {
-          "date": "2026-09-29",
-          "price": 2755
+          "date": "2026-09-01",
+          "price": 1891
         },
         {
           "date": "2026-09-30",
           "price": 2856
+        },
+        {
+          "date": "2026-10-01",
+          "price": 2904
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:357",
@@ -1194,28 +1244,28 @@
       "name": "깐마늘(국산)",
       "kind": "깐마늘(국산)",
       "unit": "1kg",
-      "price": 11789,
-      "prevPrice": 11406,
-      "normalPrice": 10672,
+      "price": 10165,
+      "prevPrice": 11789,
+      "normalPrice": 10763,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 9435
+          "date": "2025-10-01",
+          "price": 9668
         },
         {
-          "date": "2026-08-30",
-          "price": 10262
-        },
-        {
-          "date": "2026-09-29",
-          "price": 11406
+          "date": "2026-09-01",
+          "price": 10341
         },
         {
           "date": "2026-09-30",
           "price": 11789
+        },
+        {
+          "date": "2026-10-01",
+          "price": 10165
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:361",
@@ -1227,28 +1277,28 @@
       "name": "양파",
       "kind": "양파",
       "unit": "1kg",
-      "price": 2078,
-      "prevPrice": 2061,
-      "normalPrice": 2103,
+      "price": 2123,
+      "prevPrice": 2078,
+      "normalPrice": 2167,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 1825
+          "date": "2025-10-01",
+          "price": 1897
         },
         {
-          "date": "2026-08-30",
-          "price": 2016
-        },
-        {
-          "date": "2026-09-29",
-          "price": 2061
+          "date": "2026-09-01",
+          "price": 1959
         },
         {
           "date": "2026-09-30",
           "price": 2078
+        },
+        {
+          "date": "2026-10-01",
+          "price": 2123
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:365",
@@ -1260,28 +1310,28 @@
       "name": "파",
       "kind": "대파",
       "unit": "1kg",
-      "price": 3047,
-      "prevPrice": 2963,
-      "normalPrice": 3256,
+      "price": 2999,
+      "prevPrice": 3047,
+      "normalPrice": 3243,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 3150
+          "date": "2025-10-01",
+          "price": 3160
         },
         {
-          "date": "2026-08-30",
-          "price": 3001
-        },
-        {
-          "date": "2026-09-29",
-          "price": 2963
+          "date": "2026-09-01",
+          "price": 2928
         },
         {
           "date": "2026-09-30",
           "price": 3047
+        },
+        {
+          "date": "2026-10-01",
+          "price": 2999
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:367",
@@ -1293,28 +1343,28 @@
       "name": "파",
       "kind": "쪽파",
       "unit": "1kg",
-      "price": 8296,
-      "prevPrice": 8624,
-      "normalPrice": 3256,
+      "price": 7698,
+      "prevPrice": 8296,
+      "normalPrice": 3243,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 8734
+          "date": "2025-10-01",
+          "price": 8916
         },
         {
-          "date": "2026-08-30",
-          "price": 10512
-        },
-        {
-          "date": "2026-09-29",
-          "price": 8624
+          "date": "2026-09-01",
+          "price": 10348
         },
         {
           "date": "2026-09-30",
           "price": 8296
+        },
+        {
+          "date": "2026-10-01",
+          "price": 7698
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:369",
@@ -1326,28 +1376,28 @@
       "name": "생강",
       "kind": "국산",
       "unit": "1kg",
-      "price": 14856,
-      "prevPrice": 14862,
-      "normalPrice": 14191,
+      "price": 14857,
+      "prevPrice": 14856,
+      "normalPrice": 13673,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 15167
+          "date": "2025-10-01",
+          "price": 15341
         },
         {
-          "date": "2026-08-30",
-          "price": 15103
-        },
-        {
-          "date": "2026-09-29",
-          "price": 14862
+          "date": "2026-09-01",
+          "price": 15107
         },
         {
           "date": "2026-09-30",
           "price": 14856
+        },
+        {
+          "date": "2026-10-01",
+          "price": 14857
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:679",
@@ -1359,28 +1409,28 @@
       "name": "고춧가루",
       "kind": "국산",
       "unit": "1kg",
-      "price": 34286,
-      "prevPrice": 34446,
-      "normalPrice": 34312,
+      "price": 34224,
+      "prevPrice": 34286,
+      "normalPrice": 34220,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 33447
+          "date": "2025-10-01",
+          "price": 33437
         },
         {
-          "date": "2026-08-30",
-          "price": 34411
-        },
-        {
-          "date": "2026-09-29",
-          "price": 34446
+          "date": "2026-09-01",
+          "price": 34385
         },
         {
           "date": "2026-09-30",
           "price": 34286
+        },
+        {
+          "date": "2026-10-01",
+          "price": 34224
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:680",
@@ -1394,26 +1444,26 @@
       "unit": "1kg",
       "price": 13572,
       "prevPrice": 13572,
-      "normalPrice": 34312,
+      "normalPrice": 34220,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 13405
+          "date": "2025-10-01",
+          "price": 13412
         },
         {
-          "date": "2026-08-30",
-          "price": 13561
-        },
-        {
-          "date": "2026-09-29",
-          "price": 13572
+          "date": "2026-09-01",
+          "price": 13555
         },
         {
           "date": "2026-09-30",
           "price": 13572
+        },
+        {
+          "date": "2026-10-01",
+          "price": 13572
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:373",
@@ -1425,28 +1475,28 @@
       "name": "미나리",
       "kind": "미나리",
       "unit": "100g",
-      "price": 1936,
-      "prevPrice": 1986,
-      "normalPrice": 1645,
+      "price": 1908,
+      "prevPrice": 1936,
+      "normalPrice": 1713,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 1860
+          "date": "2025-10-01",
+          "price": 1880
         },
         {
-          "date": "2026-08-30",
-          "price": 1821
-        },
-        {
-          "date": "2026-09-29",
-          "price": 1986
+          "date": "2026-09-01",
+          "price": 1827
         },
         {
           "date": "2026-09-30",
           "price": 1936
+        },
+        {
+          "date": "2026-10-01",
+          "price": 1908
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:375",
@@ -1458,28 +1508,28 @@
       "name": "깻잎",
       "kind": "깻잎",
       "unit": "50g",
-      "price": 1800,
-      "prevPrice": 1847,
-      "normalPrice": 1563,
+      "price": 1601,
+      "prevPrice": 1800,
+      "normalPrice": 1544,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 1705
+          "date": "2025-10-01",
+          "price": 1672
         },
         {
-          "date": "2026-08-30",
-          "price": 1506
-        },
-        {
-          "date": "2026-09-29",
-          "price": 1847
+          "date": "2026-09-01",
+          "price": 1528
         },
         {
           "date": "2026-09-30",
           "price": 1800
+        },
+        {
+          "date": "2026-10-01",
+          "price": 1601
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:379",
@@ -1491,28 +1541,28 @@
       "name": "피망",
       "kind": "청",
       "unit": "100g",
-      "price": 2322,
-      "prevPrice": 2323,
-      "normalPrice": 1465,
+      "price": 1988,
+      "prevPrice": 2322,
+      "normalPrice": 1361,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 1515
+          "date": "2025-10-01",
+          "price": 1514
         },
         {
-          "date": "2026-08-30",
+          "date": "2026-09-01",
           "price": 1663
-        },
-        {
-          "date": "2026-09-29",
-          "price": 2323
         },
         {
           "date": "2026-09-30",
           "price": 2322
+        },
+        {
+          "date": "2026-10-01",
+          "price": 1988
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:381",
@@ -1524,28 +1574,28 @@
       "name": "파프리카",
       "kind": "파프리카",
       "unit": "1개",
-      "price": 2056,
-      "prevPrice": 2043,
-      "normalPrice": 2245,
+      "price": 1914,
+      "prevPrice": 2056,
+      "normalPrice": 2186,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 2048
+          "date": "2025-10-01",
+          "price": 2082
         },
         {
-          "date": "2026-08-30",
-          "price": 1600
-        },
-        {
-          "date": "2026-09-29",
-          "price": 2043
+          "date": "2026-09-01",
+          "price": 1659
         },
         {
           "date": "2026-09-30",
           "price": 2056
+        },
+        {
+          "date": "2026-10-01",
+          "price": 1914
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:383",
@@ -1557,28 +1607,28 @@
       "name": "멜론",
       "kind": "멜론",
       "unit": "1개",
-      "price": 9456,
-      "prevPrice": 9503,
-      "normalPrice": 10410,
+      "price": 9483,
+      "prevPrice": 9456,
+      "normalPrice": 10570,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 10428
+          "date": "2025-10-01",
+          "price": 10474
         },
         {
-          "date": "2026-08-30",
-          "price": 8776
-        },
-        {
-          "date": "2026-09-29",
-          "price": 9503
+          "date": "2026-09-01",
+          "price": 8828
         },
         {
           "date": "2026-09-30",
           "price": 9456
+        },
+        {
+          "date": "2026-10-01",
+          "price": 9483
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:437",
@@ -1590,28 +1640,28 @@
       "name": "방울토마토",
       "kind": "방울토마토",
       "unit": "1kg",
-      "price": 8546,
-      "prevPrice": 8708,
-      "normalPrice": 10940,
+      "price": 9212,
+      "prevPrice": 8546,
+      "normalPrice": 10672,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 11742
+          "date": "2025-10-01",
+          "price": 11597
         },
         {
-          "date": "2026-08-30",
-          "price": 8337
-        },
-        {
-          "date": "2026-09-29",
-          "price": 8708
+          "date": "2026-09-01",
+          "price": 8045
         },
         {
           "date": "2026-09-30",
           "price": 8546
+        },
+        {
+          "date": "2026-10-01",
+          "price": 9212
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:1080",
@@ -1623,28 +1673,28 @@
       "name": "방울토마토",
       "kind": "대추방울토마토",
       "unit": "1kg",
-      "price": 11359,
-      "prevPrice": 11211,
-      "normalPrice": 10940,
+      "price": 11170,
+      "prevPrice": 11359,
+      "normalPrice": 10672,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 11597
+          "date": "2025-10-01",
+          "price": 11313
         },
         {
-          "date": "2026-08-30",
-          "price": 5795
-        },
-        {
-          "date": "2026-09-29",
-          "price": 11211
+          "date": "2026-09-01",
+          "price": 6240
         },
         {
           "date": "2026-09-30",
           "price": 11359
+        },
+        {
+          "date": "2026-10-01",
+          "price": 11170
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "fruit:402",
@@ -1656,28 +1706,28 @@
       "name": "사과",
       "kind": "홍로",
       "unit": "10개",
-      "price": 22595,
-      "prevPrice": 22522,
-      "normalPrice": 26356,
+      "price": 24012,
+      "prevPrice": 22595,
+      "normalPrice": 25242,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 26173
+          "date": "2025-10-01",
+          "price": 26627
         },
         {
-          "date": "2026-08-30",
-          "price": 24556
-        },
-        {
-          "date": "2026-09-29",
-          "price": 22522
+          "date": "2026-09-01",
+          "price": 24035
         },
         {
           "date": "2026-09-30",
           "price": 22595
+        },
+        {
+          "date": "2026-10-01",
+          "price": 24012
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "fruit:404",
@@ -1689,24 +1739,28 @@
       "name": "배",
       "kind": "신고",
       "unit": "10개",
-      "price": 31218,
-      "prevPrice": 31108,
-      "normalPrice": 35154,
+      "price": 31567,
+      "prevPrice": 31218,
+      "normalPrice": 31989,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 30061
+          "date": "2025-10-01",
+          "price": 31215
         },
         {
-          "date": "2026-09-29",
-          "price": 31108
+          "date": "2026-09-01",
+          "price": 33159
         },
         {
           "date": "2026-09-30",
           "price": 31218
+        },
+        {
+          "date": "2026-10-01",
+          "price": 31567
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "fruit:1082",
@@ -1718,28 +1772,28 @@
       "name": "포도",
       "kind": "샤인머스켓",
       "unit": "2kg",
-      "price": 13651,
-      "prevPrice": 13466,
-      "normalPrice": 8891,
+      "price": 11791,
+      "prevPrice": 13651,
+      "normalPrice": 8693,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 15374
+          "date": "2025-10-01",
+          "price": 15089
         },
         {
-          "date": "2026-08-30",
-          "price": 16768
-        },
-        {
-          "date": "2026-09-29",
-          "price": 13466
+          "date": "2026-09-01",
+          "price": 16260
         },
         {
           "date": "2026-09-30",
           "price": 13651
+        },
+        {
+          "date": "2026-10-01",
+          "price": 11791
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "fruit:416",
@@ -1751,28 +1805,28 @@
       "name": "포도",
       "kind": "캠벨얼리",
       "unit": "1kg",
-      "price": 7668,
-      "prevPrice": 7626,
-      "normalPrice": 8891,
+      "price": 7819,
+      "prevPrice": 7668,
+      "normalPrice": 8693,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 7433
+          "date": "2025-10-01",
+          "price": 7463
         },
         {
-          "date": "2026-08-30",
-          "price": 7902
-        },
-        {
-          "date": "2026-09-29",
-          "price": 7626
+          "date": "2026-09-01",
+          "price": 7722
         },
         {
           "date": "2026-09-30",
           "price": 7668
+        },
+        {
+          "date": "2026-10-01",
+          "price": 7819
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "fruit:418",
@@ -1784,28 +1838,28 @@
       "name": "포도",
       "kind": "거봉",
       "unit": "2kg",
-      "price": 18727,
-      "prevPrice": 18519,
-      "normalPrice": 8891,
+      "price": 20045,
+      "prevPrice": 18727,
+      "normalPrice": 8693,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 21080
+          "date": "2025-10-01",
+          "price": 20159
         },
         {
-          "date": "2026-08-30",
-          "price": 16621
-        },
-        {
-          "date": "2026-09-29",
-          "price": 18519
+          "date": "2026-09-01",
+          "price": 16921
         },
         {
           "date": "2026-09-30",
           "price": 18727
+        },
+        {
+          "date": "2026-10-01",
+          "price": 20045
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "fruit:1015",
@@ -1817,28 +1871,28 @@
       "name": "감귤",
       "kind": "시설",
       "unit": "10개",
-      "price": 7113,
-      "prevPrice": 7161,
-      "normalPrice": 9087,
+      "price": 7046,
+      "prevPrice": 7113,
+      "normalPrice": 8396,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 8982
+          "date": "2025-10-01",
+          "price": 8794
         },
         {
-          "date": "2026-08-30",
-          "price": 8048
-        },
-        {
-          "date": "2026-09-29",
-          "price": 7161
+          "date": "2026-09-01",
+          "price": 7827
         },
         {
           "date": "2026-09-30",
           "price": 7113
+        },
+        {
+          "date": "2026-10-01",
+          "price": 7046
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "fruit:429",
@@ -1851,27 +1905,27 @@
       "kind": "수입",
       "unit": "100g",
       "price": 328,
-      "prevPrice": 331,
-      "normalPrice": 328,
+      "prevPrice": 328,
+      "normalPrice": 326,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 344
         },
         {
-          "date": "2026-08-30",
-          "price": 319
-        },
-        {
-          "date": "2026-09-29",
-          "price": 331
+          "date": "2026-09-01",
+          "price": 324
         },
         {
           "date": "2026-09-30",
           "price": 328
+        },
+        {
+          "date": "2026-10-01",
+          "price": 328
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "fruit:675",
@@ -1883,28 +1937,28 @@
       "name": "파인애플",
       "kind": "수입",
       "unit": "1개",
-      "price": 7399,
-      "prevPrice": 7418,
-      "normalPrice": 7544,
+      "price": 7456,
+      "prevPrice": 7399,
+      "normalPrice": 7627,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 8089
+          "date": "2025-10-01",
+          "price": 8100
         },
         {
-          "date": "2026-08-30",
-          "price": 7395
-        },
-        {
-          "date": "2026-09-29",
-          "price": 7418
+          "date": "2026-09-01",
+          "price": 7386
         },
         {
           "date": "2026-09-30",
           "price": 7399
+        },
+        {
+          "date": "2026-10-01",
+          "price": 7456
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "fruit:606",
@@ -1916,28 +1970,28 @@
       "name": "레몬",
       "kind": "수입",
       "unit": "10개",
-      "price": 8160,
+      "price": 7820,
       "prevPrice": 8160,
-      "normalPrice": 9900,
+      "normalPrice": 10072,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 9729
+          "date": "2025-10-01",
+          "price": 9628
         },
         {
-          "date": "2026-08-30",
-          "price": 8940
-        },
-        {
-          "date": "2026-09-29",
-          "price": 8160
+          "date": "2026-09-01",
+          "price": 8938
         },
         {
           "date": "2026-09-30",
           "price": 8160
+        },
+        {
+          "date": "2026-10-01",
+          "price": 7820
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "fruit:677",
@@ -1949,28 +2003,28 @@
       "name": "망고",
       "kind": "수입",
       "unit": "1개",
-      "price": 7535,
-      "prevPrice": 7631,
-      "normalPrice": 7116,
+      "price": 7528,
+      "prevPrice": 7535,
+      "normalPrice": 6516,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 5997
+          "date": "2025-10-01",
+          "price": 5825
         },
         {
-          "date": "2026-08-30",
-          "price": 6373
-        },
-        {
-          "date": "2026-09-29",
-          "price": 7631
+          "date": "2026-09-01",
+          "price": 6607
         },
         {
           "date": "2026-09-30",
           "price": 7535
+        },
+        {
+          "date": "2026-10-01",
+          "price": 7528
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "fruit:2009",
@@ -1982,28 +2036,28 @@
       "name": "아보카도",
       "kind": "수입",
       "unit": "1개",
-      "price": 1837,
-      "prevPrice": 1825,
-      "normalPrice": 1982,
+      "price": 1893,
+      "prevPrice": 1837,
+      "normalPrice": 2008,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 1954
+          "date": "2025-10-01",
+          "price": 1967
         },
         {
-          "date": "2026-08-30",
-          "price": 1656
-        },
-        {
-          "date": "2026-09-29",
-          "price": 1825
+          "date": "2026-09-01",
+          "price": 1681
         },
         {
           "date": "2026-09-30",
           "price": 1837
+        },
+        {
+          "date": "2026-10-01",
+          "price": 1893
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "fruit:3226",
@@ -2016,19 +2070,19 @@
       "kind": "수입(냉동)",
       "unit": "1kg",
       "price": 11584,
-      "prevPrice": 11606,
+      "prevPrice": 11584,
       "normalPrice": 11584,
       "series": [
         {
-          "date": "2026-09-29",
-          "price": 11606
+          "date": "2026-09-30",
+          "price": 11584
         },
         {
-          "date": "2026-09-30",
+          "date": "2026-10-01",
           "price": 11584
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "fruit:3234",
@@ -2040,20 +2094,20 @@
       "name": "키위",
       "kind": "골드",
       "unit": "10개",
-      "price": 13890,
-      "prevPrice": 13627,
-      "normalPrice": 13890,
+      "price": 14168,
+      "prevPrice": 13890,
+      "normalPrice": 14168,
       "series": [
-        {
-          "date": "2026-09-29",
-          "price": 13627
-        },
         {
           "date": "2026-09-30",
           "price": 13890
+        },
+        {
+          "date": "2026-10-01",
+          "price": 14168
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "livestock:1",
@@ -2065,28 +2119,28 @@
       "name": "소",
       "kind": "안심(1++등급)",
       "unit": "100g",
-      "price": 19535,
-      "prevPrice": 19574,
-      "normalPrice": 14813,
+      "price": 19478,
+      "prevPrice": 19535,
+      "normalPrice": 14921,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 16216
+          "date": "2025-10-01",
+          "price": 16187
         },
         {
-          "date": "2026-08-30",
-          "price": 18208
+          "date": "2026-09-01",
+          "price": 18244
         },
         {
-          "date": "2026-09-29",
-          "price": 19574
-        },
-        {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 19535
+        },
+        {
+          "date": "2026-09-30",
+          "price": 19478
         }
       ],
-      "updatedAt": "2026-09-29"
+      "updatedAt": "2026-09-30"
     },
     {
       "id": "livestock:2",
@@ -2098,28 +2152,28 @@
       "name": "소",
       "kind": "안심(1+등급)",
       "unit": "100g",
-      "price": 17377,
-      "prevPrice": 17329,
-      "normalPrice": 14500,
+      "price": 17335,
+      "prevPrice": 17377,
+      "normalPrice": 14350,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 14026
+          "date": "2025-10-01",
+          "price": 14064
         },
         {
-          "date": "2026-08-30",
-          "price": 15104
+          "date": "2026-09-01",
+          "price": 15135
         },
         {
-          "date": "2026-09-29",
-          "price": 17329
-        },
-        {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 17377
+        },
+        {
+          "date": "2026-09-30",
+          "price": 17335
         }
       ],
-      "updatedAt": "2026-09-29"
+      "updatedAt": "2026-09-30"
     },
     {
       "id": "livestock:3",
@@ -2131,28 +2185,28 @@
       "name": "소",
       "kind": "안심(1등급)",
       "unit": "100g",
-      "price": 15924,
-      "prevPrice": 15960,
-      "normalPrice": 12790,
+      "price": 15912,
+      "prevPrice": 15924,
+      "normalPrice": 12994,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 12793
+          "date": "2025-10-01",
+          "price": 13533
         },
         {
-          "date": "2026-08-30",
-          "price": 14404
+          "date": "2026-09-01",
+          "price": 14380
         },
         {
-          "date": "2026-09-29",
-          "price": 15960
-        },
-        {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 15924
+        },
+        {
+          "date": "2026-09-30",
+          "price": 15912
         }
       ],
-      "updatedAt": "2026-09-29"
+      "updatedAt": "2026-09-30"
     },
     {
       "id": "livestock:1",
@@ -2164,28 +2218,28 @@
       "name": "소",
       "kind": "등심(1++등급)",
       "unit": "100g",
-      "price": 16494,
-      "prevPrice": 16468,
-      "normalPrice": 13498,
+      "price": 16525,
+      "prevPrice": 16494,
+      "normalPrice": 13479,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 14832
+          "date": "2025-10-01",
+          "price": 14809
         },
         {
-          "date": "2026-08-30",
-          "price": 15904
+          "date": "2026-09-01",
+          "price": 15968
         },
         {
-          "date": "2026-09-29",
-          "price": 16468
-        },
-        {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 16494
+        },
+        {
+          "date": "2026-09-30",
+          "price": 16525
         }
       ],
-      "updatedAt": "2026-09-29"
+      "updatedAt": "2026-09-30"
     },
     {
       "id": "livestock:2",
@@ -2197,28 +2251,28 @@
       "name": "소",
       "kind": "등심(1+등급)",
       "unit": "100g",
-      "price": 13909,
+      "price": 13891,
       "prevPrice": 13909,
-      "normalPrice": 11581,
+      "normalPrice": 11687,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 11496
+          "date": "2025-10-01",
+          "price": 11462
         },
         {
-          "date": "2026-08-30",
-          "price": 13170
+          "date": "2026-09-01",
+          "price": 13121
         },
         {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 13909
         },
         {
-          "date": "2026-09-29",
-          "price": 13909
+          "date": "2026-09-30",
+          "price": 13891
         }
       ],
-      "updatedAt": "2026-09-29"
+      "updatedAt": "2026-09-30"
     },
     {
       "id": "livestock:3",
@@ -2230,28 +2284,28 @@
       "name": "소",
       "kind": "등심(1등급)",
       "unit": "100g",
-      "price": 11472,
-      "prevPrice": 11464,
-      "normalPrice": 10071,
+      "price": 11474,
+      "prevPrice": 11472,
+      "normalPrice": 10243,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 10114
+          "date": "2025-10-01",
+          "price": 10509
         },
         {
-          "date": "2026-08-30",
-          "price": 11015
+          "date": "2026-09-01",
+          "price": 11082
         },
         {
-          "date": "2026-09-29",
-          "price": 11464
-        },
-        {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 11472
+        },
+        {
+          "date": "2026-09-30",
+          "price": 11474
         }
       ],
-      "updatedAt": "2026-09-29"
+      "updatedAt": "2026-09-30"
     },
     {
       "id": "livestock:1",
@@ -2263,28 +2317,28 @@
       "name": "소",
       "kind": "설도(1++등급)",
       "unit": "100g",
-      "price": 6163,
-      "prevPrice": 6172,
-      "normalPrice": 4693,
+      "price": 6171,
+      "prevPrice": 6163,
+      "normalPrice": 4674,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 5269
+          "date": "2025-10-01",
+          "price": 5244
         },
         {
-          "date": "2026-08-30",
-          "price": 6279
+          "date": "2026-09-01",
+          "price": 6305
         },
         {
-          "date": "2026-09-29",
-          "price": 6172
-        },
-        {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 6163
+        },
+        {
+          "date": "2026-09-30",
+          "price": 6171
         }
       ],
-      "updatedAt": "2026-09-29"
+      "updatedAt": "2026-09-30"
     },
     {
       "id": "livestock:2",
@@ -2296,28 +2350,28 @@
       "name": "소",
       "kind": "설도(1+등급)",
       "unit": "100g",
-      "price": 4530,
-      "prevPrice": 4508,
-      "normalPrice": 4462,
+      "price": 4513,
+      "prevPrice": 4530,
+      "normalPrice": 4459,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 4202
+          "date": "2025-10-01",
+          "price": 4198
         },
         {
-          "date": "2026-08-30",
-          "price": 5477
+          "date": "2026-09-01",
+          "price": 5476
         },
         {
-          "date": "2026-09-29",
-          "price": 4508
-        },
-        {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 4530
+        },
+        {
+          "date": "2026-09-30",
+          "price": 4513
         }
       ],
-      "updatedAt": "2026-09-29"
+      "updatedAt": "2026-09-30"
     },
     {
       "id": "livestock:3",
@@ -2329,28 +2383,28 @@
       "name": "소",
       "kind": "설도(1등급)",
       "unit": "100g",
-      "price": 4430,
-      "prevPrice": 4429,
-      "normalPrice": 4112,
+      "price": 4437,
+      "prevPrice": 4430,
+      "normalPrice": 4118,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 3989
+          "date": "2025-10-01",
+          "price": 3994
         },
         {
-          "date": "2026-08-30",
-          "price": 4611
+          "date": "2026-09-01",
+          "price": 4806
         },
         {
-          "date": "2026-09-29",
-          "price": 4429
-        },
-        {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 4430
+        },
+        {
+          "date": "2026-09-30",
+          "price": 4437
         }
       ],
-      "updatedAt": "2026-09-29"
+      "updatedAt": "2026-09-30"
     },
     {
       "id": "livestock:1",
@@ -2362,28 +2416,28 @@
       "name": "소",
       "kind": "양지(1++등급)",
       "unit": "100g",
-      "price": 7921,
-      "prevPrice": 7933,
-      "normalPrice": 6010,
+      "price": 7917,
+      "prevPrice": 7921,
+      "normalPrice": 6033,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 6993
+          "date": "2025-10-01",
+          "price": 6986
         },
         {
-          "date": "2026-08-30",
-          "price": 7639
+          "date": "2026-09-01",
+          "price": 7644
         },
         {
-          "date": "2026-09-29",
-          "price": 7933
-        },
-        {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 7921
+        },
+        {
+          "date": "2026-09-30",
+          "price": 7917
         }
       ],
-      "updatedAt": "2026-09-29"
+      "updatedAt": "2026-09-30"
     },
     {
       "id": "livestock:2",
@@ -2395,28 +2449,28 @@
       "name": "소",
       "kind": "양지(1+등급)",
       "unit": "100g",
-      "price": 5623,
-      "prevPrice": 5622,
-      "normalPrice": 5922,
+      "price": 5617,
+      "prevPrice": 5623,
+      "normalPrice": 5888,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 5696
+          "date": "2025-10-01",
+          "price": 5707
         },
         {
-          "date": "2026-08-30",
-          "price": 6897
+          "date": "2026-09-01",
+          "price": 6889
         },
         {
-          "date": "2026-09-29",
-          "price": 5622
-        },
-        {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 5623
+        },
+        {
+          "date": "2026-09-30",
+          "price": 5617
         }
       ],
-      "updatedAt": "2026-09-29"
+      "updatedAt": "2026-09-30"
     },
     {
       "id": "livestock:3",
@@ -2428,28 +2482,28 @@
       "name": "소",
       "kind": "양지(1등급)",
       "unit": "100g",
-      "price": 5880,
-      "prevPrice": 5488,
-      "normalPrice": 5435,
+      "price": 5905,
+      "prevPrice": 5880,
+      "normalPrice": 5420,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 5474
+          "date": "2025-10-01",
+          "price": 5392
         },
         {
-          "date": "2026-08-30",
-          "price": 5746
+          "date": "2026-09-01",
+          "price": 6081
         },
         {
-          "date": "2026-09-29",
-          "price": 5488
-        },
-        {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 5880
+        },
+        {
+          "date": "2026-09-30",
+          "price": 5905
         }
       ],
-      "updatedAt": "2026-09-29"
+      "updatedAt": "2026-09-30"
     },
     {
       "id": "livestock:1",
@@ -2463,26 +2517,26 @@
       "unit": "100g",
       "price": 9523,
       "prevPrice": 9523,
-      "normalPrice": 8405,
+      "normalPrice": 8467,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 7403
         },
         {
-          "date": "2026-08-30",
+          "date": "2026-09-01",
           "price": 8742
         },
         {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 9523
         },
         {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 9523
         }
       ],
-      "updatedAt": "2026-09-29"
+      "updatedAt": "2026-09-30"
     },
     {
       "id": "livestock:2",
@@ -2496,26 +2550,26 @@
       "unit": "100g",
       "price": 7321,
       "prevPrice": 7321,
-      "normalPrice": 6966,
+      "normalPrice": 6958,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 6970
         },
         {
-          "date": "2026-08-30",
+          "date": "2026-09-01",
           "price": 7312
         },
         {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 7321
         },
         {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 7321
         }
       ],
-      "updatedAt": "2026-09-29"
+      "updatedAt": "2026-09-30"
     },
     {
       "id": "livestock:3",
@@ -2529,26 +2583,26 @@
       "unit": "100g",
       "price": 7157,
       "prevPrice": 7157,
-      "normalPrice": 6613,
+      "normalPrice": 6598,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 6518
         },
         {
-          "date": "2026-08-30",
+          "date": "2026-09-01",
           "price": 6847
         },
         {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 7157
         },
         {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 7157
         }
       ],
-      "updatedAt": "2026-09-29"
+      "updatedAt": "2026-09-30"
     },
     {
       "id": "livestock:0",
@@ -2560,28 +2614,28 @@
       "name": "돼지",
       "kind": "앞다리",
       "unit": "100g",
-      "price": 1697,
+      "price": 1696,
       "prevPrice": 1697,
-      "normalPrice": 1476,
+      "normalPrice": 1471,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 1621
         },
         {
-          "date": "2026-08-30",
-          "price": 1573
+          "date": "2026-09-01",
+          "price": 1559
         },
         {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 1697
         },
         {
-          "date": "2026-09-29",
-          "price": 1697
+          "date": "2026-09-30",
+          "price": 1696
         }
       ],
-      "updatedAt": "2026-09-29"
+      "updatedAt": "2026-09-30"
     },
     {
       "id": "livestock:0",
@@ -2593,28 +2647,28 @@
       "name": "돼지",
       "kind": "삼겹살",
       "unit": "100g",
-      "price": 3046,
+      "price": 3066,
       "prevPrice": 3046,
-      "normalPrice": 1476,
+      "normalPrice": 1471,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 2824
+          "date": "2025-10-01",
+          "price": 2689
         },
         {
-          "date": "2026-08-30",
-          "price": 2839
+          "date": "2026-09-01",
+          "price": 2946
         },
         {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 3046
         },
         {
-          "date": "2026-09-29",
-          "price": 3046
+          "date": "2026-09-30",
+          "price": 3066
         }
       ],
-      "updatedAt": "2026-09-29"
+      "updatedAt": "2026-09-30"
     },
     {
       "id": "livestock:0",
@@ -2627,27 +2681,27 @@
       "kind": "갈비",
       "unit": "100g",
       "price": 1680,
-      "prevPrice": 1683,
-      "normalPrice": 1476,
+      "prevPrice": 1680,
+      "normalPrice": 1471,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 1624
+          "date": "2025-10-01",
+          "price": 1618
         },
         {
-          "date": "2026-08-30",
-          "price": 1531
+          "date": "2026-09-01",
+          "price": 1519
         },
         {
-          "date": "2026-09-29",
-          "price": 1683
+          "date": "2026-09-30",
+          "price": 1680
         },
         {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 1680
         }
       ],
-      "updatedAt": "2026-09-29"
+      "updatedAt": "2026-09-30"
     },
     {
       "id": "livestock:0",
@@ -2659,28 +2713,28 @@
       "name": "돼지",
       "kind": "목심",
       "unit": "100g",
-      "price": 2857,
-      "prevPrice": 2859,
-      "normalPrice": 1476,
+      "price": 2871,
+      "prevPrice": 2857,
+      "normalPrice": 1471,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 2668
+          "date": "2025-10-01",
+          "price": 2531
         },
         {
-          "date": "2026-08-30",
-          "price": 2718
+          "date": "2026-09-01",
+          "price": 2826
         },
         {
-          "date": "2026-09-29",
-          "price": 2859
-        },
-        {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 2857
+        },
+        {
+          "date": "2026-09-30",
+          "price": 2871
         }
       ],
-      "updatedAt": "2026-09-29"
+      "updatedAt": "2026-09-30"
     },
     {
       "id": "livestock:81",
@@ -2694,26 +2748,26 @@
       "unit": "100g",
       "price": 4314,
       "prevPrice": 4314,
-      "normalPrice": 4236,
+      "normalPrice": 4288,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 4281
+          "date": "2025-10-01",
+          "price": 4434
         },
         {
-          "date": "2026-08-30",
+          "date": "2026-09-01",
           "price": 4268
         },
         {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 4314
         },
         {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 4314
         }
       ],
-      "updatedAt": "2026-09-29"
+      "updatedAt": "2026-09-30"
     },
     {
       "id": "livestock:82",
@@ -2727,26 +2781,26 @@
       "unit": "100g",
       "price": 3990,
       "prevPrice": 3990,
-      "normalPrice": 4188,
+      "normalPrice": 4254,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 4154
+          "date": "2025-10-01",
+          "price": 4308
         },
         {
-          "date": "2026-08-30",
-          "price": 4192
+          "date": "2026-09-01",
+          "price": 4220
         },
         {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 3990
         },
         {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 3990
         }
       ],
-      "updatedAt": "2026-09-29"
+      "updatedAt": "2026-09-30"
     },
     {
       "id": "livestock:81",
@@ -2760,26 +2814,26 @@
       "unit": "100g",
       "price": 5587,
       "prevPrice": 5587,
-      "normalPrice": 4616,
+      "normalPrice": 4614,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 5043
         },
         {
-          "date": "2026-08-30",
+          "date": "2026-09-01",
           "price": 4681
         },
         {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 5587
         },
         {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 5587
         }
       ],
-      "updatedAt": "2026-09-29"
+      "updatedAt": "2026-09-30"
     },
     {
       "id": "livestock:82",
@@ -2793,26 +2847,26 @@
       "unit": "100g",
       "price": 5714,
       "prevPrice": 5714,
-      "normalPrice": 4825,
+      "normalPrice": 4863,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 5494
         },
         {
-          "date": "2026-08-30",
+          "date": "2026-09-01",
           "price": 5579
         },
         {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 5714
         },
         {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 5714
         }
       ],
-      "updatedAt": "2026-09-29"
+      "updatedAt": "2026-09-30"
     },
     {
       "id": "livestock:0",
@@ -2824,28 +2878,28 @@
       "name": "수입 돼지고기",
       "kind": "삼겹살",
       "unit": "100g",
-      "price": 1519,
+      "price": 1521,
       "prevPrice": 1519,
-      "normalPrice": 1487,
+      "normalPrice": 1494,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 1539
+          "date": "2025-10-01",
+          "price": 1542
         },
         {
-          "date": "2026-08-30",
-          "price": 1530
+          "date": "2026-09-01",
+          "price": 1526
         },
         {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 1519
         },
         {
-          "date": "2026-09-29",
-          "price": 1519
+          "date": "2026-09-30",
+          "price": 1521
         }
       ],
-      "updatedAt": "2026-09-29"
+      "updatedAt": "2026-09-30"
     },
     {
       "id": "livestock:0",
@@ -2857,28 +2911,28 @@
       "name": "닭",
       "kind": "육계(kg)",
       "unit": "1kg",
-      "price": 5456,
-      "prevPrice": 5462,
-      "normalPrice": 7861,
+      "price": 5678,
+      "prevPrice": 5456,
+      "normalPrice": 7945,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 5635
         },
         {
-          "date": "2026-08-30",
-          "price": 5695
+          "date": "2026-09-01",
+          "price": 5697
         },
         {
-          "date": "2026-09-29",
-          "price": 5462
-        },
-        {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 5456
+        },
+        {
+          "date": "2026-09-30",
+          "price": 5678
         }
       ],
-      "updatedAt": "2026-09-29"
+      "updatedAt": "2026-09-30"
     },
     {
       "id": "livestock:71",
@@ -2890,28 +2944,28 @@
       "name": "계란",
       "kind": "특란10구(일반란)",
       "unit": "10구",
-      "price": 4208,
-      "prevPrice": 4207,
-      "normalPrice": 3519,
+      "price": 4209,
+      "prevPrice": 4208,
+      "normalPrice": 3592,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 3840
+          "date": "2025-10-01",
+          "price": 3834
         },
         {
-          "date": "2026-08-30",
-          "price": 4214
+          "date": "2026-09-01",
+          "price": 4188
         },
         {
-          "date": "2026-09-29",
-          "price": 4207
-        },
-        {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 4208
+        },
+        {
+          "date": "2026-09-30",
+          "price": 4209
         }
       ],
-      "updatedAt": "2026-09-29"
+      "updatedAt": "2026-09-30"
     },
     {
       "id": "livestock:71",
@@ -2924,27 +2978,27 @@
       "kind": "특란30구(일반란)",
       "unit": "30구",
       "price": 6882,
-      "prevPrice": 6885,
-      "normalPrice": 6452,
+      "prevPrice": 6882,
+      "normalPrice": 6449,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 6389
         },
         {
-          "date": "2026-08-30",
+          "date": "2026-09-01",
           "price": 7335
         },
         {
-          "date": "2026-09-29",
-          "price": 6885
+          "date": "2026-09-30",
+          "price": 6882
         },
         {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 6882
         }
       ],
-      "updatedAt": "2026-09-29"
+      "updatedAt": "2026-09-30"
     },
     {
       "id": "livestock:0",
@@ -2957,27 +3011,27 @@
       "kind": "흰우유",
       "unit": "1L",
       "price": 2981,
-      "prevPrice": 2982,
-      "normalPrice": 2917,
+      "prevPrice": 2981,
+      "normalPrice": 2908,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 2903
         },
         {
-          "date": "2026-08-30",
-          "price": 2973
+          "date": "2026-09-01",
+          "price": 2970
         },
         {
-          "date": "2026-09-29",
-          "price": 2982
+          "date": "2026-09-30",
+          "price": 2981
         },
         {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 2981
         }
       ],
-      "updatedAt": "2026-09-29"
+      "updatedAt": "2026-09-30"
     },
     {
       "id": "seafood:464",
@@ -2989,28 +3043,28 @@
       "name": "고등어",
       "kind": "국산(염장)(-)",
       "unit": "1손",
-      "price": 5288,
-      "prevPrice": 5375,
-      "normalPrice": 4591,
+      "price": 5273,
+      "prevPrice": 5288,
+      "normalPrice": 4821,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 6637
+          "date": "2025-10-01",
+          "price": 6623
         },
         {
-          "date": "2026-08-30",
-          "price": 5945
-        },
-        {
-          "date": "2026-09-29",
-          "price": 5375
+          "date": "2026-09-01",
+          "price": 5824
         },
         {
           "date": "2026-09-30",
           "price": 5288
+        },
+        {
+          "date": "2026-10-01",
+          "price": 5273
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:2101",
@@ -3023,27 +3077,27 @@
       "kind": "국산(신선 냉장)(中)",
       "unit": "1마리",
       "price": 3216,
-      "prevPrice": 3403,
-      "normalPrice": 4591,
+      "prevPrice": 3216,
+      "normalPrice": 4821,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 3348
+          "date": "2025-10-01",
+          "price": 3329
         },
         {
-          "date": "2026-08-30",
-          "price": 3260
-        },
-        {
-          "date": "2026-09-29",
-          "price": 3403
+          "date": "2026-09-01",
+          "price": 3326
         },
         {
           "date": "2026-09-30",
           "price": 3216
+        },
+        {
+          "date": "2026-10-01",
+          "price": 3216
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:2100",
@@ -3055,28 +3109,28 @@
       "name": "고등어",
       "kind": "국산(신선 냉장)(大)",
       "unit": "1마리",
-      "price": 4294,
-      "prevPrice": 4317,
-      "normalPrice": 4591,
+      "price": 4202,
+      "prevPrice": 4294,
+      "normalPrice": 4821,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 4258
+          "date": "2025-10-01",
+          "price": 4352
         },
         {
-          "date": "2026-08-30",
-          "price": 4186
-        },
-        {
-          "date": "2026-09-29",
-          "price": 4317
+          "date": "2026-09-01",
+          "price": 4195
         },
         {
           "date": "2026-09-30",
           "price": 4294
+        },
+        {
+          "date": "2026-10-01",
+          "price": 4202
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:2810",
@@ -3088,28 +3142,28 @@
       "name": "고등어",
       "kind": "수입산(염장)(大)",
       "unit": "1손",
-      "price": 12158,
-      "prevPrice": 11985,
-      "normalPrice": 4591,
+      "price": 12773,
+      "prevPrice": 12158,
+      "normalPrice": 4821,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 10124
+          "date": "2025-10-01",
+          "price": 10185
         },
         {
-          "date": "2026-08-30",
-          "price": 11619
-        },
-        {
-          "date": "2026-09-29",
-          "price": 11985
+          "date": "2026-09-01",
+          "price": 11617
         },
         {
           "date": "2026-09-30",
           "price": 12158
+        },
+        {
+          "date": "2026-10-01",
+          "price": 12773
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:2111",
@@ -3121,28 +3175,28 @@
       "name": "갈치",
       "kind": "국산(냉동)(中)",
       "unit": "1마리",
-      "price": 4810,
-      "prevPrice": 4739,
-      "normalPrice": 14228,
+      "price": 5524,
+      "prevPrice": 4810,
+      "normalPrice": 14348,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 4518
+          "date": "2025-10-01",
+          "price": 4464
         },
         {
-          "date": "2026-08-30",
-          "price": 5338
-        },
-        {
-          "date": "2026-09-29",
-          "price": 4739
+          "date": "2026-09-01",
+          "price": 5328
         },
         {
           "date": "2026-09-30",
           "price": 4810
+        },
+        {
+          "date": "2026-10-01",
+          "price": 5524
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:2806",
@@ -3154,28 +3208,28 @@
       "name": "갈치",
       "kind": "국산(냉장)(大)",
       "unit": "1마리",
-      "price": 13459,
-      "prevPrice": 13682,
-      "normalPrice": 14228,
+      "price": 13833,
+      "prevPrice": 13459,
+      "normalPrice": 14348,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 12153
+          "date": "2025-10-01",
+          "price": 12619
         },
         {
-          "date": "2026-08-30",
-          "price": 14038
-        },
-        {
-          "date": "2026-09-29",
-          "price": 13682
+          "date": "2026-09-01",
+          "price": 14257
         },
         {
           "date": "2026-09-30",
           "price": 13459
+        },
+        {
+          "date": "2026-10-01",
+          "price": 13833
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:2110",
@@ -3187,28 +3241,28 @@
       "name": "갈치",
       "kind": "국산(냉장)(小)",
       "unit": "1마리",
-      "price": 4745,
-      "prevPrice": 4353,
-      "normalPrice": 14228,
+      "price": 4766,
+      "prevPrice": 4745,
+      "normalPrice": 14348,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 3798
+          "date": "2025-10-01",
+          "price": 3930
         },
         {
-          "date": "2026-08-30",
-          "price": 4436
-        },
-        {
-          "date": "2026-09-29",
-          "price": 4353
+          "date": "2026-09-01",
+          "price": 4312
         },
         {
           "date": "2026-09-30",
           "price": 4745
+        },
+        {
+          "date": "2026-10-01",
+          "price": 4766
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:2807",
@@ -3220,24 +3274,24 @@
       "name": "갈치",
       "kind": "국산(냉동)(大)",
       "unit": "1마리",
-      "price": 10367,
-      "prevPrice": 10209,
-      "normalPrice": 14228,
+      "price": 11783,
+      "prevPrice": 10367,
+      "normalPrice": 14348,
       "series": [
         {
-          "date": "2026-08-30",
-          "price": 10873
-        },
-        {
-          "date": "2026-09-29",
-          "price": 10209
+          "date": "2026-09-01",
+          "price": 10883
         },
         {
           "date": "2026-09-30",
           "price": 10367
+        },
+        {
+          "date": "2026-10-01",
+          "price": 11783
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:2109",
@@ -3249,28 +3303,28 @@
       "name": "갈치",
       "kind": "국산(냉장)(中)",
       "unit": "1마리",
-      "price": 7520,
-      "prevPrice": 7401,
-      "normalPrice": 14228,
+      "price": 7740,
+      "prevPrice": 7520,
+      "normalPrice": 14348,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 6483
+          "date": "2025-10-01",
+          "price": 6608
         },
         {
-          "date": "2026-08-30",
-          "price": 7480
-        },
-        {
-          "date": "2026-09-29",
-          "price": 7401
+          "date": "2026-09-01",
+          "price": 7468
         },
         {
           "date": "2026-09-30",
           "price": 7520
+        },
+        {
+          "date": "2026-10-01",
+          "price": 7740
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:2121",
@@ -3282,28 +3336,28 @@
       "name": "조기",
       "kind": "참조기(냉동)(中)",
       "unit": "1마리",
-      "price": 1665,
-      "prevPrice": 1637,
-      "normalPrice": 1691,
+      "price": 1656,
+      "prevPrice": 1665,
+      "normalPrice": 1752,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 2109
+          "date": "2025-10-01",
+          "price": 2094
         },
         {
-          "date": "2026-08-30",
-          "price": 1747
-        },
-        {
-          "date": "2026-09-29",
-          "price": 1637
+          "date": "2026-09-01",
+          "price": 1744
         },
         {
           "date": "2026-09-30",
           "price": 1665
+        },
+        {
+          "date": "2026-10-01",
+          "price": 1656
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:2122",
@@ -3315,28 +3369,28 @@
       "name": "조기",
       "kind": "참조기(냉동)(小)",
       "unit": "1마리",
-      "price": 1340,
-      "prevPrice": 1405,
-      "normalPrice": 1691,
+      "price": 1454,
+      "prevPrice": 1340,
+      "normalPrice": 1752,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 1215
+          "date": "2025-10-01",
+          "price": 1230
         },
         {
-          "date": "2026-08-30",
+          "date": "2026-09-01",
           "price": 1496
-        },
-        {
-          "date": "2026-09-29",
-          "price": 1405
         },
         {
           "date": "2026-09-30",
           "price": 1340
+        },
+        {
+          "date": "2026-10-01",
+          "price": 1454
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:2811",
@@ -3348,28 +3402,28 @@
       "name": "조기",
       "kind": "굴비(中)",
       "unit": "1마리",
-      "price": 2271,
-      "prevPrice": 2244,
-      "normalPrice": 1691,
+      "price": 3110,
+      "prevPrice": 2271,
+      "normalPrice": 1752,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 2378
+          "date": "2025-10-01",
+          "price": 2350
         },
         {
-          "date": "2026-08-30",
-          "price": 3239
-        },
-        {
-          "date": "2026-09-29",
-          "price": 2244
+          "date": "2026-09-01",
+          "price": 3219
         },
         {
           "date": "2026-09-30",
           "price": 2271
+        },
+        {
+          "date": "2026-10-01",
+          "price": 3110
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:479",
@@ -3381,28 +3435,28 @@
       "name": "수입조기",
       "kind": "부세수입(냉동)",
       "unit": "1마리",
-      "price": 4965,
+      "price": 4914,
       "prevPrice": 4965,
-      "normalPrice": 3903,
+      "normalPrice": 3892,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 4697
+          "date": "2025-10-01",
+          "price": 4690
         },
         {
-          "date": "2026-08-30",
-          "price": 4577
-        },
-        {
-          "date": "2026-09-29",
-          "price": 4965
+          "date": "2026-09-01",
+          "price": 4581
         },
         {
           "date": "2026-09-30",
           "price": 4965
+        },
+        {
+          "date": "2026-10-01",
+          "price": 4914
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:2117",
@@ -3414,28 +3468,28 @@
       "name": "명태",
       "kind": "냉동(원양수입통합)(大)",
       "unit": "1마리",
-      "price": 3649,
-      "prevPrice": 3677,
-      "normalPrice": 3694,
+      "price": 4212,
+      "prevPrice": 3649,
+      "normalPrice": 3843,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 3636
+          "date": "2025-10-01",
+          "price": 3619
         },
         {
-          "date": "2026-08-30",
-          "price": 4187
-        },
-        {
-          "date": "2026-09-29",
-          "price": 3677
+          "date": "2026-09-01",
+          "price": 4189
         },
         {
           "date": "2026-09-30",
           "price": 3649
+        },
+        {
+          "date": "2026-10-01",
+          "price": 4212
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:2745",
@@ -3447,28 +3501,28 @@
       "name": "명태",
       "kind": "냉동가공(中)",
       "unit": "1kg",
-      "price": 6922,
-      "prevPrice": 6678,
-      "normalPrice": 3694,
+      "price": 7587,
+      "prevPrice": 6922,
+      "normalPrice": 3843,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 9174
+          "date": "2025-10-01",
+          "price": 9311
         },
         {
-          "date": "2026-08-30",
-          "price": 7426
-        },
-        {
-          "date": "2026-09-29",
-          "price": 6678
+          "date": "2026-09-01",
+          "price": 7453
         },
         {
           "date": "2026-09-30",
           "price": 6922
+        },
+        {
+          "date": "2026-10-01",
+          "price": 7587
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:2118",
@@ -3482,22 +3536,22 @@
       "unit": "1마리",
       "price": 2763,
       "prevPrice": 2763,
-      "normalPrice": 3694,
+      "normalPrice": 3843,
       "series": [
         {
-          "date": "2026-08-30",
-          "price": 2724
-        },
-        {
-          "date": "2026-09-29",
-          "price": 2763
+          "date": "2026-09-01",
+          "price": 2728
         },
         {
           "date": "2026-09-30",
           "price": 2763
+        },
+        {
+          "date": "2026-10-01",
+          "price": 2763
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:2099",
@@ -3509,61 +3563,28 @@
       "name": "물오징어",
       "kind": "원양(냉동)(小)",
       "unit": "1마리",
-      "price": 3519,
-      "prevPrice": 3472,
-      "normalPrice": 5577,
+      "price": 3513,
+      "prevPrice": 3519,
+      "normalPrice": 6299,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 2827
+          "date": "2025-10-01",
+          "price": 2893
         },
         {
-          "date": "2026-08-30",
-          "price": 3787
-        },
-        {
-          "date": "2026-09-29",
-          "price": 3472
+          "date": "2026-09-01",
+          "price": 3784
         },
         {
           "date": "2026-09-30",
           "price": 3519
+        },
+        {
+          "date": "2026-10-01",
+          "price": 3513
         }
       ],
-      "updatedAt": "2026-09-30"
-    },
-    {
-      "id": "seafood:2095",
-      "category": "seafood",
-      "categoryCode": "600",
-      "itemCode": "619",
-      "kindCode": null,
-      "rankCode": null,
-      "name": "물오징어",
-      "kind": "연근해(신선 냉장)(中)",
-      "unit": "1마리",
-      "price": 4597,
-      "prevPrice": 4531,
-      "normalPrice": 5577,
-      "series": [
-        {
-          "date": "2025-09-30",
-          "price": 4297
-        },
-        {
-          "date": "2026-08-30",
-          "price": 4366
-        },
-        {
-          "date": "2026-09-29",
-          "price": 4531
-        },
-        {
-          "date": "2026-09-30",
-          "price": 4597
-        }
-      ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:2098",
@@ -3575,28 +3596,28 @@
       "name": "물오징어",
       "kind": "원양(냉동)(中)",
       "unit": "1마리",
-      "price": 5196,
-      "prevPrice": 5046,
-      "normalPrice": 5577,
+      "price": 5348,
+      "prevPrice": 5196,
+      "normalPrice": 6299,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 4587
+          "date": "2025-10-01",
+          "price": 4639
         },
         {
-          "date": "2026-08-30",
-          "price": 5270
-        },
-        {
-          "date": "2026-09-29",
-          "price": 5046
+          "date": "2026-09-01",
+          "price": 5225
         },
         {
           "date": "2026-09-30",
           "price": 5196
+        },
+        {
+          "date": "2026-10-01",
+          "price": 5348
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:2097",
@@ -3608,20 +3629,20 @@
       "name": "물오징어",
       "kind": "연근해(냉동)(中)",
       "unit": "1마리",
-      "price": 3825,
-      "prevPrice": 3750,
-      "normalPrice": 5577,
+      "price": 4816,
+      "prevPrice": 3825,
+      "normalPrice": 6299,
       "series": [
-        {
-          "date": "2026-09-29",
-          "price": 3750
-        },
         {
           "date": "2026-09-30",
           "price": 3825
+        },
+        {
+          "date": "2026-10-01",
+          "price": 4816
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:2094",
@@ -3633,28 +3654,28 @@
       "name": "물오징어",
       "kind": "연근해(신선 냉장)(大)",
       "unit": "1마리",
-      "price": 5870,
-      "prevPrice": 5895,
-      "normalPrice": 5577,
+      "price": 6457,
+      "prevPrice": 5870,
+      "normalPrice": 6299,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 6222
+          "date": "2025-10-01",
+          "price": 6351
         },
         {
-          "date": "2026-08-30",
-          "price": 5147
-        },
-        {
-          "date": "2026-09-29",
-          "price": 5895
+          "date": "2026-09-01",
+          "price": 5206
         },
         {
           "date": "2026-09-30",
           "price": 5870
+        },
+        {
+          "date": "2026-10-01",
+          "price": 6457
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:2815",
@@ -3666,28 +3687,28 @@
       "name": "마른멸치",
       "kind": "마른멸치",
       "unit": "100g",
-      "price": 3331,
-      "prevPrice": 3269,
-      "normalPrice": 2318,
+      "price": 3526,
+      "prevPrice": 3331,
+      "normalPrice": 2324,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 3056
+          "date": "2025-10-01",
+          "price": 3077
         },
         {
-          "date": "2026-08-30",
-          "price": 3493
-        },
-        {
-          "date": "2026-09-29",
-          "price": 3269
+          "date": "2026-09-01",
+          "price": 3491
         },
         {
           "date": "2026-09-30",
           "price": 3331
+        },
+        {
+          "date": "2026-10-01",
+          "price": 3526
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:2814",
@@ -3699,28 +3720,28 @@
       "name": "마른멸치",
       "kind": "마른멸치",
       "unit": "100g",
-      "price": 2494,
-      "prevPrice": 2450,
-      "normalPrice": 2318,
+      "price": 2614,
+      "prevPrice": 2494,
+      "normalPrice": 2324,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 2325
+          "date": "2025-10-01",
+          "price": 2338
         },
         {
-          "date": "2026-08-30",
-          "price": 2617
-        },
-        {
-          "date": "2026-09-29",
-          "price": 2450
+          "date": "2026-09-01",
+          "price": 2624
         },
         {
           "date": "2026-09-30",
           "price": 2494
+        },
+        {
+          "date": "2026-10-01",
+          "price": 2614
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:473",
@@ -3732,28 +3753,28 @@
       "name": "마른멸치",
       "kind": "마른멸치",
       "unit": "100g",
-      "price": 2826,
-      "prevPrice": 2771,
-      "normalPrice": 2318,
+      "price": 3011,
+      "prevPrice": 2826,
+      "normalPrice": 2324,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 2834
+          "date": "2025-10-01",
+          "price": 2857
         },
         {
-          "date": "2026-08-30",
-          "price": 2721
-        },
-        {
-          "date": "2026-09-29",
-          "price": 2771
+          "date": "2026-09-01",
+          "price": 2776
         },
         {
           "date": "2026-09-30",
           "price": 2826
+        },
+        {
+          "date": "2026-10-01",
+          "price": 3011
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:474",
@@ -3765,28 +3786,28 @@
       "name": "마른오징어",
       "kind": "마른오징어",
       "unit": "10마리",
-      "price": 74894,
+      "price": 77429,
       "prevPrice": 74894,
-      "normalPrice": 68101,
+      "normalPrice": 69048,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 71920
+          "date": "2025-10-01",
+          "price": 72754
         },
         {
-          "date": "2026-08-30",
-          "price": 82865
-        },
-        {
-          "date": "2026-09-29",
-          "price": 74894
+          "date": "2026-09-01",
+          "price": 82862
         },
         {
           "date": "2026-09-30",
           "price": 74894
+        },
+        {
+          "date": "2026-10-01",
+          "price": 77429
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:475",
@@ -3798,28 +3819,28 @@
       "name": "김",
       "kind": "마른김",
       "unit": "10장",
-      "price": 1439,
+      "price": 1432,
       "prevPrice": 1439,
-      "normalPrice": 1092,
+      "normalPrice": 1097,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 1350
         },
         {
-          "date": "2026-08-30",
-          "price": 1439
-        },
-        {
-          "date": "2026-09-29",
+          "date": "2026-09-01",
           "price": 1439
         },
         {
           "date": "2026-09-30",
           "price": 1439
+        },
+        {
+          "date": "2026-10-01",
+          "price": 1432
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:1017",
@@ -3831,28 +3852,28 @@
       "name": "김",
       "kind": "구운김",
       "unit": "10장",
-      "price": 2099,
+      "price": 2074,
       "prevPrice": 2099,
-      "normalPrice": 1092,
+      "normalPrice": 1097,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 2054
+          "date": "2025-10-01",
+          "price": 2037
         },
         {
-          "date": "2026-08-30",
-          "price": 2078
-        },
-        {
-          "date": "2026-09-29",
-          "price": 2099
+          "date": "2026-09-01",
+          "price": 2079
         },
         {
           "date": "2026-09-30",
           "price": 2099
+        },
+        {
+          "date": "2026-10-01",
+          "price": 2074
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:476",
@@ -3864,28 +3885,28 @@
       "name": "마른미역",
       "kind": "마른미역",
       "unit": "100g",
-      "price": 3088,
+      "price": 3096,
       "prevPrice": 3088,
-      "normalPrice": 3025,
+      "normalPrice": 3034,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 3034
         },
         {
-          "date": "2026-08-30",
-          "price": 3080
-        },
-        {
-          "date": "2026-09-29",
-          "price": 3088
+          "date": "2026-09-01",
+          "price": 3069
         },
         {
           "date": "2026-09-30",
           "price": 3088
+        },
+        {
+          "date": "2026-10-01",
+          "price": 3096
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:683",
@@ -3897,28 +3918,28 @@
       "name": "새우젓",
       "kind": "새우젓",
       "unit": "1kg",
-      "price": 18044,
-      "prevPrice": 17908,
-      "normalPrice": 16966,
+      "price": 18459,
+      "prevPrice": 18044,
+      "normalPrice": 16676,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 15429
+          "date": "2025-10-01",
+          "price": 15276
         },
         {
-          "date": "2026-08-30",
-          "price": 17569
-        },
-        {
-          "date": "2026-09-29",
-          "price": 17908
+          "date": "2026-09-01",
+          "price": 17646
         },
         {
           "date": "2026-09-30",
           "price": 18044
+        },
+        {
+          "date": "2026-10-01",
+          "price": 18459
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:684",
@@ -3930,28 +3951,28 @@
       "name": "멸치액젓",
       "kind": "멸치액젓",
       "unit": "1kg",
-      "price": 6191,
-      "prevPrice": 6198,
-      "normalPrice": 5600,
+      "price": 6227,
+      "prevPrice": 6191,
+      "normalPrice": 5597,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 6043
+          "date": "2025-10-01",
+          "price": 6053
         },
         {
-          "date": "2026-08-30",
-          "price": 6273
-        },
-        {
-          "date": "2026-09-29",
-          "price": 6198
+          "date": "2026-09-01",
+          "price": 6276
         },
         {
           "date": "2026-09-30",
           "price": 6191
+        },
+        {
+          "date": "2026-10-01",
+          "price": 6227
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:685",
@@ -3963,28 +3984,28 @@
       "name": "천일염",
       "kind": "천일염",
       "unit": "5kg",
-      "price": 12042,
-      "prevPrice": 12039,
-      "normalPrice": 11340,
+      "price": 12040,
+      "prevPrice": 12042,
+      "normalPrice": 11420,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 11724
+          "date": "2025-10-01",
+          "price": 11691
         },
         {
-          "date": "2026-08-30",
-          "price": 11955
-        },
-        {
-          "date": "2026-09-29",
-          "price": 12039
+          "date": "2026-09-01",
+          "price": 11925
         },
         {
           "date": "2026-09-30",
           "price": 12042
+        },
+        {
+          "date": "2026-10-01",
+          "price": 12040
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:949",
@@ -3996,28 +4017,28 @@
       "name": "꽁치",
       "kind": "냉동(수입)",
       "unit": "5마리",
-      "price": 7093,
-      "prevPrice": 7079,
-      "normalPrice": 6597,
+      "price": 7232,
+      "prevPrice": 7093,
+      "normalPrice": 6558,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 6759
+          "date": "2025-10-01",
+          "price": 6757
         },
         {
-          "date": "2026-08-30",
-          "price": 7171
-        },
-        {
-          "date": "2026-09-29",
-          "price": 7079
+          "date": "2026-09-01",
+          "price": 7166
         },
         {
           "date": "2026-09-30",
           "price": 7093
+        },
+        {
+          "date": "2026-10-01",
+          "price": 7232
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:940",
@@ -4029,28 +4050,28 @@
       "name": "전복",
       "kind": "냉장",
       "unit": "5마리",
-      "price": 10645,
-      "prevPrice": 10495,
-      "normalPrice": 13144,
+      "price": 10996,
+      "prevPrice": 10645,
+      "normalPrice": 13290,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 10939
+          "date": "2025-10-01",
+          "price": 10976
         },
         {
-          "date": "2026-08-30",
-          "price": 10237
-        },
-        {
-          "date": "2026-09-29",
-          "price": 10495
+          "date": "2026-09-01",
+          "price": 10053
         },
         {
           "date": "2026-09-30",
           "price": 10645
+        },
+        {
+          "date": "2026-10-01",
+          "price": 10996
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:941",
@@ -4062,28 +4083,28 @@
       "name": "새우",
       "kind": "흰다리(수입)",
       "unit": "10마리",
-      "price": 5639,
-      "prevPrice": 5721,
-      "normalPrice": 4804,
+      "price": 5531,
+      "prevPrice": 5639,
+      "normalPrice": 4888,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 5548
+          "date": "2025-10-01",
+          "price": 5546
         },
         {
-          "date": "2026-08-30",
-          "price": 5731
-        },
-        {
-          "date": "2026-09-29",
-          "price": 5721
+          "date": "2026-09-01",
+          "price": 5672
         },
         {
           "date": "2026-09-30",
           "price": 5639
+        },
+        {
+          "date": "2026-10-01",
+          "price": 5531
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:2890",
@@ -4095,28 +4116,28 @@
       "name": "건다시마",
       "kind": "완도산",
       "unit": "100g",
-      "price": 3241,
+      "price": 3239,
       "prevPrice": 3241,
-      "normalPrice": 3473,
+      "normalPrice": 3477,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 3199
+          "date": "2025-10-01",
+          "price": 3196
         },
         {
-          "date": "2026-08-30",
-          "price": 3236
-        },
-        {
-          "date": "2026-09-29",
-          "price": 3241
+          "date": "2026-09-01",
+          "price": 3237
         },
         {
           "date": "2026-09-30",
           "price": 3241
+        },
+        {
+          "date": "2026-10-01",
+          "price": 3239
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:3028",
@@ -4128,28 +4149,28 @@
       "name": "바지락",
       "kind": "냉장",
       "unit": "1kg",
-      "price": 9814,
+      "price": 9871,
       "prevPrice": 9814,
-      "normalPrice": 11059,
+      "normalPrice": 10789,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 10989
+          "date": "2025-10-01",
+          "price": 10878
         },
         {
-          "date": "2026-08-30",
-          "price": 10874
-        },
-        {
-          "date": "2026-09-29",
-          "price": 9814
+          "date": "2026-09-01",
+          "price": 10657
         },
         {
           "date": "2026-09-30",
           "price": 9814
+        },
+        {
+          "date": "2026-10-01",
+          "price": 9871
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:3026",
@@ -4161,28 +4182,28 @@
       "name": "고등어필렛",
       "kind": "수입",
       "unit": "1kg",
-      "price": 21535,
+      "price": 21377,
       "prevPrice": 21535,
-      "normalPrice": 19389,
+      "normalPrice": 19021,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 19598
+          "date": "2025-10-01",
+          "price": 19184
         },
         {
-          "date": "2026-08-30",
-          "price": 20412
-        },
-        {
-          "date": "2026-09-29",
-          "price": 21535
+          "date": "2026-09-01",
+          "price": 20915
         },
         {
           "date": "2026-09-30",
           "price": 21535
+        },
+        {
+          "date": "2026-10-01",
+          "price": 21377
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:3027",
@@ -4194,28 +4215,28 @@
       "name": "고등어필렛",
       "kind": "국산",
       "unit": "1kg",
-      "price": 18321,
-      "prevPrice": 18100,
-      "normalPrice": 19389,
+      "price": 19145,
+      "prevPrice": 18321,
+      "normalPrice": 19021,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 18911
+          "date": "2025-10-01",
+          "price": 19782
         },
         {
-          "date": "2026-08-30",
-          "price": 18021
-        },
-        {
-          "date": "2026-09-29",
-          "price": 18100
+          "date": "2026-09-01",
+          "price": 17978
         },
         {
           "date": "2026-09-30",
           "price": 18321
+        },
+        {
+          "date": "2026-10-01",
+          "price": 19145
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:2894",
@@ -4227,28 +4248,28 @@
       "name": "홍합",
       "kind": "깐홍합(냉장)",
       "unit": "100g",
-      "price": 2684,
-      "prevPrice": 2553,
-      "normalPrice": 2878,
+      "price": 2784,
+      "prevPrice": 2684,
+      "normalPrice": 2899,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 3057
+          "date": "2025-10-01",
+          "price": 2929
         },
         {
-          "date": "2026-08-30",
-          "price": 2805
-        },
-        {
-          "date": "2026-09-29",
-          "price": 2553
+          "date": "2026-09-01",
+          "price": 2807
         },
         {
           "date": "2026-09-30",
           "price": 2684
+        },
+        {
+          "date": "2026-10-01",
+          "price": 2784
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:2896",
@@ -4260,28 +4281,28 @@
       "name": "홍합",
       "kind": "안깐홍합(냉장)",
       "unit": "1kg",
-      "price": 3663,
-      "prevPrice": 3613,
-      "normalPrice": 2878,
+      "price": 3848,
+      "prevPrice": 3663,
+      "normalPrice": 2899,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 4474
+          "date": "2025-10-01",
+          "price": 4459
         },
         {
-          "date": "2026-08-30",
-          "price": 3703
-        },
-        {
-          "date": "2026-09-29",
-          "price": 3613
+          "date": "2026-09-01",
+          "price": 3702
         },
         {
           "date": "2026-09-30",
           "price": 3663
+        },
+        {
+          "date": "2026-10-01",
+          "price": 3848
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:3021",
@@ -4293,24 +4314,24 @@
       "name": "삼치",
       "kind": "냉장",
       "unit": "1마리",
-      "price": 8550,
-      "prevPrice": 9419,
-      "normalPrice": 8616,
+      "price": 8725,
+      "prevPrice": 8550,
+      "normalPrice": 9646,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 8936
-        },
-        {
-          "date": "2026-09-29",
-          "price": 9419
+          "date": "2025-10-01",
+          "price": 9342
         },
         {
           "date": "2026-09-30",
           "price": 8550
+        },
+        {
+          "date": "2026-10-01",
+          "price": 8725
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:3141",
@@ -4322,24 +4343,24 @@
       "name": "낙지",
       "kind": "수입(냉동)",
       "unit": "100g",
-      "price": 2336,
-      "prevPrice": 2343,
-      "normalPrice": 2288,
+      "price": 2070,
+      "prevPrice": 2336,
+      "normalPrice": 2231,
       "series": [
         {
-          "date": "2026-08-30",
-          "price": 2288
-        },
-        {
-          "date": "2026-09-29",
-          "price": 2343
+          "date": "2026-09-01",
+          "price": 2231
         },
         {
           "date": "2026-09-30",
           "price": 2336
+        },
+        {
+          "date": "2026-10-01",
+          "price": 2070
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:3142",
@@ -4351,24 +4372,24 @@
       "name": "꼬막",
       "kind": "국산(새꼬막)",
       "unit": "1kg",
-      "price": 9521,
-      "prevPrice": 9503,
-      "normalPrice": 9143,
+      "price": 9647,
+      "prevPrice": 9521,
+      "normalPrice": 9163,
       "series": [
         {
-          "date": "2026-08-30",
-          "price": 9143
-        },
-        {
-          "date": "2026-09-29",
-          "price": 9503
+          "date": "2026-09-01",
+          "price": 9163
         },
         {
           "date": "2026-09-30",
           "price": 9521
+        },
+        {
+          "date": "2026-10-01",
+          "price": 9647
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:3002",
@@ -4380,28 +4401,28 @@
       "name": "꽃게",
       "kind": "냉동",
       "unit": "1kg",
-      "price": 17596,
-      "prevPrice": 17519,
-      "normalPrice": 24820,
+      "price": 17092,
+      "prevPrice": 17596,
+      "normalPrice": 24990,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 25091
+          "date": "2025-10-01",
+          "price": 25030
         },
         {
-          "date": "2026-08-30",
-          "price": 15972
-        },
-        {
-          "date": "2026-09-29",
-          "price": 17519
+          "date": "2026-09-01",
+          "price": 15953
         },
         {
           "date": "2026-09-30",
           "price": 17596
+        },
+        {
+          "date": "2026-10-01",
+          "price": 17092
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:3042",
@@ -4413,28 +4434,28 @@
       "name": "꽃게",
       "kind": "수꽃게(냉장)",
       "unit": "1kg",
-      "price": 22900,
-      "prevPrice": 22200,
-      "normalPrice": 24820,
+      "price": 23264,
+      "prevPrice": 22900,
+      "normalPrice": 24990,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 14206
+          "date": "2025-10-01",
+          "price": 14908
         },
         {
-          "date": "2026-08-30",
-          "price": 16874
-        },
-        {
-          "date": "2026-09-29",
-          "price": 22200
+          "date": "2026-09-01",
+          "price": 16610
         },
         {
           "date": "2026-09-30",
           "price": 22900
+        },
+        {
+          "date": "2026-10-01",
+          "price": 23264
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "foodcrop:1",
@@ -4446,28 +4467,53 @@
       "name": "쌀",
       "kind": "",
       "unit": "20kg",
-      "price": 60360,
-      "prevPrice": 60660,
-      "normalPrice": 53887,
+      "price": 59200,
+      "prevPrice": 60360,
+      "normalPrice": 54297,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 59624
+          "date": "2025-10-01",
+          "price": 59768
         },
         {
-          "date": "2026-08-30",
+          "date": "2026-09-01",
           "price": 60820
-        },
-        {
-          "date": "2026-09-29",
-          "price": 60660
         },
         {
           "date": "2026-09-30",
           "price": 60360
+        },
+        {
+          "date": "2026-10-01",
+          "price": 59200
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
+    },
+    {
+      "id": "foodcrop:3",
+      "category": "foodcrop",
+      "categoryCode": "100",
+      "itemCode": "111",
+      "kindCode": null,
+      "rankCode": null,
+      "name": "쌀",
+      "kind": "20kg(햅쌀)",
+      "unit": "20kg",
+      "price": 60460,
+      "prevPrice": 60460,
+      "normalPrice": 54297,
+      "series": [
+        {
+          "date": "2025-10-01",
+          "price": 66568
+        },
+        {
+          "date": "2026-10-01",
+          "price": 60460
+        }
+      ],
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "foodcrop:5",
@@ -4479,28 +4525,28 @@
       "name": "찹쌀",
       "kind": "일반계",
       "unit": "40kg",
-      "price": 139800,
+      "price": 137400,
       "prevPrice": 139800,
-      "normalPrice": 4297,
+      "normalPrice": 4262,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 196360
+          "date": "2025-10-01",
+          "price": 194480
         },
         {
-          "date": "2026-08-30",
+          "date": "2026-09-01",
           "price": 143200
-        },
-        {
-          "date": "2026-09-29",
-          "price": 139800
         },
         {
           "date": "2026-09-30",
           "price": 139800
+        },
+        {
+          "date": "2026-10-01",
+          "price": 137400
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "foodcrop:3220",
@@ -4512,20 +4558,20 @@
       "name": "보리쌀",
       "kind": "찰보리",
       "unit": "20kg",
-      "price": 40880,
+      "price": 40480,
       "prevPrice": 40880,
-      "normalPrice": 40880,
+      "normalPrice": 40480,
       "series": [
-        {
-          "date": "2026-09-29",
-          "price": 40880
-        },
         {
           "date": "2026-09-30",
           "price": 40880
+        },
+        {
+          "date": "2026-10-01",
+          "price": 40480
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "foodcrop:3217",
@@ -4537,20 +4583,20 @@
       "name": "현미",
       "kind": "찰현미",
       "unit": "20kg",
-      "price": 66500,
+      "price": 65500,
       "prevPrice": 66500,
-      "normalPrice": 66500,
+      "normalPrice": 65500,
       "series": [
-        {
-          "date": "2026-09-29",
-          "price": 66500
-        },
         {
           "date": "2026-09-30",
           "price": 66500
+        },
+        {
+          "date": "2026-10-01",
+          "price": 65500
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "foodcrop:8",
@@ -4564,26 +4610,26 @@
       "unit": "40kg",
       "price": 228600,
       "prevPrice": 228600,
-      "normalPrice": 5200,
+      "normalPrice": 5242,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 230200
         },
         {
-          "date": "2026-08-30",
+          "date": "2026-09-01",
           "price": 228200
-        },
-        {
-          "date": "2026-09-29",
-          "price": 228600
         },
         {
           "date": "2026-09-30",
           "price": 228600
+        },
+        {
+          "date": "2026-10-01",
+          "price": 228600
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "foodcrop:12",
@@ -4597,26 +4643,26 @@
       "unit": "35kg",
       "price": 126800,
       "prevPrice": 126800,
-      "normalPrice": 5200,
+      "normalPrice": 5242,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 122200
         },
         {
-          "date": "2026-08-30",
-          "price": 126800
-        },
-        {
-          "date": "2026-09-29",
+          "date": "2026-09-01",
           "price": 126800
         },
         {
           "date": "2026-09-30",
           "price": 126800
+        },
+        {
+          "date": "2026-10-01",
+          "price": 126800
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "foodcrop:13",
@@ -4628,28 +4674,28 @@
       "name": "팥",
       "kind": "붉은 팥(국산)",
       "unit": "40kg",
-      "price": 670000,
+      "price": 666000,
       "prevPrice": 670000,
-      "normalPrice": 9149,
+      "normalPrice": 9151,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 784200
         },
         {
-          "date": "2026-08-30",
-          "price": 676400
-        },
-        {
-          "date": "2026-09-29",
-          "price": 670000
+          "date": "2026-09-01",
+          "price": 675600
         },
         {
           "date": "2026-09-30",
           "price": 670000
+        },
+        {
+          "date": "2026-10-01",
+          "price": 666000
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "foodcrop:15",
@@ -4663,26 +4709,26 @@
       "unit": "40kg",
       "price": 263200,
       "prevPrice": 263200,
-      "normalPrice": 9149,
+      "normalPrice": 9151,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 262400
         },
         {
-          "date": "2026-08-30",
+          "date": "2026-09-01",
           "price": 264800
-        },
-        {
-          "date": "2026-09-29",
-          "price": 263200
         },
         {
           "date": "2026-09-30",
           "price": 263200
+        },
+        {
+          "date": "2026-10-01",
+          "price": 263200
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "foodcrop:16",
@@ -4694,28 +4740,28 @@
       "name": "녹두",
       "kind": "국산",
       "unit": "40kg",
-      "price": 550400,
+      "price": 551400,
       "prevPrice": 550400,
-      "normalPrice": 11238,
+      "normalPrice": 11273,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 530600
         },
         {
-          "date": "2026-08-30",
-          "price": 545120
-        },
-        {
-          "date": "2026-09-29",
-          "price": 550400
+          "date": "2026-09-01",
+          "price": 545080
         },
         {
           "date": "2026-09-30",
           "price": 550400
+        },
+        {
+          "date": "2026-10-01",
+          "price": 551400
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "foodcrop:3201",
@@ -4729,18 +4775,18 @@
       "unit": "40kg",
       "price": 273200,
       "prevPrice": 273200,
-      "normalPrice": 11238,
+      "normalPrice": 11273,
       "series": [
-        {
-          "date": "2026-09-29",
-          "price": 273200
-        },
         {
           "date": "2026-09-30",
           "price": 273200
+        },
+        {
+          "date": "2026-10-01",
+          "price": 273200
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "foodcrop:3204",
@@ -4752,20 +4798,20 @@
       "name": "녹두",
       "kind": "페루",
       "unit": "40kg",
-      "price": 175000,
+      "price": 178000,
       "prevPrice": 175000,
-      "normalPrice": 11238,
+      "normalPrice": 11273,
       "series": [
-        {
-          "date": "2026-09-29",
-          "price": 175000
-        },
         {
           "date": "2026-09-30",
           "price": 175000
+        },
+        {
+          "date": "2026-10-01",
+          "price": 178000
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "foodcrop:19",
@@ -4782,23 +4828,23 @@
       "normalPrice": 3305,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 3305
         },
         {
-          "date": "2026-08-30",
-          "price": 3025
-        },
-        {
-          "date": "2026-09-29",
+          "date": "2026-09-01",
           "price": 3025
         },
         {
           "date": "2026-09-30",
           "price": 3025
+        },
+        {
+          "date": "2026-10-01",
+          "price": 3025
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "foodcrop:20",
@@ -4810,28 +4856,28 @@
       "name": "고구마",
       "kind": "밤",
       "unit": "10kg",
-      "price": 32360,
-      "prevPrice": 32600,
-      "normalPrice": 5516,
+      "price": 32160,
+      "prevPrice": 32360,
+      "normalPrice": 5465,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 31752
+          "date": "2025-10-01",
+          "price": 31636
         },
         {
-          "date": "2026-08-30",
-          "price": 36408
-        },
-        {
-          "date": "2026-09-29",
-          "price": 32600
+          "date": "2026-09-01",
+          "price": 36320
         },
         {
           "date": "2026-09-30",
           "price": 32360
+        },
+        {
+          "date": "2026-10-01",
+          "price": 32160
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "foodcrop:24",
@@ -4843,28 +4889,28 @@
       "name": "감자",
       "kind": "수미(노지)",
       "unit": "20kg",
-      "price": 34780,
+      "price": 34060,
       "prevPrice": 34780,
-      "normalPrice": 343,
+      "normalPrice": 358,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 43284
+          "date": "2025-10-01",
+          "price": 43632
         },
         {
-          "date": "2026-08-30",
-          "price": 35956
-        },
-        {
-          "date": "2026-09-29",
-          "price": 34780
+          "date": "2026-09-01",
+          "price": 35820
         },
         {
           "date": "2026-09-30",
           "price": 34780
+        },
+        {
+          "date": "2026-10-01",
+          "price": 34060
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:30",
@@ -4876,28 +4922,28 @@
       "name": "배추",
       "kind": "여름(고랭지)",
       "unit": "10kg(그물망 3포기)",
-      "price": 18140,
+      "price": 17660,
       "prevPrice": 18140,
-      "normalPrice": 7106,
+      "normalPrice": 7162,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 24812
+          "date": "2025-10-01",
+          "price": 23804
         },
         {
-          "date": "2026-08-30",
-          "price": 13620
-        },
-        {
-          "date": "2026-09-29",
-          "price": 18140
+          "date": "2026-09-01",
+          "price": 14040
         },
         {
           "date": "2026-09-30",
           "price": 18140
+        },
+        {
+          "date": "2026-10-01",
+          "price": 17660
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:36",
@@ -4909,28 +4955,28 @@
       "name": "양배추",
       "kind": "양배추",
       "unit": "8kg",
-      "price": 8644,
-      "prevPrice": 8666,
-      "normalPrice": 4259,
+      "price": 8610,
+      "prevPrice": 8644,
+      "normalPrice": 4427,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 8718
+          "date": "2025-10-01",
+          "price": 8612
         },
         {
-          "date": "2026-08-30",
-          "price": 5992
-        },
-        {
-          "date": "2026-09-29",
-          "price": 8666
+          "date": "2026-09-01",
+          "price": 6014
         },
         {
           "date": "2026-09-30",
           "price": 8644
+        },
+        {
+          "date": "2026-10-01",
+          "price": 8610
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:2237",
@@ -4942,28 +4988,28 @@
       "name": "알배기배추",
       "kind": "알배기배추",
       "unit": "8kg",
-      "price": 30480,
-      "prevPrice": 37380,
-      "normalPrice": 5165,
+      "price": 24700,
+      "prevPrice": 30480,
+      "normalPrice": 5140,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 33292
+          "date": "2025-10-01",
+          "price": 32664
         },
         {
-          "date": "2026-08-30",
-          "price": 34440
-        },
-        {
-          "date": "2026-09-29",
-          "price": 37380
+          "date": "2026-09-01",
+          "price": 36240
         },
         {
           "date": "2026-09-30",
           "price": 30480
+        },
+        {
+          "date": "2026-10-01",
+          "price": 24700
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:2239",
@@ -4975,28 +5021,28 @@
       "name": "브로콜리",
       "kind": "브로콜리(국산)",
       "unit": "8kg",
-      "price": 41300,
-      "prevPrice": 49100,
-      "normalPrice": 4104,
+      "price": 37900,
+      "prevPrice": 41300,
+      "normalPrice": 4004,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 79148
+          "date": "2025-10-01",
+          "price": 77456
         },
         {
-          "date": "2026-08-30",
-          "price": 56536
-        },
-        {
-          "date": "2026-09-29",
-          "price": 49100
+          "date": "2026-09-01",
+          "price": 56268
         },
         {
           "date": "2026-09-30",
           "price": 41300
+        },
+        {
+          "date": "2026-10-01",
+          "price": 37900
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:38",
@@ -5008,28 +5054,28 @@
       "name": "시금치",
       "kind": "시금치",
       "unit": "4kg",
-      "price": 29000,
-      "prevPrice": 35140,
-      "normalPrice": 1849,
+      "price": 26140,
+      "prevPrice": 29000,
+      "normalPrice": 1694,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 48900
+          "date": "2025-10-01",
+          "price": 46360
         },
         {
-          "date": "2026-08-30",
-          "price": 58888
-        },
-        {
-          "date": "2026-09-29",
-          "price": 35140
+          "date": "2026-09-01",
+          "price": 59304
         },
         {
           "date": "2026-09-30",
           "price": 29000
+        },
+        {
+          "date": "2026-10-01",
+          "price": 26140
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:40",
@@ -5041,28 +5087,28 @@
       "name": "상추",
       "kind": "적",
       "unit": "4kg",
-      "price": 16840,
-      "prevPrice": 19380,
-      "normalPrice": 1836,
+      "price": 15220,
+      "prevPrice": 16840,
+      "normalPrice": 1631,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 51040
+          "date": "2025-10-01",
+          "price": 49588
         },
         {
-          "date": "2026-08-30",
-          "price": 49096
-        },
-        {
-          "date": "2026-09-29",
-          "price": 19380
+          "date": "2026-09-01",
+          "price": 51440
         },
         {
           "date": "2026-09-30",
           "price": 16840
+        },
+        {
+          "date": "2026-10-01",
+          "price": 15220
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:42",
@@ -5074,28 +5120,28 @@
       "name": "상추",
       "kind": "청",
       "unit": "4kg",
-      "price": 17425,
-      "prevPrice": 20200,
-      "normalPrice": 1836,
+      "price": 15075,
+      "prevPrice": 17425,
+      "normalPrice": 1631,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 49880
+          "date": "2025-10-01",
+          "price": 48248
         },
         {
-          "date": "2026-08-30",
-          "price": 49235
-        },
-        {
-          "date": "2026-09-29",
-          "price": 20200
+          "date": "2026-09-01",
+          "price": 52280
         },
         {
           "date": "2026-09-30",
           "price": 17425
+        },
+        {
+          "date": "2026-10-01",
+          "price": 15075
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:44",
@@ -5107,28 +5153,28 @@
       "name": "얼갈이배추",
       "kind": "얼갈이배추",
       "unit": "4kg",
-      "price": 7130,
-      "prevPrice": 7928,
-      "normalPrice": 3709,
+      "price": 6264,
+      "prevPrice": 7130,
+      "normalPrice": 3467,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 10342
+          "date": "2025-10-01",
+          "price": 9821
         },
         {
-          "date": "2026-08-30",
-          "price": 13660
-        },
-        {
-          "date": "2026-09-29",
-          "price": 7928
+          "date": "2026-09-01",
+          "price": 14090
         },
         {
           "date": "2026-09-30",
           "price": 7130
+        },
+        {
+          "date": "2026-10-01",
+          "price": 6264
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:46",
@@ -5140,28 +5186,28 @@
       "name": "수박",
       "kind": "수박",
       "unit": "1개",
-      "price": 18400,
-      "prevPrice": 18540,
-      "normalPrice": 25397,
+      "price": 18240,
+      "prevPrice": 18400,
+      "normalPrice": 23844,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 17120
+          "date": "2025-10-01",
+          "price": 16904
         },
         {
-          "date": "2026-08-30",
-          "price": 21348
-        },
-        {
-          "date": "2026-09-29",
-          "price": 18540
+          "date": "2026-09-01",
+          "price": 20692
         },
         {
           "date": "2026-09-30",
           "price": 18400
+        },
+        {
+          "date": "2026-10-01",
+          "price": 18240
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:50",
@@ -5173,28 +5219,28 @@
       "name": "오이",
       "kind": "가시계통",
       "unit": "10kg",
-      "price": 15150,
-      "prevPrice": 15950,
-      "normalPrice": 12847,
+      "price": 13650,
+      "prevPrice": 15150,
+      "normalPrice": 13452,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 26800
+          "date": "2025-10-01",
+          "price": 25500
         },
         {
-          "date": "2026-08-30",
-          "price": 28180
-        },
-        {
-          "date": "2026-09-29",
-          "price": 15950
+          "date": "2026-09-01",
+          "price": 26450
         },
         {
           "date": "2026-09-30",
           "price": 15150
+        },
+        {
+          "date": "2026-10-01",
+          "price": 13650
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:52",
@@ -5206,28 +5252,28 @@
       "name": "오이",
       "kind": "다다기계통",
       "unit": "50개",
-      "price": 18460,
-      "prevPrice": 17700,
-      "normalPrice": 12847,
+      "price": 21080,
+      "prevPrice": 18460,
+      "normalPrice": 13452,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 45008
+          "date": "2025-10-01",
+          "price": 42754
         },
         {
-          "date": "2026-08-30",
-          "price": 43732
-        },
-        {
-          "date": "2026-09-29",
-          "price": 17700
+          "date": "2026-09-01",
+          "price": 45252
         },
         {
           "date": "2026-09-30",
           "price": 18460
+        },
+        {
+          "date": "2026-10-01",
+          "price": 21080
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:54",
@@ -5239,28 +5285,28 @@
       "name": "오이",
       "kind": "취청",
       "unit": "50개",
-      "price": 16367,
-      "prevPrice": 16100,
-      "normalPrice": 12847,
+      "price": 17000,
+      "prevPrice": 16367,
+      "normalPrice": 13452,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 44467
+          "date": "2025-10-01",
+          "price": 42173
         },
         {
-          "date": "2026-08-30",
-          "price": 40027
-        },
-        {
-          "date": "2026-09-29",
-          "price": 16100
+          "date": "2026-09-01",
+          "price": 40900
         },
         {
           "date": "2026-09-30",
           "price": 16367
+        },
+        {
+          "date": "2026-10-01",
+          "price": 17000
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:56",
@@ -5272,28 +5318,28 @@
       "name": "호박",
       "kind": "애호박",
       "unit": "20개",
-      "price": 15740,
-      "prevPrice": 16800,
-      "normalPrice": 1812,
+      "price": 13520,
+      "prevPrice": 15740,
+      "normalPrice": 1736,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 36020
+          "date": "2025-10-01",
+          "price": 33144
         },
         {
-          "date": "2026-08-30",
-          "price": 42960
-        },
-        {
-          "date": "2026-09-29",
-          "price": 16800
+          "date": "2026-09-01",
+          "price": 46652
         },
         {
           "date": "2026-09-30",
           "price": 15740
+        },
+        {
+          "date": "2026-10-01",
+          "price": 13520
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:58",
@@ -5305,28 +5351,28 @@
       "name": "호박",
       "kind": "쥬키니",
       "unit": "10kg",
-      "price": 11580,
-      "prevPrice": 12180,
-      "normalPrice": 1812,
+      "price": 10378,
+      "prevPrice": 11580,
+      "normalPrice": 1736,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 25632
+          "date": "2025-10-01",
+          "price": 23748
         },
         {
-          "date": "2026-08-30",
-          "price": 18800
-        },
-        {
-          "date": "2026-09-29",
-          "price": 12180
+          "date": "2026-09-01",
+          "price": 21388
         },
         {
           "date": "2026-09-30",
           "price": 11580
+        },
+        {
+          "date": "2026-10-01",
+          "price": 10378
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:129",
@@ -5338,20 +5384,20 @@
       "name": "가지",
       "kind": "가지",
       "unit": "5kg",
-      "price": 10700,
-      "prevPrice": 11658,
-      "normalPrice": 10700,
+      "price": 9492,
+      "prevPrice": 10700,
+      "normalPrice": 9492,
       "series": [
-        {
-          "date": "2026-09-29",
-          "price": 11658
-        },
         {
           "date": "2026-09-30",
           "price": 10700
+        },
+        {
+          "date": "2026-10-01",
+          "price": 9492
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:135",
@@ -5363,20 +5409,20 @@
       "name": "부추",
       "kind": "부추",
       "unit": "4kg",
-      "price": 16360,
-      "prevPrice": 19020,
-      "normalPrice": 16360,
+      "price": 16592,
+      "prevPrice": 16360,
+      "normalPrice": 16592,
       "series": [
-        {
-          "date": "2026-09-29",
-          "price": 19020
-        },
         {
           "date": "2026-09-30",
           "price": 16360
+        },
+        {
+          "date": "2026-10-01",
+          "price": 16592
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:60",
@@ -5388,28 +5434,28 @@
       "name": "토마토",
       "kind": "토마토",
       "unit": "5kg",
-      "price": 30700,
-      "prevPrice": 30300,
-      "normalPrice": 7944,
+      "price": 28060,
+      "prevPrice": 30700,
+      "normalPrice": 8401,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 23992
+          "date": "2025-10-01",
+          "price": 22512
         },
         {
-          "date": "2026-08-30",
-          "price": 26544
-        },
-        {
-          "date": "2026-09-29",
-          "price": 30300
+          "date": "2026-09-01",
+          "price": 25848
         },
         {
           "date": "2026-09-30",
           "price": 30700
+        },
+        {
+          "date": "2026-10-01",
+          "price": 28060
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:66",
@@ -5421,28 +5467,28 @@
       "name": "무",
       "kind": "고랭지",
       "unit": "20kg",
-      "price": 21300,
-      "prevPrice": 20840,
-      "normalPrice": 2722,
+      "price": 20800,
+      "prevPrice": 21300,
+      "normalPrice": 2797,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 13544
+          "date": "2025-10-01",
+          "price": 13760
         },
         {
-          "date": "2026-08-30",
-          "price": 17548
-        },
-        {
-          "date": "2026-09-29",
-          "price": 20840
+          "date": "2026-09-01",
+          "price": 17956
         },
         {
           "date": "2026-09-30",
           "price": 21300
+        },
+        {
+          "date": "2026-10-01",
+          "price": 20800
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:74",
@@ -5454,28 +5500,28 @@
       "name": "당근",
       "kind": "무세척(국산)",
       "unit": "20kg",
-      "price": 44000,
-      "prevPrice": 43560,
-      "normalPrice": 5018,
+      "price": 44680,
+      "prevPrice": 44000,
+      "normalPrice": 5173,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 41452
+          "date": "2025-10-01",
+          "price": 41052
         },
         {
-          "date": "2026-08-30",
-          "price": 39052
-        },
-        {
-          "date": "2026-09-29",
-          "price": 43560
+          "date": "2026-09-01",
+          "price": 39444
         },
         {
           "date": "2026-09-30",
           "price": 44000
+        },
+        {
+          "date": "2026-10-01",
+          "price": 44680
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:78",
@@ -5489,26 +5535,26 @@
       "unit": "10kg",
       "price": 8366,
       "prevPrice": 8366,
-      "normalPrice": 5018,
+      "normalPrice": 5173,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 8484
+          "date": "2025-10-01",
+          "price": 8471
         },
         {
-          "date": "2026-08-30",
-          "price": 8324
-        },
-        {
-          "date": "2026-09-29",
-          "price": 8366
+          "date": "2026-09-01",
+          "price": 8304
         },
         {
           "date": "2026-09-30",
           "price": 8366
+        },
+        {
+          "date": "2026-10-01",
+          "price": 8366
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:79",
@@ -5520,28 +5566,28 @@
       "name": "열무",
       "kind": "열무",
       "unit": "4kg",
-      "price": 7486,
-      "prevPrice": 8718,
-      "normalPrice": 3570,
+      "price": 7416,
+      "prevPrice": 7486,
+      "normalPrice": 3352,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 10632
+          "date": "2025-10-01",
+          "price": 10286
         },
         {
-          "date": "2026-08-30",
-          "price": 13969
-        },
-        {
-          "date": "2026-09-29",
-          "price": 8718
+          "date": "2026-09-01",
+          "price": 13665
         },
         {
           "date": "2026-09-30",
           "price": 7486
+        },
+        {
+          "date": "2026-10-01",
+          "price": 7416
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:81",
@@ -5554,23 +5600,23 @@
       "kind": "화건",
       "unit": "30kg",
       "price": 673200,
-      "prevPrice": 679800,
-      "normalPrice": 17283,
+      "prevPrice": 673200,
+      "normalPrice": 17142,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 660480
-        },
-        {
-          "date": "2026-09-29",
-          "price": 679800
+          "date": "2025-10-01",
+          "price": 659800
         },
         {
           "date": "2026-09-30",
           "price": 673200
+        },
+        {
+          "date": "2026-10-01",
+          "price": 673200
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:90",
@@ -5582,28 +5628,28 @@
       "name": "풋고추",
       "kind": "풋고추(녹광 등)",
       "unit": "10kg",
-      "price": 81400,
-      "prevPrice": 86867,
-      "normalPrice": 1706,
+      "price": 65900,
+      "prevPrice": 81400,
+      "normalPrice": 1656,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 83230
+          "date": "2025-10-01",
+          "price": 84865
         },
         {
-          "date": "2026-08-30",
-          "price": 68807
-        },
-        {
-          "date": "2026-09-29",
-          "price": 86867
+          "date": "2026-09-01",
+          "price": 69727
         },
         {
           "date": "2026-09-30",
           "price": 81400
+        },
+        {
+          "date": "2026-10-01",
+          "price": 65900
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:92",
@@ -5615,28 +5661,28 @@
       "name": "풋고추",
       "kind": "꽈리고추",
       "unit": "4kg",
-      "price": 31180,
-      "prevPrice": 35040,
-      "normalPrice": 1706,
+      "price": 26700,
+      "prevPrice": 31180,
+      "normalPrice": 1656,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 44704
+          "date": "2025-10-01",
+          "price": 43248
         },
         {
-          "date": "2026-08-30",
-          "price": 25168
-        },
-        {
-          "date": "2026-09-29",
-          "price": 35040
+          "date": "2026-09-01",
+          "price": 26040
         },
         {
           "date": "2026-09-30",
           "price": 31180
+        },
+        {
+          "date": "2026-10-01",
+          "price": 26700
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:94",
@@ -5648,28 +5694,28 @@
       "name": "풋고추",
       "kind": "청양고추",
       "unit": "10kg",
-      "price": 55900,
-      "prevPrice": 52580,
-      "normalPrice": 1706,
+      "price": 56640,
+      "prevPrice": 55900,
+      "normalPrice": 1656,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 57900
+          "date": "2025-10-01",
+          "price": 59292
         },
         {
-          "date": "2026-08-30",
-          "price": 47904
-        },
-        {
-          "date": "2026-09-29",
-          "price": 52580
+          "date": "2026-09-01",
+          "price": 55424
         },
         {
           "date": "2026-09-30",
           "price": 55900
+        },
+        {
+          "date": "2026-10-01",
+          "price": 56640
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:1996",
@@ -5681,28 +5727,28 @@
       "name": "풋고추",
       "kind": "오이맛고추",
       "unit": "10kg",
-      "price": 64980,
-      "prevPrice": 64720,
-      "normalPrice": 1706,
+      "price": 57240,
+      "prevPrice": 64980,
+      "normalPrice": 1656,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 77424
+          "date": "2025-10-01",
+          "price": 73968
         },
         {
-          "date": "2026-08-30",
-          "price": 44608
-        },
-        {
-          "date": "2026-09-29",
-          "price": 64720
+          "date": "2026-09-01",
+          "price": 46104
         },
         {
           "date": "2026-09-30",
           "price": 64980
+        },
+        {
+          "date": "2026-10-01",
+          "price": 57240
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:96",
@@ -5714,28 +5760,28 @@
       "name": "붉은고추",
       "kind": "붉은고추",
       "unit": "10kg",
-      "price": 134800,
-      "prevPrice": 137200,
-      "normalPrice": 1973,
+      "price": 131460,
+      "prevPrice": 134800,
+      "normalPrice": 2120,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 82976
+          "date": "2025-10-01",
+          "price": 86956
         },
         {
-          "date": "2026-08-30",
-          "price": 50132
-        },
-        {
-          "date": "2026-09-29",
-          "price": 137200
+          "date": "2026-09-01",
+          "price": 53728
         },
         {
           "date": "2026-09-30",
           "price": 134800
+        },
+        {
+          "date": "2026-10-01",
+          "price": 131460
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:1001",
@@ -5749,26 +5795,26 @@
       "unit": "20kg",
       "price": 168200,
       "prevPrice": 168200,
-      "normalPrice": 10672,
+      "normalPrice": 10763,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 153000
+          "date": "2025-10-01",
+          "price": 152960
         },
         {
-          "date": "2026-08-30",
+          "date": "2026-09-01",
           "price": 168240
-        },
-        {
-          "date": "2026-09-29",
-          "price": 168200
         },
         {
           "date": "2026-09-30",
           "price": 168200
+        },
+        {
+          "date": "2026-10-01",
+          "price": 168200
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:1003",
@@ -5782,26 +5828,26 @@
       "unit": "20kg",
       "price": 173000,
       "prevPrice": 173000,
-      "normalPrice": 10672,
+      "normalPrice": 10763,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 161000
         },
         {
-          "date": "2026-08-30",
-          "price": 173000
-        },
-        {
-          "date": "2026-09-29",
+          "date": "2026-09-01",
           "price": 173000
         },
         {
           "date": "2026-09-30",
           "price": 173000
+        },
+        {
+          "date": "2026-10-01",
+          "price": 173000
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:102",
@@ -5818,23 +5864,23 @@
       "normalPrice": 98667,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 98667
         },
         {
-          "date": "2026-08-30",
+          "date": "2026-09-01",
           "price": 110000
-        },
-        {
-          "date": "2026-09-29",
-          "price": 115000
         },
         {
           "date": "2026-09-30",
           "price": 115000
+        },
+        {
+          "date": "2026-10-01",
+          "price": 115000
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:1498",
@@ -5851,23 +5897,23 @@
       "normalPrice": 50760,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 50760
         },
         {
-          "date": "2026-08-30",
-          "price": 57560
-        },
-        {
-          "date": "2026-09-29",
+          "date": "2026-09-01",
           "price": 57560
         },
         {
           "date": "2026-09-30",
           "price": 57560
+        },
+        {
+          "date": "2026-10-01",
+          "price": 57560
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:117",
@@ -5879,28 +5925,28 @@
       "name": "양파",
       "kind": "양파",
       "unit": "15kg",
-      "price": 18880,
-      "prevPrice": 18740,
-      "normalPrice": 2103,
+      "price": 18980,
+      "prevPrice": 18880,
+      "normalPrice": 2167,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 18236
+          "date": "2025-10-01",
+          "price": 18252
         },
         {
-          "date": "2026-08-30",
-          "price": 18392
-        },
-        {
-          "date": "2026-09-29",
-          "price": 18740
+          "date": "2026-09-01",
+          "price": 18516
         },
         {
           "date": "2026-09-30",
           "price": 18880
+        },
+        {
+          "date": "2026-10-01",
+          "price": 18980
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:122",
@@ -5912,28 +5958,28 @@
       "name": "파",
       "kind": "대파",
       "unit": "1kg",
-      "price": 2064,
-      "prevPrice": 2110,
-      "normalPrice": 3256,
+      "price": 2024,
+      "prevPrice": 2064,
+      "normalPrice": 3243,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 2101
+          "date": "2025-10-01",
+          "price": 2146
         },
         {
-          "date": "2026-08-30",
-          "price": 2151
-        },
-        {
-          "date": "2026-09-29",
-          "price": 2110
+          "date": "2026-09-01",
+          "price": 2202
         },
         {
           "date": "2026-09-30",
           "price": 2064
+        },
+        {
+          "date": "2026-10-01",
+          "price": 2024
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:124",
@@ -5945,28 +5991,28 @@
       "name": "파",
       "kind": "쪽파",
       "unit": "1kg",
-      "price": 7632,
-      "prevPrice": 8266,
-      "normalPrice": 3256,
+      "price": 7598,
+      "prevPrice": 7632,
+      "normalPrice": 3243,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 6970
+          "date": "2025-10-01",
+          "price": 6976
         },
         {
-          "date": "2026-08-30",
-          "price": 10058
-        },
-        {
-          "date": "2026-09-29",
-          "price": 8266
+          "date": "2026-09-01",
+          "price": 9922
         },
         {
           "date": "2026-09-30",
           "price": 7632
+        },
+        {
+          "date": "2026-10-01",
+          "price": 7598
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:126",
@@ -5978,28 +6024,28 @@
       "name": "생강",
       "kind": "국산",
       "unit": "10kg",
-      "price": 66160,
+      "price": 65700,
       "prevPrice": 66160,
-      "normalPrice": 14191,
+      "normalPrice": 13673,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 83500
+          "date": "2025-10-01",
+          "price": 81152
         },
         {
-          "date": "2026-08-30",
+          "date": "2026-09-01",
           "price": 67180
-        },
-        {
-          "date": "2026-09-29",
-          "price": 66160
         },
         {
           "date": "2026-09-30",
           "price": 66160
+        },
+        {
+          "date": "2026-10-01",
+          "price": 65700
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:128",
@@ -6012,27 +6058,27 @@
       "kind": "수입",
       "unit": "10kg",
       "price": 80533,
-      "prevPrice": 80867,
-      "normalPrice": 14191,
+      "prevPrice": 80533,
+      "normalPrice": 13673,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 87833
+          "date": "2025-10-01",
+          "price": 87093
         },
         {
-          "date": "2026-08-30",
+          "date": "2026-09-01",
           "price": 82067
-        },
-        {
-          "date": "2026-09-29",
-          "price": 80867
         },
         {
           "date": "2026-09-30",
           "price": 80533
+        },
+        {
+          "date": "2026-10-01",
+          "price": 80533
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:131",
@@ -6044,28 +6090,28 @@
       "name": "미나리",
       "kind": "미나리",
       "unit": "8kg",
-      "price": 74580,
-      "prevPrice": 88060,
-      "normalPrice": 1645,
+      "price": 70160,
+      "prevPrice": 74580,
+      "normalPrice": 1713,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 95842
+          "date": "2025-10-01",
+          "price": 96043
         },
         {
-          "date": "2026-08-30",
-          "price": 71400
-        },
-        {
-          "date": "2026-09-29",
-          "price": 88060
+          "date": "2026-09-01",
+          "price": 73828
         },
         {
           "date": "2026-09-30",
           "price": 74580
+        },
+        {
+          "date": "2026-10-01",
+          "price": 70160
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:133",
@@ -6077,28 +6123,28 @@
       "name": "깻잎",
       "kind": "깻잎",
       "unit": "2kg",
-      "price": 33600,
-      "prevPrice": 40560,
-      "normalPrice": 1563,
+      "price": 28760,
+      "prevPrice": 33600,
+      "normalPrice": 1544,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 43168
+          "date": "2025-10-01",
+          "price": 42340
         },
         {
-          "date": "2026-08-30",
-          "price": 35408
-        },
-        {
-          "date": "2026-09-29",
-          "price": 40560
+          "date": "2026-09-01",
+          "price": 36232
         },
         {
           "date": "2026-09-30",
           "price": 33600
+        },
+        {
+          "date": "2026-10-01",
+          "price": 28760
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:137",
@@ -6110,28 +6156,28 @@
       "name": "피망",
       "kind": "청",
       "unit": "10kg",
-      "price": 66860,
-      "prevPrice": 75180,
-      "normalPrice": 1465,
+      "price": 48040,
+      "prevPrice": 66860,
+      "normalPrice": 1361,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 49424
+          "date": "2025-10-01",
+          "price": 49484
         },
         {
-          "date": "2026-08-30",
-          "price": 59496
-        },
-        {
-          "date": "2026-09-29",
-          "price": 75180
+          "date": "2026-09-01",
+          "price": 57496
         },
         {
           "date": "2026-09-30",
           "price": 66860
+        },
+        {
+          "date": "2026-10-01",
+          "price": 48040
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:139",
@@ -6143,28 +6189,28 @@
       "name": "파프리카",
       "kind": "파프리카",
       "unit": "5kg",
-      "price": 34800,
-      "prevPrice": 39400,
-      "normalPrice": 2245,
+      "price": 31180,
+      "prevPrice": 34800,
+      "normalPrice": 2186,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 38692
+          "date": "2025-10-01",
+          "price": 40020
         },
         {
-          "date": "2026-08-30",
-          "price": 38060
-        },
-        {
-          "date": "2026-09-29",
-          "price": 39400
+          "date": "2026-09-01",
+          "price": 40288
         },
         {
           "date": "2026-09-30",
           "price": 34800
+        },
+        {
+          "date": "2026-10-01",
+          "price": 31180
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:141",
@@ -6177,27 +6223,27 @@
       "kind": "멜론",
       "unit": "8kg",
       "price": 29300,
-      "prevPrice": 28640,
-      "normalPrice": 10410,
+      "prevPrice": 29300,
+      "normalPrice": 10570,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 27956
+          "date": "2025-10-01",
+          "price": 28628
         },
         {
-          "date": "2026-08-30",
-          "price": 26180
-        },
-        {
-          "date": "2026-09-29",
-          "price": 28640
+          "date": "2026-09-01",
+          "price": 26288
         },
         {
           "date": "2026-09-30",
           "price": 29300
+        },
+        {
+          "date": "2026-10-01",
+          "price": 29300
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "vegetable:1076",
@@ -6209,28 +6255,28 @@
       "name": "방울토마토",
       "kind": "대추방울토마토",
       "unit": "3kg",
-      "price": 27060,
-      "prevPrice": 27320,
-      "normalPrice": 10940,
+      "price": 25920,
+      "prevPrice": 27060,
+      "normalPrice": 10672,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 20101
+          "date": "2025-10-01",
+          "price": 19722
         },
         {
-          "date": "2026-08-30",
-          "price": 17372
-        },
-        {
-          "date": "2026-09-29",
-          "price": 27320
+          "date": "2026-09-01",
+          "price": 18340
         },
         {
           "date": "2026-09-30",
           "price": 27060
+        },
+        {
+          "date": "2026-10-01",
+          "price": 25920
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "fruit:202",
@@ -6242,28 +6288,28 @@
       "name": "사과",
       "kind": "홍로",
       "unit": "10kg",
-      "price": 54940,
-      "prevPrice": 56620,
-      "normalPrice": 26356,
+      "price": 52360,
+      "prevPrice": 54940,
+      "normalPrice": 25242,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 79932
+          "date": "2025-10-01",
+          "price": 79520
         },
         {
-          "date": "2026-08-30",
-          "price": 73272
-        },
-        {
-          "date": "2026-09-29",
-          "price": 56620
+          "date": "2026-09-01",
+          "price": 72008
         },
         {
           "date": "2026-09-30",
           "price": 54940
+        },
+        {
+          "date": "2026-10-01",
+          "price": 52360
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "fruit:204",
@@ -6275,24 +6321,24 @@
       "name": "배",
       "kind": "신고",
       "unit": "15kg",
-      "price": 56980,
-      "prevPrice": 59180,
-      "normalPrice": 35154,
+      "price": 55120,
+      "prevPrice": 56980,
+      "normalPrice": 31989,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 60708
-        },
-        {
-          "date": "2026-09-29",
-          "price": 59180
+          "date": "2025-10-01",
+          "price": 60536
         },
         {
           "date": "2026-09-30",
           "price": 56980
+        },
+        {
+          "date": "2026-10-01",
+          "price": 55120
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "fruit:1078",
@@ -6304,28 +6350,28 @@
       "name": "포도",
       "kind": "샤인머스켓",
       "unit": "2kg",
-      "price": 10946,
-      "prevPrice": 10552,
-      "normalPrice": 8891,
+      "price": 10552,
+      "prevPrice": 10946,
+      "normalPrice": 8693,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 10484
+          "date": "2025-10-01",
+          "price": 10456
         },
         {
-          "date": "2026-08-30",
-          "price": 13692
-        },
-        {
-          "date": "2026-09-29",
-          "price": 10552
+          "date": "2026-09-01",
+          "price": 13276
         },
         {
           "date": "2026-09-30",
           "price": 10946
+        },
+        {
+          "date": "2026-10-01",
+          "price": 10552
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "fruit:218",
@@ -6337,28 +6383,28 @@
       "name": "포도",
       "kind": "캠벨얼리",
       "unit": "3kg",
-      "price": 20060,
-      "prevPrice": 20180,
-      "normalPrice": 8891,
+      "price": 19660,
+      "prevPrice": 20060,
+      "normalPrice": 8693,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 20174
+          "date": "2025-10-01",
+          "price": 20400
         },
         {
-          "date": "2026-08-30",
-          "price": 20264
-        },
-        {
-          "date": "2026-09-29",
-          "price": 20180
+          "date": "2026-09-01",
+          "price": 19932
         },
         {
           "date": "2026-09-30",
           "price": 20060
+        },
+        {
+          "date": "2026-10-01",
+          "price": 19660
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "fruit:220",
@@ -6370,28 +6416,28 @@
       "name": "포도",
       "kind": "거봉",
       "unit": "2kg",
-      "price": 14420,
+      "price": 14240,
       "prevPrice": 14420,
-      "normalPrice": 8891,
+      "normalPrice": 8693,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 17028
+          "date": "2025-10-01",
+          "price": 17144
         },
         {
-          "date": "2026-08-30",
-          "price": 15356
-        },
-        {
-          "date": "2026-09-29",
-          "price": 14420
+          "date": "2026-09-01",
+          "price": 15260
         },
         {
           "date": "2026-09-30",
           "price": 14420
+        },
+        {
+          "date": "2026-10-01",
+          "price": 14240
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "fruit:1009",
@@ -6403,28 +6449,28 @@
       "name": "감귤",
       "kind": "시설",
       "unit": "3kg",
-      "price": 21980,
+      "price": 21680,
       "prevPrice": 21980,
-      "normalPrice": 9087,
+      "normalPrice": 8396,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 23544
+          "date": "2025-10-01",
+          "price": 23316
         },
         {
-          "date": "2026-08-30",
-          "price": 22096
-        },
-        {
-          "date": "2026-09-29",
-          "price": 21980
+          "date": "2026-09-01",
+          "price": 22116
         },
         {
           "date": "2026-09-30",
           "price": 21980
+        },
+        {
+          "date": "2026-10-01",
+          "price": 21680
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "fruit:234",
@@ -6436,28 +6482,28 @@
       "name": "바나나",
       "kind": "수입",
       "unit": "13kg",
-      "price": 32140,
+      "price": 31940,
       "prevPrice": 32140,
-      "normalPrice": 328,
+      "normalPrice": 326,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 33000
+          "date": "2025-10-01",
+          "price": 33012
         },
         {
-          "date": "2026-08-30",
-          "price": 30368
-        },
-        {
-          "date": "2026-09-29",
-          "price": 32140
+          "date": "2026-09-01",
+          "price": 30484
         },
         {
           "date": "2026-09-30",
           "price": 32140
+        },
+        {
+          "date": "2026-10-01",
+          "price": 31940
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "fruit:240",
@@ -6471,26 +6517,26 @@
       "unit": "12kg",
       "price": 39940,
       "prevPrice": 39940,
-      "normalPrice": 7544,
+      "normalPrice": 7627,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 43880
+          "date": "2025-10-01",
+          "price": 43824
         },
         {
-          "date": "2026-08-30",
-          "price": 38516
-        },
-        {
-          "date": "2026-09-29",
-          "price": 39940
+          "date": "2026-09-01",
+          "price": 38584
         },
         {
           "date": "2026-09-30",
           "price": 39940
+        },
+        {
+          "date": "2026-10-01",
+          "price": 39940
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "fruit:1046",
@@ -6504,26 +6550,26 @@
       "unit": "18kg",
       "price": 60075,
       "prevPrice": 60075,
-      "normalPrice": 12238,
+      "normalPrice": 12022,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 67160
+          "date": "2025-10-01",
+          "price": 67130
         },
         {
-          "date": "2026-08-30",
-          "price": 61470
-        },
-        {
-          "date": "2026-09-29",
-          "price": 60075
+          "date": "2026-09-01",
+          "price": 61130
         },
         {
           "date": "2026-09-30",
           "price": 60075
+        },
+        {
+          "date": "2026-10-01",
+          "price": 60075
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "fruit:666",
@@ -6535,28 +6581,28 @@
       "name": "레몬",
       "kind": "수입",
       "unit": "17kg",
-      "price": 58340,
+      "price": 57280,
       "prevPrice": 58340,
-      "normalPrice": 9900,
+      "normalPrice": 10072,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 50968
+          "date": "2025-10-01",
+          "price": 50956
         },
         {
-          "date": "2026-08-30",
-          "price": 62400
-        },
-        {
-          "date": "2026-09-29",
-          "price": 58340
+          "date": "2026-09-01",
+          "price": 62240
         },
         {
           "date": "2026-09-30",
           "price": 58340
+        },
+        {
+          "date": "2026-10-01",
+          "price": 57280
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "fruit:669",
@@ -6568,28 +6614,28 @@
       "name": "망고",
       "kind": "수입",
       "unit": "5kg",
-      "price": 79275,
+      "price": 78025,
       "prevPrice": 79275,
-      "normalPrice": 7116,
+      "normalPrice": 6516,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 71280
+          "date": "2025-10-01",
+          "price": 71000
         },
         {
-          "date": "2026-08-30",
-          "price": 70900
-        },
-        {
-          "date": "2026-09-29",
-          "price": 79275
+          "date": "2026-09-01",
+          "price": 71400
         },
         {
           "date": "2026-09-30",
           "price": 79275
+        },
+        {
+          "date": "2026-10-01",
+          "price": 78025
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "fruit:3232",
@@ -6606,15 +6652,15 @@
       "normalPrice": 40220,
       "series": [
         {
-          "date": "2026-09-29",
+          "date": "2026-09-30",
           "price": 40220
         },
         {
-          "date": "2026-09-30",
+          "date": "2026-10-01",
           "price": 40220
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:250",
@@ -6626,28 +6672,28 @@
       "name": "고등어",
       "kind": "생선",
       "unit": "10kg",
-      "price": 56460,
-      "prevPrice": 56400,
-      "normalPrice": 4591,
+      "price": 58420,
+      "prevPrice": 56460,
+      "normalPrice": 4821,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 56172
+          "date": "2025-10-01",
+          "price": 55564
         },
         {
-          "date": "2026-08-30",
-          "price": 57344
-        },
-        {
-          "date": "2026-09-29",
-          "price": 56400
+          "date": "2026-09-01",
+          "price": 56580
         },
         {
           "date": "2026-09-30",
           "price": 56460
+        },
+        {
+          "date": "2026-10-01",
+          "price": 58420
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:251",
@@ -6659,28 +6705,28 @@
       "name": "고등어",
       "kind": "냉동",
       "unit": "10kg",
-      "price": 42180,
+      "price": 42580,
       "prevPrice": 42180,
-      "normalPrice": 4591,
+      "normalPrice": 4821,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 42240
         },
         {
-          "date": "2026-08-30",
-          "price": 41900
-        },
-        {
-          "date": "2026-09-29",
-          "price": 42180
+          "date": "2026-09-01",
+          "price": 41848
         },
         {
           "date": "2026-09-30",
           "price": 42180
+        },
+        {
+          "date": "2026-10-01",
+          "price": 42580
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:936",
@@ -6692,28 +6738,28 @@
       "name": "고등어",
       "kind": "냉동(수입)",
       "unit": "20kg",
-      "price": 182800,
+      "price": 183400,
       "prevPrice": 182800,
-      "normalPrice": 4591,
+      "normalPrice": 4821,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 125096
+          "date": "2025-10-01",
+          "price": 127572
         },
         {
-          "date": "2026-08-30",
+          "date": "2026-09-01",
           "price": 182400
-        },
-        {
-          "date": "2026-09-29",
-          "price": 182800
         },
         {
           "date": "2026-09-30",
           "price": 182800
+        },
+        {
+          "date": "2026-10-01",
+          "price": 183400
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:2805",
@@ -6725,28 +6771,28 @@
       "name": "갈치",
       "kind": "냉동",
       "unit": "1kg",
-      "price": 21550,
+      "price": 21650,
       "prevPrice": 21550,
-      "normalPrice": 14228,
+      "normalPrice": 14348,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 21764
+          "date": "2025-10-01",
+          "price": 21752
         },
         {
-          "date": "2026-08-30",
-          "price": 22010
-        },
-        {
-          "date": "2026-09-29",
-          "price": 21550
+          "date": "2026-09-01",
+          "price": 21935
         },
         {
           "date": "2026-09-30",
           "price": 21550
+        },
+        {
+          "date": "2026-10-01",
+          "price": 21650
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:2809",
@@ -6760,26 +6806,26 @@
       "unit": "20kg",
       "price": 52580,
       "prevPrice": 52580,
-      "normalPrice": 3694,
+      "normalPrice": 3843,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 44700
         },
         {
-          "date": "2026-08-30",
-          "price": 50892
-        },
-        {
-          "date": "2026-09-29",
-          "price": 52580
+          "date": "2026-09-01",
+          "price": 51172
         },
         {
           "date": "2026-09-30",
           "price": 52580
+        },
+        {
+          "date": "2026-10-01",
+          "price": 52580
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:3081",
@@ -6793,26 +6839,26 @@
       "unit": "1kg",
       "price": 14600,
       "prevPrice": 14600,
-      "normalPrice": 5577,
+      "normalPrice": 6299,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 17800
+          "date": "2025-10-01",
+          "price": 18300
         },
         {
-          "date": "2026-08-30",
-          "price": 14792
-        },
-        {
-          "date": "2026-09-29",
-          "price": 14600
+          "date": "2026-09-01",
+          "price": 14764
         },
         {
           "date": "2026-09-30",
           "price": 14600
+        },
+        {
+          "date": "2026-10-01",
+          "price": 14600
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:3082",
@@ -6824,28 +6870,28 @@
       "name": "물오징어",
       "kind": "원양(냉동)",
       "unit": "1kg",
-      "price": 10850,
+      "price": 10875,
       "prevPrice": 10850,
-      "normalPrice": 5577,
+      "normalPrice": 6299,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 10308
+          "date": "2025-10-01",
+          "price": 10332
         },
         {
-          "date": "2026-08-30",
+          "date": "2026-09-01",
           "price": 10900
-        },
-        {
-          "date": "2026-09-29",
-          "price": 10850
         },
         {
           "date": "2026-09-30",
           "price": 10850
+        },
+        {
+          "date": "2026-10-01",
+          "price": 10875
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:2812",
@@ -6859,26 +6905,26 @@
       "unit": "1.5kg",
       "price": 14400,
       "prevPrice": 14400,
-      "normalPrice": 2318,
+      "normalPrice": 2324,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 16236
+          "date": "2025-10-01",
+          "price": 16124
         },
         {
-          "date": "2026-08-30",
-          "price": 14180
-        },
-        {
-          "date": "2026-09-29",
-          "price": 14400
+          "date": "2026-09-01",
+          "price": 14120
         },
         {
           "date": "2026-09-30",
           "price": 14400
+        },
+        {
+          "date": "2026-10-01",
+          "price": 14400
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:261",
@@ -6890,28 +6936,28 @@
       "name": "북어",
       "kind": "황태",
       "unit": "10마리",
-      "price": 54920,
+      "price": 54820,
       "prevPrice": 54920,
       "normalPrice": 54400,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 54400
         },
         {
-          "date": "2026-08-30",
-          "price": 54920
-        },
-        {
-          "date": "2026-09-29",
+          "date": "2026-09-01",
           "price": 54920
         },
         {
           "date": "2026-09-30",
           "price": 54920
+        },
+        {
+          "date": "2026-10-01",
+          "price": 54820
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:263",
@@ -6923,28 +6969,28 @@
       "name": "마른오징어",
       "kind": "마른오징어",
       "unit": "20마리",
-      "price": 108600,
+      "price": 107000,
       "prevPrice": 108600,
-      "normalPrice": 68101,
+      "normalPrice": 69048,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 106020
         },
         {
-          "date": "2026-08-30",
+          "date": "2026-09-01",
           "price": 109000
-        },
-        {
-          "date": "2026-09-29",
-          "price": 108600
         },
         {
           "date": "2026-09-30",
           "price": 108600
+        },
+        {
+          "date": "2026-10-01",
+          "price": 107000
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:264",
@@ -6958,26 +7004,26 @@
       "unit": "1속",
       "price": 11110,
       "prevPrice": 11110,
-      "normalPrice": 1092,
+      "normalPrice": 1097,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 11360
         },
         {
-          "date": "2026-08-30",
+          "date": "2026-09-01",
           "price": 11170
-        },
-        {
-          "date": "2026-09-29",
-          "price": 11110
         },
         {
           "date": "2026-09-30",
           "price": 11110
+        },
+        {
+          "date": "2026-10-01",
+          "price": 11110
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:265",
@@ -6991,26 +7037,26 @@
       "unit": "1kg",
       "price": 14980,
       "prevPrice": 14980,
-      "normalPrice": 3025,
+      "normalPrice": 3034,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 14780
         },
         {
-          "date": "2026-08-30",
+          "date": "2026-09-01",
           "price": 15240
-        },
-        {
-          "date": "2026-09-29",
-          "price": 14980
         },
         {
           "date": "2026-09-30",
           "price": 14980
+        },
+        {
+          "date": "2026-10-01",
+          "price": 14980
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:937",
@@ -7022,28 +7068,28 @@
       "name": "전복",
       "kind": "냉장",
       "unit": "1kg",
-      "price": 25340,
+      "price": 25460,
       "prevPrice": 25340,
-      "normalPrice": 13144,
+      "normalPrice": 13290,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 26444
+          "date": "2025-10-01",
+          "price": 26488
         },
         {
-          "date": "2026-08-30",
-          "price": 21752
-        },
-        {
-          "date": "2026-09-29",
-          "price": 25340
+          "date": "2026-09-01",
+          "price": 21816
         },
         {
           "date": "2026-09-30",
           "price": 25340
+        },
+        {
+          "date": "2026-10-01",
+          "price": 25460
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:938",
@@ -7057,26 +7103,26 @@
       "unit": "2kg",
       "price": 28040,
       "prevPrice": 28040,
-      "normalPrice": 4804,
+      "normalPrice": 4888,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 28220
         },
         {
-          "date": "2026-08-30",
+          "date": "2026-09-01",
           "price": 27960
-        },
-        {
-          "date": "2026-09-29",
-          "price": 28040
         },
         {
           "date": "2026-09-30",
           "price": 28040
+        },
+        {
+          "date": "2026-10-01",
+          "price": 28040
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:2889",
@@ -7090,26 +7136,26 @@
       "unit": "1kg",
       "price": 12980,
       "prevPrice": 12980,
-      "normalPrice": 3473,
+      "normalPrice": 3477,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 12720
         },
         {
-          "date": "2026-08-30",
-          "price": 12792
-        },
-        {
-          "date": "2026-09-29",
-          "price": 12980
+          "date": "2026-09-01",
+          "price": 12804
         },
         {
           "date": "2026-09-30",
           "price": 12980
+        },
+        {
+          "date": "2026-10-01",
+          "price": 12980
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:2895",
@@ -7121,28 +7167,28 @@
       "name": "홍합",
       "kind": "안깐홍합(냉장)",
       "unit": "1kg",
-      "price": 1688,
+      "price": 1708,
       "prevPrice": 1688,
-      "normalPrice": 2878,
+      "normalPrice": 2899,
       "series": [
         {
-          "date": "2025-09-30",
+          "date": "2025-10-01",
           "price": 2370
         },
         {
-          "date": "2026-08-30",
-          "price": 1688
-        },
-        {
-          "date": "2026-09-29",
+          "date": "2026-09-01",
           "price": 1688
         },
         {
           "date": "2026-09-30",
           "price": 1688
+        },
+        {
+          "date": "2026-10-01",
+          "price": 1708
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     },
     {
       "id": "seafood:2801",
@@ -7154,28 +7200,28 @@
       "name": "삼치",
       "kind": "냉동",
       "unit": "1kg",
-      "price": 5984,
+      "price": 5950,
       "prevPrice": 5984,
-      "normalPrice": 8616,
+      "normalPrice": 9646,
       "series": [
         {
-          "date": "2025-09-30",
-          "price": 6408
+          "date": "2025-10-01",
+          "price": 6416
         },
         {
-          "date": "2026-08-30",
-          "price": 5964
-        },
-        {
-          "date": "2026-09-29",
-          "price": 5984
+          "date": "2026-09-01",
+          "price": 5971
         },
         {
           "date": "2026-09-30",
           "price": 5984
+        },
+        {
+          "date": "2026-10-01",
+          "price": 5950
         }
       ],
-      "updatedAt": "2026-09-30"
+      "updatedAt": "2026-10-01"
     }
   ]
 }
