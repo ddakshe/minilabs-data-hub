@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-01",
+  "updatedAt": "2026-10-02",
   "source": "KOSIS Open API",
   "categories": [
     {
@@ -416,18 +416,14 @@
       "id": "eco_cpi",
       "category": "economy",
       "title": "소비자물가 상승률",
-      "value": 3.1,
+      "value": 2.9,
       "unit": "%",
-      "changePct": 0.3,
+      "changePct": -0.2,
       "decimals": 1,
       "frequency": "M",
       "source": "통계청 소비자물가조사",
-      "period": "2026.08",
+      "period": "2026.09",
       "history": [
-        {
-          "prd": "202309",
-          "value": 3.7
-        },
         {
           "prd": "202310",
           "value": 3.8
@@ -567,6 +563,10 @@
         {
           "prd": "202608",
           "value": 3.1
+        },
+        {
+          "prd": "202609",
+          "value": 2.9
         }
       ]
     },
