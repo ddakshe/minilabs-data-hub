@@ -109,7 +109,7 @@ report-reward/             ← report-reward-mini(신고하고 포상금받자) 
   _work/                   # (gitignore) collect-report-reward.mjs 가 받은 조례 원문 재료
 ```
 
-`auto-option/` 은 **월 1회 Actions 가 갱신한다**(`fetch-auto-option.yml`, 1일 09:00 KST).
+`auto-option/` 은 **더 이상 갱신하지 않는다** — 쓰던 앱(auto-option-mini)이 슬롯을 넘기고 내려갔다(2026-10-02, `fetch-auto-option.yml`·`repair-auto-option.yml` 삭제). 데이터는 마지막 수집분 그대로 남겨 둔다.
 PDF 75MB 를 git 에 넣지 않을 뿐, 매 실행마다 poppler 를 깔고 원본을 새로 받아 파싱한다.
 파서는 `scripts/auto-option/` 에 있다 — 기아 내연·기아 전기·현대 세 서식이 근본적으로
 달라 파일이 셋이다.

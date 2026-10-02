@@ -1,5 +1,9 @@
 # LOCAL_JOBS — 로컬에서 돌려야 하는 작업
 
+> **2026-10-02 — 끝난 앱의 수집을 걷어냈다.** 워크플로 19개를 지웠다(데이터 폴더는 남겼다).
+> 그중 `watch-stadium.yml` 은 launchd 예약(`com.minilabs.watch-stadium-dispatch`)도 함께 해제했다.
+> CPO(아래 1번)도 쓰던 앱이 내려가 `fetch-cpo.yml`·`fetch-cpo-local.yml` 을 지웠다 — 되살리려면 git 이력에서 꺼낸다.
+
 > **이 저장소에는 GitHub Actions 로 옮길 수 없는 작업이 있다.**
 > 기계를 바꾸거나 한동안 손을 놨다면 이 파일부터 확인할 것.
 > CI 가 도는 나머지 작업은 `.github/workflows/` 에 있다.
@@ -36,10 +40,6 @@
 |---|---|---|
 | `com.minilabs.build-wanted-dispatch` | `build-wanted.yml` | 30분 (`StartInterval 1800`) |
 | `com.minilabs.market-close-dispatch` | `fetch-market-close.yml` | 평일 09:30~14:00 **30분마다** (게이트) |
-| `com.minilabs.watch-stadium-dispatch` | `watch-stadium.yml` | 매주 화 05:30 (`StartCalendarInterval`) |
-
-**watch-stadium 은 `StartInterval` 이 아니라 달력 기준이다.** 주 1회를 로드 시점부터
-세면 맥을 재부팅할 때마다 요일이 밀린다. 30분 주기인 build-wanted 와 다른 점이다.
 
 **market-close 는 시각을 고정하지 않는다.** 공개 시각이 날마다 흔들리기 때문이다 —
 실측으로 08-28 은 09:39~10:53, 09-01 은 10:35~10:40 사이였다. 고정 시각은 이른 날엔
