@@ -40,6 +40,7 @@
 |---|---|---|
 | `com.minilabs.build-wanted-dispatch` | `build-wanted.yml` | 30분 (`StartInterval 1800`) |
 | `com.minilabs.market-close-dispatch` | `fetch-market-close.yml` | 평일 09:30~14:00 **30분마다** (게이트) |
+| `com.minilabs.outdoor-score-dispatch` | `fetch-outdoor-score.yml` | **매시 15분** (`StartCalendarInterval Minute 15`) — 2026-10-02, 워크플로 cron 3시간은 안전망 |
 
 **market-close 는 시각을 고정하지 않는다.** 공개 시각이 날마다 흔들리기 때문이다 —
 실측으로 08-28 은 09:39~10:53, 09-01 은 10:35~10:40 사이였다. 고정 시각은 이른 날엔
@@ -60,6 +61,7 @@ scripts/market-close-due.mjs     exit 0=실행 / 1=건너뜀 / 2=판정불가
 # 등록 (plist 는 ~/Library/LaunchAgents/)
 launchctl bootstrap "gui/$(id -u)" ~/Library/LaunchAgents/com.minilabs.build-wanted-dispatch.plist
 launchctl bootstrap "gui/$(id -u)" ~/Library/LaunchAgents/com.minilabs.market-close-dispatch.plist
+launchctl bootstrap "gui/$(id -u)" ~/Library/LaunchAgents/com.minilabs.outdoor-score-dispatch.plist
 
 # 확인 · 로그 · 수동 실행
 launchctl list | grep com.minilabs..*-dispatch
