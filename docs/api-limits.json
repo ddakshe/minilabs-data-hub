@@ -77,6 +77,12 @@
           "dataset": "주식시세정보",
           "note": "전 종목 시세 1콜 — market-close 와 **같은 데이터를 공유**한다",
           "planned": true
+        },
+        "fetch-outdoor-score.yml": {
+          "callsPerRun": 520,
+          "runsPerDay": 24,
+          "dataset": "기상청 단기예보 236 · 생활기상지수 자외선 약 250 · 중기예보 31 · 에어코리아 1(+측정소 주 1회) · 특일정보 2",
+          "note": "🖥 맥 러너 · launchd 매시 디스패치(cron 은 3시간 안전망). 데이터셋별로 보면 단기예보 약 5,700/일·자외선 약 6,000/일 — 각 10,000 한도 안"
         }
       }
     },

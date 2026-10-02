@@ -38,12 +38,13 @@
 | `fetch-benefit-gauge.yml` | 0.1 | 60 | 8.6 | 보조금24 |
 | `fetch-local-currency.yml` | 1 | 400 | 400 | 지역화폐 가맹점 |
 | `fetch-market-close.yml` | 0.4 | 24 | 10 | 주식시세정보 · 프리셋 20 + 지수 2 |
-| `fetch-realestate.yml` | 0.3 | 300 | 86 | 국토부 실거래가 |
+| `fetch-outdoor-score.yml` | 8 | 520 | 4,160 | 기상청 단기예보 236 · 생활기상지수 자외선 약 250 · 중기예보 31 · 에어코리아 1(+측정소 주 1회) · 특일정보 2 · 🖥 맥 러너 · launchd 매시 디스패치(cron 은 3시간 안전망). 데이터셋별로 보면 단기예보 약 5,700/일·자외선 약 6,000/일 — 각 10,000 한도 안 |
 | `fetch-stock-ipo.yml` | 1 | **?** | **?** | ⚠️ **미신고 — api-limits.json 에 추가할 것** |
 | `fetch-vaccine.yml` | 0.3 | 190 | 54 | 보조금24 + 심평원 비급여 · 보조금24 serviceList 3콜(서비스명 LIKE 3종) + 심평원 getNonPaymentItemHospList2 약 187콜(18.6만 행 ÷ 1000). 주 2회 |
-| `probe-realestate.yml` | 수동 | 20 | 20 | 국토부 실거래가 |
+| ~~`fetch-realestate.yml`~~ | — | — | — | 👻 **워크플로 없음 — 예산에서 지울 것** |
+| ~~`probe-realestate.yml`~~ | — | — | — | 👻 **워크플로 없음 — 예산에서 지울 것** |
 | `fetch-company-info.yml` | 예정 | 2,532 | — | 📋 **예정** · 전 종목 시세 1콜 — market-close 와 **같은 데이터를 공유**한다 |
-| **합계** | | | **584** | 🟢 평균은 한도의 **6%** |
+| **합계** | | | **4,638** | 🟢 평균은 한도의 **46%** |
 
 > **최대 1회 소모 2,532건 (한도의 25%).** 한도를 깨는 것은
 > 평균이 아니라 **버스트**다 — 무거운 배치가 도는 날은 같은 키를 쓰는 다른
@@ -71,9 +72,9 @@
 
 | 워크플로 | 주기(회/일) | 콜/회 | 평균/일 | 비고 |
 |---|---:|---:|---:|---|
-| `fetch-cancer-cover.yml` | 0 | 20 | 0.6 |  |
 | `fetch-kosis.yml` | 1 | 40 | 40 |  |
-| **합계** | | | **41** | 🟢 평균은 한도의 **0%** |
+| ~~`fetch-cancer-cover.yml`~~ | — | — | — | 👻 **워크플로 없음 — 예산에서 지울 것** |
+| **합계** | | | **40** | 🟢 평균은 한도의 **0%** |
 
 > **최대 1회 소모 40건 (한도의 0%).** 한도를 깨는 것은
 > 평균이 아니라 **버스트**다 — 무거운 배치가 도는 날은 같은 키를 쓰는 다른
@@ -132,19 +133,13 @@
 
 - `FESTIVAL_API_KEY` — `fetch-festivals.yml`
 - `FINLIFE_API_KEY` — `fetch-rates.yml`
-- `GEMINI_API_KEY` — `repair-auto-option.yml`
 - `GOV24_KEY` — `fetch-benefit-gauge.yml`
-- `KAMIS_CERT_ID` — `fetch-kamis.yml`
-- `KAMIS_CERT_KEY` — `fetch-kamis.yml`
 - `KASI_SERVICE_KEY` — `fetch-holidays.yml`
 - `KMDB_KEY` — `fetch-now-showing.yml`
 - `KOBIS_KEY` — `fetch-now-showing.yml`
 - `KTO_API_KEY` — `fetch-travel-courses.yml`
-- `LIFELONG_LEARNING_API_KEY` — `fetch-lifelong-learning.yml`
-- `RECALL_API_KEYS` — `fetch-recall.yml`
-- `SEOUL_API_KEY` — `fetch-subway-congestion.yml`
 - `TOSS_API_KEY` — `fetch-dividend-labels.yml`, `fetch-lever.yml`, `fetch-peak.yml`
 
 ---
 
-스캔: 워크플로 53개 · 관리 대상 키 21개 · 2026-09-30
+스캔: 워크플로 35개 · 관리 대상 키 15개 · 2026-10-02

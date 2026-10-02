@@ -1,0 +1,97 @@
+name: Fetch weather (거 하기 딱 좋은 날씨네 · 맥)
+
+# outdoor-score-mini(거 하기 딱 좋은 날씨네) 앱이 읽는 시군구별 예보 한 파일.
+#   기상청 단기예보(격자 약 236개) + 중기예보 + 생활기상지수 자외선 V5 + 에어코리아 실시간 + 천문연 공휴일
+# 스크립트 정본은 앱 폴더(~/ClaudeProjects/outdoor-score-mini/fetch_kma.py) — 고치면 scripts/outdoor-score/ 로 복사한다.
+#
+# 매시간 돈다(에어코리아 실시간이 1시간 단위, 단기예보는 하루 8번 발표).
+# GitHub 예약은 이 저장소에서 대량 유실된다(LOCAL_JOBS.md) → launchd 가 매시 15분에 디스패치하고,
+# 아래 schedule 은 launchd 가 죽었을 때의 안전망이다.
+#
+# 🗑 결과는 main 에 커밋하지 않는다. 약 800KB 가 매시간 전부 바뀌어 쌓으면 한 해 7GB 다.
+#    히스토리 없는 `weather-data` 브랜치에 매번 강제 푸시 → 항상 최신 파일 하나만 남는다.
+#    수집이 실패하면 푸시하지 않으므로 앱은 직전 파일을 계속 읽는다.
+#    앱 주소: https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/weather-data/outdoor-score/forecast.json
+
+on:
+  schedule:
+    - cron: '20 */3 * * *'  # 안전망(3시간마다) — 주 트리거는 launchd 매시 15분
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: '실행 이유 (로그에만 기록, 선택)'
+        required: false
+        default: 'manual refresh'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-outdoor-score
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: [self-hosted, macOS, ARM64]
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      # 직전 파일 — 스크립트가 오늘 이른 시간(발표 이전)을 이 값으로 채운다. 없어도 된다.
+      - name: Previous forecast
+        run: |
+          OUT="$RUNNER_TEMP/weather-out/outdoor-score"
+          rm -rf "$RUNNER_TEMP/weather-out" && mkdir -p "$OUT"
+          curl -fsSL --max-time 30 -o "$OUT/forecast.json" \
+            "https://raw.githubusercontent.com/${{ github.repository }}/weather-data/outdoor-score/forecast.json" \
+            || rm -f "$OUT/forecast.json"
+
+      # 키는 저장소 시크릿(디코딩 형태)이 있으면 그걸, 없으면 러너의 ~/.config/stock-tools/datagokr.env.
+      - name: Fetch
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        run: |
+          export OUT="$RUNNER_TEMP/weather-out/outdoor-score/forecast.json"
+          export STN_CACHE="$HOME/.cache/outdoor-score/stations.json"  # 측정소 위치 7일 캐시(러너에 남는다)
+          mkdir -p "$(dirname "$STN_CACHE")"
+          cd scripts/outdoor-score && python3 fetch_kma.py
+
+      # 반쯤 빈 파일로 덮어쓰지 않는다.
+      - name: Validate
+        run: |
+          python3 - "$RUNNER_TEMP/weather-out/outdoor-score/forecast.json" <<'PY'
+          import json, sys
+          d = json.load(open(sys.argv[1]))
+          n = len(d["munis"]); h = len(d["hours"])
+          ok = sum(1 for m in d["munis"].values() if m["t"] and m["t"][-1] is not None)
+          print(f"munis={n} hours={h} withTemp={ok} source={d['source']}")
+          assert d["source"].startswith("기상청"), "기상청 자료가 아님"
+          assert n >= 240 and h >= 48 and ok >= n * 0.9, "시군구·시간이 모자람"
+          PY
+
+      - name: Push to weather-data (orphan, force)
+        env:
+          TOKEN: ${{ github.token }}
+        run: |
+          cd "$RUNNER_TEMP/weather-out"
+          git init -q -b weather-data
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "chore(weather): refresh ($(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M'))"
+          git push -q --force "https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git" weather-data
+
+      - name: Summary
+        if: always()
+        run: |
+          F="$RUNNER_TEMP/weather-out/outdoor-score/forecast.json"
+          {
+            echo "## Weather Fetch Summary"
+            echo ""
+            echo "- Trigger: \`${{ github.event_name }}\` (${{ github.event.inputs.reason || 'scheduled' }})"
+            echo "- Size: $(du -k "$F" 2>/dev/null | cut -f1) KB"
+            echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+          } >> "$GITHUB_STEP_SUMMARY"
