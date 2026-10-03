@@ -23,7 +23,7 @@ ROOT = Path(__file__).parent
 OUT = Path(os.environ.get("OUT") or ROOT / "public" / "data" / "forecast.json")  # 허브는 OUT 으로 출력 위치를 넘긴다. 앱이 읽는 파일(시안 mockup.html 용 data/forecast.json 에도 복사)
 MOCK = ROOT / "data" / "forecast.json"
 KST = timezone(timedelta(hours=9))
-HOURS = 72
+HOURS = 72  # 기본값 — main() 이 받은 예보의 마지막 시각까지로 다시 정한다
 VILAGE = "https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst"
 AIR = "https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty"
 STNAPI = "https://apis.data.go.kr/B552584/MsrstnInfoInqireSvc/getMsrstnList"
@@ -130,7 +130,7 @@ def amount(v, unit):
 
 
 def fetch_grid(nx, ny, base_date, base_time, key):
-    d = get_json(VILAGE, {"pageNo": 1, "numOfRows": 1000, "dataType": "JSON", "base_date": base_date,
+    d = get_json(VILAGE, {"pageNo": 1, "numOfRows": 1500, "dataType": "JSON", "base_date": base_date,
                           "base_time": base_time, "nx": nx, "ny": ny}, key)
     head = d.get("response", {}).get("header", {})
     if head.get("resultCode") != "00":
@@ -245,8 +245,6 @@ def main():
     key = service_key()
     now = datetime.now(KST)
     start = now.replace(hour=0, minute=0, second=0, microsecond=0)
-    hours = [(start + timedelta(hours=i)).strftime("%Y-%m-%dT%H:00") for i in range(HOURS)]
-    idx = {h: i for i, h in enumerate(hours)}
     base_date, base_time = latest_base(now)
 
     pts = centroids()
@@ -262,6 +260,15 @@ def main():
 
     with ThreadPoolExecutor(max_workers=6) as ex:
         list(ex.map(job, grids))
+
+    # 시간 축 = 오늘 0시 ~ 받은 예보의 마지막 시각. 단기예보는 발표에 따라 글피(4일째, 3시간 간격)까지 온다.
+    # 예전엔 72시간에서 잘라 4일째를 버렸고, 중기예보는 5일 뒤부터라 그 사이 하루(2026-10-06)가 비었다.
+    global HOURS
+    last = max(datetime.strptime(it["fcstDate"] + it["fcstTime"], "%Y%m%d%H%M").replace(tzinfo=KST)
+               for items in results.values() for it in items)
+    HOURS = max(72, int((last - start).total_seconds() // 3600) + 1)
+    hours = [(start + timedelta(hours=i)).strftime("%Y-%m-%dT%H:00") for i in range(HOURS)]
+    idx = {h: i for i, h in enumerate(hours)}
 
     # 지난 파일의 값으로 오늘 이른 시간(발표 이전)을 채운다
     prev = {}
@@ -342,6 +349,13 @@ def main():
                 for i, h in enumerate(hours):
                     if arr[i] is None and h in oi and oi[h] < len(old[k]):
                         arr[i] = old[k][oi[h]]
+            # 4일째는 3시간 간격 — 기온·습도·바람은 사이를 직선으로 잇는다(나머지는 아래에서 앞 값으로 채움)
+            if k in ("t", "rh", "ws"):
+                known = [i for i, x in enumerate(arr) if x is not None]
+                for a0, b0 in zip(known, known[1:]):
+                    for i in range(a0 + 1, b0):
+                        v = arr[a0] + (arr[b0] - arr[a0]) * (i - a0) / (b0 - a0)
+                        arr[i] = round(v, 1) if k != "rh" else int(round(v))
             first = next((x for x in arr if x is not None), None)
             for i in range(HOURS):
                 if arr[i] is None:
