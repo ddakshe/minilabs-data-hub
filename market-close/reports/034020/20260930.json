@@ -1,0 +1,101 @@
+{
+  "code": "034020",
+  "name": "두산에너빌리티",
+  "market": "KOSPI",
+  "basDt": "20260930",
+  "price": {
+    "code": "034020",
+    "name": "두산에너빌리티",
+    "market": "KOSPI",
+    "basDt": "20260930",
+    "close": 81600,
+    "vs": 1900,
+    "fltRt": 2.38,
+    "open": 80600,
+    "high": 82200,
+    "low": 80300,
+    "prevClose": 79700,
+    "volume": 1524398,
+    "tradeValue": 124080558650,
+    "week52": {
+      "low": 60200,
+      "high": 136400,
+      "position": 0.28083989501312334,
+      "days": 242,
+      "from": "20250930"
+    },
+    "recent5": [
+      {
+        "basDt": "20260922",
+        "fltRt": 1.41,
+        "open": 87000,
+        "high": 88100,
+        "low": 85200,
+        "close": 86500
+      },
+      {
+        "basDt": "20260923",
+        "fltRt": -5.55,
+        "open": 86100,
+        "high": 86100,
+        "low": 80500,
+        "close": 81700
+      },
+      {
+        "basDt": "20260928",
+        "fltRt": 0.37,
+        "open": 82600,
+        "high": 83000,
+        "low": 80900,
+        "close": 82000
+      },
+      {
+        "basDt": "20260929",
+        "fltRt": -2.8,
+        "open": 80500,
+        "high": 81100,
+        "low": 78700,
+        "close": 79700
+      },
+      {
+        "basDt": "20260930",
+        "fltRt": 2.38,
+        "open": 80600,
+        "high": 82200,
+        "low": 80300,
+        "close": 81600
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 2874561,
+      "ratio": 0.53
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 529,
+      "rows52w": 242
+    },
+    "generatedAt": "2026-10-04T09:16:54.724Z"
+  },
+  "facts": [
+    "코스피보다 2.86%p 높았어요.",
+    "거래량은 20일 평균의 0.5배예요.",
+    "시가보다 1,000원 높게 마감했어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 6838.04,
+    "vs": -32.77,
+    "fltRt": -0.48
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null,
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-04T09:16:54.724Z"
+}
