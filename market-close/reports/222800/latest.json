@@ -72,10 +72,10 @@
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 531,
+      "rows": 528,
       "rows52w": 242
     },
-    "generatedAt": "2026-10-02T07:43:23.254Z"
+    "generatedAt": "2026-10-05T07:53:42.769Z"
   },
   "facts": [
     "코스닥보다 1.77%p 높았어요.",
@@ -85,15 +85,9 @@
   "news": [
     {
       "title": "심텍 5.12% 올라 15만8000원…장중 최고가와 같은 수준",
-      "source": "job-post.co.kr",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1VN1oxellfSTN3alRDTnkyNG9SY2lydWU3TlVzdktXYzVwZTkzT054dl9oT1l1NWl1UWVNekdqM0tncHN6UGFCY2kxSnQ3TnlLNGhscWhEZmZHTHZsdmF4Y1BaQ0RrLVdOeGR3RENsMFkzd9IBckFVX3lxTE1VN1oxellfSTN3alRDTnkyNG9SY2lydWU3TlVzdktXYzVwZTkzT054dl9oT1l1NWl1UWVNekdqM0tncHN6UGFCY2kxSnQ3TnlLNGhscWhEZmZHTHZsdmF4Y1BaQ0RrLVdOeGR3RENsMFkzdw?oc=5",
+      "source": "잡포스트",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBfckcxRjllR2ZVbTRFSU1uYk5NMnlGcjFnblJ0X0R3bXAtX1ZEVkU1QmVJN3hKck9iY3U4MS1Sc0Q4TG5YNVhfWEFmdE5JYWJCVGtKaEFVWVpUYjVJNjZXa0N2Vy1oTWw2X2F5bGtR0gFyQVVfeXFMTVU3WjF6WV9JM3dqVENOeTI0b1JjaXJ1ZTdOVXN2S1djNXBlOTNPTnh2X2hPWXU1aXVRZU16R2ozS2dwc3pQYUJjaTFKdDdOeUs0aGxxaERmZkdMdmx2YXhjUFpDRGstV054ZHdEQ2wwWTN3?oc=5",
       "publishedAt": "2026-10-01T05:36:01.000Z"
-    },
-    {
-      "title": "심텍 10%이상주주 심텍홀딩스, 소유 주식 수량 8만1571주 감소…소유 지분율 1.06%p 하락",
-      "source": "디지털투데이",
-      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE8yaEswN2xIb2NwM3cwellGeGhsZEhVQjlZcG9aVkdrWDFGanJxajFOQ2NWZExoLW5pWTd5dzloVGowdzBsN2w1cHhpd0V5Vll3eUdXbE04RFEzcWE1WFdKd0owYkZ1dUdzUldxV3VKa0xUTlBkRGxKMmZTZw?oc=5",
-      "publishedAt": "2026-10-01T07:23:01.000Z"
     },
     {
       "title": "심텍 주가, 10월 1일 장중 149,800원 0.33% 하락",
@@ -102,10 +96,16 @@
       "publishedAt": "2026-10-01T01:50:46.000Z"
     },
     {
-      "title": "“심텍, SOCAMM 수혜 본격화…목표가 1",
-      "source": "이투데이",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1CT0x0aXhxSUlkc2gzOWdFMmtjcVQ1YWJBemFEYTgwQmR3RG5BTS0tb3c1QWFTX0Fjcmw4X2IybjJuY041YlU0aDdtMnhrdDlnOU5yeVVTMXRDSWxMWks2NXNCQWRuVnNk?oc=5",
-      "publishedAt": "2026-09-30T22:11:46.000Z"
+      "title": "심텍 주가, 10월 1일 장중 153,800원 2.33% 상승",
+      "source": "중앙이코노미뉴스",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1xZ2NWMTdESDhjY1dJREpOcUNXbVVEM0ZTMml2d2hsMWtpZWJYMVNIdlZON3FGVjJKMVM2alBxSjRvdXdzZ3VCWGV5ckJ3TTBJdXdGaUN1ckZuY3JScXVYZmpocm5HbDY2UjNfNnFZcVNwUQ?oc=5",
+      "publishedAt": "2026-10-01T03:15:09.000Z"
+    },
+    {
+      "title": "심텍 10%이상주주 심텍홀딩스, 소유 주식 수량 8만1571주 감소…소유 지분율 1.06%p 하락",
+      "source": "디지털투데이",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE8yaEswN2xIb2NwM3cwellGeGhsZEhVQjlZcG9aVkdrWDFGanJxajFOQ2NWZExoLW5pWTd5dzloVGowdzBsN2w1cHhpd0V5Vll3eUdXbE04RFEzcWE1WFdKd0owYkZ1dUdzUldxV3VKa0xUTlBkRGxKMmZTZw?oc=5",
+      "publishedAt": "2026-10-01T07:23:01.000Z"
     }
   ],
   "dart": [
@@ -171,7 +171,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-02T07:44:39.584Z",
+  "builtAt": "2026-10-05T07:54:59.582Z",
   "archiveDays": 120,
   "archiveFrom": "20260407"
 }

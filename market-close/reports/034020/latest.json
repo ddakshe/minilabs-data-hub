@@ -72,10 +72,10 @@
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 529,
+      "rows": 528,
       "rows52w": 242
     },
-    "generatedAt": "2026-10-04T09:16:50.359Z"
+    "generatedAt": "2026-10-05T07:53:53.475Z"
   },
   "facts": [
     "코스피보다 1.34%p 낮았어요.",
@@ -83,18 +83,6 @@
     "시가보다 1,900원 낮게 마감했어요."
   ],
   "news": [
-    {
-      "title": "두산에너빌리티, 8400억 규모 베트남 오몬3 가스복합발전소 수주",
-      "source": "뉴시스",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9OOGZCVTFlVmZXSjNBaEdTYnk5UUpVWTJjSFNIYzFtV3p1dkd6UEZ4M3Fsa2hKUVZGSG4wRVI0cy1rWkprdEtfRXdvWFY3Ml81SEJ5MnltTDdodVBIcDBvUdIBeEFVX3lxTE1CLWVGZERUaFVRR2JBaXhUTzFaWDhVSUg0WWJ1a2JieXk5c2NENkZZdGVTY1oxdWlCb05Ja0NWV2h2OV9yWjdRNGt6d1I5alNkeUx6X0xXWXBIMUlJcVVMMFBvcjdXUnFxU1BhRWloMGZQcHNWaUVtUA?oc=5",
-      "publishedAt": "2026-10-01T00:45:51.000Z"
-    },
-    {
-      "title": "두산에너빌, 베트남서 8천400억원 가스복합발전소 건설공사 수주",
-      "source": "연합뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9Mc3RQZndiMVZFUlFFMG90endBUkJmd1RSQTJLd1Z1bHVEaVM3clN3VnVFUXNNYVBVX0JHMk5IT2pwelB1dEl4V0QtdHpRRUFmVFh3cUUyNGJJZGPSAWBBVV95cUxPd2RNZDhhUE1VV3pOWGZadG5FOTRiWjIyRklyb3JWeHZHQWliWGtzOXJsblVFNG1FNEJ4UVFkVG92eG5FdnZ0NzEtcVM1ZXFCRi1tcnlOTG5MdmE0YkJESnc?oc=5",
-      "publishedAt": "2026-10-01T00:55:46.000Z"
-    },
     {
       "title": "두산에너빌리티, '턴키 경쟁력' 무기로 글로벌 에너지 전환기 정조준",
       "source": "오피니언뉴스",
@@ -130,6 +118,18 @@
       "source": "전기신문",
       "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5abU1Yc0VobmdhUzRSY0hGNWd4dVRUSlVFUVg4SjB2VlhyQmxDOGN5czR3cEpPcDcxRkJzUlhpTENQSGVMOWdDMjY3ZGRscmRtZzliUXM0cTZfV2xmRWR4eXZXc3R2UDJZU1hVZ9IBcEFVX3lxTE13TmFIUDVtX1ZIUnZPMzhsTG1YNnB2cUdOSEtPSFFwaVpINmlXVXExUVJ2N3AzTXhXSUVMR0RMQ20yZVdVSG00VFNRak9KOXNUZXQ0UHlGcHlWUnRvTkJVRTQzbk1ncDRvbUxfaldKUWs?oc=5",
       "publishedAt": "2026-10-01T00:29:50.000Z"
+    },
+    {
+      "title": "두산에너빌리티, 베트남 가스복합발전소 공사 수주",
+      "source": "경남도민일보",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE0tczVpZG1BNkh1QzRrLVY1ZHpMdGJLOHB4N0J1Tm45M3pDOGxXY01DbDlKdkNyTDFLa2FuNDUzdkJFeTM3aEJDX2N5ZTJTald4SlBTcGpGcksyQUhmMzhUREdoMkRZV3REdEE?oc=5",
+      "publishedAt": "2026-10-01T04:46:50.000Z"
+    },
+    {
+      "title": "두산에너빌리티, 베트남 오몬3 발전소 수주…8400억 원 규모",
+      "source": "동아일보",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1oX0gzaEFRX1pYOHoxNGlvdXJ1YTJsczBIMkF0VzFDSlVrWVNZLWg0UE1JSERPcnRfR3RXYmR5QS05THlSdzdjcDJVZEkxdEdlOW1zWnZBLVJZbEVWcDloeXJjbTZ1UWRfWXQ5anVsd2hQWFZYMnfSAWZBVV95cUxNZ0pUbEhCejdTdF95ZXRYdzBWM2tCaGw5QzZGMXo1eWZCSzkxanU2MU1URjhJeDV2Mkl1R29MOFhDR2xZNkkxRHNwMTJ3LWhxWjVWQ3JmUGtTcnMzVGVHMGlNNXJOMkE?oc=5",
+      "publishedAt": "2026-10-01T01:58:31.000Z"
     }
   ],
   "dart": [
@@ -182,7 +182,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-04T09:16:54.724Z",
+  "builtAt": "2026-10-05T07:54:59.609Z",
   "archiveDays": 120,
   "archiveFrom": "20260407"
 }
