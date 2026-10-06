@@ -3,10 +3,18 @@
   "name": "알테오젠",
   "market": "KOSDAQ",
   "retainDays": 120,
-  "firstBasDt": "20260407",
-  "lastBasDt": "20261001",
+  "firstBasDt": "20260408",
+  "lastBasDt": "20261002",
   "count": 120,
   "days": [
+    {
+      "basDt": "20261002",
+      "close": 259500,
+      "fltRt": -2.08,
+      "headline": "코스닥보다 1.97%p 낮았어요.",
+      "newsCount": 2,
+      "dartCount": 0
+    },
     {
       "basDt": "20261001",
       "close": 265000,
@@ -1054,16 +1062,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260407",
-      "close": 354000,
-      "fltRt": -2.21,
-      "headline": "시가 367,000원보다 13,000원 낮게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-10-05T07:54:59.535Z"
+  "updatedAt": "2026-10-06T08:19:50.986Z"
 }

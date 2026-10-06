@@ -3,10 +3,18 @@
   "name": "두산에너빌리티",
   "market": "KOSPI",
   "retainDays": 120,
-  "firstBasDt": "20260407",
-  "lastBasDt": "20261001",
+  "firstBasDt": "20260408",
+  "lastBasDt": "20261002",
   "count": 120,
   "days": [
+    {
+      "basDt": "20261002",
+      "close": 81100,
+      "fltRt": -1.22,
+      "headline": "코스피보다 1.68%p 낮았어요.",
+      "newsCount": 2,
+      "dartCount": 0
+    },
     {
       "basDt": "20261001",
       "close": 82100,
@@ -1076,16 +1084,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260407",
-      "close": 94900,
-      "fltRt": -0.84,
-      "headline": "코스피보다 1.66%p 낮았어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-10-05T07:54:59.611Z"
+  "updatedAt": "2026-10-06T08:19:51.060Z"
 }
