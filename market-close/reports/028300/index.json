@@ -3,10 +3,36 @@
   "name": "HLB",
   "market": "KOSDAQ",
   "retainDays": 120,
-  "firstBasDt": "20260406",
-  "lastBasDt": "20260930",
+  "firstBasDt": "20260409",
+  "lastBasDt": "20261006",
   "count": 120,
   "days": [
+    {
+      "basDt": "20261006",
+      "close": 47400,
+      "fltRt": 17.18,
+      "headline": "코스닥보다 14.2%p 높았어요.",
+      "newsCount": 8,
+      "dartCount": 0
+    },
+    {
+      "basDt": "20261002",
+      "close": 40450,
+      "fltRt": -0.25,
+      "headline": "코스닥보다 0.14%p 낮았어요.",
+      "newsCount": 0,
+      "dartCount": 0,
+      "priceOnly": true
+    },
+    {
+      "basDt": "20261001",
+      "close": 40550,
+      "fltRt": -2.05,
+      "headline": "코스닥보다 6.53%p 낮았어요.",
+      "newsCount": 0,
+      "dartCount": 0,
+      "priceOnly": true
+    },
     {
       "basDt": "20260930",
       "close": 41400,
@@ -1048,34 +1074,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260408",
-      "close": 54900,
-      "fltRt": 5.17,
-      "headline": "시가 54,600원보다 300원 높게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
-    },
-    {
-      "basDt": "20260407",
-      "close": 52200,
-      "fltRt": 2.15,
-      "headline": "시가 51,300원보다 900원 높게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
-    },
-    {
-      "basDt": "20260406",
-      "close": 51100,
-      "fltRt": 0,
-      "headline": "시가 50,800원보다 300원 높게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-10-01T08:00:42.704Z"
+  "updatedAt": "2026-10-07T07:54:47.396Z"
 }
