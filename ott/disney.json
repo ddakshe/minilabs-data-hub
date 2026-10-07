@@ -2,7 +2,7 @@
   "service": "disney",
   "serviceName": "디즈니+",
   "brandColor": "#0063E5",
-  "updatedAt": "2026-10-01",
+  "updatedAt": "2026-10-07",
   "estimated": false,
   "layout": "grid",
   "subscribeUrl": "https://www.disneyplus.com/ko-kr",
@@ -12,6 +12,17 @@
       "items": [
         {
           "rank": 1,
+          "title": "연애박사",
+          "poster": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/01a0c768-a3d7-77ae-ac09-3056a0c8b5f1/scale?width=400&format=webp",
+          "watchUrl": "https://www.disneyplus.com/ko-kr/browse/entity-994e7dec-fcbd-416e-ab2e-b4de8cc6d154",
+          "extra": {
+            "synopsis": "다리를 잃은 민재와 진로를 잃은 유진. 로봇 연구실에서 피어난 두 청춘들의 맵고, 쓰고, 달콤한 로맨스.",
+            "source": "disney"
+          },
+          "prevRank": null
+        },
+        {
+          "rank": 2,
           "title": "메이드 인 코리아",
           "poster": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/01a08496-14f3-7289-a054-1a627fdfca64/scale?width=400&format=webp",
           "watchUrl": "https://www.disneyplus.com/ko-kr/browse/entity-5acf7909-5d2f-494e-91a9-2fe0555c220f",
@@ -22,7 +33,18 @@
           "prevRank": 1
         },
         {
-          "rank": 2,
+          "rank": 3,
+          "title": "술래게임",
+          "poster": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/01a0f0bc-16cf-7beb-b838-721504e5f872/scale?width=400&format=webp",
+          "watchUrl": "https://www.disneyplus.com/ko-kr/browse/entity-246585f6-2139-40a3-b7aa-f97abf656589",
+          "extra": {
+            "synopsis": "쫓고, 쫓기며 살아남아라. \n어른들의 술래잡기가 시작된다.",
+            "source": "disney"
+          },
+          "prevRank": 3
+        },
+        {
+          "rank": 4,
           "title": "재혼황후: 특별 영상",
           "poster": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/01a0e6d3-85ea-7439-9c85-49a1e7d7ebf3/scale?width=400&format=webp",
           "watchUrl": "https://www.disneyplus.com/ko-kr/browse/entity-541db1a6-4da5-480e-954b-9f5c36e3772e",
@@ -33,18 +55,7 @@
           "prevRank": 2
         },
         {
-          "rank": 3,
-          "title": "술래게임",
-          "poster": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/01a0f0bc-16cf-7beb-b838-721504e5f872/scale?width=400&format=webp",
-          "watchUrl": "https://www.disneyplus.com/ko-kr/browse/entity-246585f6-2139-40a3-b7aa-f97abf656589",
-          "extra": {
-            "synopsis": "쫓고, 쫓기며 살아남아라. \n어른들의 술래잡기가 시작된다.",
-            "source": "disney"
-          },
-          "prevRank": 1
-        },
-        {
-          "rank": 4,
+          "rank": 5,
           "title": "토이 스토리 5",
           "poster": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/01a0ef6f-7a06-7ddf-8339-b69d0a08846a/scale?width=400&format=webp",
           "watchUrl": "https://www.disneyplus.com/ko-kr/browse/entity-c99203fc-eeff-4531-a35e-1f558bedce4f",
@@ -52,10 +63,32 @@
             "synopsis": "장난감과 전자기기의 대결! 새로운 세상 속, 멈춰있던 장난감들이 다시 움직이기 시작한다.",
             "source": "disney"
           },
-          "prevRank": 3
+          "prevRank": 4
         },
         {
-          "rank": 5,
+          "rank": 6,
+          "title": "킬러들의 쇼핑몰",
+          "poster": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/019f883d-128c-7ab7-9d3e-dfd2cebead29/scale?width=400&format=webp",
+          "watchUrl": "https://www.disneyplus.com/ko-kr/browse/entity-7d607023-2f51-40f8-9316-b554b7a05c41",
+          "extra": {
+            "synopsis": "유일한 보호자였던 삼촌의 갑작스러운 죽음 이후 지안은 삼촌이 남긴 수상한 쇼핑몰의 존재를 알게 된다.",
+            "source": "disney"
+          },
+          "prevRank": 8
+        },
+        {
+          "rank": 7,
+          "title": "연애전쟁",
+          "poster": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/019ed952-7faa-71d1-abb6-fd0153dcf593/scale?width=400&format=webp",
+          "watchUrl": "https://www.disneyplus.com/ko-kr/browse/entity-b47ba964-c614-4281-a642-cd7dfa7cb457",
+          "extra": {
+            "synopsis": "갈 데까지 간 연인들의 피 터지는 전쟁! 이별 위기에 놓인 커플들의 운명을 건 현실 연애 최종 담판 &lt;연애전쟁&gt;",
+            "source": "disney"
+          },
+          "prevRank": 6
+        },
+        {
+          "rank": 8,
           "title": "너에게 다이브",
           "poster": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/01a07484-ee35-7dc0-b9a9-2b089912d476/scale?width=400&format=webp",
           "watchUrl": "https://www.disneyplus.com/ko-kr/browse/entity-7b77afd2-5d57-4b33-901f-8ccc69362e71",
@@ -66,18 +99,7 @@
           "prevRank": 5
         },
         {
-          "rank": 6,
-          "title": "연애전쟁",
-          "poster": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/019ed952-7faa-71d1-abb6-fd0153dcf593/scale?width=400&format=webp",
-          "watchUrl": "https://www.disneyplus.com/ko-kr/browse/entity-b47ba964-c614-4281-a642-cd7dfa7cb457",
-          "extra": {
-            "synopsis": "갈 데까지 간 연인들의 피 터지는 전쟁! 이별 위기에 놓인 커플들의 운명을 건 현실 연애 최종 담판 &lt;연애전쟁&gt;",
-            "source": "disney"
-          },
-          "prevRank": 4
-        },
-        {
-          "rank": 7,
+          "rank": 9,
           "title": "재벌 x 형사",
           "poster": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/019fb274-6408-7736-8f98-980dbb3c9da6/scale?width=400&format=webp",
           "watchUrl": "https://www.disneyplus.com/ko-kr/browse/entity-07a3f852-a6a5-42a3-8bd1-ec4fd5a5698a",
@@ -85,21 +107,10 @@
             "synopsis": "형사가 된 철없는 재벌3세의 통쾌한 수사기를 담은 성장드라마",
             "source": "disney"
           },
-          "prevRank": 6
-        },
-        {
-          "rank": 8,
-          "title": "킬러들의 쇼핑몰",
-          "poster": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/019f883d-128c-7ab7-9d3e-dfd2cebead29/scale?width=400&format=webp",
-          "watchUrl": "https://www.disneyplus.com/ko-kr/browse/entity-7d607023-2f51-40f8-9316-b554b7a05c41",
-          "extra": {
-            "synopsis": "유일한 보호자였던 삼촌의 갑작스러운 죽음 이후 지안은 삼촌이 남긴 수상한 쇼핑몰의 존재를 알게 된다.",
-            "source": "disney"
-          },
           "prevRank": 7
         },
         {
-          "rank": 9,
+          "rank": 10,
           "title": "어벤져스: 엔드게임",
           "poster": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/6a8390cc-0240-46fc-9c52-5287ca3676eb/scale?width=400&format=webp",
           "watchUrl": "https://www.disneyplus.com/ko-kr/browse/entity-b39aa962-be56-4b09-a536-98617031717f",
@@ -108,17 +119,6 @@
             "source": "disney"
           },
           "prevRank": 9
-        },
-        {
-          "rank": 10,
-          "title": "조각도시",
-          "poster": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/019a52a8-4aa4-7159-8615-105d1c2c22d5/scale?width=400&format=webp",
-          "watchUrl": "https://www.disneyplus.com/ko-kr/browse/entity-22e8ccc0-dae8-4171-89ff-342c004e66de",
-          "extra": {
-            "synopsis": "인생을 조각 당한 남자의 복수를 향한 뜨거운 질주.",
-            "source": "disney"
-          },
-          "prevRank": 10
         }
       ]
     },
@@ -127,9 +127,9 @@
       "items": [
         {
           "rank": 1,
-          "title": "비전퀘스트",
-          "poster": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/01a00140-faad-7ce8-b70e-4297fe448d09/compose?aspectRatio=0.71&format=webp&width=400",
-          "watchUrl": "https://www.disneyplus.com/ko-kr/browse/entity-8744ec55-8d14-4631-99b4-c889a2d6013f",
+          "title": "오아시스: 돈 룩 백 인 앵거",
+          "poster": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/01a01126-8fd9-7707-8c8c-403f34378afe/compose?aspectRatio=0.71&format=webp&width=400",
+          "watchUrl": "https://www.disneyplus.com/ko-kr/browse/entity-09aa241f-b771-4323-a7ac-e2dae4f3782e",
           "extra": {
             "source": "disney"
           },
@@ -137,29 +137,29 @@
         },
         {
           "rank": 2,
-          "title": "KATSEYE: Wild Hearts",
+          "title": "비전퀘스트",
+          "poster": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/01a00140-faad-7ce8-b70e-4297fe448d09/compose?aspectRatio=0.71&format=webp&width=400",
+          "watchUrl": "https://www.disneyplus.com/ko-kr/browse/entity-8744ec55-8d14-4631-99b4-c889a2d6013f",
+          "extra": {
+            "source": "disney"
+          },
+          "prevRank": 1
+        },
+        {
+          "rank": 3,
+          "title": "Katseye: Wild Hearts",
           "poster": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/01a0e662-2e4e-7e7f-b2b4-46005dae81ce/compose?aspectRatio=0.71&format=webp&width=400",
-          "watchUrl": "https://www.disneyplus.com/ko-kr/browse/entity-bede2264-7d3a-4fcc-8bf6-ff14eb3ab05f",
+          "watchUrl": "https://www.disneyplus.com/ko-kr/browse/entity-769e2c9d-d47a-40d8-b4c4-b4deb50160de",
           "extra": {
             "source": "disney"
           },
           "prevRank": null
         },
         {
-          "rank": 3,
+          "rank": 4,
           "title": "재혼황후",
           "poster": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/01a089d4-4d58-7fdd-a201-bfa772b85141/compose?aspectRatio=0.71&format=webp&width=400",
           "watchUrl": "https://www.disneyplus.com/ko-kr/browse/entity-b02d61cd-3aab-4412-b33d-3512712a91f0",
-          "extra": {
-            "source": "disney"
-          },
-          "prevRank": 2
-        },
-        {
-          "rank": 4,
-          "title": "현혹",
-          "poster": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/019a51d4-eacc-78a7-ace6-26663d76cef6/compose?aspectRatio=0.71&format=webp&width=400",
-          "watchUrl": "https://www.disneyplus.com/ko-kr/browse/entity-7b13be11-573f-4704-81ea-645c91c6ccae",
           "extra": {
             "source": "disney"
           },
@@ -167,9 +167,9 @@
         },
         {
           "rank": 5,
-          "title": "메리 베리 러브",
-          "poster": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/01a046ed-d8af-7b62-a729-5b12ffc671f3/compose?aspectRatio=0.71&format=webp&width=400",
-          "watchUrl": "https://www.disneyplus.com/ko-kr/browse/entity-dfa34bdf-143d-4053-aec9-ab38496249de",
+          "title": "현혹",
+          "poster": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/019a51d4-eacc-78a7-ace6-26663d76cef6/compose?aspectRatio=0.71&format=webp&width=400",
+          "watchUrl": "https://www.disneyplus.com/ko-kr/browse/entity-7b13be11-573f-4704-81ea-645c91c6ccae",
           "extra": {
             "source": "disney"
           },
@@ -177,26 +177,16 @@
         },
         {
           "rank": 6,
-          "title": "아프리카: 야생의 심장",
-          "poster": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/01a08650-f95b-73bd-b347-290e08289844/compose?aspectRatio=0.71&format=webp&width=400",
-          "watchUrl": "https://www.disneyplus.com/ko-kr/browse/entity-7456f3ff-dbb1-4926-8a42-121d980378f3",
+          "title": "메리 베리 러브",
+          "poster": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/01a046ed-d8af-7b62-a729-5b12ffc671f3/compose?aspectRatio=0.71&format=webp&width=400",
+          "watchUrl": "https://www.disneyplus.com/ko-kr/browse/entity-dfa34bdf-143d-4053-aec9-ab38496249de",
           "extra": {
             "source": "disney"
           },
           "prevRank": 5
-        },
-        {
-          "rank": 7,
-          "title": "마녀 아카데미",
-          "poster": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/01a0b0d0-44eb-72e9-91b9-b76f8f9368d6/compose?aspectRatio=0.71&format=webp&width=400",
-          "watchUrl": "https://www.disneyplus.com/ko-kr/browse/entity-5526d12b-7904-40cd-9bda-5af3fbfe3077",
-          "extra": {
-            "source": "disney"
-          },
-          "prevRank": 7
         }
       ]
     }
   ],
-  "prevAt": "2026-09-30"
+  "prevAt": "2026-10-01"
 }
