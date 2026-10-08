@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-07",
-  "week": "261007",
+  "updatedAt": "2026-10-08",
+  "week": "261008",
   "period": {
-    "start": "2026-09-30",
-    "end": "2026-10-06"
+    "start": "2026-10-07",
+    "end": "2026-10-13"
   },
   "regions": [
     {
@@ -81,7 +81,30 @@
   ],
   "leaflets": [
     {
-      "id": "homeplus-261007-805",
+      "id": "emart-261008",
+      "mart": "emart",
+      "store": "이마트",
+      "region": "national",
+      "coords": null,
+      "regionGrade": "national",
+      "period": {
+        "start": "2026-10-07",
+        "end": "2026-10-13"
+      },
+      "pages": [
+        "https://stimg.emart.com/upload/news_leaflet/20261006_0939053_046.jpg",
+        "https://stimg.emart.com/upload/news_leaflet/20261006_0939054_047.jpg",
+        "https://stimg.emart.com/upload/news_leaflet/20261006_0939055_048.jpg",
+        "https://stimg.emart.com/upload/news_leaflet/20261006_0939055_049.jpg",
+        "https://stimg.emart.com/upload/news_leaflet/20261006_0939056_050.jpg",
+        "https://stimg.emart.com/upload/news_leaflet/20261006_0939056_051.jpg",
+        "https://stimg.emart.com/upload/news_leaflet/20261006_0939057_052.jpg",
+        "https://stimg.emart.com/upload/news_leaflet/20261007_1614057_269.jpg"
+      ],
+      "sourceUrl": "https://eapp.emart.com/leaflet/leafletView_EL.do"
+    },
+    {
+      "id": "homeplus-261008-805",
       "mart": "homeplus",
       "store": "홈플러스 익스프레스",
       "region": null,
@@ -103,12 +126,11 @@
       "coords": null,
       "regionGrade": "exact",
       "period": {
-        "start": "2026-09-30",
-        "end": "2026-10-06"
+        "start": "2026-10-07",
+        "end": "2026-10-13"
       },
       "pages": [
-        "https://mres.my.homeplus.co.kr/files/leaflet_thema/KG12rLcyfq9lm29mHAepFKi4lCyMLk-5848972.jpg",
-        "https://mres.my.homeplus.co.kr/files/leaflet_thema/bG2M847flJWwEx0aUCW521xF2IKfFG-4371971.jpg"
+        "https://mres.my.homeplus.co.kr/files/leaflet_thema/Z0V7XwNkTH1wNpRjCaevhAvPxymUX6-8183683.jpg"
       ],
       "sourceUrl": "https://my.homeplus.co.kr/leaflet",
       "stores": [
@@ -725,18 +747,6 @@
           "tel": "02-3481-8541"
         },
         {
-          "name": "홈플러스 익스프레스 남양주별내2점",
-          "region": "gyeonggi",
-          "coords": {
-            "lat": 37.6669626,
-            "lng": 127.11474529999998
-          },
-          "addr": "경기도 남양주시 별내3로 64-7",
-          "hours": "10:00~23:00",
-          "dayoff": "10/14(수), 10/28(수)",
-          "tel": "031-575-9159"
-        },
-        {
           "name": "홈플러스 익스프레스 남양주진접점",
           "region": "gyeonggi",
           "coords": {
@@ -771,18 +781,6 @@
           "hours": "10:00~23:00",
           "dayoff": "10/11(일), 10/25(일)",
           "tel": "031-404-8545"
-        },
-        {
-          "name": "홈플러스 익스프레스 다대포점",
-          "region": "busan",
-          "coords": {
-            "lat": 35.0493,
-            "lng": 128.966
-          },
-          "addr": "부산광역시 사하구 다대낙조2길 3",
-          "hours": "08:00~23:00",
-          "dayoff": "10/12(월), 10/26(월)",
-          "tel": "051-266-8542"
         },
         {
           "name": "홈플러스 익스프레스 당산점",
@@ -3499,7 +3497,7 @@
       ]
     },
     {
-      "id": "homeplus-261007-592",
+      "id": "homeplus-261008-592",
       "mart": "homeplus",
       "store": "홈플러스",
       "region": null,
@@ -3513,9 +3511,9 @@
         "gwangju",
         "gyeonggi",
         "daegu",
-        "chungnam",
         "daejeon",
         "busan",
+        "chungnam",
         "jeju",
         "sejong",
         "chungbuk",
@@ -3525,13 +3523,13 @@
       "coords": null,
       "regionGrade": "exact",
       "period": {
-        "start": "2026-09-30",
-        "end": "2026-10-06"
+        "start": "2026-10-07",
+        "end": "2026-10-13"
       },
       "pages": [
-        "https://mres.my.homeplus.co.kr/files/leaflet_thema/3z21PHAUrOE6fX5WQ8hFoCcoEh1YED-2148763.jpg",
-        "https://mres.my.homeplus.co.kr/files/leaflet_thema/92Ys4UQnsRU6aNy7LD8lwYy9jpvgXH-8633537.jpg",
-        "https://mres.my.homeplus.co.kr/files/leaflet_thema/Yz3Zhp13HNxCWKJdKSwE0FGreirbML-5612129.jpg"
+        "https://mres.my.homeplus.co.kr/files/leaflet_thema/80UGHFDj32pFT0ORJBDBViK3QHBdYc-1603498.jpg",
+        "https://mres.my.homeplus.co.kr/files/leaflet_thema/8vsQhb63So3FAwRghR5cEXAv6lofh7-2508332.jpg",
+        "https://mres.my.homeplus.co.kr/files/leaflet_thema/Hdrw3guSNQmeYCNvkih5fuGdKQAn4n-8161819.jpg"
       ],
       "sourceUrl": "https://my.homeplus.co.kr/leaflet",
       "stores": [
@@ -3702,18 +3700,6 @@
           "hours": "10:00~22:00",
           "dayoff": "10/12(월), 10/26(월)",
           "tel": "053-659-8000"
-        },
-        {
-          "name": "홈플러스 논산점",
-          "region": "chungnam",
-          "coords": {
-            "lat": 36.182,
-            "lng": 127.1
-          },
-          "addr": "충청남도 논산시 시민로 187",
-          "hours": "10:00~22:00",
-          "dayoff": "10/12(월), 10/26(월)",
-          "tel": "041-731-8000"
         },
         {
           "name": "홈플러스 대구수성점",
@@ -4342,7 +4328,7 @@
       ]
     },
     {
-      "id": "traders-261007",
+      "id": "traders-261008",
       "mart": "traders",
       "store": "트레이더스",
       "region": "national",
@@ -4350,8 +4336,8 @@
       "priceBasis": "수원점",
       "regionGrade": "base",
       "period": {
-        "start": "2026-09-30",
-        "end": "2026-10-06"
+        "start": "2026-10-07",
+        "end": "2026-10-13"
       },
       "pages": [
         "https://eapp-cdn.emart.com/traders/banners/1cf58af7-6128-4215-ab67-216c5cc77349.jpg",
@@ -4360,34 +4346,38 @@
       "sourceUrl": "https://eapp.emart.com/tradersclub/flyerImgView.do"
     },
     {
-      "id": "lotte-2000499",
+      "id": "lotte-2000504",
       "mart": "lotte",
-      "store": "롯데마트 마트 시티세븐점",
+      "store": "롯데마트 20261008-20261014_서울역점",
       "regionGrade": "exact",
       "period": {
-        "start": "2026-10-01",
-        "end": "2026-10-07"
+        "start": "2026-10-08",
+        "end": "2026-10-14"
       },
       "pages": [
-        "https://lottemartgo-prod-bucket.s3.ap-northeast-2.amazonaws.com/leaflet/1790660081058.jpg",
-        "https://lottemartgo-prod-bucket.s3.ap-northeast-2.amazonaws.com/leaflet/1790660081064.jpg",
-        "https://lottemartgo-prod-bucket.s3.ap-northeast-2.amazonaws.com/leaflet/1790660081070.jpg",
-        "https://lottemartgo-prod-bucket.s3.ap-northeast-2.amazonaws.com/leaflet/1790660081076.jpg"
+        "https://lottemartgo-prod-bucket.s3.ap-northeast-2.amazonaws.com/leaflet/1791268106692.jpg",
+        "https://lottemartgo-prod-bucket.s3.ap-northeast-2.amazonaws.com/leaflet/1791268106698.jpg",
+        "https://lottemartgo-prod-bucket.s3.ap-northeast-2.amazonaws.com/leaflet/1791268106706.jpg",
+        "https://lottemartgo-prod-bucket.s3.ap-northeast-2.amazonaws.com/leaflet/1791268106712.jpg",
+        "https://lottemartgo-prod-bucket.s3.ap-northeast-2.amazonaws.com/leaflet/1791268106721.jpg"
       ],
       "sourceUrl": "https://www.mlotte.net/",
-      "region": null,
-      "coords": null
+      "region": "seoul",
+      "coords": {
+        "lat": 37.556,
+        "lng": 126.972
+      }
     },
     {
-      "id": "nobrand-261007",
+      "id": "nobrand-261008",
       "mart": "nobrand",
       "store": "노브랜드",
       "region": "national",
       "coords": null,
       "regionGrade": "national",
       "period": {
-        "start": "2026-09-30",
-        "end": "2026-10-06"
+        "start": "2026-10-07",
+        "end": "2026-10-13"
       },
       "pages": [
         "https://d1ntfwso16v3fv.cloudfront.net/nb_campaign/20261007/26%E1%84%82%E1%85%A7%E1%86%AB%2010%E1%84%8B%E1%85%AF%E1%86%AF%208%E1%84%8B%E1%85%B5%E1%86%AF%20%E1%84%82%E1%85%A9%E1%84%87%E1%85%B3%E1%84%85%E1%85%A2%E1%86%AB%E1%84%83%E1%85%B3%20%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%E1%84%87%E1%85%A7%E1%86%AF%20%E1%84%91%E1%85%A9%E1%84%89%E1%85%B3%E1%84%90%E1%85%A5_4%E1%84%8E%E1%85%A1(%E1%84%8C%E1%85%A2%E1%84%8E%E1%85%AE%E1%86%AF%E1%84%80%E1%85%A9%E1%84%92%E1%85%AA%E1%86%A8%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%8B%E1%85%AD%E1%86%BC).jpg",
@@ -4406,7 +4396,7 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-daejeon-261007-1.jpg"
+        "hanaro-daejeon-261008-1.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
@@ -4426,8 +4416,8 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-busan-261007-1.jpg",
-        "hanaro-busan-261007-2.jpg"
+        "hanaro-busan-261008-1.jpg",
+        "hanaro-busan-261008-2.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
@@ -4447,8 +4437,8 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-jeonbuk-261007-1.jpg",
-        "hanaro-jeonbuk-261007-2.jpg"
+        "hanaro-jeonbuk-261008-1.jpg",
+        "hanaro-jeonbuk-261008-2.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
@@ -4468,8 +4458,8 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-chungbuk-261007-1.jpg",
-        "hanaro-chungbuk-261007-2.jpg"
+        "hanaro-chungbuk-261008-1.jpg",
+        "hanaro-chungbuk-261008-2.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
@@ -4489,8 +4479,8 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-seoul-261007-1.jpg",
-        "hanaro-seoul-261007-2.jpg"
+        "hanaro-seoul-261008-1.jpg",
+        "hanaro-seoul-261008-2.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
@@ -4502,8 +4492,6 @@
     }
   ],
   "failed": [
-    "emart: 이미지 URL 0개 — 페이지 구조가 바뀌었을 수 있다",
-    "emartSeason: 이미지 URL 0개 — 페이지 구조가 바뀌었을 수 있다",
     "costco: 현재 MVM 페이지 ID 를 못 찾았다 — /events 구조 변경 의심"
   ]
 }
