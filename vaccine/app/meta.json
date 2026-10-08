@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-10-05T00:10:27.466Z",
-  "baseDate": "20261005",
+  "fetchedAt": "2026-10-08T01:21:19.277Z",
+  "baseDate": "20261008",
   "localSupport": {
     "fetched": 127,
     "items": 105,
@@ -9,20 +9,20 @@
     "unmatched": []
   },
   "prices": {
-    "hospitalRows": 194373,
-    "vaccineRows": 17644,
+    "hospitalRows": 194324,
+    "vaccineRows": 17640,
     "products": {
       "zoster": {
         "싱그릭스주": {
-          "rows": 1228,
+          "rows": 1227,
           "latestFrom": 20260930
         },
         "조스타박스주": {
-          "rows": 694,
+          "rows": 693,
           "latestFrom": 20260903
         },
         "스카이조스터주": {
-          "rows": 990,
+          "rows": 989,
           "latestFrom": 20260929
         }
       },
@@ -71,12 +71,12 @@
           "rows": 162,
           "latestFrom": 20260903
         },
-        "가다실 주": {
-          "rows": 72,
-          "latestFrom": 20260903
-        },
         "가다실9주": {
           "rows": 161,
+          "latestFrom": 20260903
+        },
+        "가다실 주": {
+          "rows": 72,
           "latestFrom": 20260903
         }
       },
@@ -88,6 +88,10 @@
         "플루아릭스테트라프리필드시린지": {
           "rows": 184,
           "latestFrom": 20260929
+        },
+        "지씨플루프리필드시린지주": {
+          "rows": 124,
+          "latestFrom": 20260930
         },
         "보령플루백신VIII-TF주(프리필드시린지)": {
           "rows": 26,
@@ -101,20 +105,16 @@
           "rows": 4,
           "latestFrom": 20260923
         },
-        "지씨플루프리필드시린지주": {
-          "rows": 124,
-          "latestFrom": 20260930
-        },
         "보령플루백신V주(프리필드시린지)": {
           "rows": 74,
           "latestFrom": 20260929
         },
-        "코박스플루PF주(프리필드시린지)": {
-          "rows": 41,
-          "latestFrom": 20260930
-        },
         "일양플루백신프리필드시린지주 0.5mL": {
           "rows": 33,
+          "latestFrom": 20260930
+        },
+        "코박스플루PF주(프리필드시린지)": {
+          "rows": 41,
           "latestFrom": 20260930
         },
         "코박스인플루PF주(프리필드시린지)": {
@@ -258,7 +258,7 @@
           "latestFrom": 20260915
         },
         "유박스비 프리필드주 1.0mL": {
-          "rows": 1166,
+          "rows": 1165,
           "latestFrom": 20260929
         },
         "유박스비주 1.0mL": {
@@ -286,16 +286,16 @@
           "latestFrom": 20260915
         }
       },
-      "hfrs": {
-        "한타박스주 0.5ml": {
-          "rows": 15,
-          "latestFrom": 20260903
-        }
-      },
       "flu-senior": {
         "플루아드쿼드프리필드시린지": {
           "rows": 72,
           "latestFrom": 20260921
+        }
+      },
+      "hfrs": {
+        "한타박스주 0.5ml": {
+          "rows": 15,
+          "latestFrom": 20260903
         }
       }
     }
