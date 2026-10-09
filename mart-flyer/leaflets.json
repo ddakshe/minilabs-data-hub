@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-08",
-  "week": "261008",
+  "updatedAt": "2026-10-09",
+  "week": "261009",
   "period": {
     "start": "2026-10-07",
     "end": "2026-10-13"
@@ -81,7 +81,7 @@
   ],
   "leaflets": [
     {
-      "id": "emart-261008",
+      "id": "emart-261009",
       "mart": "emart",
       "store": "이마트",
       "region": "national",
@@ -104,7 +104,7 @@
       "sourceUrl": "https://eapp.emart.com/leaflet/leafletView_EL.do"
     },
     {
-      "id": "homeplus-261008-805",
+      "id": "homeplus-261009-805",
       "mart": "homeplus",
       "store": "홈플러스 익스프레스",
       "region": null,
@@ -747,6 +747,18 @@
           "tel": "02-3481-8541"
         },
         {
+          "name": "홈플러스 익스프레스 남양주별내2점",
+          "region": "gyeonggi",
+          "coords": {
+            "lat": 37.6669626,
+            "lng": 127.11474529999998
+          },
+          "addr": "경기도 남양주시 별내3로 64-7",
+          "hours": "10:00~23:00",
+          "dayoff": "10/14(수), 10/28(수)",
+          "tel": "031-575-9159"
+        },
+        {
           "name": "홈플러스 익스프레스 남양주진접점",
           "region": "gyeonggi",
           "coords": {
@@ -781,6 +793,18 @@
           "hours": "10:00~23:00",
           "dayoff": "10/11(일), 10/25(일)",
           "tel": "031-404-8545"
+        },
+        {
+          "name": "홈플러스 익스프레스 다대포점",
+          "region": "busan",
+          "coords": {
+            "lat": 35.0493,
+            "lng": 128.966
+          },
+          "addr": "부산광역시 사하구 다대낙조2길 3",
+          "hours": "08:00~23:00",
+          "dayoff": "10/12(월), 10/26(월)",
+          "tel": "051-266-8542"
         },
         {
           "name": "홈플러스 익스프레스 당산점",
@@ -3497,7 +3521,7 @@
       ]
     },
     {
-      "id": "homeplus-261008-592",
+      "id": "homeplus-261009-592",
       "mart": "homeplus",
       "store": "홈플러스",
       "region": null,
@@ -3511,9 +3535,9 @@
         "gwangju",
         "gyeonggi",
         "daegu",
+        "chungnam",
         "daejeon",
         "busan",
-        "chungnam",
         "jeju",
         "sejong",
         "chungbuk",
@@ -3700,6 +3724,18 @@
           "hours": "10:00~22:00",
           "dayoff": "10/12(월), 10/26(월)",
           "tel": "053-659-8000"
+        },
+        {
+          "name": "홈플러스 논산점",
+          "region": "chungnam",
+          "coords": {
+            "lat": 36.182,
+            "lng": 127.1
+          },
+          "addr": "충청남도 논산시 시민로 187",
+          "hours": "10:00~22:00",
+          "dayoff": "10/12(월), 10/26(월)",
+          "tel": "041-731-8000"
         },
         {
           "name": "홈플러스 대구수성점",
@@ -4328,7 +4364,7 @@
       ]
     },
     {
-      "id": "traders-261008",
+      "id": "traders-261009",
       "mart": "traders",
       "store": "트레이더스",
       "region": "national",
@@ -4369,7 +4405,7 @@
       }
     },
     {
-      "id": "nobrand-261008",
+      "id": "nobrand-261009",
       "mart": "nobrand",
       "store": "노브랜드",
       "region": "national",
@@ -4396,7 +4432,7 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-daejeon-261008-1.jpg"
+        "hanaro-daejeon-261009-1.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
@@ -4416,8 +4452,8 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-busan-261008-1.jpg",
-        "hanaro-busan-261008-2.jpg"
+        "hanaro-busan-261009-1.jpg",
+        "hanaro-busan-261009-2.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
@@ -4437,8 +4473,8 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-jeonbuk-261008-1.jpg",
-        "hanaro-jeonbuk-261008-2.jpg"
+        "hanaro-jeonbuk-261009-1.jpg",
+        "hanaro-jeonbuk-261009-2.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
@@ -4458,8 +4494,8 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-chungbuk-261008-1.jpg",
-        "hanaro-chungbuk-261008-2.jpg"
+        "hanaro-chungbuk-261009-1.jpg",
+        "hanaro-chungbuk-261009-2.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
@@ -4479,8 +4515,8 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-seoul-261008-1.jpg",
-        "hanaro-seoul-261008-2.jpg"
+        "hanaro-seoul-261009-1.jpg",
+        "hanaro-seoul-261009-2.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
