@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-09",
+  "updatedAt": "2026-10-10",
   "counts": {
-    "nowShowing": 35,
+    "nowShowing": 34,
     "upcoming": 19
   },
   "nowShowing": [
@@ -32,10 +32,10 @@
       "boxOffice": {
         "rank": 1,
         "rankInten": 0,
-        "audiCnt": 64006,
-        "audiAcc": 2584865
+        "audiCnt": 161107,
+        "audiAcc": 2745971
       },
-      "bookingRate": 21.31,
+      "bookingRate": 20.87,
       "availableAt": [
         "lotte"
       ],
@@ -70,10 +70,10 @@
       "boxOffice": {
         "rank": 2,
         "rankInten": 0,
-        "audiCnt": 55242,
-        "audiAcc": 873590
+        "audiCnt": 152139,
+        "audiAcc": 1025729
       },
-      "bookingRate": 29.68,
+      "bookingRate": 29.62,
       "availableAt": [
         "lotte",
         "megabox"
@@ -108,12 +108,12 @@
       "keywords": null,
       "kmdbId": "F-66388",
       "boxOffice": {
-        "rank": 5,
-        "rankInten": -1,
-        "audiCnt": 15428,
-        "audiAcc": 12083945
+        "rank": 4,
+        "rankInten": 1,
+        "audiCnt": 37332,
+        "audiAcc": 12121277
       },
-      "bookingRate": 4.38,
+      "bookingRate": 4.61,
       "availableAt": [
         "lotte",
         "megabox"
@@ -147,12 +147,12 @@
       "keywords": "웹툰원작",
       "kmdbId": "K-41779",
       "boxOffice": {
-        "rank": 6,
-        "rankInten": 0,
-        "audiCnt": 9181,
-        "audiAcc": 253010
+        "rank": 5,
+        "rankInten": 1,
+        "audiCnt": 20277,
+        "audiAcc": 273287
       },
-      "bookingRate": 4.73,
+      "bookingRate": 3.7,
       "availableAt": [
         "lotte",
         "megabox"
@@ -184,11 +184,11 @@
       "kmdbId": "F-68739",
       "boxOffice": {
         "rank": 7,
-        "rankInten": -2,
-        "audiCnt": 8787,
-        "audiAcc": 17203
+        "rankInten": 0,
+        "audiCnt": 13016,
+        "audiAcc": 30219
       },
-      "bookingRate": 3.2,
+      "bookingRate": 3.1,
       "availableAt": [
         "lotte",
         "megabox"
@@ -196,46 +196,6 @@
       "booking": {
         "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|25021",
         "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26066000"
-      }
-    },
-    {
-      "movieCd": "20256308",
-      "title": "인턴",
-      "titleEn": "인턴",
-      "openDt": "2026-09-16",
-      "genre": "드라마",
-      "runtime": 132,
-      "grade": "12세이상관람가",
-      "nation": "한국",
-      "directors": [
-        "김도영"
-      ],
-      "actors": [
-        "최민식",
-        "한소희",
-        "김준한",
-        "류혜영",
-        "김금순",
-        "박예니"
-      ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202609/24751_103_1.jpg",
-      "plot": "올가을, 다시 출근합니다창업 3년 만에 100억대 매출을 달성하며 브랜드 ‘WOO22’(우투투)를 패션 업계의 다크호스로 성장시킨 젊은 CEO ‘선우’(한소희).성공을 향해 쉼 없이 달려온 열정 과부하 상태의 그녀 앞에 막내로 입사한 실버 인턴 ‘기호’(최민식)가 나타난다.경력 37년 사회생활 만렙의 베테랑이지만, 낯선 디지털 업무 환경과 자유분방한 문화에 좀처럼 적응하지 못하던 ‘기호’.그러나 특유의 성실함과 인간미 넘치는 소통이 ‘선우’의 마음을 움직이고 모든 점에서 전혀 다른 두 사람은 서로에게 없는 시선과 경험을 나누며 쉼 없이 달리던 일상에 뜻밖의 온기를 더하는데…",
-      "keywords": "리메이크,미국영화리메이크",
-      "kmdbId": "K-42005",
-      "boxOffice": {
-        "rank": 8,
-        "rankInten": -1,
-        "audiCnt": 6419,
-        "audiAcc": 860363
-      },
-      "bookingRate": 0.93,
-      "availableAt": [
-        "lotte",
-        "megabox"
-      ],
-      "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24751",
-        "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26056400"
       }
     },
     {
@@ -262,11 +222,11 @@
       "kmdbId": "F-68778",
       "boxOffice": {
         "rank": 9,
-        "rankInten": -1,
-        "audiCnt": 3978,
-        "audiAcc": 53697
+        "rankInten": 0,
+        "audiCnt": 6528,
+        "audiAcc": 60225
       },
-      "bookingRate": 1.03,
+      "bookingRate": 1.04,
       "availableAt": [
         "lotte",
         "megabox"
@@ -277,27 +237,81 @@
       }
     },
     {
-      "movieCd": null,
-      "title": "룩백",
-      "titleEn": "",
-      "openDt": "2026-10-08",
-      "genre": null,
-      "runtime": null,
-      "grade": "전체관람가",
-      "nation": null,
-      "directors": [],
-      "actors": [],
-      "poster": "https://img.megabox.co.kr/SharedImg/2026/09/07/KuqiKbrVUI94sjQeM6sE0VbusktAGQ4H.jpg",
-      "plot": "학교 신문에서 네컷 만화를 그리는 자신만만한 소녀 ‘후지노’와 그를 동경하지만 세상 밖이 두려워 방 안에 틀어박힌 외톨이 ‘쿄모토’.“너는 왜 만화를 그리는 거야?”만화가 세상의 전부였던 그 시절, 두 소녀의 사계절이 눈부신 색깔로 채워지기 시작한다.",
-      "keywords": "만화원작",
-      "kmdbId": "F-68143",
-      "boxOffice": null,
-      "bookingRate": 16.1,
+      "movieCd": "20266766",
+      "title": "(인피니티비전)어벤져스: 엔드게임 앙코르",
+      "titleEn": "(인피니티비전)어벤져스: 엔드게임 앙코르",
+      "openDt": "2026-09-23",
+      "genre": "액션, SF",
+      "runtime": 183,
+      "grade": "12세이상관람가",
+      "nation": "미국",
+      "directors": [
+        "안소니 루소",
+        "조 루소"
+      ],
+      "actors": [
+        "로버트 다우니 주니어",
+        "크리스 에반스",
+        "스칼렛 요한슨",
+        "마크 러팔로",
+        "크리스 헴스워스",
+        "제레미 레너"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202609/24982_103_1.jpg",
+      "plot": "",
+      "keywords": null,
+      "kmdbId": null,
+      "boxOffice": {
+        "rank": 10,
+        "rankInten": 4,
+        "audiCnt": 5482,
+        "audiAcc": 165778
+      },
+      "bookingRate": 0.27,
       "availableAt": [
-        "megabox"
+        "lotte"
       ],
       "booking": {
-        "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26045800"
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24982"
+      }
+    },
+    {
+      "movieCd": "20266766",
+      "title": "어벤져스: 엔드게임 앙코르",
+      "titleEn": "어벤져스: 엔드게임 앙코르",
+      "openDt": "2026-09-23",
+      "genre": "액션, SF",
+      "runtime": 183,
+      "grade": "12세이상관람가",
+      "nation": "미국",
+      "directors": [
+        "안소니 루소",
+        "조 루소"
+      ],
+      "actors": [
+        "로버트 다우니 주니어",
+        "크리스 에반스",
+        "스칼렛 요한슨",
+        "마크 러팔로",
+        "크리스 헴스워스",
+        "제레미 레너"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202609/24957_103_1.jpg",
+      "plot": "",
+      "keywords": null,
+      "kmdbId": null,
+      "boxOffice": {
+        "rank": 10,
+        "rankInten": 4,
+        "audiCnt": 5482,
+        "audiAcc": 165778
+      },
+      "bookingRate": 0.01,
+      "availableAt": [
+        "lotte"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24957"
       }
     },
     {
@@ -316,12 +330,71 @@
       "keywords": null,
       "kmdbId": null,
       "boxOffice": null,
-      "bookingRate": 14.3,
+      "bookingRate": 14.6,
       "availableAt": [
         "megabox"
       ],
       "booking": {
         "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26044700"
+      }
+    },
+    {
+      "movieCd": null,
+      "title": "룩백",
+      "titleEn": "",
+      "openDt": "2026-10-08",
+      "genre": null,
+      "runtime": null,
+      "grade": "전체관람가",
+      "nation": null,
+      "directors": [],
+      "actors": [],
+      "poster": "https://img.megabox.co.kr/SharedImg/2026/09/07/KuqiKbrVUI94sjQeM6sE0VbusktAGQ4H.jpg",
+      "plot": "학교 신문에서 네컷 만화를 그리는 자신만만한 소녀 ‘후지노’와 그를 동경하지만 세상 밖이 두려워 방 안에 틀어박힌 외톨이 ‘쿄모토’.“너는 왜 만화를 그리는 거야?”만화가 세상의 전부였던 그 시절, 두 소녀의 사계절이 눈부신 색깔로 채워지기 시작한다.",
+      "keywords": "만화원작",
+      "kmdbId": "F-68143",
+      "boxOffice": null,
+      "bookingRate": 12.6,
+      "availableAt": [
+        "megabox"
+      ],
+      "booking": {
+        "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26045800"
+      }
+    },
+    {
+      "movieCd": "20256308",
+      "title": "인턴",
+      "titleEn": "인턴",
+      "openDt": "2026-09-16",
+      "genre": "드라마",
+      "runtime": 132,
+      "grade": "12세이상관람가",
+      "nation": "한국",
+      "directors": [
+        "김도영"
+      ],
+      "actors": [
+        "최민식",
+        "한소희",
+        "김준한",
+        "류혜영",
+        "김금순",
+        "박예니"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202609/24751_103_1.jpg",
+      "plot": "올가을, 다시 출근합니다창업 3년 만에 100억대 매출을 달성하며 브랜드 ‘WOO22’(우투투)를 패션 업계의 다크호스로 성장시킨 젊은 CEO ‘선우’(한소희).성공을 향해 쉼 없이 달려온 열정 과부하 상태의 그녀 앞에 막내로 입사한 실버 인턴 ‘기호’(최민식)가 나타난다.경력 37년 사회생활 만렙의 베테랑이지만, 낯선 디지털 업무 환경과 자유분방한 문화에 좀처럼 적응하지 못하던 ‘기호’.그러나 특유의 성실함과 인간미 넘치는 소통이 ‘선우’의 마음을 움직이고 모든 점에서 전혀 다른 두 사람은 서로에게 없는 시선과 경험을 나누며 쉼 없이 달리던 일상에 뜻밖의 온기를 더하는데…",
+      "keywords": "리메이크,미국영화리메이크",
+      "kmdbId": "K-42005",
+      "boxOffice": null,
+      "bookingRate": 0.81,
+      "availableAt": [
+        "lotte",
+        "megabox"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24751",
+        "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26056400"
       }
     },
     {
@@ -340,7 +413,7 @@
       "keywords": null,
       "kmdbId": "F-66643",
       "boxOffice": null,
-      "bookingRate": 1.66,
+      "bookingRate": 0.7,
       "availableAt": [
         "lotte"
       ],
@@ -373,42 +446,6 @@
       }
     },
     {
-      "movieCd": "20266766",
-      "title": "어벤져스: 엔드게임 앙코르",
-      "titleEn": "어벤져스: 엔드게임 앙코르",
-      "openDt": "2026-09-23",
-      "genre": "액션, SF",
-      "runtime": 183,
-      "grade": "12세이상관람가",
-      "nation": "미국",
-      "directors": [
-        "안소니 루소",
-        "조 루소"
-      ],
-      "actors": [
-        "로버트 다우니 주니어",
-        "크리스 에반스",
-        "스칼렛 요한슨",
-        "마크 러팔로",
-        "크리스 헴스워스",
-        "제레미 레너"
-      ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202609/24957_103_1.jpg",
-      "plot": "",
-      "keywords": null,
-      "kmdbId": null,
-      "boxOffice": null,
-      "bookingRate": 0.5,
-      "availableAt": [
-        "lotte",
-        "megabox"
-      ],
-      "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24957",
-        "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26062200"
-      }
-    },
-    {
       "movieCd": "20000216",
       "title": "와호장룡",
       "titleEn": "와호장룡",
@@ -431,70 +468,12 @@
       "keywords": null,
       "kmdbId": null,
       "boxOffice": null,
-      "bookingRate": 0.43,
+      "bookingRate": 0.37,
       "availableAt": [
         "lotte"
       ],
       "booking": {
         "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|25040"
-      }
-    },
-    {
-      "movieCd": null,
-      "title": "디지몬 어드벤처 : 운명적 만남 &amp; 우리들의 워 게임!",
-      "titleEn": "",
-      "openDt": "2026-09-16",
-      "genre": null,
-      "runtime": null,
-      "grade": "전체관람가",
-      "nation": null,
-      "directors": [],
-      "actors": [],
-      "poster": "https://img.megabox.co.kr/SharedImg/2026/08/14/nDmlgavtfj9CKE5s3OiIWgPlM6uqtKwP.jpg",
-      "plot": "그 시절, 우리는 모두 선택받은 아이들이었다! 디지털 월드에서의 모험 전, 디지몬과의 신비롭고 운명적인 첫 만남. 모험이 끝난 후, 다시 한 번 함께 싸우는 디지몬과 아이들. 영원히 잊지 못할 눈부신 추억이 지금 다시 스크린에서 깨어난다!",
-      "keywords": null,
-      "kmdbId": null,
-      "boxOffice": null,
-      "bookingRate": 0.4,
-      "availableAt": [
-        "megabox"
-      ],
-      "booking": {
-        "megabox": "https://www.megabox.co.kr/movie-detail?rpstMovieNo=26057200"
-      }
-    },
-    {
-      "movieCd": "20266766",
-      "title": "(인피니티비전)어벤져스: 엔드게임 앙코르",
-      "titleEn": "(인피니티비전)어벤져스: 엔드게임 앙코르",
-      "openDt": "2026-09-23",
-      "genre": "액션, SF",
-      "runtime": 183,
-      "grade": "12세이상관람가",
-      "nation": "미국",
-      "directors": [
-        "안소니 루소",
-        "조 루소"
-      ],
-      "actors": [
-        "로버트 다우니 주니어",
-        "크리스 에반스",
-        "스칼렛 요한슨",
-        "마크 러팔로",
-        "크리스 헴스워스",
-        "제레미 레너"
-      ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202609/24982_103_1.jpg",
-      "plot": "",
-      "keywords": null,
-      "kmdbId": null,
-      "boxOffice": null,
-      "bookingRate": 0.35,
-      "availableAt": [
-        "lotte"
-      ],
-      "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24982"
       }
     },
     {
@@ -519,7 +498,7 @@
       "keywords": "소설원작",
       "kmdbId": "F-67596",
       "boxOffice": null,
-      "bookingRate": 0.15,
+      "bookingRate": 0.13,
       "availableAt": [
         "lotte"
       ],
@@ -620,6 +599,32 @@
       }
     },
     {
+      "movieCd": "20255509",
+      "title": "사진의 얼굴",
+      "titleEn": "사진의 얼굴",
+      "openDt": "2026-09-02",
+      "genre": "다큐멘터리",
+      "runtime": 98,
+      "grade": "12세이상관람가",
+      "nation": "한국",
+      "directors": [
+        "고희영"
+      ],
+      "actors": [],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202609/24737_103_1.jpg",
+      "plot": "일본의 보도 사진작가 구와바라 시세이가 한국행 비행기에 오른다. 1964년, 27세의 청년 시절 처음으로 한국을 방문한 이래로 시세이는 60년간 청계천, 기지촌, 월남 파병, 민주화 운동 등 한국 근현대사의 격동 현장을 기록해 왔다. 이제 노인이 된 그는 어쩌면 마지막이 될지도 모른다는 마음으로 다시 한국을 찾는다. 그에게는 꼭 다시 밟아야 할 장소들과 반드시 만나야 할 사람들이 있다. 영화는 사진작가의 발자취를 따라 현장을 찾는다.",
+      "keywords": null,
+      "kmdbId": "A-13955",
+      "boxOffice": null,
+      "bookingRate": 0.03,
+      "availableAt": [
+        "lotte"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24737"
+      }
+    },
+    {
       "movieCd": "20264847",
       "title": "알파",
       "titleEn": "알파",
@@ -650,58 +655,6 @@
       }
     },
     {
-      "movieCd": "20255509",
-      "title": "사진의 얼굴",
-      "titleEn": "사진의 얼굴",
-      "openDt": "2026-09-02",
-      "genre": "다큐멘터리",
-      "runtime": 98,
-      "grade": "12세이상관람가",
-      "nation": "한국",
-      "directors": [
-        "고희영"
-      ],
-      "actors": [],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202609/24737_103_1.jpg",
-      "plot": "일본의 보도 사진작가 구와바라 시세이가 한국행 비행기에 오른다. 1964년, 27세의 청년 시절 처음으로 한국을 방문한 이래로 시세이는 60년간 청계천, 기지촌, 월남 파병, 민주화 운동 등 한국 근현대사의 격동 현장을 기록해 왔다. 이제 노인이 된 그는 어쩌면 마지막이 될지도 모른다는 마음으로 다시 한국을 찾는다. 그에게는 꼭 다시 밟아야 할 장소들과 반드시 만나야 할 사람들이 있다. 영화는 사진작가의 발자취를 따라 현장을 찾는다.",
-      "keywords": null,
-      "kmdbId": "A-13955",
-      "boxOffice": null,
-      "bookingRate": 0.02,
-      "availableAt": [
-        "lotte"
-      ],
-      "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24737"
-      }
-    },
-    {
-      "movieCd": "20266483",
-      "title": "꿈꾸던 모험",
-      "titleEn": "꿈꾸던 모험",
-      "openDt": "2026-09-23",
-      "genre": "드라마, 멜로/로맨스, 미스터리",
-      "runtime": 163,
-      "grade": "15세이상관람가",
-      "nation": "독일",
-      "directors": [
-        "발레스카 그리스바흐"
-      ],
-      "actors": [],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202609/25047_103_1.jpg",
-      "plot": "불가리아 남동부의 국경 도시 스빌렌그라드. 고고학 발굴 작업을 위해 고향으로 돌아온 베스카는 우연히 오랜 지인 사이드와 재회한다. 차를 도난 당한 그를 약속 장소까지 데려다주려던 베스카는 뜻밖의 밀수 거래에 휘말린다. 그를 대신해 위험한 모험에 나선 그녀는 자신의 과거와 욕망을 마주한다.",
-      "keywords": null,
-      "kmdbId": "F-67667",
-      "boxOffice": null,
-      "bookingRate": 0.01,
-      "availableAt": [
-        "lotte"
-      ],
-      "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|25047"
-      }
-    },
-    {
       "movieCd": "20266267",
       "title": "나의 사적인 예술가",
       "titleEn": "나의 사적인 예술가",
@@ -722,7 +675,7 @@
       "keywords": null,
       "kmdbId": "F-68603",
       "boxOffice": null,
-      "bookingRate": 0.01,
+      "bookingRate": 0.02,
       "availableAt": [
         "lotte"
       ],
@@ -752,12 +705,73 @@
       "keywords": null,
       "kmdbId": "K-28706",
       "boxOffice": null,
-      "bookingRate": 0.01,
+      "bookingRate": 0.02,
       "availableAt": [
         "lotte"
       ],
       "booking": {
         "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|25020"
+      }
+    },
+    {
+      "movieCd": "20255210",
+      "title": "친숙한 손길",
+      "titleEn": "친숙한 손길",
+      "openDt": "2026-09-23",
+      "genre": "드라마",
+      "runtime": 91,
+      "grade": "12세이상관람가",
+      "nation": "미국",
+      "directors": [
+        "사라 프리들랜드"
+      ],
+      "actors": [
+        "캐슬린 찰팬트"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202609/24988_103_1.jpg",
+      "plot": "변화하는 기억 속, 요양 시설에서 새로운 삶을 시작하게 된 루스.낯선 일상 속에서도 삶을 향한 열정을 잃지 않은 그녀는 새로운 관계를 맺으며 자신의 나이와 욕망을 다시금 마주한다.",
+      "keywords": null,
+      "kmdbId": "F-61962",
+      "boxOffice": null,
+      "bookingRate": 0.02,
+      "availableAt": [
+        "lotte"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24988"
+      }
+    },
+    {
+      "movieCd": "20262381",
+      "title": "사랑의 하츄핑: 고래보석의 전설",
+      "titleEn": "사랑의 하츄핑: 고래보석의 전설",
+      "openDt": "2026-08-05",
+      "genre": "애니메이션",
+      "runtime": 105,
+      "grade": "전체관람가",
+      "nation": "한국",
+      "directors": [
+        "김수훈"
+      ],
+      "actors": [
+        "이지현",
+        "조경이",
+        "여민정",
+        "심규혁",
+        "유혜지",
+        "장예나"
+      ],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202608/24440_103_1.jpg",
+      "plot": "바다 너머, 가장 큰 사랑이 기다린다!이번엔, 반드시 구할거야!하츄핑과 단짝이 된 로미는 행복한 나날을 보내고 있지만 하고 싶은 일과 해야만 하는 일 사이에 매번 엄마(벨리타)와 의견이 달라 다투게 되고…그러던 어느 날, 바다를 뒤흔드는 사건과 함께 엄마는 흔적도 없이 바닷속으로 사라진다.한 마디 사과도, 한 번의 포옹도 건네지 못한 채 엄마를 잃은 로미.처음 만나는 바다 앞에서 단짝 하츄핑, 바다소년 카이트, 세 마리의 티니핑들과 함께 용기를 내보는데…찬란한 바다 도시, 거대한 심해 생명체들과 맞서야 하는 이들.마침내 로미는 엄마가 한 번도 들려준 적 없던 비밀을 마주하게 된다.",
+      "keywords": null,
+      "kmdbId": "K-41066",
+      "boxOffice": null,
+      "bookingRate": 0.01,
+      "availableAt": [
+        "lotte"
+      ],
+      "booking": {
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24440"
       }
     },
     {
@@ -823,34 +837,6 @@
       }
     },
     {
-      "movieCd": "20255210",
-      "title": "친숙한 손길",
-      "titleEn": "친숙한 손길",
-      "openDt": "2026-09-23",
-      "genre": "드라마",
-      "runtime": 91,
-      "grade": "12세이상관람가",
-      "nation": "미국",
-      "directors": [
-        "사라 프리들랜드"
-      ],
-      "actors": [
-        "캐슬린 찰팬트"
-      ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202609/24988_103_1.jpg",
-      "plot": "변화하는 기억 속, 요양 시설에서 새로운 삶을 시작하게 된 루스.낯선 일상 속에서도 삶을 향한 열정을 잃지 않은 그녀는 새로운 관계를 맺으며 자신의 나이와 욕망을 다시금 마주한다.",
-      "keywords": null,
-      "kmdbId": "F-61962",
-      "boxOffice": null,
-      "bookingRate": 0.01,
-      "availableAt": [
-        "lotte"
-      ],
-      "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24988"
-      }
-    },
-    {
       "movieCd": "20261068",
       "title": "가족여행",
       "titleEn": "가족여행",
@@ -885,36 +871,29 @@
       }
     },
     {
-      "movieCd": "20262381",
-      "title": "사랑의 하츄핑: 고래보석의 전설",
-      "titleEn": "사랑의 하츄핑: 고래보석의 전설",
-      "openDt": "2026-08-05",
-      "genre": "애니메이션",
-      "runtime": 105,
-      "grade": "전체관람가",
-      "nation": "한국",
+      "movieCd": "20266483",
+      "title": "꿈꾸던 모험",
+      "titleEn": "꿈꾸던 모험",
+      "openDt": "2026-09-23",
+      "genre": "드라마, 멜로/로맨스, 미스터리",
+      "runtime": 163,
+      "grade": "15세이상관람가",
+      "nation": "독일",
       "directors": [
-        "김수훈"
+        "발레스카 그리스바흐"
       ],
-      "actors": [
-        "이지현",
-        "조경이",
-        "여민정",
-        "심규혁",
-        "유혜지",
-        "장예나"
-      ],
-      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202608/24440_103_1.jpg",
-      "plot": "바다 너머, 가장 큰 사랑이 기다린다!이번엔, 반드시 구할거야!하츄핑과 단짝이 된 로미는 행복한 나날을 보내고 있지만 하고 싶은 일과 해야만 하는 일 사이에 매번 엄마(벨리타)와 의견이 달라 다투게 되고…그러던 어느 날, 바다를 뒤흔드는 사건과 함께 엄마는 흔적도 없이 바닷속으로 사라진다.한 마디 사과도, 한 번의 포옹도 건네지 못한 채 엄마를 잃은 로미.처음 만나는 바다 앞에서 단짝 하츄핑, 바다소년 카이트, 세 마리의 티니핑들과 함께 용기를 내보는데…찬란한 바다 도시, 거대한 심해 생명체들과 맞서야 하는 이들.마침내 로미는 엄마가 한 번도 들려준 적 없던 비밀을 마주하게 된다.",
+      "actors": [],
+      "poster": "https://cf.lottecinema.co.kr/Media/MovieFile/MovieImg/202609/25047_103_1.jpg",
+      "plot": "불가리아 남동부의 국경 도시 스빌렌그라드. 고고학 발굴 작업을 위해 고향으로 돌아온 베스카는 우연히 오랜 지인 사이드와 재회한다. 차를 도난 당한 그를 약속 장소까지 데려다주려던 베스카는 뜻밖의 밀수 거래에 휘말린다. 그를 대신해 위험한 모험에 나선 그녀는 자신의 과거와 욕망을 마주한다.",
       "keywords": null,
-      "kmdbId": "K-41066",
+      "kmdbId": "F-67667",
       "boxOffice": null,
       "bookingRate": 0,
       "availableAt": [
         "lotte"
       ],
       "booking": {
-        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|24440"
+        "lotte": "https://www.lottecinema.co.kr/NLCHS/Movie/MovieDetailView?movie=1|10|25047"
       }
     },
     {
