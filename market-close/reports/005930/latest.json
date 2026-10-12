@@ -2,37 +2,29 @@
   "code": "005930",
   "name": "삼성전자",
   "market": "KOSPI",
-  "basDt": "20261007",
+  "basDt": "20261008",
   "price": {
     "code": "005930",
     "name": "삼성전자",
     "market": "KOSPI",
-    "basDt": "20261007",
-    "close": 268500,
-    "vs": -3500,
-    "fltRt": -1.29,
+    "basDt": "20261008",
+    "close": 262000,
+    "vs": -6500,
+    "fltRt": -2.42,
     "open": 269500,
-    "high": 279500,
-    "low": 268500,
-    "prevClose": 272000,
-    "volume": 16395504,
-    "tradeValue": 4471785088086,
+    "high": 270000,
+    "low": 262000,
+    "prevClose": 268500,
+    "volume": 21259056,
+    "tradeValue": 5617134619618,
     "week52": {
       "low": 91600,
       "high": 362500,
-      "position": 0.6530084902177925,
-      "days": 243,
-      "from": "20251007"
+      "position": 0.6290143964562569,
+      "days": 244,
+      "from": "20251008"
     },
     "recent5": [
-      {
-        "basDt": "20260930",
-        "fltRt": -1.47,
-        "open": 274500,
-        "high": 276000,
-        "low": 267500,
-        "close": 268500
-      },
       {
         "basDt": "20261001",
         "fltRt": 2.79,
@@ -64,91 +56,137 @@
         "high": 279500,
         "low": 268500,
         "close": 268500
+      },
+      {
+        "basDt": "20261008",
+        "fltRt": -2.42,
+        "open": 269500,
+        "high": 270000,
+        "low": 262000,
+        "close": 262000
       }
     ],
     "volumeVs20d": {
-      "avg20": 16570117,
-      "ratio": 0.99
+      "avg20": 16688299,
+      "ratio": 1.27
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 529,
-      "rows52w": 243
+      "rows": 527,
+      "rows52w": 244
     },
-    "generatedAt": "2026-10-09T08:08:20.180Z"
+    "generatedAt": "2026-10-12T08:15:09.444Z"
   },
   "facts": [
-    "코스피보다 0.69%p 높았어요.",
-    "거래량은 20일 평균의 1.0배예요.",
-    "시가보다 1,000원 낮게 마감했어요."
+    "코스피보다 0.2%p 높았어요.",
+    "거래량은 20일 평균의 1.3배예요.",
+    "시가보다 7,500원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "삼성전자, 사상 최초 분기 영업이익 ’100조 시대' 연다...주가 반등할까",
-      "source": "조선일보",
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOZU5Ddm1pRllIZ29jT016WnIyOG85X282RC0wUEotX3pvUElVT2tUTlIxb2tCUmliUmQ2bkE2SXVwRF82YzBxazc5RjBLQUlBaTA2Y2F5aFZVZEJ1Y0JaOU02UVJXbkhjaWg3NzhKVmZacmVVc3FuQWlBM3BGamR3Mw?oc=5",
-      "publishedAt": "2026-10-06T23:37:01.000Z"
+      "title": "삼성전자, 2026년 3분기 잠정실적 발표",
+      "source": "samsung.com",
+      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOQkQyeHJWWHhfMjFtUWdJY3RDM2xqMHhTUmwwRUZXeVFMelgtZ3ZoYjBVT09ka3p3MG53RFBpNlMtQm1CZUdXTHlNaWgxNWYzZkR1U3VNZ0lIU2g2YjM1YzktcXRsTG5fNHhrYWJFVDZVQVJjb29ZVDdyRmx2dkdYaTdOd2VsRk0xXzRqeGtTR1oxT2dHaXM1UTdfVnhNcGVaX3pxVF9YbzBRU2t2aWh4TmdYdmQ4TjVVMG00ZXRlcDNSQkE5ZjdfcXBldEpkaU5HMUJnU2NTR0c5bEdzUUFFYnlwLVI3VEh5eFE?oc=5",
+      "publishedAt": "2026-10-07T22:46:00.000Z"
+    },
+    {
+      "title": "분기 100조 영업익 삼성전자, 성과급은 얼마나?…“연봉 8천만원에 7.5억”",
+      "source": "KBS 뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBITm5xNVZUQlAzYm5pdkpBNkxGV2NDWG9JSWN3X2JmNXI2N3lFdm52YnNOaDlKMWxIY19qMm5Kamk3QlZoYVdLQXdzbW1UT0lobHhuY3hLWUZIanc?oc=5",
+      "publishedAt": "2026-10-08T01:48:00.000Z"
     },
     {
       "title": "삼성전자 반도체 특별성과급 내년 3월말경 지급…전액 자사주",
       "source": "연합인포맥스",
       "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1NSjhEV3B2WFgzQzRKYi1jSy1YSkxMaFExSkVnV3piNm9xdFFLbktZTXNBSE1sVURDS2RQR0FYemtqbVdHM2M0UlRwQ0FlU2x5WjYwYVhuR2FaODlzSFVzTlhRWFNGZDBGVF81LW8xcEM?oc=5",
-      "publishedAt": "2026-10-07T08:33:18.000Z"
-    },
-    {
-      "title": "삼성전자, 석 달에 100조 번다?…역대급 실적 뒤 ‘숨은 변수’",
-      "source": "중앙일보",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBLcENxTWdKTHRDVEptYnh2Q0tsSjJ5RFlDMHAxLXJpbGRKWlBzeFlwVHNpSUFnNGF4VnlHdTd5elJuSXhiVEM3STRWZEF2M1F4X0pfUEVR?oc=5",
-      "publishedAt": "2026-10-06T20:00:00.000Z"
-    },
-    {
-      "title": "‘7.5억원’, 삼성전자 메모리사업부 예상 성과급",
-      "source": "문화일보",
-      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1rN1p0Z0pNcl9uMGY3UW5qVnBYRldaeGdRMzRZR0hyc2N5NzdoaGJ6anRHWjRWTm4waG0wQ2JtNlhWbmNNa3JOUm0xSkJOZG9D?oc=5",
-      "publishedAt": "2026-10-07T11:22:00.000Z"
-    },
-    {
-      "title": "삼성전자 DS, 특별성과급 내년 3월 말 지급…영업익 10.5% 재원 - 조선비즈",
-      "source": "Chosunbiz",
-      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQOUVNbjV3SnBQRkdyOHhXN1VOMmRKYTJGa21OUnhuZlNXZENSakxRbGJjX3QzMVVDdXZyaDN3dHVoZGJwM2Rwc3RJdWRvTVU2WTZIemNwbWdOOUFQdWM4dHRFLWRFa3h1MTVyaVFHVGFEUGplY19WaWNOWjg0Umx6MkNB0gGWAUFVX3lxTFBMd3RtS0ktNm5Fcm4tQVNRcm9YUGkyZjh1aWRGR09TNF9PRy1yclJvTnU5MXdNTGw3aG1JdEdyeWRndUd0S3lXRjA2a2VpMkJSRG5mdnVZbldCdEdJSG5nSE5rcXZZTlVoQnY5Q1YyMWZLX0Vra2ZMRzlob3dHai1XU25sQ01ucGtCU3BlRkZMbVRlNnFwdw?oc=5",
-      "publishedAt": "2026-10-07T11:33:00.000Z"
-    },
-    {
-      "title": "삼성전자 반도체 특별성과급 내년 3월말께 지급…세금 49.5%",
-      "source": "연합뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1OWHBzNC10WWRkSERmRkx5X1BCeVdKQURCekdlWWY2RWVVVnVHWlBRanA2UENENnFfcVdfNG9hRl94YVM1a0hQY290NWR0N1hIQU80cDd3eDFZdXPSAWBBVV95cUxQcUNsaHRhejVCMmJHdjBXUU1pYmtnM0twRl9kRUZXZFlrZFBET0FCcDJQb01IelRKMm5hUkd2YV9ab2NGSmZxZ0FUY3R2dXIzRl9iTFRGbUVQUzNCM090dko?oc=5",
-      "publishedAt": "2026-10-07T07:04:30.000Z"
-    },
-    {
-      "title": "삼성전자 성과급 내년 3월말 지급…8천만원 연봉시 최대 7.5억원(종합)",
-      "source": "연합뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1KanMxWjV4U3VMcTRUM2RrQ1hxMzgycTNPQVc5ODU4aTlfN2pabWlZR01ZbHBYc1pROXlCOVdXSExhRWNsbElUSlhyNGJGV3NvWkdKQlRKSUhvVHfSAWBBVV95cUxPR2RYV1luZzR6b2NTZFhyZzZ4Tl8xVVFqS3hWbmtfaWtnRTFXb2pNSjhlSkRGVWdOY005RXBBalg1dWxnenUzcWFmWFh1eTVBdWx5Z1JGZHVYR2tNMnExRVg?oc=5",
-      "publishedAt": "2026-10-07T11:04:56.000Z"
-    },
-    {
-      "title": "삼성전자, 자사주 매입 '일단 종료'…주가는 어떻게 되나",
-      "source": "한국경제",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5TZlpieElaS3RQN19RSDZXR0taNGlrZ3JRNUVCdzZLWUFqTzE0dlV6WFdxQmhrVFRmRm1IenZ0MmpUSDQ0OUNqNjBwS2VuLTVYXzN3Q2ltSzhRUQ?oc=5",
-      "publishedAt": "2026-10-06T23:54:15.000Z"
+      "publishedAt": "2026-10-08T00:32:00.000Z"
     }
   ],
-  "dart": [],
-  "ownership": [],
-  "ownershipWindowDays": null,
+  "dart": [
+    {
+      "title": "주식등의대량보유상황보고서(일반)",
+      "filer": "삼성물산",
+      "receiptNo": "20261008000706",
+      "date": "20261008",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261008000706"
+    },
+    {
+      "title": "기업설명회(IR)개최(안내공시)              ",
+      "filer": "삼성전자",
+      "receiptNo": "20261008800028",
+      "date": "20261008",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261008800028"
+    },
+    {
+      "title": "연결재무제표기준영업(잠정)실적(공정공시)              ",
+      "filer": "삼성전자",
+      "receiptNo": "20261008800004",
+      "date": "20261008",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261008800004"
+    }
+  ],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20261008",
+      "holder": "삼성물산",
+      "ratio": 19.69,
+      "ratioChange": 0,
+      "reason": "특별관계자 및 보유주식수 변동 · 보유주식등에 관한 계약의 변경",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261008000706"
+    },
+    {
+      "kind": "major",
+      "date": "20260828",
+      "holder": "삼성물산",
+      "ratio": 19.69,
+      "ratioChange": 0,
+      "reason": "보유주식수 변동 · 보유주식등에 관한 계약의 변경",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260828001916"
+    },
+    {
+      "kind": "major",
+      "date": "20260731",
+      "holder": "삼성물산",
+      "ratio": 19.69,
+      "ratioChange": 0,
+      "reason": "보유주식수 변동 · 보유주식등에 관한 계약의 변경",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260731000779"
+    },
+    {
+      "kind": "major",
+      "date": "20260724",
+      "holder": "삼성물산",
+      "ratio": 19.69,
+      "ratioChange": 0,
+      "reason": "보유주식수 변동 · 보유주식등에 관한 계약의 변경",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260724000625"
+    },
+    {
+      "kind": "major",
+      "date": "20260710",
+      "holder": "삼성물산",
+      "ratio": 19.69,
+      "ratioChange": -0.01,
+      "reason": "보유주식수 변동 · 보유주식등에 관한 계약의 변경",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260710000678"
+    }
+  ],
+  "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 6803.9,
-    "vs": -137.49,
-    "fltRt": -1.98
+    "clpr": 6625.93,
+    "vs": -177.97,
+    "fltRt": -2.62
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
     "news": "구글 뉴스 RSS",
-    "dart": null,
-    "ownership": null,
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-09T08:10:06.717Z",
+  "builtAt": "2026-10-12T08:17:12.164Z",
   "archiveDays": 120,
-  "archiveFrom": "20260410"
+  "archiveFrom": "20260413"
 }

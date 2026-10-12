@@ -2,37 +2,29 @@
   "code": "028300",
   "name": "HLB",
   "market": "KOSDAQ",
-  "basDt": "20261007",
+  "basDt": "20261008",
   "price": {
     "code": "028300",
     "name": "HLB",
     "market": "KOSDAQ",
-    "basDt": "20261007",
-    "close": 45900,
-    "vs": -1500,
-    "fltRt": -3.16,
-    "open": 46350,
-    "high": 47850,
-    "low": 45450,
-    "prevClose": 47400,
-    "volume": 1070602,
-    "tradeValue": 49708970600,
+    "basDt": "20261008",
+    "close": 45650,
+    "vs": -250,
+    "fltRt": -0.54,
+    "open": 45950,
+    "high": 46500,
+    "low": 45100,
+    "prevClose": 45900,
+    "volume": 925840,
+    "tradeValue": 42454001925,
     "week52": {
       "low": 25650,
       "high": 68200,
-      "position": 0.47591069330199764,
-      "days": 243,
-      "from": "20251007"
+      "position": 0.4700352526439483,
+      "days": 244,
+      "from": "20251008"
     },
     "recent5": [
-      {
-        "basDt": "20260930",
-        "fltRt": 3.11,
-        "open": 39850,
-        "high": 43800,
-        "low": 37800,
-        "close": 41400
-      },
       {
         "basDt": "20261001",
         "fltRt": -2.05,
@@ -64,91 +56,112 @@
         "high": 47850,
         "low": 45450,
         "close": 45900
+      },
+      {
+        "basDt": "20261008",
+        "fltRt": -0.54,
+        "open": 45950,
+        "high": 46500,
+        "low": 45100,
+        "close": 45650
       }
     ],
     "volumeVs20d": {
-      "avg20": 1297311,
-      "ratio": 0.83
+      "avg20": 1327526,
+      "ratio": 0.7
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 529,
-      "rows52w": 243
+      "rows": 527,
+      "rows52w": 244
     },
-    "generatedAt": "2026-10-09T08:09:10.320Z"
+    "generatedAt": "2026-10-12T08:15:59.190Z"
   },
   "facts": [
-    "코스닥보다 0.82%p 낮았어요.",
-    "거래량은 20일 평균의 0.8배예요.",
-    "시가보다 450원 낮게 마감했어요."
+    "코스닥보다 0.15%p 높았어요.",
+    "거래량은 20일 평균의 0.7배예요.",
+    "시가보다 300원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "HLB 담관암 신약 ‘리라푸그라티닙’ 유럽 허가 본심사 착수",
-      "source": "팜이데일리",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE94cjI5akhBODBnVGpzQWNIckNzb0tPb2RJcjFlczRraWNpeUQ5Y0JqR2FsVVlxa3l1alIyMC1ZTmluV1lSUzRhbEQ0aG1fZWRRMy02RFU3Z3R3cDFzYnZhVWhleDdHNW5LQWpNQnhR?oc=5",
-      "publishedAt": "2026-10-07T00:01:47.000Z"
+      "title": "[주식] HLB, 담관암 이어 간암도? 기대감에 '상한가'",
+      "source": "히트뉴스",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9rejBqejBManFUWDVBN1JKSFZyS0t4TmdFczlzRFAxTVlHdm8wcHBQOF9CUU0wR2NfTDRNNHRQTVpRWmdlX3hnRTJSRS1aQVpidDF5M052OC1Hb0tpODFQTTlndGVrUXlNNVJZ?oc=5",
+      "publishedAt": "2026-10-08T07:00:00.000Z"
     },
     {
-      "title": "HLB, '리보세라닙·캄렐리주맙·TACE' 中 허가심사 진전",
-      "source": "메디코파마",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1hNjVxcUxCcGhtUHRDbzI5b0w0cEdOYm45WmluSjllRWxra20yV00wcUhaUHV3RVlKZGpoNnpQNU5hVXQ1NXJkb19ubDZiTHNNZ2w5Ty1nS3I4Ym9MMEQ3ZkpoaXpzb1JqbzJocmdRTkVXUQ?oc=5",
-      "publishedAt": "2026-10-06T21:50:00.000Z"
+      "title": "[주식] 희비 엇갈린 제약바이오株...HLB 30%↑· 펩트론 30%↓",
+      "source": "히트뉴스",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1oR2szdkJXS1djUm1KeW5ReUg4R3d4Z0RmY1AtaXl6SGt0aUlLYUQwUEhlWDZoS2c0OHRITl9Ja0F5VXZCMHJJaDgwd2twTlZMQV9jT21IaFpYbXlGYm1WSEk4eG5WX2syQlpB?oc=5",
+      "publishedAt": "2026-10-08T09:38:22.000Z"
     },
     {
-      "title": "[HLB 변곡점] ④FDA 승인으로 분위기 반전, 리보세라닙 재도전",
-      "source": "FETV",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBkV0dpa2xKUW40OGdvTmRGZ3VpOUhCR1JSbjBidFVOMnZPTWpIdy1yVVpCSjJWNEtrVnFXeHlQaEFoVXh3ZEk3ZzNacE13NjBuUEM2cXBocTVvNThuRlhoMElGYWE5Skht?oc=5",
-      "publishedAt": "2026-10-07T07:00:00.000Z"
+      "title": "ESMO 무대 오르는 K-바이오…에이비엘·HLB 구두 발표 관심",
+      "source": "청년의사",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBzb0JOOG5ELUN6eXpETEJyNTdIM004VnRoQWFxdnZ2cUlENjVOMDRub1p2RXJHM21RbndVVlNVY3J0X1diT3lXRTZXbmVBM0tLQ2ZIczdwQko2cmhCVllya3c2cUZ3cHI0eFBSWnRmVdIBc0FVX3lxTE1USXNJdFNxeEh4ck1RTGRGRUpBOGZfUVpNV0poSDN1NEhSZ0pwREZwVEQzMjBtS0ctZXdRSF9LNDBEQnhrM3QyU2w1T0xobmFQUDFyVzl5dnBwYkRfN0NJaUo5MXNSRzNsczNzVm9pWFBEblU?oc=5",
+      "publishedAt": "2026-10-07T21:09:41.000Z"
     },
     {
-      "title": "HLB 담관암 신약 ‘리라푸그라티닙’, 유럽 허가 본심사 착수",
-      "source": "약사공론",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5zdHM4eW40ZXVXYlhJbTRvQlJKeXV6Z2IzNTRndFh5eFIyaEhMQXZPM0VmUVNnREJwbUJqUzVWRjVFbEtyZ3llX2hOeDdBRHN2WmpLeGx4LU1BV0c3VEdSVEd5LWlXQlB4MmJKTg?oc=5",
-      "publishedAt": "2026-10-07T01:41:10.000Z"
-    },
-    {
-      "title": "HLB, ‘리라푸그라티닙’ 유럽 허가 \"본심사 착수\"",
-      "source": "바이오스펙테이터",
-      "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE8yclVFeW9rOFRUa1Q5bWphWmItby11cE92MmV3cTM5UmlvVmc3Q0RkRFNDYmtkSXQwSVctRFEzN0MxRXN2QVd2bDNkVXpLUGJobzZIZ0Jicw?oc=5",
-      "publishedAt": "2026-10-07T00:31:00.000Z"
-    },
-    {
-      "title": "‘Rivoceranib Hopes’ Lift HLB Affiliates; Samchundang Rises 5th Day[K-Bio Pulse]",
-      "source": "팜이데일리",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1DclpYR2xlcDZULVh5TEZFZ2V0LUdqV1lNTm5CMmtVZkZGM2gyR0tMa3BBTXVKVmY3MGNCZGZ4dHFEWGpYZzhNT0NXUWQ5eE5GZnNBSHhzbElrcFpwNXI3TjdXdXY0enZmY3JpVExB?oc=5",
-      "publishedAt": "2026-10-06T22:35:05.000Z"
-    },
-    {
-      "title": "HLB 리라푸그라티닙, 유럽 품목허가 본심사 착수",
-      "source": "메디포뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5wa1BDX0NwYXVZN1U5YkdvdDVvMUhRdllBc0N1N3dfckVuUGUwV1o3NU9hRWdIYlhqbHhVQ2F0Mnk1ZkVXcTQ4MXNsc2xzamNRSGUxNng5RUw2X3IzbWt0MDU2QS0?oc=5",
-      "publishedAt": "2026-10-07T11:54:46.000Z"
-    },
-    {
-      "title": "HLB, 담관암 신약 '리라푸그라티닙' 유럽 허가 본심사 착수",
-      "source": "뉴스1",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5yWnB2Umt4MXRSNWpkVVlfUFNxUWVHZzZST2M5S084c2RtMEpXc0lGNGpDTTRZQkZxMmpYRGI4SERGMDV6R3M4d1o4M29yU0FMZlFiQnoySVRYOW9TaFBKZQ?oc=5",
-      "publishedAt": "2026-10-06T23:58:42.000Z"
+      "title": "HLB그룹, 간암신약 美 재도전·임상 발표…연말·연초 성장 시험대",
+      "source": "전자신문",
+      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5PSFpnSWFwTjlDdzNvMUVZX1JkRVNqQkdxOUFRam1Tc3RWa0pTNkpNQ29WbkxpcGhRWThTVC1BSGpFaElVeXE2WG9JdW5EQQ?oc=5",
+      "publishedAt": "2026-10-08T10:56:00.000Z"
     }
   ],
   "dart": [],
-  "ownership": [],
-  "ownershipWindowDays": null,
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20260907",
+      "holder": "BlackRockFundAdvisors",
+      "ratio": 3.37,
+      "ratioChange": -3.78,
+      "reason": "보유비율 변동",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260907000092"
+    },
+    {
+      "kind": "major",
+      "date": "20260820",
+      "holder": "진양곤",
+      "ratio": 10.01,
+      "ratioChange": 0.06,
+      "reason": "전환사채 인수 및 콜옵션 계약 체결 등",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260820000132"
+    },
+    {
+      "kind": "major",
+      "date": "20260804",
+      "holder": "BlackRockFundAdvisors",
+      "ratio": 7.15,
+      "ratioChange": 1.1,
+      "reason": "단순투자목적으로 장내에서 발행회사의 주식 매수",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260804000426"
+    },
+    {
+      "kind": "major",
+      "date": "20260716",
+      "holder": "진양곤",
+      "ratio": 9.95,
+      "ratioChange": 0,
+      "reason": "주식담보대출 조건변경",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260716000704"
+    }
+  ],
+  "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 898.43,
-    "vs": -21.49,
-    "fltRt": -2.34
+    "clpr": 892.27,
+    "vs": -6.16,
+    "fltRt": -0.69
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
     "news": "구글 뉴스 RSS",
-    "dart": null,
-    "ownership": null,
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-09T08:10:06.786Z",
+  "builtAt": "2026-10-12T08:17:12.243Z",
   "archiveDays": 120,
-  "archiveFrom": "20260410"
+  "archiveFrom": "20260413"
 }

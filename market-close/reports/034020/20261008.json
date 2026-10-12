@@ -1,0 +1,143 @@
+{
+  "code": "034020",
+  "name": "두산에너빌리티",
+  "market": "KOSPI",
+  "basDt": "20261008",
+  "price": {
+    "code": "034020",
+    "name": "두산에너빌리티",
+    "market": "KOSPI",
+    "basDt": "20261008",
+    "close": 78000,
+    "vs": -2500,
+    "fltRt": -3.11,
+    "open": 79600,
+    "high": 79600,
+    "low": 75200,
+    "prevClose": 80500,
+    "volume": 4584327,
+    "tradeValue": 351713956050,
+    "week52": {
+      "low": 60200,
+      "high": 136400,
+      "position": 0.2335958005249344,
+      "days": 244,
+      "from": "20251008"
+    },
+    "recent5": [
+      {
+        "basDt": "20261001",
+        "fltRt": 0.61,
+        "open": 84000,
+        "high": 84000,
+        "low": 81300,
+        "close": 82100
+      },
+      {
+        "basDt": "20261002",
+        "fltRt": -1.22,
+        "open": 82100,
+        "high": 82300,
+        "low": 80400,
+        "close": 81100
+      },
+      {
+        "basDt": "20261006",
+        "fltRt": 0.49,
+        "open": 81600,
+        "high": 81700,
+        "low": 80700,
+        "close": 81500
+      },
+      {
+        "basDt": "20261007",
+        "fltRt": -1.23,
+        "open": 83500,
+        "high": 84300,
+        "low": 80200,
+        "close": 80500
+      },
+      {
+        "basDt": "20261008",
+        "fltRt": -3.11,
+        "open": 79600,
+        "high": 79600,
+        "low": 75200,
+        "close": 78000
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 2789820,
+      "ratio": 1.64
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 527,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-10-12T08:16:07.110Z"
+  },
+  "facts": [
+    "코스피보다 0.49%p 낮았어요.",
+    "거래량은 20일 평균의 1.6배예요.",
+    "시가보다 1,600원 낮게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "두산에너빌리티, 3%대 하락…삼성증권은 원전·가스터빈 성장성 주목",
+      "source": "CBC뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5vSHc0UElKa3dRU05sMDlhMXdkbXMwSWdKSy04MlJQNXdPMEJVc01UaWUzNW5NYXR1VG1IOTQ0R3N1V1ZWOE1jdU9BSnBaZzhKYjlTUzF6eFNYX2pielVCWjRDOXFnbXhM?oc=5",
+      "publishedAt": "2026-10-08T00:33:41.000Z"
+    },
+    {
+      "title": "두산에너빌리티, 美 가스터빈 공급 '첫발'···엔시날 수주 이어질까",
+      "source": "뉴스웨이",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9yLUhIQnJOWUhiRm5tQUY0bHN2YWwybGNGaXVjcVNDOUNMNVQ2a1htNXZkckc4bUYwUUZaRDRISVViejBRTlowVVU4WFUwdllJWG5LX0MycDliMFNoMGJsXzNGX3ZtaGNzTWc?oc=5",
+      "publishedAt": "2026-10-08T09:15:33.000Z"
+    },
+    {
+      "title": "두산에너빌리티, 美서 원전·가스터빈 '동시 수주'...기대 넘어 실적 단계로",
+      "source": "이코노미사이언스",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBQd0RfWHVzT3ZWcmY2anA1bFRaNDhOY0hWa19sZUJhWnhyVVBfRkhtbzF1R195Yk16OHV3WG43OWhuYW8xbl9WQTg4UGl5R0ZicFZqWjlITFpWZnlwNHdKb3FsNnVxLTZxN1V0aUZjQQ?oc=5",
+      "publishedAt": "2026-10-08T07:26:14.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20261001",
+      "holder": "두산",
+      "ratio": 30.68,
+      "ratioChange": 0,
+      "reason": "계약 내용의 변경",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261001000182"
+    },
+    {
+      "kind": "major",
+      "date": "20260731",
+      "holder": "국민연금공단",
+      "ratio": 7.63,
+      "ratioChange": -0.23,
+      "reason": "단순투자목적에서 일반투자목적으로 보유목적 변경",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260731000382"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 6625.93,
+    "vs": -177.97,
+    "fltRt": -2.62
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-12T08:17:12.257Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260413"
+}

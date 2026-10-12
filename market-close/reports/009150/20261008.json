@@ -1,0 +1,112 @@
+{
+  "code": "009150",
+  "name": "삼성전기",
+  "market": "KOSPI",
+  "basDt": "20261008",
+  "price": {
+    "code": "009150",
+    "name": "삼성전기",
+    "market": "KOSPI",
+    "basDt": "20261008",
+    "close": 1546000,
+    "vs": -58000,
+    "fltRt": -3.62,
+    "open": 1612000,
+    "high": 1620000,
+    "low": 1546000,
+    "prevClose": 1604000,
+    "volume": 554370,
+    "tradeValue": 873806672350,
+    "week52": {
+      "low": 198200,
+      "high": 2270000,
+      "position": 0.650545419442031,
+      "days": 244,
+      "from": "20251008"
+    },
+    "recent5": [
+      {
+        "basDt": "20261001",
+        "fltRt": 3.17,
+        "open": 1495000,
+        "high": 1563000,
+        "low": 1462000,
+        "close": 1561000
+      },
+      {
+        "basDt": "20261002",
+        "fltRt": 1.28,
+        "open": 1545000,
+        "high": 1582000,
+        "low": 1532000,
+        "close": 1581000
+      },
+      {
+        "basDt": "20261006",
+        "fltRt": 5.95,
+        "open": 1628000,
+        "high": 1685000,
+        "low": 1616000,
+        "close": 1675000
+      },
+      {
+        "basDt": "20261007",
+        "fltRt": -4.24,
+        "open": 1675000,
+        "high": 1699000,
+        "low": 1601000,
+        "close": 1604000
+      },
+      {
+        "basDt": "20261008",
+        "fltRt": -3.62,
+        "open": 1612000,
+        "high": 1620000,
+        "low": 1546000,
+        "close": 1546000
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 580997,
+      "ratio": 0.95
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 527,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-10-12T08:15:17.404Z"
+  },
+  "facts": [
+    "코스피보다 1%p 낮았어요.",
+    "거래량은 20일 평균의 0.9배예요.",
+    "시가보다 66,000원 낮게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "환율 영향에도 강한 삼성전기…증권가, 3Q 수익성 개선 예상",
+      "source": "연합인포맥스",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE01eXdidXNPX1czMVpqb0dQbE5xYmFUeG5nWjItU1NGX1NaSmsyaHczUHJENmdlbjdTOU9CSFFFOTEtajRRU1lveFdNalhmOUJaeGc2SG8xU2UyWjN6OS1iNXlvcC0xb3d3bjNXaW1jRVY?oc=5",
+      "publishedAt": "2026-10-08T01:59:13.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 6625.93,
+    "vs": -177.97,
+    "fltRt": -2.62
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-12T08:17:12.181Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260413"
+}

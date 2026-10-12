@@ -1,0 +1,112 @@
+{
+  "code": "028260",
+  "name": "삼성물산",
+  "market": "KOSPI",
+  "basDt": "20261008",
+  "price": {
+    "code": "028260",
+    "name": "삼성물산",
+    "market": "KOSPI",
+    "basDt": "20261008",
+    "close": 317500,
+    "vs": -18500,
+    "fltRt": -5.51,
+    "open": 332000,
+    "high": 333500,
+    "low": 317500,
+    "prevClose": 336000,
+    "volume": 544311,
+    "tradeValue": 175812965500,
+    "week52": {
+      "low": 194800,
+      "high": 535000,
+      "position": 0.36067019400352734,
+      "days": 244,
+      "from": "20251008"
+    },
+    "recent5": [
+      {
+        "basDt": "20261001",
+        "fltRt": 1.61,
+        "open": 339000,
+        "high": 347000,
+        "low": 336500,
+        "close": 347000
+      },
+      {
+        "basDt": "20261002",
+        "fltRt": -0.29,
+        "open": 342500,
+        "high": 347000,
+        "low": 338000,
+        "close": 346000
+      },
+      {
+        "basDt": "20261006",
+        "fltRt": -1.16,
+        "open": 353500,
+        "high": 353500,
+        "low": 340000,
+        "close": 342000
+      },
+      {
+        "basDt": "20261007",
+        "fltRt": -1.75,
+        "open": 340000,
+        "high": 351000,
+        "low": 335000,
+        "close": 336000
+      },
+      {
+        "basDt": "20261008",
+        "fltRt": -5.51,
+        "open": 332000,
+        "high": 333500,
+        "low": 317500,
+        "close": 317500
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 311551,
+      "ratio": 1.75
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 527,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-10-12T08:15:33.177Z"
+  },
+  "facts": [
+    "코스피보다 2.89%p 낮았어요.",
+    "거래량은 20일 평균의 1.8배예요.",
+    "시가보다 14,500원 낮게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "[단독]삼성물산, 목동13 재건축 단지명 ‘래미안 모브13’ 제안",
+      "source": "MTN 머니투데이방송",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9yWE42UkVKYVBtZEk3WVFMNVdqX19tNXhxSW11cW0wdnV6aWk3QkpLVjdJeXVYLWFsVkJ1eUNvdzh2enpXcEdGMnFTaFNCN3dOZGFiQzRobzAxSEZuRHhROWtxS0E?oc=5",
+      "publishedAt": "2026-10-08T06:22:07.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 6625.93,
+    "vs": -177.97,
+    "fltRt": -2.62
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-12T08:17:12.206Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260413"
+}
