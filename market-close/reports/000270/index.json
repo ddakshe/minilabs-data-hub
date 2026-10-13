@@ -3,10 +3,18 @@
   "name": "기아",
   "market": "KOSPI",
   "retainDays": 120,
-  "firstBasDt": "20260413",
-  "lastBasDt": "20261008",
+  "firstBasDt": "20260414",
+  "lastBasDt": "20261012",
   "count": 120,
   "days": [
+    {
+      "basDt": "20261012",
+      "close": 108100,
+      "fltRt": 1.22,
+      "headline": "코스피보다 4.87%p 높았어요.",
+      "newsCount": 8,
+      "dartCount": 1
+    },
     {
       "basDt": "20261008",
       "close": 106800,
@@ -1051,16 +1059,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260413",
-      "close": 147400,
-      "fltRt": -1.07,
-      "headline": "코스피보다 0.21%p 낮았어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-10-12T08:17:12.251Z"
+  "updatedAt": "2026-10-13T08:42:48.338Z"
 }

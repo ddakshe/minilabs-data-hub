@@ -2,37 +2,29 @@
   "code": "000270",
   "name": "기아",
   "market": "KOSPI",
-  "basDt": "20261008",
+  "basDt": "20261012",
   "price": {
     "code": "000270",
     "name": "기아",
     "market": "KOSPI",
-    "basDt": "20261008",
-    "close": 106800,
-    "vs": -2800,
-    "fltRt": -2.55,
-    "open": 108400,
-    "high": 108500,
-    "low": 106300,
-    "prevClose": 109600,
-    "volume": 1298243,
-    "tradeValue": 138954295800,
+    "basDt": "20261012",
+    "close": 108100,
+    "vs": 1300,
+    "fltRt": 1.22,
+    "open": 109000,
+    "high": 111000,
+    "low": 107300,
+    "prevClose": 106800,
+    "volume": 1390915,
+    "tradeValue": 151236840300,
     "week52": {
-      "low": 100600,
+      "low": 101100,
       "high": 206000,
-      "position": 0.058823529411764705,
+      "position": 0.0667302192564347,
       "days": 244,
-      "from": "20251008"
+      "from": "20251012"
     },
     "recent5": [
-      {
-        "basDt": "20261001",
-        "fltRt": 0.44,
-        "open": 112400,
-        "high": 114700,
-        "low": 112300,
-        "close": 113300
-      },
       {
         "basDt": "20261002",
         "fltRt": -0.35,
@@ -64,64 +56,98 @@
         "high": 108500,
         "low": 106300,
         "close": 106800
+      },
+      {
+        "basDt": "20261012",
+        "fltRt": 1.22,
+        "open": 109000,
+        "high": 111000,
+        "low": 107300,
+        "close": 108100
       }
     ],
     "volumeVs20d": {
-      "avg20": 730163,
-      "ratio": 1.78
+      "avg20": 759082,
+      "ratio": 1.83
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 527,
+      "rows": 528,
       "rows52w": 244
     },
-    "generatedAt": "2026-10-12T08:16:01.906Z"
+    "generatedAt": "2026-10-13T08:41:36.974Z"
   },
   "facts": [
-    "코스피보다 0.07%p 높았어요.",
+    "코스피보다 4.87%p 높았어요.",
     "거래량은 20일 평균의 1.8배예요.",
-    "시가보다 1,600원 낮게 마감했어요."
+    "시가보다 900원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "한양대·현대차기아 로보틱스랩, 뇌파·윙크로 ‘입는 로봇’ 제어 성공",
-      "source": "로봇신문",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9OamNqLVg2elNtT21iaEJwbzQxeVNXaENpVklDcm1rUGhTVjRkcUVsRFpSZldVaFNmUUlPaTVDeTF2c0hYTGNHYmdmekZfYngycFpoR3A1WkFrb2NXSFpuYjRWT21tU1JjVTdfdQ?oc=5",
-      "publishedAt": "2026-10-08T08:15:29.000Z"
+      "title": "[정의선 리더십 6년]① 현대차·기아 매출 300조 시대…다음 과제는",
+      "source": "블로터",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5xcHNQYVU0RGx0NmdKMVFzRVFGZTZyY2lxanhWT1ZUa0Q0UGtoLWd0Z2Q5TFA2akZYYW1hQlluVXNmLXhNbkdiWVR2QVpkNnU3eUE0T1RtdVZqSEZVVW9xVTJ5QmttVDhU0gFsQVVfeXFMTVpWX0wzRTdsbEowYnRkR3lmQWR3a3B3TXc1VjMyV0dIeXVEN3NrdzF0NUxpYWRnenl0SGZkblBaYTZCU0lQbUlHYWE2dU83LTJDVm5FUXNZZlo5ZlJYcDRJc08waHltN2hGc2oz?oc=5",
+      "publishedAt": "2026-10-12T07:26:58.000Z"
     },
     {
-      "title": "형보다 낫다는데…돈 잘 버는 기아, 주가 웃지 못하는 이유",
+      "title": "기아, 파리모터쇼서 신형 셀토스 하이브리드 유럽 첫 공개",
+      "source": "연합뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5pSjBlZ0czNnBJZWgwMkNnbV9VS1VuWm5FN0hnSzRtMklQTHNVaU5FQ3pfZW5uMHdIR2hKb3lCTnUtdWNMdm5PaWsyU0pSejMzdzBOdVIzSUlzYVnSAWBBVV95cUxPX0IxbG1IUjIyZ0lLRHExNVVpVHhQdnRoNXlfWWtMUEIyczFrbHlmVE92ZGV1dWVLWm5nOGlyc0pETmQwNjd3cjBNOEdhT1o4NHM2aVl3bVpKUHZQaXlHTnc?oc=5",
+      "publishedAt": "2026-10-12T10:49:34.000Z"
+    },
+    {
+      "title": "기아멤버스 포인트로 전기차 충전한다…이브이시스, 고객 기반 확대",
+      "source": "지디넷코리아",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBXZHZLYkw0Z2U1NXRqcE1vWlJJYXBUeE9acnlIdS1oZ0dybUpfaHg1S2ljeEQ2Q0VVRnljUnJFZzlXdW0zR1phVU8zTkU3R2lnRi1SSmtR?oc=5",
+      "publishedAt": "2026-10-12T05:30:07.000Z"
+    },
+    {
+      "title": "롯데이노베이트 EVSIS, 기아멤버스 품고 ‘충전 영토’ 확장",
+      "source": "동아일보",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1SNl83ODdpaUE5bzczV1J5UFVkcldfeTUyY21JU1hHeEdaZHVxY0h1TnpDNHBXSWt3d0N0SXB6dm5XQXRLMGg3cGdyLVlNT1pSa2p2bWYwOXRCMjN5blAwWjFhdHBFY1hGdU5KVW8tams0eTZ1N3fSAWZBVV95cUxQLUtGQUdLSi1GRENyQi1mOTMzcW9OSi1rS0hsejItbkx3elBKSW5jZHN5aVNobUdKaFZJQ2dRRG5DYjFrNUJYOTN3eDJfc1Y3b2ZrLTlONjVqUHpoN1lpeUhTak5iTXc?oc=5",
+      "publishedAt": "2026-10-12T02:46:05.000Z"
+    },
+    {
+      "title": "EVSIS, 기아멤버스 포인트로 충전권 구매 지원…“연말까지 20% 할인” - 조선비즈",
+      "source": "Chosunbiz",
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOemhmdXNEOVlwZ2RwNjczSkN1LW85RGtxTXlVSks5MTY5VFVSb0FDV0FtOHZpbkhxT29YZnFuMTA0UXNpNVc4M2dfdmVVZGRHMVl1VlVMakoyV1JGZi10NGVwYUFDSGN5cTNSR3BmSWNsamw0dmN4aHREeHFmT2ZsUkJR0gGWAUFVX3lxTE9SS0lhaDdKclpRZkFXcTFIQXVRQVlaWllIMFVCNjVIdktlVTRMLVJaOGpPMERVSW5teDh0c2tmY0dId0w4NGpHRjNwVEFOaHk0ZFc5MWJwWl94emd6d3dpLW1IVjBlRkJNZGR4c0lzUU5DZE1zRFU2NGc2MkN5bXkyVmg2WlBzTTJFMVQ0b3VIemxNM1BxZw?oc=5",
+      "publishedAt": "2026-10-12T01:42:00.000Z"
+    },
+    {
+      "title": "현대위아, 3Q 영업익 1%대 오른 525억원 전망…기아가 실적 지탱",
       "source": "연합인포맥스",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5pMkFNMFlUNXlfS3NGZ3d6UjR1bnhKSUdjOXRvVXhzUjlYSDVRc1ZDcE1zbG9ydTZUdzR3T19CTGRqODFTcVR6Nk9MM1FFYWdZVUZLRVFfVG9oYi1jSHNWc2h5V1N4Z0FuLUJQd1JxVnE?oc=5",
-      "publishedAt": "2026-10-07T23:32:13.000Z"
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9xSVF0UEQycTZVNUF0R2ZGbEItLWlfa3NFNVlXODFaN3Q5dVcwbEkzZC1nU0tEenZ6Ry04ZUhVTFl4ckgyQlMxZ1JaZVMyN2FmOGkyUTVRNlRFcGJkRWp6N01XQWlBQlUzdjVVX0tXZmE?oc=5",
+      "publishedAt": "2026-10-12T00:32:24.000Z"
     },
     {
-      "title": "EU 2035년 내연기관차 퇴출 규제 '흔들'…현대차·기아 셈법 바뀌나",
-      "source": "글로벌이코노믹",
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPQXMtTFQxUU1GcEFnai04dmJFWmJnUnAwX01FUHFEN3o4cnlOMXRfOFZwc0ZMSllDVk9PMGtvNnlCY29ScThBQWh4dV9LVGFhbjhEdlpBRnZvMWJBV3lRTGJ3TFQtdmttMnZQVy16bzJvb3J5YUIwRVlISmpxNHU0Y255eFlXT2ZV?oc=5",
-      "publishedAt": "2026-10-08T02:11:08.000Z"
+      "title": "\"가장 완성도 높은 엔트리 EV\"…북미 상륙 기아 EV3에 잇단 호평",
+      "source": "매일경제 마켓",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5VTWlEZ2pNQ3prRzZRWWVncVhzLXgyM1ZYdjZkTDRsMU8tOUJ6WTJuQ2M5MUFGU2JSUENkRExkd3ItUTctWVFpR21uUHlhMmZmelE?oc=5",
+      "publishedAt": "2026-10-11T22:01:00.000Z"
     },
     {
-      "title": "중국 하이브리드 막는 EU…현대차·기아도 영향권",
-      "source": "뉴스토마토",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9RMmJwamUwcW1jZV9LLWFHZGExZlYxcHdpZmc1c1g4ZlowaWRQb0tzMEd3OV85M3BLb3Jia083YlN4aEJLMUl0RmFRNDFuUDlhb3F2U05KMmxaNzNxSFM4bA?oc=5",
-      "publishedAt": "2026-10-08T10:40:29.000Z"
-    },
-    {
-      "title": "[특징주] 현대차·기아, \"3분기 실적 전망치 밑돌 것\".. '약세'",
-      "source": "글로벌이코노믹",
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOZmYtT08zT1NzTHlQLUlxMVMtNVFDc084UXVVTFpaaW1NT2gwckdadEdfdHY2NXFWLTdDaktOYjdkbmFLcmhkU0pKWkVkeUdHRzMzX0loSGYxWnVTaFJHM3FRelhsaW1ReVZoekNMeHhONE1QZUs1RlBVcVlQN2p1QmNkSnYyVktn?oc=5",
-      "publishedAt": "2026-10-08T00:53:45.000Z"
+      "title": "파리모터쇼 개막…현대차 바이욘·기아 셀토스 하브로 신차 경쟁(종합)",
+      "source": "연합뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBvRkFWYUxMYk9ub05sOUNvVXhFSDNMT2dlWFoxckktNGRUX3QzLUlpNWxfa0R1ekRJTnVjaUh6dEhhSDBuRzNjTVNCMUlLdFIwUUVRWnE3aXJzT1R2ZWJmVNIBYEFVX3lxTFBvRkFWYUxMYk9ub05sOUNvVXhFSDNMT2dlWFoxckktNGRUX3QzLUlpNWxfa0R1ekRJTnVjaUh6dEhhSDBuRzNjTVNCMUlLdFIwUUVRWnE3aXJzT1R2ZWJmVA?oc=5",
+      "publishedAt": "2026-10-12T13:02:00.000Z"
     }
   ],
-  "dart": [],
+  "dart": [
+    {
+      "title": "특수관계인으로부터기타유가증권매수",
+      "filer": "기아",
+      "receiptNo": "20261012000440",
+      "date": "20261012",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261012000440"
+    }
+  ],
   "ownership": [],
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 6625.93,
-    "vs": -177.97,
-    "fltRt": -2.62
+    "clpr": 6384.24,
+    "vs": -241.69,
+    "fltRt": -3.65
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -130,7 +156,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-12T08:17:12.250Z",
+  "builtAt": "2026-10-13T08:42:48.336Z",
   "archiveDays": 120,
-  "archiveFrom": "20260413"
+  "archiveFrom": "20260414"
 }

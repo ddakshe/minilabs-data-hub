@@ -2,37 +2,29 @@
   "code": "028300",
   "name": "HLB",
   "market": "KOSDAQ",
-  "basDt": "20261008",
+  "basDt": "20261012",
   "price": {
     "code": "028300",
     "name": "HLB",
     "market": "KOSDAQ",
-    "basDt": "20261008",
-    "close": 45650,
-    "vs": -250,
-    "fltRt": -0.54,
-    "open": 45950,
-    "high": 46500,
-    "low": 45100,
-    "prevClose": 45900,
-    "volume": 925840,
-    "tradeValue": 42454001925,
+    "basDt": "20261012",
+    "close": 44400,
+    "vs": -1250,
+    "fltRt": -2.74,
+    "open": 47550,
+    "high": 47550,
+    "low": 43900,
+    "prevClose": 45650,
+    "volume": 963277,
+    "tradeValue": 43585832975,
     "week52": {
       "low": 25650,
       "high": 68200,
-      "position": 0.4700352526439483,
+      "position": 0.4406580493537015,
       "days": 244,
-      "from": "20251008"
+      "from": "20251012"
     },
     "recent5": [
-      {
-        "basDt": "20261001",
-        "fltRt": -2.05,
-        "open": 40800,
-        "high": 40800,
-        "low": 38800,
-        "close": 40550
-      },
       {
         "basDt": "20261002",
         "fltRt": -0.25,
@@ -64,51 +56,98 @@
         "high": 46500,
         "low": 45100,
         "close": 45650
+      },
+      {
+        "basDt": "20261012",
+        "fltRt": -2.74,
+        "open": 47550,
+        "high": 47550,
+        "low": 43900,
+        "close": 44400
       }
     ],
     "volumeVs20d": {
-      "avg20": 1327526,
-      "ratio": 0.7
+      "avg20": 1340110,
+      "ratio": 0.72
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 527,
+      "rows": 528,
       "rows52w": 244
     },
-    "generatedAt": "2026-10-12T08:15:59.190Z"
+    "generatedAt": "2026-10-13T08:41:34.414Z"
   },
   "facts": [
-    "코스닥보다 0.15%p 높았어요.",
+    "코스닥보다 2.09%p 높았어요.",
     "거래량은 20일 평균의 0.7배예요.",
-    "시가보다 300원 낮게 마감했어요."
+    "시가보다 3,150원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "[주식] HLB, 담관암 이어 간암도? 기대감에 '상한가'",
-      "source": "히트뉴스",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9rejBqejBManFUWDVBN1JKSFZyS0t4TmdFczlzRFAxTVlHdm8wcHBQOF9CUU0wR2NfTDRNNHRQTVpRWmdlX3hnRTJSRS1aQVpidDF5M052OC1Hb0tpODFQTTlndGVrUXlNNVJZ?oc=5",
-      "publishedAt": "2026-10-08T07:00:00.000Z"
+      "title": "HLB, 간암 신약 美 FDA 허가 재신청…3차 CRL 3개월 만",
+      "source": "팜이데일리",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9xV21OeU41U2JBSkQ2M0VtWTNGWnZVYllXQ1Vsajd2alhoMDAwZExQYVQtNUFsQTlUdVVlLXh1WndPXzVjakoyUmtlYUt1V3BTY2VjYjZ4Uzd1dTQtbW5TeUdFQ1BMMEJsRXFPeEJ3?oc=5",
+      "publishedAt": "2026-10-11T23:56:32.000Z"
     },
     {
-      "title": "[주식] 희비 엇갈린 제약바이오株...HLB 30%↑· 펩트론 30%↓",
-      "source": "히트뉴스",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1oR2szdkJXS1djUm1KeW5ReUg4R3d4Z0RmY1AtaXl6SGt0aUlLYUQwUEhlWDZoS2c0OHRITl9Ja0F5VXZCMHJJaDgwd2twTlZMQV9jT21IaFpYbXlGYm1WSEk4eG5WX2syQlpB?oc=5",
-      "publishedAt": "2026-10-08T09:38:22.000Z"
+      "title": "HLB그룹, 15일 통합 IR데이…\"계열사 중장기 전략 공유\"",
+      "source": "연합뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE8xdTZKa3BHaTU0aG5BeG53MGs3TlBydkRZY3VCRk96SHJyeDhsaHYyT2ExbkwwQ3NrZTF0OTQ2bGwydENhTDVNZ2ZhUE9hN1hPMGYxTmx6d1lDcUHSAWBBVV95cUxQY19YY2tiQ2hYU09lWHVYTllPcHVKZHlZMmUwOGgxSzJCMlVjYzF2c0NIUWx0NGs3SjM1SlN5ZXdVYzlYcVFqZmNwY3JEMERNdUNKUFY5MWVETjZIMnJYMTM?oc=5",
+      "publishedAt": "2026-10-12T06:51:16.000Z"
     },
     {
-      "title": "ESMO 무대 오르는 K-바이오…에이비엘·HLB 구두 발표 관심",
-      "source": "청년의사",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBzb0JOOG5ELUN6eXpETEJyNTdIM004VnRoQWFxdnZ2cUlENjVOMDRub1p2RXJHM21RbndVVlNVY3J0X1diT3lXRTZXbmVBM0tLQ2ZIczdwQko2cmhCVllya3c2cUZ3cHI0eFBSWnRmVdIBc0FVX3lxTE1USXNJdFNxeEh4ck1RTGRGRUpBOGZfUVpNV0poSDN1NEhSZ0pwREZwVEQzMjBtS0ctZXdRSF9LNDBEQnhrM3QyU2w1T0xobmFQUDFyVzl5dnBwYkRfN0NJaUo5MXNSRzNsczNzVm9pWFBEblU?oc=5",
-      "publishedAt": "2026-10-07T21:09:41.000Z"
+      "title": "HLB그룹, 15일 통합 IR…첫 신약 승인 이후 성장전략 공개",
+      "source": "서울경제TV",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1xWk1MT2cyc2xvOVVPWkdZNlBsTGg4bXgyVm5GS2xZZXZvU3dkU2cyZXBwTVVMX1h4VHdQNWtOZ0xuOGQ1b25uNUFKNkRSZkIxa0cyWDAwZm95elVwZEV1QmFQUS0?oc=5",
+      "publishedAt": "2026-10-12T07:49:19.000Z"
     },
     {
-      "title": "HLB그룹, 간암신약 美 재도전·임상 발표…연말·연초 성장 시험대",
-      "source": "전자신문",
-      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5PSFpnSWFwTjlDdzNvMUVZX1JkRVNqQkdxOUFRam1Tc3RWa0pTNkpNQ29WbkxpcGhRWThTVC1BSGpFaElVeXE2WG9JdW5EQQ?oc=5",
-      "publishedAt": "2026-10-08T10:56:00.000Z"
+      "title": "HLB그룹, 15일 통합 IR Day 개최",
+      "source": "MEDI:GATE NEWS",
+      "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBlV0N3VGx1QTJJMldhbE5VeFZSOXFqSk9Zb1Blbm5nd1pNR3hFWDFfQkVVT0dFWlpIbDUwazcyUmRuQ2lhNXRxTm9IUlVXVnlHWFF1S3F1WQ?oc=5",
+      "publishedAt": "2026-10-12T11:09:00.000Z"
+    },
+    {
+      "title": "HLB, 미국 FDA에 간암 신약 허가 재신청",
+      "source": "연합뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE0wR0JuRDNKTnZ2QTBEWFNtVUg3NlVCUVRLQjM1elViSVY5dEJIUDkzenhaN2FJbnhLTVc5dnJRNXFZUmpNZ21ZYUFaLXhjREVzcGdwVXYwRkh1LUpfSG0zRdIBYEFVX3lxTE0wR0JuRDNKTnZ2QTBEWFNtVUg3NlVCUVRLQjM1elViSVY5dEJIUDkzenhaN2FJbnhLTVc5dnJRNXFZUmpNZ21ZYUFaLXhjREVzcGdwVXYwRkh1LUpfSG0zRQ?oc=5",
+      "publishedAt": "2026-10-11T23:43:02.000Z"
+    },
+    {
+      "title": "HLB그룹, 15일 통합 IR Day 개최…10개 상장사 성장전략 공유",
+      "source": "약사공론",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5DMDVJWUt1NkRSeUh5SHY3RTFpblRRMEVSa0lucGFEX19PbGI2LV9USDloRFEtQXd1Uy13NlU1TUIwbmh1ZHk0UWRNUDdHZGtRdmJqOUpPX2NFZmhZUWFwRmJFd1VtMWtYVHFfdA?oc=5",
+      "publishedAt": "2026-10-12T07:09:32.000Z"
+    },
+    {
+      "title": "HLB, 간암 신약 美 허가 재신청…23.8개월 생존 효과 승부",
+      "source": "데일리팜",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1QeWhESTRHc1JNelpkc0ltR3djYVgwZ1BSSVp3TGJyNndtM2k5NFZZZDNLVFUzQUhReU5fczUwelVQcUowdXZ2TG5WaF9LclFQbkRqLVJR?oc=5",
+      "publishedAt": "2026-10-11T22:55:55.000Z"
+    },
+    {
+      "title": "HLB, '리보세라닙' 간암 1차 \"FDA 허가 재신청\"",
+      "source": "바이오스펙테이터",
+      "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1ObC1QNEIwTWRJVnZ4S2lHRG9KYl9nc2RRd3otamowU0Jid3JEdVE0Yk1GSGZSNmxOdDBZSUhKb0RDc2dPUmJJMmNjQ1BneEZHZ2g0ZVNVTQ?oc=5",
+      "publishedAt": "2026-10-11T23:49:00.000Z"
     }
   ],
-  "dart": [],
+  "dart": [
+    {
+      "title": "기업설명회(IR)개최              ",
+      "filer": "HLB",
+      "receiptNo": "20261012900350",
+      "date": "20261012",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261012900350"
+    },
+    {
+      "title": "기타경영사항(자율공시)              (HLB 간암 1차 치료제(리보세라닙,캄렐리주맙 병용요법) FDA에 재승인 서류 제출)",
+      "filer": "HLB",
+      "receiptNo": "20261012900006",
+      "date": "20261012",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261012900006"
+    }
+  ],
   "ownership": [
     {
       "kind": "major",
@@ -150,9 +189,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 892.27,
-    "vs": -6.16,
-    "fltRt": -0.69
+    "clpr": 849.19,
+    "vs": -43.08,
+    "fltRt": -4.83
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -161,7 +200,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-12T08:17:12.243Z",
+  "builtAt": "2026-10-13T08:42:48.327Z",
   "archiveDays": 120,
-  "archiveFrom": "20260413"
+  "archiveFrom": "20260414"
 }

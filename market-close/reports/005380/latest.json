@@ -2,37 +2,29 @@
   "code": "005380",
   "name": "현대차",
   "market": "KOSPI",
-  "basDt": "20261008",
+  "basDt": "20261012",
   "price": {
     "code": "005380",
     "name": "현대차",
     "market": "KOSPI",
-    "basDt": "20261008",
-    "close": 324500,
-    "vs": -11500,
-    "fltRt": -3.42,
-    "open": 335000,
-    "high": 335500,
-    "low": 324500,
-    "prevClose": 336000,
-    "volume": 685775,
-    "tradeValue": 223549891500,
+    "basDt": "20261012",
+    "close": 320000,
+    "vs": -4500,
+    "fltRt": -1.39,
+    "open": 320000,
+    "high": 334000,
+    "low": 318500,
+    "prevClose": 324500,
+    "volume": 676183,
+    "tradeValue": 218597668250,
     "week52": {
-      "low": 217000,
+      "low": 218500,
       "high": 750000,
-      "position": 0.20168855534709193,
+      "position": 0.1909689557855127,
       "days": 244,
-      "from": "20251008"
+      "from": "20251012"
     },
     "recent5": [
-      {
-        "basDt": "20261001",
-        "fltRt": 1.16,
-        "open": 348500,
-        "high": 349000,
-        "low": 343500,
-        "close": 349000
-      },
       {
         "basDt": "20261002",
         "fltRt": -0.72,
@@ -64,23 +56,31 @@
         "high": 335500,
         "low": 324500,
         "close": 324500
+      },
+      {
+        "basDt": "20261012",
+        "fltRt": -1.39,
+        "open": 320000,
+        "high": 334000,
+        "low": 318500,
+        "close": 320000
       }
     ],
     "volumeVs20d": {
-      "avg20": 462473,
-      "ratio": 1.48
+      "avg20": 475206,
+      "ratio": 1.42
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 527,
+      "rows": 528,
       "rows52w": 244
     },
-    "generatedAt": "2026-10-12T08:15:22.597Z"
+    "generatedAt": "2026-10-13T08:40:57.661Z"
   },
   "facts": [
-    "코스피보다 0.8%p 낮았어요.",
-    "거래량은 20일 평균의 1.5배예요.",
-    "시가보다 10,500원 낮게 마감했어요."
+    "코스피보다 2.26%p 높았어요.",
+    "거래량은 20일 평균의 1.4배예요.",
+    "시가 그대로 마감했어요."
   ],
   "news": [
     {
@@ -90,46 +90,34 @@
       "publishedAt": "2026-10-12T00:26:44.000Z"
     },
     {
-      "title": "로봇·AI로… 현대차 진화, 경계를 넘다",
-      "source": "머니투데이",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5TcjRrVUxmYkQzQUhVamRqOHFzbHMzQ0hWcDV1Wmk3LW5qcGFJdG5HQk5RS29lbFI2Q1pPVUlwWlgycEFHcno2RjNULXlmandUSnFwMlJRQ0hnRXZzeTlZakJqRldTOXl0eERybtIBckFVX3lxTFBmWFFNbzJKQkVVTlZLaW4yNWp5cWFPUUtNaHBJb3hrTUhsMWY1NWo1ZHZCNjNkdWVnOE55WkFFeWdrRjRGRnVDczZxMlVTTElWWVlTd0FWOGZ5bWZpcXM4SDlnaUJyN0NWb25IWlU1VU9rQQ?oc=5",
-      "publishedAt": "2026-10-11T18:00:00.000Z"
+      "title": "노동부, 현대차에 이수기업 노동자 29명 직접고용 시정지시",
+      "source": "연합뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBBcmNvQk9SX3JaR01XUmNkQ2I4SFRoQUM3QkxpT0FyNWExOFIwcFRBc0ZWNm1MSlc0WTZ6bmhocy1waDJqZHNjN2JNODRQd1JSVENmcFdsY1JRQU3SAWBBVV95cUxPbTE2TzY2aVZ3WDQwMnV1NkYwalA0M2k5WHpUdjdGYm9LZU55M0ZXeElmVkp0WjlGSGRlSDR1eUpoTWpMVXBETVIxU2FTTHV3aF9sWEZCRFJfeHdubUN3UkE?oc=5",
+      "publishedAt": "2026-10-12T08:33:36.000Z"
     },
     {
-      "title": "현대차그룹, 과감한 미래 투자…모빌리티 넘어 '피지컬AI'로 간다",
-      "source": "한국경제",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5MRjlnendhX2lEbE9XbURka3E3MkJJVXlzUi16VFVTdnB6Y2hFVkNtUlJ1MXpRZWtLck1nMFFMMkkxM3NoTXBEdm5TY254V09EWDAzNmpaRXhndw?oc=5",
-      "publishedAt": "2026-10-11T07:48:46.000Z"
-    },
-    {
-      "title": "이노시뮬레이션, 현대차 UX 연구용 드라이빙 시뮬레이터 고도화 수주",
-      "source": "머니투데이",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE0wWmp4S1hfTzlXV21hZ2hWV1Q4bkw2UUNjNy1XRnZEdVE3QkVGWUJ0aGFVUnU4MHhjTXY5UkVsMnRlU2VERzJOc3AxcmlGOHY3YmFHWlhYQ0E5N1RNUnNOWEgxTFlqRU550gFuQVVfeXFMTjVUYjMycW5JQTdDVUVVMEhfbC1zdTNOQi1hTTlpdHpWM2FvQ1g0QzRCb2c1NVJ5WjNOeEJLOXcwN2NoUk5FY0dVOFQxWE43aDlaRDRXTUlhZVFBY0VGTEp6czJIc25lZUhxaDExbUE?oc=5",
-      "publishedAt": "2026-10-12T05:43:57.000Z"
+      "title": "8년 만에 파리 찾는 현대차, '투싼·바이온' 출격하고 전기 밴 '스타리아 카고'도 공개",
+      "source": "전자신문",
+      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1zU1poOFprRGxWWnZfcnNfZ2UzcXZDMDd6elNsdFNaaW1ES3ZjdmpncVltR2tCNWk2eGh3X1Rsemwtci0yNi1pelNHdFZSdw?oc=5",
+      "publishedAt": "2026-10-12T07:00:00.000Z"
     },
     {
       "title": "현대차는 ‘데스 밸리’ 진입… “앞으로 2년 힘겹게 버텨야”",
       "source": "조선일보",
       "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQRWUxV2FGd09UWEk1NEEzUDRaQ1hDeDlrOHg5NFJVQW0zcDVjQjZMM0d2QTNDNEtNMUphTVhYOFJ4S21ldXZLQ3hkRXg1VjY0RjZmZF84WWxmUFB6WmtoNEVGXzRIMnhvQ2FycHBKbkc5aHRORW8yVFVBeVZPcFUtZXk4YnBWbzhOVXRwVTNzYw?oc=5",
-      "publishedAt": "2026-10-11T15:42:00.000Z"
+      "publishedAt": "2026-10-11T15:50:14.000Z"
     },
     {
-      "title": "AI發 전력 병목에… 삼성-현대차-포스코, 원전 등 직접 발전 검토",
-      "source": "동아일보",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5KSFZFQURmN19XdmVxazBXc1dCZjQ3aHNBYzRELVl0Nll4QUpYanFoTDhQRU1fejFzd2ExV25tTE1oUUdJVTRIVnBha2lMOWFxLWNKbUtaRUlhUDAybkJJM0pLZkNXNlJ6SzJRSVFfdGRKVXhOOWfSAWZBVV95cUxNM0trdVdlT1BkSmdGaHBtUXhHTlFxSjVlMDN0RzBtZFV0ZDFqTEF2bFBQN0xpMU9PanZJR2piWXpwbDFBemFFUUx6eGJmZ1lnYzAweXFOYmU3enVMUkIwYjNNd28wZEE?oc=5",
-      "publishedAt": "2026-10-11T19:30:00.000Z"
+      "title": "파리모터쇼 개막…현대차 바이욘·기아 셀토스 하브로 신차 경쟁(종합)",
+      "source": "연합뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBvRkFWYUxMYk9ub05sOUNvVXhFSDNMT2dlWFoxckktNGRUX3QzLUlpNWxfa0R1ekRJTnVjaUh6dEhhSDBuRzNjTVNCMUlLdFIwUUVRWnE3aXJzT1R2ZWJmVNIBYEFVX3lxTFBvRkFWYUxMYk9ub05sOUNvVXhFSDNMT2dlWFoxckktNGRUX3QzLUlpNWxfa0R1ekRJTnVjaUh6dEhhSDBuRzNjTVNCMUlLdFIwUUVRWnE3aXJzT1R2ZWJmVA?oc=5",
+      "publishedAt": "2026-10-12T13:02:00.000Z"
     },
     {
-      "title": "\"글로벌 베스트셀링 SUV로 우뚝\"...현대차, '디 올 뉴 투싼 테크·익스피리언스 데이' 개최",
-      "source": "글로벌이코노믹",
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQTVRaYXcwVXdENlFEZklnV0FHM3cya3l2OFNZMjFydXBTZ1VKOWZtOUNOczZpRFlQTVlHSFNDMmJlM2g0akxicDF6Vk9rcng2UnJBQ3pDc3NXNS1YSEdvckNERGhZNDBoTnFVLWc5MkFBSFFDSVhmTm13ZmVEYUhjRFVzRXhTZw?oc=5",
-      "publishedAt": "2026-10-11T14:45:51.000Z"
-    },
-    {
-      "title": "현대차의 몬생긴 '조약돌 스마트키' 조만간 바뀐다 [아車차]",
-      "source": "이데일리",
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOWDE1MmRzSTI5TTRQSkpGclpoMWQwSDlGZHZwWUNjeFN5VFEybExQdWg2RTR6Yldyb19wNWgxR2xfdHh2MUN2UkxEaTJqczVfZDg4TVdsckE4dVRPcm1jZDNSR1JoblM0dm5RNmZKY0JpV0tMZWY3Y3lmQ0l3M0tiUA?oc=5",
-      "publishedAt": "2026-10-10T02:00:03.000Z"
+      "title": "현대차, 인도 진출 30여년 만에 누적판매 1000만대 눈앞",
+      "source": "전기신문",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9GaHVDUFJNNDZ6SFRwRFk4WVV3eGpaV1I4Nm1PT2VJaFdiNDMzVjBJak9HTXc1QmJnZE0tNnFHVS1kS29IX1RRU2UzQ2FvaTZkZ1JGejN1S3p3YWtpM0h5NUFiSnFZU2d0ODNlQldQWEnSAXBBVV95cUxPRmh1Q1BSTTQ2ekhUcERZOFlVd3hqWldSODZtT09lSWhXYjQzM1YwSWpPR013NUJiZ2RNLTZxR1UtZEtvSF9UUVNlM0Nhb2k2ZGdSRnozdUt6d2FraTNIeTVBYkpxWVNndDgzZUJXUFhJ?oc=5",
+      "publishedAt": "2026-10-12T07:26:20.000Z"
     }
   ],
   "dart": [],
@@ -137,9 +125,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 6625.93,
-    "vs": -177.97,
-    "fltRt": -2.62
+    "clpr": 6384.24,
+    "vs": -241.69,
+    "fltRt": -3.65
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -148,7 +136,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-12T08:17:12.189Z",
+  "builtAt": "2026-10-13T08:42:48.219Z",
   "archiveDays": 120,
-  "archiveFrom": "20260413"
+  "archiveFrom": "20260414"
 }
