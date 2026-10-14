@@ -186,8 +186,38 @@ export const MODELS = [
   // 격자를 발행하지 않고 트림별 목록만 발행해서, 파서가 격자를 역으로 세운다.
   { id: 'avante', label: '아반떼', brand: '현대', parser: 'hyundai', source: hyundai('avante') },
   { id: 'sonata', label: '쏘나타', brand: '현대', parser: 'hyundai', source: hyundai('sonata', 'sonata-the-edge') },
-  { id: 'grandeur', label: '그랜저', brand: '현대', parser: 'hyundai', source: hyundai('grandeur') },
-  { id: 'venue', label: '베뉴', brand: '현대', parser: 'hyundai', source: hyundai('venue') },
+  {
+    id: 'grandeur',
+    label: '그랜저',
+    brand: '현대',
+    parser: 'hyundai',
+    source: hyundai('grandeur'),
+    /*
+      ⚠️ 「스마트 카드키」(15만)는 **트림 옵션이 아니라 딜러 액세서리**다.
+      가격표 오른쪽에 `H Genuine Accessories` 칼럼이 따로 있고 그 아래 ▶ 로 적힌다.
+      파서는 ▶ 를 선택 품목으로만 알고 있어서 이걸 집어 왔고, 그 결과 한 트림
+      (블랙 잉크)에서만 유료로 잡혔다. 아래 트림은 전부 '불가' 가 됐다.
+
+      그러면 앱이 **「15만원짜리를 넣으려면 트림을 1,155만원 올려야 한다」**(78배)고
+      답한다. 액세서리는 어느 트림에서나 달 수 있으니 완전히 거짓이다.
+
+      🚨 파서를 고치지 않는다. `H Genuine Accessories` 머리는 지면 오른쪽 칼럼이고
+      선택 품목 칼럼과 x 위치가 겹쳐서(그랜저 86·117 / 선택 품목 114~121) 전역
+      기준을 세우면 진짜 옵션을 지운다. 실측으로 확인된 차종만 여기서 뺀다 —
+      같은 조건으로 28종을 훑었을 때 실제 액세서리 유입은 그랜저·베뉴 **2건뿐**이고,
+      쏘나타 BOSE·아반떼 플래티넘Ⅱ·투싼 미쉐린 타이어 등은 전부 진짜 선택 품목이었다.
+    */
+    dropOptions: ['스마트 카드키'],
+  },
+  {
+    id: 'venue',
+    label: '베뉴',
+    brand: '현대',
+    parser: 'hyundai',
+    source: hyundai('venue'),
+    // 그랜저와 같은 이유 — `H Genuine Accessories` 칼럼의 액세서리다(54만).
+    dropOptions: ['17인치 블랙 알로이 휠'],
+  },
   { id: 'kona', label: '코나', brand: '현대', parser: 'hyundai', source: hyundai('kona') },
   { id: 'tucson', label: '투싼', brand: '현대', parser: 'hyundai', source: hyundai('tucson') },
   { id: 'santafe', label: '싼타페', brand: '현대', parser: 'hyundai', source: hyundai('santafe') },
