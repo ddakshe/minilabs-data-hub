@@ -2,37 +2,29 @@
   "code": "009150",
   "name": "삼성전기",
   "market": "KOSPI",
-  "basDt": "20261012",
+  "basDt": "20261013",
   "price": {
     "code": "009150",
     "name": "삼성전기",
     "market": "KOSPI",
-    "basDt": "20261012",
-    "close": 1487000,
-    "vs": -59000,
-    "fltRt": -3.82,
-    "open": 1551000,
-    "high": 1583000,
-    "low": 1476000,
-    "prevClose": 1546000,
-    "volume": 630434,
-    "tradeValue": 958019730613,
+    "basDt": "20261013",
+    "close": 1363000,
+    "vs": -124000,
+    "fltRt": -8.34,
+    "open": 1420000,
+    "high": 1447000,
+    "low": 1333000,
+    "prevClose": 1487000,
+    "volume": 963162,
+    "tradeValue": 1323542725000,
     "week52": {
       "low": 198200,
       "high": 2270000,
-      "position": 0.6220677671589921,
-      "days": 244,
-      "from": "20251012"
+      "position": 0.5622164301573511,
+      "days": 245,
+      "from": "20251013"
     },
     "recent5": [
-      {
-        "basDt": "20261002",
-        "fltRt": 1.28,
-        "open": 1545000,
-        "high": 1582000,
-        "low": 1532000,
-        "close": 1581000
-      },
       {
         "basDt": "20261006",
         "fltRt": 5.95,
@@ -64,85 +56,90 @@
         "high": 1583000,
         "low": 1476000,
         "close": 1487000
+      },
+      {
+        "basDt": "20261013",
+        "fltRt": -8.34,
+        "open": 1420000,
+        "high": 1447000,
+        "low": 1333000,
+        "close": 1363000
       }
     ],
     "volumeVs20d": {
-      "avg20": 581299,
-      "ratio": 1.08
+      "avg20": 578745,
+      "ratio": 1.66
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 528,
-      "rows52w": 244
+      "rows": 529,
+      "rows52w": 245
     },
-    "generatedAt": "2026-10-13T08:40:52.322Z"
+    "generatedAt": "2026-10-14T06:52:47.493Z"
   },
   "facts": [
-    "코스피보다 0.17%p 낮았어요.",
-    "거래량은 20일 평균의 1.1배예요.",
-    "시가보다 64,000원 낮게 마감했어요."
+    "코스피보다 2.88%p 낮았어요.",
+    "거래량은 20일 평균의 1.7배예요.",
+    "시가보다 57,000원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "‘삼전닉스’ 다음은 삼성전기 ETF?···MLCC 호황에 실적 전망도 상향",
-      "source": "시사저널e",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1WOE41Szl2c2NLVHVfeU9SakRHc0h1OFhNMUFfSklaaHVRNTJRVklwSTRReHF1ckZ0dXd3dW40NGdpRkJtREFyaTBFUlZQNUcwTkt1Mm5Sci1zZEJ0X0c3WlZaWGRQa1VhODQ3LXI5bVVSQdIBdkFVX3lxTFBLNUx5bzFqZ2xxRVR3OVdOcXIwWHBwVHQySENsRXk0MUdSVkRYTDZVcUd4d2lzN0hGSGl3SGNnUUVlU2kwS1Vpdnh1OU9KWUdKaXVNa093WUhyTjRtd3o0WS1sOFdPeFotd3ZIT29fRDlhbGFKWmc?oc=5",
-      "publishedAt": "2026-10-12T06:35:21.000Z"
-    },
-    {
-      "title": "'삼성전기·무라타' 투자…키움운용, MLCC·AI기판 ETF 13일 상장",
-      "source": "머니투데이",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBPeWRwcXdsbjVHY3BSc2tlVjBhT3A5Yi1YTkxMUzJPckV3ZXZLZUdjSVVyMlhEdkFKOF9nNGJLcXdnMElNNV95LUxSVmZKN3g4U0xSMF9TUlRpTm10aDA2Wlp3cklTaG050gFuQVVfeXFMT1U4bXlzMFZqRWh0WUlwT09BQlpZLTdpS3NfQVZqZ3FEeEl2dWlPc3lxSlFQWmRhNHNGb2xGVVVFUi1XdjBDa09kYTlpUXgwclE2VWZwTFAwemJnNWtFRWY1bWdLNENrbGR1UklCSXc?oc=5",
-      "publishedAt": "2026-10-12T01:22:00.000Z"
-    },
-    {
-      "title": "MLCC 이어 전자소자까지…삼성전기, 컴포넌트 사업부 확대",
+      "title": "삼성전기, 첫 사내 해커톤 개최…임직원, 'AI 에이전트' 만든다",
       "source": "뉴스1",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5IZUdrYVpQYWhZR3F4M1FjNE5LSXFmSUk3eUpsN2o4a0lZc2lkbjdLN3VuWHhMMnlrMEFuNUdnbE9JY1BhQTVWcnllU1YtNUhLcmlpV0dqWWxWdEhXUEJGWm5sU2Y?oc=5",
-      "publishedAt": "2026-10-11T21:30:00.000Z"
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBKcUR4UnhrcG5FZ0plUTlaNUo1eHllM3YwaVhScWViNDJvbTZCa1lybm9VSTN2MlBwV1RGTWtCanpOTkdxbjdLZFl6UEwwWnc1RWk1MUliZ2Exc3ZVeng5WUhiUHI?oc=5",
+      "publishedAt": "2026-10-13T05:00:00.000Z"
     },
     {
-      "title": "‘삼전닉스’ 다음은 삼성전기 ETF?···MLCC 호황에 실적 전망도 상향",
-      "source": "시사저널e",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBLNUx5bzFqZ2xxRVR3OVdOcXIwWHBwVHQySENsRXk0MUdSVkRYTDZVcUd4d2lzN0hGSGl3SGNnUUVlU2kwS1Vpdnh1OU9KWUdKaXVNa093WUhyTjRtd3o0WS1sOFdPeFotd3ZIT29fRDlhbGFKWmfSAXZBVV95cUxQSzVMeW8xamdscUVUdzlXTnFyMFhwcFR0MkhDbEV5NDFHUlZEWEw2VXFHeHdpczdIRkhpd0hjZ1FFZVNpMEtVaXZ4dTlPSllHSml1TWtPd1lIck40bXd6NFktbDhXT3haLXd2SE9vX0Q5YWxhSlpn?oc=5",
-      "publishedAt": "2026-10-12T08:53:12.000Z"
+      "title": "'26년간 MLCC 개발' 김위헌 삼성전기 상무, 전자·IT의 날 산업포장 수상",
+      "source": "지디넷코리아",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBPcXU5b1RjcUI1ZVctb1RBRjBhVmo2N0VVSUQ3TlNRd0xUWDh5OXd6OHlyeFQzVDVXRUtfb3RWWmNvUFhLczJPblhOTFM3TnBqMTdPYW1B?oc=5",
+      "publishedAt": "2026-10-13T00:11:41.000Z"
     },
     {
-      "title": "키움운용, 'MLCC&AI기판' ETF 상장…무라타·삼성전기 50% 투자",
+      "title": "[증시키워드] 투심 위축에 발목 잡힌 삼성전기·삼성SDI…3분기 실적 비상 LG이노텍",
+      "source": "이투데이",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE03ZEwyOGdzYWJ2eXo0QlBEN0RKYnV0ZS1oTzd5blJlVE1HWGdYcks5VGZ4ZGpmYzIxb2k3dXUzT2JiSXltWW9Nd2lJNGo3dWZ1V0QyZQ?oc=5",
+      "publishedAt": "2026-10-12T23:02:00.000Z"
+    },
+    {
+      "title": "역대급 증설 나선 삼성전기…생산장비 납기 ‘변수’로 : 네이버 블로그",
+      "source": "Naver Blog",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNRnhyRFV3eVd4YUZBdDFmYUctZmNlMWkyaC1ybWJDWFNSVnpfTzBObFk2UmdsclpKT0JiWEFYWTFGY2FSdlBOWFJrWmdQakVQcXdpZ0E3U1dfZjF0czJfUUVLVGhYenJPeDlVcEFCZ0ZXLVpDTXFaNy0zbXBZaGcxRUg1eHloV2Y1MlBHQjRLUQ?oc=5",
+      "publishedAt": "2026-10-13T02:15:36.000Z"
+    },
+    {
+      "title": "조지태 LG이노텍 전무·김위헌 삼성전기 상무, ‘전자·IT의 날’ 정부 포상",
+      "source": "서울신문",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5BWWV4UXZGNE5HdXg4dUh4a1J3cHZrdjB2cHQ0SFAxZmlVckJUTEZZc0VSeEJib2l3ZUtLaXpZMHpmbDdsQXk0dEcydTFyTFJUandZRVFmc3ZnTVBCYy1nUzdBa1pjdzhpUkpOV1VDVE9JaEU5aHR2OEtrUQ?oc=5",
+      "publishedAt": "2026-10-13T07:01:01.000Z"
+    },
+    {
+      "title": "[창간22주년 특집: 첨단기술의 새 지평]① 삼성전기, 100㎜ 유리기판에 20층 회로·80개 소자 구현…AI 반도체 기술 주도권 정조준",
+      "source": "업코리아",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBpX0dPRWFEQXNxMUdIRUpMRVdxSG1aV1RXbDhXUHJBUnViOWt0NlR1Y2RPUFM1U0xlV2xGOWhnTXJUNkVCSDloT3J6SGpDbDJDQXRVNlZXbVpMcU5mVGM2RzBqMEhtX1RSZjA1eTRR?oc=5",
+      "publishedAt": "2026-10-13T03:11:53.000Z"
+    },
+    {
+      "title": "삼성전기, 자체개발 AI로 업무용 에이전트 만든다",
       "source": "연합뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1yZ29MOGh4bHVXMDZJeVFFU0tkSzhSNzY3NkFPb1REbDVuMEZSdll5Q0NZOV9GVGFqcW1MRXc0ZnY0WmM4VnpHYlBVbVJvQTRVN1NhVEZ0OVJjelRwV3NROdIBYEFVX3lxTE1yZ29MOGh4bHVXMDZJeVFFU0tkSzhSNzY3NkFPb1REbDVuMEZSdll5Q0NZOV9GVGFqcW1MRXc0ZnY0WmM4VnpHYlBVbVJvQTRVN1NhVEZ0OVJjelRwV3NROQ?oc=5",
-      "publishedAt": "2026-10-12T00:34:25.000Z"
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE53YTVOcUZTZ0N3WF9GRFdwQ1Q4MTlXdm9FcFU4NlBFTzNlTVV4dVpzNUdJWGRFMHM2SHNVMVFjRDFzZ283RzRqMDhhdjdIYUwxdXgzdDlkcndDQ0FwUzUyb9IBYEFVX3lxTE53YTVOcUZTZ0N3WF9GRFdwQ1Q4MTlXdm9FcFU4NlBFTzNlTVV4dVpzNUdJWGRFMHM2SHNVMVFjRDFzZ283RzRqMDhhdjdIYUwxdXgzdDlkcndDQ0FwUzUybw?oc=5",
+      "publishedAt": "2026-10-13T05:00:03.000Z"
     },
     {
-      "title": "역대급 증설 나선 삼성전기…생산장비 납기 ‘변수’로",
-      "source": "딜사이트",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBtblJ2dmZZcVA0dEVoLUtZeG40RUN1cEQxXzlFb1JCdlRyTnZCMTRScnJoY29yY2doZU9wZUk1dnhybEt3V2FyaUVlclRpTFE?oc=5",
-      "publishedAt": "2026-10-12T02:00:00.000Z"
+      "title": "삼성전기, 반복 업무 줄일 AI 도구 직원 손으로 만든다",
+      "source": "매일일보",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFAyUHF2R2Z3MGl4WUpPR2ZoTmpiQ2gxa3lPbXd5T0NMcVVLbkQ1YnFQMWdlRE5HbHkwNGVIbGdjaXJIWU5JbzJUNEEzT1JDc09IRUlJcnJZaUZzc3N6V3FKMW1NeWY?oc=5",
+      "publishedAt": "2026-10-13T08:44:49.000Z"
     }
   ],
-  "dart": [
-    {
-      "title": "기업설명회(IR)개최(안내공시)              ",
-      "filer": "삼성전기",
-      "receiptNo": "20261012800255",
-      "date": "20261012",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261012800255"
-    },
-    {
-      "title": "결산실적공시예고(안내공시)              ",
-      "filer": "삼성전기",
-      "receiptNo": "20261012800250",
-      "date": "20261012",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261012800250"
-    }
-  ],
+  "dart": [],
   "ownership": [],
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 6384.24,
-    "vs": -241.69,
-    "fltRt": -3.65
+    "clpr": 6035.35,
+    "vs": -348.89,
+    "fltRt": -5.46
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -151,7 +148,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-13T08:42:48.205Z",
+  "builtAt": "2026-10-14T06:54:44.940Z",
   "archiveDays": 120,
-  "archiveFrom": "20260414"
+  "archiveFrom": "20260415"
 }

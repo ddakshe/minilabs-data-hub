@@ -3,10 +3,18 @@
   "name": "KB금융",
   "market": "KOSPI",
   "retainDays": 120,
-  "firstBasDt": "20260414",
-  "lastBasDt": "20261012",
+  "firstBasDt": "20260415",
+  "lastBasDt": "20261013",
   "count": 120,
   "days": [
+    {
+      "basDt": "20261013",
+      "close": 162400,
+      "fltRt": -0.25,
+      "headline": "코스피보다 5.21%p 높았어요.",
+      "newsCount": 8,
+      "dartCount": 0
+    },
     {
       "basDt": "20261012",
       "close": 162800,
@@ -1049,16 +1057,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260414",
-      "close": 155900,
-      "fltRt": -0.45,
-      "headline": "시가 157,600원보다 1,700원 낮게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-10-13T08:42:48.229Z"
+  "updatedAt": "2026-10-14T06:54:44.963Z"
 }
