@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-14",
+  "updatedAt": "2026-10-15",
   "source": "KOSIS Open API",
   "categories": [
     {
@@ -25,18 +25,18 @@
   ],
   "issues": [
     {
+      "id": "i_soc_crime",
+      "emoji": "📈",
+      "title": "5대 강력범죄 · 15개월 최고",
+      "description": "2026.03 기준",
+      "category": "society"
+    },
+    {
       "id": "i_hea_smoke",
       "emoji": "📉",
       "title": "현재 흡연율 · 10년 최저",
       "description": "2024년 기준",
       "category": "health"
-    },
-    {
-      "id": "i_pop_elderly",
-      "emoji": "📈",
-      "title": "고령인구 비율 · 10년 최고",
-      "description": "2026년 기준",
-      "category": "population"
     }
   ],
   "stats": [
@@ -576,16 +576,12 @@
       "title": "실업률",
       "value": 2,
       "unit": "%",
-      "changePct": 0,
+      "changePct": -4.8,
       "decimals": 1,
       "frequency": "M",
       "source": "통계청 경제활동인구조사",
-      "period": "2026.08",
+      "period": "2026.09",
       "history": [
-        {
-          "prd": "202309",
-          "value": 2.3
-        },
         {
           "prd": "202310",
           "value": 2.1
@@ -724,6 +720,10 @@
         },
         {
           "prd": "202608",
+          "value": 2
+        },
+        {
+          "prd": "202609",
           "value": 2
         }
       ]
@@ -890,12 +890,12 @@
       "id": "soc_crime",
       "category": "society",
       "title": "5대 강력범죄",
-      "value": 72703,
+      "value": 72785,
       "unit": "건",
-      "changePct": 487.7,
+      "changePct": 279.7,
       "frequency": "M",
       "source": "경찰청 범죄통계",
-      "period": "2026.02",
+      "period": "2026.03",
       "history": [
         {
           "prd": "202301",
@@ -952,6 +952,10 @@
         {
           "prd": "202602",
           "value": 6156
+        },
+        {
+          "prd": "202603",
+          "value": 6879
         }
       ]
     },
@@ -1231,16 +1235,12 @@
       "title": "청년 실업률",
       "value": 5.4,
       "unit": "%",
-      "changePct": 10.2,
+      "changePct": 12.5,
       "decimals": 1,
       "frequency": "M",
       "source": "통계청 경제활동인구조사 (15~29세)",
-      "period": "2026.08",
+      "period": "2026.09",
       "history": [
-        {
-          "prd": "202309",
-          "value": 5.2
-        },
         {
           "prd": "202310",
           "value": 5.1
@@ -1379,6 +1379,10 @@
         },
         {
           "prd": "202608",
+          "value": 5.4
+        },
+        {
+          "prd": "202609",
           "value": 5.4
         }
       ]
