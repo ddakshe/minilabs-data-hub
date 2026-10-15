@@ -1,0 +1,137 @@
+name: Fetch Sector (섹터 흐름 · 맥)
+
+# 업종별 등락률 중앙값 → 두 파일.
+#   sector/sector.json    첫 화면 (25섹터 · 기간 4개 · 순환 좌표)   ~66KB
+#   sector/members.json   섹터 상세 시트의 종목 시계열 (194종목)    ~121KB
+#
+# 🔑 **새 API 요청이 0이다.** 이 저장소의 `peak/`(평일 18:10 잡이 받아둔 것)만 읽는다.
+#    토스 허용 IP 도 DART 한도도 쓰지 않는다. 그래서 peak 잡 뒤에만 돌면 된다.
+#
+# 🚨 이 데이터는 **2026-10 까지 앱 번들 안에 있었다.** 통합 앱(docs/unified-app.md)이
+#    번들 1MB 를 허브로 옮기기로 하면서 여기로 나왔다 — `.ait` 는 패키지를 통째로
+#    내려받아 번들이 곧 최초 접속 시간이고, 폰트 2.9MB 로 「20초 초과」 반려를 맞은 적이 있다.
+
+# 🚨 **스케줄을 일부러 켜지 않았다 (2026-10-15).** 라이브 섹터 앱은 이 파일을 매번 요청했다가
+#    404 를 받고 번들 데이터로 떨어지는 중이다. 파일이 생기는 순간 **라이브 앱이 조용히
+#    최신 데이터로 바뀐다**(번들은 2026-09-10 기준). 통합 앱이 준비될 때까지는 손으로만 돌린다.
+#    켤 때는 아래 주석을 풀면 된다 — 평일 18:40 KST(peak 잡 18:10 뒤 30분).
+#
+#  schedule:
+#    - cron: '40 9 * * 1-5'
+on:
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: '실행 이유 (로그에만 기록, 선택)'
+        required: false
+        default: 'manual refresh'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-sector
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    # 토스를 부르지 않으므로 호스티드로도 돌 수 있지만, 배치가 stock-tools(비공개)에 있고
+    # 섹터 정의(`data/sectors.json`)까지 거기 있어서 peak·lever 와 같은 방식으로 맞춘다.
+    runs-on: [self-hosted, macOS, ARM64]
+    timeout-minutes: 10
+    env:
+      LOCAL_CLONE: /Users/kyungtaekim/ClaudeProjects/stock-tools
+      STOCK_TOOLS: ${{ github.workspace }}/.stock-tools
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Show trigger context
+        run: |
+          echo "Event  : ${{ github.event_name }}"
+          echo "Reason : ${{ github.event.inputs.reason || '(scheduled)' }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      - name: Export stock-tools (origin/master 스냅샷)
+        run: |
+          test -d "$LOCAL_CLONE/.git" || { echo "::error::stock-tools 클론이 없다: $LOCAL_CLONE"; exit 1; }
+          git -C "$LOCAL_CLONE" fetch --quiet origin master 2>/dev/null || \
+            echo "::notice::origin/master 를 새로 받지 못했다 — 이미 받아둔 것으로 진행한다"
+          echo "stock-tools origin/master: $(git -C "$LOCAL_CLONE" log -1 --format='%h %ci %s' origin/master)"
+          rm -rf "$STOCK_TOOLS" && mkdir -p "$STOCK_TOOLS"
+          git -C "$LOCAL_CLONE" archive origin/master | tar -x -C "$STOCK_TOOLS"
+
+      - name: Preflight
+        run: |
+          # peak 가 없으면 섹터를 만들 수 없다. 조용히 빈 파일을 쓰지 않는다.
+          for f in series.json line.json peak.json; do
+            test -r "peak/$f" || { echo "::error::peak/$f 가 없다 — fetch-peak 를 먼저 확인할 것"; exit 1; }
+          done
+          /usr/bin/python3 -V
+
+      - name: Build sector JSON
+        env:
+          SECTOR_HUB: ${{ github.workspace }}/peak
+          SECTOR_OUT: ${{ github.workspace }}/sector/sector.json
+          SECTOR_MEM_OUT: ${{ github.workspace }}/sector/members.json
+        run: |
+          mkdir -p sector
+          cd "$STOCK_TOOLS/stock-sector-mini"
+          /usr/bin/python3 scripts/build_sector.py
+
+      - name: Sanity check
+        run: |
+          /usr/bin/python3 - <<'PY'
+          import json, sys, datetime
+          d = json.load(open('sector/sector.json', encoding='utf-8'))
+          secs = d.get('sectors') or []
+          if len(secs) < 20:
+              sys.exit(f'::error::섹터가 {len(secs)}개뿐이다 (기대 25) — 커밋하지 않는다')
+          # 🚨 peak 가 실패하면 이 잡은 어제 값으로 성공해 버린다. 기준일이 묵었으면 멈춘다.
+          asof = d.get('asOf', '')
+          age = (datetime.date.today() - datetime.date.fromisoformat(asof)).days
+          if age > 5:
+              sys.exit(f'::error::asOf 가 {asof} 로 {age}일 묵었다 — peak 잡을 확인할 것')
+          m = json.load(open('sector/members.json', encoding='utf-8'))
+          print(f"{len(secs)}섹터 · asOf {asof} ({age}일 전) · 종목 시계열 {len(m.get('series', m))}건")
+          PY
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git add sector/
+          if git diff --cached --quiet -- sector/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes — skipping commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --cached --stat sector/
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d %H:%M")
+          git commit -m "chore(sector): 섹터 흐름 갱신 ($DATE_KST KST)"
+          git push || (git pull --rebase origin main && git push)
+
+      - name: Purge jsDelivr cache
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          for f in sector members; do
+            curl -s -o /dev/null "https://purge.jsdelivr.net/gh/ddakshe/minilabs-data-hub@main/sector/$f.json" || true
+          done
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Sector Fetch Summary"
+            echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
+            echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+          } >> "$GITHUB_STEP_SUMMARY"

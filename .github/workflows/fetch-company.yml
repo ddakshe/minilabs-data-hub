@@ -1,0 +1,164 @@
+name: Fetch Company (국내주식 기업정보 · 맥 · 주 1회)
+
+# DART 5종 + 국민연금 + 주식시세 → 두 파일.
+#   company/companies.json   앱이 읽는 것 (목록 + 상세 5축 · 326종목 · ~302KB)
+#   company/meta.json        기준일 · 집계 · 실패 목록
+#
+# 🚨 2026-10 까지 이 데이터는 **앱 번들 안**에 있었다(304KB). 통합 앱이 번들 1MB 를
+#    허브로 옮기기로 하면서 여기로 나왔다 — `.ait` 는 통째로 내려받아 번들이 곧
+#    최초 접속 시간이고, 폰트 2.9MB 로 「20초 초과」 반려를 맞은 적이 있다
+#    (stock-tools/docs/unified-app.md · BRAND.md 폰트 절).
+#
+# 🚨 **DART 를 동시 요청으로 긁지 말 것.** 2026-08-25 에 IP 차단을 당했다(하루 뒤 풀림).
+#    배치는 순차 + SLEEP 0.3 이고 호출 상한(MAX_DART 3000 · MAX_NPS 1200)을 코드로 강제한다.
+#    상한에 걸리면 그 회차는 **거기서 멈추고 다음 회차에 이어서** 돈다 — 그래서 산출물이
+#    실행 사이에 남아야 하고(COMPANY_OUT), 완성도가 모자라면 허브에 쓰지 않는다(아래 가드).
+
+on:
+  schedule:
+    # 토요일 08:10 KST (= 금 23:10 UTC). 장이 닫혀 있어 시세가 확정돼 있고,
+    # 평일 잡(peak 18:10 · sector 18:40)과 겹치지 않는다.
+    # 사업보고서는 연 단위, 국민연금은 월 단위라 주 1회면 충분하다.
+    - cron: '10 23 * * 5'
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: '실행 이유 (로그에만 기록, 선택)'
+        required: false
+        default: 'manual refresh'
+      top:
+        description: '수집할 시총 상위 N (기본 326)'
+        required: false
+        default: '326'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-company
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    # DART 는 허용 IP 를 요구하지 않는다 — 셀프호스티드인 이유는 둘이다.
+    #   1. 키가 ~/.config/stock-tools/dart.env (저장소 밖 · chmod 600) 에 있고 러너가 같은 사용자다
+    #   2. 상한에 걸려 **이어서 도는** 배치라 산출물이 실행 사이에 남아야 한다 (호스티드는 매번 새 기계)
+    runs-on: [self-hosted, macOS, ARM64]
+    timeout-minutes: 45
+    env:
+      LOCAL_CLONE: /Users/kyungtaekim/ClaudeProjects/stock-tools
+      STOCK_TOOLS: ${{ github.workspace }}/.stock-tools
+      # 러너 홈의 고정 경로. 회차 사이에 남아 이어하기의 기준이 된다.
+      COMPANY_OUT: /Users/kyungtaekim/.cache/stock-tools/company
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Show trigger context
+        run: |
+          echo "Event  : ${{ github.event_name }}"
+          echo "Reason : ${{ github.event.inputs.reason || '(scheduled)' }}"
+          TZ=Asia/Seoul date "+KST: %Y-%m-%d %H:%M:%S"
+
+      - name: Export stock-tools (origin/master 스냅샷)
+        run: |
+          test -d "$LOCAL_CLONE/.git" || { echo "::error::stock-tools 클론이 없다: $LOCAL_CLONE"; exit 1; }
+          git -C "$LOCAL_CLONE" fetch --quiet origin master 2>/dev/null || \
+            echo "::notice::origin/master 를 새로 받지 못했다 — 이미 받아둔 것으로 진행한다"
+          echo "stock-tools origin/master: $(git -C "$LOCAL_CLONE" log -1 --format='%h %ci %s' origin/master)"
+          rm -rf "$STOCK_TOOLS" && mkdir -p "$STOCK_TOOLS"
+          git -C "$LOCAL_CLONE" archive origin/master | tar -x -C "$STOCK_TOOLS"
+
+      - name: Preflight
+        run: |
+          # 🚨 키가 **두 파일에 나뉘어 있다** — DART_API_KEY 는 dart.env, DATA_GO_KR_KEY 는
+          #    datagokr.env 다(국민연금·주식시세). 하나만 읽으면 수집이 절반에서 조용히 빈다.
+          test -r "$HOME/.config/stock-tools/dart.env" || { echo "::error::DART 자격증명을 읽을 수 없다 (~/.config/stock-tools/dart.env)"; exit 1; }
+          test -r "$HOME/.config/stock-tools/datagokr.env" || { echo "::error::공공데이터포털 자격증명을 읽을 수 없다 (~/.config/stock-tools/datagokr.env)"; exit 1; }
+          mkdir -p "$COMPANY_OUT"
+          /usr/bin/python3 -V
+          if [ -r "$COMPANY_OUT/companies.json" ]; then
+            /usr/bin/python3 -c "import json,os;p=os.environ['COMPANY_OUT']+'/companies.json';print(f'이어하기 기준: {len(json.load(open(p)))}종목 (지난 회차)')"
+          else
+            echo "::notice::산출물이 없다 — 처음부터 모은다. 상한에 걸리면 다음 회차에 이어진다"
+          fi
+
+      # 1단계: DART 5종 + 국민연금. 순차 · SLEEP 0.3 · 상한은 코드가 강제한다.
+      - name: Collect (DART · NPS)
+        run: |
+          cd "$STOCK_TOOLS/stock-company-mini/scripts"
+          set -a; . "$HOME/.config/stock-tools/dart.env"; . "$HOME/.config/stock-tools/datagokr.env"; set +a
+          /usr/bin/python3 company_batch.py "${{ github.event.inputs.top || '326' }}"
+
+      # 2단계: 추세(전년 직원·급여 · 시총 추세 · 주가 스파크라인). 종목당 2콜이 더 든다.
+      - name: Add trends
+        run: |
+          cd "$STOCK_TOOLS/stock-company-mini/scripts"
+          set -a; . "$HOME/.config/stock-tools/dart.env"; . "$HOME/.config/stock-tools/datagokr.env"; set +a
+          /usr/bin/python3 company_trend.py
+
+      # 3단계: 앱이 읽는 모양으로 감싸 **허브에** 쓴다.
+      - name: Publish to hub
+        env:
+          COMPANY_APP_OUT: ${{ github.workspace }}/company/companies.json
+        run: |
+          mkdir -p company
+          cd "$STOCK_TOOLS/stock-company-mini/scripts"
+          /usr/bin/python3 sync_app_data.py
+          cp "$COMPANY_OUT/meta.json" "${{ github.workspace }}/company/meta.json"
+
+      - name: Sanity check
+        run: |
+          /usr/bin/python3 - <<'PY'
+          import json, sys
+          d = json.load(open('company/companies.json', encoding='utf-8'))
+          items = d.get('items') or []
+          # 🚨 상한에 걸려 반쯤 채워진 회차를 그대로 내보내면 앱 목록이 회차마다 달라진다.
+          #    기존 파일보다 줄었으면 멈춘다 (처음 만드는 경우는 통과).
+          if len(items) < 200:
+              sys.exit(f'::error::{len(items)}종목뿐이다 (기대 300+) — 다음 회차에 이어 돌 것')
+          miss = [i['name'] for i in items[:50] if not i.get('people')]
+          if len(miss) > 10:
+              sys.exit(f'::error::상위 50곳 중 {len(miss)}곳에 직원 정보가 없다 — DART 응답을 확인할 것')
+          print(f"{len(items)}종목 · 기준 {d.get('year')} · {d.get('generatedAt')}")
+          PY
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git add company/
+          if git diff --cached --quiet -- company/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes — skipping commit."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git --no-pager diff --cached --stat company/
+          fi
+
+      - name: Commit & push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          DATE_KST=$(TZ=Asia/Seoul date "+%Y-%m-%d %H:%M")
+          git commit -m "chore(company): 기업정보 갱신 ($DATE_KST KST)"
+          git push || (git pull --rebase origin main && git push)
+
+      - name: Purge jsDelivr cache
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          for f in companies meta; do
+            curl -s -o /dev/null "https://purge.jsdelivr.net/gh/ddakshe/minilabs-data-hub@main/company/$f.json" || true
+          done
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Company Fetch Summary"
+            echo "- Changed: \`${{ steps.diff.outputs.changed || 'n/a' }}\`"
+            echo "- KST: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S')"
+          } >> "$GITHUB_STEP_SUMMARY"
