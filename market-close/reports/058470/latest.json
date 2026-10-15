@@ -2,37 +2,29 @@
   "code": "058470",
   "name": "리노공업",
   "market": "KOSDAQ",
-  "basDt": "20261013",
+  "basDt": "20261014",
   "price": {
     "code": "058470",
     "name": "리노공업",
     "market": "KOSDAQ",
-    "basDt": "20261013",
-    "close": 79600,
-    "vs": 1500,
-    "fltRt": 1.92,
-    "open": 76400,
-    "high": 80700,
-    "low": 75200,
-    "prevClose": 78100,
-    "volume": 1286534,
-    "tradeValue": 100566853100,
+    "basDt": "20261014",
+    "close": 76000,
+    "vs": -3600,
+    "fltRt": -4.52,
+    "open": 79000,
+    "high": 80500,
+    "low": 75300,
+    "prevClose": 79600,
+    "volume": 965253,
+    "tradeValue": 75059156550,
     "week52": {
       "low": 54400,
       "high": 127000,
-      "position": 0.34710743801652894,
+      "position": 0.2975206611570248,
       "days": 245,
-      "from": "20251013"
+      "from": "20251014"
     },
     "recent5": [
-      {
-        "basDt": "20261006",
-        "fltRt": 3.08,
-        "open": 87500,
-        "high": 88000,
-        "low": 85700,
-        "close": 86900
-      },
       {
         "basDt": "20261007",
         "fltRt": -1.96,
@@ -64,42 +56,44 @@
         "high": 80700,
         "low": 75200,
         "close": 79600
+      },
+      {
+        "basDt": "20261014",
+        "fltRt": -4.52,
+        "open": 79000,
+        "high": 80500,
+        "low": 75300,
+        "close": 76000
       }
     ],
     "volumeVs20d": {
-      "avg20": 1076150,
-      "ratio": 1.2
+      "avg20": 1117388,
+      "ratio": 0.86
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
       "rows": 529,
       "rows52w": 245
     },
-    "generatedAt": "2026-10-14T06:53:25.871Z"
+    "generatedAt": "2026-10-15T06:41:53.963Z"
   },
   "facts": [
-    "코스닥보다 3.35%p 높았어요.",
-    "거래량은 20일 평균의 1.2배예요.",
-    "시가보다 3,200원 높게 마감했어요."
+    "코스닥보다 2.95%p 낮았어요.",
+    "거래량은 20일 평균의 0.9배예요.",
+    "시가보다 3,000원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "리노공업 주가, 10월 13일 79,600원 1.92% 상승",
+      "title": "리노공업 주가, 10월 14일 76,000원 4.52% 하락",
       "source": "톱스타뉴스",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9GR2Y0NzBfazl4Vm00aVJMeHBvMG1hVXlEU0FjckRFY2h0STNwZE1fUXB1MEp6SVEzRldtUldSanJ3ZDFQZzdTbTRtbHhqQ09vZWxGX21HSU1BUjdNeTJmZXY1QnBOYmIyOXhMNTJ6UkxNdw?oc=5",
-      "publishedAt": "2026-10-13T06:55:33.000Z"
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5ZVFQxRGZ3eU5uVXUxYTRXbzY4NTlnZnhGa0Q3MjJmZmhtbXpERFRFNjFwWS14OWR5dFFFMzVqZXhfV01QNFRVTnM5VW8wUktmOWFyZ2gxUXVrLU5SQm41YVlzbDdId0JPVWV2OFZTbFQzZw?oc=5",
+      "publishedAt": "2026-10-14T06:50:30.000Z"
     },
     {
-      "title": "리노공업 7만9000원…테스트 소켓 수요 속 1.15% 상승",
-      "source": "잡포스트",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBnUjhYSE94RGxQbExUbzk4SWxHRUNJMXVaeXc3bERmcHhyNDQ2b3dHZ2pVU2hmQnd1VVpDeUg5TC1WM0pTUlVJY1pJODdxYnpjQkgtcTVINTFGcjNfWFM1NjBZZVdLeFM1dWRrdWY5U1FPZ9IBckFVX3lxTFBnUjhYSE94RGxQbExUbzk4SWxHRUNJMXVaeXc3bERmcHhyNDQ2b3dHZ2pVU2hmQnd1VVpDeUg5TC1WM0pTUlVJY1pJODdxYnpjQkgtcTVINTFGcjNfWFM1NjBZZVdLeFM1dWRrdWY5U1FPZw?oc=5",
-      "publishedAt": "2026-10-13T05:04:43.000Z"
-    },
-    {
-      "title": "코스닥 4.83%↓, 시총 10개 종목 일제히 약세…알테오젠·에코프로비엠·리노공업 '풀썩'",
-      "source": "CBC뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5VSXFLeGVnWTZFZGRnWlZ5RHdhTXowTHRVRG5Zam5YRk80dEtoc2ZDcXJIYkVCTWFUTWNTV0gyTkp3STVrTUgwaHh0MXdyVWQzWFNyNS1vM2VjY25vUm5HYkJXSQ?oc=5",
-      "publishedAt": "2026-10-12T21:31:00.000Z"
+      "title": "[코스닥 기관] 대주전자재료·리노공업 사고 심텍·원익IPS 대량 매도",
+      "source": "핀포인트뉴스",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9kN0NDenpXLXZfdXhtY05HM1Vfd1ZKZ21SRWFpNVpqVFgyU3daQlJaOUhObXVna294OHFjMkVIdm52bDBaZjN1cG44a3g4aEVLNnpSM1VDcDJuWm50YWFtekpvb2Frc3hNa1huUnd6N25wWWvSAXdBVV95cUxPbUZMeFh0b0FsRndWWFg4elpFMDA1RWw0NWtqUVJXa0hxMnRHektQT1pDNVgxX3BSWDZicmxheFNQZkhuMVFJNTJDV1lKVWF2cFl6NG4yS05keFRjVGQ3ajIxelJKMWxVeUxNV1NkOWNCQkY0MTNZTQ?oc=5",
+      "publishedAt": "2026-10-14T06:58:14.000Z"
     }
   ],
   "dart": [],
@@ -144,9 +138,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 837.03,
-    "vs": -12.16,
-    "fltRt": -1.43
+    "clpr": 823.88,
+    "vs": -13.15,
+    "fltRt": -1.57
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -155,7 +149,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-14T06:54:45.035Z",
+  "builtAt": "2026-10-15T06:43:08.324Z",
   "archiveDays": 120,
-  "archiveFrom": "20260415"
+  "archiveFrom": "20260416"
 }

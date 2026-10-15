@@ -1,0 +1,112 @@
+{
+  "code": "277810",
+  "name": "레인보우로보틱스",
+  "market": "KOSDAQ",
+  "basDt": "20261014",
+  "price": {
+    "code": "277810",
+    "name": "레인보우로보틱스",
+    "market": "KOSDAQ",
+    "basDt": "20261014",
+    "close": 381500,
+    "vs": -2000,
+    "fltRt": -0.52,
+    "open": 380500,
+    "high": 390000,
+    "low": 375500,
+    "prevClose": 383500,
+    "volume": 49199,
+    "tradeValue": 18802079500,
+    "week52": {
+      "low": 331500,
+      "high": 880000,
+      "position": 0.09115770282588878,
+      "days": 245,
+      "from": "20251014"
+    },
+    "recent5": [
+      {
+        "basDt": "20261007",
+        "fltRt": -4.08,
+        "open": 462000,
+        "high": 470000,
+        "low": 447000,
+        "close": 447000
+      },
+      {
+        "basDt": "20261008",
+        "fltRt": -4.03,
+        "open": 448000,
+        "high": 449500,
+        "low": 429000,
+        "close": 429000
+      },
+      {
+        "basDt": "20261012",
+        "fltRt": -8.86,
+        "open": 429500,
+        "high": 430500,
+        "low": 391000,
+        "close": 391000
+      },
+      {
+        "basDt": "20261013",
+        "fltRt": -1.92,
+        "open": 377000,
+        "high": 385000,
+        "low": 364500,
+        "close": 383500
+      },
+      {
+        "basDt": "20261014",
+        "fltRt": -0.52,
+        "open": 380500,
+        "high": 390000,
+        "low": 375500,
+        "close": 381500
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 62251,
+      "ratio": 0.79
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 529,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-15T06:41:48.447Z"
+  },
+  "facts": [
+    "코스닥보다 1.05%p 높았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가보다 1,000원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "로봇주, 미국·중동 군사 충돌 격화 우려 속 강세 종목 속출…로보스타 3%대, 휴림로봇도 상승, 레인보우로보틱스 보합",
+      "source": "CBC뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE4wWlNoMk1WOVJQMFNSTFo2Nk5PNGFmaEFENXRsM2VtaHd2X3d6Y1NjTFhJT0djMGR5eGpxSExnS1lwNEFqcXo0R0Q5MFVqbU5rSDlpTFoza182TFZWZWpvWkFzY1pXM3RW?oc=5",
+      "publishedAt": "2026-10-14T01:18:41.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 823.88,
+    "vs": -13.15,
+    "fltRt": -1.57
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-15T06:43:08.310Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260416"
+}

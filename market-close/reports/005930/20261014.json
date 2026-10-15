@@ -1,0 +1,149 @@
+{
+  "code": "005930",
+  "name": "삼성전자",
+  "market": "KOSPI",
+  "basDt": "20261014",
+  "price": {
+    "code": "005930",
+    "name": "삼성전자",
+    "market": "KOSPI",
+    "basDt": "20261014",
+    "close": 232000,
+    "vs": 0,
+    "fltRt": 0,
+    "open": 233500,
+    "high": 241500,
+    "low": 230000,
+    "prevClose": 232000,
+    "volume": 19009052,
+    "tradeValue": 4471869613456,
+    "week52": {
+      "low": 91600,
+      "high": 362500,
+      "position": 0.5182724252491694,
+      "days": 245,
+      "from": "20251014"
+    },
+    "recent5": [
+      {
+        "basDt": "20261007",
+        "fltRt": -1.29,
+        "open": 269500,
+        "high": 279500,
+        "low": 268500,
+        "close": 268500
+      },
+      {
+        "basDt": "20261008",
+        "fltRt": -2.42,
+        "open": 269500,
+        "high": 270000,
+        "low": 262000,
+        "close": 262000
+      },
+      {
+        "basDt": "20261012",
+        "fltRt": -4.39,
+        "open": 260000,
+        "high": 262500,
+        "low": 249500,
+        "close": 250500
+      },
+      {
+        "basDt": "20261013",
+        "fltRt": -7.39,
+        "open": 241500,
+        "high": 244000,
+        "low": 228000,
+        "close": 232000
+      },
+      {
+        "basDt": "20261014",
+        "fltRt": 0,
+        "open": 233500,
+        "high": 241500,
+        "low": 230000,
+        "close": 232000
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 17209320,
+      "ratio": 1.1
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 529,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-15T06:41:08.004Z"
+  },
+  "facts": [
+    "코스피보다 0.44%p 높았어요.",
+    "거래량은 20일 평균의 1.1배예요.",
+    "시가보다 1,500원 낮게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "삼성전자, 차세대 '4F² VCT D램' 개발 재확인…CXMT 메모리 추격 대응",
+      "source": "지디넷코리아",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1XTnUzTzRROFhWMEo1ZEdsVHB4Y0JCUHVKS0RJa0RRckxFeXFQSHNuUTF1eDdBTE1JdnlzTTE1RXMtbjFOcGc0MERUdV9GQWRYNTAzaU9n?oc=5",
+      "publishedAt": "2026-10-14T07:36:17.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20261008",
+      "holder": "삼성물산",
+      "ratio": 19.69,
+      "ratioChange": 0,
+      "reason": "특별관계자 및 보유주식수 변동 · 보유주식등에 관한 계약의 변경",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261008000706"
+    },
+    {
+      "kind": "major",
+      "date": "20260828",
+      "holder": "삼성물산",
+      "ratio": 19.69,
+      "ratioChange": 0,
+      "reason": "보유주식수 변동 · 보유주식등에 관한 계약의 변경",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260828001916"
+    },
+    {
+      "kind": "major",
+      "date": "20260731",
+      "holder": "삼성물산",
+      "ratio": 19.69,
+      "ratioChange": 0,
+      "reason": "보유주식수 변동 · 보유주식등에 관한 계약의 변경",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260731000779"
+    },
+    {
+      "kind": "major",
+      "date": "20260724",
+      "holder": "삼성물산",
+      "ratio": 19.69,
+      "ratioChange": 0,
+      "reason": "보유주식수 변동 · 보유주식등에 관한 계약의 변경",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260724000625"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 6008.81,
+    "vs": -26.54,
+    "fltRt": -0.44
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-15T06:43:08.171Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260416"
+}

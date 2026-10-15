@@ -2,37 +2,29 @@
   "code": "028300",
   "name": "HLB",
   "market": "KOSDAQ",
-  "basDt": "20261013",
+  "basDt": "20261014",
   "price": {
     "code": "028300",
     "name": "HLB",
     "market": "KOSDAQ",
-    "basDt": "20261013",
-    "close": 44000,
-    "vs": -400,
-    "fltRt": -0.9,
-    "open": 43300,
-    "high": 44850,
-    "low": 42250,
-    "prevClose": 44400,
-    "volume": 861289,
-    "tradeValue": 37420872375,
+    "basDt": "20261014",
+    "close": 42000,
+    "vs": -2000,
+    "fltRt": -4.55,
+    "open": 43600,
+    "high": 43600,
+    "low": 41350,
+    "prevClose": 44000,
+    "volume": 687287,
+    "tradeValue": 29083590725,
     "week52": {
       "low": 25650,
       "high": 68200,
-      "position": 0.4312573443008226,
+      "position": 0.38425381903642775,
       "days": 245,
-      "from": "20251013"
+      "from": "20251014"
     },
     "recent5": [
-      {
-        "basDt": "20261006",
-        "fltRt": 17.18,
-        "open": 42700,
-        "high": 50700,
-        "low": 42150,
-        "close": 47400
-      },
       {
         "basDt": "20261007",
         "fltRt": -3.16,
@@ -64,72 +56,80 @@
         "high": 44850,
         "low": 42250,
         "close": 44000
+      },
+      {
+        "basDt": "20261014",
+        "fltRt": -4.55,
+        "open": 43600,
+        "high": 43600,
+        "low": 41350,
+        "close": 42000
       }
     ],
     "volumeVs20d": {
-      "avg20": 1357982,
-      "ratio": 0.63
+      "avg20": 1379108,
+      "ratio": 0.5
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
       "rows": 529,
       "rows52w": 245
     },
-    "generatedAt": "2026-10-14T06:53:28.670Z"
+    "generatedAt": "2026-10-15T06:41:59.506Z"
   },
   "facts": [
-    "코스닥보다 0.53%p 높았어요.",
-    "거래량은 20일 평균의 0.6배예요.",
-    "시가보다 700원 높게 마감했어요."
+    "코스닥보다 2.98%p 낮았어요.",
+    "거래량은 20일 평균의 0.5배예요.",
+    "시가보다 1,600원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "HLB 그룹, 15일 통합 IR Day 개최",
-      "source": "뉴스타운",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE80OVc5ZzlnMzZqcVZWUUdPOGdsUmVYaXp3ZmE0YW56QTNGZ1RwR09ZYWgyV295OThoektXU1NXVFNWR1lqWk5IZGlvb3pYR0dBNWxuSWVZZ3NVWDdQcEtnWjZrcVJBZ25rS3RrcFJB?oc=5",
-      "publishedAt": "2026-10-13T00:06:32.000Z"
+      "title": "HLB파나진, PNA 설계 기술 공개…AOC 치료제 개발 기반 강화",
+      "source": "뉴스1",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBXSTNXQ3hRTG9CRzViMHM5WVh5UDhNdnlXSGs3Rk9uYlRia29tcDVFY2hDbzhjUXZQaWVXc21aNWMzUEpfa1RHOUQ1WHZIZmxvaUNxNl9RSFlNdThkdi1NSQ?oc=5",
+      "publishedAt": "2026-10-14T01:32:42.000Z"
     },
     {
-      "title": "HLB 바이오스텝, 50억원 규모 동물대체시험법 국책과제 수행",
+      "title": "HLB파나진, 'OTS 2026'서 'PNA 페이로드 최적화' 연구 성과 공개",
       "source": "아시아경제",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9HeE15X3VmLWxTUHpLN1pFcHdGTlJWUlRjcTJPU1Vrd2cxSXNrY2w1Rm16VlZuM2ZfMUowc3NpOU1yYTZzSDE1c2RpNHhSbk4xWmZEOW85WFdjckxYWVFjRw?oc=5",
-      "publishedAt": "2026-10-13T01:22:50.000Z"
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5vYU91UUJfVFp2RGg4em14UVUteWhHTl9UNFhfWVEyLUs1V0NjUHBuRkx1elFsVDhHZVVHTTh6ZkFySXJWYTk2MUxRSklmYWVYT2pYaXYwWXNMa1lidlRzQQ?oc=5",
+      "publishedAt": "2026-10-14T00:49:42.000Z"
     },
     {
-      "title": "HLB바이오스텝 주가, 급등세... 이유는?",
-      "source": "금강일보",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE04VVZoaWxkWjVfTS1CRnJvS2x4M09ZZGNDMEp4aHFHUkY0dzFDMm5uak1rajlnU2xPQkNtdGVJTTl3WlRrNnBLOV9WZExiZ0RhQWtWeEJyb0g0Q3owX3JiTXppNjJ5bjlSZUE?oc=5",
-      "publishedAt": "2026-10-13T04:04:14.000Z"
+      "title": "HLB파나진, 덴버 학회서 AOC 플랫폼 핵심기술 공개",
+      "source": "뉴스핌",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9FZ1UxT0dwZlZEUC1UQkY4SFNhUUpyYUlQTkFuMldzQlpXYTdQNG1Ta29iX1BYMW9yVFY3b1ZKTWhmX1hYUTNoZFhVelZudE5Dc0ZmY1lRX0FlcEwt?oc=5",
+      "publishedAt": "2026-10-14T06:11:00.000Z"
     },
     {
-      "title": "[특징주]HLB바이오스텝, 50억 원 AI 국책과제 참여에 18.08% 치솟아…디지털 CRO 부각",
-      "source": "남도일보",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1wcjVJUnYxQ1R4b3RfTl9CMHpHc2VCR05BX3pMYk9acWxoQ3prVW1xQ1poZ0s3Qk5odVQ0OEtfUXhDY1hXcTE5T2JxVnBzSzVSejJRUngzY0tSX2c3dnF6R0dELXNtVURPeXN4RdIBcEFVX3lxTE1wTGtBWElqSHRYNDQ4QkJQTGVHU3I3elU4SFJkYk5RaHQ5dkRMVUlxX2k5b1VGanlQNUFReVhrZDNZRHZnMC16aHdoYVNJa0E5ODB1VG15NUViclMtVGRzNUxUdGc1LVh0UnBUdGZWUHI?oc=5",
-      "publishedAt": "2026-10-13T05:01:50.000Z"
+      "title": "HLB 간암藥, 허가 불발에 경쟁구도 변화···美시장 입지 부담",
+      "source": "시사저널e",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9jSDcxNjFrNzBFeWZrVlVXcEY4Zm4xS1R4S05yaG1KVG9DTmVLMEQ5OGdKcXBKR0hRUzZzbm5lUzJ3eW9lb2NZU3BzeExLSUZpVmVueEFaczQycWNLS3lTRW1rMWIzb0JqZk5VRDlGOXFpUdIBdkFVX3lxTFBpb2hqWGIwd1J0RVVEX3cyY01WNGRyYm9tLXltenJlaFRzUjhPYllBWHhPSEtMUXNmWHlOckdEbzBYTnBoLU5sS1RqTXd2cENuVFM5SWtSRjhabF9ubF9FYlZFOXFGd1B4ZEZBY1NxSmdnUVg0TVE?oc=5",
+      "publishedAt": "2026-10-14T08:54:23.000Z"
     },
     {
-      "title": "HLB 바이오스텝, AI-NAMs 국책과제 참여...AI 비임상 CRO 사업화 속도",
-      "source": "팍스경제TV",
-      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9EdTdYakozTEVZWWNES25ZYlJvNC1iWkN4c05qSURkU2JVSnZtVTM1Rk1Zd096dmRELUhlYk1SMkZKUHM2X1VlVTdDTWhXMUF5MWpwQzBJOHZMcEROWmJZVVpsNDhCQTA?oc=5",
-      "publishedAt": "2026-10-13T14:49:50.000Z"
+      "title": "HLB파나진, 인공핵산 설계 기술 공개···항체 기반 유전자 치료제 개발 속도",
+      "source": "이뉴스투데이",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9BY19EUUU5NHdBTmI0S1JIOFNWaFg4UmFfWGtNMk5YeGZ1bHBGbXVUdVJsQ2lkdGNuTElUd3pEQl81ZnZ2enhYT245ZWh1U3VLa1RaeEFYYzNpS25nLTM0MHlCdHVmVnpjaWpoVU5zOGPSAXRBVV95cUxPcWtHYXA4YzVuSFp5ckRMdkFNdEV3UEpLMEcycWlPUUczZGhXckpNblp2OEQ1UmFlbmZ0X3FxQ1B1RzVIbjJJbVZXMUoxSU9LdW9zTlhIcjRpYnM2NkZ6bjZuMEE0UjVNV3lIcmxYSHNwUmNtQg?oc=5",
+      "publishedAt": "2026-10-14T08:49:54.000Z"
     },
     {
-      "title": "HLB 바이오스텝, 산업부 주관 'AI-NAMs' 국책과제 참여",
+      "title": "HLB파나진, 'PNA 페이로드' 기술 \"美올리고학회 발표\"",
       "source": "바이오스펙테이터",
-      "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE16cEdHWUh0VE9OOUpQUXlWUTEzVXBpZlkwZGFCZWo5NkRFeDlhb29CY3ZUWjFoMktDVmFzVk1JOVlONXJSY1pPYlRNZTR5dlV6TGxhbXRpMA?oc=5",
-      "publishedAt": "2026-10-13T05:02:00.000Z"
+      "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9GTVdsQndTa2FRYVJ3RFNoRDBfZVV2ZlJUdHBKUFdTNDZWbUo5VTFWSXlqb0ZOOFA3NG5zMVhxd0RUaERCY2Zwdk5YNE5qQ0dVUXpfYmF6cw?oc=5",
+      "publishedAt": "2026-10-14T10:23:00.000Z"
     },
     {
-      "title": "HLB바이오스텝, 50억원 AI-NAMs 국책과제 참여",
-      "source": "메디포뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1sZkhsakhxbGFVR2pOa2pLUXoxckp0Qk5GLUlRdjY2SFdKUWhuVHdxazUzVXVfRGt5Sk96dm5rRGJ5c1ctSUNtalBVa0pnQkNyanNQZzhpUkRmeFRZZURZTFg4T0U?oc=5",
-      "publishedAt": "2026-10-13T07:34:06.000Z"
+      "title": "HLB 간암藥, 허가 불발에 경쟁구도 변화···美시장 입지 부담",
+      "source": "시사저널e",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBpb2hqWGIwd1J0RVVEX3cyY01WNGRyYm9tLXltenJlaFRzUjhPYllBWHhPSEtMUXNmWHlOckdEbzBYTnBoLU5sS1RqTXd2cENuVFM5SWtSRjhabF9ubF9FYlZFOXFGd1B4ZEZBY1NxSmdnUVg0TVHSAXZBVV95cUxQaW9oalhiMHdSdEVVRF93MmNNVjRkcmJvbS15bXpyZWhUc1I4T2JZQVh4T0hLTFFzZlh5TnJHRG8wWE5waC1ObEtUak13dnBDblRTOUlrUkY4WmxfbmxfRWJWRTlxRndQeGRGQWNTcUpnZ1FYNE1R?oc=5",
+      "publishedAt": "2026-10-14T09:47:33.000Z"
     },
     {
-      "title": "2조 매출 꿈꿨는데 세 번 퇴짜… HLB 간암 신약에 무슨 일이",
-      "source": "한국일보",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1wVzlHdFRwaEdzZk1qbXZiZFRLaVZiME5zWFBQZ1lacTlMUWt0YUVRX0lBenBlcG1CUzBPR3A0NE52dXJrejVTRVRlVDNQSVNOcW5nYlJ0UW5TMVNqU19ocnhPUllyeGJiZW1UMXJ5ZGJkaGvSAXNBVV95cUxNcFc5R3RUcGhHc2ZNam12YmRUS2lWYjBOc1hQUGdZWnE5TFFrdGFFUV9JQXpwZXBtQlMwT0dwNDROdnVya3o1U0VUZVQzUElTTnFuZ2JSdFFuUzFTalNfaHJ4T1JZcnhiYmVtVDFyeWRiZGhr?oc=5",
-      "publishedAt": "2026-10-13T06:11:00.000Z"
+      "title": "HLB테라퓨틱스 3상 결과 앞둔 NK 시장…최대 1.1억달러 기술거래",
+      "source": "메디코파마",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5qV3kxRjZMZm9qYmtoTVM0QlNVaFQ5S2F2UmVfbTFSU0ZjOE5vV0JaRDlub25najEwTVJIdjFZaFlPeGozcjc2czNkc0w5VjAyYW02SFZ4VWcySWhneWI3SXNJS1hKd0VEeTRna0wtVzNwZw?oc=5",
+      "publishedAt": "2026-10-14T04:53:51.000Z"
     }
   ],
   "dart": [],
@@ -174,9 +174,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 837.03,
-    "vs": -12.16,
-    "fltRt": -1.43
+    "clpr": 823.88,
+    "vs": -13.15,
+    "fltRt": -1.57
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -185,7 +185,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-14T06:54:45.042Z",
+  "builtAt": "2026-10-15T06:43:08.338Z",
   "archiveDays": 120,
-  "archiveFrom": "20260415"
+  "archiveFrom": "20260416"
 }

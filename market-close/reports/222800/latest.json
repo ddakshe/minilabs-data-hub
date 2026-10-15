@@ -2,37 +2,29 @@
   "code": "222800",
   "name": "심텍",
   "market": "KOSDAQ",
-  "basDt": "20261013",
+  "basDt": "20261014",
   "price": {
     "code": "222800",
     "name": "심텍",
     "market": "KOSDAQ",
-    "basDt": "20261013",
-    "close": 150500,
-    "vs": -4400,
-    "fltRt": -2.84,
-    "open": 150000,
-    "high": 152500,
-    "low": 137500,
-    "prevClose": 154900,
-    "volume": 1244665,
-    "tradeValue": 181457626400,
+    "basDt": "20261014",
+    "close": 141000,
+    "vs": -9500,
+    "fltRt": -6.31,
+    "open": 150300,
+    "high": 151600,
+    "low": 137700,
+    "prevClose": 150500,
+    "volume": 953036,
+    "tradeValue": 136674113600,
     "week52": {
       "low": 42800,
       "high": 175000,
-      "position": 0.8146747352496218,
+      "position": 0.7428139183055976,
       "days": 245,
-      "from": "20251013"
+      "from": "20251014"
     },
     "recent5": [
-      {
-        "basDt": "20261006",
-        "fltRt": 4.67,
-        "open": 172800,
-        "high": 182600,
-        "low": 169700,
-        "close": 175000
-      },
       {
         "basDt": "20261007",
         "fltRt": -2.63,
@@ -64,83 +56,65 @@
         "high": 152500,
         "low": 137500,
         "close": 150500
+      },
+      {
+        "basDt": "20261014",
+        "fltRt": -6.31,
+        "open": 150300,
+        "high": 151600,
+        "low": 137700,
+        "close": 141000
       }
     ],
     "volumeVs20d": {
-      "avg20": 733744,
-      "ratio": 1.7
+      "avg20": 753769,
+      "ratio": 1.26
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
       "rows": 529,
       "rows52w": 245
     },
-    "generatedAt": "2026-10-14T06:53:31.369Z"
+    "generatedAt": "2026-10-15T06:42:02.408Z"
   },
   "facts": [
-    "코스닥보다 1.41%p 낮았어요.",
-    "거래량은 20일 평균의 1.7배예요.",
-    "시가보다 500원 높게 마감했어요."
+    "코스닥보다 4.74%p 낮았어요.",
+    "거래량은 20일 평균의 1.3배예요.",
+    "시가보다 9,300원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "[심텍] 심텍, 2,740억 투자 승부수…2028년 매출 캐파 3조 간다(2026년_2Q)",
-      "source": "네이버 프리미엄콘텐츠",
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxONkFiVjkxVm1wRFVlUXJlN29mckM0ZDN4U1ZxRHZGSXlBbmFkbFpQVWZRMVk4RFp0WWlfdGNQR3JISDBQUFJ3aWV5NVp6UEEzV0dNbENlQVpUTGJiMkRWbk16T2gwYnVpZzJua1R5MGxrZUNtTFp3b3JfaS1IVUZKTUJfZ0NJbHVK?oc=5",
-      "publishedAt": "2026-10-13T07:59:00.000Z"
+      "title": "주성엔지니어링 8.21% 하락…원익IPS·심텍도 약세",
+      "source": "비건뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE45bnIxdWg3VWZyclYtb1dwUmJSSHNNekNhUTNLYWRhTlF2MHJ2U2JNSEJPb3c2NWlab3AwTzk0Q2dVRFVIUlRSYkZ2VFB1dHhhV2hfLW03b2NvelpFZFNqRTRYSEZUdw?oc=5",
+      "publishedAt": "2026-10-14T13:12:47.000Z"
     },
     {
-      "title": "전영선 심텍 대표가 '서플라이어 데이' 행사에서 인사말을 하고 있다. 〈출처: 심텍〉",
-      "source": "전자신문",
-      "link": "https://news.google.com/rss/articles/CBMipAdBVV95cUxNOUhLY1lDNnBsSDhfN2pmLU1kSV9XalRsakNZdWgzUFFzVVJtU2IyWHFSWnlURXFpV0RUZ2hzTzJmR0RneG1QNGpHaEY3Y29Kb2Q3Q2VBNDZQZDhmcHpsemxxR2dZVXVBUGlGbFZJTUR1aEhuNEtpZkM1M1RGOXVCU2V0VHRJcHZUR1NCNDZBcExBMGJNSFNXSURTeVlnY196QUQta0RtZWN1SGhzT2hLdWF4Z0w2N0V1YkNYbWJqeVBvTW9lckN3RWhGTzdWWHQ3ZzhIVlZoUkJfMXBZZ2g3M3BmT1IxQWVJQkhsaG1HS2ZCQU5jbjJLbVJXTGd3NWZITWpKOVpwOC1VZTZHaFhKd21xZWpoYVZJTWh2bGdkQkFDUUJERTk2T3ZtUmdIZ2RIY0lPRXctd29tZDdDRGc3UksySkJvaXNlRHpnQkxXOFE5d2RlQks5RTVMMThPYUNaSHlERV9nbGwtSFB2dGpGUlpTVWRJX0tHeERPM01YZDdsZHNCVzF5T1lNN0hUN0tJOXFmaFlDdGZzVHhfYWh5TzJtZ2JtYkNPRHN3Q24xOTNiZTh3SGFWaGYyQ1JjbWRqVHNORkFrNmZfMDItR3hIcHdzNXhLdWxmanFXMGNiTEVwNVZpMHVKV3Uyckg1aUJsYmtUWWpTVlpSRld5elJJR0VrMU02czFzVFU0SkV0UldwdHdGN0VaZWs2aXBDX2RIMjgwdVpMOHFxZWhQcmt2dGZnNlZub2c4STJnR0prQk9GTFQzMGdub3E4UV81cUtVWTI3T1VRRGxmWXNDUTQtbzBVSm9FM1Vod0xDMW1WMXMxWmt3ck04UTZBOXAxYjZBNGxvZml5MU9QOUM2bWpiTnBWWm41VEZ5eDVodlFBOWxMZVVuYXhGUHlrTjltNm1KWkNaZWR2Z2cyYUJxTGxnVjZ1Zm5MU193amhRMERGNFRjX0hpNHMwRW1YYXlWM3JTTkNGUnl0U3FfRUlaakwxMk1sZEt6ZG55MUN0aFJldG14WXhGOTBPNFY4VGlPdWpfNlR1Z2VZQ1l6blhZdDNxNTl0Uy1XNjFnTmlpVDdISlItajc5VVY3XzNvQ19xTHlMa0s0UHdWa2dESEk0RjlvUVFXblRZMXJOMG41THhHUEtBVFBTZWNPV0ZGWGpjeFJ0SDUtQU1pSEktTFp2Q2ltclNCWWFyWDRFTDlMbVhZOFk0V0NtZ3FfLU1hWXdiZVppLXE1Zw?oc=5",
-      "publishedAt": "2026-10-13T14:31:32.000Z"
+      "title": "[코스닥 외국인] 심텍 알테오젠 ISC 피에스케이홀딩스 안랩 '왕성한 식욕'",
+      "source": "핀포인트뉴스",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFByY0E2UHlQaDJ2cTZ6clBtX1gtdWtDUjdKekM2aktHRHp3anFwMzdGTnZieUlQT21BY3l6d1lLTWZRRkg0eE1rLW8xSmpWeFVjY1R2WEw0b2JpQmVtRXNkVzlaNU9BczlSVnNKTUs0eTRVdWPSAXdBVV95cUxNclVLd0tic2NaMjFwQURnaS1jTE5Yb0s1ZTZDblYwTE5kUFhveFZEU0FRQ180T002M0lfSEdIeTNsN3pPM2VQS2I1YmRrVjZSOVl4OU53TjJYZW9mVEYyNUVIRUd4aGRWeUVjX3FjaVdKZ1V0TVNRZw?oc=5",
+      "publishedAt": "2026-10-14T06:51:38.000Z"
     },
     {
-      "title": "[리포트 브리핑]심텍, '격차를 좁힐 이유는 충분하다' 목표가 200,000원 - 메리츠증권",
-      "source": "뉴스핌",
-      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9iclUwV01Jbm41T3pQRl9oemFmVURzdGlLbUNkWFQtNXZoQ3JaMmh4Q2Q3cHlOUy1OR1psb1hyRzNBbmJ6NUJYc3cxZWo1TDB1eGh4Z1dqRlpnNWRQ?oc=5",
-      "publishedAt": "2026-10-13T00:31:00.000Z"
+      "title": "심텍 주가, 10월 14일 장중 141,300원 6.11% 하락",
+      "source": "톱스타뉴스",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFB6aFVGdDlpQzltVWdsUEtfWU44WnNCNGJ0OVFSUmJBblV6Wl9QRmhCVUFZc1dsVXcxa05jLVUwc2hlWjRHZ25tWGMtNE0waHI4N3ZLTFBfQTdxWGg0RFA0dDFMd2pQdFNkYlpOZk51NDVCUQ?oc=5",
+      "publishedAt": "2026-10-14T01:27:51.000Z"
     },
     {
-      "title": "심텍 10%이상주주 심텍홀딩스, 소유 주식 수량 5만4380주 감소…소유 지분율 0.47%p 하락",
-      "source": "디지털투데이",
-      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9zZmJDQU9FRWtoeS1uSGs2c01pY2djcnoyZnRpNmdBeGZIc2x6cmdYWlJ0QlJsUk4wWHQtb3BfM0xKV1E4RGpBbVAwam9GZGtaMlZ0MVN0U0RJZWlieUdzUDU1Y0xmeEhZNTRZSzVUcFlhUFBrckhzWFZmRQ?oc=5",
-      "publishedAt": "2026-10-13T07:32:05.000Z"
+      "title": "[코스닥 기관] 대주전자재료·리노공업 사고 심텍·원익IPS 대량 매도",
+      "source": "핀포인트뉴스",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9kN0NDenpXLXZfdXhtY05HM1Vfd1ZKZ21SRWFpNVpqVFgyU3daQlJaOUhObXVna294OHFjMkVIdm52bDBaZjN1cG44a3g4aEVLNnpSM1VDcDJuWm50YWFtekpvb2Frc3hNa1huUnd6N25wWWvSAXdBVV95cUxPbUZMeFh0b0FsRndWWFg4elpFMDA1RWw0NWtqUVJXa0hxMnRHektQT1pDNVgxX3BSWDZicmxheFNQZkhuMVFJNTJDV1lKVWF2cFl6NG4yS05keFRjVGQ3ajIxelJKMWxVeUxNV1NkOWNCQkY0MTNZTQ?oc=5",
+      "publishedAt": "2026-10-14T06:58:14.000Z"
     },
     {
-      "title": "[애널픽] 심텍, PCB값 뛰자 영업익 7배↑…목표가 20만원",
-      "source": "뷰어스",
-      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9VbUZyeHMyT1NnWGxZZGhxd1VGZGJxWGJSZUVwRVVKMXpfZ0p0YjhETmppaUpyR3dPa3RhN2swSTZKODhBYm1nVmlpNTZoaGo4d1NvOUpFSzI?oc=5",
-      "publishedAt": "2026-10-13T00:20:59.000Z"
-    },
-    {
-      "title": "태성 \"수주 2200억\"…심텍 물량은 구속력 없는 LOI뿐",
-      "source": "리드경제",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBSWDM0Q3dwUFg5bUhHSi1LSWJDZlJUd3RvOEpET0dSbmg3NHo5STNLbzNKMG4zSGRnVDFtZHhaSjFCUVR3TEJhUGtoZzl3T3BlM04zY3I0TmxqR3VYWnpPbW5TQ0lvZGN2Ym1vMkhZMjE?oc=5",
-      "publishedAt": "2026-10-13T03:41:00.000Z"
-    },
-    {
-      "title": "삼성전기·LG이노텍·심텍 등 반도체 기판주 일제히 급락…코스피 6000선도 붕괴",
-      "source": "CBC뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9ncVFkSEJUd1JZYTMxVW85Y1BLOWxNWGhTMjQyY2JJR2U1Y2N1czg5T2ZONGdNOHJXRl91V2JpV3RNSjRocEc3d1VTYmhRQ0wxbXZkbzA0UnlVU25EanhaQ2hhN0hrbkZs?oc=5",
-      "publishedAt": "2026-10-13T02:49:40.000Z"
-    },
-    {
-      "title": "심텍 5% 이상 하락…메리츠증권, 3분기 출하·ASP 개선 전망",
-      "source": "CBC뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE83QU1GS3hqZHJpZHpqSmRVQ3VzRUQ2OVVjR3ZSZFNId2tzX0ZWSWN3MEVJd2U1WnFhN2V0QV9QdmFvaF9HUlNRU2pxM2JFZGUtLUNIN3hOempFdm1vV3RES1pMV0o5cEht?oc=5",
-      "publishedAt": "2026-10-13T01:20:01.000Z"
+      "title": "코스닥, 1%대 낙폭에 830선 밑으로...에코프로, 에코프로비엠 상승 VS 주성엔지니어링, 심텍 하락",
+      "source": "이코노뉴스",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9yV0VERllpSVRFb2FEOVFUWEN1Wjl0WEpVN1drWXJGbGF5QzR3NEJzTjV3UWJCVnViRVVONFNLZDNDaThXRlhqeFN4ako1N2xfVlcyN2RIdnRKQzlqRzBsSmg0T3JqZGJQMUVhQWxfNA?oc=5",
+      "publishedAt": "2026-10-14T12:30:00.000Z"
     }
   ],
-  "dart": [
-    {
-      "title": "임원ㆍ주요주주특정증권등소유상황보고서",
-      "filer": "심텍홀딩스",
-      "receiptNo": "20261013000275",
-      "date": "20261013",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261013000275"
-    }
-  ],
+  "dart": [],
   "ownership": [
     {
       "kind": "insider",
@@ -193,9 +167,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 837.03,
-    "vs": -12.16,
-    "fltRt": -1.43
+    "clpr": 823.88,
+    "vs": -13.15,
+    "fltRt": -1.57
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -204,7 +178,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-14T06:54:45.048Z",
+  "builtAt": "2026-10-15T06:43:08.346Z",
   "archiveDays": 120,
-  "archiveFrom": "20260415"
+  "archiveFrom": "20260416"
 }

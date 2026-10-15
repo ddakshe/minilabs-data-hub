@@ -1,0 +1,130 @@
+{
+  "code": "009150",
+  "name": "삼성전기",
+  "market": "KOSPI",
+  "basDt": "20261014",
+  "price": {
+    "code": "009150",
+    "name": "삼성전기",
+    "market": "KOSPI",
+    "basDt": "20261014",
+    "close": 1374000,
+    "vs": 11000,
+    "fltRt": 0.81,
+    "open": 1372000,
+    "high": 1414000,
+    "low": 1348000,
+    "prevClose": 1363000,
+    "volume": 559831,
+    "tradeValue": 775335039867,
+    "week52": {
+      "low": 198200,
+      "high": 2270000,
+      "position": 0.5675258229558837,
+      "days": 245,
+      "from": "20251014"
+    },
+    "recent5": [
+      {
+        "basDt": "20261007",
+        "fltRt": -4.24,
+        "open": 1675000,
+        "high": 1699000,
+        "low": 1601000,
+        "close": 1604000
+      },
+      {
+        "basDt": "20261008",
+        "fltRt": -3.62,
+        "open": 1612000,
+        "high": 1620000,
+        "low": 1546000,
+        "close": 1546000
+      },
+      {
+        "basDt": "20261012",
+        "fltRt": -3.82,
+        "open": 1551000,
+        "high": 1583000,
+        "low": 1476000,
+        "close": 1487000
+      },
+      {
+        "basDt": "20261013",
+        "fltRt": -8.34,
+        "open": 1420000,
+        "high": 1447000,
+        "low": 1333000,
+        "close": 1363000
+      },
+      {
+        "basDt": "20261014",
+        "fltRt": 0.81,
+        "open": 1372000,
+        "high": 1414000,
+        "low": 1348000,
+        "close": 1374000
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 605595,
+      "ratio": 0.92
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 529,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-15T06:41:16.891Z"
+  },
+  "facts": [
+    "코스피보다 1.25%p 높았어요.",
+    "거래량은 20일 평균의 0.9배예요.",
+    "시가보다 2,000원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "삼성전기 주가 11,000원 상승 후 장마감",
+      "source": "아시아뉴스통신",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9VTXBXSFRjWEo1ZHlCWTNaQUZfUHRtMjRheEo4Z2JQWjVqejlZeXJRVXJjTXcyNl9LbHhZMl9xTWJ0ejhGR0lwT1lSY2o1NG5aYlhmb2x0M3F3RGZrWjNiR0xiMHpBSHlUQ05CSDVzY29iY2cy?oc=5",
+      "publishedAt": "2026-10-14T06:47:21.000Z"
+    },
+    {
+      "title": "코스피, 소폭 하락해 6000선 턱걸이...LG에너지솔루션, 삼성전기 상승 VS 삼성생명, 삼성바이오로직스 하락",
+      "source": "이코노뉴스",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE95OGdVdVZkSnpDMzBHblRscTlyWDRxQWlnZnJDQWlFbkN6NXAwUjl1YWs0dHhPdy1YVFUyVHZSN1BXWWJPRzBNbF83OUoxOTVUdk1abmFMNU93SldTMmJ1anRla2tuZVVNMm5lY3VnSQ?oc=5",
+      "publishedAt": "2026-10-14T12:32:37.000Z"
+    },
+    {
+      "title": "임직원 만드는 AI 업무 도구…삼성전기, 사내 해커톤 개최",
+      "source": "뉴스투데이",
+      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5OdjlCT01JWUpKcHVRclJzcHNDQ2FMYzdEMU5DcWtJLUZYYzJOS2ZNckNtTG54bjZTXzI5NHUwZ2F2NDVvbVVrZ0t3ck1IRzRnWmVBQVloLWlkTkFseUE?oc=5",
+      "publishedAt": "2026-10-14T06:23:57.000Z"
+    },
+    {
+      "title": "中 맹추격에 불붙은 '꿈의 기판' 전쟁…삼성·LG·SK 투트랙 방어전",
+      "source": "비즈워치",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1LSzNIUVZFX2xkNkllMl9ac0cxRGw2QXZaZEp4b2sxMmN2OXE0SGpvQWJ3dUtMcFVtNmlMNVlQUzNlUlduM2d2YUduRk03cjlIT2VoSTByRWR6N2piLXNDZXQ5aEZpekdobVNmYg?oc=5",
+      "publishedAt": "2026-10-13T21:50:02.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 6008.81,
+    "vs": -26.54,
+    "fltRt": -0.44
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-15T06:43:08.202Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260416"
+}
