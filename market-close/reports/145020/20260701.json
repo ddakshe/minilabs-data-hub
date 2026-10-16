@@ -1,0 +1,101 @@
+{
+  "code": "145020",
+  "name": "휴젤",
+  "market": "KOSDAQ",
+  "basDt": "20260701",
+  "price": {
+    "code": "145020",
+    "name": "휴젤",
+    "market": "KOSDAQ",
+    "basDt": "20260701",
+    "close": 274500,
+    "vs": 10500,
+    "fltRt": 3.98,
+    "open": 267500,
+    "high": 290500,
+    "low": 261500,
+    "prevClose": 264000,
+    "volume": 81737,
+    "tradeValue": 22580508750,
+    "week52": {
+      "low": 214000,
+      "high": 377000,
+      "position": 0.37116564417177916,
+      "days": 245,
+      "from": "20250701"
+    },
+    "recent5": [
+      {
+        "basDt": "20260625",
+        "fltRt": -2.12,
+        "open": 254000,
+        "high": 264000,
+        "low": 247000,
+        "close": 254000
+      },
+      {
+        "basDt": "20260626",
+        "fltRt": -0.59,
+        "open": 253500,
+        "high": 259000,
+        "low": 244500,
+        "close": 252500
+      },
+      {
+        "basDt": "20260629",
+        "fltRt": 8.71,
+        "open": 258500,
+        "high": 276500,
+        "low": 258000,
+        "close": 274500
+      },
+      {
+        "basDt": "20260630",
+        "fltRt": -3.83,
+        "open": 270000,
+        "high": 274500,
+        "low": 260500,
+        "close": 264000
+      },
+      {
+        "basDt": "20260701",
+        "fltRt": 3.98,
+        "open": 267500,
+        "high": 290500,
+        "low": 261500,
+        "close": 274500
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 56999,
+      "ratio": 1.43
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 529,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-16T13:54:50.967Z"
+  },
+  "facts": [
+    "코스닥보다 2.54%p 높았어요.",
+    "거래량은 20일 평균의 1.4배예요.",
+    "시가보다 7,000원 높게 마감했어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 929.35,
+    "vs": 13.17,
+    "fltRt": 1.44
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null,
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-16T13:54:50.967Z"
+}
