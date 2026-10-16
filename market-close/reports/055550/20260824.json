@@ -1,0 +1,101 @@
+{
+  "code": "055550",
+  "name": "신한지주",
+  "market": "KOSPI",
+  "basDt": "20260824",
+  "price": {
+    "code": "055550",
+    "name": "신한지주",
+    "market": "KOSPI",
+    "basDt": "20260824",
+    "close": 103300,
+    "vs": -800,
+    "fltRt": -0.77,
+    "open": 104100,
+    "high": 104200,
+    "low": 101800,
+    "prevClose": 104100,
+    "volume": 710450,
+    "tradeValue": 73261605350,
+    "week52": {
+      "low": 64000,
+      "high": 110000,
+      "position": 0.8543478260869565,
+      "days": 243,
+      "from": "20250825"
+    },
+    "recent5": [
+      {
+        "basDt": "20260818",
+        "fltRt": -0.84,
+        "open": 106400,
+        "high": 106700,
+        "low": 104500,
+        "close": 106500
+      },
+      {
+        "basDt": "20260819",
+        "fltRt": -1.41,
+        "open": 105000,
+        "high": 105500,
+        "low": 102100,
+        "close": 105000
+      },
+      {
+        "basDt": "20260820",
+        "fltRt": -3.71,
+        "open": 104400,
+        "high": 105200,
+        "low": 101100,
+        "close": 101100
+      },
+      {
+        "basDt": "20260821",
+        "fltRt": 2.97,
+        "open": 102000,
+        "high": 104700,
+        "low": 101000,
+        "close": 104100
+      },
+      {
+        "basDt": "20260824",
+        "fltRt": -0.77,
+        "open": 104100,
+        "high": 104200,
+        "low": 101800,
+        "close": 103300
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 1122470,
+      "ratio": 0.63
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 529,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-16T06:34:46.453Z"
+  },
+  "facts": [
+    "코스피보다 2.35%p 높았어요.",
+    "거래량은 20일 평균의 0.6배예요.",
+    "시가보다 800원 낮게 마감했어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 6696.96,
+    "vs": -215.99,
+    "fltRt": -3.12
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null,
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-16T06:34:46.453Z"
+}

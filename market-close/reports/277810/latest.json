@@ -2,37 +2,29 @@
   "code": "277810",
   "name": "레인보우로보틱스",
   "market": "KOSDAQ",
-  "basDt": "20261014",
+  "basDt": "20261015",
   "price": {
     "code": "277810",
     "name": "레인보우로보틱스",
     "market": "KOSDAQ",
-    "basDt": "20261014",
-    "close": 381500,
-    "vs": -2000,
-    "fltRt": -0.52,
-    "open": 380500,
-    "high": 390000,
-    "low": 375500,
-    "prevClose": 383500,
-    "volume": 49199,
-    "tradeValue": 18802079500,
+    "basDt": "20261015",
+    "close": 345500,
+    "vs": -36000,
+    "fltRt": -9.44,
+    "open": 360000,
+    "high": 363000,
+    "low": 335000,
+    "prevClose": 381500,
+    "volume": 78013,
+    "tradeValue": 27100028500,
     "week52": {
       "low": 331500,
       "high": 880000,
-      "position": 0.09115770282588878,
+      "position": 0.02552415679124886,
       "days": 245,
-      "from": "20251014"
+      "from": "20251015"
     },
     "recent5": [
-      {
-        "basDt": "20261007",
-        "fltRt": -4.08,
-        "open": 462000,
-        "high": 470000,
-        "low": 447000,
-        "close": 447000
-      },
       {
         "basDt": "20261008",
         "fltRt": -4.03,
@@ -64,30 +56,50 @@
         "high": 390000,
         "low": 375500,
         "close": 381500
+      },
+      {
+        "basDt": "20261015",
+        "fltRt": -9.44,
+        "open": 360000,
+        "high": 363000,
+        "low": 335000,
+        "close": 345500
       }
     ],
     "volumeVs20d": {
-      "avg20": 62251,
-      "ratio": 0.79
+      "avg20": 59671,
+      "ratio": 1.31
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
       "rows": 529,
       "rows52w": 245
     },
-    "generatedAt": "2026-10-15T06:41:48.447Z"
+    "generatedAt": "2026-10-16T06:33:34.924Z"
   },
   "facts": [
-    "코스닥보다 1.05%p 높았어요.",
-    "거래량은 20일 평균의 0.8배예요.",
-    "시가보다 1,000원 높게 마감했어요."
+    "코스닥보다 1.79%p 낮았어요.",
+    "거래량은 20일 평균의 1.3배예요.",
+    "시가보다 14,500원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "로봇주, 미국·중동 군사 충돌 격화 우려 속 강세 종목 속출…로보스타 3%대, 휴림로봇도 상승, 레인보우로보틱스 보합",
+      "title": "삼성·LG, 로봇사업 J커브 진입 시점은 '2028년'",
+      "source": "Daum",
+      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBCeGdNWnMwWFVTaHVScnhuN2phMjQxMHhxajdWNGs0TWlXdkxLc2ItNjNzQ2xza1MwUVpTSTlaT1RhcFRfU0E?oc=5",
+      "publishedAt": "2026-10-15T02:29:08.000Z"
+    },
+    {
+      "title": "[속보] 로봇주 동반 급락…레인보우로보틱스·두산로보틱스·로보티즈 흔들, 미국 기술주 부진 여파 촉각",
       "source": "CBC뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE4wWlNoMk1WOVJQMFNSTFo2Nk5PNGFmaEFENXRsM2VtaHd2X3d6Y1NjTFhJT0djMGR5eGpxSExnS1lwNEFqcXo0R0Q5MFVqbU5rSDlpTFoza182TFZWZWpvWkFzY1pXM3RW?oc=5",
-      "publishedAt": "2026-10-14T01:18:41.000Z"
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5vUl9teFotQ3BuVlo5TUw5d1pnYnpGWm9HWnBvMHVYRW5HRnh3eXN5NDFsY0ZvN1AzQXpNZS1vNEc2QXJZazI4elNQSEVVcjBSbEhSemhYSTBKblFNNlFsektCd0tKTmYx?oc=5",
+      "publishedAt": "2026-10-15T01:30:53.000Z"
+    },
+    {
+      "title": "레인보우로보틱스 주가 하락 중",
+      "source": "아시아뉴스통신",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBIME5FQVZCQjNxbHlnM2w3N1FlUTBpV3lxelNiNVBxQ3ZZSlZ6VWs2T3NXbFFXV09MMmpQd25fUk16YzdYSGdlTThDLXJ1N1ZWeGg2TTZtNmhsb2xBbTFwMTZWazdRcmotUnVzV19pVXR0UnRZ?oc=5",
+      "publishedAt": "2026-10-15T00:24:12.000Z"
     }
   ],
   "dart": [],
@@ -95,9 +107,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 823.88,
-    "vs": -13.15,
-    "fltRt": -1.57
+    "clpr": 760.82,
+    "vs": -63.06,
+    "fltRt": -7.65
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -106,7 +118,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-15T06:43:08.310Z",
+  "builtAt": "2026-10-16T06:34:46.499Z",
   "archiveDays": 120,
-  "archiveFrom": "20260416"
+  "archiveFrom": "20260417"
 }

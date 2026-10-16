@@ -2,37 +2,29 @@
   "code": "009150",
   "name": "삼성전기",
   "market": "KOSPI",
-  "basDt": "20261014",
+  "basDt": "20261015",
   "price": {
     "code": "009150",
     "name": "삼성전기",
     "market": "KOSPI",
-    "basDt": "20261014",
-    "close": 1374000,
-    "vs": 11000,
-    "fltRt": 0.81,
-    "open": 1372000,
-    "high": 1414000,
-    "low": 1348000,
-    "prevClose": 1363000,
-    "volume": 559831,
-    "tradeValue": 775335039867,
+    "basDt": "20261015",
+    "close": 1163000,
+    "vs": -211000,
+    "fltRt": -15.36,
+    "open": 1243000,
+    "high": 1262000,
+    "low": 1131000,
+    "prevClose": 1374000,
+    "volume": 1240985,
+    "tradeValue": 1452736556000,
     "week52": {
-      "low": 198200,
+      "low": 200000,
       "high": 2270000,
-      "position": 0.5675258229558837,
+      "position": 0.4652173913043478,
       "days": 245,
-      "from": "20251014"
+      "from": "20251015"
     },
     "recent5": [
-      {
-        "basDt": "20261007",
-        "fltRt": -4.24,
-        "open": 1675000,
-        "high": 1699000,
-        "low": 1601000,
-        "close": 1604000
-      },
       {
         "basDt": "20261008",
         "fltRt": -3.62,
@@ -64,48 +56,80 @@
         "high": 1414000,
         "low": 1348000,
         "close": 1374000
+      },
+      {
+        "basDt": "20261015",
+        "fltRt": -15.36,
+        "open": 1243000,
+        "high": 1262000,
+        "low": 1131000,
+        "close": 1163000
       }
     ],
     "volumeVs20d": {
-      "avg20": 605595,
-      "ratio": 0.92
+      "avg20": 605989,
+      "ratio": 2.05
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
       "rows": 529,
       "rows52w": 245
     },
-    "generatedAt": "2026-10-15T06:41:16.891Z"
+    "generatedAt": "2026-10-16T06:33:07.995Z"
   },
   "facts": [
-    "코스피보다 1.25%p 높았어요.",
-    "거래량은 20일 평균의 0.9배예요.",
-    "시가보다 2,000원 높게 마감했어요."
+    "코스피보다 7.79%p 낮았어요.",
+    "거래량은 20일 평균의 2.0배예요.",
+    "시가보다 80,000원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "삼성전기 주가 11,000원 상승 후 장마감",
-      "source": "아시아뉴스통신",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9VTXBXSFRjWEo1ZHlCWTNaQUZfUHRtMjRheEo4Z2JQWjVqejlZeXJRVXJjTXcyNl9LbHhZMl9xTWJ0ejhGR0lwT1lSY2o1NG5aYlhmb2x0M3F3RGZrWjNiR0xiMHpBSHlUQ05CSDVzY29iY2cy?oc=5",
-      "publishedAt": "2026-10-14T06:47:21.000Z"
+      "title": "빅테크 ‘물량 선점’ 나섰다…삼성전기·LG이노텍, 조 단위 증설 맞손",
+      "source": "IT조선",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBvclRxdW5PV09xek5oR2pHQ09RTWZTWkN4MW1yOUpTbk5CdEFjd29MeDZHbTJTbTF3ZTFEdmp1RHNIR1RQWG8xRFEyZXFLMjRCaHFuaWhOVVQtSlhfY2RCLUtabGxpaW5xV000RWJfVnrSAXRBVV95cUxOWTRJVl9laGU1QjZmOHQ5Ry1FWjhvTG4tN0Jzb3hHSHNJZmFQZ2pHeTZabDhlNEc2dUx1d285WlVhYTJXeDFVYkJHU0ljZUdlcVhGQVpkNmVzcWRzelRncWNqeHE0d0JGRzZFY2hmRjU2bDBPZg?oc=5",
+      "publishedAt": "2026-10-14T22:00:00.000Z"
     },
     {
-      "title": "코스피, 소폭 하락해 6000선 턱걸이...LG에너지솔루션, 삼성전기 상승 VS 삼성생명, 삼성바이오로직스 하락",
-      "source": "이코노뉴스",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE95OGdVdVZkSnpDMzBHblRscTlyWDRxQWlnZnJDQWlFbkN6NXAwUjl1YWs0dHhPdy1YVFUyVHZSN1BXWWJPRzBNbF83OUoxOTVUdk1abmFMNU93SldTMmJ1anRla2tuZVVNMm5lY3VnSQ?oc=5",
-      "publishedAt": "2026-10-14T12:32:37.000Z"
+      "title": "[오늘의 주목주] 'AI 투자 지속성 우려' 삼성전기 주가 15%대 내려, 코스피 5550선 급락 마감",
+      "source": "비즈니스포스트",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE0zT3hwRWh3Ti12a1ExSEI5UE9UcUwtcFJPV2tUVTVneVFJZk1OOURTTktLTC1LYVplcWZSbDVMekxyODg0bXZFVFZOeTJuVWdLMVNqWUJhYWdnZ2stM2M1TmNlUmNRSW4xS2NGZnVpWE9sZTQ?oc=5",
+      "publishedAt": "2026-10-15T08:53:28.000Z"
     },
     {
-      "title": "임직원 만드는 AI 업무 도구…삼성전기, 사내 해커톤 개최",
-      "source": "뉴스투데이",
-      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5OdjlCT01JWUpKcHVRclJzcHNDQ2FMYzdEMU5DcWtJLUZYYzJOS2ZNckNtTG54bjZTXzI5NHUwZ2F2NDVvbVVrZ0t3ck1IRzRnWmVBQVloLWlkTkFseUE?oc=5",
-      "publishedAt": "2026-10-14T06:23:57.000Z"
+      "title": "삼성전기·테스·심텍 골라 담는다…반도체 소부장 ETF 출격",
+      "source": "한국경제",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9FM2Q0TEpfZElqNjAyVWs2S3R5VlVpZWVZc0tqTWdHWWNIS0FoSEFDMjl5RFQ1RzlsMHhNR1RBY0VMT25ya0pFeHZWRGwtLWFvczZ0YWtVVE5vQQ?oc=5",
+      "publishedAt": "2026-10-15T00:57:49.000Z"
     },
     {
-      "title": "中 맹추격에 불붙은 '꿈의 기판' 전쟁…삼성·LG·SK 투트랙 방어전",
-      "source": "비즈워치",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1LSzNIUVZFX2xkNkllMl9ac0cxRGw2QXZaZEp4b2sxMmN2OXE0SGpvQWJ3dUtMcFVtNmlMNVlQUzNlUlduM2d2YUduRk03cjlIT2VoSTByRWR6N2piLXNDZXQ5aEZpekdobVNmYg?oc=5",
-      "publishedAt": "2026-10-13T21:50:02.000Z"
+      "title": "삼성전자우 줍줍…삼성전기는 던졌다 [주식 초고수는 지금]",
+      "source": "매일경제",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1lTFVwc2taOFgzSkhwQUtKMnQ4SjlJQWs1SDRUTXJIaUtMZk9GT291SURUdUYwS3dMV1hta3oyR295dFNuUWlGMERtSzNsbHhnZnc?oc=5",
+      "publishedAt": "2026-10-15T01:33:12.000Z"
+    },
+    {
+      "title": "AI에 웃고 환율에 울고…3분기 실적 엇갈린 삼성전기·LG이노텍",
+      "source": "디지털데일리",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE15MzFFV3MwLUlLUHVNT3AxNVZaczhrTlZrbzJTdlA3NGRZaXpPTGpLVmdOX1lBYmY0T1oxZ21RM2Q1dFVZUFJrbC1Nel96ZkQ3emI2eVBBb1g3TTlkdmhacy1wdm8?oc=5",
+      "publishedAt": "2026-10-15T08:33:53.000Z"
+    },
+    {
+      "title": "삼성전기, 장중 14% 급락…118만원대로 추락 [특징주]",
+      "source": "데일리안",
+      "link": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQR1U1bkUtZDBfVHFMMVM4dnVabGtFU3VDNHdyb0JsbWJGNFhZbTVvdG94djcxYXRjM2VtS0ZCR3VBSUNYVWU0OVkyN2FCZ29XeExhVmNkT20wVkZHQThLRkcwWTY4ODQzaDM2eG93d05xM2xtQTlKQlhSVHl5S1VQLTNHLVdVd1pfdC1HLUNkRTB1WWpISmFqYVBoMUpOQkRPbnRMMzJnVjdyUmtQemlDZE91RTRiV1NxZ0cwa04yUEdhTkVaUVdtZW8yNmRQY1VvRmY3M0Uwc2JHMnBvMzR3THpQM04xWW1qNHd2QlgxV2R3cTRWMW5BNQ?oc=5",
+      "publishedAt": "2026-10-15T01:48:00.000Z"
+    },
+    {
+      "title": "삼성전기 등 기판주 급락…미국 물가 충격 영향",
+      "source": "머니투데이",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5LV2dWanBEM1YtY2tjaGZnUGhySEhIQzVTVmdFbnJNcHY4Q0IydTd0cS1Qa2JRNEdjWndVTzVxWTlaemZIMVYwbzJMWHp5TFVwOUU0VEZRNnlScG4taV9wZHlxVHFZUF940gFuQVVfeXFMTW8xWGZaX1cxc0wwcHBreXJZRjFidmVKYmF3VU9ydEI4NVpiUlhaRGw4ZUxhdVZ3dV9TWXBtd2xDZ0xVMDJaNlZ0enkyN3dnNmxSNHpyQ0kxV0hhSnlZa3pCYVVKbS1XOW1OMTVOYkE?oc=5",
+      "publishedAt": "2026-10-15T00:19:12.000Z"
+    },
+    {
+      "title": "한성크린텍, '삼성전자에 삼성전기까지' AI 메모리 증설 '수혜'…\"초순수 레퍼런스 확대\"",
+      "source": "프라임경제",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1QX3Y1RVVzbnZ0eTlkQlJyN3NlajBDc25MLTVKNTFxQ0JINGpLczZIendkd0M1Umh5UWtmOGRoU0xmdkN4amNHcnlIaDFsQm1lRHQ0YkVuVm1qaWpxZ3l2eFBYcjVKRlNReGJVNg?oc=5",
+      "publishedAt": "2026-10-14T23:14:23.000Z"
     }
   ],
   "dart": [],
@@ -113,9 +137,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 6008.81,
-    "vs": -26.54,
-    "fltRt": -0.44
+    "clpr": 5554.22,
+    "vs": -454.59,
+    "fltRt": -7.57
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -124,7 +148,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-15T06:43:08.202Z",
+  "builtAt": "2026-10-16T06:34:46.394Z",
   "archiveDays": 120,
-  "archiveFrom": "20260416"
+  "archiveFrom": "20260417"
 }

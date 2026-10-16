@@ -2,37 +2,29 @@
   "code": "222800",
   "name": "심텍",
   "market": "KOSDAQ",
-  "basDt": "20261014",
+  "basDt": "20261015",
   "price": {
     "code": "222800",
     "name": "심텍",
     "market": "KOSDAQ",
-    "basDt": "20261014",
-    "close": 141000,
-    "vs": -9500,
-    "fltRt": -6.31,
-    "open": 150300,
-    "high": 151600,
-    "low": 137700,
-    "prevClose": 150500,
-    "volume": 953036,
-    "tradeValue": 136674113600,
+    "basDt": "20261015",
+    "close": 124200,
+    "vs": -16800,
+    "fltRt": -11.91,
+    "open": 129400,
+    "high": 132000,
+    "low": 119900,
+    "prevClose": 141000,
+    "volume": 1033740,
+    "tradeValue": 128177376850,
     "week52": {
       "low": 42800,
       "high": 175000,
-      "position": 0.7428139183055976,
+      "position": 0.6157337367624811,
       "days": 245,
-      "from": "20251014"
+      "from": "20251015"
     },
     "recent5": [
-      {
-        "basDt": "20261007",
-        "fltRt": -2.63,
-        "open": 170900,
-        "high": 172600,
-        "low": 165600,
-        "close": 170400
-      },
       {
         "basDt": "20261008",
         "fltRt": 1.41,
@@ -64,54 +56,56 @@
         "high": 151600,
         "low": 137700,
         "close": 141000
+      },
+      {
+        "basDt": "20261015",
+        "fltRt": -11.91,
+        "open": 129400,
+        "high": 132000,
+        "low": 119900,
+        "close": 124200
       }
     ],
     "volumeVs20d": {
-      "avg20": 753769,
-      "ratio": 1.26
+      "avg20": 709905,
+      "ratio": 1.46
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
       "rows": 529,
       "rows52w": 245
     },
-    "generatedAt": "2026-10-15T06:42:02.408Z"
+    "generatedAt": "2026-10-16T06:33:48.136Z"
   },
   "facts": [
-    "코스닥보다 4.74%p 낮았어요.",
-    "거래량은 20일 평균의 1.3배예요.",
-    "시가보다 9,300원 낮게 마감했어요."
+    "코스닥보다 4.26%p 낮았어요.",
+    "거래량은 20일 평균의 1.5배예요.",
+    "시가보다 5,200원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "주성엔지니어링 8.21% 하락…원익IPS·심텍도 약세",
-      "source": "비건뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE45bnIxdWg3VWZyclYtb1dwUmJSSHNNekNhUTNLYWRhTlF2MHJ2U2JNSEJPb3c2NWlab3AwTzk0Q2dVRFVIUlRSYkZ2VFB1dHhhV2hfLW03b2NvelpFZFNqRTRYSEZUdw?oc=5",
-      "publishedAt": "2026-10-14T13:12:47.000Z"
+      "title": "삼성전기·테스·심텍 골라 담는다…반도체 소부장 ETF 출격",
+      "source": "한국경제",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9FM2Q0TEpfZElqNjAyVWs2S3R5VlVpZWVZc0tqTWdHWWNIS0FoSEFDMjl5RFQ1RzlsMHhNR1RBY0VMT25ya0pFeHZWRGwtLWFvczZ0YWtVVE5vQQ?oc=5",
+      "publishedAt": "2026-10-15T00:57:49.000Z"
     },
     {
-      "title": "[코스닥 외국인] 심텍 알테오젠 ISC 피에스케이홀딩스 안랩 '왕성한 식욕'",
-      "source": "핀포인트뉴스",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFByY0E2UHlQaDJ2cTZ6clBtX1gtdWtDUjdKekM2aktHRHp3anFwMzdGTnZieUlQT21BY3l6d1lLTWZRRkg0eE1rLW8xSmpWeFVjY1R2WEw0b2JpQmVtRXNkVzlaNU9BczlSVnNKTUs0eTRVdWPSAXdBVV95cUxNclVLd0tic2NaMjFwQURnaS1jTE5Yb0s1ZTZDblYwTE5kUFhveFZEU0FRQ180T002M0lfSEdIeTNsN3pPM2VQS2I1YmRrVjZSOVl4OU53TjJYZW9mVEYyNUVIRUd4aGRWeUVjX3FjaVdKZ1V0TVNRZw?oc=5",
-      "publishedAt": "2026-10-14T06:51:38.000Z"
+      "title": "심텍 11.63% 급락…AI 기판 수요와 수율 점검",
+      "source": "잡포스트",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE16b05pd1VSREktQTN3bjByUVZCUVVLODNSWEY5RnVNdG1qbnlmNklpTVBNNUc3NkdXTFVia1FZUTdCaC1rdkZvQzQtUHZud3BSdHFGQnZyell5ekt5a3RJeW5jUVlTOVpFTlk2RVY4Y09iUdIBckFVX3lxTE16b05pd1VSREktQTN3bjByUVZCUVVLODNSWEY5RnVNdG1qbnlmNklpTVBNNUc3NkdXTFVia1FZUTdCaC1rdkZvQzQtUHZud3BSdHFGQnZyell5ekt5a3RJeW5jUVlTOVpFTlk2RVY4Y09iUQ?oc=5",
+      "publishedAt": "2026-10-15T05:08:10.000Z"
     },
     {
-      "title": "심텍 주가, 10월 14일 장중 141,300원 6.11% 하락",
+      "title": "심텍 주가, 10월 15일 장중 124,000원 12.06% 하락",
       "source": "톱스타뉴스",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFB6aFVGdDlpQzltVWdsUEtfWU44WnNCNGJ0OVFSUmJBblV6Wl9QRmhCVUFZc1dsVXcxa05jLVUwc2hlWjRHZ25tWGMtNE0waHI4N3ZLTFBfQTdxWGg0RFA0dDFMd2pQdFNkYlpOZk51NDVCUQ?oc=5",
-      "publishedAt": "2026-10-14T01:27:51.000Z"
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9ac3RidlZCeXRUY2RoU3dIR0lQUDVzVDhzbTlXNGF4VUt2R1drWWQxaFl0Ykl0SVE1TXRkVkFKWFU5Q05NWXI4aDRYRktWR3N4bUV3ZmF3endWVnhqdEhqMWQ3TkJheEdxakc4LVdheFZnZw?oc=5",
+      "publishedAt": "2026-10-15T01:31:13.000Z"
     },
     {
-      "title": "[코스닥 기관] 대주전자재료·리노공업 사고 심텍·원익IPS 대량 매도",
-      "source": "핀포인트뉴스",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9kN0NDenpXLXZfdXhtY05HM1Vfd1ZKZ21SRWFpNVpqVFgyU3daQlJaOUhObXVna294OHFjMkVIdm52bDBaZjN1cG44a3g4aEVLNnpSM1VDcDJuWm50YWFtekpvb2Frc3hNa1huUnd6N25wWWvSAXdBVV95cUxPbUZMeFh0b0FsRndWWFg4elpFMDA1RWw0NWtqUVJXa0hxMnRHektQT1pDNVgxX3BSWDZicmxheFNQZkhuMVFJNTJDV1lKVWF2cFl6NG4yS05keFRjVGQ3ajIxelJKMWxVeUxNV1NkOWNCQkY0MTNZTQ?oc=5",
-      "publishedAt": "2026-10-14T06:58:14.000Z"
-    },
-    {
-      "title": "코스닥, 1%대 낙폭에 830선 밑으로...에코프로, 에코프로비엠 상승 VS 주성엔지니어링, 심텍 하락",
-      "source": "이코노뉴스",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9yV0VERllpSVRFb2FEOVFUWEN1Wjl0WEpVN1drWXJGbGF5QzR3NEJzTjV3UWJCVnViRVVONFNLZDNDaThXRlhqeFN4ako1N2xfVlcyN2RIdnRKQzlqRzBsSmg0T3JqZGJQMUVhQWxfNA?oc=5",
-      "publishedAt": "2026-10-14T12:30:00.000Z"
+      "title": "[속보] 코스닥 장초반 5%대 급락…알테오젠·에코프로·심텍 등 시총 상위 종목 일제히 하락",
+      "source": "CBC뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5yRU4tdXhoNTg5eDF6bHE0YTdIYlhmZ2pFem9hNTk1cWZqY1hGTG02NWJURzYxeU1tTkFkSWdpaTlfT0R6aXVrNndIUmpaYzFHRkFra0sxQmlBNklvc0VDcEdQNHpxVW5y?oc=5",
+      "publishedAt": "2026-10-15T00:16:38.000Z"
     }
   ],
   "dart": [],
@@ -167,9 +161,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 823.88,
-    "vs": -13.15,
-    "fltRt": -1.57
+    "clpr": 760.82,
+    "vs": -63.06,
+    "fltRt": -7.65
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -178,7 +172,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-15T06:43:08.346Z",
+  "builtAt": "2026-10-16T06:34:46.548Z",
   "archiveDays": 120,
-  "archiveFrom": "20260416"
+  "archiveFrom": "20260417"
 }
