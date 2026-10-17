@@ -1,9 +1,69 @@
 {
-  "generatedAt": "2026-10-16T00:00:00Z",
+  "generatedAt": "2026-10-17T00:00:00Z",
   "source": "SEC EDGAR",
   "sourceUrl": "https://www.sec.gov/edgar",
-  "usdKrw": 1345.9,
+  "usdKrw": 1332.1,
   "listed": [
+    {
+      "cik": "0002143850",
+      "name": "CITY THERAPEUTICS, INC.",
+      "ticker": "CTY",
+      "exchange": "뉴욕증권거래소",
+      "offerPrice": 18.0,
+      "priceBandLow": null,
+      "priceBandHigh": null,
+      "bandPosition": null,
+      "sharesOffered": 11111111,
+      "sharesAfterListing": 51721168,
+      "grossProceeds": 199999998,
+      "marketCap": 930981024,
+      "filedAt": "2026-10-16",
+      "isSpac": false,
+      "sic": "2834",
+      "industry": "제약·바이오",
+      "underwriters": [
+        "Goldman Sachs & Co.",
+        "Jefferies LLC",
+        "Oppenheimer & Co."
+      ],
+      "businessSummary": "We are a clinical-stage biotechnology company developing the next generation of RNA interference (&#8220;RNAi&#8221;) therapeutics designed to silence the expression of disease-relevant proteins, with the aim of delivering meaningful and durable benefits for patients in need.",
+      "useOfProceeds": "We currently intend to use the net proceeds from this offering, together with our existing cash and cash equivalents, as follows: approximately $30.",
+      "netResult": null,
+      "netResultYear": null,
+      "lockupDays": null,
+      "location": "CAMBRIDGE, MA",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002143850&type=424B4"
+    },
+    {
+      "cik": "0002149916",
+      "name": "TCGX Acquisition Corp. II",
+      "ticker": "TCXB",
+      "exchange": "뉴욕증권거래소",
+      "offerPrice": 10.0,
+      "priceBandLow": null,
+      "priceBandHigh": null,
+      "bandPosition": null,
+      "sharesOffered": null,
+      "sharesAfterListing": null,
+      "grossProceeds": null,
+      "marketCap": null,
+      "filedAt": "2026-10-16",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "underwriters": [
+        "Guggenheim Securities"
+      ],
+      "businessSummary": "We are a newly organized blank check company incorporated as a Cayman Islands exempted company formed for the purpose of effecting a merger, amalgamation, share exchange, asset acquisition, share purchase, reorganization or similar business combination with one or more businesses or entities.",
+      "useOfProceeds": null,
+      "netResult": null,
+      "netResultYear": null,
+      "lockupDays": null,
+      "location": "GRAND CAYMAN",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002149916&type=424B4"
+    },
     {
       "cik": "0001997038",
       "name": "Iambic Therapeutics, Inc.",
@@ -283,6 +343,60 @@
   ],
   "upcoming": [
     {
+      "cik": "0002151808",
+      "name": "TANG CAPITAL ACQUISITION CORP.",
+      "ticker": "TCAA",
+      "filedAt": "2026-10-16",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002151808&type=S-1"
+    },
+    {
+      "cik": "0001921603",
+      "name": "WhiteHawk Minerals Corp.",
+      "ticker": "WHK",
+      "filedAt": "2026-10-16",
+      "isSpac": false,
+      "sic": "1311",
+      "industry": "광업·자원",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": 67595000,
+        "netIncome": -3585000,
+        "assets": 507138000
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001921603&type=S-1"
+    },
+    {
+      "cik": "0002136571",
+      "name": "Evmand Corp",
+      "ticker": null,
+      "filedAt": "2026-10-16",
+      "isSpac": false,
+      "sic": "7372",
+      "industry": "소프트웨어·IT",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002136571&type=S-1"
+    },
+    {
+      "cik": "0001880343",
+      "name": "AMAZE HOLDINGS, INC.",
+      "ticker": "AMZE",
+      "filedAt": "2026-10-16",
+      "isSpac": false,
+      "sic": "5961",
+      "industry": "유통·소매",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": 1967148,
+        "netIncome": -55165253,
+        "assets": 34213786
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001880343&type=S-1"
+    },
+    {
       "cik": "0001620704",
       "name": "MED-X, INC.",
       "ticker": null,
@@ -550,17 +664,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001698506&type=S-1"
     },
     {
-      "cik": "0002143850",
-      "name": "CITY THERAPEUTICS, INC.",
-      "ticker": "CTY",
-      "filedAt": "2026-10-09",
-      "isSpac": false,
-      "sic": "2834",
-      "industry": "제약·바이오",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002143850&type=S-1"
-    },
-    {
       "cik": "0002148546",
       "name": "Patriot Mobile Inc.",
       "ticker": null,
@@ -740,17 +843,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001793497&type=S-1"
     },
     {
-      "cik": "0002151808",
-      "name": "TANG CAPITAL ACQUISITION CORP.",
-      "ticker": null,
-      "filedAt": "2026-10-06",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002151808&type=S-1"
-    },
-    {
       "cik": "0001604191",
       "name": "GridAI Technologies Corp.",
       "ticker": "GRDX",
@@ -922,22 +1014,6 @@
       "industry": "기타",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002150455&type=S-1"
-    },
-    {
-      "cik": "0001921603",
-      "name": "WhiteHawk Minerals Corp.",
-      "ticker": "WHK",
-      "filedAt": "2026-10-01",
-      "isSpac": false,
-      "sic": "1311",
-      "industry": "광업·자원",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 67595000,
-        "netIncome": -3585000,
-        "assets": 507138000
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001921603&type=S-1"
     },
     {
       "cik": "0001864531",
@@ -1130,17 +1206,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001468327&type=S-1"
     },
     {
-      "cik": "0002149916",
-      "name": "TCGX Acquisition Corp. II",
-      "ticker": "TCXB",
-      "filedAt": "2026-09-25",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002149916&type=S-1"
-    },
-    {
       "cik": "0002084031",
       "name": "Regenlab USA Inc.",
       "ticker": "RGNA",
@@ -1161,17 +1226,6 @@
       "industry": "SPAC",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002148436&type=S-1"
-    },
-    {
-      "cik": "0002136571",
-      "name": "Evmand Corp",
-      "ticker": null,
-      "filedAt": "2026-09-24",
-      "isSpac": false,
-      "sic": "7372",
-      "industry": "소프트웨어·IT",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002136571&type=S-1"
     },
     {
       "cik": "0002073616",
