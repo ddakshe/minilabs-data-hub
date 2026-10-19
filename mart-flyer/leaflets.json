@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-18",
-  "week": "261018",
+  "updatedAt": "2026-10-19",
+  "week": "261019",
   "period": {
     "start": "2026-10-14",
     "end": "2026-10-20"
@@ -81,7 +81,7 @@
   ],
   "leaflets": [
     {
-      "id": "emart-261018",
+      "id": "emart-261019",
       "mart": "emart",
       "store": "이마트",
       "region": "national",
@@ -108,7 +108,7 @@
       "sourceUrl": "https://eapp.emart.com/leaflet/leafletView_EL.do"
     },
     {
-      "id": "homeplus-261018-805",
+      "id": "homeplus-261019-805",
       "mart": "homeplus",
       "store": "홈플러스 익스프레스",
       "region": null,
@@ -858,7 +858,7 @@
           },
           "addr": "경기도 동두천시 지행로 50",
           "hours": "09:00~23:00",
-          "dayoff": "10/18(일)",
+          "dayoff": null,
           "tel": "031-866-8545"
         },
         {
@@ -2736,7 +2736,7 @@
       ]
     },
     {
-      "id": "homeplus-261018-592",
+      "id": "homeplus-261019-592",
       "mart": "homeplus",
       "store": "홈플러스",
       "region": null,
@@ -2744,6 +2744,7 @@
         "incheon",
         "seoul",
         "gangwon",
+        "gyeongnam",
         "gyeongbuk",
         "jeonnam",
         "gwangju",
@@ -2756,8 +2757,7 @@
         "sejong",
         "chungbuk",
         "ulsan",
-        "jeonbuk",
-        "gyeongnam"
+        "jeonbuk"
       ],
       "coords": null,
       "regionGrade": "exact",
@@ -2819,6 +2819,18 @@
           "hours": "10:00~22:00",
           "dayoff": "10/25(일)",
           "tel": "02-2660-8000"
+        },
+        {
+          "name": "홈플러스 거제점",
+          "region": "gyeongnam",
+          "coords": {
+            "lat": 34.891,
+            "lng": 128.617
+          },
+          "addr": "경상남도 거제시 장평로 12",
+          "hours": "10:00~22:00",
+          "dayoff": "10/25(일)",
+          "tel": "055-686-8000"
         },
         {
           "name": "홈플러스 경주점",
@@ -3567,7 +3579,7 @@
       ]
     },
     {
-      "id": "homeplus-261018-808",
+      "id": "homeplus-261019-808",
       "mart": "homeplus",
       "store": "홈플러스 익스프레스",
       "region": null,
@@ -4389,7 +4401,7 @@
       ]
     },
     {
-      "id": "traders-261018",
+      "id": "traders-261019",
       "mart": "traders",
       "store": "트레이더스",
       "region": "national",
@@ -4401,32 +4413,37 @@
         "end": "2026-10-20"
       },
       "pages": [
-        "https://eapp-cdn.emart.com/traders/banners/6e907143-bfbc-483b-a2d3-36d405981677.jpg",
-        "https://eapp-cdn.emart.com/traders/banners/d8328487-8c9e-45ba-b4a4-9802d1da7691.jpg"
+        "https://eapp-cdn.emart.com/traders/banners/62fc93e0-cca9-418a-846e-d7a9af2bfff5.jpg",
+        "https://eapp-cdn.emart.com/traders/banners/81ca63c0-a638-4e8a-be4d-25503dd91c41.jpg"
       ],
       "sourceUrl": "https://eapp.emart.com/tradersclub/flyerImgView.do"
     },
     {
-      "id": "lotte-2000513",
+      "id": "lotte-2000510",
       "mart": "lotte",
-      "store": "롯데마트 성정점",
+      "store": "롯데마트 20261015-20261021_서울역점",
       "regionGrade": "exact",
       "period": {
         "start": "2026-10-15",
-        "end": "2026-10-18"
+        "end": "2026-10-21"
       },
       "pages": [
-        "https://lottemartgo-prod-bucket.s3.ap-northeast-2.amazonaws.com/leaflet/1791874142032.jpg",
-        "https://lottemartgo-prod-bucket.s3.ap-northeast-2.amazonaws.com/leaflet/1791874142024.jpg",
-        "https://lottemartgo-prod-bucket.s3.ap-northeast-2.amazonaws.com/leaflet/1791874142017.jpg",
-        "https://lottemartgo-prod-bucket.s3.ap-northeast-2.amazonaws.com/leaflet/1791874142010.jpg"
+        "https://lottemartgo-prod-bucket.s3.ap-northeast-2.amazonaws.com/leaflet/1791874028439.jpg",
+        "https://lottemartgo-prod-bucket.s3.ap-northeast-2.amazonaws.com/leaflet/1791874028428.jpg",
+        "https://lottemartgo-prod-bucket.s3.ap-northeast-2.amazonaws.com/leaflet/1791874028394.jpg",
+        "https://lottemartgo-prod-bucket.s3.ap-northeast-2.amazonaws.com/leaflet/1791874028422.jpg",
+        "https://lottemartgo-prod-bucket.s3.ap-northeast-2.amazonaws.com/leaflet/1791874028407.jpg",
+        "https://lottemartgo-prod-bucket.s3.ap-northeast-2.amazonaws.com/leaflet/1791874028400.jpg"
       ],
       "sourceUrl": "https://www.mlotte.net/",
-      "region": null,
-      "coords": null
+      "region": "seoul",
+      "coords": {
+        "lat": 37.556,
+        "lng": 126.972
+      }
     },
     {
-      "id": "nobrand-261018",
+      "id": "nobrand-261019",
       "mart": "nobrand",
       "store": "노브랜드",
       "region": "national",
@@ -4579,7 +4596,7 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-daejeon-261018-1.jpg"
+        "hanaro-daejeon-261019-1.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
@@ -4599,8 +4616,8 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-busan-261018-1.jpg",
-        "hanaro-busan-261018-2.jpg"
+        "hanaro-busan-261019-1.jpg",
+        "hanaro-busan-261019-2.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
@@ -4620,8 +4637,8 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-jeonbuk-261018-1.jpg",
-        "hanaro-jeonbuk-261018-2.jpg"
+        "hanaro-jeonbuk-261019-1.jpg",
+        "hanaro-jeonbuk-261019-2.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
@@ -4641,8 +4658,8 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-chungbuk-261018-1.jpg",
-        "hanaro-chungbuk-261018-2.jpg"
+        "hanaro-chungbuk-261019-1.jpg",
+        "hanaro-chungbuk-261019-2.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
@@ -4662,8 +4679,8 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-seoul-261018-1.jpg",
-        "hanaro-seoul-261018-2.jpg"
+        "hanaro-seoul-261019-1.jpg",
+        "hanaro-seoul-261019-2.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
