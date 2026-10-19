@@ -1,0 +1,120 @@
+{
+  "code": "005380",
+  "name": "현대차",
+  "market": "KOSPI",
+  "basDt": "20261016",
+  "price": {
+    "code": "005380",
+    "name": "현대차",
+    "market": "KOSPI",
+    "basDt": "20261016",
+    "close": 312000,
+    "vs": 16500,
+    "fltRt": 5.58,
+    "open": 297000,
+    "high": 320500,
+    "low": 295500,
+    "prevClose": 295500,
+    "volume": 814662,
+    "tradeValue": 254442985000,
+    "week52": {
+      "low": 242000,
+      "high": 750000,
+      "position": 0.1377952755905512,
+      "days": 245,
+      "from": "20251016"
+    },
+    "recent5": [
+      {
+        "basDt": "20261012",
+        "fltRt": -1.39,
+        "open": 320000,
+        "high": 334000,
+        "low": 318500,
+        "close": 320000
+      },
+      {
+        "basDt": "20261013",
+        "fltRt": -1.56,
+        "open": 307500,
+        "high": 315500,
+        "low": 299000,
+        "close": 315000
+      },
+      {
+        "basDt": "20261014",
+        "fltRt": -0.48,
+        "open": 310000,
+        "high": 321500,
+        "low": 307500,
+        "close": 313500
+      },
+      {
+        "basDt": "20261015",
+        "fltRt": -5.74,
+        "open": 300000,
+        "high": 302500,
+        "low": 289000,
+        "close": 295500
+      },
+      {
+        "basDt": "20261016",
+        "fltRt": 5.58,
+        "open": 297000,
+        "high": 320500,
+        "low": 295500,
+        "close": 312000
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 518173,
+      "ratio": 1.57
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 527,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-19T07:05:25.704Z"
+  },
+  "facts": [
+    "코스피보다 3.53%p 높았어요.",
+    "거래량은 20일 평균의 1.6배예요.",
+    "시가보다 15,000원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "\"차급 뛰어넘은 혁신, 관건은 가격\"...현대차 '디 올 뉴 투싼', 준중형 SUV 시장 돌풍 예상",
+      "source": "글로벌이코노믹",
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPVVhZU1h2dFFlMmhQaGF6UHQ4cUxnV3JqT1d6NEdTYjI2eFBtQlU0cXRTWm80dXJsQk5XbDlpMzBETWgxeXVMbjZFMW91ZTI1ajJCRVQya00yczdnUlBvYWxUU3VUUDBrRHViY1N6UFVJZGo4aWpJVkFKWjV4UU1CMzU3Rm8?oc=5",
+      "publishedAt": "2026-10-16T07:06:10.000Z"
+    }
+  ],
+  "dart": [
+    {
+      "title": "특수관계인으로부터기타유가증권매수",
+      "filer": "현대자동차",
+      "receiptNo": "20261016000490",
+      "date": "20261016",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261016000490"
+    }
+  ],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 5668.05,
+    "vs": 113.83,
+    "fltRt": 2.05
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-19T07:07:19.269Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260420"
+}

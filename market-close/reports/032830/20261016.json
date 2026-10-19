@@ -1,0 +1,150 @@
+{
+  "code": "032830",
+  "name": "삼성생명",
+  "market": "KOSPI",
+  "basDt": "20261016",
+  "price": {
+    "code": "032830",
+    "name": "삼성생명",
+    "market": "KOSPI",
+    "basDt": "20261016",
+    "close": 238500,
+    "vs": 10500,
+    "fltRt": 4.61,
+    "open": 235000,
+    "high": 245000,
+    "low": 231500,
+    "prevClose": 228000,
+    "volume": 382072,
+    "tradeValue": 91688066500,
+    "week52": {
+      "low": 144800,
+      "high": 497000,
+      "position": 0.2660420215786485,
+      "days": 245,
+      "from": "20251016"
+    },
+    "recent5": [
+      {
+        "basDt": "20261012",
+        "fltRt": -0.56,
+        "open": 271000,
+        "high": 273500,
+        "low": 262500,
+        "close": 267500
+      },
+      {
+        "basDt": "20261013",
+        "fltRt": -4.3,
+        "open": 263000,
+        "high": 263000,
+        "low": 247000,
+        "close": 256000
+      },
+      {
+        "basDt": "20261014",
+        "fltRt": -3.71,
+        "open": 263500,
+        "high": 263500,
+        "low": 243000,
+        "close": 246500
+      },
+      {
+        "basDt": "20261015",
+        "fltRt": -7.51,
+        "open": 236500,
+        "high": 240500,
+        "low": 222000,
+        "close": 228000
+      },
+      {
+        "basDt": "20261016",
+        "fltRt": 4.61,
+        "open": 235000,
+        "high": 245000,
+        "low": 231500,
+        "close": 238500
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 288746,
+      "ratio": 1.32
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 527,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-19T07:05:33.417Z"
+  },
+  "facts": [
+    "코스피보다 2.56%p 높았어요.",
+    "거래량은 20일 평균의 1.3배예요.",
+    "시가보다 3,500원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "[개장시황] 삼성생명 5.04% 급등…폭락 끝낸 코스피 반등 이유",
+      "source": "자본시장뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFA1bHZSRXVudVlMeEFSWU9DQ24yTG5nZXBoY1pzZTlldTFGWlBHZkFxVWc0Q1FxcnpBcXhOWHNnamxTbUNxQkpZd0xQN1pHYVMtNHFxZmdHa09kRDZGMUk2WVNFMDNTbWM?oc=5",
+      "publishedAt": "2026-10-16T01:00:00.000Z"
+    },
+    {
+      "title": "삼성생명 주가 10,000원 상승 후 장마감",
+      "source": "아시아뉴스통신",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5hNFBuN3I5WlZpYVRLcjM0Z1JvRGtya2NlU29wVVV0cTNXakdxMTh5Mlg5UmhidFZPemlnNFhFc3ZfQjRUczBzNlNYZFR6aUhQLTQtd3UyNEdiWHYtWFBtaEdwVEhBSzhLaFdsVExBMElzUEhI?oc=5",
+      "publishedAt": "2026-10-16T07:42:36.000Z"
+    }
+  ],
+  "dart": [
+    {
+      "title": "계열금융회사의약관에의한금융거래-[유가증권-채권]",
+      "filer": "삼성생명",
+      "receiptNo": "20261016000453",
+      "date": "20261016",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261016000453"
+    },
+    {
+      "title": "계열금융회사의약관에의한금융거래-[유가증권-수익증권]",
+      "filer": "삼성생명",
+      "receiptNo": "20261016000446",
+      "date": "20261016",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261016000446"
+    },
+    {
+      "title": "계열금융회사의약관에의한금융거래-[보험]",
+      "filer": "삼성생명",
+      "receiptNo": "20261016000442",
+      "date": "20261016",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261016000442"
+    }
+  ],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20260724",
+      "holder": "삼성물산",
+      "ratio": 43.56,
+      "ratioChange": 0,
+      "reason": "보유주식 등에 대한 계약의 변경",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260724000604"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 5668.05,
+    "vs": 113.83,
+    "fltRt": 2.05
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-19T07:07:19.293Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260420"
+}

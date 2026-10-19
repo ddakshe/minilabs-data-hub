@@ -2,37 +2,29 @@
   "code": "222800",
   "name": "심텍",
   "market": "KOSDAQ",
-  "basDt": "20261015",
+  "basDt": "20261016",
   "price": {
     "code": "222800",
     "name": "심텍",
     "market": "KOSDAQ",
-    "basDt": "20261015",
-    "close": 124200,
-    "vs": -16800,
-    "fltRt": -11.91,
-    "open": 129400,
-    "high": 132000,
-    "low": 119900,
-    "prevClose": 141000,
-    "volume": 1033740,
-    "tradeValue": 128177376850,
+    "basDt": "20261016",
+    "close": 126600,
+    "vs": 2400,
+    "fltRt": 1.93,
+    "open": 130400,
+    "high": 131300,
+    "low": 123300,
+    "prevClose": 124200,
+    "volume": 956081,
+    "tradeValue": 121026705600,
     "week52": {
       "low": 42800,
       "high": 175000,
-      "position": 0.6157337367624811,
+      "position": 0.6338880484114977,
       "days": 245,
-      "from": "20251015"
+      "from": "20251016"
     },
     "recent5": [
-      {
-        "basDt": "20261008",
-        "fltRt": 1.41,
-        "open": 171500,
-        "high": 176900,
-        "low": 169200,
-        "close": 172800
-      },
       {
         "basDt": "20261012",
         "fltRt": -10.36,
@@ -64,48 +56,50 @@
         "high": 132000,
         "low": 119900,
         "close": 124200
+      },
+      {
+        "basDt": "20261016",
+        "fltRt": 1.93,
+        "open": 130400,
+        "high": 131300,
+        "low": 123300,
+        "close": 126600
       }
     ],
     "volumeVs20d": {
-      "avg20": 709905,
-      "ratio": 1.46
+      "avg20": 733416,
+      "ratio": 1.3
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 529,
+      "rows": 527,
       "rows52w": 245
     },
-    "generatedAt": "2026-10-16T06:33:48.136Z"
+    "generatedAt": "2026-10-19T07:06:02.516Z"
   },
   "facts": [
-    "코스닥보다 4.26%p 낮았어요.",
-    "거래량은 20일 평균의 1.5배예요.",
-    "시가보다 5,200원 낮게 마감했어요."
+    "코스닥보다 2.53%p 낮았어요.",
+    "거래량은 20일 평균의 1.3배예요.",
+    "시가보다 3,800원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "삼성전기·테스·심텍 골라 담는다…반도체 소부장 ETF 출격",
-      "source": "한국경제",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9FM2Q0TEpfZElqNjAyVWs2S3R5VlVpZWVZc0tqTWdHWWNIS0FoSEFDMjl5RFQ1RzlsMHhNR1RBY0VMT25ya0pFeHZWRGwtLWFvczZ0YWtVVE5vQQ?oc=5",
-      "publishedAt": "2026-10-15T00:57:49.000Z"
-    },
-    {
-      "title": "심텍 11.63% 급락…AI 기판 수요와 수율 점검",
-      "source": "잡포스트",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE16b05pd1VSREktQTN3bjByUVZCUVVLODNSWEY5RnVNdG1qbnlmNklpTVBNNUc3NkdXTFVia1FZUTdCaC1rdkZvQzQtUHZud3BSdHFGQnZyell5ekt5a3RJeW5jUVlTOVpFTlk2RVY4Y09iUdIBckFVX3lxTE16b05pd1VSREktQTN3bjByUVZCUVVLODNSWEY5RnVNdG1qbnlmNklpTVBNNUc3NkdXTFVia1FZUTdCaC1rdkZvQzQtUHZud3BSdHFGQnZyell5ekt5a3RJeW5jUVlTOVpFTlk2RVY4Y09iUQ?oc=5",
-      "publishedAt": "2026-10-15T05:08:10.000Z"
-    },
-    {
-      "title": "심텍 주가, 10월 15일 장중 124,000원 12.06% 하락",
-      "source": "톱스타뉴스",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9ac3RidlZCeXRUY2RoU3dIR0lQUDVzVDhzbTlXNGF4VUt2R1drWWQxaFl0Ykl0SVE1TXRkVkFKWFU5Q05NWXI4aDRYRktWR3N4bUV3ZmF3endWVnhqdEhqMWQ3TkJheEdxakc4LVdheFZnZw?oc=5",
-      "publishedAt": "2026-10-15T01:31:13.000Z"
-    },
-    {
-      "title": "[속보] 코스닥 장초반 5%대 급락…알테오젠·에코프로·심텍 등 시총 상위 종목 일제히 하락",
+      "title": "심텍 주가 12만6600원 상승…미국 반도체주 약세에도 4거래일 만에 반등",
       "source": "CBC뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5yRU4tdXhoNTg5eDF6bHE0YTdIYlhmZ2pFem9hNTk1cWZqY1hGTG02NWJURzYxeU1tTkFkSWdpaTlfT0R6aXVrNndIUmpaYzFHRkFra0sxQmlBNklvc0VDcEdQNHpxVW5y?oc=5",
-      "publishedAt": "2026-10-15T00:16:38.000Z"
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9OMWJoSkdJd2dod1BkblQ5SS12UndkMFNnVGQ2Qk95a0RISHZVbWN1TWx2LXJFcF9DSS10M3JnYVZGYTVkQURuS25sVVpZN3E3YlhnMXh4RDB4elRHR3ZhN3RxcE9IYWtu?oc=5",
+      "publishedAt": "2026-10-16T00:22:42.000Z"
+    },
+    {
+      "title": "심텍 주가, 10월 16일 장중 124,900원 0.56% 상승",
+      "source": "톱스타뉴스",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5GR2lKQzc1MDRtb3ZxbDlNWER3MmVMMnc3YUJLVFVDaW10bHNmQkNLTmRERTg5ZW0zVndyeExoRnlWWlZxZWVKdE43a2IyMTRjSzhrMkk5cVJoVkpzOTJXeXVNVjFoeHdRZ0JQREtiVDl4dw?oc=5",
+      "publishedAt": "2026-10-16T02:06:02.000Z"
+    },
+    {
+      "title": "이달 21조 던진 외국인…삼전·닉스 팔았지만 반도체 공급망은 샀다",
+      "source": "뉴시스",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA5cjctaEY5RFVHcVpjZWI1VHo1aHU0STR2dWlQeGZTZUNJTllEdGx0U3dmWnBfQTFlQ2xWZUVFZ0swMVhLVVUzbzFuNDFOVURrM19raTFSaHZkMzRDMHg3X9IBeEFVX3lxTE5OaTdkWHd5ZEVjNUlOZEc4WWRfbkZSWEM5bmlJQktXVTJNb3Nzak12cDktNFF2SHFlU19fNzdyblVEQld2a0NxZ2ZLelRsa1A3WmJsQzBjY3QzUFpER2FrQV8xWHlRUUY5MXdxMWxJSE80RlFxVEgtQQ?oc=5",
+      "publishedAt": "2026-10-16T01:16:21.000Z"
     }
   ],
   "dart": [],
@@ -161,9 +155,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 760.82,
-    "vs": -63.06,
-    "fltRt": -7.65
+    "clpr": 794.78,
+    "vs": 33.96,
+    "fltRt": 4.46
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -172,7 +166,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-16T06:34:46.548Z",
+  "builtAt": "2026-10-19T07:07:19.379Z",
   "archiveDays": 120,
-  "archiveFrom": "20260417"
+  "archiveFrom": "20260420"
 }

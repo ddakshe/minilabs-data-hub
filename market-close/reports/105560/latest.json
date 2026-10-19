@@ -2,37 +2,29 @@
   "code": "105560",
   "name": "KB금융",
   "market": "KOSPI",
-  "basDt": "20261015",
+  "basDt": "20261016",
   "price": {
     "code": "105560",
     "name": "KB금융",
     "market": "KOSPI",
-    "basDt": "20261015",
-    "close": 156700,
-    "vs": -2500,
-    "fltRt": -1.57,
-    "open": 157700,
-    "high": 159000,
-    "low": 154500,
-    "prevClose": 159200,
-    "volume": 1296676,
-    "tradeValue": 203418046050,
+    "basDt": "20261016",
+    "close": 160000,
+    "vs": 3300,
+    "fltRt": 2.11,
+    "open": 159800,
+    "high": 164900,
+    "low": 159000,
+    "prevClose": 156700,
+    "volume": 879796,
+    "tradeValue": 142259864600,
     "week52": {
       "low": 113700,
       "high": 186200,
-      "position": 0.593103448275862,
+      "position": 0.6386206896551724,
       "days": 245,
-      "from": "20251015"
+      "from": "20251016"
     },
     "recent5": [
-      {
-        "basDt": "20261008",
-        "fltRt": -3.38,
-        "open": 167400,
-        "high": 168500,
-        "low": 162800,
-        "close": 162800
-      },
       {
         "basDt": "20261012",
         "fltRt": 0,
@@ -64,90 +56,48 @@
         "high": 159000,
         "low": 154500,
         "close": 156700
+      },
+      {
+        "basDt": "20261016",
+        "fltRt": 2.11,
+        "open": 159800,
+        "high": 164900,
+        "low": 159000,
+        "close": 160000
       }
     ],
     "volumeVs20d": {
-      "avg20": 904560,
-      "ratio": 1.43
+      "avg20": 917805,
+      "ratio": 0.96
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 529,
+      "rows": 527,
       "rows52w": 245
     },
-    "generatedAt": "2026-10-16T06:33:16.118Z"
+    "generatedAt": "2026-10-19T07:05:30.853Z"
   },
   "facts": [
-    "코스피보다 6%p 높았어요.",
-    "거래량은 20일 평균의 1.4배예요.",
-    "시가보다 1,000원 낮게 마감했어요."
+    "코스피보다 0.06%p 높았어요.",
+    "거래량은 20일 평균의 1.0배예요.",
+    "시가보다 200원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "[4대 금융 3분기 포인트]③ 엇갈린 이자이익…KB·하나 먼저 웃었다",
-      "source": "Daum",
-      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFB1MlhhNmRSbUo5alJ1ZkJCcHNUekJZVlpyVjVGR2NGclI5SThQTHg2QkFmSXpNWmNfaHJfVVpDLVEwS09OZ0E?oc=5",
-      "publishedAt": "2026-10-15T02:34:42.000Z"
-    },
-    {
-      "title": "KB국민카드, 고객만족도 체크카드 부문 12년 연속 1위 달성",
-      "source": "더나은미래",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE12RjlEUHplV1d1WXRvZ0dnSXlTUFNBelhLSEIwZEhjVFlUZVBoWlZMaVRQQkFEYkVPZkJabkNhc0NBYjh2NnF3LTE0ZkpNNGdTR3c?oc=5",
-      "publishedAt": "2026-10-15T05:55:00.000Z"
-    },
-    {
-      "title": "KB금융 든든한 스포츠 지원, 아시안게임 소중한 메달 결실",
-      "source": "Daily NTN",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE55cDV3elNoWVVSVHMyeGZXZmRscUI1blF6emYzcXpZbUdSZC1zNDJsOTVfeEVjeWFHYUV3dmQ4UGpPN2poRWJzcXU2M3ZPZVdWVTVwMWRKRjI4U3dzQ1hJanN4NGN1cndRNGc?oc=5",
-      "publishedAt": "2026-10-15T09:17:19.000Z"
-    },
-    {
-      "title": "신한금융, KB와 실적 격차 좁힐까",
-      "source": "톱데일리",
-      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1LWXZaNG9iMXUxVjFaQ2NsZ2NMVVg1elk0N3dCNlJ4RW5kUnRJd1pMNUhjaHFGaXdKbWYyNTRJV3NXRlgzWFllTEdGOVN0cGZH?oc=5",
-      "publishedAt": "2026-10-14T23:30:00.000Z"
-    },
-    {
-      "title": "[칼럼] 양종희 밀어낸 KB금융 이사회…윤종규 전 회장 고문 활동과 묘한 영향력?",
-      "source": "뉴스필드",
-      "link": "https://news.google.com/rss/articles/CBMitwJBVV95cUxPTl9JMFRlc2lwLXB1Qm5nNDJkYkliaGVHaHZ3bkprcmVTUmtnYzBjZ2hKcmpkdlpacnJnMVZ4b3dwNWtobVNJOGlBYnh1OXNyRFFQd20xYVRKamtrdFl6RUFkUEI0eDc1cjFQUDkyakQzblUtOVYzMFVtZzVpSjRzSVBZdkRHeG1zSXBPdjdmZ3RtUWRFbVo0cEhSRHFUSGRiaUZKNU10WGcwX2x0bnNzcEdld1pURk5KQTFpSlJPWjB2Q1JEbHN1UmtDelN2N2RJdlQ2RTlSRV9wN2xzOXhpQzNCRFdUZktoYzNJdTVxd1g5LXZOSWQ0el84WjZJRTd3akcyWC1tMnd1MHEyeERFSFh4SF9TOHVUYkRxRk11QzFaSm1vQk5uUnlkZ2pJSFY3dU1sOWJSMA?oc=5",
-      "publishedAt": "2026-10-15T03:13:24.000Z"
-    },
-    {
-      "title": "[청년금융①] KB금융지주, 취업·창업·주거 아우른다…청년 자립 전방위 지원",
-      "source": "PRESS9",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5IR2JGajFDS013Q2NaZnppME5oNGpjNVlBbXNCWUlDczhWeHZoaUNaUTF0ek1vQjVpa1JlZFZ3QjVvcWJUQ3JIaXR5VkJ2MGlNclBacG9oVU9XOE0yQ2s0a21ZRFo?oc=5",
-      "publishedAt": "2026-10-14T22:00:00.000Z"
-    },
-    {
-      "title": "[生기업TALK] KB금융그룹, 녹색경제 통해 지속가능사회 구현 위한 사회적 가치 창출에 기여",
-      "source": "시사캐스트",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB0aFpCZ0pfeGJlRk9lTF9KRzB5empyMzJsVXZqQklwS1VvaDh4SE8yTjhHZWtrTTgtVnJ4ZkNPVGQzM1YtSktaR1VrMkRITGk5NXl0b2JoekxBd1d0cnNsblFDR1BzczRk?oc=5",
-      "publishedAt": "2026-10-15T01:38:38.000Z"
-    },
-    {
-      "title": "안으론 롯데손보, 밖으론 인니 지주…신한금융, '비은행·글로벌'로 KB 턱밑 추격한다",
-      "source": "매일일보",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9rTUJqZHlwU0tkZXNfLUhPYUhIMVE2VWxjQUszR1dOQTlMaHJkOEw3UnVudHVJWVRxTDEtdHd0RnNCUm9HaTlsN1FBRUZuNjhqdkx0enZJZ05ySFFnQkh3ZVc2Q2c?oc=5",
-      "publishedAt": "2026-10-15T00:10:04.000Z"
+      "title": "[은행 임추위 돋보기][KB국민은행] 회장 교체 앞둔 KB…행추위 권한 확대 '검토 중' : 네이버 블로그",
+      "source": "Naver Blog",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPSlRQNVdnX0FSLWxzU2xmOHhESjlMQUkzQjVKcERDVGlob016VmZmSWtlcFA3Vm5BR0RPd1NBV09fM0tCY29yVnRNbUk3a0FydUlXeVdUc3g4ckEzaVd6ZkRhZ05aYTNiQzdNSTZpbWZWTGYzR0JaMHp4Z1gtRjhDU2RKUHZpSEVLdkVOMVhMQQ?oc=5",
+      "publishedAt": "2026-10-16T08:06:00.000Z"
     }
   ],
-  "dart": [
-    {
-      "title": "기업설명회(IR)개최(안내공시)              ",
-      "filer": "KB금융",
-      "receiptNo": "20261015800283",
-      "date": "20261015",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261015800283"
-    }
-  ],
+  "dart": [],
   "ownership": [],
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5554.22,
-    "vs": -454.59,
-    "fltRt": -7.57
+    "clpr": 5668.05,
+    "vs": 113.83,
+    "fltRt": 2.05
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -156,7 +106,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-16T06:34:46.420Z",
+  "builtAt": "2026-10-19T07:07:19.286Z",
   "archiveDays": 120,
-  "archiveFrom": "20260417"
+  "archiveFrom": "20260420"
 }

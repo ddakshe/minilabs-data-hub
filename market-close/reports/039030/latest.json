@@ -2,37 +2,29 @@
   "code": "039030",
   "name": "이오테크닉스",
   "market": "KOSDAQ",
-  "basDt": "20261015",
+  "basDt": "20261016",
   "price": {
     "code": "039030",
     "name": "이오테크닉스",
     "market": "KOSDAQ",
-    "basDt": "20261015",
-    "close": 423000,
-    "vs": -45500,
-    "fltRt": -9.71,
-    "open": 454500,
-    "high": 455000,
-    "low": 411500,
-    "prevClose": 468500,
-    "volume": 162235,
-    "tradeValue": 68948776500,
+    "basDt": "20261016",
+    "close": 448000,
+    "vs": 25000,
+    "fltRt": 5.91,
+    "open": 434000,
+    "high": 457000,
+    "low": 427500,
+    "prevClose": 423000,
+    "volume": 98103,
+    "tradeValue": 43598539500,
     "week52": {
       "low": 228500,
       "high": 612000,
-      "position": 0.5071707953063885,
+      "position": 0.5723598435462842,
       "days": 245,
-      "from": "20251015"
+      "from": "20251016"
     },
     "recent5": [
-      {
-        "basDt": "20261008",
-        "fltRt": 1.16,
-        "open": 520000,
-        "high": 538000,
-        "low": 516000,
-        "close": 524000
-      },
       {
         "basDt": "20261012",
         "fltRt": -2.48,
@@ -64,30 +56,38 @@
         "high": 455000,
         "low": 411500,
         "close": 423000
+      },
+      {
+        "basDt": "20261016",
+        "fltRt": 5.91,
+        "open": 434000,
+        "high": 457000,
+        "low": 427500,
+        "close": 448000
       }
     ],
     "volumeVs20d": {
-      "avg20": 101005,
-      "ratio": 1.61
+      "avg20": 103364,
+      "ratio": 0.95
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 529,
+      "rows": 527,
       "rows52w": 245
     },
-    "generatedAt": "2026-10-16T06:33:40.268Z"
+    "generatedAt": "2026-10-19T07:05:54.470Z"
   },
   "facts": [
-    "코스닥보다 2.06%p 낮았어요.",
-    "거래량은 20일 평균의 1.6배예요.",
-    "시가보다 31,500원 낮게 마감했어요."
+    "코스닥보다 1.45%p 높았어요.",
+    "거래량은 20일 평균의 0.9배예요.",
+    "시가보다 14,000원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "[코스닥 기관] 실리콘투 알테오젠 에코프로 원익IPS 이오테크닉스에 '베팅'",
-      "source": "핀포인트뉴스",
-      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9sX3dKbU5tSXBqZ0FUemFka2xPTnhscGZ1aTNNQlVtRXZ6RDliLUVpNV96RWc2cE5wcEJuWWhNeVNnSFQ0V2U2WUtWSnRodC1nNmNnVXFkdHNWVzBsVF9qMXI4RVZPaUt0aXE1STVXSGw3VmExQzZF0gF3QVVfeXFMT2xfd0ptTm1JcGpnQVR6YWRrbE9OeGxwZnVpM01CVW1FdnpEOWItRWk1X3pFZzZwTnBwQm5ZaE15U2dIVDRXZTZZS1ZKdGh0LWc2Y2dVcWR0c1ZXMGxUX2oxcjhFVk9pS3RpcTVJNVdIbDdWYTFDNkU?oc=5",
-      "publishedAt": "2026-10-15T07:10:36.000Z"
+      "title": "SK하이닉스·삼성전자 동반 상승…한미반도체·이오테크닉스 등 반도체주 강세",
+      "source": "CBC뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBfOU5uT1lKOVliTXB5Y1FNSzE0N01kd0pQOUd6VlZIV1NxMUtMakV5NTl4enNQSU5JUkRacEhCMXBtNWFQbl9UNk8zbkhvS3lEMDJMTUVkbGpzOUpydDh6MUk3ZEgwbTNy?oc=5",
+      "publishedAt": "2026-10-16T01:09:49.000Z"
     }
   ],
   "dart": [],
@@ -123,9 +123,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 760.82,
-    "vs": -63.06,
-    "fltRt": -7.65
+    "clpr": 794.78,
+    "vs": 33.96,
+    "fltRt": 4.46
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -134,7 +134,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-16T06:34:46.526Z",
+  "builtAt": "2026-10-19T07:07:19.354Z",
   "archiveDays": 120,
-  "archiveFrom": "20260417"
+  "archiveFrom": "20260420"
 }

@@ -1,0 +1,144 @@
+{
+  "code": "196170",
+  "name": "알테오젠",
+  "market": "KOSDAQ",
+  "basDt": "20261016",
+  "price": {
+    "code": "196170",
+    "name": "알테오젠",
+    "market": "KOSDAQ",
+    "basDt": "20261016",
+    "close": 234000,
+    "vs": 20500,
+    "fltRt": 9.6,
+    "open": 214500,
+    "high": 240500,
+    "low": 214500,
+    "prevClose": 213500,
+    "volume": 555792,
+    "tradeValue": 128836580250,
+    "week52": {
+      "low": 213500,
+      "high": 559000,
+      "position": 0.059334298118668596,
+      "days": 245,
+      "from": "20251016"
+    },
+    "recent5": [
+      {
+        "basDt": "20261012",
+        "fltRt": -3.94,
+        "open": 238000,
+        "high": 241000,
+        "low": 230000,
+        "close": 231500
+      },
+      {
+        "basDt": "20261013",
+        "fltRt": -3.02,
+        "open": 220000,
+        "high": 228000,
+        "low": 217500,
+        "close": 224500
+      },
+      {
+        "basDt": "20261014",
+        "fltRt": 0,
+        "open": 223500,
+        "high": 229500,
+        "low": 222000,
+        "close": 224500
+      },
+      {
+        "basDt": "20261015",
+        "fltRt": -4.9,
+        "open": 214000,
+        "high": 218000,
+        "low": 209000,
+        "close": 213500
+      },
+      {
+        "basDt": "20261016",
+        "fltRt": 9.6,
+        "open": 214500,
+        "high": 240500,
+        "low": 214500,
+        "close": 234000
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 310314,
+      "ratio": 1.79
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 527,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-19T07:05:38.715Z"
+  },
+  "facts": [
+    "코스닥보다 5.14%p 높았어요.",
+    "거래량은 20일 평균의 1.8배예요.",
+    "시가보다 19,500원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "[모닝 리포트] \"알테오젠, 키트루다 상업화로 ALT-B4 가치 입증\"",
+      "source": "뉴스핌",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1kQkd3VkZWa1lsbTRta28yMWJfclowZHpyR3RUOXcydjc2Mmp2TURINnJPZTByeXhad2JUWWJ0LXdZMW5BNVpuNkJCSVo0V0hiRXlJRWd2Zi11bGla?oc=5",
+      "publishedAt": "2026-10-15T23:45:00.000Z"
+    },
+    {
+      "title": "6일간 시총 3.2조 날렸던 알테오젠, 하루 만에 1.4조 '쑥'",
+      "source": "이투데이",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBVSjVBWUtWYWkwdkRyWU92c1NpT19qSGQ5WGdfY09tTlRPUzZBVFYwZEJMNHZ4ZnlieExrcG5idkdDS3NCelRNRmZIeEt3RTlFRG11Vg?oc=5",
+      "publishedAt": "2026-10-16T07:29:00.000Z"
+    },
+    {
+      "title": "美 국채금리 하락에 … 모처럼 웃은 韓 바이오株",
+      "source": "매일경제 마켓",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9WMEJqVVQzeklBeXJZWWRxOC1FTG9YdGFBSzRqNmZDRE9NV0FYR2FCV2MxVDNyR3hXZ3RQdExPRzlqQmhpZjZvWE5SdjVxR3lzMkE?oc=5",
+      "publishedAt": "2026-10-16T08:41:56.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [
+    {
+      "kind": "insider",
+      "date": "20260813",
+      "holder": "박순재",
+      "position": "이사회의장",
+      "role": "10%이상주주",
+      "sharesAfter": 13267800,
+      "sharesChange": 3061800,
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260813001689"
+    },
+    {
+      "kind": "major",
+      "date": "20260807",
+      "holder": "BlackRockFundAdvisors",
+      "ratio": 5.03,
+      "ratioChange": 0.05,
+      "reason": "단순투자목적으로 장내에서 발행회사의 주식 매수",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260807000762"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 794.78,
+    "vs": 33.96,
+    "fltRt": 4.46
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-19T07:07:19.308Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260420"
+}

@@ -1,0 +1,112 @@
+{
+  "code": "105560",
+  "name": "KB금융",
+  "market": "KOSPI",
+  "basDt": "20261016",
+  "price": {
+    "code": "105560",
+    "name": "KB금융",
+    "market": "KOSPI",
+    "basDt": "20261016",
+    "close": 160000,
+    "vs": 3300,
+    "fltRt": 2.11,
+    "open": 159800,
+    "high": 164900,
+    "low": 159000,
+    "prevClose": 156700,
+    "volume": 879796,
+    "tradeValue": 142259864600,
+    "week52": {
+      "low": 113700,
+      "high": 186200,
+      "position": 0.6386206896551724,
+      "days": 245,
+      "from": "20251016"
+    },
+    "recent5": [
+      {
+        "basDt": "20261012",
+        "fltRt": 0,
+        "open": 164300,
+        "high": 164700,
+        "low": 160800,
+        "close": 162800
+      },
+      {
+        "basDt": "20261013",
+        "fltRt": -0.25,
+        "open": 161300,
+        "high": 162800,
+        "low": 156400,
+        "close": 162400
+      },
+      {
+        "basDt": "20261014",
+        "fltRt": -1.97,
+        "open": 164700,
+        "high": 164700,
+        "low": 158400,
+        "close": 159200
+      },
+      {
+        "basDt": "20261015",
+        "fltRt": -1.57,
+        "open": 157700,
+        "high": 159000,
+        "low": 154500,
+        "close": 156700
+      },
+      {
+        "basDt": "20261016",
+        "fltRt": 2.11,
+        "open": 159800,
+        "high": 164900,
+        "low": 159000,
+        "close": 160000
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 917805,
+      "ratio": 0.96
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 527,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-19T07:05:30.853Z"
+  },
+  "facts": [
+    "코스피보다 0.06%p 높았어요.",
+    "거래량은 20일 평균의 1.0배예요.",
+    "시가보다 200원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "[은행 임추위 돋보기][KB국민은행] 회장 교체 앞둔 KB…행추위 권한 확대 '검토 중' : 네이버 블로그",
+      "source": "Naver Blog",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPSlRQNVdnX0FSLWxzU2xmOHhESjlMQUkzQjVKcERDVGlob016VmZmSWtlcFA3Vm5BR0RPd1NBV09fM0tCY29yVnRNbUk3a0FydUlXeVdUc3g4ckEzaVd6ZkRhZ05aYTNiQzdNSTZpbWZWTGYzR0JaMHp4Z1gtRjhDU2RKUHZpSEVLdkVOMVhMQQ?oc=5",
+      "publishedAt": "2026-10-16T08:06:00.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 5668.05,
+    "vs": 113.83,
+    "fltRt": 2.05
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-19T07:07:19.286Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260420"
+}

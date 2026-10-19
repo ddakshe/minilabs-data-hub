@@ -2,37 +2,29 @@
   "code": "196170",
   "name": "알테오젠",
   "market": "KOSDAQ",
-  "basDt": "20261015",
+  "basDt": "20261016",
   "price": {
     "code": "196170",
     "name": "알테오젠",
     "market": "KOSDAQ",
-    "basDt": "20261015",
-    "close": 213500,
-    "vs": -11000,
-    "fltRt": -4.9,
-    "open": 214000,
-    "high": 218000,
-    "low": 209000,
-    "prevClose": 224500,
-    "volume": 392922,
-    "tradeValue": 83629176750,
+    "basDt": "20261016",
+    "close": 234000,
+    "vs": 20500,
+    "fltRt": 9.6,
+    "open": 214500,
+    "high": 240500,
+    "low": 214500,
+    "prevClose": 213500,
+    "volume": 555792,
+    "tradeValue": 128836580250,
     "week52": {
       "low": 213500,
       "high": 559000,
-      "position": 0,
+      "position": 0.059334298118668596,
       "days": 245,
-      "from": "20251015"
+      "from": "20251016"
     },
     "recent5": [
-      {
-        "basDt": "20261008",
-        "fltRt": -6.23,
-        "open": 239000,
-        "high": 246000,
-        "low": 234500,
-        "close": 241000
-      },
       {
         "basDt": "20261012",
         "fltRt": -3.94,
@@ -64,72 +56,50 @@
         "high": 218000,
         "low": 209000,
         "close": 213500
+      },
+      {
+        "basDt": "20261016",
+        "fltRt": 9.6,
+        "open": 214500,
+        "high": 240500,
+        "low": 214500,
+        "close": 234000
       }
     ],
     "volumeVs20d": {
-      "avg20": 312800,
-      "ratio": 1.26
+      "avg20": 310314,
+      "ratio": 1.79
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 529,
+      "rows": 527,
       "rows52w": 245
     },
-    "generatedAt": "2026-10-16T06:33:24.045Z"
+    "generatedAt": "2026-10-19T07:05:38.715Z"
   },
   "facts": [
-    "코스닥보다 2.75%p 높았어요.",
-    "거래량은 20일 평균의 1.3배예요.",
-    "시가보다 500원 낮게 마감했어요."
+    "코스닥보다 5.14%p 높았어요.",
+    "거래량은 20일 평균의 1.8배예요.",
+    "시가보다 19,500원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "주가 급락에 성장동력 따진 알테오젠 주주들…박순재 “신기술 도입 검토” - 조선비즈",
-      "source": "Chosunbiz",
-      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQNU12ZEZ2NXVheHp1RTRuRnVVLTZqZEZZODc3Z0Nyc0Y5bFdLUDdqVXdRMEhGTGR0MmpWMG1RX0MweV9YTmdTUFdOMTA3NHd5TTJnal9abDVzZmlPMnJDLVNxaEpLa1JYQlVpOVdLUTlEV3hYN1FNMWNkYXFHY2ZVa1lsUmtRU03SAZsBQVVfeXFMTTk4WkJ0TkRRRm1ZNVJGX20xX1I3XzJ6dEY0eEJaOEl4UUM3amtUdm8telFmV1NBUzRsNVhoSHJOT3RoWThsWjZFcHZjb1N5RG5SSndTdGs5c0o0bk4tZlRmR2owWGVBQTFFWk1zSC15UHE5YkhqZjhnVzVsQUZPdjc4ekR1VmlzLTB2OUR3VUdsb1dYdGhDVFNtV28?oc=5",
-      "publishedAt": "2026-10-15T08:22:00.000Z"
+      "title": "[모닝 리포트] \"알테오젠, 키트루다 상업화로 ALT-B4 가치 입증\"",
+      "source": "뉴스핌",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1kQkd3VkZWa1lsbTRta28yMWJfclowZHpyR3RUOXcydjc2Mmp2TURINnJPZTByeXhad2JUWWJ0LXdZMW5BNVpuNkJCSVo0V0hiRXlJRWd2Zi11bGla?oc=5",
+      "publishedAt": "2026-10-15T23:45:00.000Z"
     },
     {
-      "title": "알테오젠 주가 11,000원 하락 후 장마감",
-      "source": "아시아뉴스통신",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFB1WXJxdzJyOXhOMVJQa1ZhMGNJaW9VUTRWR3d1VDJHQUF5NW5tV0hoQTU0TGo5SF80TVRYbjctcjhxYzZ6b2lWeTRTT1VIRDRnQ3NMMnhPdEY3R2p1Zi01VEhYa2xUaXRQOGE4LWxkb0dPbmdM?oc=5",
-      "publishedAt": "2026-10-15T06:57:43.000Z"
+      "title": "6일간 시총 3.2조 날렸던 알테오젠, 하루 만에 1.4조 '쑥'",
+      "source": "이투데이",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBVSjVBWUtWYWkwdkRyWU92c1NpT19qSGQ5WGdfY09tTlRPUzZBVFYwZEJMNHZ4ZnlieExrcG5idkdDS3NCelRNRmZIeEt3RTlFRG11Vg?oc=5",
+      "publishedAt": "2026-10-16T07:29:00.000Z"
     },
     {
-      "title": "알테오젠 주가 하락 중",
-      "source": "아시아뉴스통신",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5KeVdKSUMxZTBHdHF0V1hUMTF1ZmtjazZ0SG5uRTV4VlZGcVNxa2FjQ19BUGN2dGs3Y1RVc1JNWlJ1cFhaZElLeVl3WXNCYzg2UHZiS1I4NDI3cnluMjg2VkhOUUU0N1V6bmExb1U1RGd6UTZX?oc=5",
-      "publishedAt": "2026-10-15T00:26:22.000Z"
-    },
-    {
-      "title": "알테오젠, 자회사 흡수합병…\"연구부터 상업화까지 일원화\"",
-      "source": "리드경제",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE8xZWc0ZjJrR0lrOHFjTmJhTnBSMEotY1F4blVNMmtqZEZhdFVqTHBpS2djLUFsYUJpRWhmT2FTZ3F3Q3l3OFlVTE5pMl9nSmZlRndWc0gxYzNrSHpZdUpsbFMzTWJaUTYtQno2cUtFVE4?oc=5",
-      "publishedAt": "2026-10-15T05:06:00.000Z"
-    },
-    {
-      "title": "[알테오젠 합병 점검②]미계약 선급금 840억 매출 가정…합병가치 반영",
-      "source": "메디코파마",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBwZ0cwMmxVVHB0SUMtVTR0N2UtWWRzc3ZXYVRkOUV6THU0bTdaVG9lTEZyXzhLbjUyX0Zpc2NodGJvcmZvX1M3X3loOXBhOHhidVFVeHhjTWFPQjhCRWFpOWhyLWhzRDN5ODVZNWlFZ3g0dw?oc=5",
-      "publishedAt": "2026-10-14T23:00:00.000Z"
-    },
-    {
-      "title": "알테오젠 주가, 10월 15일 장중 213,000원 5.12% 하락",
-      "source": "톱스타뉴스",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE12bTdBSzZMN3BjaHgxM09sTVZxTWFqaVdTOVBGUTdoRWdXdUowOXhkVkhFb1ZEN3hJT2xlalRHLUlsek56NF8zWFgzc2t0VHB3UlNfeUJlMU1tMWhaMC1lMFh2UXFsdDlScl80SC1IU2o1QQ?oc=5",
-      "publishedAt": "2026-10-15T02:01:14.000Z"
-    },
-    {
-      "title": "[코스닥 기관] 실리콘투 알테오젠 에코프로 원익IPS 이오테크닉스에 '베팅'",
-      "source": "핀포인트뉴스",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFB4bU54b2FrUkdPNU9PRjYxNWhtMzBOY1A3MVJVY2NfVm8xc18wX1o4YmJ5NEdTYlpSb0FlZ1RoVzRGbnItMEZORllMNzZoanVaeFpNeDIxY2IyQUFmVkZ1WTlUTk9zbV9HaUd4TlE5d0V1ZEXSAXdBVV95cUxPbF93Sm1ObUlwamdBVHphZGtsT054bHBmdWkzTUJVbUV2ekQ5Yi1FaTVfekVnNnBOcHBCblloTXlTZ0hUNFdlNllLVkp0aHQtZzZjZ1VxZHRzVlcwbFRfajFyOEVWT2lLdGlxNUk1V0hsN1ZhMUM2RQ?oc=5",
-      "publishedAt": "2026-10-15T07:04:05.000Z"
-    },
-    {
-      "title": "[속보] 코스닥 장초반 5%대 급락…알테오젠·에코프로·심텍 등 시총 상위 종목 일제히 하락",
-      "source": "CBC뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5yRU4tdXhoNTg5eDF6bHE0YTdIYlhmZ2pFem9hNTk1cWZqY1hGTG02NWJURzYxeU1tTkFkSWdpaTlfT0R6aXVrNndIUmpaYzFHRkFra0sxQmlBNklvc0VDcEdQNHpxVW5y?oc=5",
-      "publishedAt": "2026-10-15T00:16:38.000Z"
+      "title": "美 국채금리 하락에 … 모처럼 웃은 韓 바이오株",
+      "source": "매일경제 마켓",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9WMEJqVVQzeklBeXJZWWRxOC1FTG9YdGFBSzRqNmZDRE9NV0FYR2FCV2MxVDNyR3hXZ3RQdExPRzlqQmhpZjZvWE5SdjVxR3lzMkE?oc=5",
+      "publishedAt": "2026-10-16T08:41:56.000Z"
     }
   ],
   "dart": [],
@@ -157,9 +127,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 760.82,
-    "vs": -63.06,
-    "fltRt": -7.65
+    "clpr": 794.78,
+    "vs": 33.96,
+    "fltRt": 4.46
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -168,7 +138,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-16T06:34:46.467Z",
+  "builtAt": "2026-10-19T07:07:19.308Z",
   "archiveDays": 120,
-  "archiveFrom": "20260417"
+  "archiveFrom": "20260420"
 }
