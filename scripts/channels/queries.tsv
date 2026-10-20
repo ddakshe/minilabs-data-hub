@@ -1,0 +1,92 @@
+# 발굴 질의 — `discover.py` 가 읽는다.  카테고리 <TAB> 세부 <TAB> 검색어
+#
+# 🔑 **질의가 곧 카테고리다.** 카테고리를 늘리는 일 = 여기에 줄을 추가하는 일.
+#    유튜브 videoCategory 에는 경제·부동산·도시개발이 없어서 우리가 만든다.
+# 🚨 한 줄이 search 호출 하나이고 비싸다(1회 100 units · 하루 상한 60).
+#    커서가 하루 PER_RUN 줄씩 돌고 다음 날 이어서 간다 — "한번에 다 말고 매일 조금씩".
+# 2026-10-20: 「넓게(먹방·브이로그)」 대신 「깊게(경제 안에서 세분화)」로 정했다.
+#    넓은 쪽은 플레이보드·유튜브 추천이 가장 강하고 분류 노동이 선형으로 는다.
+
+econ	macro	경제 유튜브
+econ	macro	금리 환율
+econ	macro	경제 뉴스 해설
+econ	macro	거시경제 전망
+econ	macro	인플레이션 물가
+econ	macro	연준 FOMC
+econ	macro	국가부채 재정
+econ	macro	환율 달러
+econ	kr-stock	주식 투자
+econ	kr-stock	기업 분석
+econ	kr-stock	코스피 전망
+econ	kr-stock	테마주 급등주
+econ	kr-stock	차트 기술적분석
+econ	kr-stock	가치투자
+econ	kr-stock	퀀트 투자
+econ	kr-stock	공모주 청약
+econ	us-stock	미국주식
+econ	us-stock	나스닥 전망
+econ	us-stock	테슬라 주식
+econ	us-stock	반도체 엔비디아
+econ	us-stock	미국 옵션 투자
+econ	us-stock	해외주식 투자
+econ	etf	ETF 투자
+econ	etf	인덱스 적립식
+econ	etf	레버리지 ETF
+econ	etf	커버드콜 ETF
+econ	dividend	배당주
+econ	dividend	월배당 투자
+econ	dividend	배당성장 ETF
+econ	dividend	배당금 생활
+econ	pension	연금저축 IRP
+econ	pension	퇴직연금
+econ	pension	ISA 계좌
+econ	pension	노후 준비 자산
+econ	tax	절세 세금
+econ	tax	종합소득세
+econ	tax	양도소득세
+econ	personal	재테크
+econ	personal	파이어족 조기은퇴
+econ	personal	월급 재무설계
+econ	personal	보험 리모델링
+econ	crypto	비트코인 투자
+econ	crypto	알트코인 분석
+econ	biz	창업 자영업
+econ	biz	스타트업 투자
+
+realty	home	부동산
+realty	home	아파트 투자
+realty	home	청약
+realty	home	전세 월세
+realty	home	분양
+realty	home	임장 손품
+realty	redev	재건축 재개발
+realty	redev	리모델링 정비사업
+realty	auction	경매 부동산
+realty	auction	공매 권리분석
+realty	comm	상가 투자
+realty	comm	꼬마빌딩 건물
+realty	comm	지식산업센터
+realty	land	토지 투자
+realty	land	농지 임야
+realty	tax	부동산 세금
+realty	tax	취득세 보유세
+realty	rent	임대사업자
+realty	rent	월세 수익률
+
+urban	plan	도시개발
+urban	plan	도시계획
+urban	plan	신도시
+urban	plan	택지지구
+urban	plan	도시재생
+urban	transit	GTX 노선
+urban	transit	교통 철도
+urban	transit	광역교통
+urban	transit	지하철 연장
+urban	region	지역 개발 호재
+urban	region	토지 개발
+urban	region	산업단지
+
+# 🚧 「넓게」는 2주 판정 통과 뒤에 푼다. 수집은 공짜지만 분류 노동이 상한이다.
+# food	mukbang	먹방
+# vlog	daily	브이로그
+# job	intro	직업 소개

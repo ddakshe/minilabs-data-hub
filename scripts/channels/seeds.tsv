@@ -1,0 +1,50 @@
+# 씨앗 채널 — 손으로 고른 목록. `resolve.py` 가 읽는다.
+# 형식:  카테고리 <TAB> 이름 <TAB> 핸들(없으면 빈칸)
+#
+# 🚨 핸들이 있으면 1 unit, 없으면 search 로 찾아 약 100 units 다. 핸들을 아는 것만 적었다.
+# 🚨 **이름으로 찾은 것은 사람이 눈으로 확인해야 한다.** 동명 채널로 잘못 꽂히는 것이
+#    이 단계의 유일한 실패 모드이고, 잘못 꽂히면 2주 뒤 판정이 통째로 오염된다.
+#    `resolve.py` 가 끝에 검수 목록을 뽑아 준다.
+# 카테고리는 우리가 정한 것이다 — 유튜브 videoCategory 에는 경제·부동산·도시개발이 없다.
+
+econ	삼프로TV	@3protv
+econ	슈카월드	@syukaworld
+econ	언더스탠딩	
+econ	김작가TV	
+econ	전인구경제연구소	
+econ	박곰희TV	
+econ	소수몽키	
+econ	미국주식으로 은퇴하기	
+econ	김단테	
+econ	염승환	
+econ	815머니톡	
+econ	머니인사이드	
+econ	티타임즈TV	
+econ	홍춘욱	
+econ	지식한잔	
+econ	한국경제TV	
+econ	SBS Biz	
+econ	매일경제TV	
+econ	이데일리TV	
+econ	연합뉴스경제TV	
+
+realty	부동산읽어주는남자	
+realty	월급쟁이부자들TV	
+realty	빠숑의 세상 답사기	
+realty	땅집고	
+realty	집코노미TV	
+realty	렘군	
+realty	투미TV	
+realty	부동산김사부TV	
+realty	쇼킹부동산	
+realty	아임해피	
+realty	붇옹산	
+realty	삼토시	
+realty	다꿈스쿨	
+realty	직방	
+
+# 🚧 도시개발은 씨앗이 얕다. 전업 채널이 드물고 부동산 채널이 겸해서 다룬다.
+# 여기가 **발굴(`queries.tsv`)로 채워야 하는 카테고리**다. 2주 뒤에 이 칸이 몇 개까지
+# 찼는지가 "카테고리를 쪼갤 수 있는가" 의 답이 된다.
+urban	대한교통학회	
+urban	국토교통부	
