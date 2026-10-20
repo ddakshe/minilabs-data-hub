@@ -1,0 +1,131 @@
+{
+  "code": "000250",
+  "name": "삼천당제약",
+  "market": "KOSDAQ",
+  "basDt": "20261019",
+  "price": {
+    "code": "000250",
+    "name": "삼천당제약",
+    "market": "KOSDAQ",
+    "basDt": "20261019",
+    "close": 210500,
+    "vs": 6000,
+    "fltRt": 2.93,
+    "open": 203000,
+    "high": 212000,
+    "low": 200000,
+    "prevClose": 204500,
+    "volume": 85334,
+    "tradeValue": 17563405250,
+    "week52": {
+      "low": 126500,
+      "high": 1184000,
+      "position": 0.07943262411347518,
+      "days": 244,
+      "from": "20251019"
+    },
+    "recent5": [
+      {
+        "basDt": "20261013",
+        "fltRt": -0.94,
+        "open": 199000,
+        "high": 215000,
+        "low": 196400,
+        "close": 210500
+      },
+      {
+        "basDt": "20261014",
+        "fltRt": -2.14,
+        "open": 207000,
+        "high": 212000,
+        "low": 201000,
+        "close": 206000
+      },
+      {
+        "basDt": "20261015",
+        "fltRt": -6.46,
+        "open": 194600,
+        "high": 203000,
+        "low": 188300,
+        "close": 192700
+      },
+      {
+        "basDt": "20261016",
+        "fltRt": 6.12,
+        "open": 199000,
+        "high": 214000,
+        "low": 193000,
+        "close": 204500
+      },
+      {
+        "basDt": "20261019",
+        "fltRt": 2.93,
+        "open": 203000,
+        "high": 212000,
+        "low": 200000,
+        "close": 210500
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 165927,
+      "ratio": 0.51
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 528,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-10-20T06:50:45.206Z"
+  },
+  "facts": [
+    "코스닥보다 1.15%p 높았어요.",
+    "거래량은 20일 평균의 0.5배예요.",
+    "시가보다 7,500원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "삼천당제약 핵심기술 “자사 소유” 반박에도…‘대만기업 보유설’ 일파만파",
+      "source": "쿠키뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFB3YTUzc1o0QVJ1a2p2am96RVZ3WTRWWHZUUzZGcjI5dmZyTzRPZzQ0ZVdrTktreXhHTE5hTmlUeVQtRHVqODY1SmdxUjZtVWpNeF80Q3M3SkpHVjNyTFFhamE3Zw?oc=5",
+      "publishedAt": "2026-10-18T16:00:35.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20260814",
+      "holder": "윤대인",
+      "ratio": 37.61,
+      "ratioChange": 0,
+      "reason": "특별관계자(전인석)의 연부연납을 위한 주식 담보계약 체결 및 · 특별관계자(전인석, 윤은화)의 납세담보 제공",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003962"
+    },
+    {
+      "kind": "major",
+      "date": "20260723",
+      "holder": "윤대인",
+      "ratio": 37.61,
+      "ratioChange": 0,
+      "reason": "특별관계자(전인석, 윤은화)의 주식 담보 계약기간 연장",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260723000516"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 808.89,
+    "vs": 14.11,
+    "fltRt": 1.78
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-20T06:52:00.915Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260421"
+}

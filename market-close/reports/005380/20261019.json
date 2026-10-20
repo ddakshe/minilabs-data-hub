@@ -1,0 +1,124 @@
+{
+  "code": "005380",
+  "name": "현대차",
+  "market": "KOSPI",
+  "basDt": "20261019",
+  "price": {
+    "code": "005380",
+    "name": "현대차",
+    "market": "KOSPI",
+    "basDt": "20261019",
+    "close": 326000,
+    "vs": 14000,
+    "fltRt": 4.49,
+    "open": 304500,
+    "high": 326000,
+    "low": 302500,
+    "prevClose": 312000,
+    "volume": 554076,
+    "tradeValue": 177068712000,
+    "week52": {
+      "low": 248000,
+      "high": 750000,
+      "position": 0.1553784860557769,
+      "days": 244,
+      "from": "20251019"
+    },
+    "recent5": [
+      {
+        "basDt": "20261013",
+        "fltRt": -1.56,
+        "open": 307500,
+        "high": 315500,
+        "low": 299000,
+        "close": 315000
+      },
+      {
+        "basDt": "20261014",
+        "fltRt": -0.48,
+        "open": 310000,
+        "high": 321500,
+        "low": 307500,
+        "close": 313500
+      },
+      {
+        "basDt": "20261015",
+        "fltRt": -5.74,
+        "open": 300000,
+        "high": 302500,
+        "low": 289000,
+        "close": 295500
+      },
+      {
+        "basDt": "20261016",
+        "fltRt": 5.58,
+        "open": 297000,
+        "high": 320500,
+        "low": 295500,
+        "close": 312000
+      },
+      {
+        "basDt": "20261019",
+        "fltRt": 4.49,
+        "open": 304500,
+        "high": 326000,
+        "low": 302500,
+        "close": 326000
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 533333,
+      "ratio": 1.04
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 528,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-10-20T06:50:08.503Z"
+  },
+  "facts": [
+    "코스피보다 2.73%p 높았어요.",
+    "거래량은 20일 평균의 1.0배예요.",
+    "시가보다 21,500원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "한국차·K배터리 어쩌나···BYD, 현대차 보다 3배 빠른 ‘9분 완충 생태계’ 통째 수출",
+      "source": "경향신문",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBSTDhtWk5aXzZvTzJjM1ZvenFuU3Zpa2tBWktKMzFwckhHV2F6VERvYWtGVmF6QVBGdVZITVlmRGFSc1lOT0s0ejhodjE1WEczV2NjT3BYOGgyQdIBX0FVX3lxTFBnM0FXQlJMV3E5OG1tYVN2ZWlMdURydjNhd3p0UnF0Tl9mRUZqdjM4enloLU1QNEl2Z3pIT2RHd1RjbWJQdVktQ2taMEJWQ3hJZm04ZXFvTFluUG9XYklz?oc=5",
+      "publishedAt": "2026-10-19T06:37:00.000Z"
+    },
+    {
+      "title": "“유럽 홀린 중국차 보고 절망 느껴…현대차·기아도 위험”",
+      "source": "서울경제",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1OTlhVeVIxbkN1cFQ2Rkg2UFVtZ3NyVEhZM3AwdnUyOFMtS0FsZjZyV05sZVRCR2lUMVg1Y3ZJS3JkalZGSjlrVnotZGFEYl85eWfSAVNBVV95cUxPN2lOTExpZGNrZUJVNjMzRERJY24wWmhweGxvSWZBaXlZc3V3ZkpZYjVMMTlvTU9icDJ0bWxzSURiWWR4MDN5SWh2TTZjY215clRLQQ?oc=5",
+      "publishedAt": "2026-10-19T07:03:01.000Z"
+    },
+    {
+      "title": "현대차, ‘아반떼 N 모노크롬’ 공개 | 뉴스 | 현대자동차그룹",
+      "source": "Hyundai Motor Group",
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPU0RMa3F1M1lCUXhiWUVIM1NoNDhJVnM2ZlNlVWRXRENfS1B5dU5yZjNadWhfczBpQ1NfRGJRdXFLa1ZmeU1SWnowVF9LQXRLXzVjc2lIX3JwV2haTERJZFhsYzdTa2JBZWNrRzVnRHFFOHU4MHQ1MUl1NnNpMUJTMmp5WWlRZlR1dUJMdHNRRVpCbkJh?oc=5",
+      "publishedAt": "2026-10-19T01:00:00.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 5768.01,
+    "vs": 99.96,
+    "fltRt": 1.76
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-20T06:52:00.802Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260421"
+}

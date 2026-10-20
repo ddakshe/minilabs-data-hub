@@ -2,37 +2,29 @@
   "code": "034020",
   "name": "두산에너빌리티",
   "market": "KOSPI",
-  "basDt": "20261016",
+  "basDt": "20261019",
   "price": {
     "code": "034020",
     "name": "두산에너빌리티",
     "market": "KOSPI",
-    "basDt": "20261016",
-    "close": 64600,
-    "vs": 1300,
-    "fltRt": 2.05,
-    "open": 63900,
-    "high": 66400,
-    "low": 63500,
-    "prevClose": 63300,
-    "volume": 2272461,
-    "tradeValue": 147768096550,
+    "basDt": "20261019",
+    "close": 66600,
+    "vs": 2000,
+    "fltRt": 3.1,
+    "open": 62700,
+    "high": 66600,
+    "low": 62000,
+    "prevClose": 64600,
+    "volume": 1843684,
+    "tradeValue": 119290217700,
     "week52": {
       "low": 60200,
       "high": 136400,
-      "position": 0.05774278215223097,
-      "days": 245,
-      "from": "20251016"
+      "position": 0.08398950131233596,
+      "days": 244,
+      "from": "20251019"
     },
     "recent5": [
-      {
-        "basDt": "20261012",
-        "fltRt": -8.33,
-        "open": 75600,
-        "high": 75700,
-        "low": 71200,
-        "close": 71500
-      },
       {
         "basDt": "20261013",
         "fltRt": -1.82,
@@ -64,72 +56,50 @@
         "high": 66400,
         "low": 63500,
         "close": 64600
+      },
+      {
+        "basDt": "20261019",
+        "fltRt": 3.1,
+        "open": 62700,
+        "high": 66600,
+        "low": 62000,
+        "close": 66600
       }
     ],
     "volumeVs20d": {
-      "avg20": 2549925,
-      "ratio": 0.89
+      "avg20": 2501919,
+      "ratio": 0.74
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 527,
-      "rows52w": 245
+      "rows": 528,
+      "rows52w": 244
     },
-    "generatedAt": "2026-10-19T07:06:05.095Z"
+    "generatedAt": "2026-10-20T06:50:47.775Z"
   },
   "facts": [
-    "코스피가 오른 만큼 올랐어요.",
-    "거래량은 20일 평균의 0.9배예요.",
-    "시가보다 700원 높게 마감했어요."
+    "코스피보다 1.34%p 높았어요.",
+    "거래량은 20일 평균의 0.7배예요.",
+    "시가보다 3,900원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "두산그룹, CFO 라인 약진…김민철·박상현 동반 부회장 승진",
-      "source": "Daum",
-      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE40eFkzZVdxUUVMc29VV0F1N0tMOWltby0wSjVTOXZkM3NPS0t3ZFE3RTRuYzNPWmVnV3R0MmYwLS1nakJlYXc?oc=5",
-      "publishedAt": "2026-10-16T09:09:57.000Z"
+      "title": "두산에너빌리티 장 초반 약세… 6만2700원 거래",
+      "source": "제주교통복지신문",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9jR01zMGxza0J6UDRHbDduM1JlTWpudnNrcEljcjJMMUU1WlgzOTRYdGIwcFNSLVlTTS1RVjcxdzVuY1BJYU1wR3Qwclo0N0xQOThsd1VNS1Q3MmxEUDBRSg?oc=5",
+      "publishedAt": "2026-10-19T01:16:57.000Z"
     },
     {
-      "title": "두산 김민철·두산에너빌 박상현, 부회장 승진",
-      "source": "연합인포맥스",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBDeF8wd3lPd0xRaGFnbjdUaHdsUjVBMlNCSkczYkk3NlBlU21UQzI1RXdxT2lyblBqOUJ1ZEZEdWltcGhscUZGR2xnd1JTR3JxMVJxa3h6TUVlcHA2Smxncmh5OXZxc211REJvQUxQNVk?oc=5",
-      "publishedAt": "2026-10-16T08:01:00.000Z"
+      "title": "두산에너빌리티, 박상현 부회장 승진ㆍ송용진 신임 COO 선임",
+      "source": "인사이트N파워",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1rUDZWbTg2cXZXazYxT1E4Qno5VmFwb29TTlZjYmFraWZoS0VFM2E2UWhadEx2UG4tZHY0QUR6a2hFMDc5UjVYYUExSUNwNnhzX09MWVNmWktBMnp0dWFsOHMxVDZMUQ?oc=5",
+      "publishedAt": "2026-10-18T15:37:20.000Z"
     },
     {
-      "title": "두산에너빌리티 CFO 박상현 부회장 승진, 신임 COO 송용진 사장 선임",
-      "source": "한국경제",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBqbDBTeXd0Z0p6LURFUTNmVVl6VlBLUUMwWHNLbDl6NFV4cGVtOXRUSUVMclByOW1KOF9tcS16dnJTeG1YOUJOc1BmQnd2dWJSWkJvand3bjIwUQ?oc=5",
-      "publishedAt": "2026-10-16T07:18:51.000Z"
-    },
-    {
-      "title": "\"두산에너빌리티, 연내 SMR 추가 수주 기대…목표가는 하향\"-하나",
-      "source": "한국경제",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE51TG1MYjNfaXJLemNBUGN2Zng4WDhtaDVZUnoxdDVXME9QMHJKa2ZISWJGOW5Ta0NJTVg2dV9lcFVrSHMtVFROZ1MzQmJ0VjFYVVhRY0liMXRNZw?oc=5",
-      "publishedAt": "2026-10-15T22:56:08.000Z"
-    },
-    {
-      "title": "두산에너빌리티, 박상현 부회장 승진·송용진 COO 선임",
-      "source": "전기신문",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE04QzZzZ0pENkdIT3FGZFVSa1N4bDYzWEctZnJVOE5fajctZGdHMWZiMGRXeHZDdjNwMXRCUHpxaDJrQmhFRjJYeUJtVHljd3pNNEVueXBHSHhQVWVYYUxKbW9zaDlsc0duYnJmcNIBcEFVX3lxTE5yWXZ2VVNJbE9VQW00dXllS3ZtVmZYY2xCNlY0NUwxX2ZmaDZPSXRqX1cydF9WRVlVQ1JGWmJmYl92R09GTDlfTEJKX1VPdy1UNWRtd05YVGktQUtwWUl6YVRGX19zSzVhNHRqQ3N6enY?oc=5",
-      "publishedAt": "2026-10-16T07:47:07.000Z"
-    },
-    {
-      "title": "두산에너빌리티, 박상현 부회장 승진·송용진 신임 COO 선임",
-      "source": "연합뉴스TV",
-      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9LZUpPdjUwZW1QVzA2dXpZa0lJckR6ci1fRHFVcVFSVWF6bEt3cGhLNGltZGhPVVN1NWtPZG1OY0h0ZDFDUFp4TERldS0zUHU2T0kySlhZUVc4MXdtd0NrcmtCTWU2N1U?oc=5",
-      "publishedAt": "2026-10-16T07:33:00.000Z"
-    },
-    {
-      "title": "두산·에너빌리티 ‘재무통’ 김민철·박상현, 부회장 승진",
-      "source": "뉴스토마토",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9YbGg3R2tJdHV5MGVSaXlUTkh5RHM2ZDdYaktKNmdUSE04Z3NSQmpLVGpLZE5sell2M1pHelRpaU9SV0xzLXFSbnRfOEs5elZYNmNEYWlvZFg1R1VlaE1yQw?oc=5",
-      "publishedAt": "2026-10-16T08:28:59.000Z"
-    },
-    {
-      "title": "㈜두산 김민철·두산에너빌리티 박상현, 부회장 승진",
-      "source": "중앙일보",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9GYUFoN1gybHIxcUJCeGZxRk9CYWhuZE1qMHZRZ0NDSjFadHlvWDlWaTZMMWwyWk9aVXJoT1JjM0ZJZlJPelZpMEZHRWVIUUE2WWRTeHZB?oc=5",
-      "publishedAt": "2026-10-16T08:22:14.000Z"
+      "title": "박상현 두산에너빌리티 부회장 승진",
+      "source": "경남매일",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5FOTV6U2xHRVBzd0dsVS01ejlhcDlGVlRhWnpiZnlMV1kyN2ZYRzdtZGVsM0tuQTdoQUpCUDJWYmhBaXRycW91ZWxjZmFxWFp0a3NVWnBJQkVvRkw1UjBQZnJWMnUxNGFxOUE?oc=5",
+      "publishedAt": "2026-10-19T12:04:42.000Z"
     }
   ],
   "dart": [],
@@ -156,9 +126,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5668.05,
-    "vs": 113.83,
-    "fltRt": 2.05
+    "clpr": 5768.01,
+    "vs": 99.96,
+    "fltRt": 1.76
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -167,7 +137,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-19T07:07:19.386Z",
+  "builtAt": "2026-10-20T06:52:00.923Z",
   "archiveDays": 120,
-  "archiveFrom": "20260420"
+  "archiveFrom": "20260421"
 }

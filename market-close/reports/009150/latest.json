@@ -2,37 +2,29 @@
   "code": "009150",
   "name": "삼성전기",
   "market": "KOSPI",
-  "basDt": "20261016",
+  "basDt": "20261019",
   "price": {
     "code": "009150",
     "name": "삼성전기",
     "market": "KOSPI",
-    "basDt": "20261016",
-    "close": 1188000,
-    "vs": 25000,
-    "fltRt": 2.15,
-    "open": 1218000,
-    "high": 1222000,
-    "low": 1154000,
-    "prevClose": 1163000,
-    "volume": 720703,
-    "tradeValue": 858781908350,
+    "basDt": "20261019",
+    "close": 1170000,
+    "vs": -18000,
+    "fltRt": -1.52,
+    "open": 1110000,
+    "high": 1175000,
+    "low": 1100000,
+    "prevClose": 1188000,
+    "volume": 856321,
+    "tradeValue": 982505267571,
     "week52": {
-      "low": 201500,
+      "low": 204000,
       "high": 2270000,
-      "position": 0.47691563935218756,
-      "days": 245,
-      "from": "20251016"
+      "position": 0.4675701839303001,
+      "days": 244,
+      "from": "20251019"
     },
     "recent5": [
-      {
-        "basDt": "20261012",
-        "fltRt": -3.82,
-        "open": 1551000,
-        "high": 1583000,
-        "low": 1476000,
-        "close": 1487000
-      },
       {
         "basDt": "20261013",
         "fltRt": -8.34,
@@ -64,82 +56,98 @@
         "high": 1222000,
         "low": 1154000,
         "close": 1188000
+      },
+      {
+        "basDt": "20261019",
+        "fltRt": -1.52,
+        "open": 1110000,
+        "high": 1175000,
+        "low": 1100000,
+        "close": 1170000
       }
     ],
     "volumeVs20d": {
-      "avg20": 637077,
-      "ratio": 1.13
+      "avg20": 649232,
+      "ratio": 1.32
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 527,
-      "rows52w": 245
+      "rows": 528,
+      "rows52w": 244
     },
-    "generatedAt": "2026-10-19T07:05:23.004Z"
+    "generatedAt": "2026-10-20T06:50:05.853Z"
   },
   "facts": [
-    "코스피보다 0.1%p 높았어요.",
-    "거래량은 20일 평균의 1.1배예요.",
-    "시가보다 30,000원 낮게 마감했어요."
+    "코스피보다 3.28%p 낮았어요.",
+    "거래량은 20일 평균의 1.3배예요.",
+    "시가보다 60,000원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "삼성전기 8조 투자 이어 SK 반도체 소재기업 세종공장 확장 추진",
-      "source": "연합뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE82N25Oai1MY080MlY3MUdaWnlXN1ZkS2h0NGU2eVRPeEg2blZPV2Fud2oycF9nUVFZNW83TnFGZzdROE5jeWdpbEJmLUZDZW95VndJM09WUUU4c1BqMlhpadIBYEFVX3lxTE82N25Oai1MY080MlY3MUdaWnlXN1ZkS2h0NGU2eVRPeEg2blZPV2Fud2oycF9nUVFZNW83TnFGZzdROE5jeWdpbEJmLUZDZW95VndJM09WUUU4c1BqMlhpaQ?oc=5",
-      "publishedAt": "2026-10-15T21:00:06.000Z"
+      "title": "삼성전기, 3605억원 규모 '메모리 반도체용 패키지기판' 장기 공급계약",
+      "source": "전자신문",
+      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFA4NG5JNVNLQ3FxTW9RZlR6WlhIQXJRY3k4SVlVRFBNZVpfVVFZMVJRWUFaUFdQNXZDbkwxMzcxZUhRQ2ptMHZsdEhOSUNsQQ?oc=5",
+      "publishedAt": "2026-10-19T08:55:36.000Z"
     },
     {
-      "title": "삼성전기 글래스 기판 장비 공급사 명단",
-      "source": "KIPOST",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE53QjdXbDk3WkhQV1RMZnlTcDhkTWhLUmJTUF9EaHJtVzNoQTktcG1SbkhhVUx4cUhqWno5SW9Uc3piLW50d292aEZMOXhrOVQ4Tm1KTVd6QW5FcExWUGtzQzZVM28xbHls?oc=5",
-      "publishedAt": "2026-10-16T03:59:37.000Z"
+      "title": "삼성전기, 글로벌 기업과 3천605억원 규모 반도체 기판 공급계약",
+      "source": "연합인포맥스",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBvSGhqcU9mNWdMZFJqQmF0Z2VfU0RuWVhGR044MHpzQVJLQWxXcTh1XzdQek1KS0tNQUJ4NDZBdXJVUDBJdS1ZenNZZ0xWVGNTeWk3dEJuaS1TRldyMzNTaWdwWkZya3FLTVVRbmx4OTA?oc=5",
+      "publishedAt": "2026-10-19T09:25:00.000Z"
     },
     {
-      "title": "AI 서버용 MLCC 업은 삼성전기, 3분기 영업익 2배 뛰나",
-      "source": "머니투데이",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBrdXZicFFudDYxUVNhbVlsT1d4TjNXVXZhQ21aVWVLVTlDc0h2UE5SQXVYRVpKTmE0dDhzVHNQUlBOMmpjYy1JdzNnSXpiRlVWUXQxNUdaVTZPS2h1ODBmbnZqQWd1aG5PcVBUMtIBckFVX3lxTFBiVFBNMU91SC1hTG9rZzBrT3FGcms2Tk9YU1RSdVpfc0gzZ0trR3dtekQ3eGNKMUFBMmpsdFRsaExURWZhRlJGQWFjTkM2UlFRTGF1WUJGNUxYY3JPMVdkbUZjTFZWbXVlOVdmc2hhbFdoUQ?oc=5",
-      "publishedAt": "2026-10-15T20:40:00.000Z"
+      "title": "삼성전기, 메모리 반도체용 기판 3605억원 공급계약",
+      "source": "글로벌이코노믹",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOcHVaaWRFUzhWU2NDLTdoU3BoMVk1SElOb0pIcDRtdzFZX3ByYUt6Z0twckRGLXRZRWYyckxFT21IRWJ2Vlk1M3VlTllYcmp1ZnZuYlhZS1VsUVgyUDc0alg2QXVpQ2hSbEJrengwOHdTc0UyQWVuRWl6N1VzWWlLc1JNQjlRZw?oc=5",
+      "publishedAt": "2026-10-19T10:12:29.000Z"
     },
     {
-      "title": "삼성전기 4.3조 이어 SK트리켐도…세종 명학산단 달군다 By EBN",
-      "source": "Investing.com 한국어",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5Ua3M5aC1Gb2FiLTh5Vmx5TWVzdl9jVjFUX3Y1WE5halNWUzdpUVpDU2p1dndmX0NDeUhpbUcta1FPYWhpU202dzhyR0ZGajhIaExZX1VEQ2JYLV9JNFdHdzdZa2lQYUUyQ3lkUDJrT2o?oc=5",
-      "publishedAt": "2026-10-16T00:11:00.000Z"
+      "title": "삼성전기, 3600억 규모 '메모리 기판' 공급계약 체결",
+      "source": "신아일보",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9CZFB3VUpPSWJiQ3plUWctMVQtTEZnTHFWYUVZaFgxcnNpOEIycFkzeVBGeG9SVURmUG9MVUEteUM1bEh5QVJyUDVaaEhKY0lWRjJSTjhMdWNqdUFobU5DV3VOcG9STEFNcE90MWNYMEg?oc=5",
+      "publishedAt": "2026-10-19T10:14:19.000Z"
     },
     {
-      "title": "[ETF 언박싱] NH아문디 상반기 흥행카드 단독 상품화…삼성전기 고정",
-      "source": "딜사이트",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5ZSDQzZ09oRS03a3FHYkNpT2N5S1VjTkx6Yk9sM083RmVFLVVsWmNjZ1NRVDJUTWwzZ1FyOGVxTzdidVhWZVRyNjVkYTVmeWc?oc=5",
-      "publishedAt": "2026-10-16T00:02:05.000Z"
+      "title": "삼성전기, 글로벌 기업과 3605억원 규모 패키지기판 LTA 체결",
+      "source": "한국경제",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1VeV85dmtWUWtjcjF3TzI2V1I2WEY3aGhNNGhvWjhaWUVkTUt1WVdzOXRFdXN2aXpKc3dCYXBPbkRzZTFJaGtZTThmYUI4SHcyNnVkNVlJNmRtUQ?oc=5",
+      "publishedAt": "2026-10-19T09:03:50.000Z"
     },
     {
-      "title": "'삼성전기 4.3조 투자'·'SK트리켐 증설 추진'···세종, AI 반도체 공급망 거점으로",
-      "source": "스마트비즈",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBoVFMxWVNSMFg2clJvczJNbG9tMlg2Wm0xbmpFZDR2NGJXSWdxNHg1ZDliNjE0REMyT0FvTjJKaXo0M2h2VEZORlEzMlgwN0VPckE0bURTTzNDY1VHb0dkQXhieGltSVBuNXp1Zg?oc=5",
-      "publishedAt": "2026-10-16T01:16:29.000Z"
+      "title": "삼성전기, 3605억 규모 반도체 패키지 기판 수주",
+      "source": "IT조선",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9UMmxVRV9NMkNsTm9QSzNwTzJSalhCYmlhUWFpbHV5N2JwVlBOSnN1dlNiR1NkOXZxeHRxUTlEMDkyY2hKMVZyQi1ESW5DVWF4UmhRc2QxcmR2NlBMWVRkUGFyX1c3cmlsTldIZG9xSmLSAXRBVV95cUxNdlk4NExwTjFoVEVESWNINDVkMGQwYURQNHNZc012czA1UFlZME03MHVUM1N2Vmd4bVRTS2pzVEhPbk5QaWIwanVYcnJGaXh0TVFxNTlJSFJNNlNWQ2ZscXlBY1Q4eDd1MW9tTS1rNlcyYkwwOA?oc=5",
+      "publishedAt": "2026-10-19T08:54:09.000Z"
     },
     {
-      "title": "삼성전기 이어 SK트리켐도 세종공장 확장 추진…부지 확보 관건",
-      "source": "뉴스저널리즘",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBrZWJ2VlZCaGRHUU5oVG9IT3E2UFQyWjVxYjFZNHJlWUxRSG5DbnJYVkI3dXY1THRneXB1NVRCUmp0cGtfX3ptSXQxLVVCcjdkNEhiTk9kU0ZjU0dwNDhlNHh3N0t3dGNOcW80?oc=5",
-      "publishedAt": "2026-10-16T02:21:09.000Z"
+      "title": "삼성전기, MLCC 이어 메모리용 기판 3600억 계약…반년 새 4.3조 수주",
+      "source": "뉴스핌",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9FYnV6a1pFSzFMYVRaeXFRTGlNMkJuUjNWaXJaUUlnS0dXUFhObEVzSm02cUJORlRnSjhHS2JWLTJJMzhxeGRhX2oyNjZnLTJid1VFTjBLVllaNUVR?oc=5",
+      "publishedAt": "2026-10-19T08:50:00.000Z"
     },
     {
-      "title": "삼성전기 웃고 LG이노텍 주춤···3분기 실적 가른 'AI·환율'",
-      "source": "뉴스웨이",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1Nd0ZOQWJBZHRfX1BBbGdzeDF1SnIwY1hjSHVjaEdocEV6UEQ3V0E0QXk2aXNReTl6ZkQwcVNXZ3VSY09heFlaREtfOXU4blVfOE9hNE5LUUk2WUR6ZDFJM2drTDFYaHY2SWc?oc=5",
-      "publishedAt": "2026-10-15T21:01:22.000Z"
+      "title": "삼성전기, 글로벌 기업에 3605억원 규모 반도체 기판 공급",
+      "source": "뉴스톱",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1GZDR5WjhPSnVHWlpYVXYyNVZldjhDNnM1cjFmUzdmRVZPYmN0dWlxUm91bGFDbnJMRmdNVGh3Q1pfT0tXYXEySWpQNVMweXd4WXR5M3BPWlpjVFZ5dFIzU2NYd2ZSd1ZhYjN3NndiNA?oc=5",
+      "publishedAt": "2026-10-19T09:28:14.000Z"
     }
   ],
-  "dart": [],
+  "dart": [
+    {
+      "title": "단일판매ㆍ공급계약체결              ",
+      "filer": "삼성전기",
+      "receiptNo": "20261019800610",
+      "date": "20261019",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261019800610"
+    }
+  ],
   "ownership": [],
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5668.05,
-    "vs": 113.83,
-    "fltRt": 2.05
+    "clpr": 5768.01,
+    "vs": 99.96,
+    "fltRt": 1.76
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -148,7 +156,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-19T07:07:19.262Z",
+  "builtAt": "2026-10-20T06:52:00.795Z",
   "archiveDays": 120,
-  "archiveFrom": "20260420"
+  "archiveFrom": "20260421"
 }

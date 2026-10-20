@@ -1,0 +1,101 @@
+{
+  "code": "000250",
+  "name": "삼천당제약",
+  "market": "KOSDAQ",
+  "basDt": "20260921",
+  "price": {
+    "code": "000250",
+    "name": "삼천당제약",
+    "market": "KOSDAQ",
+    "basDt": "20260921",
+    "close": 161700,
+    "vs": 2100,
+    "fltRt": 1.32,
+    "open": 161100,
+    "high": 163400,
+    "low": 160300,
+    "prevClose": 159600,
+    "volume": 48445,
+    "tradeValue": 7840536600,
+    "week52": {
+      "low": 126500,
+      "high": 1184000,
+      "position": 0.033286052009456266,
+      "days": 243,
+      "from": "20250922"
+    },
+    "recent5": [
+      {
+        "basDt": "20260915",
+        "fltRt": -0.19,
+        "open": 156300,
+        "high": 161800,
+        "low": 154700,
+        "close": 157500
+      },
+      {
+        "basDt": "20260916",
+        "fltRt": -0.89,
+        "open": 157000,
+        "high": 157000,
+        "low": 153800,
+        "close": 156100
+      },
+      {
+        "basDt": "20260917",
+        "fltRt": 4.74,
+        "open": 157600,
+        "high": 164200,
+        "low": 156900,
+        "close": 163500
+      },
+      {
+        "basDt": "20260918",
+        "fltRt": -2.39,
+        "open": 163600,
+        "high": 163600,
+        "low": 158600,
+        "close": 159600
+      },
+      {
+        "basDt": "20260921",
+        "fltRt": 1.32,
+        "open": 161100,
+        "high": 163400,
+        "low": 160300,
+        "close": 161700
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 81307,
+      "ratio": 0.6
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 528,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-10-20T06:52:00.913Z"
+  },
+  "facts": [
+    "코스닥보다 0.21%p 높았어요.",
+    "거래량은 20일 평균의 0.6배예요.",
+    "시가보다 600원 높게 마감했어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 836.27,
+    "vs": 9.15,
+    "fltRt": 1.11
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null,
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-20T06:52:00.913Z"
+}

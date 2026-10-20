@@ -2,37 +2,29 @@
   "code": "105560",
   "name": "KB금융",
   "market": "KOSPI",
-  "basDt": "20261016",
+  "basDt": "20261019",
   "price": {
     "code": "105560",
     "name": "KB금융",
     "market": "KOSPI",
-    "basDt": "20261016",
-    "close": 160000,
-    "vs": 3300,
-    "fltRt": 2.11,
-    "open": 159800,
-    "high": 164900,
-    "low": 159000,
-    "prevClose": 156700,
-    "volume": 879796,
-    "tradeValue": 142259864600,
+    "basDt": "20261019",
+    "close": 162700,
+    "vs": 2700,
+    "fltRt": 1.69,
+    "open": 158900,
+    "high": 163200,
+    "low": 156700,
+    "prevClose": 160000,
+    "volume": 678165,
+    "tradeValue": 109048104169,
     "week52": {
-      "low": 113700,
+      "low": 113800,
       "high": 186200,
-      "position": 0.6386206896551724,
-      "days": 245,
-      "from": "20251016"
+      "position": 0.675414364640884,
+      "days": 244,
+      "from": "20251019"
     },
     "recent5": [
-      {
-        "basDt": "20261012",
-        "fltRt": 0,
-        "open": 164300,
-        "high": 164700,
-        "low": 160800,
-        "close": 162800
-      },
       {
         "basDt": "20261013",
         "fltRt": -0.25,
@@ -64,40 +56,98 @@
         "high": 164900,
         "low": 159000,
         "close": 160000
+      },
+      {
+        "basDt": "20261019",
+        "fltRt": 1.69,
+        "open": 158900,
+        "high": 163200,
+        "low": 156700,
+        "close": 162700
       }
     ],
     "volumeVs20d": {
-      "avg20": 917805,
-      "ratio": 0.96
+      "avg20": 906528,
+      "ratio": 0.75
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 527,
-      "rows52w": 245
+      "rows": 528,
+      "rows52w": 244
     },
-    "generatedAt": "2026-10-19T07:05:30.853Z"
+    "generatedAt": "2026-10-20T06:50:13.751Z"
   },
   "facts": [
-    "코스피보다 0.06%p 높았어요.",
-    "거래량은 20일 평균의 1.0배예요.",
-    "시가보다 200원 높게 마감했어요."
+    "코스피보다 0.07%p 낮았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가보다 3,800원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "[은행 임추위 돋보기][KB국민은행] 회장 교체 앞둔 KB…행추위 권한 확대 '검토 중' : 네이버 블로그",
-      "source": "Naver Blog",
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPSlRQNVdnX0FSLWxzU2xmOHhESjlMQUkzQjVKcERDVGlob016VmZmSWtlcFA3Vm5BR0RPd1NBV09fM0tCY29yVnRNbUk3a0FydUlXeVdUc3g4ckEzaVd6ZkRhZ05aYTNiQzdNSTZpbWZWTGYzR0JaMHp4Z1gtRjhDU2RKUHZpSEVLdkVOMVhMQQ?oc=5",
-      "publishedAt": "2026-10-16T08:06:00.000Z"
+      "title": "하나금융 '셀프 연임' 질타·KB금융은 칭찬…국감서 지배구조 논란 재부상",
+      "source": "연합인포맥스",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE0yT0NfYVNONEpxeWxtc2hmVENIRGlhVkpTeDBGT0VXYnZOSkhfbUxWb1ZGbDFGRHBYbWRlS2c5UXgzSkd6R09WQ19RYWttc2VFaXU4NjNGd2tIYjZhcDhSOGY4NDZtaUo1UkFoTmdMTnY?oc=5",
+      "publishedAt": "2026-10-19T08:49:35.000Z"
+    },
+    {
+      "title": "이재근 체제 시동 거는 KB... 해킹대응·AI전환 '시험대'",
+      "source": "파이낸셜뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE56RUNLNmI2RDN6Vl9QMDlBbzk5TG9vSnRjNHpxMkgwVzJ5MGdsakhQV0wxVDNWcVBKNWpLQXFJVS1jaF81akdUMTcyRUhyV2xVaGhuUGhwU3R3dw?oc=5",
+      "publishedAt": "2026-10-19T09:16:42.000Z"
+    },
+    {
+      "title": "\"KB 회장 교체 좋은 사례\"…금감원, 은행장 승계도 점검한다",
+      "source": "이데일리",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPSnFvSDhiOWFwV3ViWE5zUkdOSENHaDhaM0FkQThIeGwtb1NvSTdiWVBudkJVVVJKOG04ZXZYNjBUOFkyRlp6RWgwVWhXYkg0Uk5lS3RTak90QXMtTWVyclpNZkdNS3NmLTJNeFEtSE5OQ19taW5Id1djVzBVNGZ5cw?oc=5",
+      "publishedAt": "2026-10-19T08:05:56.000Z"
+    },
+    {
+      "title": "KB캐피탈, 저소득 가정 여성 청소년 310명에 친환경 여성용품 지원",
+      "source": "뉴스핌",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9zbVNJcDJ1cC16Z2liWG9HVWV1Q2tjSGJfMnNFYzBFNDFRT3JLN3BZdHpXaGtaaFlMX3Jwa1RJTnotTWlEVEtzVUk3Y0ZVZURBdVYtMTJKSFBkb0Zl?oc=5",
+      "publishedAt": "2026-10-19T06:41:00.000Z"
+    },
+    {
+      "title": "박홍배, 금융지주 지배구조 정조준…후보 선정 절차 등 지적",
+      "source": "MTN 머니투데이방송",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBMem5hSGgxaklwdk9LVmthNEhTRk5ON2lzcThpd0JhMF8tOVZUdzdpajNWOGVrb3BwRERIclRfbmVwSHFqU0h2NUpCdEdNc21lejY2RFVtdllnNVYyZ0NV?oc=5",
+      "publishedAt": "2026-10-19T10:01:37.000Z"
+    },
+    {
+      "title": "금융지주, 3분기 성적표 잇따라 나온다…23일부터 실적 발표",
+      "source": "스마트투데이",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE0wbXNicVdpMTMyZ2N0aVNpc1hCZnVvanFOVndQbVdtaUdCMlk0V254Y2ktUmUwRFJaUHlhMk43Z21HTVphSWxfTF94UGdkU2dteGF4eVZPWWY4cVYxWGVN?oc=5",
+      "publishedAt": "2026-10-19T08:19:00.000Z"
+    },
+    {
+      "title": "KB부동산신탁發 소송리스크, 재무 부담 'Up'",
+      "source": "DealSite경제TV",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFB2TFB5NjNmZVVOS3k2YWFvc0tra1NxcGgtU3ZsNzZCd3Y1YTBwc2V5Y2lFQktSd0VWTjZLNUR4cWwtdWhEZXAtY1d5RzNKTkYxQkVqM3VB?oc=5",
+      "publishedAt": "2026-10-18T23:30:23.000Z"
+    },
+    {
+      "title": "KB캐피탈, 여성 청소년 친환경 용품 지원…금융교육도 연계",
+      "source": "FETV",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB3QWNiVTNvYS13Z29zZjhKMVdrXy1uQXpXZUFNR1VyT1BPS1I4VWk1cGxUeU40ellOajNCb3d6QTVmNnhuT19aRlUwQldpMGRBMFMxeE0wQ05MLUhqRXktNzVwRm5QMGVf?oc=5",
+      "publishedAt": "2026-10-19T08:18:32.000Z"
     }
   ],
-  "dart": [],
+  "dart": [
+    {
+      "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+      "filer": "김성현",
+      "receiptNo": "20261019000211",
+      "date": "20261019",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261019000211"
+    }
+  ],
   "ownership": [],
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5668.05,
-    "vs": 113.83,
-    "fltRt": 2.05
+    "clpr": 5768.01,
+    "vs": 99.96,
+    "fltRt": 1.76
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -106,7 +156,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-19T07:07:19.286Z",
+  "builtAt": "2026-10-20T06:52:00.826Z",
   "archiveDays": 120,
-  "archiveFrom": "20260420"
+  "archiveFrom": "20260421"
 }

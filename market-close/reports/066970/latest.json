@@ -2,37 +2,29 @@
   "code": "066970",
   "name": "엘앤에프",
   "market": "KOSPI",
-  "basDt": "20261016",
+  "basDt": "20261019",
   "price": {
     "code": "066970",
     "name": "엘앤에프",
     "market": "KOSPI",
-    "basDt": "20261016",
-    "close": 93700,
-    "vs": -11000,
-    "fltRt": -10.51,
-    "open": 106300,
-    "high": 106300,
-    "low": 93200,
-    "prevClose": 104700,
-    "volume": 1080550,
-    "tradeValue": 104456634550,
+    "basDt": "20261019",
+    "close": 100500,
+    "vs": 6800,
+    "fltRt": 7.26,
+    "open": 89100,
+    "high": 100900,
+    "low": 88400,
+    "prevClose": 93700,
+    "volume": 631062,
+    "tradeValue": 61239201650,
     "week52": {
       "low": 65600,
       "high": 213000,
-      "position": 0.19063772048846675,
-      "days": 245,
-      "from": "20251016"
+      "position": 0.2367706919945726,
+      "days": 244,
+      "from": "20251019"
     },
     "recent5": [
-      {
-        "basDt": "20261012",
-        "fltRt": -8,
-        "open": 117300,
-        "high": 117400,
-        "low": 106000,
-        "close": 106900
-      },
       {
         "basDt": "20261013",
         "fltRt": 2.25,
@@ -64,48 +56,56 @@
         "high": 106300,
         "low": 93200,
         "close": 93700
+      },
+      {
+        "basDt": "20261019",
+        "fltRt": 7.26,
+        "open": 89100,
+        "high": 100900,
+        "low": 88400,
+        "close": 100500
       }
     ],
     "volumeVs20d": {
-      "avg20": 459610,
-      "ratio": 2.35
+      "avg20": 491408,
+      "ratio": 1.28
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 527,
-      "rows52w": 245
+      "rows": 528,
+      "rows52w": 244
     },
-    "generatedAt": "2026-10-19T07:06:07.589Z"
+    "generatedAt": "2026-10-20T06:50:50.367Z"
   },
   "facts": [
-    "코스피보다 12.56%p 낮았어요.",
-    "거래량은 20일 평균의 2.4배예요.",
-    "시가보다 12,600원 낮게 마감했어요."
+    "코스피보다 5.5%p 높았어요.",
+    "거래량은 20일 평균의 1.3배예요.",
+    "시가보다 11,400원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "미래 산업 움직이는 엘앤에프 세계 최초 '하이니켈' 기술의 힘[K산업, 미래설계자들]",
-      "source": "아시아경제",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1qMkVpVHAtWDBsekdMQWdRNWpLNXozREdQTjg2dkkyQzR5WWp4YzFaNlAzd0ZhX1ZKT2duNWRnZU9zSlpJNG5vSkg1TzVyWlJOcm1LXzFvT19iaklMX0lSTQ?oc=5",
-      "publishedAt": "2026-10-16T01:30:00.000Z"
+      "title": "엘앤에프, DIFA 2026 참가…울트라 하이니켈 NCM·LFP 양극재 동시 공개",
+      "source": "한국경제",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE0xbGNhbWNlOUF3NXRhM2wyYmhma3hVZmZ5X1VldllNMm9QMk51RUg3c19GN2pOU0dhazdrVG9RUDNDRzByWDZhUUZTLWFUT0ZRMEg0UlFSRkp4QQ?oc=5",
+      "publishedAt": "2026-10-19T01:00:07.000Z"
     },
     {
-      "title": "엘앤에프, LFP 키우는데 돈은 어디서…흑자 뒤 1.4조 빚더미",
-      "source": "한스경제",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBmZkxHb1RFejIzMDNiVU5zc2JPdDlJUm1lbzRxZXRJNEtiWC0yM0NXeW1CNFEzMklSYVpzSkNDSGlkcEMzN0Nkd0NvQzh4UDBqNlVRakVBei04RG5SYVNVVnRTbVFxNXRXMjlR0gFvQVVfeXFMTzVXeWFfcTQ3YXdFM0VxZlY2ZlJhT2RFRjl6SlNKMW1JWjdXNzVlUW1NTXRhSmN3elN5bUtnYVBnM2FFQU12akhXUXZPOVFDWTdUZ3l3aVFKVXJReUJOdzFWSnduNGVKa2MwWHdnNDNv?oc=5",
-      "publishedAt": "2026-10-15T22:30:00.000Z"
+      "title": "엘앤에프, DIFA 2026서 NCM·LFP 양극재 투트랙 전략 공개",
+      "source": "디지틀조선일보",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQd1lRSmFjUkZFS0F3bnBDbmhFTy1EWTJ2bzBsc1RMa2xwS3otN09xdlhjRk9Ed2tCMS1jOXNHempmdkVabHlOMjg3a2xUa0NMVGFQWkRyNzQ4OVcyUENfaENGWGY5QTNFbk5lYzdvLUprR2NtSVBaMHJ5TnJxZFRscElKVlhRczTSAXtBVV95cUxPbEFES2V6dGk3aW10ZTBTaHdUUFdVN1AtS3pnX1JJRzRuTXFkeWpmcXJ0cWVOVW9BOWpIWWVwYmNDRUNXcmZ3aUIzNi1YMV8xdkJBU0FTZV9GaHJUdmQ1VVk3Z0xCZjdrc1R1QmZWWkMwSEN6akhHb3RxMmc?oc=5",
+      "publishedAt": "2026-10-19T00:36:00.000Z"
     },
     {
-      "title": "中 의존한 LFP 양극재… 배터리 3사, 국산 조달 본격화 - 조선비즈",
-      "source": "Chosunbiz",
-      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNekxVTFJvblNGMGZncjhzQkdzZzFnMEdPdVpFdWI4RDlzQkpWNTRnczhYcldUVE1NZ1lHd05GTW4zOVVLWWZpNmh0NXBwbDJhWUxGalVpOXNfNUQtQXlnRlVwUnZCb2hmUnV3UVA5c3RrdjZyMWNNX00zYkhTcUZGWjZsWlfSAZgBQVVfeXFMTmtvOTBCT2xQQzZXMnRBekQ5MmxmLUZYT0JXOUw2cXZaVUxja0ZSR3g2VGNTUFpiY2w3SGxYZVdoRXE2cUEtZXlIdWQzNUdndlNyb2l4alpHUU5WdEc5UEtVTFlBcFhzandkVnE0OFhRWTNGS0F5UGh2Y1djQ0pmYzZUQUw3dXBOcUdiNU4wN2lKbTVpWU1mVEI?oc=5",
-      "publishedAt": "2026-10-16T04:39:00.000Z"
+      "title": "엘앤에프 | LFP 6만톤 증설, 수주 확대와 수익성 회복의 조건",
+      "source": "네이버 프리미엄콘텐츠",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQdzBlYWJEZW5fbmd1dkZ0bk45Mk5wV1RicXRKQlFNTU1DcVB3NkRrOEhkOGV6dzZKcWE4N0xuMjN5cnJNTlJORjF3c2RvNjRFQkRtNUw3WnhYc2Y2UUhWVHFYaDc4NVNnNTRVcXFLaW1kNnlSZ21vWHc4V1VOZzdVVDVaTFM2bkY3?oc=5",
+      "publishedAt": "2026-10-19T04:55:00.000Z"
     },
     {
-      "title": "엘앤에프 주가, 10월 16일 장중 93,700원 10.51% 하락",
+      "title": "엘앤에프 주가, 10월 19일 장중 94,700원 1.07% 상승",
       "source": "톱스타뉴스",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1wVlk2YmNHXzAzM0JBdHBiWVh0Tk1La2x5d3h4ZllNM2ZsQUM4Q180VnpLenViYXRZMFdOc244TVNEVzVUSGpaaHNtR2s0SUhuQ291TUN5OEJWQURRTE9VTmNHOUFKR3JQUU9KMklJQVZDUQ?oc=5",
-      "publishedAt": "2026-10-16T01:55:33.000Z"
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9rbHBRTG00NVc1aVd6YnIxNE1rV0owSmoxSXo2UkVkTGZjQVdyZFFTcjU1b1N2Q2U1amJUdGk1eHdoTjJKUzg3N3FSM050WjJzbzJxczdOaGhnUW00SkpSUV91ZmlteXc0U2k5MWFlSExsZw?oc=5",
+      "publishedAt": "2026-10-19T01:06:23.000Z"
     }
   ],
   "dart": [],
@@ -159,9 +159,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5668.05,
-    "vs": 113.83,
-    "fltRt": 2.05
+    "clpr": 5768.01,
+    "vs": 99.96,
+    "fltRt": 1.76
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -170,7 +170,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-19T07:07:19.394Z",
+  "builtAt": "2026-10-20T06:52:00.929Z",
   "archiveDays": 120,
-  "archiveFrom": "20260420"
+  "archiveFrom": "20260421"
 }

@@ -1,0 +1,143 @@
+{
+  "code": "034020",
+  "name": "두산에너빌리티",
+  "market": "KOSPI",
+  "basDt": "20261019",
+  "price": {
+    "code": "034020",
+    "name": "두산에너빌리티",
+    "market": "KOSPI",
+    "basDt": "20261019",
+    "close": 66600,
+    "vs": 2000,
+    "fltRt": 3.1,
+    "open": 62700,
+    "high": 66600,
+    "low": 62000,
+    "prevClose": 64600,
+    "volume": 1843684,
+    "tradeValue": 119290217700,
+    "week52": {
+      "low": 60200,
+      "high": 136400,
+      "position": 0.08398950131233596,
+      "days": 244,
+      "from": "20251019"
+    },
+    "recent5": [
+      {
+        "basDt": "20261013",
+        "fltRt": -1.82,
+        "open": 68400,
+        "high": 70700,
+        "low": 67300,
+        "close": 70200
+      },
+      {
+        "basDt": "20261014",
+        "fltRt": -1.14,
+        "open": 69500,
+        "high": 70500,
+        "low": 68300,
+        "close": 69400
+      },
+      {
+        "basDt": "20261015",
+        "fltRt": -8.79,
+        "open": 64800,
+        "high": 66300,
+        "low": 61500,
+        "close": 63300
+      },
+      {
+        "basDt": "20261016",
+        "fltRt": 2.05,
+        "open": 63900,
+        "high": 66400,
+        "low": 63500,
+        "close": 64600
+      },
+      {
+        "basDt": "20261019",
+        "fltRt": 3.1,
+        "open": 62700,
+        "high": 66600,
+        "low": 62000,
+        "close": 66600
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 2501919,
+      "ratio": 0.74
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 528,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-10-20T06:50:47.775Z"
+  },
+  "facts": [
+    "코스피보다 1.34%p 높았어요.",
+    "거래량은 20일 평균의 0.7배예요.",
+    "시가보다 3,900원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "두산에너빌리티 장 초반 약세… 6만2700원 거래",
+      "source": "제주교통복지신문",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9jR01zMGxza0J6UDRHbDduM1JlTWpudnNrcEljcjJMMUU1WlgzOTRYdGIwcFNSLVlTTS1RVjcxdzVuY1BJYU1wR3Qwclo0N0xQOThsd1VNS1Q3MmxEUDBRSg?oc=5",
+      "publishedAt": "2026-10-19T01:16:57.000Z"
+    },
+    {
+      "title": "두산에너빌리티, 박상현 부회장 승진ㆍ송용진 신임 COO 선임",
+      "source": "인사이트N파워",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1rUDZWbTg2cXZXazYxT1E4Qno5VmFwb29TTlZjYmFraWZoS0VFM2E2UWhadEx2UG4tZHY0QUR6a2hFMDc5UjVYYUExSUNwNnhzX09MWVNmWktBMnp0dWFsOHMxVDZMUQ?oc=5",
+      "publishedAt": "2026-10-18T15:37:20.000Z"
+    },
+    {
+      "title": "박상현 두산에너빌리티 부회장 승진",
+      "source": "경남매일",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5FOTV6U2xHRVBzd0dsVS01ejlhcDlGVlRhWnpiZnlMV1kyN2ZYRzdtZGVsM0tuQTdoQUpCUDJWYmhBaXRycW91ZWxjZmFxWFp0a3NVWnBJQkVvRkw1UjBQZnJWMnUxNGFxOUE?oc=5",
+      "publishedAt": "2026-10-19T12:04:42.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20261001",
+      "holder": "두산",
+      "ratio": 30.68,
+      "ratioChange": 0,
+      "reason": "계약 내용의 변경",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261001000182"
+    },
+    {
+      "kind": "major",
+      "date": "20260731",
+      "holder": "국민연금공단",
+      "ratio": 7.63,
+      "ratioChange": -0.23,
+      "reason": "단순투자목적에서 일반투자목적으로 보유목적 변경",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260731000382"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 5768.01,
+    "vs": 99.96,
+    "fltRt": 1.76
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-20T06:52:00.923Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260421"
+}
