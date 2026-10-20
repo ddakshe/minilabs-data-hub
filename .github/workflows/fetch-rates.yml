@@ -19,6 +19,7 @@ on:
 
 permissions:
   contents: write
+  issues: write   # 실패 시 알림 이슈 생성/갱신
 
 concurrency:
   group: fetch-rates
@@ -78,6 +79,63 @@ jobs:
           git commit -m "$MSG"
           # 다른 워크플로가 같은 시간대에 밀어넣을 수 있다. 한 번은 되받아 재시도한다.
           git push || (git pull --rebase origin main && git push)
+
+      # 실패해도 아무도 모르면 "조용한 정지"가 된다.
+      # 2026-10-09·10-10 에 이틀 연속 실패했는데 그대로 지나갔다(2026-10-20 에 발견).
+      # 같은 이슈에 코멘트를 쌓아 장애가 며칠 가도 이슈가 하나만 열리게 한다.
+      #
+      # 🚨 이 알림은 **잡이 돌다가 실패한 경우만** 잡는다. GitHub 가 스케줄을 통째로
+      #    건너뛴 날(2026-08-26·08-31·09-28·10-05·10-11 에 관측)은 실행 자체가 없어
+      #    여기로 안 걸린다. 그건 바깥에서 신선도를 보는 수밖에 없다.
+      - name: 이슈 알림
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          TRIGGER: ${{ github.event_name }}
+        run: |
+          MARKER="예적금 금리 데이터 갱신 실패"
+          # heredoc 본문은 YAML 때문에 들여써야 하므로, 이슈에 넣기 전에 그 들여쓰기를 벗긴다.
+          BODY=$(sed 's/^ \{10\}//' <<BODY_END
+          예적금 금리 데이터 **갱신이 중단**됐습니다.
+          
+          - 실행 로그: $RUN_URL
+          - 트리거: \`$TRIGGER\`
+          - 시각: $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M:%S') KST
+          
+          라이브 데이터(\`rate-lens/rates.json\`)는 **직전 정상본이 그대로 유지**됩니다.
+          앱(\`com.kennen.ratelens\`)은 계속 동작하고 **갱신만 멈춘** 상태입니다.
+          
+          ### 자주 나오는 원인
+          
+          로그에 이 메시지가 있으면 **금감원 API 장애**입니다. 우리 키·코드 문제가 아닙니다.
+          
+          \`\`\`
+          실패: Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+          \`\`\`
+          
+          JSON 대신 점검·오류 페이지(HTML)가 온 것입니다. 2026-09-08 · 10-09 · 10-10 에
+          같은 증상으로 멈췄고 **며칠 뒤 저절로 복구**됐습니다. 하루이틀이면 기다려도 됩니다.
+          
+          ### 🚨 매월 20~24일의 실패는 손으로 복구한다
+          
+          **금감원은 매월 21일경 공시월(\`dcls_month\`)을 바꿉니다.** 하필 그때 멈추면
+          새 공시를 통째로 놓치고, 다음 변경이 생길 때까지 **지난달 금리가 그대로 노출**됩니다.
+          
+          \`\`\`bash
+          gh workflow run fetch-rates.yml -f reason="장애 복구 재실행"
+          curl -sS https://raw.githubusercontent.com/ddakshe/minilabs-data-hub/main/rate-lens/rates.json | head -c 120
+          \`\`\`
+          BODY_END
+          )
+          EXISTING=$(gh issue list --state open --limit 100 --json number,title \
+            --jq "[.[] | select(.title | contains(\"$MARKER\"))][0].number")
+          if [ -n "$EXISTING" ] && [ "$EXISTING" != "null" ]; then
+            gh issue comment "$EXISTING" --body "$BODY"
+            echo "기존 이슈 #$EXISTING 에 코멘트 추가"
+          else
+            gh issue create --title "🚨 $MARKER" --body "$BODY"
+          fi
 
       - name: Summary
         if: always()
