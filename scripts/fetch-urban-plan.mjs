@@ -52,6 +52,28 @@ const SAVE = arg('--save')
 
 // ─── 받기 ───────────────────────────────────────────────────────────────
 
+/**
+ * 출처가 살아 있지 않을 때 쓰는 종료 코드. 워크플로가 이 값을 보고
+ * **실패가 아니라 건너뜀**으로 처리한다(다른 출처 스텝은 계속 돌아야 한다).
+ * 75 는 sysexits.h 의 EX_TEMPFAIL — "일시적 실패, 재시도하면 된다".
+ */
+const EXIT_UPSTREAM_DOWN = 75
+
+/**
+ * 점검·중단 안내 페이지인지 본다. 맞으면 그 문구를 돌려준다.
+ * 정상 페이지는 수십 KB 에 <option> 이 가득하므로, 짧고 안내 문구만 있으면 점검이다.
+ */
+function maintenanceNotice(html) {
+  if (!html || html.length > 20000) return null
+  const text = html
+    .replace(/<(script|style)[\s\S]*?<\/\1>/g, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+  const hit = text.match(/[^.]*(?:서비스\s*점검|점검\s*중|서비스\s*(?:이용\s*)?중지|일시\s*중단)[^.]*/)
+  return hit ? hit[0].trim().slice(0, 160) : null
+}
+
 /** 쿠키 한 통을 들고 다니는 최소 세션. Node 내장 fetch 는 쿠키를 기억하지 않는다. */
 function session() {
   const jar = new Map()
@@ -87,7 +109,21 @@ async function download() {
   await http(`${BASE}/main.do`)
   const detailHtml = await (await http(`${BASE}/down/detail.do`, { method: 'POST', form: { table: TABLES.info.table } })).text()
   const ntfcDe = detailHtml.match(/<option value="(\d{4}-\d{2})"/)?.[1]
-  if (!ntfcDe) throw new Error('detail.do 에서 고시월 옵션을 찾지 못했다 (함정 2) — 페이지 구조가 바뀌었다')
+  if (!ntfcDe) {
+    /**
+     * 🚨 옵션이 없다고 곧바로 「구조가 바뀌었다」로 단정하지 않는다 (2026-10-21 에 겪었다).
+     *    2026-10-08 부터 택지정보시스템이 해킹 조사로 **서비스를 전면 중지**했는데,
+     *    그때 detail.do 가 3KB 짜리 「서비스 점검 중입니다」 페이지를 200 으로 돌려준다.
+     *    옛 메시지는 이것을 구조 변경으로 보고해, 파서를 들여다보며 헛수고하게 만들었다.
+     *    점검이면 고칠 게 없다 — 조용히 건너뛰고 다음 실행에 다시 시도한다.
+     */
+    const notice = maintenanceNotice(detailHtml)
+    if (notice) {
+      console.error(`· 출처 점검 중 — 건너뛴다: ${notice}`)
+      process.exit(EXIT_UPSTREAM_DOWN)
+    }
+    throw new Error('detail.do 에서 고시월 옵션을 찾지 못했다 (함정 2) — 페이지 구조가 바뀌었다')
+  }
 
   const files = {}
   let stdrDe
