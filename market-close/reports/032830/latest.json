@@ -2,37 +2,29 @@
   "code": "032830",
   "name": "삼성생명",
   "market": "KOSPI",
-  "basDt": "20261019",
+  "basDt": "20261020",
   "price": {
     "code": "032830",
     "name": "삼성생명",
     "market": "KOSPI",
-    "basDt": "20261019",
-    "close": 244500,
-    "vs": 6000,
-    "fltRt": 2.52,
-    "open": 238500,
-    "high": 246500,
-    "low": 231000,
-    "prevClose": 238500,
-    "volume": 297371,
-    "tradeValue": 71798505000,
+    "basDt": "20261020",
+    "close": 237000,
+    "vs": -7500,
+    "fltRt": -3.07,
+    "open": 242500,
+    "high": 247000,
+    "low": 233500,
+    "prevClose": 244500,
+    "volume": 226234,
+    "tradeValue": 53730868500,
     "week52": {
       "low": 144800,
       "high": 497000,
-      "position": 0.2830777967064168,
-      "days": 244,
-      "from": "20251019"
+      "position": 0.2617830777967064,
+      "days": 245,
+      "from": "20251020"
     },
     "recent5": [
-      {
-        "basDt": "20261013",
-        "fltRt": -4.3,
-        "open": 263000,
-        "high": 263000,
-        "low": 247000,
-        "close": 256000
-      },
       {
         "basDt": "20261014",
         "fltRt": -3.71,
@@ -64,72 +56,80 @@
         "high": 246500,
         "low": 231000,
         "close": 244500
+      },
+      {
+        "basDt": "20261020",
+        "fltRt": -3.07,
+        "open": 242500,
+        "high": 247000,
+        "low": 233500,
+        "close": 237000
       }
     ],
     "volumeVs20d": {
-      "avg20": 285900,
-      "ratio": 1.04
+      "avg20": 284305,
+      "ratio": 0.8
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 528,
-      "rows52w": 244
+      "rows": 529,
+      "rows52w": 245
     },
-    "generatedAt": "2026-10-20T06:50:16.442Z"
+    "generatedAt": "2026-10-21T06:45:22.781Z"
   },
   "facts": [
-    "코스피보다 0.76%p 높았어요.",
-    "거래량은 20일 평균의 1.0배예요.",
-    "시가보다 6,000원 높게 마감했어요."
+    "코스피보다 0.66%p 높았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가보다 5,500원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "삼성생명, 신한은행 제치고 퇴직연금 1위 되찾았다",
-      "source": "한국경제",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE41NWd4a1haYWRhNU4yM3RiSkJzQThDY1ZxQ2dXbmNRbDVITEFHYXh4U1BqeFZCT0FScUtKekVheWlkWFFyS0FVYzVhVkUzaENpcnZTanZDVmR4UQ?oc=5",
-      "publishedAt": "2026-10-19T07:37:18.000Z"
+      "title": "[보험브리핑]삼성생명·NH농협손보·메트라이프생명",
+      "source": "메트로신문",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBMZktIRktyWjhfdVJhSW5HMkVBOTZQd3BEdEEwMkk2dnhZTUo3Tl92VEdwZzJUYjFxMnFvY2dIczNzTHdCdkpaTFlIWjdXRWZxUUFfUF91OFVVblFYOXFyXw?oc=5",
+      "publishedAt": "2026-10-20T07:17:55.000Z"
     },
     {
-      "title": "삼성생명, 美 장기채 급락에 ‘복잡한 속내’",
-      "source": "시사저널e",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE41WWpUNXlBWFpZd1VBMUs0VHBZakVUeXB6N09kcEhHNUhYVzdEc3JWaDdyV2tGUU5Id0tac3k0aWhUa1RZTW9yS2JZZGhPX1Rva3JNTmk0Q0VyVzBNZzltWnBYeTkyOWxCangyT0pGaXdpdllwNFHSAXZBVV95cUxONVlqVDV5QVhaWXdVQTFLNFRwWWpFVHlwejdPZHBIRzVIWFc3RHNyVmg3cldrRlFOSHdLWnN5NGloVGtUWU1vcktiWWRoT19Ub2tyTU5pNENFclcwTWc5bVpwWHk5MjlsQmp4Mk9KRml3aXZZcDRR?oc=5",
-      "publishedAt": "2026-10-19T08:15:54.000Z"
+      "title": "삼성생명, 시니어 건강보험 개편… 폐렴·장기요양 보장 강화",
+      "source": "이코리아",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9NOTJSR1FoQkdlODlCbTFvN0NiVzZnTkJKQkpyS1NlZjBOLUFIT0cyWC1sV1YtblNqOTdrTXRlZVNUeXVmLXoxcjdWWHo0UVF5bm5qNEwzQ2FyX3FxVTF5a3A4d0VnMDJNclgzajNBQQ?oc=5",
+      "publishedAt": "2026-10-20T08:16:47.000Z"
     },
     {
-      "title": "삼성생명 퇴직연금 1위 재탈환…반년 만에 신한은행 제쳤다",
-      "source": "한국경제",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1feGtITjBwSlY1VFhrVHh1aThadzNsTXhlb2lBUTVEdXBtWkx2WkpkOXNxSzNqMU85REdqaUZaVTVTTGpjLU50S3hlRV8yZDRvcGVoeTA1WGZqZw?oc=5",
-      "publishedAt": "2026-10-19T08:50:01.000Z"
+      "title": "삼성생명, 전국 ‘청년희망터’ 5년간 2801명 지원 [제4회 서울상생금융대상]",
+      "source": "서울신문",
+      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE03RzNjRmVGWk5ZSzBnWjJuSWRTUnJ0dEdyR3FvaUpMMWxVVGp6Y3NYanBoNFZrdWtScXo3ZUtGNWQweGRXaF9aNTNuQ19zWjhoTXYxVENHeGpvU09INWNxWGRJM3BtcVUzNFZmcjlKTFNmY1hORWpSaTBn?oc=5",
+      "publishedAt": "2026-10-20T12:49:51.000Z"
     },
     {
-      "title": "삼성생명, 전속설계사 1년 새 3천명 넘게 순증...건강·종신보험 확대 핵심채널 자리매김",
-      "source": "녹색경제신문",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1DS1lrV0hQSUN2OEMtbGJGdjdMOTI3cHFmT0xTa2ZsWDhxekQtUDB2SzU2bVpxSEdNM2VpZHhDN2ZDZXdIZDFJeWpOMTVteFlaSkg1b3c1Ml9PcUU4Uzd4Z2NlaE5fNUdo?oc=5",
-      "publishedAt": "2026-10-19T02:11:00.000Z"
+      "title": "삼성생명, 시니어 건강보험 개편…폐렴·관절질환 보장 확대",
+      "source": "브릿지경제",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1qV0stZzdZOGdsT2R2NFUxa1c3NDJ3enlfTGRIdWtzMXRBdWh4eXZCRDVQR05LckJfQlcwa3hBUTE3NFBYQVNIdVl0TlI5X1BBaGY2M1FvNkhIdw?oc=5",
+      "publishedAt": "2026-10-20T00:57:00.000Z"
     },
     {
-      "title": "홍원학 삼성생명 대표, 보험 밖으로 넓힌 성장판⋯첫 연임 도전 [보험 CEO 연임 레이스 ①]",
-      "source": "이투데이",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFAxVXpsdmhqY2ZqTC1yVzVrLUNCNVZHdi1nVGllLXZOYVhWcnhZUU9IYW05UTA1M090SlNIT1FMRDgxQVJvQnVBN19wVTc0T1c1eUxTSA?oc=5",
-      "publishedAt": "2026-10-18T20:00:00.000Z"
+      "title": "삼성생명, ‘삼성 시니어대표건강보험’ 개정 출시",
+      "source": "한국보험신문",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE0wUGRUS3hUMGM0b0dRLWhKSGUwenVPWHRkTVNJbGNKY0h5WlpYaHpTX0REb1ZzNW5idm1BSjZCVzczMG5HZHdmZmFCd0ZqRExFZ1JpbUFCMkdPMG9EMUNQSk0xSXhaMG5lMW000gFvQVVfeXFMUENmVUZWNC1WX0x2cUNTMWltSWhoMjNVTVdyMkRFZW1GYUdDVlY1OHRJdGtVMHcza0FnZGlDT3VKcGluN0VmVXcxV0tFNVI5NS1fVjlLMVU0TUVWQ3ROOURWQXdtLVFDRTYtZXRPX0Mw?oc=5",
+      "publishedAt": "2026-10-20T00:14:27.000Z"
     },
     {
-      "title": "삼성생명 등, 삼성FN리츠 지분 43.70%로 확대",
-      "source": "데이터투자",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9JZW9iVEVNd0ttcmxuRG4zajJmamxLSWp5Z0ZVd2VMZmVVbkxFZWVnUURha3dXVTRMTFA5SjJpN1k3blpRVDFLY1ItbmxSTGJfc19NMXRyREI1NVluT1FsY2k3NG1lUndqWm5adjd5R2pfWkE?oc=5",
-      "publishedAt": "2026-10-18T22:58:39.000Z"
+      "title": "삼성생명, 폐렴·로봇 인공관절 수술 보장 강화한 시니어보험 출시",
+      "source": "SBS Biz",
+      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1uYWRrbGpwSXZuZWw0Smh4VDN5MTZCcDZrYUtWMFZ0OVotZTN1Rjg3YXFfOFVtTnFPN0VWYmJhUVNpNnpMaG5WQlRlUU85N2tvSnhn0gFYQVVfeXFMUGtSRERMbVZfTGtIakJreDF3dk5ISGFfVVMteUduV2ZwbXVWM0ZsLUZlZDQ4LWhxR0lJdHRDV1BiNFc3WDJ5UFhwZ2ozRzRGMEhLTVlHLVA4Rg?oc=5",
+      "publishedAt": "2026-10-20T01:00:00.000Z"
     },
     {
-      "title": "[유지율 성적표] 3대 생보사, 장단기 격차 확대…5년 삼성 ‘최고’",
-      "source": "FETV",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5zeTZrVk5Ld3lIdUMybGs1X0E5aFk0Sy0xbEZZR19Dc05wbF91S3FGZl8yT3NxcnlNSlRvbzJXbWFZNnlFSExmTGRRWjZLdHE5aTZUdG4zcnpjdU9Ha3pWNF9IZG84akpK?oc=5",
-      "publishedAt": "2026-10-18T21:00:00.000Z"
+      "title": "삼성생명, 금리상승기 해외조달 나선 이유",
+      "source": "DealSite경제TV",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE12OHQ5U3JoVUF4ZldXNjVQQ2JpMHZWSEY0akk4S28xaTlsOEF5MU1xajRHX2RsYzZUYXdTUHFJYlJOcVZueFZFZVQ4Wmp0eHN3U2Jhekl3?oc=5",
+      "publishedAt": "2026-10-20T00:00:23.000Z"
     },
     {
-      "title": "삼성생명, 삼성FN리츠 지분 43.70%로 확대",
-      "source": "한스경제",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9DazlQSDMwXzd0ZnQyNzVpR3dlLVoySExuXzBITkxHUVJuYVlkVGZmMFRMT3RtT1h1cHFzeTk5YTVoaEczRmhGWS1IcXFmU0MtMzZWcWxyc0ptc2EzQWxDVjdYcWhCanhoUGR30gFvQVVfeXFMTk9hZVVyck1pT1JkSkExUE5GX3B0MzZQWldMT2hEOTN2ZzYyY09fWXJrbWYxNDJxaVFKMHduU2FfZXgxMmM0UE91d3F3T2I5andlaXJnRGRiV0xtclM3M29ROXQ5STJsTUtPVi1MclNZ?oc=5",
-      "publishedAt": "2026-10-19T06:08:23.000Z"
+      "title": "삼성생명, 시니어건강보험 개정출시…폐렴·로봇관절수술 강화",
+      "source": "연합뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5pNkJNQ3RnQ2RHbHg5TmlXS2tEWDRQRS1CYWgxcUVIVEp4bnpUd2g5eDVCUlZDTzNBU0tyX3hXWDhjeFN3QlQ1YjltNldMZm1Sa3liT2p3OHByMllEdFhhM9IBYEFVX3lxTE5pNkJNQ3RnQ2RHbHg5TmlXS2tEWDRQRS1CYWgxcUVIVEp4bnpUd2g5eDVCUlZDTzNBU0tyX3hXWDhjeFN3QlQ1YjltNldMZm1Sa3liT2p3OHByMllEdFhhMw?oc=5",
+      "publishedAt": "2026-10-20T00:43:28.000Z"
     }
   ],
   "dart": [],
@@ -147,9 +147,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5768.01,
-    "vs": 99.96,
-    "fltRt": 1.76
+    "clpr": 5552.74,
+    "vs": -215.27,
+    "fltRt": -3.73
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -158,7 +158,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-20T06:52:00.833Z",
+  "builtAt": "2026-10-21T06:47:06.051Z",
   "archiveDays": 120,
-  "archiveFrom": "20260421"
+  "archiveFrom": "20260422"
 }

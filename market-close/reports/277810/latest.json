@@ -2,37 +2,29 @@
   "code": "277810",
   "name": "레인보우로보틱스",
   "market": "KOSDAQ",
-  "basDt": "20261019",
+  "basDt": "20261020",
   "price": {
     "code": "277810",
     "name": "레인보우로보틱스",
     "market": "KOSDAQ",
-    "basDt": "20261019",
-    "close": 378000,
-    "vs": 25500,
-    "fltRt": 7.23,
-    "open": 337000,
-    "high": 378000,
-    "low": 334500,
-    "prevClose": 352500,
-    "volume": 59397,
-    "tradeValue": 21597773500,
+    "basDt": "20261020",
+    "close": 371500,
+    "vs": -6500,
+    "fltRt": -1.72,
+    "open": 387000,
+    "high": 389000,
+    "low": 360500,
+    "prevClose": 378000,
+    "volume": 62771,
+    "tradeValue": 23418109750,
     "week52": {
       "low": 332500,
       "high": 880000,
-      "position": 0.08310502283105023,
-      "days": 244,
-      "from": "20251019"
+      "position": 0.07123287671232877,
+      "days": 245,
+      "from": "20251020"
     },
     "recent5": [
-      {
-        "basDt": "20261013",
-        "fltRt": -1.92,
-        "open": 377000,
-        "high": 385000,
-        "low": 364500,
-        "close": 383500
-      },
       {
         "basDt": "20261014",
         "fltRt": -0.52,
@@ -64,36 +56,44 @@
         "high": 378000,
         "low": 334500,
         "close": 378000
+      },
+      {
+        "basDt": "20261020",
+        "fltRt": -1.72,
+        "open": 387000,
+        "high": 389000,
+        "low": 360500,
+        "close": 371500
       }
     ],
     "volumeVs20d": {
-      "avg20": 61036,
-      "ratio": 0.97
+      "avg20": 59912,
+      "ratio": 1.05
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 528,
-      "rows52w": 244
+      "rows": 529,
+      "rows52w": 245
     },
-    "generatedAt": "2026-10-20T06:50:32.064Z"
+    "generatedAt": "2026-10-21T06:45:38.502Z"
   },
   "facts": [
-    "코스닥보다 5.45%p 높았어요.",
-    "거래량은 20일 평균의 1.0배예요.",
-    "시가보다 41,000원 높게 마감했어요."
+    "코스닥보다 1.61%p 높았어요.",
+    "거래량은 20일 평균의 1.1배예요.",
+    "시가보다 15,500원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "에코프로 7%대 급등·레인보우로보틱스 4%↑… 반도체 장비주는 약세",
-      "source": "www.twig24.com",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1HblhfVDM3ZVMwU0g0ZmdpSDdwR0hIVGtCUU4xaG1ZWUtaQ0RtR1doc2lMb25KUG5OOFplcHVoYjlZNjB0cjI5WkEtVXZEZFp4MmRRMWJoVl9UQ1piYU55OEVSVWpvek5sLS0yRnpmM0dkMElSclE?oc=5",
-      "publishedAt": "2026-10-19T04:19:00.000Z"
+      "title": "레인보우로보틱스 주가 6,500원 하락 후 마감",
+      "source": "아시아뉴스통신",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE91ZFdabE5RWVBZdk43XzB1OG5ManQ3WEJ0OXkzUWpYM0J6Y21tcnp0QzU0Wm5VVWdYeF9IaVJlRTRVeHdJQ3g2NDZqRngzVzhlbjB0bnB4bUxpSTV3WWM2c3BiNUVWZUkxMlcwdktKRDdGblFt?oc=5",
+      "publishedAt": "2026-10-20T07:59:52.000Z"
     },
     {
-      "title": "‘사람+로봇+제주’가 함께하는 디지털 체전 개막",
-      "source": "티스토리",
-      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBFdGFwZmJ6ZUprODlnVkd5T1NCNDAwQWttNC1xcklPaDVSOGdpVk8zNTM1WmlnZllXZjNhZV81TFdvWDFsbHNUZ3pYNA?oc=5",
-      "publishedAt": "2026-10-19T08:39:08.000Z"
+      "title": "로봇주 줄줄이 하락…레인보우·두산 약세 속 에브리봇은 급등",
+      "source": "CBC뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5fVkhaMWMzQWlreUVjSzVjSlJGQ3E3aUN2dDg5WFVjT013OEJhRkZZVng4M1VLN3JFb1B4QnBoZWlJQU9zRHE5cFJVQTlnYlBRZEFoaUhWYy0zNzRJV285ZV93ZUVFMUpk?oc=5",
+      "publishedAt": "2026-10-20T01:23:43.000Z"
     }
   ],
   "dart": [],
@@ -101,9 +101,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 808.89,
-    "vs": 14.11,
-    "fltRt": 1.78
+    "clpr": 781.97,
+    "vs": -26.92,
+    "fltRt": -3.33
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -112,7 +112,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-20T06:52:00.872Z",
+  "builtAt": "2026-10-21T06:47:06.088Z",
   "archiveDays": 120,
-  "archiveFrom": "20260421"
+  "archiveFrom": "20260422"
 }
