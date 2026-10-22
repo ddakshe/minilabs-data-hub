@@ -1,0 +1,130 @@
+{
+  "code": "005380",
+  "name": "현대차",
+  "market": "KOSPI",
+  "basDt": "20261021",
+  "price": {
+    "code": "005380",
+    "name": "현대차",
+    "market": "KOSPI",
+    "basDt": "20261021",
+    "close": 309500,
+    "vs": -500,
+    "fltRt": -0.16,
+    "open": 314000,
+    "high": 315000,
+    "low": 303000,
+    "prevClose": 310000,
+    "volume": 380018,
+    "tradeValue": 117396255750,
+    "week52": {
+      "low": 250500,
+      "high": 750000,
+      "position": 0.11811811811811812,
+      "days": 245,
+      "from": "20251021"
+    },
+    "recent5": [
+      {
+        "basDt": "20261015",
+        "fltRt": -5.74,
+        "open": 300000,
+        "high": 302500,
+        "low": 289000,
+        "close": 295500
+      },
+      {
+        "basDt": "20261016",
+        "fltRt": 5.58,
+        "open": 297000,
+        "high": 320500,
+        "low": 295500,
+        "close": 312000
+      },
+      {
+        "basDt": "20261019",
+        "fltRt": 4.49,
+        "open": 304500,
+        "high": 326000,
+        "low": 302500,
+        "close": 326000
+      },
+      {
+        "basDt": "20261020",
+        "fltRt": -4.91,
+        "open": 317500,
+        "high": 326000,
+        "low": 305500,
+        "close": 310000
+      },
+      {
+        "basDt": "20261021",
+        "fltRt": -0.16,
+        "open": 314000,
+        "high": 315000,
+        "low": 303000,
+        "close": 309500
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 546449,
+      "ratio": 0.7
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 529,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-22T06:48:10.774Z"
+  },
+  "facts": [
+    "코스피보다 3.45%p 낮았어요.",
+    "거래량은 20일 평균의 0.7배예요.",
+    "시가보다 4,500원 낮게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "하늘을 날아다니는 테슬라, AI도 옵션이라는 현대차",
+      "source": "인베스트조선",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPN2ZjaGFoMlVqM1hkMmR0Q1RYOUxDLXNSUklXeDFhUk5DVVdwVXFZa0FNeGhrNGJ0STB0cTQ0ZW5DYW8tUldONkpJWGw2SzlsTFZSTFZ6d3hTeXhlQ2pJRUU0WVZQNWJ2NTNKWEUwMi10S2kwRmlkV05sdFdKRHl1OUV0VQ?oc=5",
+      "publishedAt": "2026-10-21T04:38:00.000Z"
+    },
+    {
+      "title": "‘바퀴 달린 스마트폰’ 생태계 넓히는 현대차·기아⋯ ‘개방형 놀이터’ 오픈",
+      "source": "브릿지경제",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5Ba0dhN0VNQl9XVkJrQmFCZzFaV1J0dENiS0JjNkxPa3dYcHNzNU9BdjdtZWNIdlRQZ0ZaZWpZeVoyVFBxMjM5N21MM0JpMlNFUDFoOFd0dWRLQQ?oc=5",
+      "publishedAt": "2026-10-21T14:28:00.000Z"
+    },
+    {
+      "title": "정부·현대차그룹 손잡고 '車반도체 국산화' 추진",
+      "source": "한국경제",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE94bmNsV1NXampDZUJiZllhcG8yRUFGRVdlYWdWc2FWZGNFZ3YwQTl0YS05Tzg5LTI4OWFLbFBNREo5LW52ZHRnT1JqZW1KQTNhMENVRHVObXQ1UQ?oc=5",
+      "publishedAt": "2026-10-21T09:09:38.000Z"
+    },
+    {
+      "title": "현대차·기아, 차량용 앱 개발 공모전 개최 | 뉴스 | 현대자동차그룹",
+      "source": "Hyundai Motor Group",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNeE81T3lHbnhSLUNwZGkxd0NLVGsxYTlUQ3Jfbm1CY3llUXhNUmpTVUFjQm9ZRHNyaGpIMlBteVl4TEhoRDRVYXRiRmkzN29LOEhOMDI4cE1WdzhIT3RUSlljT0FQR0NyWjkteWktNGMtRnB1aXVZVWlXVzEwQ2EtTWtFV19jeXRQbDVwMkdUQm9xQUQtaFZ6MlBGbUdNWXJ3?oc=5",
+      "publishedAt": "2026-10-20T23:30:00.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 5735.66,
+    "vs": 182.92,
+    "fltRt": 3.29
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-22T06:49:58.573Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260423"
+}

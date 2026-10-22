@@ -2,37 +2,29 @@
   "code": "009150",
   "name": "삼성전기",
   "market": "KOSPI",
-  "basDt": "20261020",
+  "basDt": "20261021",
   "price": {
     "code": "009150",
     "name": "삼성전기",
     "market": "KOSPI",
-    "basDt": "20261020",
-    "close": 1155000,
-    "vs": -15000,
-    "fltRt": -1.28,
-    "open": 1168000,
-    "high": 1206000,
-    "low": 1128000,
-    "prevClose": 1170000,
-    "volume": 720965,
-    "tradeValue": 838611386500,
+    "basDt": "20261021",
+    "close": 1168000,
+    "vs": 13000,
+    "fltRt": 1.13,
+    "open": 1182000,
+    "high": 1215000,
+    "low": 1155000,
+    "prevClose": 1155000,
+    "volume": 614026,
+    "tradeValue": 723176317000,
     "week52": {
       "low": 204000,
       "high": 2270000,
-      "position": 0.4603097773475315,
+      "position": 0.4666021297192643,
       "days": 245,
-      "from": "20251020"
+      "from": "20251021"
     },
     "recent5": [
-      {
-        "basDt": "20261014",
-        "fltRt": 0.81,
-        "open": 1372000,
-        "high": 1414000,
-        "low": 1348000,
-        "close": 1374000
-      },
       {
         "basDt": "20261015",
         "fltRt": -15.36,
@@ -64,72 +56,80 @@
         "high": 1206000,
         "low": 1128000,
         "close": 1155000
+      },
+      {
+        "basDt": "20261021",
+        "fltRt": 1.13,
+        "open": 1182000,
+        "high": 1215000,
+        "low": 1155000,
+        "close": 1168000
       }
     ],
     "volumeVs20d": {
-      "avg20": 676391,
-      "ratio": 1.07
+      "avg20": 690875,
+      "ratio": 0.89
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
       "rows": 529,
       "rows52w": 245
     },
-    "generatedAt": "2026-10-21T06:45:12.338Z"
+    "generatedAt": "2026-10-22T06:48:05.643Z"
   },
   "facts": [
-    "코스피보다 2.45%p 높았어요.",
-    "거래량은 20일 평균의 1.1배예요.",
-    "시가보다 13,000원 낮게 마감했어요."
+    "코스피보다 2.16%p 낮았어요.",
+    "거래량은 20일 평균의 0.9배예요.",
+    "시가보다 14,000원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "“실적개선 속도, 주가가 못따라갑니다”…삼성전기 목표가 175만원 [오늘 나온 보고서]",
-      "source": "매일경제 마켓",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5FMXNjSkp6SGZ5Wi1SQ1BtVHJ1YkxUY19QODlmX25JYjdiRFN5WVRhbDJVelZMQXhuazRlaTVTT29Fby1DaTV1eGcxQVFRZEhJY2c?oc=5",
-      "publishedAt": "2026-10-19T23:52:17.000Z"
+      "title": "삼성전기, 엔비디아와 손잡았다...AI 반도체 기판 공급 확대",
+      "source": "경기일보",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9jT3oyNWFTMkl3RFQ3MGJVNkpaQ0RIRjJqbEdmU1VPenhuc0dPNUNCcURKQWprZVM1Vmh1ZWJhTUR1SWNsd2RmMHhDNVJ3b2l5cnh5S184Z1RpeXM?oc=5",
+      "publishedAt": "2026-10-21T11:35:15.000Z"
     },
     {
-      "title": "삼성전기 승승장구하는데… LG이노텍 ‘기판 턴어라운드’ 언제쯤",
-      "source": "아시아타임즈",
-      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1vSDlmN0dSZ2tGelFSaTlxZlgwTEpwVlpDbHFqY0dJdWtOSy1YWlRLeHhta21wMEVHT3ZNT1hCZTh3UTRFZzhlSllfMnU4eU54MllkbjN1QWtfbml1Q1E?oc=5",
-      "publishedAt": "2026-10-20T05:45:00.000Z"
+      "title": "삼성전기, 멕시코서 자동차·휴머노이드 카메라 모듈 양산 ‘초읽기’",
+      "source": "아시아투데이",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE12TERsaURnaXFwbVJvYjNTT3pjaU1wUU5LbDYtcTdKVXZ5Q2t2cWRGaWJPMzA5MXV0MlFjbEhHaWJ3MW0yb3JFR3NfbGdYZmpnQlJGZUtTR1lHWmN1N0pVaFRZeHdoTUVMajlYcU53?oc=5",
+      "publishedAt": "2026-10-21T07:37:07.000Z"
     },
     {
-      "title": "“베라 루빈 MLCC 가치 182%↑”…기대감 커지는 삼성전기",
-      "source": "뉴스토마토",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE55YVdBWWtGR2FyWFZXeWk2LVNOTHN2M1dLV0dxWVNSUzA1a1hqQkM5c1lSdl9fVHhHNVZuZF9EN0RYN01kM2Z3TWp6Vm9Hb19sdjRFOTRZWnhfcVBNQnAxdw?oc=5",
-      "publishedAt": "2026-10-20T06:30:14.000Z"
+      "title": "삼성전기 주가 13,000원 상승 후 장마감",
+      "source": "아시아뉴스통신",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9hazFnUzBwZjhDdEtkdzFXSDdReDZxanFtUUFka3Jra0g0Z195UVVQNVlRZWJhSWIwa2RzdEJzYlFJSXZ2b29teHNBeTA1MVFEdmNHN2lVQ2lWZE45WVJGZ3RyTHBaejJPalBybE1qYXpuUDVv?oc=5",
+      "publishedAt": "2026-10-21T06:36:27.000Z"
     },
     {
-      "title": "“2027년 영업이익 4.4조 폭발…주가만 안 올라가는 삼성전기의 기현상”",
-      "source": "뉴스퀘스트",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE80LXF1QnpDSFhjVFREeWJ1OWczdVROb0xhQVRPRHV3YjY3NlVUWWJjekF4UHNtQjF0dDI3SFJnN2I2dTRiVzJCWk0ySkRULWJURDFNVlBqX2dmNl83RURjcXB1UUVnT2c4Q2JRVEhiYw?oc=5",
-      "publishedAt": "2026-10-20T07:53:41.000Z"
+      "title": "삼성전기, 엔비디아와 반도체 기판 파트너십...세종·부산에 전용 라인 증설",
+      "source": "조선일보",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQX3E4SzVBTV84MzBVR1ZXUndiSjJ6cnpsQ2RxV3V1cWM3Q2JlMVZpTklfNnNyelQxcWxtdkRkbkp4MzZUUExZT0dDRHhJSnFKYTRHZy1GeHZIWEN0QTB6UTNYVERYcTJ6QUNfRWNVb3duTHRjMl9WYmZ5amIwcHgtUkhlYw?oc=5",
+      "publishedAt": "2026-10-21T11:42:45.000Z"
     },
     {
-      "title": "삼성전기, AI 수주 4조3000억…“내년 실적 개선 지속”",
-      "source": "서울경제TV",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE85STkxR2hKcGx0cHFZcFE1S0ZWUGY4YzluYkJiaUZfUmhlVVo4ck9KUkxTQnVhUmcwSGpkc25JN04yMHJIclhtMUszTzRLWlcxUktCTzF3Y2xtWjRxa3VfZ0VaX0U?oc=5",
-      "publishedAt": "2026-10-20T09:15:27.000Z"
-    },
-    {
-      "title": "대형 기판주 주가 고점 대비 반토막, 대장주 삼성전기 신규 수주에 온기 퍼지나",
-      "source": "비즈니스포스트",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1HaENVWm84MVJHdEhycVJXQkpVeGVHbGFIMnlGV3J0b1ZJOEJtYXpIWVBOSFFlREpKLS1oY3hsTzF5ODZRWUttNGtXMFVCN3JWeUI3akN4REhHNTFvRlNKVWhhdUZIV1M0MzJkSFkwR05sWXM?oc=5",
-      "publishedAt": "2026-10-20T07:06:00.000Z"
-    },
-    {
-      "title": "\"삼성전기, AI 부품 공급 빠듯…내년 영업익 4.4조 전망\"-IBK",
+      "title": "삼성전기, 엔비디아에 AI 반도체 기판 공급…역대 최대 규모",
       "source": "한국경제",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1JWWY5UEkxZGszOHFNU2VYVjBSeW43bDNELXdLNDVFby1xaTg0WWx4bkFCclRYb3NBemw1bUZwRkl5WGt1WGFjN3dKeUVWVlM0SDBMZDJDRzBNQQ?oc=5",
-      "publishedAt": "2026-10-19T22:55:10.000Z"
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5JUW1xNFpJdU1QeEZiNUFJUk5YYms5cWdDdEtxTktWWERSRGpqaTl6YWFFTTJLYnRlcWRDQmFySU1LNEFBemVCXzBJaDYyS3dFTkcwMVpUcTVXQQ?oc=5",
+      "publishedAt": "2026-10-21T11:48:02.000Z"
     },
     {
-      "title": "“실적개선 속도, 주가가 못따라갑니다”…삼성전기 목표가 175만원 [오늘 나온 보고서]",
-      "source": "매일경제",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1oODBYQ2RoZTdnbEw1NlhJNXNzazBOcFhDc2ZXdVhCTGlnSVZUMV80OGpBMnZ6dnJ4eVkwTlY2SThObjhUUDBabG5OeWVCTFMwZVE?oc=5",
-      "publishedAt": "2026-10-19T23:52:17.000Z"
+      "title": "삼성전기, 엔비디아와 FC-BGA 전용 팹 증설",
+      "source": "디일렉",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5NdktuZ0p2aHJfRmlFYnpUQVFKNm9PVWthaUNwajNJM3lybEhva1dsdTJwdHFTUV9IUVZfdkM2WHh4Q01IY2ZsNWU2cDk2ai1JNFZHeDc2NHU5ZDJydEVrU3pWQnlZQQ?oc=5",
+      "publishedAt": "2026-10-21T13:37:47.000Z"
+    },
+    {
+      "title": "삼성전기, 엔비디아에 AI 반도체 패키지기판 공급…전용 공장 증설",
+      "source": "뉴스토마토",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9uUF9OUHotTlF1bDRUbmJqeVZ5clBrUkhmQlh2dHExazhMQjhVNVpfcjlvd3ZwWWxEX2oyaWNJMW81Ulppc09IOGtJM3gxTmJfUkVvLVFPSWd3aWNNejdnNA?oc=5",
+      "publishedAt": "2026-10-21T12:25:14.000Z"
+    },
+    {
+      "title": "삼성전기도 엔비디아와 ‘깐부’ 맺었다…반도체 기판 공장 증설 공동 투자",
+      "source": "중앙일보",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE51N0Jfdi1KSU9rU3ZTNnp0cFprWjU3cVFzNHRHbk0zTU9udVRRREdUTW9nbzV1UTNYZHNJRlhNNG11d2JHLXZWYlVnbkZZX2MwbHJYbVlB?oc=5",
+      "publishedAt": "2026-10-21T11:50:00.000Z"
     }
   ],
   "dart": [],
@@ -137,9 +137,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5552.74,
-    "vs": -215.27,
-    "fltRt": -3.73
+    "clpr": 5735.66,
+    "vs": 182.92,
+    "fltRt": 3.29
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -148,7 +148,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-21T06:47:06.035Z",
+  "builtAt": "2026-10-22T06:49:58.562Z",
   "archiveDays": 120,
-  "archiveFrom": "20260422"
+  "archiveFrom": "20260423"
 }

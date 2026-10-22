@@ -3,10 +3,36 @@
   "name": "삼성물산",
   "market": "KOSPI",
   "retainDays": 120,
-  "firstBasDt": "20260420",
-  "lastBasDt": "20261016",
+  "firstBasDt": "20260423",
+  "lastBasDt": "20261021",
   "count": 120,
   "days": [
+    {
+      "basDt": "20261021",
+      "close": 290000,
+      "fltRt": 5.45,
+      "headline": "코스피보다 2.16%p 높았어요.",
+      "newsCount": 8,
+      "dartCount": 1
+    },
+    {
+      "basDt": "20261020",
+      "close": 275000,
+      "fltRt": -3.51,
+      "headline": "코스피보다 0.22%p 높았어요.",
+      "newsCount": 0,
+      "dartCount": 0,
+      "priceOnly": true
+    },
+    {
+      "basDt": "20261019",
+      "close": 285000,
+      "fltRt": -0.52,
+      "headline": "코스피보다 2.28%p 낮았어요.",
+      "newsCount": 0,
+      "dartCount": 0,
+      "priceOnly": true
+    },
     {
       "basDt": "20261016",
       "close": 286500,
@@ -1030,34 +1056,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260422",
-      "close": 301000,
-      "fltRt": -0.99,
-      "headline": "시가 301,000원과 같은 가격으로 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
-    },
-    {
-      "basDt": "20260421",
-      "close": 304000,
-      "fltRt": 1.33,
-      "headline": "시가 302,000원보다 2,000원 높게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
-    },
-    {
-      "basDt": "20260420",
-      "close": 300000,
-      "fltRt": -0.5,
-      "headline": "시가 305,000원보다 5,000원 낮게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-10-19T07:07:19.302Z"
+  "updatedAt": "2026-10-22T06:49:58.591Z"
 }

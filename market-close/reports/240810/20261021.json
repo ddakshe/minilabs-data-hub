@@ -1,0 +1,143 @@
+{
+  "code": "240810",
+  "name": "원익IPS",
+  "market": "KOSDAQ",
+  "basDt": "20261021",
+  "price": {
+    "code": "240810",
+    "name": "원익IPS",
+    "market": "KOSDAQ",
+    "basDt": "20261021",
+    "close": 104800,
+    "vs": 1600,
+    "fltRt": 1.55,
+    "open": 105100,
+    "high": 107300,
+    "low": 102600,
+    "prevClose": 103200,
+    "volume": 512777,
+    "tradeValue": 53686203050,
+    "week52": {
+      "low": 55700,
+      "high": 183300,
+      "position": 0.3847962382445141,
+      "days": 245,
+      "from": "20251021"
+    },
+    "recent5": [
+      {
+        "basDt": "20261015",
+        "fltRt": -15.47,
+        "open": 111900,
+        "high": 113500,
+        "low": 100100,
+        "close": 102700
+      },
+      {
+        "basDt": "20261016",
+        "fltRt": 6.13,
+        "open": 104500,
+        "high": 110600,
+        "low": 102100,
+        "close": 109000
+      },
+      {
+        "basDt": "20261019",
+        "fltRt": -0.46,
+        "open": 103000,
+        "high": 110900,
+        "low": 102000,
+        "close": 108500
+      },
+      {
+        "basDt": "20261020",
+        "fltRt": -4.88,
+        "open": 108500,
+        "high": 108600,
+        "low": 100700,
+        "close": 103200
+      },
+      {
+        "basDt": "20261021",
+        "fltRt": 1.55,
+        "open": 105100,
+        "high": 107300,
+        "low": 102600,
+        "close": 104800
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 1220091,
+      "ratio": 0.42
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 529,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-22T06:48:39.423Z"
+  },
+  "facts": [
+    "코스닥보다 0.17%p 높았어요.",
+    "거래량은 20일 평균의 0.4배예요.",
+    "시가보다 300원 낮게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "원익IPS 주가, 10월 21일 애프터마켓 104,700원 1.45% 상승",
+      "source": "TopStarNews",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFB2aXBfVUg3OXdRU09JRjhGdmdqYmlodndRY1hKQ092bzhQOTVmZ3plV3RSLVBfZDFsNG8xUU9jdENKNnVUYnc1elM0ZXg5ZTMyaXBOc0hkZ3lWbkVMdVZkenljcGpwTkRPaE1RRW1YcmZhQQ?oc=5",
+      "publishedAt": "2026-10-21T07:36:11.000Z"
+    },
+    {
+      "title": "원익ips 주가 1,600원 상승 후 마감",
+      "source": "아시아뉴스통신",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBHN1VJblBMV3JCSHZNZ2x4VnFkTXJjeTdNNFNPcS1RRDNBZ2F6M0htdHl1MHdYZzgtS1RoU1pUNlhQOFZnYUFwcHBTX1lpcW5HeE04UEw3TGhBUmdBWjE4QlNaSk9YQnptN1hGLWNVSE56d0Z3?oc=5",
+      "publishedAt": "2026-10-21T06:42:58.000Z"
+    },
+    {
+      "title": "원익ips 주가 상승 중",
+      "source": "아시아뉴스통신",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5nQUJJTXJITDBIa05rWEtCbVF3RUNqOVM4VlZRUnBuQUllRkRvVVNCc25IUHltcGVDMV9RV0xucS1ORmdiaUE5X2NaX296MFJZcU42VEJWakNENW03aUMyckZHWVlRU1dtanJBVC1Pc1BseEFs?oc=5",
+      "publishedAt": "2026-10-21T00:10:16.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20261007",
+      "holder": "삼성자산운용",
+      "ratio": 7.1,
+      "ratioChange": 1.18,
+      "reason": "매매로 인한 변동보고의무 발생(삼성액티브자산운용의 위탁운용분 포함)",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261007000302"
+    },
+    {
+      "kind": "major",
+      "date": "20260803",
+      "holder": "미래에셋자산운용",
+      "ratio": 7.31,
+      "ratioChange": -2.7,
+      "reason": "지분율 변동",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260803000366"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 792.76,
+    "vs": 10.79,
+    "fltRt": 1.38
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-22T06:49:58.626Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260423"
+}

@@ -1,0 +1,128 @@
+{
+  "code": "145020",
+  "name": "휴젤",
+  "market": "KOSDAQ",
+  "basDt": "20261021",
+  "price": {
+    "code": "145020",
+    "name": "휴젤",
+    "market": "KOSDAQ",
+    "basDt": "20261021",
+    "close": 185800,
+    "vs": 1600,
+    "fltRt": 0.87,
+    "open": 184600,
+    "high": 188900,
+    "low": 184600,
+    "prevClose": 184200,
+    "volume": 36899,
+    "tradeValue": 6887967400,
+    "week52": {
+      "low": 168500,
+      "high": 296500,
+      "position": 0.13515625,
+      "days": 245,
+      "from": "20251021"
+    },
+    "recent5": [
+      {
+        "basDt": "20261015",
+        "fltRt": -2.32,
+        "open": 167500,
+        "high": 170900,
+        "low": 163700,
+        "close": 168500
+      },
+      {
+        "basDt": "20261016",
+        "fltRt": 6.29,
+        "open": 168700,
+        "high": 182000,
+        "low": 168700,
+        "close": 179100
+      },
+      {
+        "basDt": "20261019",
+        "fltRt": 4.41,
+        "open": 179800,
+        "high": 187000,
+        "low": 177000,
+        "close": 187000
+      },
+      {
+        "basDt": "20261020",
+        "fltRt": -1.5,
+        "open": 184500,
+        "high": 190100,
+        "low": 182800,
+        "close": 184200
+      },
+      {
+        "basDt": "20261021",
+        "fltRt": 0.87,
+        "open": 184600,
+        "high": 188900,
+        "low": 184600,
+        "close": 185800
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 69250,
+      "ratio": 0.53
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 529,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-22T06:48:52.412Z"
+  },
+  "facts": [
+    "코스닥보다 0.51%p 낮았어요.",
+    "거래량은 20일 평균의 0.5배예요.",
+    "시가보다 1,200원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "“휴젤, 미국 톡신 재고 싹 사들였다…‘마이너스 매출’ 각오한 배수의 진”",
+      "source": "뉴스퀘스트",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9XVHhGdTNHMDdsV3pWeUJJa2J5X1B6T1ZUN0U4dGxFc2l1dGNnVjQ1c2tCaFY0TVF6b25qbnNtbXJuRFAtTUdaREQ2WnptY3BzOWlOeDJoUlc1NFpMTlFSRnBMNjVNZjB2T2F1LWV1OA?oc=5",
+      "publishedAt": "2026-10-21T02:20:05.000Z"
+    },
+    {
+      "title": "휴젤 주가 상승 중",
+      "source": "아시아뉴스통신",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1teHpKVDQ5Uy1lYjVCaFd6cjQxUWwzcU1uWE40Z0VBMTBXR1NqQldRanl5NmdWTXJQellQUHI0S3loazk4VXNNQWp4UzczOWdVVnB6ZE90R21abXRsM05QdWN5LTlBSE9kY3dPTTVHU2tNNXJf?oc=5",
+      "publishedAt": "2026-10-21T00:17:09.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20260804",
+      "holder": "아프로디테애퀴지션홀딩스엘엘씨",
+      "ratio": 45.58,
+      "ratioChange": 0,
+      "reason": "특별관계자 및 보유주식등 수 변동에 따른 변동보고",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260804000276"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 792.76,
+    "vs": 10.79,
+    "fltRt": 1.38
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-22T06:49:58.648Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260423"
+}
