@@ -11,6 +11,7 @@
 from __future__ import annotations
 
 import json
+import re
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -36,6 +37,23 @@ REVIEW = {
 }
 # 세부는 질의 파일(queries.tsv 2열)이 `subHint` 로 실어 준다. 여기 표를 둘 필요가 없다.
 
+HANGUL = re.compile('[가-힣]')
+
+
+def auto_reject(c: dict) -> str | None:
+    """손으로 보기 전에 규칙으로 떨어뜨린다. **노하우가 쌓이는 자리다 — 규칙을 늘린다.**
+
+    지금까지 확인된 패턴은 하나다(2026-10-22, 1,131개 중):
+      한국어가 한 글자도 없고 국가도 한국이 아닌 채널 — 질의 `환율 달러` 가
+      전 세계 forex 채널을 끌어왔다(아랍어·터키어·러시아어·인도네시아어…).
+      → 질의 자체도 `원달러 환율` 로 좁히는 게 맞다. queries.tsv 참고.
+    country 가 비어 있는 채널은 **떨어뜨리지 않는다** — 한국 채널도 자주 비어 있다.
+    """
+    text = (c.get('title') or '') + (c.get('description') or '')
+    if not HANGUL.search(text) and c.get('country') not in (None, 'KR'):
+        return f"한국어 콘텐츠 아님 (country={c.get('country')})"
+    return None
+
 
 def main() -> int:
     p = ytapi.DATA / 'registry.json'
@@ -46,6 +64,12 @@ def main() -> int:
 
     for cid, c in chans.items():
         if c.get('category') is not None:
+            continue
+        auto = auto_reject(c)
+        if auto and cid not in NONE:
+            c.update(category='none', rejectReason=auto,
+                     classifiedBy='rule', classifiedAt=stamp)
+            n['none'] += 1
             continue
         if cid in NONE:
             c.update(category='none', rejectReason=NONE[cid],

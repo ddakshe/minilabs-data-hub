@@ -14,7 +14,9 @@ econ	macro	거시경제 전망
 econ	macro	인플레이션 물가
 econ	macro	연준 FOMC
 econ	macro	국가부채 재정
-econ	macro	환율 달러
+# 🚨 「환율 달러」 는 전 세계 forex 채널을 끌어왔다(아랍어·터키어·러시아어…).
+#    2026-10-22 에 원달러로 좁혔다. 질의가 넓으면 분류 노동이 그만큼 는다.
+econ	macro	원달러 환율 전망
 econ	kr-stock	주식 투자
 econ	kr-stock	기업 분석
 econ	kr-stock	코스피 전망
