@@ -1,15 +1,15 @@
 {
-  "fetchedAt": "2026-10-15T00:10:47.627Z",
-  "baseDate": "20261015",
+  "fetchedAt": "2026-10-22T00:18:28.457Z",
+  "baseDate": "20261022",
   "localSupport": {
-    "fetched": 127,
-    "items": 105,
+    "fetched": 126,
+    "items": 104,
     "flu": 60,
     "orgs": 76,
     "unmatched": []
   },
   "prices": {
-    "hospitalRows": 194304,
+    "hospitalRows": 194285,
     "vaccineRows": 17640,
     "products": {
       "zoster": {
@@ -89,10 +89,6 @@
           "rows": 184,
           "latestFrom": 20260929
         },
-        "지씨플루프리필드시린지주": {
-          "rows": 124,
-          "latestFrom": 20260930
-        },
         "보령플루백신VIII-TF주(프리필드시린지)": {
           "rows": 26,
           "latestFrom": 20260921
@@ -112,6 +108,10 @@
         "플루미스트인트라나잘스프레이": {
           "rows": 4,
           "latestFrom": 20260923
+        },
+        "지씨플루프리필드시린지주": {
+          "rows": 124,
+          "latestFrom": 20260930
         },
         "일양플루백신프리필드시린지주 0.5mL": {
           "rows": 33,
@@ -286,16 +286,16 @@
           "latestFrom": 20260915
         }
       },
-      "hfrs": {
-        "한타박스주 0.5ml": {
-          "rows": 15,
-          "latestFrom": 20260903
-        }
-      },
       "flu-senior": {
         "플루아드쿼드프리필드시린지": {
           "rows": 72,
           "latestFrom": 20260921
+        }
+      },
+      "hfrs": {
+        "한타박스주 0.5ml": {
+          "rows": 15,
+          "latestFrom": 20260903
         }
       }
     }
