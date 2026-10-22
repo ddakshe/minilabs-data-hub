@@ -27,6 +27,9 @@ NONE = {
     'UCG9aFJTZ-lMCHAiO1KJsirg': '종합 뉴스(MBN). 경제는 일부',
     'UCMLJc_D3jgFcS_48G7i4V0A': '종합 라디오 스트리밍(KBS 1라디오)',
     'UCtx-S99FkDz93kqhg2Rcj7w': '아랍어 채널. 한국 대상 아님',
+    # 🚨 이미 분류된 채널도 여기에 적으면 교정된다. 밀도 지표가 찾아낸 오분류다 —
+    #    urban/transit 1위 점유율 79% 로 걸렸고, 원인이 구조가 아니라 오분류였다.
+    'UCyNHdF4hMxHUFSsPbY24p6A': '미미미누 — 입시 유튜버. 질의 「지하철 연장」 에 걸렸다',
 }
 # 사람이 봐야 하는 것 — id: 왜 애매한지
 REVIEW = {
@@ -63,7 +66,8 @@ def main() -> int:
     n = {'none': 0, 'review': 0, 'econ': 0}
 
     for cid, c in chans.items():
-        if c.get('category') is not None:
+        # NONE·REVIEW 에 적힌 채널은 **이미 분류됐어도 교정한다.** 그게 이 파일의 용도다
+        if c.get('category') is not None and cid not in NONE and cid not in REVIEW:
             continue
         auto = auto_reject(c)
         if auto and cid not in NONE:
