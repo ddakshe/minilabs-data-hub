@@ -11,6 +11,11 @@
   ① 상위 10 교체율 — 어제 상위 10 중 오늘도 상위 10 인 비율. **낮아야 좋다**
   ② 순위 상관(스피어만) — 1.0 에 붙으면 고정된 화면이다
   ③ 커버리지 — 증가분이 0 인 채널 비율. 높으면 지표가 둔하다는 뜻
+
+🚨 **채널 `viewCount` 는 하루 단위로 갱신된다.** 13시간 간격으로 두 번 찍었더니
+   229채널 중 220개가 **완전히 같은 값**이었다(2026-10-20 → 10-21 실측).
+   → 스냅샷은 하루 한 번, 같은 시각에 찍는다(예약 배치가 05:10 KST).
+     주기 밖에서 손으로 돌린 날은 짝이 갱신 없음으로 잡히므로 **판정에서 뺀다.**
 """
 from __future__ import annotations
 
@@ -37,12 +42,17 @@ def load_days() -> list[tuple[str, dict[str, dict]]]:
 
 
 def spearman(a: list[str], b: list[str]) -> float | None:
-    """두 순위 목록의 상관. 공통 채널만 본다."""
+    """두 순위 목록의 상관. 공통 채널만 본다.
+
+    🚨 **공통 집합 안에서 다시 순위를 매겨야 한다.** 전체 목록의 순위를 그대로 쓰면서
+    n 만 공통 개수로 잡으면 d² 가 정규화 범위를 넘어 **-1.95 같은 불가능한 값**이 나온다
+    (2026-10-22 실측). 스피어만은 -1~1 이다.
+    """
     common = [c for c in a if c in b]
     if len(common) < 3:
         return None
-    ra = {c: i for i, c in enumerate(a)}
-    rb = {c: i for i, c in enumerate(b)}
+    ra = {c: i for i, c in enumerate([x for x in a if x in common])}
+    rb = {c: i for i, c in enumerate([x for x in b if x in common])}
     n = len(common)
     d2 = sum((ra[c] - rb[c]) ** 2 for c in common)
     return 1 - (6 * d2) / (n * (n * n - 1))
@@ -69,6 +79,11 @@ def main() -> int:
             print(f'{d1:<12}{len(r1):>6}{"-":>11}{"-":>12}{"-":>10}')
             continue
         moved = sum(1 for v in delta.values() if v > 0)
+        # 갱신이 안 된 짝은 순위가 무의미하다. 계산하지 않고 표시만 한다
+        if moved < len(delta) * 0.5:
+            print(f'{d1:<12}{len(r1):>6}{moved:>11}{"갱신없음":>12}{"-":>10}'
+                  f'   ← {d0} 와 같은 갱신 주기. 판정에서 제외')
+            continue
         order = sorted(delta, key=lambda c: delta[c], reverse=True)
         top = order[:10]
         keep = f'{len(set(top) & set(prev_top)) / 10:.0%}' if prev_top else '-'
