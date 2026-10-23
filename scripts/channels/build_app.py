@@ -71,6 +71,9 @@ def main() -> int:
                 (json.loads(l) for l in (DATA / 'series' / f'{d}.jsonl').read_text().splitlines() if l.strip())}
 
     prev, last = load(days[-2]), load(days[-1])
+    # 추이: 연속한 날짜 짝마다 구독자 대비 퍼센트를 낸다. **최근 14개만** 싣는다 —
+    # 전부 실으면 날이 갈수록 파일이 자란다. 화면도 그만큼은 못 그린다.
+    frames = [load(d) for d in days[-15:]]
     asof = reg.get('updatedAt')
 
     live = {cid: c for cid, c in chans.items() if c.get('category') in LIVE}
@@ -85,7 +88,22 @@ def main() -> int:
             if dv > 0:
                 pct = round(dv / subs * 100)
         # 빈 값은 담지 않는다 — 1,500채널이면 null 하나가 10KB 다
+        # 상세 화면이 쓰는 값들. 총 조회수는 **정확한 값**이다(구독자와 달리 반올림이 없다)
         row = {'t': c.get('title'), 's': subs, 'u': c.get('sub')}
+        if c.get('views'):
+            row['v'] = c['views']
+        if c.get('videos'):
+            row['n'] = c['videos']
+        if c.get('born'):
+            row['b'] = c['born']
+        if subs >= MIN_SUBS:
+            hist = []
+            for a, bb in zip(frames, frames[1:]):
+                if cid in a and cid in bb:
+                    dv = bb[cid]['v'] - a[cid]['v']
+                    hist.append(round(dv / subs * 100) if dv > 0 else 0)
+            if any(hist):
+                row['hist'] = hist
         if c.get('thumb'):
             row['g'] = c['thumb']          # 썸네일 id (앱이 URL 을 조립한다)
         if c.get('handle'):

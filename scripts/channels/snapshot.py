@@ -114,6 +114,8 @@ def main() -> int:
                 c['thumb'] = u
             c['description'] = (sn.get('description') or '')[:300]
             c['country'] = sn.get('country')
+            if sn.get('publishedAt'):
+                c['born'] = sn['publishedAt'][:10]   # 개설일. 「1년 3개월 만에 11만」
             c['subs'], c['views'], c['videos'] = subs, views, videos
             c['lastSeenAt'] = stamp
             last = c.get('lastUploadAt')
