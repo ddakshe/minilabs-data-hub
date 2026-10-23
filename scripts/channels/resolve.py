@@ -24,15 +24,16 @@ HERE = Path(__file__).resolve().parent
 KST = timezone(timedelta(hours=9))
 
 
-def read_seeds() -> list[tuple[str, str, str]]:
+def read_seeds() -> list[tuple[str, str, str, str]]:
+    """카테고리 · 세부 · 이름 · 핸들. **세부가 빠지면 빈 칸이 생긴다**(2026-10-23)."""
     out = []
     for line in (HERE / 'seeds.tsv').read_text().splitlines():
         if not line.strip() or line.lstrip().startswith('#'):
             continue
-        parts = (line.split('\t') + ['', ''])[:3]
-        cat, name, handle = (p.strip() for p in parts)
+        parts = (line.split('\t') + ['', '', ''])[:4]
+        cat, sub, name, handle = (p.strip() for p in parts)
         if cat and name:
-            out.append((cat, name, handle))
+            out.append((cat, sub if sub != '-' else None, name, handle))
     return out
 
 
@@ -65,7 +66,7 @@ def main() -> int:
     stamp = datetime.now(KST).date().isoformat()
 
     added, review, failed, stopped = [], [], [], None
-    for cat, name, handle in read_seeds():
+    for cat, sub, name, handle in read_seeds():
         if name in known_names:
             continue
         try:
@@ -91,6 +92,7 @@ def main() -> int:
             'description': (sn.get('description') or '')[:300],
             'country': sn.get('country'),
             'category': cat,                   # 🔑 우리가 정한 분류다
+            'sub': sub,
             'classifiedBy': 'hand',
             'source': 'seed',
             'addedAt': stamp,

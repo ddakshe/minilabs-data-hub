@@ -49,6 +49,29 @@ REVIEW = {
 }
 # 세부는 질의 파일(queries.tsv 2열)이 `subHint` 로 실어 준다. 여기 표를 둘 필요가 없다.
 
+# 세부 칸 교정 — 밀도 지표가 「얇다 · 합칠 것」 으로 걸어낸 칸을 비운다.
+# 🚨 한 칸에 몰아넣지 않는다. 투미TV 는 「재개발/재건축 전문」 이고 붇옹산은 경매다 —
+#    뭉뚱그리면 우리가 손으로 만든 분류의 값어치가 그만큼 깎인다.
+#    씨앗(seeds.tsv)은 sub 가 비어 있어서 생긴 칸이라, 씨앗을 넣을 때 세부도 같이 적는 게 맞다.
+RESUB = {
+    'UCDSj40X9FFUAnx1nv7gQhcA': 'home',     # 월급쟁이부자들TV
+    'UC2QeHNJFfuQWB4cy3M-745g': 'home',     # 부읽남TV
+    'UCAVdqlngIAxHtwlCA2hjv3A': 'home',     # 집코노미
+    'UCcloDgiDqz8twby7zvG-USg': 'home',     # 쇼킹부동산
+    'UCFhF5oooL5ugxHKvTxBD75Q': 'home',     # 땅집고
+    'UC8tWxC9EPKUCrHmEhiYTbhQ': 'home',     # 푸릉(렘군)
+    'UCKosTo5bqKm4v264z2zDnFQ': 'home',     # 스마트튜브(빠숑) — 입지 전문
+    'UC9meL6XNNckzlleWelmO9tQ': 'redev',    # 투미TV — 「재개발/재건축 전문」
+    'UCiYcXH2xoBeaXCQs7G9zImg': 'home',     # 다꿈스쿨 TV
+    'UCwZzWtI-uwoYSDaubTx7Tzw': 'home',     # 아임해피 정지영 — 공인중개사
+    'UC9HYs-EG-tXxZbsgMi6TzEw': 'auction',  # 경매하는 붇옹산
+    'UC2rRsSOig2nHpGQhH8A8CcQ': 'home',     # 부동산김사부TV
+    'UCXIP7DPLuvGHUMiMsggwjbw': 'home',     # 직방 — 주거 플랫폼
+    'UCAOcl4ABX037mRECBi7h1pQ': 'home',     # 삼토
+    'UC0G0Z05LATPtpUkxeOrEjOA': 'plan',     # 국토교통부 — 주택·도로·철도 정책
+    'UCjTrKMFkPXSMMGDbAt_x9iQ': 'transit',  # 교통학회TV — 대한교통학회
+}
+
 HANGUL = re.compile('[가-힣]')
 # 한글도 라틴도 아닌 문자 체계 — 키릴·아랍·태국·히브리·데바나가리.
 # 이게 보이면 country 가 비어 있어도 한국 채널이 아니다.
@@ -106,6 +129,14 @@ def main() -> int:
     chans = reg['channels']
     stamp = datetime.now(KST).date().isoformat()
     n = {'none': 0, 'review': 0, 'econ': 0}
+
+    # 세부 칸 교정을 먼저 적용한다 (밀도 지표가 걸어낸 얇은 칸 비우기)
+    for cid, sub in RESUB.items():
+        c = chans.get(cid)
+        if c and c.get('sub') != sub:
+            c['sub'] = sub
+            c['classifiedAt'] = stamp
+            n['resub'] = n.get('resub', 0) + 1
 
     for cid, c in chans.items():
         # NONE·REVIEW 에 적힌 채널은 **이미 분류됐어도 교정한다.** 그게 이 파일의 용도다
