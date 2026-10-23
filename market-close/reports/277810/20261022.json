@@ -1,0 +1,124 @@
+{
+  "code": "277810",
+  "name": "레인보우로보틱스",
+  "market": "KOSDAQ",
+  "basDt": "20261022",
+  "price": {
+    "code": "277810",
+    "name": "레인보우로보틱스",
+    "market": "KOSDAQ",
+    "basDt": "20261022",
+    "close": 365000,
+    "vs": -9000,
+    "fltRt": -2.41,
+    "open": 374500,
+    "high": 385000,
+    "low": 361500,
+    "prevClose": 374000,
+    "volume": 63745,
+    "tradeValue": 23742266500,
+    "week52": {
+      "low": 332500,
+      "high": 880000,
+      "position": 0.0593607305936073,
+      "days": 245,
+      "from": "20251022"
+    },
+    "recent5": [
+      {
+        "basDt": "20261016",
+        "fltRt": 2.03,
+        "open": 347000,
+        "high": 361000,
+        "low": 344000,
+        "close": 352500
+      },
+      {
+        "basDt": "20261019",
+        "fltRt": 7.23,
+        "open": 337000,
+        "high": 378000,
+        "low": 334500,
+        "close": 378000
+      },
+      {
+        "basDt": "20261020",
+        "fltRt": -1.72,
+        "open": 387000,
+        "high": 389000,
+        "low": 360500,
+        "close": 371500
+      },
+      {
+        "basDt": "20261021",
+        "fltRt": 0.67,
+        "open": 373000,
+        "high": 376000,
+        "low": 364000,
+        "close": 374000
+      },
+      {
+        "basDt": "20261022",
+        "fltRt": -2.41,
+        "open": 374500,
+        "high": 385000,
+        "low": 361500,
+        "close": 365000
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 60907,
+      "ratio": 1.05
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 529,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-23T06:42:34.532Z"
+  },
+  "facts": [
+    "코스닥보다 1.21%p 높았어요.",
+    "거래량은 20일 평균의 1.1배예요.",
+    "시가보다 9,500원 낮게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "[K-로봇, 확산의 조건 ②] 대기업 밖 AI로봇 생태계는 어떻게…‘데이터 주도권’이 협력 변수",
+      "source": "산업일보",
+      "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE54VkdQMWtkRWpiVUVhNlAyZzBicWJsY0hjNktjbUlPakNuemM2QVFkWW9fNnhMMXYzS2pVS1FIWVBwa1I2?oc=5",
+      "publishedAt": "2026-10-22T03:23:58.000Z"
+    },
+    {
+      "title": "[포토] '2026 국가단위 긴급구조 종합훈련'에 등장한 레인보우로보틱스 사족보행 로봇",
+      "source": "이데일리",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNejhJWExWT2J6dmpiN0d5MTJORmw1S2RQWXlxRXY1aU5sc0R1NTl6c0tSQVQtRGV3dENHT3VtdllVUDZoNTFrcW9LOXZ6bVJudF82RUVETU85OFlHTUV4QlZERXRrRUhHaFpXam1sVXdjb0N3ZjFzTWl0OWQ2R1NpVw?oc=5",
+      "publishedAt": "2026-10-22T06:19:09.000Z"
+    },
+    {
+      "title": "“AI 로봇산업, 기술 개발 넘어 공공수요 창출·양산 생태계 구축 시급”",
+      "source": "티스토리",
+      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1CM01TV1lZeW94aXh6azRDUG1uVVA3aldtc05abTREbW9OZjNDbWRSVThaOXR3LWJkNUw4NE1SQkFfN1pscG04Nm4tZw?oc=5",
+      "publishedAt": "2026-10-22T07:12:13.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 764.1,
+    "vs": -28.66,
+    "fltRt": -3.62
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-23T06:44:08.871Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260424"
+}

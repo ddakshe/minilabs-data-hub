@@ -1,0 +1,122 @@
+{
+  "code": "145020",
+  "name": "휴젤",
+  "market": "KOSDAQ",
+  "basDt": "20261022",
+  "price": {
+    "code": "145020",
+    "name": "휴젤",
+    "market": "KOSDAQ",
+    "basDt": "20261022",
+    "close": 180800,
+    "vs": -5000,
+    "fltRt": -2.69,
+    "open": 186300,
+    "high": 186400,
+    "low": 180300,
+    "prevClose": 185800,
+    "volume": 44000,
+    "tradeValue": 8085635150,
+    "week52": {
+      "low": 168500,
+      "high": 296500,
+      "position": 0.09609375,
+      "days": 245,
+      "from": "20251022"
+    },
+    "recent5": [
+      {
+        "basDt": "20261016",
+        "fltRt": 6.29,
+        "open": 168700,
+        "high": 182000,
+        "low": 168700,
+        "close": 179100
+      },
+      {
+        "basDt": "20261019",
+        "fltRt": 4.41,
+        "open": 179800,
+        "high": 187000,
+        "low": 177000,
+        "close": 187000
+      },
+      {
+        "basDt": "20261020",
+        "fltRt": -1.5,
+        "open": 184500,
+        "high": 190100,
+        "low": 182800,
+        "close": 184200
+      },
+      {
+        "basDt": "20261021",
+        "fltRt": 0.87,
+        "open": 184600,
+        "high": 188900,
+        "low": 184600,
+        "close": 185800
+      },
+      {
+        "basDt": "20261022",
+        "fltRt": -2.69,
+        "open": 186300,
+        "high": 186400,
+        "low": 180300,
+        "close": 180800
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 69623,
+      "ratio": 0.63
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 529,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-23T06:42:55.602Z"
+  },
+  "facts": [
+    "코스닥보다 0.93%p 높았어요.",
+    "거래량은 20일 평균의 0.6배예요.",
+    "시가보다 5,500원 낮게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "상반기 웃은 대웅·휴젤, 주춤한 메디톡스…3분기 성적표 ‘주목’",
+      "source": "뉴스토마토",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFB4Y3F5M2twUlBLUXR5TVFGc1FucmRUWnpCS3RfZGlHeEdyR3JkclBoOGhuWmdNVTA5eE1wdTI1RTlwR2dGSGI2U2NBejU0RHhqek5zQnlGOUU0T0R0MzdLdw?oc=5",
+      "publishedAt": "2026-10-22T05:19:23.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20260804",
+      "holder": "아프로디테애퀴지션홀딩스엘엘씨",
+      "ratio": 45.58,
+      "ratioChange": 0,
+      "reason": "특별관계자 및 보유주식등 수 변동에 따른 변동보고",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260804000276"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 764.1,
+    "vs": -28.66,
+    "fltRt": -3.62
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-23T06:44:08.921Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260424"
+}

@@ -2,37 +2,29 @@
   "code": "145020",
   "name": "휴젤",
   "market": "KOSDAQ",
-  "basDt": "20261021",
+  "basDt": "20261022",
   "price": {
     "code": "145020",
     "name": "휴젤",
     "market": "KOSDAQ",
-    "basDt": "20261021",
-    "close": 185800,
-    "vs": 1600,
-    "fltRt": 0.87,
-    "open": 184600,
-    "high": 188900,
-    "low": 184600,
-    "prevClose": 184200,
-    "volume": 36899,
-    "tradeValue": 6887967400,
+    "basDt": "20261022",
+    "close": 180800,
+    "vs": -5000,
+    "fltRt": -2.69,
+    "open": 186300,
+    "high": 186400,
+    "low": 180300,
+    "prevClose": 185800,
+    "volume": 44000,
+    "tradeValue": 8085635150,
     "week52": {
       "low": 168500,
       "high": 296500,
-      "position": 0.13515625,
+      "position": 0.09609375,
       "days": 245,
-      "from": "20251021"
+      "from": "20251022"
     },
     "recent5": [
-      {
-        "basDt": "20261015",
-        "fltRt": -2.32,
-        "open": 167500,
-        "high": 170900,
-        "low": 163700,
-        "close": 168500
-      },
       {
         "basDt": "20261016",
         "fltRt": 6.29,
@@ -64,36 +56,38 @@
         "high": 188900,
         "low": 184600,
         "close": 185800
+      },
+      {
+        "basDt": "20261022",
+        "fltRt": -2.69,
+        "open": 186300,
+        "high": 186400,
+        "low": 180300,
+        "close": 180800
       }
     ],
     "volumeVs20d": {
-      "avg20": 69250,
-      "ratio": 0.53
+      "avg20": 69623,
+      "ratio": 0.63
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
       "rows": 529,
       "rows52w": 245
     },
-    "generatedAt": "2026-10-22T06:48:52.412Z"
+    "generatedAt": "2026-10-23T06:42:55.602Z"
   },
   "facts": [
-    "코스닥보다 0.51%p 낮았어요.",
-    "거래량은 20일 평균의 0.5배예요.",
-    "시가보다 1,200원 높게 마감했어요."
+    "코스닥보다 0.93%p 높았어요.",
+    "거래량은 20일 평균의 0.6배예요.",
+    "시가보다 5,500원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "“휴젤, 미국 톡신 재고 싹 사들였다…‘마이너스 매출’ 각오한 배수의 진”",
-      "source": "뉴스퀘스트",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9XVHhGdTNHMDdsV3pWeUJJa2J5X1B6T1ZUN0U4dGxFc2l1dGNnVjQ1c2tCaFY0TVF6b25qbnNtbXJuRFAtTUdaREQ2WnptY3BzOWlOeDJoUlc1NFpMTlFSRnBMNjVNZjB2T2F1LWV1OA?oc=5",
-      "publishedAt": "2026-10-21T02:20:05.000Z"
-    },
-    {
-      "title": "휴젤 주가 상승 중",
-      "source": "아시아뉴스통신",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1teHpKVDQ5Uy1lYjVCaFd6cjQxUWwzcU1uWE40Z0VBMTBXR1NqQldRanl5NmdWTXJQellQUHI0S3loazk4VXNNQWp4UzczOWdVVnB6ZE90R21abXRsM05QdWN5LTlBSE9kY3dPTTVHU2tNNXJf?oc=5",
-      "publishedAt": "2026-10-21T00:17:09.000Z"
+      "title": "상반기 웃은 대웅·휴젤, 주춤한 메디톡스…3분기 성적표 ‘주목’",
+      "source": "뉴스토마토",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFB4Y3F5M2twUlBLUXR5TVFGc1FucmRUWnpCS3RfZGlHeEdyR3JkclBoOGhuWmdNVTA5eE1wdTI1RTlwR2dGSGI2U2NBejU0RHhqek5zQnlGOUU0T0R0MzdLdw?oc=5",
+      "publishedAt": "2026-10-22T05:19:23.000Z"
     }
   ],
   "dart": [],
@@ -111,9 +105,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 792.76,
-    "vs": 10.79,
-    "fltRt": 1.38
+    "clpr": 764.1,
+    "vs": -28.66,
+    "fltRt": -3.62
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -122,7 +116,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-22T06:49:58.648Z",
+  "builtAt": "2026-10-23T06:44:08.921Z",
   "archiveDays": 120,
-  "archiveFrom": "20260423"
+  "archiveFrom": "20260424"
 }

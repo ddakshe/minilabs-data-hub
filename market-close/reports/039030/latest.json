@@ -2,37 +2,29 @@
   "code": "039030",
   "name": "이오테크닉스",
   "market": "KOSDAQ",
-  "basDt": "20261021",
+  "basDt": "20261022",
   "price": {
     "code": "039030",
     "name": "이오테크닉스",
     "market": "KOSDAQ",
-    "basDt": "20261021",
-    "close": 430000,
-    "vs": 9000,
-    "fltRt": 2.14,
-    "open": 429000,
-    "high": 440500,
-    "low": 421000,
-    "prevClose": 421000,
-    "volume": 54461,
-    "tradeValue": 23399822500,
+    "basDt": "20261022",
+    "close": 410000,
+    "vs": -20000,
+    "fltRt": -4.65,
+    "open": 426000,
+    "high": 436500,
+    "low": 408000,
+    "prevClose": 430000,
+    "volume": 98904,
+    "tradeValue": 41403192750,
     "week52": {
       "low": 228500,
       "high": 612000,
-      "position": 0.5254237288135594,
+      "position": 0.47327249022164275,
       "days": 245,
-      "from": "20251021"
+      "from": "20251022"
     },
     "recent5": [
-      {
-        "basDt": "20261015",
-        "fltRt": -9.71,
-        "open": 454500,
-        "high": 455000,
-        "low": 411500,
-        "close": 423000
-      },
       {
         "basDt": "20261016",
         "fltRt": 5.91,
@@ -64,30 +56,38 @@
         "high": 440500,
         "low": 421000,
         "close": 430000
+      },
+      {
+        "basDt": "20261022",
+        "fltRt": -4.65,
+        "open": 426000,
+        "high": 436500,
+        "low": 408000,
+        "close": 410000
       }
     ],
     "volumeVs20d": {
-      "avg20": 103036,
-      "ratio": 0.53
+      "avg20": 101221,
+      "ratio": 0.98
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
       "rows": 529,
       "rows52w": 245
     },
-    "generatedAt": "2026-10-22T06:48:36.978Z"
+    "generatedAt": "2026-10-23T06:42:39.721Z"
   },
   "facts": [
-    "코스닥보다 0.76%p 높았어요.",
-    "거래량은 20일 평균의 0.5배예요.",
-    "시가보다 1,000원 높게 마감했어요."
+    "코스닥보다 1.03%p 낮았어요.",
+    "거래량은 20일 평균의 1.0배예요.",
+    "시가보다 16,000원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "이오테크닉스, 장중 43만원대…전일보다 2.97% 상승",
-      "source": "비건뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE8zaWkySi1rc0lYR1ZZVUdNOHg0R3BwS1duY2xZX3VPN05tYzZBZVBjcVY3djg5Y0RNeXBlUEdUTkZCQ2NLZ29hN3BxQTFCeURJT1hrWUk4MFdUWmVqUTlxeWpDTHFKUQ?oc=5",
-      "publishedAt": "2026-10-21T04:29:33.000Z"
+      "title": "[코스닥 외국인] 피에스케이·테스·이오테크닉스 매수 상위… 외국인 선택은 반도체",
+      "source": "핀포인트뉴스",
+      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1lX3ZVMlNMVDZfMVpOMkY2QWFNZ2p6M2htOFk4U1IxdTV6UnQ1a1E5V09sWUlfalJ4aE41ZFJ1aWNranNoRzNmTnlCaEFWU0J6UVZRSHZDbDE1R2NqVk8zNUlKaWNpU1l4OURzd0hldU5zZGFub1hz0gF3QVVfeXFMTWVfdlUyU0xUNl8xWk4yRjZBYU1nanozaG04WThTUjF1NXpSdDVrUTlXT2xZSV9qUnhoTjVkUnVpY2tqc2hHM2ZOeUJoQVZTQnpRVlFIdkNsMTVHY2pWTzM1SUppY2lTWXg5RHN3SGV1TnNkYW5vWHM?oc=5",
+      "publishedAt": "2026-10-22T06:57:33.000Z"
     }
   ],
   "dart": [],
@@ -123,9 +123,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 792.76,
-    "vs": 10.79,
-    "fltRt": 1.38
+    "clpr": 764.1,
+    "vs": -28.66,
+    "fltRt": -3.62
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -134,7 +134,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-22T06:49:58.622Z",
+  "builtAt": "2026-10-23T06:44:08.884Z",
   "archiveDays": 120,
-  "archiveFrom": "20260423"
+  "archiveFrom": "20260424"
 }

@@ -3,10 +3,18 @@
   "name": "삼성전기",
   "market": "KOSPI",
   "retainDays": 120,
-  "firstBasDt": "20260423",
-  "lastBasDt": "20261021",
+  "firstBasDt": "20260424",
+  "lastBasDt": "20261022",
   "count": 120,
   "days": [
+    {
+      "basDt": "20261022",
+      "close": 1145000,
+      "fltRt": -1.97,
+      "headline": "코스피보다 1.55%p 높았어요.",
+      "newsCount": 8,
+      "dartCount": 0
+    },
     {
       "basDt": "20261021",
       "close": 1168000,
@@ -1042,16 +1050,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260423",
-      "close": 774000,
-      "fltRt": -4.68,
-      "headline": "시가 796,000원보다 22,000원 낮게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-10-22T06:49:58.564Z"
+  "updatedAt": "2026-10-23T06:44:08.804Z"
 }

@@ -1,0 +1,143 @@
+{
+  "code": "000250",
+  "name": "삼천당제약",
+  "market": "KOSDAQ",
+  "basDt": "20261022",
+  "price": {
+    "code": "000250",
+    "name": "삼천당제약",
+    "market": "KOSDAQ",
+    "basDt": "20261022",
+    "close": 200500,
+    "vs": -12000,
+    "fltRt": -5.65,
+    "open": 213000,
+    "high": 213000,
+    "low": 200000,
+    "prevClose": 212500,
+    "volume": 72717,
+    "tradeValue": 14847523700,
+    "week52": {
+      "low": 126500,
+      "high": 1184000,
+      "position": 0.06997635933806147,
+      "days": 245,
+      "from": "20251022"
+    },
+    "recent5": [
+      {
+        "basDt": "20261016",
+        "fltRt": 6.12,
+        "open": 199000,
+        "high": 214000,
+        "low": 193000,
+        "close": 204500
+      },
+      {
+        "basDt": "20261019",
+        "fltRt": 2.93,
+        "open": 203000,
+        "high": 212000,
+        "low": 200000,
+        "close": 210500
+      },
+      {
+        "basDt": "20261020",
+        "fltRt": -2.61,
+        "open": 206000,
+        "high": 210500,
+        "low": 200500,
+        "close": 205000
+      },
+      {
+        "basDt": "20261021",
+        "fltRt": 3.66,
+        "open": 208000,
+        "high": 215000,
+        "low": 205000,
+        "close": 212500
+      },
+      {
+        "basDt": "20261022",
+        "fltRt": -5.65,
+        "open": 213000,
+        "high": 213000,
+        "low": 200000,
+        "close": 200500
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 170410,
+      "ratio": 0.43
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 529,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-23T06:42:47.806Z"
+  },
+  "facts": [
+    "코스닥보다 2.03%p 낮았어요.",
+    "거래량은 20일 평균의 0.4배예요.",
+    "시가보다 12,500원 낮게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "삼천당제약, 불성실공시법인 지정…“성과로 응답할 것”",
+      "source": "쿠키뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBoRHhwT2xFdkZtbmZEb2RHVVotdFc2ZGJSMmxrRENrU00xQzF0V1VPQXNNQjU4bUlzVmtOeks0Mi1sbTlYa0hnUTRNakp6dVUzRk1MR01xamhYanQ0b29QVmZiaw?oc=5",
+      "publishedAt": "2026-10-22T07:32:19.000Z"
+    },
+    {
+      "title": "10년 된 고지혈증약에 웬 '생동'?…삼천당의 노림수",
+      "source": "약사공론",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBBMWY3Nk5SYklwQzZ1WWxKWDI3TGZ2a1ZIYUJibzlseWpOY1hUWjNlcnljd3BZc21sZlZrOXExQWhIY3pIQnJRak56ZVB0dnFtOXZLTXBSVERTQ2FMVW0tYktWbDIxdDVvaHNEaw?oc=5",
+      "publishedAt": "2026-10-21T20:53:00.000Z"
+    },
+    {
+      "title": "삼천당제약, 반려동물 구강보조제 ‘",
+      "source": "이투데이",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBqUlA2cVRaVVNpcnQ5ZlJ4cFlzMzZSTTRVQjdlVUM1aWx0M3UwRmlGWlZELUJDeXdlUTRpcEtkMVNWRGQ2ZFpROWEyU2pDNVdTM1ROamV0alY5ZjBhZnJRbHYzakhwZHlH?oc=5",
+      "publishedAt": "2026-10-21T21:29:05.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20261020",
+      "holder": "윤대인",
+      "ratio": 37.61,
+      "ratioChange": 0,
+      "reason": "특별관계자(전인석, 윤은화)의 · 주식 담보 계약기간 연장 및 추가 주식 담보 제공",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261020000330"
+    },
+    {
+      "kind": "major",
+      "date": "20260814",
+      "holder": "윤대인",
+      "ratio": 37.61,
+      "ratioChange": 0,
+      "reason": "특별관계자(전인석)의 연부연납을 위한 주식 담보계약 체결 및 · 특별관계자(전인석, 윤은화)의 납세담보 제공",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003962"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 764.1,
+    "vs": -28.66,
+    "fltRt": -3.62
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-23T06:44:08.902Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260424"
+}
