@@ -102,6 +102,16 @@ def main() -> int:
                 c['uploadStreak'] = 0
             # 제목·설명은 30일 refresh 대상이다. 매일 덮어써서 자동 충족한다
             c['title'] = sn.get('title')
+            # 썸네일은 **ID 만** 저장한다. 전체 URL 은 채널당 100바이트쯤이라
+            # 1,500채널이면 150KB 다. 앱이 조립한다:
+            #   https://yt3.ggpht.com/{id}=s{size}-c-k-c0x00ffffff-no-rj
+            th = (sn.get('thumbnails') or {}).get('medium') or \
+                 (sn.get('thumbnails') or {}).get('default') or {}
+            u = th.get('url') or ''
+            if 'yt3.ggpht.com/' in u:
+                c['thumb'] = u.split('yt3.ggpht.com/', 1)[1].split('=')[0]
+            elif u:
+                c['thumb'] = u
             c['description'] = (sn.get('description') or '')[:300]
             c['country'] = sn.get('country')
             c['subs'], c['views'], c['videos'] = subs, views, videos

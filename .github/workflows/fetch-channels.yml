@@ -59,6 +59,12 @@ jobs:
       #     YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
       #   run: python3 scripts/channels/uploads.py
 
+      # 앱이 읽을 정적 JSON. registry 를 그대로 내보내지 않는다(230KB → 홈 3KB)
+      - name: 앱 데이터 빌드
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: python3 scripts/channels/build_app.py
+
       - name: 요약 (로그로 읽는다)
         continue-on-error: true
         env:
