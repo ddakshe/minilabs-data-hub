@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-22",
-  "week": "261022",
+  "updatedAt": "2026-10-23",
+  "week": "261023",
   "period": {
     "start": "2026-10-21",
     "end": "2026-10-27"
@@ -81,7 +81,7 @@
   ],
   "leaflets": [
     {
-      "id": "emart-261022",
+      "id": "emart-261023",
       "mart": "emart",
       "store": "이마트",
       "region": "national",
@@ -100,7 +100,7 @@
       "sourceUrl": "https://eapp.emart.com/leaflet/leafletView_EL.do"
     },
     {
-      "id": "homeplus-261022-805",
+      "id": "homeplus-261023-805",
       "mart": "homeplus",
       "store": "홈플러스 익스프레스",
       "region": null,
@@ -3517,7 +3517,7 @@
       ]
     },
     {
-      "id": "homeplus-261022-592",
+      "id": "homeplus-261023-592",
       "mart": "homeplus",
       "store": "홈플러스",
       "region": null,
@@ -4360,7 +4360,7 @@
       ]
     },
     {
-      "id": "traders-261022",
+      "id": "traders-261023",
       "mart": "traders",
       "store": "트레이더스",
       "region": "national",
@@ -4376,6 +4376,22 @@
         "https://eapp-cdn.emart.com/traders/banners/81ca63c0-a638-4e8a-be4d-25503dd91c41.jpg"
       ],
       "sourceUrl": "https://eapp.emart.com/tradersclub/flyerImgView.do"
+    },
+    {
+      "id": "costco-FY27P3MVM",
+      "mart": "costco",
+      "store": "코스트코",
+      "region": "national",
+      "coords": null,
+      "regionGrade": "national",
+      "period": {
+        "start": "2026-10-21",
+        "end": "2026-10-27"
+      },
+      "pages": [
+        "https://azure-na-images.contentstack.com/v3/assets/bltfc0c2adf9ebb4217/blt1558b623faa1927e/6ad9412d8ea4573dc4275c2a/FY27_P3_MVM_WebCoupon_1021_150dpi-2.jpg"
+      ],
+      "sourceUrl": "https://www.costco.co.kr/FY27P3MVM"
     },
     {
       "id": "lotte-2000519",
@@ -4395,7 +4411,7 @@
       "coords": null
     },
     {
-      "id": "nobrand-261022",
+      "id": "nobrand-261023",
       "mart": "nobrand",
       "store": "노브랜드",
       "region": "national",
@@ -4547,7 +4563,7 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-daejeon-261022-1.jpg"
+        "hanaro-daejeon-261023-1.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
@@ -4567,8 +4583,8 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-busan-261022-1.jpg",
-        "hanaro-busan-261022-2.jpg"
+        "hanaro-busan-261023-1.jpg",
+        "hanaro-busan-261023-2.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
@@ -4588,8 +4604,8 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-jeonbuk-261022-1.jpg",
-        "hanaro-jeonbuk-261022-2.jpg"
+        "hanaro-jeonbuk-261023-1.jpg",
+        "hanaro-jeonbuk-261023-2.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
@@ -4609,8 +4625,8 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-chungbuk-261022-1.jpg",
-        "hanaro-chungbuk-261022-2.jpg"
+        "hanaro-chungbuk-261023-1.jpg",
+        "hanaro-chungbuk-261023-2.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
@@ -4630,8 +4646,8 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-seoul-261022-1.jpg",
-        "hanaro-seoul-261022-2.jpg"
+        "hanaro-seoul-261023-1.jpg",
+        "hanaro-seoul-261023-2.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
@@ -4641,8 +4657,5 @@
         "lng": 127.048
       }
     }
-  ],
-  "failed": [
-    "costco: 현재 MVM 페이지 ID 를 못 찾았다 — /events 구조 변경 의심"
   ]
 }
