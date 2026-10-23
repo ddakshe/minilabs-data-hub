@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-23T08:21:36+09:00",
+  "updatedAt": "2026-10-23T12:41:47+09:00",
   "channels": {
     "UChlv4GSd7OQl3js-jkLOnFA": {
       "seedName": "삼프로TV",
@@ -858,7 +858,7 @@
       "uploadStreak": 1,
       "lastSeenAt": "2026-10-23",
       "rejectReason": "교양·과학 콘텐츠 제작사(보다 BODA). 경제 전문 아님",
-      "classifiedAt": "2026-10-22",
+      "classifiedAt": "2026-10-23",
       "lastUploadAt": "2026-10-23"
     },
     "UCLF1hNfWMvgq4zvR5qzDWgg": {
@@ -880,7 +880,7 @@
       "uploadStreak": 1,
       "lastSeenAt": "2026-10-23",
       "reviewReason": "그리구라 — 예능 형식, 주식·부동산 사연을 다룸",
-      "classifiedAt": "2026-10-22",
+      "classifiedAt": "2026-10-23",
       "lastUploadAt": "2026-10-23"
     },
     "UCWstEH0k34aMAMPb5cJ9okw": {
@@ -902,7 +902,7 @@
       "uploadStreak": 3,
       "lastSeenAt": "2026-10-23",
       "reviewReason": "유나으리 — 의사 출신, 경제 전문인지 불분명",
-      "classifiedAt": "2026-10-22",
+      "classifiedAt": "2026-10-23",
       "lastUploadAt": "2026-10-23"
     },
     "UCUPoOcZy6IuGWsnXhzqyQAQ": {
@@ -968,7 +968,7 @@
       "uploadStreak": 3,
       "lastSeenAt": "2026-10-23",
       "reviewReason": "시동위키 — 경제·법·정치에 음악·예술·여행까지 섞인 잡학",
-      "classifiedAt": "2026-10-22",
+      "classifiedAt": "2026-10-23",
       "lastUploadAt": "2026-10-23"
     },
     "UCGCGxsbmG_9nincyI7xypow": {
@@ -1123,7 +1123,7 @@
       "lastUploadAt": "2026-10-23",
       "lastSeenAt": "2026-10-23",
       "rejectReason": "종합 뉴스(MBN). 경제는 일부",
-      "classifiedAt": "2026-10-22"
+      "classifiedAt": "2026-10-23"
     },
     "UCSd3JktYUM7u4PTp3FFT1zg": {
       "seedName": null,
@@ -1449,7 +1449,7 @@
       "uploadStreak": 4,
       "lastSeenAt": "2026-10-23",
       "rejectReason": "종합 라디오 스트리밍(KBS 1라디오)",
-      "classifiedAt": "2026-10-22",
+      "classifiedAt": "2026-10-23",
       "lastUploadAt": "2026-10-23"
     },
     "UCiTkm46joBupImFOu3vK3HA": {
@@ -2055,7 +2055,7 @@
       "uploadStreak": 3,
       "lastSeenAt": "2026-10-23",
       "reviewReason": "힐링여행자 — 주식 정보 + 여행이 반반",
-      "classifiedAt": "2026-10-22",
+      "classifiedAt": "2026-10-23",
       "lastUploadAt": "2026-10-23"
     },
     "UC512T90idot46AH6UXx1SUQ": {
@@ -4539,7 +4539,7 @@
       "uploadStreak": 1,
       "lastSeenAt": "2026-10-23",
       "rejectReason": "아랍어 채널. 한국 대상 아님",
-      "classifiedAt": "2026-10-22",
+      "classifiedAt": "2026-10-23",
       "lastUploadAt": "2026-10-23"
     },
     "UCxzIrYFs4aE0QeLwbRloJhg": {
@@ -5143,8 +5143,8 @@
       "title": "Hankang Miracle Finance",
       "description": "",
       "country": null,
-      "category": "econ",
-      "classifiedBy": "claude",
+      "category": "review",
+      "classifiedBy": "rule",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "국가부채 재정",
@@ -5157,8 +5157,9 @@
       "uploadStreak": 1,
       "lastSeenAt": "2026-10-23",
       "sub": "macro",
-      "classifiedAt": "2026-10-22",
-      "lastUploadAt": "2026-10-23"
+      "classifiedAt": "2026-10-23",
+      "lastUploadAt": "2026-10-23",
+      "reviewReason": "한글이 없고 country 도 비어 있다 — 한국 채널인지 확인 필요"
     },
     "UCI5LURI22JXO3S7n5lQYzCQ": {
       "seedName": null,
@@ -5413,8 +5414,8 @@
       "title": "Currency Update",
       "description": "You will get daily currency updates in this channel",
       "country": null,
-      "category": "econ",
-      "classifiedBy": "claude",
+      "category": "review",
+      "classifiedBy": "rule",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "환율 달러",
@@ -5428,7 +5429,8 @@
       "lastSeenAt": "2026-10-23",
       "lastUploadAt": "2026-10-23",
       "sub": "macro",
-      "classifiedAt": "2026-10-22"
+      "classifiedAt": "2026-10-23",
+      "reviewReason": "한글이 없고 country 도 비어 있다 — 한국 채널인지 확인 필요"
     },
     "UC-ABLDwCuKL9E7ACJgRX9Zg": {
       "seedName": null,
@@ -5480,8 +5482,8 @@
       "title": "Сергей Елисеев",
       "description": "Всем привет. Меня зовут Сергей Елисеев. Я торгую на бирже, а также люблю спорт и путешествия. На моем канале вы найдете видео о биржевой торговле, фондовом рынке России, рынке акций США, прогнозы стоимости акций и валют. На конкурсе \"Лучший частный инвестор 2017\" я вошел в топ-200 среди 5000 участни",
       "country": null,
-      "category": "econ",
-      "classifiedBy": "claude",
+      "category": "none",
+      "classifiedBy": "rule",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "환율 달러",
@@ -5494,7 +5496,8 @@
       "uploadStreak": 0,
       "lastSeenAt": "2026-10-23",
       "sub": "macro",
-      "classifiedAt": "2026-10-22"
+      "classifiedAt": "2026-10-23",
+      "rejectReason": "한국어 콘텐츠 아님 (키릴·아랍 등 다른 문자 체계)"
     },
     "UCnLU5xz3EQh9Nf-BV4_jcOw": {
       "seedName": null,
@@ -8126,7 +8129,7 @@
       "lastSeenAt": "2026-10-23",
       "lastUploadAt": "2026-10-22",
       "sub": "kr-stock",
-      "classifiedAt": "2026-10-22"
+      "classifiedAt": "2026-10-23"
     },
     "UCun6XCtmUDWCMWs9karEJ1g": {
       "seedName": null,
@@ -8491,8 +8494,8 @@
       "title": "Quantking",
       "description": "",
       "country": null,
-      "category": "econ",
-      "classifiedBy": "claude",
+      "category": "review",
+      "classifiedBy": "rule",
       "queryHint": "econ",
       "subHint": "kr-stock",
       "foundBy": "퀀트 투자",
@@ -8505,7 +8508,8 @@
       "uploadStreak": 0,
       "lastSeenAt": "2026-10-23",
       "sub": "kr-stock",
-      "classifiedAt": "2026-10-22"
+      "classifiedAt": "2026-10-23",
+      "reviewReason": "한글이 없고 country 도 비어 있다 — 한국 채널인지 확인 필요"
     },
     "UCKaiLpaNAaNnaq4R8FhmKWQ": {
       "seedName": null,
@@ -9684,8 +9688,8 @@
       "title": "Studio Silicon",
       "description": "Tech & History",
       "country": null,
-      "category": "econ",
-      "classifiedBy": "claude",
+      "category": "review",
+      "classifiedBy": "rule",
       "queryHint": "econ",
       "subHint": "us-stock",
       "foundBy": "반도체 엔비디아",
@@ -9698,7 +9702,8 @@
       "uploadStreak": 0,
       "lastSeenAt": "2026-10-23",
       "sub": "us-stock",
-      "classifiedAt": "2026-10-22"
+      "classifiedAt": "2026-10-23",
+      "reviewReason": "한글이 없고 country 도 비어 있다 — 한국 채널인지 확인 필요"
     },
     "UCxvdCnvGODDyuvnELnLkQWw": {
       "seedName": null,
@@ -10173,7 +10178,7 @@
       "uploadStreak": 0,
       "lastSeenAt": "2026-10-23",
       "sub": "us-stock",
-      "classifiedAt": "2026-10-22"
+      "classifiedAt": "2026-10-23"
     },
     "UCBlDGQA8CDrWzwLuR-dwklA": {
       "seedName": null,
@@ -29545,7 +29550,7 @@
       "views": 2015167593,
       "videos": 2452,
       "sub": "transit",
-      "classifiedAt": "2026-10-22",
+      "classifiedAt": "2026-10-23",
       "rejectReason": "미미미누 — 입시 유튜버. 질의 「지하철 연장」 에 걸렸다",
       "uploadStreak": 1,
       "lastUploadAt": "2026-10-23",
@@ -30067,8 +30072,8 @@
       "title": "산업단지닷컴",
       "description": "대한민국 산업단지 개발 및 분양의 모든 것, 산업단지닷컴!\n\n사회에 이로운 사업을 생각하는 기업!\n산업단지닷컴은 대한민국 산업단지 개발 및 분양 관련분야 1위기업입니다.\n20년 이상의 기업 유치 노하우를 가지고 대한민국 제조업계의 혁신을 써 나가고 있습니다.\n\n대표전화 : 1644-8008, 02-584-5600\n\n▶ 산업단지닷컴 공식 홈페이지 : https://www.sanupdanji.com\n▶ 산업단지닷컴 공식 블로그 : https://blog.naver.com/5684888\n▶ 산업단지닷컴 공식 페이스북 : https://w",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "urban",
+      "classifiedBy": "claude",
       "queryHint": "urban",
       "subHint": "region",
       "foundBy": "산업단지",
@@ -30077,7 +30082,9 @@
       "tier": "active",
       "subs": 1500,
       "views": 249980,
-      "videos": 245
+      "videos": 245,
+      "sub": "region",
+      "classifiedAt": "2026-10-23"
     },
     "UCE-dD-DSNyhGmp-drygwk4Q": {
       "seedName": null,
@@ -30085,8 +30092,8 @@
       "title": "한국산업단지공단",
       "description": "기업성장과 지역산업 진흥을 선도하는 산업단지 혁신기관\n\n최적의 산업단지 개발, 관리 및 기업성장 지원을 통해 \n#일자리창출 과 #국가산업발전 을 선도합니다.",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "urban",
+      "classifiedBy": "claude",
       "queryHint": "urban",
       "subHint": "region",
       "foundBy": "산업단지",
@@ -30095,7 +30102,9 @@
       "tier": "active",
       "subs": 18000,
       "views": 2444362,
-      "videos": 595
+      "videos": 595,
+      "sub": "region",
+      "classifiedAt": "2026-10-23"
     },
     "UCR4M6t5gVwHZPl9SPGDgwRA": {
       "seedName": null,
@@ -30103,8 +30112,8 @@
       "title": "용인 SK 하이닉스 안성시 OK부동산",
       "description": "세계 최대의 반도체 강국을 꿈꾸는 대한민국 반도체 산업에 선구자적인 역할을 담당할 용인 SK 하이닉스 반도체 산업단지의 생생한 정보를 제공하면서 용인시, 안성시 토지를 전문적으로 소개하는 채널입니다.",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "urban",
+      "classifiedBy": "claude",
       "queryHint": "urban",
       "subHint": "region",
       "foundBy": "산업단지",
@@ -30113,7 +30122,9 @@
       "tier": "active",
       "subs": 5310,
       "views": 1829392,
-      "videos": 1778
+      "videos": 1778,
+      "sub": "region",
+      "classifiedAt": "2026-10-23"
     },
     "UCwXOKS-z1t9u6Axmm3blXug": {
       "seedName": null,
@@ -30121,8 +30132,8 @@
       "title": "머니그라피 Moneygraphy",
       "description": "취향, 문화, 경제\nORIGINAL CONTENT BY TOSS\n\n© Moneygraphy, 2026.\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "경제 유튜브",
@@ -30131,7 +30142,9 @@
       "tier": "active",
       "subs": 897000,
       "views": 283920059,
-      "videos": 853
+      "videos": 853,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCwuiA43A3c41E8fImGLpN3w": {
       "seedName": null,
@@ -30139,8 +30152,8 @@
       "title": "경제채널",
       "description": "***********************  주의   ********************** \n본 글은 투자 정보의 제공을 목적으로 할 뿐 \n어떠한 경우에도 주식 또는 기타 금융 상품에 대한 투자 권유 또는 추천하지 않습니다.\n\n특정 종목의 어떠한 매매를 유도하거나 권장하지 않습니다.\n\n투자 결정에 대한 책임은 전적으로 100% 투자자 본인에게 있습니다.\n과거의 수익률이 미래의 수익률을 보장하지도 않습니다.\n모든 투자는 원금 손실의 위험을 내포하고 있습니다.\n\n시장 상황 및 기타 외부 요인에 의해 투자 가치가 항상 변동 될 수 있",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "경제 유튜브",
@@ -30149,7 +30162,9 @@
       "tier": "active",
       "subs": 3590,
       "views": 475171,
-      "videos": 56
+      "videos": 56,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCoxT1kQSLq564FwpK473w-g": {
       "seedName": null,
@@ -30157,8 +30172,8 @@
       "title": "크랩 KLAB",
       "description": "당신의 호기심을 채워 줄 네버엔딩 스토리, 크랩\n\n제작/협찬 문의 : kbsad01@gmail.com\n\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "none",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "경제 유튜브",
@@ -30167,7 +30182,9 @@
       "tier": "active",
       "subs": 1080000,
       "views": 1246622930,
-      "videos": 5035
+      "videos": 5035,
+      "rejectReason": "크랩 KLAB — KBS 시사·교양. 경제 전문 아님",
+      "classifiedAt": "2026-10-23"
     },
     "UCn_38aaCktkBLPv3EtfmiUA": {
       "seedName": null,
@@ -30175,8 +30192,8 @@
       "title": "KBS 경제한방",
       "description": "경제의 미래를 제시하다, KBS 뉴스 오리지널 프로그램",
       "country": null,
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "경제 유튜브",
@@ -30185,7 +30202,9 @@
       "tier": "active",
       "subs": 569000,
       "views": 134162069,
-      "videos": 1217
+      "videos": 1217,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCj2gpUrZ7LMp4Mp1pVMKz0g": {
       "seedName": null,
@@ -30193,8 +30212,8 @@
       "title": "박홍기 작가 TV 삶 테크 ",
       "description": " 박작가  TV   후원계좌.. 인문 삶테크\n\n1005 - 203 - 205 878  우리은행  박홍기 소액 후원을 환영하며  10만원 이상은 정중하게 사절 합니다.\n\n박 홍기 작가 TV  ─ 삶 테크\n\n■ 목적  \n경제·부동산·사회 이슈를 **교육·비평 목적으로** 분석·해설합니다.  \n모든 콘텐츠는 시청자의 합리적 의사결정을 돕기 위한 정보를 제공하며, 선정적·선동적 표현을 지양합니다.\n■ 콘텐츠 방향  \n1. 거시경제･금융 동향: 통계·보고서 기반 해설  \n2. 부동산 정책･시장 분석: 정책 변화, 투자 리스크 진단  \n3. ",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "경제 유튜브",
@@ -30203,7 +30222,9 @@
       "tier": "active",
       "subs": 153000,
       "views": 38681650,
-      "videos": 1995
+      "videos": 1995,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UClErHbdZKUnD1NyIUeQWvuQ": {
       "seedName": null,
@@ -30211,8 +30232,8 @@
       "title": "MTN 머니투데이방송",
       "description": "◆MTN 머니투데이방송 채널◆\n\n언제나 시청자의 눈높이에서 다양한 콘텐츠를 제공하는 머니투데이방송 채널에 오신 것을 환영합니다.\n본 채널에서는 여러 분야의 이슈와 뉴스 정보를 동영상으로 확인 하실 수 있습니다.\n\n☞ MTN 머니투데이방송 유튜브 구독\nhttps://goo.gl/lDaU5b\n\n☞ MTN 홈페이지 바로가기\nhttps://mtn.co.kr/\n\n☞ MTN 방송 편성표 보기\nhttps://mtn.co.kr/formation ",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "경제 유튜브",
@@ -30221,7 +30242,9 @@
       "tier": "active",
       "subs": 1190000,
       "views": 2023248732,
-      "videos": 107000
+      "videos": 107000,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCyLRDnyYWna90v3GU_4DSDw": {
       "seedName": null,
@@ -30229,8 +30252,8 @@
       "title": "머니코리아",
       "description": "한국 경제, 돈의 흐름을 읽다 — 머니코리아\n\n반도체·조선·방산·배터리까지, 세계가 왜 한국을 찾는지 숫자로 풀어 드립니다.\n연금·금리·환율·집값, 뉴스 속 경제 소식이 내 지갑에 어떤 영향을 주는지 쉽게 정리합니다.\n\n▶ 이런 이야기를 합니다\n· 세계 시장에서 한국 산업이 이기는 진짜 이유\n· 정부 정책이 내 연금·세금·대출에 미치는 영향\n· 환율·금리가 움직일 때 웃는 쪽과 우는 쪽\n· 놓치면 손해 보는 생활 경제 정보\n\n※ 경제 교육을 위한 정보 콘텐츠이며, 특정 종목·상품의 투자를 권유하지 않습니다. 모든 투자 판단과 책임은",
       "country": null,
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "금리 환율",
@@ -30239,7 +30262,9 @@
       "tier": "active",
       "subs": 8830,
       "views": 3965557,
-      "videos": 105
+      "videos": 105,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UC1w3vCc-kgwKQNUvZju2V1w": {
       "seedName": null,
@@ -30247,8 +30272,8 @@
       "title": "문명순 TV",
       "description": "정치ㆍ경제의 본질을 읽다 ㅡ 문명순TV\n\n복잡한 한국 정치와 경제의 흐름을 \n쉽고 명쾌하게 짚어드립니다.\n구독과 좋아요 부탁드립니다.\n\nK경제연구소 소장 (현)\n이재명 대통령 후보 금융특보\nIBK연금보험 상근감사\n한국감사협회 부회장\nKB국민은행 금융소비자보호팀장\n\n금융교과서 집필\n서강경제대상 ㆍ자랑스러운 청백리상 수상\n\n#경제 #금융 #금리 #환율 #코스피7000 #한국경제 \n#경제대도약 #금융대전환 #서민금융 #금융안전망\n\n\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "review",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "금리 환율",
@@ -30257,7 +30282,9 @@
       "tier": "active",
       "subs": 9010,
       "views": 719899,
-      "videos": 118
+      "videos": 118,
+      "reviewReason": "문명순 TV — 「정치ㆍ경제의 본질」. 정치 비중 불명",
+      "classifiedAt": "2026-10-23"
     },
     "UC2Oq3nAoP48j393Lu3Qk2Uw": {
       "seedName": null,
@@ -30265,8 +30292,8 @@
       "title": "머니언의 쉬운 경제",
       "description": "열심히 일했는데, 왜 내 통장은 항상 제자리일까요?\n\n물가는 오르고, 금리는 흔들리고,\n뉴스는 어렵고, 유튜브는 너무 자극적입니다.\n\n머니언의 쉬운 경제는\n복잡한 경제 뉴스를 당신의 지갑 사정에 맞게\n가장 쉽고 명확하게 번역해 드립니다.\n\n─────────────────────────────\n📌 이런 분들께 꼭 맞는 채널입니다\n─────────────────────────────\n✔ 경제 뉴스는 보는데, 내 돈과 연결이 안 되는 분\n✔ 주식·부동산·금리, 뭐가 맞는지 모르는 분\n✔ 예금 말고 다른 선택지가 궁금한 분\n✔ ISA·연금",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "금리 환율",
@@ -30275,7 +30302,9 @@
       "tier": "active",
       "subs": 12900,
       "views": 2507369,
-      "videos": 114
+      "videos": 114,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCO-jOCycM4VGLeYRXxNSsVw": {
       "seedName": null,
@@ -30283,8 +30312,8 @@
       "title": "경제첫페이지",
       "description": "경제첫페이지는 복잡한 경제 뉴스와 기업·산업의 흐름을 쉽고 명확하게 설명하는 채널입니다.\n\n반도체, 조선, 자동차, 인공지능, 환율, 금리, 세계경제를 비롯해 기업과 산업이 성장하거나 몰락한 이유를 분석합니다.\n\n어려운 경제를 첫 페이지부터 쉽게 이해해 보세요.\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "금리 환율",
@@ -30293,7 +30322,9 @@
       "tier": "active",
       "subs": 2030,
       "views": 554929,
-      "videos": 54
+      "videos": 54,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UC4_bg9WkxA0yiFJ7_g1vjIw": {
       "seedName": null,
@@ -30301,8 +30332,8 @@
       "title": "준의 경제노트 (jun’s Note)",
       "description": "\"어제보다 더 나은 경제적 내일을 만드는 곳, 준 투자입니다.\"\n\n📧 비즈니스 문의: taegyunm375@gmail.com\n\n안녕하세요, 복잡한 세상 속에서 당신의 소중한 자산을 지키고 키워드리는 **'준 투자'**의 준입니다.\n\n급변하는 금리와 환율, 한 치 앞을 알 수 없는 주식 시장과 부동산... \"도대체 내 돈은 어디에 두어야 할까?\" 고민 많으셨죠?\n\n**'준 투자'**는 3060 세대가 반드시 알아야 할 실전 재테크와 종합 경제 인사이트를 다룹니다. 막연한 투자가 아닌, 데이터와 흐름에 기반한 전략을 공유합니다.\n\n📌 ",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "금리 환율",
@@ -30311,7 +30342,9 @@
       "tier": "active",
       "subs": 12500,
       "views": 1329589,
-      "videos": 218
+      "videos": 218,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCvpKOC--dFtCGeRxlYQwIEA": {
       "seedName": null,
@@ -30319,8 +30352,8 @@
       "title": "경제참모TV",
       "description": "\n🚀  경제적 통찰력\n방대한 경제 뉴스 중 지금 당장 여러분이 알아야 할 핵심만 골라냅니다. 어려운 수치나 도표 대신, 현상 뒤에 숨은 진짜 맥락을 읽어드립니다.\n\n주요 키워드: 환율, 금리, 물가, 재테크 트렌드, 세계 경제 이슈\n\n업로드 시간: 바쁜 출퇴근 시간, 짧지만 강력한 인사이트를 배달합니다.\n\n✅ 이런 분들이라면 구독 필수!\n정보 과잉 시대, 무엇이 진짜 중요한지 알고 싶은 분\n\n뉴스 제목만 봐서는 내 자산에 어떤 영향이 올지 감이 안 오는 분\n\n최소한의 시간 투자로 최고의 경제 감각을 키우고 싶은 분\n\n[공지] 본 채",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "금리 환율",
@@ -30329,7 +30362,9 @@
       "tier": "active",
       "subs": 27400,
       "views": 7965020,
-      "videos": 199
+      "videos": 199,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCFV289Gle_gQ6gfuRUsx6VQ": {
       "seedName": null,
@@ -30337,8 +30372,8 @@
       "title": "우리경제톡",
       "description": "매일 하나의 경제 이슈를 끝까지 파고듭니다.\n미국 연준의 금리 결정, 인플레이션과 환율, 국채·채권시장 같은 글로벌 거시경제부터 코스피·테마주, 기업 실적과 회계 사건 같은 국내 주식 이야기까지. 뉴스 헤드라인이 말해주지 않는 뒷면의 진짜 이유를 숫자와 원문으로 풀어드립니다.\n\n금리가 오르면 내 주담대 이자와 주식 계좌에 어떤 일이 생기는지, 개인투자자의 눈높이에서 쉽게 설명합니다.\n경제 뉴스, 금리, 주식 투자, 부동산, 재테크가 어려운 분들을 위한 경제 해설·경제 공부 채널입니다.\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "금리 환율",
@@ -30347,7 +30382,9 @@
       "tier": "active",
       "subs": 195000,
       "views": 1262562,
-      "videos": 1457
+      "videos": 1457,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCkKBwPYc5KeOBiPVkV033Pw": {
       "seedName": null,
@@ -30355,8 +30392,8 @@
       "title": "AI 믿고 사는 주린이",
       "description": "AI믿고 가는 주린이입니다. 금리, 환율, 지수, 뉴스를 한번에 정리해, 오늘의 '매수/매도/관망' 판단 기준을 쉽게 전달합니다.\n무조건 적으로 맞지는 않을 수 있지만 한 번 참고 하셔서 주식 시장을 살펴보면 좋을 듯 합니다.\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "금리 환율",
@@ -30365,7 +30402,9 @@
       "tier": "active",
       "subs": 1780,
       "views": 794121,
-      "videos": 352
+      "videos": 352,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCn49LSg2JSP-9rXV5G2kt4A": {
       "seedName": null,
@@ -30373,8 +30412,8 @@
       "title": "경제해적단",
       "description": "경제해적단 — 경제를 제대로, 그리고 쉽게. 🏴‍☠️\n\n📌 이 채널에서 다루는 것들\n- 주식·ETF·배당주 투자 분석\n- 환율·금리·인플레이션 경제 해설\n- 미국·한국 증시 및 글로벌 시장 동향\n- 부동산·원자재·달러 등 자산 시장 분석\n- 재테크 초보를 위한 경제 상식\n\n어렵고 딱딱하게만 느껴지던 경제 뉴스,\n경제해적단과 함께라면 달라집니다.\n복잡한 시장의 흐름을 단순하고 명확하게 짚어드립니다.\n\n월급쟁이도, 사회초년생도, 재테크를 막 시작한 분도\n경제해적단과 함께라면 경제가 보이기 시작합니다.\n\n구독 · 좋아요 · 알림설정으로 ",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "금리 환율",
@@ -30383,7 +30422,9 @@
       "tier": "active",
       "subs": 122000,
       "views": 11916460,
-      "videos": 54
+      "videos": 54,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCoUCHhjbVKMiN2WMJuVp_rQ": {
       "seedName": null,
@@ -30391,8 +30432,8 @@
       "title": "차이나리포트 CHINA REPORT",
       "description": "'이박사 중국뉴스'가 '차이나 리포트'라는 새로운 이름으로 이어집니다.\n\n단순한 뉴스를 넘어, 중국이라는 거대한 대륙의 숨겨진 이야기들까지. 정치와 경제의 흐름부터 일상 속 작은 변화까지. 우리가 알아야 할 중국의 모든 것을 더 깊이, 더 넓게 들여다보겠습니다.\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "경제 뉴스 해설",
@@ -30401,7 +30442,9 @@
       "tier": "active",
       "subs": 66800,
       "views": 12085659,
-      "videos": 532
+      "videos": 532,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCWv9hNM-8pNa7K8yMrXokYQ": {
       "seedName": null,
@@ -30409,8 +30452,8 @@
       "title": "경제통마늘",
       "description": "YTN라디오의 경제 채널🧄 경제통(通)마늘 🧄\n\n경제 전문가, 경제 통(通)이 전하는 최신 경제 이슈!\n통장잔고 마~구 늘려주는 라디오, 경제 통마늘 💰\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "경제 뉴스 해설",
@@ -30419,7 +30462,9 @@
       "tier": "active",
       "subs": 12900,
       "views": 10827060,
-      "videos": 699
+      "videos": 699,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCfKBue1iAOfltXBGUcT8eqw": {
       "seedName": null,
@@ -30427,8 +30472,8 @@
       "title": "한국해설소",
       "description": "한국해설소에 오신 것을 환영합니다.\n\n복잡한 군사, 경제, 사회 이슈를 쉽고 명확하게 풀어드립니다.\n\n어려운 뉴스도 이해하기 쉽게, 중요한 이슈는 깊이 있게 설명합니다. 단순한 뉴스 전달이 아니라 “왜 이런 일이 일어났는가?”, “그 의미는 무엇인가?”를 하나씩 따라가며 쉽게 이해할 수 있도록 해설합니다.\n\n✔ 한국 군사 · 안보 · 국제 정세\n✔ 한국 경제 · 산업 · 글로벌 변화\n✔ 사회 이슈 · 정책 · 생활 이야기\n✔ 숨겨진 배경과 흥미로운 이야기\n\n한국해설소는 복잡한 세상을 쉽게 이해하는 채널입니다.\n\n구독하시고 대한민국과",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "review",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "경제 뉴스 해설",
@@ -30437,7 +30482,9 @@
       "tier": "active",
       "subs": 4240,
       "views": 1093367,
-      "videos": 209
+      "videos": 209,
+      "reviewReason": "한국해설소 — 「군사, 경제, 사회 이슈」. 시사 종합에 가깝다",
+      "classifiedAt": "2026-10-23"
     },
     "UCxqhcI4UeGfv8txlr_e2ZXQ": {
       "seedName": null,
@@ -30445,8 +30492,8 @@
       "title": "경제설명소",
       "description": "안녕하세요, 경제설명소에 오신 것을 환영합니다! 👋\n\n어렵고 복잡하게만 느껴졌던 뉴스 속 경제 이야기,\n\n경제설명소가 누구보다 쉽고 명쾌하게 풀어드립니다.\n\n💡 경제설명소에서는 이런 이야기를 다룹니다\n\n글로벌 & 국내 경제 뉴스 해설: 지금 시장에서 가장 중요한 이슈만 콕 집어 설명해 드립니다.\n\n기초 경제 지식 & 용어: 초보자도 이해하기 쉬운 친절한 경제 가이드\n\n증시 & 자산 시장 분석: 복잡한 차트와 지표 뒤에 숨은 흐름 읽기\n\n매일 쏟아지는 경제 정보 속에서 진짜 핵심만 파악하고 싶다면?\n\n지금 [구독]과 [알림 설정]을 ",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "경제 뉴스 해설",
@@ -30455,7 +30502,9 @@
       "tier": "active",
       "subs": 1240,
       "views": 1481,
-      "videos": 3
+      "videos": 3,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCXxLftv9YnegsNeV6D8DD4Q": {
       "seedName": null,
@@ -30463,8 +30512,8 @@
       "title": "경제뒷풀이",
       "description": "딱딱한 경제 뉴스, 다 읽고도 무슨 말인지 몰라 답답하셨나요?\n'경제뒷풀이'에서 복잡하고 어려운 경제 이슈를 시원하게 풀어드립니다!\n매일 쏟아지는 기사들 중 가장 중요하고 돈이 되는 소식만 골라, 지인들과의 편안한 뒷풀이 자리처럼 쉽고 재미있게 설명해 드립니다.\n\n핵심 요약: 바쁜 일상 속에서 놓치지 말아야 할 굵직한 뉴스를 한입 크기로 요약해 드립니다.\n\n쉬운 해설: 복잡한 기업 구조, 글로벌 시장의 변화, 부동산 동향 등을 아주 친숙한 언어로 번역해 드립니다.\n\n구독과 좋아요 누르시고, 오늘부터 경제 공부를 가장 편안한 자리에서",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "경제 뉴스 해설",
@@ -30473,7 +30522,9 @@
       "tier": "active",
       "subs": 4460,
       "views": 593770,
-      "videos": 205
+      "videos": 205,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCaQnU2lMVq3SrRc-Fu9DYvw": {
       "seedName": null,
@@ -30481,8 +30532,8 @@
       "title": "경제의참견",
       "description": "📊 〈경제의 참견〉\n\n뉴스 뒤에 숨은 돈의 흐름을 읽어드립니다.\n\n〈경제의 참견〉은 반도체, 배터리, 조선, 방산, 로봇, AI, 원전, 우주산업처럼\n세계 시장에서 주목받는 대한민국 기업과 기술 이야기를\n쉽고 현실적으로 풀어주는 경제 해설 채널입니다.\n\n단순히 “대단하다”에서 끝나지 않고,\n왜 세계가 한국 기술에 주목하는지,\n그 변화가 기업과 산업, 경제에 어떤 의미가 있는지 함께 살펴봅니다.\n\n한국 산업의 성장 스토리,\n세계 시장의 변화,\n그리고 그 뒤에 움직이는 돈의 흐름을 알고 싶다면\n〈경제의 참견〉과 함께해 주세요.\n\n💌 비",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "경제 뉴스 해설",
@@ -30491,7 +30542,9 @@
       "tier": "active",
       "subs": 1630,
       "views": 95970,
-      "videos": 31
+      "videos": 31,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCdA_ovMcYiNgbkf4624Tbxw": {
       "seedName": null,
@@ -30499,8 +30552,8 @@
       "title": "집구석 경제학",
       "description": "​세상은 거대한 체스판, 경제는 그 위의 전략입니다.\n\n​[집구석 경제학] 에 오신 것을 환영합니다.\n이 채널은 복잡하게 얽힌 세계 경제와 국제 정세를 체스 게임처럼 명쾌하게 풀어서 해석해 드립니다.\n​각국의 움직임이 내 통장에 미치는 나비효과,\n어렵게 공부하지 말고 재미있게 시청하세요.\n\n협업\n01026611835(문자만받아요)\n​\nsmseo111@naver.com \n​(이메일 주소)\n\n\n​뇌피셜 말고, 제대로 된 '방구석 인사이트' 🧠\n​가장 쉽고 유쾌하게 떠드는 경제 채널, **[집구석 경제학]**입니다.\n복잡한 경제 용어는 ",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "경제 뉴스 해설",
@@ -30509,7 +30562,9 @@
       "tier": "active",
       "subs": 133000,
       "views": 10826805,
-      "videos": 415
+      "videos": 415,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UC3Szl-KVIp4Ud8CumcKxuCQ": {
       "seedName": null,
@@ -30517,8 +30572,8 @@
       "title": "경제바나나",
       "description": "🍌 복잡한 경제, 바나나 까먹듯 쉽게!🍌\n\n어렵고 딱딱하게만 느껴지는 경제 이야기, 이제  쉽고 재미있게 즐겨보세요!\n\n경제 몰락부터 놓쳐선 안 될 글로벌 이슈, 돈의 흐름을 바꾼 역사적 사건까지. \n방대한 데이터 속에서 알맹이만 골라 여러분의 경제적 통찰력을 넓혀드립니다.\n\n🔍 주요 콘텐츠\n\n쉬운 경제: 쏙쏙 들어오는 용어 해설과 개념 정리\n위기 분석: 경제 위기와 몰락 시나리오 대비\n돈의 흐름: 흥미진진한 부의 역사와 트렌드\n\n여러분의 성공적인 경제 생활을 응원합니다. \n지금 구독하고 바나나처럼 맛있는 경제 지식을 챙겨가세요!\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "경제 뉴스 해설",
@@ -30527,7 +30582,9 @@
       "tier": "active",
       "subs": 4680,
       "views": 504817,
-      "videos": 45
+      "videos": 45,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCcx92wolvKQKsqB2RfW8iaQ": {
       "seedName": null,
@@ -30535,8 +30592,8 @@
       "title": "경제 모라니",
       "description": "경제 뉴스가 어려워도 괜찮습니다.\n이제는 쉽게 듣고, 제대로 이해하시면 됩니다.\n‘경제 모라니’는 50~70세대를 위한 쉬운 경제 뉴스 해설 채널입니다.\n\n물가, 금리, 환율, 부동산, 연금, 세금, 노후 준비까지 우리 삶에 꼭 필요한 경제 이슈를 복잡한 용어 대신 쉬운 말로 차분하게 설명해드립니다. 자녀에게 매번 물어보기는 부담스럽고, 뉴스를 봐도 무슨 말인지 잘 모르겠을 때, 경제 모라니가 한 번에 이해할 수 있게 정리해드립니다.\n\n✅ 뉴스 속 핵심만 쉽게 정리해드립니다\n✅ 어려운 경제 용어를 일상 언어로 바꿔드립니다\n✅ 내 돈",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "경제 뉴스 해설",
@@ -30545,7 +30602,9 @@
       "tier": "active",
       "subs": 1560,
       "views": 232031,
-      "videos": 112
+      "videos": 112,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCsU-I-vHLiaMfV_ceaYz5rQ": {
       "seedName": null,
@@ -30553,8 +30612,8 @@
       "title": "JTBC News",
       "description": "진실에 닿을 때까지 멈추지 않는 질문, JTBC News\nWelcome to the official JTBC News Channel.\n\n▶ https://news.jtbc.co.kr\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "none",
+      "classifiedBy": "rule",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "경제 뉴스 해설",
@@ -30563,7 +30622,9 @@
       "tier": "active",
       "subs": 4900000,
       "views": 20812117730,
-      "videos": 339127
+      "videos": 339127,
+      "rejectReason": "종합 뉴스 채널 (JTBC News). 경제 전문이 아니다",
+      "classifiedAt": "2026-10-23"
     },
     "UC427QMjUK8bIT5eHD4i-3zg": {
       "seedName": null,
@@ -30571,8 +30632,8 @@
       "title": "경제 저격수",
       "description": "경제 저격수 | 남들이 말 못하는 걸 정확히 쏩니다.\n\nIMF 위기, 환율 폭탄, 전쟁과 유가, 부동산 붕괴...\n뉴스는 사건만 전합니다. 저희는 진짜 이유를 겨냥합니다.\n\n✔ 글로벌 위기가 내 월급과 집값에 미치는 영향\n✔ 언론이 절대 연결하지 않는 경제의 숨겨진 구조\n✔ 어려운 경제학을 저격수처럼 정확하고 빠르게\n\n\"알고 나면 세상이 다르게 보입니다\"\n\n📌 매주 화 · 금 업로드\n📩 비즈니스 문의: [이메일]\n\n세계 경제가 흔들릴 때\n가장 먼저 진짜 이유를 알려드립니다\n\n전쟁 · 환율 · 부동산 · 금리 · 유가\n복잡한 글로벌 ",
       "country": "PK",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "경제 뉴스 해설",
@@ -30581,7 +30642,9 @@
       "tier": "active",
       "subs": 9340,
       "views": 138139,
-      "videos": 12
+      "videos": 12,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCXoJ1Vyz2HF46rOkAFMWyuw": {
       "seedName": null,
@@ -30589,8 +30652,8 @@
       "title": "5분경제",
       "description": "구독만 해도 돈이 되는 5분 경제!",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "경제 뉴스 해설",
@@ -30599,7 +30662,9 @@
       "tier": "active",
       "subs": 2120,
       "views": 111524,
-      "videos": 314
+      "videos": 314,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCZIlCkHjHfsj-xx4hY4hrCA": {
       "seedName": null,
@@ -30607,8 +30672,8 @@
       "title": "돌직구 경제",
       "description": "복잡하고 어려운 경제를 일상 언어로 명쾌하게 풀어내는 경제 전문 유튜브 채널입니다.\n\n금리 변동, 물가 상승, 주식 동향, 부동산 시장 등 머리 아픈 금융 이슈를 초보자 눈높이에 맞게 확실히 짚어드립니다.\n지출 관리법부터 재테크 입문, 투자 원리, 자금 흐름 잡기까지 삶에 즉시 적용 가능한 알짜배기 경제 정보를 안내합니다.\n이제 막 경제 공부를 시작한 분부터 본격적으로 자산을 넓히려는 분들까지, 반드시 알아야 할 알맹이 지식을 전달합니다.\n\n매주 빠르게 업데이트되는 시장 동향, 경제 뉴스 해설, 미래 시장 전망 등 실질적인 투자 팁",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "경제 뉴스 해설",
@@ -30617,7 +30682,9 @@
       "tier": "active",
       "subs": 2070,
       "views": 409650,
-      "videos": 23
+      "videos": 23,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCIXQvJYc8Lc1mgXkJFCg1vg": {
       "seedName": null,
@@ -30625,8 +30692,8 @@
       "title": "경제팔로우",
       "description": "안녕하세요, 경제팔로우입니다. 📈\n복잡한 경제, 쉽고 빠르게 따라잡고 싶으신가요?\n경제팔로우는 매일 쏟아지는 경제 뉴스 중 꼭 알아야 할 핵심만 골라, 누구나 이해할 수 있도록 풀어드리는 채널입니다.\n✔ 국내외 주요 경제 이슈 정리\n✔ 주식·부동산·금리·환율 등 시장 동향\n✔ 정책 변화가 내 지갑에 미치는 영향\n✔ 알기 쉬운 경제 용어와 흐름 해설\n경제는 어렵지 않습니다. 흐름만 따라가면 보입니다.\n경제팔로우와 함께 빠르게 변하는 경제 흐름을 놓치지 마세요.\n",
       "country": null,
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "경제 뉴스 해설",
@@ -30635,7 +30702,9 @@
       "tier": "active",
       "subs": 14100,
       "views": 1171182,
-      "videos": 121
+      "videos": 121,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UC6z05JHiZCTQanBjSeN-JrA": {
       "seedName": null,
@@ -30643,8 +30712,8 @@
       "title": "꿀통경제",
       "description": "뉴스 따로, 공부 따로? No! 이제 '꿀통경제' 하나로 끝내세요.\n세상에서 가장 쉬운 경제 뉴스 해설집, 꿀통경제 🍯\n✅ 매일 배달되는 꿀통 리포트\n1️⃣ HOT 이슈 : 지금 꼭 알아야 할 경제 뉴스 요약\n2️⃣ 쉬운 해설 : 뉴스 속 어려운 용어 완벽 격파\n3️⃣ 돈 모으기 : 초보자도 실패 없는 재테크 기초\n\n구독만 해도 경제 지식과 잔고가 함께 쌓입니다!",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "경제 뉴스 해설",
@@ -30653,7 +30722,9 @@
       "tier": "active",
       "subs": 4030,
       "views": 1293997,
-      "videos": 188
+      "videos": 188,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCWuxjRfFJxILPGLn_RJJ_0A": {
       "seedName": null,
@@ -30661,8 +30732,8 @@
       "title": "그런 경제",
       "description": "🧩 뉴스는 '무슨 일'인지만 알려줍니다.\n\n정작 궁금한 건\n'왜 그렇게 됐나'입니다.\n\n가격이 오른 이유도,\n흐름이 바뀐 이유도,\n앞뒤엔 다 맥락이 있습니다.\n\n사실과 자료로\n그 이유를 하나씩 이어 드립니다.\n\n다 보고 나면\n\"아, 그래서 그런 거였구나\" 싶게.\n\n🔔 다음 이야기가 궁금하시면 구독해 주세요.\n\n※ 이 채널의 해설은 정보 제공이 목적이며, 특정 종목의 투자나 매수·매도를 권하지 않습니다.\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "경제 뉴스 해설",
@@ -30671,7 +30742,9 @@
       "tier": "active",
       "subs": 4470,
       "views": 1096165,
-      "videos": 28
+      "videos": 28,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCCIedRSHVNLyMyvdU6tZZbw": {
       "seedName": null,
@@ -30679,8 +30752,8 @@
       "title": "오늘경제TV",
       "description": "오늘경제TV\n\n\n뉴스가 아닌 '돈의 흐름'을 추적합니다. 흔들리지 않는 실전 투자의 기준, 오늘경제TV입니다.\n\n뻔한 경제 기사나 앵무새처럼 읽어주는 채널이 아닙니다. 오늘경제TV는 거시경제의 큰 파도부터 주식 시장 밑바닥에서 움직이는 미세한 수급 변화까지, 철저하게 데이터와 돈의 궤적을 기반으로 시장을 해부하는 프리미엄 분석 채널입니다.\n\n글로벌 시황, 산업 메가 트렌드, 그리고 핵심 기업 이슈까지. 개인 투자자들이 정보의 홍수 속에서 길을 잃지 않도록 돕겠습니다. 표면적인 호재와 악재 너머에 숨겨진 메이저 세력의 '진짜 의도'를",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "경제 뉴스 해설",
@@ -30689,7 +30762,9 @@
       "tier": "active",
       "subs": 35200,
       "views": 8275881,
-      "videos": 1185
+      "videos": 1185,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCcWOqKgGR8rmNHsb2P6PGgQ": {
       "seedName": null,
@@ -30697,8 +30772,8 @@
       "title": "경제 & 투자 CLASS : 경제적 자유로 가는 열차",
       "description": "[투자/재테크] 경제와 주식 & 라이프.\n- 내 삶의 주변을 관찰하고 미래를 바라본다.\n- 이성과 통찰력이 이끄는 곳으로…\n- 이메일 문의 : youngsook600405@gmail.com",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "경제 뉴스 해설",
@@ -30707,7 +30782,9 @@
       "tier": "active",
       "subs": 105000,
       "views": 14962318,
-      "videos": 1514
+      "videos": 1514,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCA1Emp7xLrRfKOlbvfUkBNw": {
       "seedName": null,
@@ -30715,8 +30792,8 @@
       "title": "경제브리핑365",
       "description": "\"복잡한 경제 흐름을 읽는 가장 명확한 습관, 365일 멈추지 않는 경제 가이드\"\n\n **[경제 브리핑 365]**에 오신 것을 환영합니다.\n\n 급변하는 세계 정세와 쏟아지는 경제 뉴스 속에서 무엇이 진짜 중요한 정보인지 혼란스러우셨나요?\n\n우리 채널은 어렵고 딱딱하게만 느껴지는 경제 이야기를 1년 365일, 가장 쉽고 빠르게 핵심만 짚어 드립니다.\n\n 돈의 흐름을 파악하고 더 나은 경제적 선택을 할 수 있도록 여러분의 든든한 경제 파트너가 되겠습니다.\n\n📍 이런 내용을 담습니다\n\n경제 브리핑: 매일 업데이트되는 국내외 핵심 경제 ",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "거시경제 전망",
@@ -30725,7 +30802,9 @@
       "tier": "active",
       "subs": 9240,
       "views": 1107168,
-      "videos": 171
+      "videos": 171,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCXk4Ckmgw_VTchAGsqmaePw": {
       "seedName": null,
@@ -30733,8 +30812,8 @@
       "title": "월가관측소",
       "description": "월가관측소는 미국증시를 움직이는 본질을 읽기 위해 만든 분석 채널입니다.\n\n단순한 뉴스 요약이나 감정적 전망이 아니라, 거시경제, 기업 실적, 밸류에이션, 산업 데이터를 함께 보며 투자 판단에 필요한 기준을 정리합니다.\n\n분석 과정에서는 Investing.com Pro+, Seeking Alpha, Bloomberg 등 유료 리서치 자료를 참고하고, 여러 관점을 비교해 현실적인 해석을 만들고자 합니다.\n\n저에게 이 채널은 단순한 유튜브가 아니라, 미국증시를 공부하고 기록하는 투자 기록부이자 시장 관점 일기입니다.\n\n개인 홍보보다 기",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "거시경제 전망",
@@ -30743,7 +30822,9 @@
       "tier": "active",
       "subs": 2650,
       "views": 154352,
-      "videos": 102
+      "videos": 102,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCrwLnlXdVlWywZyt2n0cCYA": {
       "seedName": null,
@@ -30751,8 +30832,8 @@
       "title": "딱 한눈 경제",
       "description": "불확실성이 일상이 된 시대,\n복잡한 경제를 딱 한눈에 꿰뚫어 보는 기준.\n**[딱 한눈 경제]**입니다.\n\n우리는 매일 쏟아지는 경제 뉴스와 전망 속에서\n의도적으로 부풀려진 이야기와 일시적 소음을 걷어내고,\n시장 구조가 실제로 움직이는 핵심 신호만을 포착합니다.\n\n거시경제, 금융시장, 산업 판도 변화까지\n단순한 해설이 아닌 구조·흐름·힘의 방향으로 해석합니다.\n\n왜 같은 위기 속에서도\n누군가는 기회를 만들고,\n누군가는 방향을 잃는가?\n\n차이는 정보의 양이 아니라\n**‘보는 각도’와 ‘판을 읽는 눈’**에 있습니다.\n\n[딱 한눈 경제",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "거시경제 전망",
@@ -30761,7 +30842,9 @@
       "tier": "active",
       "subs": 5900,
       "views": 481894,
-      "videos": 33
+      "videos": 33,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UC8_gTUPCxNlH9V1l1eFfN8g": {
       "seedName": null,
@@ -30769,8 +30852,8 @@
       "title": "머니매크로",
       "description": "전 세계 자산시장의 흐름을 거시경제 관점에서 분석하는 채널입니다.\n\n연준(Fed), 금리, 유동성, 달러, 국채금리, 재정정책,\n기관 자금 흐름과 글로벌 매크로 데이터를 기반으로\n시장의 방향성과 위험 신호를 분석합니다.\n\n단순 뉴스 전달이나 감정적인 전망이 아닌,\n경제와 시장의 구조를 중심으로 냉정하게 해석합니다.\n\n※ 본 채널의 모든 콘텐츠는 투자 참고 및 정보 제공을 목적으로 하며,\n투자에 대한 최종 책임은 본인에게 있습니다.\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "거시경제 전망",
@@ -30779,7 +30862,9 @@
       "tier": "active",
       "subs": 3390,
       "views": 141270,
-      "videos": 82
+      "videos": 82,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCramZVIOzfTrIcTZ7dBVzjQ": {
       "seedName": null,
@@ -30787,8 +30872,8 @@
       "title": "레드버티컬_경제연구소",
       "description": "[잃지 않는 투자법, 성장할 수밖에 없는 산업과 기업에 대한 정보를 제공합니다] \n\n레드버티컬은 망망대해 같은 시장에서 길을 잃지 않도록 방향을 제시하는 나침반이자, 멀리서 다가오는 해일을 먼저 감지해 피할 수 있게 돕는 등대를 지향합니다. \n\n[1] 레드버티컬이 다루는 핵심 콘텐츠\n- 거시경제 및 산업 분석 : 거시경제 흐름과 시나리오 분석을 통해 앞으로 성장할 수밖에 없는 산업을 공유합니다. \n- 기업 분석 : 선정한 산업 안에서 자체 밸류에이션 평가를 통해 ‘저평가된 기업’을 공유합니다. \n- 시나리오 분석 : 상승·하락·횡보",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "거시경제 전망",
@@ -30797,7 +30882,9 @@
       "tier": "active",
       "subs": 2170,
       "views": 629999,
-      "videos": 663
+      "videos": 663,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCc5dsU-myhoKG3XXyoxqu5w": {
       "seedName": null,
@@ -30805,8 +30892,8 @@
       "title": "청년경제학",
       "description": "복잡한 경제 뉴스, 어렵게 느껴지셨나요?\n부동산, 환율, 금리, 물가, 유가, 금값, 은값까지— 우리의 자산과 미래에 직접 영향을 주는 경제 이야기를 누구나 이해할 수 있도록 쉽고 명확하게 전해드립니다.\n\n✔ 거시경제 흐름 분석 및 글로벌 경제 전망\n✔ 부동산 시장 동향과 실전 투자 인사이트\n✔ 금·은 시세 분석 및 원자재 투자 정보\n✔ 내 자산을 지키고 불리기 위해 꼭 알아야 할 경제 상식\n\n경제를 아는 만큼 기회가 보입니다.\n매일 새로운 영상으로 찾아뵙겠습니다.\n\n구독과 알림 설정으로 경제 소식을 놓치지 마세요!\n\n제휴문의 : ",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "거시경제 전망",
@@ -30815,7 +30902,9 @@
       "tier": "active",
       "subs": 9980,
       "views": 244144,
-      "videos": 49
+      "videos": 49,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCVKNrWLUWHP2pH5ug9qkJ5g": {
       "seedName": null,
@@ -30823,8 +30912,8 @@
       "title": "경제 브런치 : 지식으로 읽는 경제",
       "description": "안녕하세요?\n'경제브런치, 지식으로 읽는 경제'는 \n복잡한 거시경제의 흐름을 명확하고 심도 있게 분석하여, \n변화 속에 안정적인 투자를 위한 지혜를 전달합니다.\n'경제브런치'에서 지적 경제 생활을 영위하시길 바랍니다.\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "거시경제 전망",
@@ -30833,7 +30922,9 @@
       "tier": "active",
       "subs": 1380,
       "views": 148244,
-      "videos": 56
+      "videos": 56,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCk3uO9DUd_nRowLEEbvrLFQ": {
       "seedName": null,
@@ -30841,8 +30932,8 @@
       "title": "이야기꾼TV",
       "description": "투자와 경제의 수수께끼를 재미있게 풀어 나가는 곳입니다.\n\n블로그에 가시면 더 많은 이야기를 보실 수 있습니다\nhttps://blog.naver.com/mktgguy",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "거시경제 전망",
@@ -30851,7 +30942,9 @@
       "tier": "active",
       "subs": 9070,
       "views": 380285,
-      "videos": 148
+      "videos": 148,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCc7lzH2cejFguCRhCXyOviQ": {
       "seedName": null,
@@ -30859,8 +30952,8 @@
       "title": "김경수 교수의 거시경제학",
       "description": "김경수, 박대근 교수가 공저한 거시경제학 제 6판 (박영사 2020년 3월) 강의\n\n본 채널의 강의는 각 장별로 거시경제학의 중요한 주제와 이와 관련된 현실세계의 이슈들을 설명하고, 거시경제를 이해하는데 필요한 사고의 틀을 만드는 데 궁극적인 목적이 있습니다.\n이 책으로 혼자 공부하는 학생들의 이해를 돕는데 목적이 있으나 평소 거시경제에 관심있는 분들에게도 유익할 수 있습니다.\n\n영상에서 사용된 강의자료 PDF는 다음 링크에서 찾아볼 수 있으니 참고 바랍니다.\nhttps://drive.google.com/drive/folders/1",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "거시경제 전망",
@@ -30869,7 +30962,9 @@
       "tier": "active",
       "subs": 2210,
       "views": 101645,
-      "videos": 68
+      "videos": 68,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCX7HHp8wiVMc_KRgE6xxC4Q": {
       "seedName": null,
@@ -30877,8 +30972,8 @@
       "title": "거시경제 분석 연구소",
       "description": "나무가 아닌 숲을 보는 \"거시경제 분석 연구소\"입니다.\n\n거시경제는 결국 '연결'입니다. 미국, 중국, 유럽 등 세계 경제의 흐름이 어떻게 한국의 산업과 자산 시장에 투영되는지 깊이 있게 파헤칩니다.\n단순한 정보 전달을 넘어, 숲 전체를 조망하는 거시적 안목으로 대한민국 경제의 현재를 진단하고 미래를 전망합니다.\n\n🛡️ [채널 운영 및 법적 면책 고지] \n특정 대상을 비방하거나 정치적 입장을 대변할 목적이 없으며, 오직 시청자의 알 권리와 자산 수호를 위해 제작되었습니다.  \n투자 및 판단의 책임: 본 영상은 특정 주식 및 금융 상",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "거시경제 전망",
@@ -30887,7 +30982,9 @@
       "tier": "active",
       "subs": 10600,
       "views": 359775,
-      "videos": 135
+      "videos": 135,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCL_Rjw3a_6Z8vqOj4XfLCAA": {
       "seedName": null,
@@ -30895,8 +30992,8 @@
       "title": "알면 돈되는 경제 상식",
       "description": "💰 \"왜 내 월급만 빼고 다 오를까?\" \"지금 집을 사도 될까?\"\n\n복잡하고 어려운 경제학, 이제 그만 지치셨나요?\n**[알면 돈되는 경제 상식]**은 어려운 숫자와 그래프 속에 숨겨진, 진짜 **'돈이 되는 지식'**만 쏙쏙 골라 아주 쉽게 풀어드리는 대한민국 최고의 경제 과외 선생님입니다.\n\n📈 우리는 자본주의라는 거대한 게임 속에서 살고 있습니다. 게임의 룰을 모르면 평생 남의 배만 불려주게 됩니다. 이 채널은 인플레이션, 금리, 부동산, 주식 등 매일 쏟아지는 경제 뉴스 속에서 **선생님의 지갑을 지키고 부를 불리는 현실적인",
       "country": null,
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "거시경제 전망",
@@ -30905,7 +31002,9 @@
       "tier": "active",
       "subs": 1580,
       "views": 58433,
-      "videos": 87
+      "videos": 87,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UC-L08zml0Kn6vQXc00Bjzig": {
       "seedName": null,
@@ -30913,8 +31012,8 @@
       "title": "거시적 관점",
       "description": "[거시적 관점 : 세상을 읽는 가장 넓은 눈]\n\n현상을 넘어 본질을, 지도를 넘어 돈의 흐름을 해부합니다.\n**'거시적 관점'**은 복잡한 국제 정세와 매크로 경제 지표가 우리의 자산과 일상에 미치는 영향을 날카롭게 분석하는 지정학 경제 전문 채널입니다.\n\n미국 대선, 중동의 갈등, 글로벌 공급망의 변화가 주유소 휘발유 가격부터 우리 집 대출 금리까지 어떻게 연결되는지 그 '경로'를 추적합니다.\n\n📍 주요 콘텐츠\n\n지정학 인사이트: 국가 간 패권 다툼과 전쟁의 이면에 숨겨진 경제적 논리\n\n매크로 경제 해부: 금리, 환율, 유가 등 ",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "거시경제 전망",
@@ -30923,7 +31022,9 @@
       "tier": "active",
       "subs": 1670,
       "views": 797067,
-      "videos": 192
+      "videos": 192,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCmQZA9DP6RnuPCPtLyk00CQ": {
       "seedName": null,
@@ -30931,8 +31032,8 @@
       "title": "주경야독",
       "description": "#주경야독 #글로벌이슈 #주식전망 #경제뉴스 #재테크 #시장분석 #주식트레이더 #매크로투자\n#거시경제\n\n📢 글로벌 이슈 & 경제 트렌드 전문 채널 [주경야독]입니다. 구독·좋아요·알림 설정으로 실시간 경제 동향을 가장 빠르게 만나보세요! 🔔\n\n격변하는 세계뉴스 속 핵심 시사 이슈를 엄선한 오늘의 경제뉴스 브리핑은 글로벌 시장의 흐름을 읽는 확실한 나침반이 됩니다. 최근의 매크로 변화는 글로벌 비즈니스 생태계에 거대한 지각변동을 예고하며, 냉철한 시장분석 결과 글로벌 기업들의 움직임은 차세대 비즈니스 주도권을 쥐기 위한 생존 전략입니",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "거시경제 전망",
@@ -30941,7 +31042,9 @@
       "tier": "active",
       "subs": 27600,
       "views": 26877993,
-      "videos": 371
+      "videos": 371,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCHNwpYjtV8qc_HJlOfnDcAg": {
       "seedName": null,
@@ -30949,8 +31052,8 @@
       "title": "파가시-아파트 가격시황",
       "description": "부동산 시장 분석 전문가 유재성입니다.\n대학원에서 부동산학을 전공했습니다.\n\n겸임교수로 재직하면서 대원과학대 부동산과에서 부동산 시장분석, \n대원대학교 철도경영과에서 지하철 역세권 분석을 강의했습니다.\n\n현재는 아파트 가격 시황과 이를 둘러싼 경제 시황을 실시간으로 분석해\n영상을 제작하는 유튜브 채널 '파가시 - 아파트 가격 시황'을 운영하고 있습니다. \n",
       "country": null,
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "거시경제 전망",
@@ -30959,7 +31062,9 @@
       "tier": "active",
       "subs": 113000,
       "views": 8951912,
-      "videos": 358
+      "videos": 358,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCelw580ShJR779XxNj7_pag": {
       "seedName": null,
@@ -30967,8 +31072,8 @@
       "title": "김창익의 머니토크",
       "description": "비지니스 문의 : dondon0009@naver.com\n\n머니토크 공식 텔레그램 : https://t.me/+kJ8prp3Cb4NjZWJl\n\n안녕하세요. 김창익입니다.\n\n이 채널은 경제, 투자, 자산 시장의 흐름을 보다 깊고 쉽게 이야기하기 위해 만든 개인 채널입니다.\n\n주식, 부동산, 비트코인, 글로벌 경제, 금리, 환율, 인공지능(AI) 등 우리 삶과 돈에 영향을 주는 다양한 주제를 다룹니다.\n\n뉴스를 단순히 전달하는 것이 아니라 왜 그런 일이 발생했는지, 앞으로 어떤 변화가 올 것인지, 그리고 개인 투자자는 어떻게 대응해야 하",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "거시경제 전망",
@@ -30977,7 +31082,9 @@
       "tier": "active",
       "subs": 4570,
       "views": 204803,
-      "videos": 52
+      "videos": 52,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCLoHMYSxP3GutoQDvna0dUg": {
       "seedName": null,
@@ -30985,8 +31092,8 @@
       "title": "경제공장TV",
       "description": "#재테크 #파이코인 #비트코인 #부동산전망 #주식투자 #코인전망 #경제뉴스\n\n\"복잡한 경제, 공장에서 찍어내듯 쉽고 명쾌하게!\"\n\n안녕하세요! 세상을 움직이는 돈의 흐름을 가장 쉽고 빠르게 전해드리는 경제공장TV입니다. 🏭💰\n어렵게만 느껴졌던 거시경제, 주식, 비트코인, 암호화폐,부동산, 그리고 금융 트렌드까지! 저희 경제공장에서는 복잡한 정보들을 핵심만 쏙쏙 뽑아 '공정'을 거친 듯 깔끔하게 정리해 드립니다.\n\n경제공장TV와 함께라면 여러분의 경제 지식도 매일매일 '풀가동'됩니다. \n구독과 좋아요, 알림 설정으로 부의 추월차선에 ",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "거시경제 전망",
@@ -30995,7 +31102,9 @@
       "tier": "active",
       "subs": 1230,
       "views": 158996,
-      "videos": 83
+      "videos": 83,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCVqtFTXcgXLjOQRoA3dE3TQ": {
       "seedName": null,
@@ -31003,8 +31112,8 @@
       "title": "오르고 경제TV",
       "description": "거시경제 지질도 및 데이터 분석 기반 투자 전략\n\n오르고TV(OrgoTV)는 파편화된 시장의 소음을 제거하고, 거시경제(Macro) 데이터와 계량적 지표를 바탕으로 승률 높은 투자 전술을 설계하는 전문 경제 분석 채널입니다. \n\n금융 시장의 불확실성 속에서 개인 투자자가 중심을 잃지 않도록, 단순한 가격 예측을 넘어 시장의 메커니즘과 자금의 흐름(Flow)을 투명하게 분석하여 전달합니다.\n\n핵심 분석 프레임워크\n1. 거시 지표 및 유동성 분석: 금리, 환율, 원자재 등 매크로 변수가 자산 시장에 미치는 영향 분석\n2. 데이터 기반 ",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "거시경제 전망",
@@ -31013,7 +31122,9 @@
       "tier": "active",
       "subs": 9840,
       "views": 555158,
-      "videos": 170
+      "videos": 170,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UC4IxeWey4S0A-BWy0GG5x-A": {
       "seedName": null,
@@ -31021,8 +31132,8 @@
       "title": "화폐시스템 연구소 ",
       "description": "암호화폐 및 화폐 시스템 관련 정보와 거시경제에 기반한 분석과 전망을 함께 전달하는 채널입니다. \n\n이 채널은 순수한 정보 전달 목적의 채널이며, 투자에 대한 판단은 순전히 개인의 몫입니다. \n\n이 채널은 투자손실에 대한 법적 책임이 없습니다. \n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "거시경제 전망",
@@ -31031,7 +31142,9 @@
       "tier": "active",
       "subs": 4100,
       "views": 116208,
-      "videos": 36
+      "videos": 36,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCztXCOcE-Osu-SMVijMAGFQ": {
       "seedName": null,
@@ -31039,8 +31152,8 @@
       "title": "바른투자 정우석",
       "description": "거시경제와 산업 섹터를, 가장 깊게 그리고 가장 쉽게. 바른투자 정우석입니다.\n\n돈이 지금 어디로 흘러가고 있는지 그 큰 그림을 함께 봅니다. \n\n금리·물가·환율 같은 거시경제 흐름부터 반도체, AI, 전력, 로봇, 방산, 2차전지 같은 산업 섹터의 속사정까지. 뉴스가 알려주지 않는 '왜'를 끝까지 파고들어, 누구나 알아듣게 풀어드립니다.\n\n■ 다루는 이야기\n· 거시경제 해설 — 미국 금리와 연준, 물가지표(CPI·PCE), 고용지표, 환율, 국채금리, 유동성\n· 산업 섹터 심층 분석 — 반도체와 AI, 데이터센터와 전력, 로봇, ",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "인플레이션 물가",
@@ -31049,7 +31162,9 @@
       "tier": "active",
       "subs": 1290,
       "views": 115468,
-      "videos": 21
+      "videos": 21,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCvys9r817beLeVUpCAvJ4MA": {
       "seedName": null,
@@ -31057,8 +31172,8 @@
       "title": "동행동",
       "description": "은행에서 퇴사 후 투자와 사업으로 독립해서 열심히 살고 있는 유튜버 동행 입니다.\n\n인플레이션에 의한 화폐가치 하락, 물가상승, 자산가치 증대 등 다양한 요인에 하루하루 열심히 살아가고 있는 우리의 삶은 경제적으로 점점 힘들어지는 상황을 자연스럽게 마주하게 됩니다.\n제가 알고 있는 투자, 사업 노하우와 경험을 공유하여 관심과 열정이 있는 분들에게 조금이라도 도움이 되는 채널이 될 수 있도록 노력하겠습니다.\n\n감사합니다.\n\n#재테크 #부업 #온라인사업 #구매대행 #해외구매대행 #중국구매대행 #대량등록 #반자동  #위탁 #사입 #스마트",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "인플레이션 물가",
@@ -31067,7 +31182,9 @@
       "tier": "active",
       "subs": 2610,
       "views": 133824,
-      "videos": 52
+      "videos": 52,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCssu_OBoZyLiK9R7Gz9Of_w": {
       "seedName": null,
@@ -31075,8 +31192,8 @@
       "title": "포커스경제톡",
       "description": "포커스경제톡 | 경제학박사 우보의 글로벌 경제·금융시장 분석\n\n“금리와 돈의 흐름으로 경제와 시장의 변화를 읽습니다.”\n\n포커스경제톡은 금리와 돈의 흐름을 통해 세계경제와 금융시장의 변화를 읽는 글로벌 경제·금융시장 분석 채널입니다.\n\n미국 연준(Fed)의 통화정책과 인플레이션, 미국 국채와 글로벌 채권시장, 달러와 환율, 국제금융시장의 자금 흐름을 데이터와 차트를 중심으로 살펴보고, 이러한 변화가 경제와 투자시장에 미치는 영향과 의미를 심층 분석합니다.\n\n채널 운영자 ‘우보박사’는 경제학 박사로, 국내외 금융기관에서의 실무 경험과",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "인플레이션 물가",
@@ -31085,7 +31202,9 @@
       "tier": "active",
       "subs": 6920,
       "views": 526498,
-      "videos": 260
+      "videos": 260,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCS6-PUeUTJm9rsJLLnZy3kg": {
       "seedName": null,
@@ -31093,8 +31212,8 @@
       "title": "골아파 경제",
       "description": "생선으로 설명하는 돈의 흐름 🐟🐥\n복잡한 경제뉴스도 일타 오리면 OK!!\n\n어려운 지식을 쉽고 재미있게 풀어냅니다.",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "인플레이션 물가",
@@ -31103,7 +31222,9 @@
       "tier": "active",
       "subs": 1120,
       "views": 48011,
-      "videos": 16
+      "videos": 16,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCzRp32c4WMbnG3E64pTpJrw": {
       "seedName": null,
@@ -31111,8 +31232,8 @@
       "title": "어라운디아 경제학",
       "description": "세상을 쉽고 깊게. 어라운디아 경제학\n\n어라운디아 경제학은 ‘이해되는 경제’를 목표로 합니다.\n복잡한 세계 경제, 금융 위기, 인플레이션, 부채, 금리, 무역 갈등 같은 어려운 주제를\n스토리와 영상으로 쉽게 풀어내는 시네마틱 경제 해설 채널입니다.\n\n전 세계에서 실제로 벌어지는 경제 현상들을\n데이터·사례·역사와 함께 분석하며,\n왜 이런 일이 벌어졌는지, 앞으로 어떤 영향을 줄지를\n명확하고 설득력 있게 설명합니다.\n\n이 채널에서는 다음과 같은 콘텐츠를 만나실 수 있습니다:\n글로벌 경제 위기 해설\n인플레이션·금리·부채 구조 분석\n각국 ",
       "country": null,
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "인플레이션 물가",
@@ -31121,7 +31242,9 @@
       "tier": "active",
       "subs": 2060,
       "views": 184322,
-      "videos": 56
+      "videos": 56,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCidBKXgWHxcMmeIjQquRecA": {
       "seedName": null,
@@ -31129,8 +31252,8 @@
       "title": "금융 이슈 TV",
       "description": "글로벌 금융 뉴스를 살펴보는 채널입니다. \n\n코스콤과 제휴 언론사인 뉴스콤에서 국제경제, 외환 시황 관련해 취재 및 기사를 쓰는 일을 하고 있습니다. \n항상 시장을 보면서 일을 하고 있는만큼 시장 관련  중요한 이슈를 편하게 공유했으면 합니다. \n\n영어, 중국어, 일본어 실용 능력을 갖추고 있어서 글로벌 이슈를 보는데 큰 어려움은 없는 편입니다. \n저도 컨텐츠를 만들면서 시장에 대한 이해도를 높이고 시청자분들에게도 조금이라도 도움이 됐으면 하는 바람입니다. \n\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "연준 FOMC",
@@ -31139,7 +31262,9 @@
       "tier": "active",
       "subs": 2930,
       "views": 282461,
-      "videos": 207
+      "videos": 207,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UC94-KOOG6y4FW6SKHgIPQOg": {
       "seedName": null,
@@ -31147,8 +31272,8 @@
       "title": "J TV",
       "description": "다가오는 금융위기의 실체를 파악하고, 성공적인 미래를 준비하기 위해 정보를 공유하는 커뮤니티 입니다.\n지금까지는 몰라도 됐지만, 이제는 모두가 알아야만 나와 가족을 지킬 수 있습니다.\n- 미래를 보는 창 J TV -",
       "country": null,
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "연준 FOMC",
@@ -31157,7 +31282,9 @@
       "tier": "active",
       "subs": 64500,
       "views": 16142467,
-      "videos": 1042
+      "videos": 1042,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UC77Oz0eJ2ewVo69Pt1of3oA": {
       "seedName": null,
@@ -31165,8 +31292,8 @@
       "title": "동글미디어",
       "description": "지금 미국주식 시장, 제대로 보고 계신가요?\n\n테슬라, 엔비디아, 애플, AI주식, 반도체까지\n지금 가장 중요한 종목과 이슈만 빠르게 전달합니다.\n\n✔ 오늘 급등 이유\n✔ 지금 사도 될까\n✔ 시장 흐름 핵심 요약\n✔ 초보도 이해하는 주식 정보\n\n1분 안에 끝내는 미국주식 핵심 정보\n구독하고 시장 흐름 놓치지 마세요.\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "연준 FOMC",
@@ -31175,7 +31302,9 @@
       "tier": "active",
       "subs": 1310,
       "views": 514362,
-      "videos": 254
+      "videos": 254,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCZu_fJUbLBHYuKZDJe_H6xg": {
       "seedName": null,
@@ -31183,8 +31312,8 @@
       "title": "경제톡",
       "description": "재밌고 유익한 경제 이야기를 공유 드립니다!🧐\n\n\n문의: cjscpckckyt@gmail.com\n\n887D39@AICOMPANY",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "연준 FOMC",
@@ -31193,7 +31322,9 @@
       "tier": "active",
       "subs": 5030,
       "views": 965503,
-      "videos": 25
+      "videos": 25,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCsJxlgjWIOcuEbOJZ591V3Q": {
       "seedName": null,
@@ -31201,8 +31332,8 @@
       "title": "Joseph Wang",
       "description": "Joseph is the operator of Fedguy.com, a research blog on financial markets, and CIO of MonetaryMacro.com. He is a former senior trader on the Federal Reserve's Open Markets Desk, former credit analyst, and a former attorney. He is also the author of the best selling macroeconomics book Central Banki",
       "country": null,
-      "category": null,
-      "classifiedBy": null,
+      "category": "review",
+      "classifiedBy": "rule",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "연준 FOMC",
@@ -31211,7 +31342,10 @@
       "tier": "active",
       "subs": 33400,
       "views": 2481704,
-      "videos": 243
+      "videos": 243,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23",
+      "reviewReason": "한글이 없고 country 도 비어 있다 — 한국 채널인지 확인 필요"
     },
     "UCAzhpt9DmG6PnHXjmJTvRGQ": {
       "seedName": null,
@@ -31219,8 +31353,8 @@
       "title": "Federal Reserve",
       "description": "Official channel of the Federal Reserve Board of Governors",
       "country": "US",
-      "category": null,
-      "classifiedBy": null,
+      "category": "none",
+      "classifiedBy": "rule",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "연준 FOMC",
@@ -31229,7 +31363,9 @@
       "tier": "active",
       "subs": 608000,
       "views": 8635696,
-      "videos": 561
+      "videos": 561,
+      "rejectReason": "한국어 콘텐츠 아님 (country=US)",
+      "classifiedAt": "2026-10-23"
     },
     "UC3ZMg-2xwBGQFjsCEE7SxJw": {
       "seedName": null,
@@ -31237,8 +31373,8 @@
       "title": "경제오이시(issue&easy)",
       "description": "전국민 투자의 시야를 넓히자.\n온라인주식학원\n국민투자연구소 입니다.\n\n🇰🇷 국민투자연구소  채널은 전부 공개 무료 채널로 운용됩니다.\n\n본 채널은 1:1 투자 자문을 제공하지 않으며,\n시세 조작이나 선취매 등의 행위를 일절 하지 않습니다.\n또한 비상장 주식 및 코인에 대한 리딩은 제공하지 않습니다.\n\n(글로벌 시황 , 한국시장 유망섹터 분석 , 매일 실시간 증시 제공, 상승 유망주 공유)\n\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "연준 FOMC",
@@ -31247,7 +31383,9 @@
       "tier": "active",
       "subs": 7230,
       "views": 9300,
-      "videos": 11
+      "videos": 11,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UC5oo9jg5MOvlKB3IC6qRsxg": {
       "seedName": null,
@@ -31255,8 +31393,8 @@
       "title": "집콕금융연수원",
       "description": "경제, 표면으로만 공부하고 싶지 않다면,\n제품의 가치를 추정하는 기술,\n기업의 가치를 추정하는 회계,\n화폐와, 실질경제를 추정하는 거시경제이론을 아우르는\n통계를 기반으로 한 교육채널\n\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "연준 FOMC",
@@ -31265,7 +31403,9 @@
       "tier": "active",
       "subs": 3440,
       "views": 122036,
-      "videos": 71
+      "videos": 71,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCGhLO6k-QoC8I7bMKSQkrrg": {
       "seedName": null,
@@ -31273,8 +31413,8 @@
       "title": "차트는과학",
       "description": "https://toon.at/donate/charts_donation\n채팅 투네이션 후원 주소입니다^^!\n\n\"차트분석 및 정보공유 카톡방\"\nhttps://open.kakao.com/o/gQmUi50d\n\n\"The exchange with the lowest trading fees! Benefits like Quickstarter and M-Day~ MEXC\"\n\nhttps://www.mexc.com/ko-KR/register?inviteCode=mexc-0406\n\n\"50% Fee Automatic Refund! Deepcoin Exch",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "연준 FOMC",
@@ -31283,7 +31423,9 @@
       "tier": "active",
       "subs": 1060,
       "views": 228960,
-      "videos": 547
+      "videos": 547,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCnmPzPP2wvr-gz5k0EWVf9Q": {
       "seedName": null,
@@ -31291,8 +31433,8 @@
       "title": "온에어인주",
       "description": "",
       "country": null,
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "연준 FOMC",
@@ -31301,7 +31443,9 @@
       "tier": "active",
       "subs": 1300,
       "views": 277506,
-      "videos": 116
+      "videos": 116,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UClFL_d-0zkEUbg-d_7inWPw": {
       "seedName": null,
@@ -31309,8 +31453,8 @@
       "title": "하채기",
       "description": "투자 방향을 정확하게 알려드리겠습니다.\n\n전략방:https://open.kakao.com/o/gwSL2nLi\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "연준 FOMC",
@@ -31319,7 +31463,9 @@
       "tier": "active",
       "subs": 1300,
       "views": 168690,
-      "videos": 689
+      "videos": 689,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCzYKu_ufCg_Zf9oPZaEMLRg": {
       "seedName": null,
@@ -31327,8 +31473,8 @@
       "title": "맥경제연구소",
       "description": "국도 여행 영상과 금리등 경제 상황을 올려 드립니다. ",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "국가부채 재정",
@@ -31337,7 +31483,9 @@
       "tier": "active",
       "subs": 31600,
       "views": 777567,
-      "videos": 27
+      "videos": 27,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UC0C18koY3VIJNbnU1YF7tcg": {
       "seedName": null,
@@ -31345,8 +31493,8 @@
       "title": "영남경제",
       "description": "영남권 유일의 경제신문 「영남경제」가 말하는 NEWS\n\nThe only economic newspaper in the Gyeongsang region, 'Yeongnam Economy' says NEWS\n\n\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "국가부채 재정",
@@ -31355,7 +31503,9 @@
       "tier": "active",
       "subs": 1580,
       "views": 380520,
-      "videos": 1097
+      "videos": 1097,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCnLAcTZroegnABTiqDBR5Fw": {
       "seedName": null,
@@ -31363,8 +31513,8 @@
       "title": "해운대 풍경",
       "description": "",
       "country": null,
-      "category": null,
-      "classifiedBy": null,
+      "category": "none",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "국가부채 재정",
@@ -31373,7 +31523,9 @@
       "tier": "active",
       "subs": 1690,
       "views": 501137,
-      "videos": 1234
+      "videos": 1234,
+      "rejectReason": "해운대 풍경 — 풍경 채널. 질의 「국가부채 재정」 에 걸렸다",
+      "classifiedAt": "2026-10-23"
     },
     "UC_jyxlFXrr6iCAyb02lzEsw": {
       "seedName": null,
@@ -31381,8 +31533,8 @@
       "title": "속보이는 경제학",
       "description": "경제는 어렵다는 편견을 깨고, 누구나 쉽게 이해할 수 있는 일상 속 경제 이야기를 전합니다.\n\n우리가 미처 몰랐던 돈의 흐름과 법칙을 복잡한 용어 없이 속 시원하게 파헤쳐 드립니다.\n\n지금 바로 구독하고, 내 삶에 도움이 되는 가장 쉬운 경제 지식을 만나보세요.\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "원달러 환율 전망",
@@ -31391,7 +31543,9 @@
       "tier": "active",
       "subs": 7870,
       "views": 3930,
-      "videos": 13
+      "videos": 13,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UC4diL9JolgWiJ4mH867E6wg": {
       "seedName": null,
@@ -31399,8 +31553,8 @@
       "title": "월급학개론",
       "description": "내 월급을 지키고 불리는 가장 확실한 방법, 월급학개론입니다.\n\n경제학을 기반으로 재테크와 투자가 어려운 분들을 위해\n재테크의 A to Z를 세상에서 가장 쉽게 알려드립니다.\n\n💰 What We Talk About\n✅ Money: 효율적인 월급 관리 & 지출 통제 노하우\n✅ Invest: 초보자도 할 수 있는 적금, ETF, 주식, 연금저축 등 투자 기초\n✅ Insight: 돈의 흐름을 읽는 경제 상식\n\n투기가 아닌 '투자'를,\n요행이 아닌 '실력'을 쌓고 싶다면 지금 바로 구독하세요.\n\n여러분의 경제적 자유를 향한 첫걸음, 월급학",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "원달러 환율 전망",
@@ -31409,7 +31563,9 @@
       "tier": "active",
       "subs": 2490,
       "views": 80747,
-      "videos": 25
+      "videos": 25,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCsjvgV8YZ84pZmHDlurUy8Q": {
       "seedName": null,
@@ -31417,8 +31573,8 @@
       "title": "FutureEconLab",
       "description": "정치&경제&이슈 팩트폭행\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "review",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "원달러 환율 전망",
@@ -31427,7 +31583,9 @@
       "tier": "active",
       "subs": 4830,
       "views": 665805,
-      "videos": 224
+      "videos": 224,
+      "reviewReason": "FutureEconLab — 「정치&경제&이슈 팩트폭행」",
+      "classifiedAt": "2026-10-23"
     },
     "UC7pMxpyYPIBkwRT1eFjs2OQ": {
       "seedName": null,
@@ -31435,8 +31593,8 @@
       "title": "INCAR",
       "description": "인카금융서비스는 생명보험 손해보험 등 국내 모든 보험을 종합적으로 비교, 제안하는 보험전문판매회사입니다. \n인카금융서비스가 제공하는 솔루션은 개인재무/기업경영/금융상품 비교 등 입니다.\n\n📽 📝유튜브 관련 문의:  incaredumedia@gmail.com\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "macro",
       "foundBy": "원달러 환율 전망",
@@ -31445,7 +31603,9 @@
       "tier": "active",
       "subs": 11500,
       "views": 1766123,
-      "videos": 495
+      "videos": 495,
+      "sub": "macro",
+      "classifiedAt": "2026-10-23"
     },
     "UCeR9uYpyUuW2ytxNgTNgaIw": {
       "seedName": null,
@@ -31453,8 +31613,8 @@
       "title": "청개구리투자클럽",
       "description": "2008년부터 운영중인 대한민국 대표 주식정보회사 청개구리투자클럽 공식유투브 채널입니다.\n8년 연속 소비자만족도 1위 , 18년간 이어온 투자정보업계 역사와 노하우를 담은 투자정보로\n당신의 꿈이 현실이 되는 그날까지! 청개구리투자클럽이 함께하겠습니다.",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "kr-stock",
       "foundBy": "주식 투자",
@@ -31463,7 +31623,9 @@
       "tier": "active",
       "subs": 55200,
       "views": 5336566,
-      "videos": 1924
+      "videos": 1924,
+      "sub": "kr-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UCFFyvnrVJHqnL0xm1xbE21g": {
       "seedName": null,
@@ -31471,8 +31633,8 @@
       "title": "하태민경제TV",
       "description": "[하태민 경제TV 실시간 시황 방송 안내]\n매일 개장 전에 '증시 전망' 녹화방송을 제공합니다. \n30년 경력으로 철저한 기업 분석을 통해 종목을 발굴하고 시황을 읽어드리고 있습니다.\n개인투자자를 사랑하는 방송 '하태민 주식TV'입니다.\n\n★하태민 전문가 소개★\n-서울대학교 사회학과 졸업\n-MBC정오뉴스 '주간 증시 전망' 출연\n-한국경제TV '하태민의 증시돋보기' 출연\n-이데일리TV ' 종목주치의 빨간계좌' 출연\n-PAX경제TV 주식라이브쇼 '하태민의 대박예감', '대박식구' 출연\n\n종목 핵심분석 정보는 하태민의 네이버 카페 '남",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "kr-stock",
       "foundBy": "기업 분석",
@@ -31481,7 +31643,9 @@
       "tier": "active",
       "subs": 25300,
       "views": 3921935,
-      "videos": 2932
+      "videos": 2932,
+      "sub": "kr-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UCiqn3baWaqbf_3HEuazNFrA": {
       "seedName": null,
@@ -31489,8 +31653,8 @@
       "title": "TV프라임",
       "description": "최고의 뉴스를 만듭니다! 깊이가 다른 경제전문 미디어 프라임경제TV",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "kr-stock",
       "foundBy": "코스피 전망",
@@ -31499,7 +31663,9 @@
       "tier": "active",
       "subs": 2090,
       "views": 1825973,
-      "videos": 1230
+      "videos": 1230,
+      "sub": "kr-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UCNwJH6Qlcn0XnIQLtfe3Rlw": {
       "seedName": null,
@@ -31507,8 +31673,8 @@
       "title": "머니랩 : 똑똑한 재테크 연구소",
       "description": "경제를 꿰뚫는 인사이트, 내 자산을 키우는 지혜\n\n주식, 부동산, 창업, 연금, 보험까지\n최신 이슈부터 깊이 있는 분석까지,\n지금 가장 똑똑한 재테크 연구소\n\n2030부터 4050까지, 재테크가 필요한 모두를 위한\n머니랩은 경제 뉴스, 주식, 부동산, 연금, 보험 등\n돈의 흐름을 읽고 똑똑하게 움직이는 법을 연구합니다.\n\n지금, 당신의 자산을 설계하세요.\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "kr-stock",
       "foundBy": "코스피 전망",
@@ -31517,7 +31683,9 @@
       "tier": "active",
       "subs": 52400,
       "views": 10591215,
-      "videos": 2658
+      "videos": 2658,
+      "sub": "kr-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UC5Dzs3GVqhgSUlGZKIwH3Nw": {
       "seedName": null,
@@ -31525,8 +31693,8 @@
       "title": "코리안버핏 대공황 미래연구소",
       "description": "코리안버핏 대공황 미래연구소는 앞으로 다가올 가능성이 높은 경제 대공황을\n\n어떻게 현명하게 대처를 해야 하는지 이야기 하는 채널입니다.\n\n가장 정확하고 확률 높은 미래 예측과 주식투자에 대한 올바른 정보를 여러분은 얻으실 수 있습니다. \n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "kr-stock",
       "foundBy": "코스피 전망",
@@ -31535,7 +31703,9 @@
       "tier": "active",
       "subs": 2530,
       "views": 179258,
-      "videos": 343
+      "videos": 343,
+      "sub": "kr-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UCSKG6KZmhtyEPGizmNqZ7vQ": {
       "seedName": null,
@@ -31543,8 +31713,8 @@
       "title": "급등주식회사",
       "description": "안녕하세요, 급등주식과 급등테마만을 취급하는 채널 급등주식회사 입니다!\n\n구독과 좋아요 알림설정 꼭! 부탁드립니다.\n\n#급등주 #급등주추천 #테마주 #테마주추천 #종목추천 #종목분석 \n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "kr-stock",
       "foundBy": "테마주 급등주",
@@ -31553,7 +31723,9 @@
       "tier": "active",
       "subs": 1360,
       "views": 96286,
-      "videos": 767
+      "videos": 767,
+      "sub": "kr-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UCfaL3dohMdpZRSGMMsg6caw": {
       "seedName": null,
@@ -31561,8 +31733,8 @@
       "title": "수익성뉘우스",
       "description": "주식 전문 채널 수익성뉘우스입니다.",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "kr-stock",
       "foundBy": "테마주 급등주",
@@ -31571,7 +31743,9 @@
       "tier": "active",
       "subs": 14800,
       "views": 69215,
-      "videos": 26
+      "videos": 26,
+      "sub": "kr-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UCdEwYt4fGqTVmFUKV3i7JbA": {
       "seedName": null,
@@ -31579,8 +31753,8 @@
       "title": "주식농사머신TV",
       "description": "직장인 주식 매매일지\n1억모으기\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "kr-stock",
       "foundBy": "테마주 급등주",
@@ -31589,7 +31763,9 @@
       "tier": "active",
       "subs": 4550,
       "views": 291235,
-      "videos": 451
+      "videos": 451,
+      "sub": "kr-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UCJavPGK0BzCZjtj68HZs9tg": {
       "seedName": null,
@@ -31597,8 +31773,8 @@
       "title": "새롬경제TV",
       "description": "구독자 여러분들에게 꾸준한 수익을 드립니다!\n'금융정보 전문 채널' 새롬경제TV!!\n\n시장 대응에 유익한 정보를 진정성 있게!\n매매에 도움되는 내용까지 공유!\n\n2022년은 새롬경제TV와 함께 하세요!\n",
       "country": null,
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "kr-stock",
       "foundBy": "테마주 급등주",
@@ -31607,7 +31783,9 @@
       "tier": "active",
       "subs": 18700,
       "views": 0,
-      "videos": 0
+      "videos": 0,
+      "sub": "kr-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UCUGeYj9M81kX31L-Y83d1GA": {
       "seedName": null,
@@ -31615,8 +31793,8 @@
       "title": "비트코인 기술적분석",
       "description": "주식시장에는 기술적분석(차트패턴분석) + 기본적분석(가치분석)이 매매를 하지만\n코인시장에는 기술적 분석(차트패턴분석)으로만 매매를 하는 전업투자자 나전설입니다.\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "kr-stock",
       "foundBy": "차트 기술적분석",
@@ -31625,7 +31803,9 @@
       "tier": "active",
       "subs": 1140,
       "views": 8923,
-      "videos": 62
+      "videos": 62,
+      "sub": "kr-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UCy4JTt_Gujyg2ooUt2yxY6A": {
       "seedName": null,
@@ -31633,8 +31813,8 @@
       "title": "찰스투자",
       "description": "0원에서 70억까지, 실전 투자자의 판단과 매매 원칙을 보여주는 채널 찰스 투자입니다.\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "kr-stock",
       "foundBy": "퀀트 투자",
@@ -31643,7 +31823,9 @@
       "tier": "active",
       "subs": 3640,
       "views": 380124,
-      "videos": 135
+      "videos": 135,
+      "sub": "kr-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UCstq1xNCuEIR43dM3CMop3g": {
       "seedName": null,
@@ -31651,8 +31833,8 @@
       "title": "공모주투자의법칙(공주)",
       "description": "반드시 돈이 되는 공모주 투자의 법칙을 쓴 저자의 유튜브입니다.\n\n",
       "country": null,
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "kr-stock",
       "foundBy": "공모주 청약",
@@ -31661,7 +31843,9 @@
       "tier": "active",
       "subs": 14400,
       "views": 330362,
-      "videos": 21
+      "videos": 21,
+      "sub": "kr-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UCkj9DORrXoTMdCeaWRj1Thg": {
       "seedName": null,
@@ -31669,8 +31853,8 @@
       "title": "재테크의 여왕 슈엔슈",
       "description": "Youtube since 2026.1.1/ 엄마의 재테크가 필요하다/똑똑한 엄마의 당당한 금융 재테크/ 2019 전업맘, 재테크로 매년 3000만 원 벌다/ 2020~2026 재테크의 여왕 슈엔슈 자산관리 가계부/ 강의문의 xuenxu@naver.com \n\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "kr-stock",
       "foundBy": "공모주 청약",
@@ -31679,7 +31863,9 @@
       "tier": "active",
       "subs": 6650,
       "views": 313539,
-      "videos": 137
+      "videos": 137,
+      "sub": "kr-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UCMjwCoNpPqFxWwV_kyjPIYw": {
       "seedName": null,
@@ -31687,8 +31873,8 @@
       "title": "주식정원",
       "description": "공모주, 실권주, 유상증자, 공시 등 주식 공부를 좋아하는 조롱이입니다.\n\nkimjorong2@gmail.com\n",
       "country": null,
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "kr-stock",
       "foundBy": "공모주 청약",
@@ -31697,7 +31883,9 @@
       "tier": "active",
       "subs": 6540,
       "views": 1351392,
-      "videos": 1917
+      "videos": 1917,
+      "sub": "kr-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UC8YmM3q6Y6wP1JNGAIjFz3w": {
       "seedName": null,
@@ -31705,8 +31893,8 @@
       "title": "주식타점왕",
       "description": "✅국내외 주식시장의 흐름을 데이터로 분석하고,\n매일 변동하는 주도 섹터 속 상승주를 선별합니다.\n\n“단순한 종목 추천이 아닌,\n상승의 논리를 이해하고 스스로 판단할 수 있는 힘을 드립니다.”\n\n* 본 채널에서 제공하는 정보를 활용한 매수/매도의 판단 및 투자 책임은 투자자 본인에게 있습니다\n\n#단타 #단타매매 #단타매매기법 #단타매매영상 #실전매매 #단타기법 #단기매매 #스켈핑 #조건검색식 #조건검색 #조건식 #검색식 #검색기 #데이트레이딩 #초단타 #초단타매매 #단타종목 #단타추천 #단타하는법 #단타관심종목 #단타수익 #단타방법 ",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "us-stock",
       "foundBy": "테슬라 주식",
@@ -31715,7 +31903,9 @@
       "tier": "active",
       "subs": 207000,
       "views": 4589082,
-      "videos": 337
+      "videos": 337,
+      "sub": "us-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UCiNNGRv1RLWVJ5ZC4xfT-xA": {
       "seedName": null,
@@ -31723,8 +31913,8 @@
       "title": "비진 시그널",
       "description": "데이터가 말하는 미래,\nAI가 읽어내는 투자 기회.\n\n본 채널은 AI 기술과 경제 데이터를 기반으로\n\n글로벌 경제\n미국 증시\nAI 산업\n미래 성장 기업\n투자 심리를 분석합니다.\n\n시장의 소음은 줄이고,\n본질적인 신호는 확대합니다.\n\n급등주보다 중요한 것은 흐름입니다.\nAI 시대의 자본 이동을 함께 추적합니다.\n\n\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "us-stock",
       "foundBy": "반도체 엔비디아",
@@ -31733,7 +31923,9 @@
       "tier": "active",
       "subs": 82500,
       "views": 1368363,
-      "videos": 23
+      "videos": 23,
+      "sub": "us-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UC8QhKkrA_0CvhGMus7Aid9Q": {
       "seedName": null,
@@ -31741,8 +31933,8 @@
       "title": "바나나파츠",
       "description": "⇣ 뉴스레터 무료구독 링크 ⇣\n⎯⎯⎯⎯⎯⎯\n전세계 80개 이상의 제조사와 12만개 이상의 부품을\n수수료 없이 거래할 수 있는 온라인 전기부품 중개플랫폼이자,\n자동화/FA 뉴스와 지식노하우를 공유하는 곡내 최초의 통합 플랫폼 바나나파츠\n\n이제는 쉽고 빠르게 바나나파츠하세요!\n\n#바나나파츠 #부품거래 #FA #자동화 #제조업 #데일리뉴스 #뉴스레터 #지식나눔\n⎯⎯⎯⎯⎯⎯\n\n홈페이지: https://banana.parts/\n유튜브 구독 : https://www.youtube.com/@bananaparts/about\n뉴스레터 구독 : ht",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "us-stock",
       "foundBy": "반도체 엔비디아",
@@ -31751,7 +31943,9 @@
       "tier": "active",
       "subs": 1490,
       "views": 629009,
-      "videos": 833
+      "videos": 833,
+      "sub": "us-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UCrePfdrcdIGJL36JCiv3IUA": {
       "seedName": null,
@@ -31759,8 +31953,8 @@
       "title": "경제여우",
       "description": "경제가 어려운 사람들을 위한 쉬운경제\n\n📧economyfox1@gmail.com\n\n경제여우와 함께 매일 10분 경제공부❗️\n<🦊하루 10분 인사이트> 모집중🌟",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "us-stock",
       "foundBy": "반도체 엔비디아",
@@ -31769,7 +31963,9 @@
       "tier": "active",
       "subs": 49800,
       "views": 13315780,
-      "videos": 233
+      "videos": 233,
+      "sub": "us-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UC7LN0FW9hvkov8Sf746yW9A": {
       "seedName": null,
@@ -31777,8 +31973,8 @@
       "title": "머니맵 MONEYMAP",
       "description": "📈투자에는 정답이 없지만, 돈이 움직이는 방향은 있다.📈\n\n머니맵은 뉴스가 아닌 ‘자금의 흐름’을 먼저 읽습니다.\nAI, 반도체, 2차전지, 자동차…\n돈이 몰리는 곳엔 항상 이유가 있습니다.\n서울경제, 이데일리, 한국경제, 토마토경제\n검증된 전문가들이 직접 분석하고 전달합니다.\n\n남들보다 한발 빠르게,\n수익으로 이어지는 투자 지도를 제시합니다.\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "us-stock",
       "foundBy": "반도체 엔비디아",
@@ -31787,7 +31983,9 @@
       "tier": "active",
       "subs": 33800,
       "views": 17442,
-      "videos": 58
+      "videos": 58,
+      "sub": "us-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UCqn84cnnA296JD_At6GRrig": {
       "seedName": null,
@@ -31795,8 +31993,8 @@
       "title": "이상현 경제 TV",
       "description": "[이상현 경제 TV] 채널에 오신 것을 환영합니다!\n\n지루하고 어렵게만 느껴졌던 기존의 경제 이야기는 이제 그만!\n저희 채널은 복잡한 글로벌 거시 경제, 첨단 기술 전쟁, 그리고 거대 기업들의 숨겨진 비하인드 스토리를 한 편의 영화처럼 흥미진진하게 풀어냅니다.\n\n글로벌 반도체 전쟁과 AI(인공지능)의 대전환 속에서 삼성, SK하이닉스, 엔비디아, 구글 등 세계적 기업들이 벌이는 치열한 총성 없는 전쟁! 그 예측 불가능한 비즈니스 전장의 내막을 가장 날카롭고 깊이 있게, 그러면서도 누구나 이해하기 쉽게 분석해 드립니다.\n\n미래의 부와",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "us-stock",
       "foundBy": "반도체 엔비디아",
@@ -31805,7 +32003,9 @@
       "tier": "active",
       "subs": 2960,
       "views": 553197,
-      "videos": 29
+      "videos": 29,
+      "sub": "us-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UCwOGXn3KavsvEmcIDPFxLIA": {
       "seedName": null,
@@ -31813,8 +32013,8 @@
       "title": "대한민국 전략 리포트",
       "description": "세상엔 뉴스가 넘쳐나지만, 정작 \"나와 무슨 상관인지\" 알려주는 곳은 드뭅니다. '대한민국 전략 리포트'는 흩어진 뉴스 속에서 국가와 개인의 생존 전략을 읽어드립니다.\n\n📍 우리가 다루는 핵심 주제\n\nK-테크: 엔비디아를 위협하는 반도체 기술부터 AI 혁명까지\n\nK-비즈니스: 쿠팡, 삼성전자 등 거대 기업의 행보와 우리 삶의 변화\n\nK-전략: 전 세계가 주목하는 방산 기술과 지정학적 생존 비책\n\n우리는 단순한 국뽕을 넘어 '팩트'와 '데이터'를 기반으로 대한민국의 오늘을 분석하고, 시청자 여러분의 자산과 일자리에 실질적인 통찰력을 ",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "us-stock",
       "foundBy": "반도체 엔비디아",
@@ -31823,7 +32023,9 @@
       "tier": "active",
       "subs": 5490,
       "views": 990817,
-      "videos": 104
+      "videos": 104,
+      "sub": "us-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UCrSAl6gtGZN7WHuG54k1VdA": {
       "seedName": null,
@@ -31831,8 +32033,8 @@
       "title": "백만전자",
       "description": "반도체가 움직이면, 삼성전자가 움직입니다.\n삼성전자와 엔비디아·TSMC·SK하이닉스까지, AI·반도체 소식을 매일 아침 숫자로 정리합니다.\n\n평일 아침 7시 「밤사이 AI·반도체」\n「이슈 깊게 보기」 · 「삼성전자 체크」\n\n※ 정보 제공 목적이며 투자 권유가 아닙니다. 투자 판단과 책임은 투자자 본인에게 있습니다.\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "us-stock",
       "foundBy": "반도체 엔비디아",
@@ -31841,7 +32043,9 @@
       "tier": "active",
       "subs": 82600,
       "views": 221868,
-      "videos": 49
+      "videos": 49,
+      "sub": "us-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UCIjlWscEzGTBgLza3FPH9NQ": {
       "seedName": null,
@@ -31849,8 +32053,8 @@
       "title": "AI Chip Insider",
       "description": "With close to a decade of experience in the semiconductor industry, from spending nearly half of that inside the world’s largest and most advanced chip fabrication ecosystem to leading AI chip design.\n\nMy mission is to help people understand the hidden infrastructure powering the AI age, and the com",
       "country": "IE",
-      "category": null,
-      "classifiedBy": null,
+      "category": "none",
+      "classifiedBy": "rule",
       "queryHint": "econ",
       "subHint": "us-stock",
       "foundBy": "반도체 엔비디아",
@@ -31859,7 +32063,9 @@
       "tier": "active",
       "subs": 1680,
       "views": 196032,
-      "videos": 74
+      "videos": 74,
+      "rejectReason": "한국어 콘텐츠 아님 (country=IE)",
+      "classifiedAt": "2026-10-23"
     },
     "UCGbBsCwi2Ohh5Y61chv_N6w": {
       "seedName": null,
@@ -31867,8 +32073,8 @@
       "title": "팩트빌더",
       "description": "대한민국에 “정치,경제,뉴스,이슈  왜 난리났는지 아세요?”\n복잡한 정치 및 뉴스 깔끔하게 팩트로 빌드업하겠습니다.\n-팩트빌더-",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "review",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "us-stock",
       "foundBy": "반도체 엔비디아",
@@ -31877,7 +32083,9 @@
       "tier": "active",
       "subs": 24300,
       "views": 11542166,
-      "videos": 224
+      "videos": 224,
+      "reviewReason": "팩트빌더 — 설명에 「정치,경제,뉴스,이슈」. 정치 비중 불명",
+      "classifiedAt": "2026-10-23"
     },
     "UCZ4mb62ECiTMw8DcbBcMLmA": {
       "seedName": null,
@@ -31885,8 +32093,8 @@
       "title": "엔드플랜 Endplan AI",
       "description": "기술을 이기는 인간의 영향력을 설계합니다.\nAI 시대, 영향력은 선택이 아니라 생존입니다.\n\nhttps://www.endplan.ai/\nContact : info@endplan.ai\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "us-stock",
       "foundBy": "반도체 엔비디아",
@@ -31895,7 +32103,9 @@
       "tier": "active",
       "subs": 27700,
       "views": 1355163,
-      "videos": 222
+      "videos": 222,
+      "sub": "us-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UCER6nu3if_kuUUcmU1XRhjg": {
       "seedName": null,
@@ -31903,8 +32113,8 @@
       "title": "Market wizard",
       "description": "시황/섹터/테마/종목/이슈에 대한 개인적인 관점과 정보 공유",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "us-stock",
       "foundBy": "반도체 엔비디아",
@@ -31913,7 +32123,9 @@
       "tier": "active",
       "subs": 7200,
       "views": 903451,
-      "videos": 1033
+      "videos": 1033,
+      "sub": "us-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UCAcUu6mNYI5EB8WF8i3ff2A": {
       "seedName": null,
@@ -31921,8 +32133,8 @@
       "title": "모두의전자",
       "description": "본 채널에서 영상을 통해 소개해드리는 종목은 '정보 공유' 차원일 뿐 '종목 추천'이 아닙니다. \n본 채널에 제공하는 정보를 활용한 매수/매도의 판단 및 투자 책임은 투자자 본인에게 있습니다\n사칭 피해에 각별히 유의하시기 바랍니다.\n\n▶️저희 채널에서는 비상장 주식 투자 / 공모주 투자 / 비상장 코인투자 등을 절대로 권유하지 않습니다. \n\n▶️투자일임 및 자산운용 제안도 하지 않습니다. \n예시) “저에게 천 만원을 입금하면 한 달 안에 몇 억으로 불려 드릴테니, 제 계좌로 입금하세요” 이런 제안을 절대로 하지 않습니다.\n\n저희 채",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "us-stock",
       "foundBy": "반도체 엔비디아",
@@ -31931,7 +32143,9 @@
       "tier": "active",
       "subs": 23200,
       "views": 2523,
-      "videos": 12
+      "videos": 12,
+      "sub": "us-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UCVI2-ieSSdz0Z9JAsDFCJUg": {
       "seedName": null,
@@ -31939,8 +32153,8 @@
       "title": "내일경제",
       "description": "\"어떻게 투자해야 살아남을 수 있을까?\"\n\n그 고민에 대한 답을 '내일경제'에서 확인하세요.\n\n코스피 10000 시대를 대비하는 안목과 미국 증시에서 무너지지 않는 포트폴리오 원칙을 공유합니다.\n복잡한 경제 지표를 쉽게 풀이하고, 지금 당장 주목해야 할 시장의 시그널을 포착해 드립니다.\n\n\"준비된 투자자만이 기회를 잡을 수 있습니다.\"\n\n'내일경제'와 함께 흔들리지 않는 투자 원칙을 세우고 미래를 설계하세요.\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "us-stock",
       "foundBy": "반도체 엔비디아",
@@ -31949,7 +32163,9 @@
       "tier": "active",
       "subs": 2550,
       "views": 1750334,
-      "videos": 431
+      "videos": 431,
+      "sub": "us-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UCs1nwVjsZwc5ary2CnsPvMQ": {
       "seedName": null,
@@ -31957,8 +32173,8 @@
       "title": "경제코드",
       "description": "\n뉴스에 한 줄로 스쳐 지나가는 기술 하나, 기업 하나. 그 뒤에는 수십 년을 버텨온 사람들과, 세계 판도를 바꾼 이야기들이 숨어 있습니다. 작은 칩 하나, 배 한 척, 배터리 셀 하나가 국가의 운명을 가르는 시대입니다. \n\n그 이면에는 뉴스 한 줄로는 담기지 않는 사람과 산업의 긴 이야기가 있습니다.\n\n경제코드는 기술과 기업, 산업, 그리고 그 안의 사람을 하나의 회로처럼 연결해 \"이 사건이 지금 세계에서 왜 중요한가?\"를 풀어드립니다. 때로는 기업 하나를 깊이 들여다봅니다. 잘 알려지지 않은 창업의 첫걸음부터 세계가 주목하는 자",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "us-stock",
       "foundBy": "반도체 엔비디아",
@@ -31967,7 +32183,9 @@
       "tier": "active",
       "subs": 2110,
       "views": 297580,
-      "videos": 30
+      "videos": 30,
+      "sub": "us-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UC5Z93mqXwoxiaAiB6-MefAg": {
       "seedName": null,
@@ -31975,8 +32193,8 @@
       "title": "인범티비 INBUMTV",
       "description": "",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "us-stock",
       "foundBy": "미국 옵션 투자",
@@ -31985,7 +32203,9 @@
       "tier": "active",
       "subs": 705000,
       "views": 6615118,
-      "videos": 6
+      "videos": 6,
+      "sub": "us-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UCyLrh9DQfpNbNnRy6jVntgQ": {
       "seedName": null,
@@ -31993,8 +32213,8 @@
       "title": "해외선물리치",
       "description": "☞ 매일 오후6시 ~ 오전2시 생방송\n\n🔔무료 정보 공유방 및 업체 상담 문의🔔\nhttps://open.kakao.com/o/sR8qvmef\n\n\n정보공유방에서 해외선물 시장에 관한 자세한 정보를 교환하고 논의합니다.\n해외선물은 미국시장 증시에 직접적인 영향이 있는 상품이기에\n흐름만 보지않고 미국경제를 분석하며 안정적인 수익 구간을 노리며 투자하시길 바랍니다. 오늘도 성투 되시길 바라며 많은 시청 부탁드립니다.\n\n#해외선물\n#나스닥\n#항셍 \n#크루드오일\n#선물옵션\n#비트코인\n#주식\n#미국주식\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "us-stock",
       "foundBy": "미국 옵션 투자",
@@ -32003,7 +32223,9 @@
       "tier": "active",
       "subs": 122000,
       "views": 13326215,
-      "videos": 188
+      "videos": 188,
+      "sub": "us-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UCp8kLGSXakB34tTirSIG3iA": {
       "seedName": null,
@@ -32011,8 +32233,8 @@
       "title": "위험성향인",
       "description": "차트 분석과 거시경제 및 옵션 분석을 바탕으로 미국주식과 비트코인의 향후 흐름을 같이 살펴 보는 채널입니다. \n제 채널의 영상은 투자 권유가 아닌 정보 공유를 목적으로 한 영상이며, 투자는 개인의 판단에 따라 해야 합니다. \n구독자분들의 성공투자를 위해 항상 노력하겠습니다.\n감사합니다.\n멤버십에서는 매일 일일 옵션 및 차트 분석을 제공하고 있습니다.\nhttps://www.youtube.com/channel/UCp8kLGSXakB34tTirSIG3iA/join\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "us-stock",
       "foundBy": "미국 옵션 투자",
@@ -32021,7 +32243,9 @@
       "tier": "active",
       "subs": 5450,
       "views": 684224,
-      "videos": 1097
+      "videos": 1097,
+      "sub": "us-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UC9Y8fxwC32Vtsm-CYosf2hg": {
       "seedName": null,
@@ -32029,8 +32253,8 @@
       "title": "델타원 트레이더",
       "description": "글로벌 자산시장의 당일 마감 현황을, 전직 프랍 트레이더가 최대한 빠르게 해설합니다.\n애널리스트나 이코노미스트가 아닌, 바이사이드의 관점에서 시장을 해석합니다.\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "us-stock",
       "foundBy": "미국 옵션 투자",
@@ -32039,7 +32263,9 @@
       "tier": "active",
       "subs": 4250,
       "views": 336746,
-      "videos": 249
+      "videos": 249,
+      "sub": "us-stock",
+      "classifiedAt": "2026-10-23"
     },
     "UCeUP5Kb-EDDplwAi0H02XlA": {
       "seedName": null,
@@ -32047,8 +32273,8 @@
       "title": "TQQQ미친놈",
       "description": "금융자산 10억 이상 운용 중. 매일 영상 업로드 :)\nQLD로 수익내고, 하락장에 TQQQ 전환합니다.\n거치식 50% + 분할적립 50% 투트랙 전략으로 투자합니다.\n레버리지 ETF 투자를 사랑합니다.\n\n👉 티미단 멤버십의 경우 '투자 전략 영상'을 업로드 합니다.\n👉 티미단 이사님 등급 : 노골적인 투자/돈 이야기를 합니다.\n👉 매일 쇼츠 영상 촬영 & 롱폼 영상 업데이트\n👉 QLD와 TQQQ 단타/스윙 투자를 매우 잘 합니다.\n👉 멤버십 외 카카오톡 단톡방/디스코드 등 운영하지 않습니다.\n\nTQQQ, QLD 그리고 개인사업으로",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "etf",
       "foundBy": "레버리지 ETF",
@@ -32057,7 +32283,9 @@
       "tier": "active",
       "subs": 86100,
       "views": 35406031,
-      "videos": 1457
+      "videos": 1457,
+      "sub": "etf",
+      "classifiedAt": "2026-10-23"
     },
     "UCo5paBxeuee6MRC7Kcto6Zw": {
       "seedName": null,
@@ -32065,8 +32293,8 @@
       "title": "레버리지",
       "description": "레버리지에 죽었지만, 레버리지로 복수한다\n\n",
       "country": null,
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "etf",
       "foundBy": "레버리지 ETF",
@@ -32075,7 +32303,9 @@
       "tier": "active",
       "subs": 5690,
       "views": 982438,
-      "videos": 199
+      "videos": 199,
+      "sub": "etf",
+      "classifiedAt": "2026-10-23"
     },
     "UCyAyKtsIg78NUv15hy397IA": {
       "seedName": null,
@@ -32083,8 +32313,8 @@
       "title": "파이어 농사꾼",
       "description": "주 6일 일하는 골 직장인이 레버리지 ETF로 파이어(경제적 자유)를 향해 가는 실전 기록입니다.\n⚠️ 이 채널의 모든 영상은 개인 투자 기록이며 투자 권유가 아닙니다. 레버리지 ETF는 원금 손실 위험이 매우 크며, 투자 판단과 책임은 본인에게 있습니다.\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "etf",
       "foundBy": "레버리지 ETF",
@@ -32093,7 +32323,9 @@
       "tier": "active",
       "subs": 6440,
       "views": 1115,
-      "videos": 2
+      "videos": 2,
+      "sub": "etf",
+      "classifiedAt": "2026-10-23"
     },
     "UCQeCqmZZcSa0oEd6IeQ7dyg": {
       "seedName": null,
@@ -32101,8 +32333,8 @@
       "title": "데일리대일 ",
       "description": "재테크 정보 올인원 정리 👇\nhttps://dailyonecheck.com/\n\n돈 이야기 좋아합니다 \n유튜브 돈 벌려고 하는거 맞습니다\n강의팔이, 전자책팔이 절대 안합니다 \n양심까지 팔고싶진 않습니다 \n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "etf",
       "foundBy": "커버드콜 ETF",
@@ -32111,7 +32343,9 @@
       "tier": "active",
       "subs": 97600,
       "views": 25684023,
-      "videos": 554
+      "videos": 554,
+      "sub": "etf",
+      "classifiedAt": "2026-10-23"
     },
     "UCcxWKuTpDu4uh0Ng_6lF5fg": {
       "seedName": null,
@@ -32119,8 +32353,8 @@
       "title": "배당도사",
       "description": "#배당주식, #배당주,  #배당ETF,  #미국주식, #SCHD,  #JEPI, #미국배당다우존스, #고배당주\n배당으로 #파이어족 까지, 배당의 모든 것\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "dividend",
       "foundBy": "배당주",
@@ -32129,7 +32363,9 @@
       "tier": "active",
       "subs": 4710,
       "views": 438248,
-      "videos": 70
+      "videos": 70,
+      "sub": "dividend",
+      "classifiedAt": "2026-10-23"
     },
     "UCjcsgya3C8krj-uo24PgxAw": {
       "seedName": null,
@@ -32137,8 +32373,8 @@
       "title": "마당N MadangN",
       "description": "미주 한인들의 정보 공유의 장 마당N\n미국에서 살아가는 한인들을 위한 살아 있는 정보,\n미국에서 일어나는 각종 이슈들을 알기쉽게 전해 드립니다.\n",
       "country": "US",
-      "category": null,
-      "classifiedBy": null,
+      "category": "review",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "dividend",
       "foundBy": "배당금 생활",
@@ -32147,7 +32383,9 @@
       "tier": "active",
       "subs": 3710,
       "views": 1563453,
-      "videos": 427
+      "videos": 427,
+      "reviewReason": "마당N — 미주 한인 정보 공유. 경제 전문 아님",
+      "classifiedAt": "2026-10-23"
     },
     "UCUoYvgfHG1rvblfVCXY9c8g": {
       "seedName": null,
@@ -32155,8 +32393,8 @@
       "title": "minimal rich",
       "description": "Less things, deeper life.\n\n✉️ contact. siel1017@naver.com",
       "country": null,
-      "category": null,
-      "classifiedBy": null,
+      "category": "review",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "dividend",
       "foundBy": "배당금 생활",
@@ -32165,7 +32403,9 @@
       "tier": "active",
       "subs": 3170,
       "views": 1519371,
-      "videos": 74
+      "videos": 74,
+      "reviewReason": "minimal rich — 미니멀 라이프. 경제와 겹치는 정도 불명",
+      "classifiedAt": "2026-10-23"
     },
     "UCEiDF0NFnMz-z0rypRLJBGw": {
       "seedName": null,
@@ -32173,8 +32413,8 @@
       "title": "연금술사",
       "description": "연금저축, IRP, 퇴직연금, 국민연금까지\n연금에 관한 모든 궁금증을 쉽게 풀어드립니다.\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "pension",
       "foundBy": "연금저축 IRP",
@@ -32183,7 +32423,9 @@
       "tier": "active",
       "subs": 29500,
       "views": 454046,
-      "videos": 20
+      "videos": 20,
+      "sub": "pension",
+      "classifiedAt": "2026-10-23"
     },
     "UCSzpHE8fNKapVLqEyJhCxSg": {
       "seedName": null,
@@ -32191,8 +32433,8 @@
       "title": "인생노트(사연 라디오)",
       "description": "다양한 삶의 모습을 담고 있습니다.. 가정에 평안과 행운이 가득하시길 바랍니다",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "none",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "pension",
       "foundBy": "ISA 계좌",
@@ -32201,7 +32443,9 @@
       "tier": "active",
       "subs": 2290,
       "views": 371,
-      "videos": 1
+      "videos": 1,
+      "rejectReason": "인생노트 — 사연 라디오. 경제 아님",
+      "classifiedAt": "2026-10-23"
     },
     "UC7t1AJngzVPZmc3YzVYgHvQ": {
       "seedName": null,
@@ -32209,8 +32453,8 @@
       "title": "아빠의재테크 (아재)",
       "description": "아빠의 재태크(아재)\n소소한 부수입, 주식, 가상화폐, 육아, 잡담, 나만의 히스토리",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "personal",
       "foundBy": "재테크",
@@ -32219,7 +32463,9 @@
       "tier": "active",
       "subs": 3390,
       "views": 442004,
-      "videos": 285
+      "videos": 285,
+      "sub": "personal",
+      "classifiedAt": "2026-10-23"
     },
     "UCAoaU3Af84DhwnSSwJ0dfsA": {
       "seedName": null,
@@ -32227,8 +32473,8 @@
       "title": "재테크하는 정대리",
       "description": "전재산 3천만 원으로 결혼한 평범한 부부가 \n부동산 재테크로 경제적 자유를 꿈꾸며 성장해가고있는 채널 \"재테크하는 정대리\"입니다.\n\n부동산 투자 공부나 내집마련에 대해 궁금하시다면 아래 메일로 연락 부탁드립니다^^\n\njaejungtv@naver.com\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "personal",
       "foundBy": "재테크",
@@ -32237,7 +32483,9 @@
       "tier": "active",
       "subs": 2680,
       "views": 307551,
-      "videos": 47
+      "videos": 47,
+      "sub": "personal",
+      "classifiedAt": "2026-10-23"
     },
     "UCO0eAcrsE3-6qzMpXAsnKPQ": {
       "seedName": null,
@@ -32245,8 +32493,8 @@
       "title": "김소장의부동산재테크",
       "description": "안녕하세요~\n\n청주 수익형부동산 전문 공인중개사 S.M공인중개사입니다~\n\n청주에서 수익형부동산 관련 일을 한지 21년된 공인중개사 김찬삼입니다~\n\n부동산 유튜브 영상을 통해서 좋은 정보 많이 보여드리겠습니다. \n\n청주다가구주택, 청주상가주택, 청주상가빌딩등 수익형부동산의 투자에 대해서 궁금하신점 언제든 연락주세요~\n\n청주시 상당구 중고개로 125번길 32-2, 101호 S.M공인중개사사무소\n\n등록번호 : 43111-2020-00053\n\n대표 : 김 찬 삼 010-8668-0333",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "personal",
       "foundBy": "재테크",
@@ -32255,7 +32503,9 @@
       "tier": "active",
       "subs": 9800,
       "views": 682505,
-      "videos": 145
+      "videos": 145,
+      "sub": "personal",
+      "classifiedAt": "2026-10-23"
     },
     "UCfUi8MP51WwYWbS6xN_xBgQ": {
       "seedName": null,
@@ -32263,8 +32513,8 @@
       "title": "호호양  재테크",
       "description": "\n\n강의&비지니스 문의\nlovelyhoho715@naver.com\n\n\n\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "personal",
       "foundBy": "재테크",
@@ -32273,7 +32523,9 @@
       "tier": "active",
       "subs": 70200,
       "views": 10117595,
-      "videos": 261
+      "videos": 261,
+      "sub": "personal",
+      "classifiedAt": "2026-10-23"
     },
     "UC8MLgmmop6wBeZCffpEqCRQ": {
       "seedName": null,
@@ -32281,8 +32533,8 @@
       "title": "석가머니 재테크",
       "description": "버는 것보다 중요한 것은 지키는 것이고, 지키는 것보다 중요한 것은 키우는 것입니다",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "personal",
       "foundBy": "재테크",
@@ -32291,7 +32543,9 @@
       "tier": "active",
       "subs": 55200,
       "views": 10231016,
-      "videos": 326
+      "videos": 326,
+      "sub": "personal",
+      "classifiedAt": "2026-10-23"
     },
     "UC6_bU6jJoliGIQaY_mkRuEg": {
       "seedName": null,
@@ -32299,8 +32553,8 @@
       "title": "편안한 은퇴솔루션",
       "description": "편안한 은퇴솔루션은 50대 이상의 은퇴자와 예비 은퇴자를 위한 지식 채널입니다.\n\n금융, 투자, 건강, 여행, 라이프스타일까지\n편안하고 지속가능한 은퇴 생활을 위한 다양한 정보를 소개합니다.\n\n💬 함께 배우고, 함께 준비하는\n‘현실적인 은퇴 솔루션’을 찾고 계시다면,\n지금 구독해보세요.\n\n#은퇴준비 #배당투자 #배당금 #건강 #은퇴 #여행 #라이프스타일 #노후 #노후자산 #편안한은퇴솔루션 #50대 #60대 #70대 #80대\n2W47R6@AICOMPANY\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "personal",
       "foundBy": "파이어족 조기은퇴",
@@ -32309,7 +32563,9 @@
       "tier": "active",
       "subs": 1060,
       "views": 774084,
-      "videos": 156
+      "videos": 156,
+      "sub": "personal",
+      "classifiedAt": "2026-10-23"
     },
     "UCa3CLLq-SQNu8pTWUwoebUQ": {
       "seedName": null,
@@ -32317,8 +32573,8 @@
       "title": "장사가 머니 | 허프로",
       "description": "\"장사로 돈을 벌고, 시스템으로 부자가 되어 '가게 밖'의 자유를 찾으세요!\" 💰\n‘장사가 머니’는 단순한 장사 정보 채널이 아닙니다. 20년 차 베테랑 장사꾼 허프로가 직접 자수성가한 부자들을 만나, 장사꾼이 '진짜 부자'가 되는 실전 가난 탈출 비법을 발굴합니다.\n\n🚀장사는 '수단'이고, 자유는 '목적'입니다\n단순히 물건을 파는 기술이 아니라, 장사 수익을 프랜차이즈 시스템, 부동산, 주식, 코인 등 자산으로 전환하여 당신만의 부의 파이프라인을 설계하도록 도와드립니다.\n\n🎯 이런 분들은 반드시 '구독' 버튼을 누르세요!\n•\"나 ",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "personal",
       "foundBy": "월급 재무설계",
@@ -32327,7 +32583,9 @@
       "tier": "active",
       "subs": 14200,
       "views": 787096,
-      "videos": 336
+      "videos": 336,
+      "sub": "personal",
+      "classifiedAt": "2026-10-23"
     },
     "UCQfAkf7_PaSBJ2QAw-LfXfQ": {
       "seedName": null,
@@ -32335,8 +32593,8 @@
       "title": "스마트에셋 ",
       "description": "19년의 경험, AI는 흉내 낼 수 없는 인생의 무게를 설계합니다.\n\n🔍실전투자 🔍자산관리 🔍절세전략 🔍리스크관리및 보험설계 \n\n\n📌돈은 숫자지만, 그 뒤에는 '인생'과 '가족'이 있습니다.\n19년 실전 노하우를 가진 '박프로'와 강남 최고의 전문가 그룹(투자·세무·법률·부동산·보험)이 당신의 든든한 등대지기가 되어드립니다.\n\n📌실무현장에서 많은 소비자가 어려워 하는 '금융상식'(비재무정보 포함)을 초등학생도 이해하기 쉽게 풀어드립니다\n\n📌복잡한 상속, 증여부터 막막한 노후 준비, 자산관리, 리스크 관리& 보험설계 까지, 검색으로 ",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "personal",
       "foundBy": "월급 재무설계",
@@ -32345,7 +32603,9 @@
       "tier": "active",
       "subs": 1340,
       "views": 214068,
-      "videos": 143
+      "videos": 143,
+      "sub": "personal",
+      "classifiedAt": "2026-10-23"
     },
     "UCqEcIzYdkgIjfWTgln-6XZw": {
       "seedName": null,
@@ -32353,8 +32613,8 @@
       "title": "부자발전소",
       "description": "안녕하세요. 부자발전소입니다.\n\n부자발전소는 주식투자, 재테크, 노후준비를 통해 경제적 자유를 꿈꾸는 분들을 위한 채널입니다.\n\n단순히 돈을 버는 방법만 이야기하지 않습니다.\n자산을 지키고, 불리고, 은퇴 후에도 안정적인 삶을 살아갈 수 있는 현실적인 투자 전략과 재무 관리 방법을 제공합니다.\n\n📌 채널 주요 콘텐츠\n\n📈 주식 투자 전략\n삼성전자, SK하이닉스, ETF, 미국 주식 등 장기 투자에 도움이 되는 투자 정보와 시장 분석을 제공합니다.\n\n💰 재테크 노하우\n월급 관리, 절약 습관, 배당 투자, 복리 투자, 연금 활용 등 부",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "personal",
       "foundBy": "월급 재무설계",
@@ -32363,7 +32623,9 @@
       "tier": "active",
       "subs": 1440,
       "views": 286439,
-      "videos": 317
+      "videos": 317,
+      "sub": "personal",
+      "classifiedAt": "2026-10-23"
     },
     "UCUdsR7fxNGbpZPP3xEaKSgQ": {
       "seedName": null,
@@ -32371,8 +32633,8 @@
       "title": "국가대표 K-보험",
       "description": "📌무료상담은 아래 링크 확인해주세요 👇👇 \n\n보험, 어렵고 부담되셨나요?\n\n‘내 보험’을 제대로 점검하고,  \n꼭 필요한 보장만 똑똑하게 설계하는 법!  \nK-보험 채널에서 보험 꿀팁과 리모델링 정보를  \n쉽고 빠르게 알려드립니다.\n\nK보험은 **절대 가입을 강요하지 않습니다.**  \n가족처럼 진심으로, 꼭 필요한 보장만 함께 고민해드립니다.\n\n✔️ 33개 보험사 비교 분석  \n✔️ 실손의료비, 암보험, 어린이보험, 종합보험, 보험 리모델링 등  \n✔️ 실제 상담 사례와 보험 꿀팁 제공\n\n“좋은 보험은, 부담 없이 이해하고 선택할 ",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "personal",
       "foundBy": "보험 리모델링",
@@ -32381,7 +32643,9 @@
       "tier": "active",
       "subs": 1970,
       "views": 213054,
-      "videos": 33
+      "videos": 33,
+      "sub": "personal",
+      "classifiedAt": "2026-10-23"
     },
     "UCPFSS8FBVyuY9oW98TUX6Eg": {
       "seedName": null,
@@ -32389,8 +32653,8 @@
       "title": "맘바 비트코인",
       "description": "코인방송 취미로하는 찐트레이더의 유튭방송 ",
       "country": null,
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "crypto",
       "foundBy": "비트코인 투자",
@@ -32399,7 +32663,9 @@
       "tier": "active",
       "subs": 46800,
       "views": 1656475,
-      "videos": 158
+      "videos": 158,
+      "sub": "crypto",
+      "classifiedAt": "2026-10-23"
     },
     "UCvZNMu1xqnfcMTqc1TEZ9Og": {
       "seedName": null,
@@ -32407,8 +32673,8 @@
       "title": "본투자리서치",
       "description": "\n\" 움직이는 건 돈, 읽어야 할 건 흐름이다 \"\n\n본투자리서치는 거시경제 지표, 국내외 우량 주식, 그리고 비트코인 시황 분석을 통해 자본 시장의 본질을 꿰뚫는 종합 투자 교육 채널입니다. 시장의 판을 읽고 투자 마인드를 정립하고 싶은 분들을 위해 전문적인 리서치 인사이트를 공유합니다.\n\n* 비즈니스 문의 : coinbonsaek@gmail.com\n\n＊본 채널에서 제공되는 정보는 교육 목적으로만 제공됩니다. 제공된 내용은 투자 조언이 아니며, 오직 학습을 위해 제공됩니다.\n＊제공하는 교육 콘텐츠는 어떠한 수익도 보장하지 않습니다.",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "crypto",
       "foundBy": "비트코인 투자",
@@ -32417,7 +32683,9 @@
       "tier": "active",
       "subs": 11400,
       "views": 319637,
-      "videos": 26
+      "videos": 26,
+      "sub": "crypto",
+      "classifiedAt": "2026-10-23"
     },
     "UCIOJYR8ypCX3K3AF0cswaFA": {
       "seedName": null,
@@ -32425,8 +32693,8 @@
       "title": "비트코인가이드 (BitcoinGuide)",
       "description": "안녕하세요.\n매일 30분봉 차트에서 실시간 이동경로를 남겨드리고 \n차트분석을 진행하는 비트코인 가이드입니다\n\n매주 화요일 , 목요일밤에 진행하는 실시간 방송도 많이 시청해주세요.\n\n감사합니다.\n\n\n* 트레이딩뷰 - https://kr.tradingview.com\n\n\"bitcoinguide\" 영문 검색하시고 팔로우 하시면\n실시간 이동경로 확인 및 실시간코멘트 확인이 가능합니다.\n\n\n* 공식카페 Naver Cafe - https://cafe.naver.com/loanlife82/3045\n\n\n* 제로마켓 ZeroMarket ECN계좌 평",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "econ",
+      "classifiedBy": "claude",
       "queryHint": "econ",
       "subHint": "crypto",
       "foundBy": "비트코인 투자",
@@ -32435,7 +32703,9 @@
       "tier": "active",
       "subs": 22800,
       "views": 2939343,
-      "videos": 2436
+      "videos": 2436,
+      "sub": "crypto",
+      "classifiedAt": "2026-10-23"
     },
     "UCC7IpHO1EvD7HYLWclxJB2w": {
       "seedName": null,
@@ -32443,8 +32713,8 @@
       "title": "True Hawaii  하와이 부동산 로즈장",
       "description": "Aloha guys! I am Rose Jang from Hawaii. I am a real estate agent here. \nThis channel is to share my journey as a real estate agent and also share information about real estate here in Hawaii.\n\n알로하! 안녕하세요! 하와이의 부동산, 로즈 장 입니다.\n하와이 부동산, 미국 부동산에 대해서 궁금하신 점 있으면 언제든지 연락주세요 :) 한국어, 영어 가능합니다.\n\n카카오톡:  alohar",
       "country": "US",
-      "category": null,
-      "classifiedBy": null,
+      "category": "realty",
+      "classifiedBy": "claude",
       "queryHint": "realty",
       "subHint": "home",
       "foundBy": "부동산",
@@ -32453,7 +32723,9 @@
       "tier": "active",
       "subs": 8840,
       "views": 970278,
-      "videos": 261
+      "videos": 261,
+      "sub": "home",
+      "classifiedAt": "2026-10-23"
     },
     "UC3nsb3SxlRrJQ9egkKNnlfg": {
       "seedName": null,
@@ -32461,8 +32733,8 @@
       "title": "리치고TV. 데이터로 보는 부동산, 주식 투자",
       "description": "부동산과 주식, 감이 아니라 데이터로 분석합니다. 리치고 김기원입니다.\n\n잘못된 투자 의사결정으로 힘들어하시는 개인, 기업들이 더 이상 생기지 않았으면 좋겠습니다.\n10년 가까이 연구해온 부동산 빅데이터 노하우에, 이제 주식 시장 데이터 분석까지 더했습니다.\n감이 아니라 데이터로, 부동산과 주식 시장 모두에서 올바른 등대 역할을 해나가겠습니다.\n\n🏠 부동산 빅데이터 분석 '리치고'\n▶ https://m.richgo.ai/pc\n\n📈 주식 데이터 분석 '불리자'\n▶ https://bulliza.com\n\n리치고 광고 및 사업 제휴 / 김",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "realty",
+      "classifiedBy": "claude",
       "queryHint": "realty",
       "subHint": "home",
       "foundBy": "부동산",
@@ -32471,7 +32743,9 @@
       "tier": "active",
       "subs": 137000,
       "views": 19426838,
-      "videos": 1271
+      "videos": 1271,
+      "sub": "home",
+      "classifiedAt": "2026-10-23"
     },
     "UCrQFkX8_ajyCHuTnr-Sol-g": {
       "seedName": null,
@@ -32479,8 +32753,8 @@
       "title": "김화현쌤의 부동산북두칠성",
       "description": "공인중개사 민법과 공인중개사법 1타 강사 김화현 입니다.\n\n저와 함께 1차, 2차 모두 쉽고 재미있게 합격하세요!!\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "realty",
+      "classifiedBy": "claude",
       "queryHint": "realty",
       "subHint": "home",
       "foundBy": "부동산",
@@ -32489,7 +32763,9 @@
       "tier": "active",
       "subs": 20100,
       "views": 5455881,
-      "videos": 3622
+      "videos": 3622,
+      "sub": "home",
+      "classifiedAt": "2026-10-23"
     },
     "UCKGx904b0tlZAaEdKKO1a8A": {
       "seedName": null,
@@ -32497,8 +32773,8 @@
       "title": "세종스타부동산 (구.늘푸른나나)",
       "description": "세종 대전 공주 청주 토지,택지,단독주택지,전원주택지,단독주택,전원주택,타운하우스,상가건물,공장,창고 전문 부동산\n최근 3년간 세종시 거래성사 최다 부동산\n\n등록번호 11-25-56\n매수신청대리 법원등록사무소\n손해배상책임보험 2억 (경매)\n손해배생책임보험 2억 (중개)\n\n■ 세종스타 블로그 ■\nhttps://blog.naver.com/kiwoongs\n\n■ 세종스타 공인중개사사무소 ■\n(구.늘푸른나나 부동산)\n대표: 금기웅\n등록번호: 36110-2022-00148\n주소: 세종시 절재로 172, 202호\n사무실: 044-417-6010",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "realty",
+      "classifiedBy": "claude",
       "queryHint": "realty",
       "subHint": "home",
       "foundBy": "부동산",
@@ -32507,7 +32783,9 @@
       "tier": "active",
       "subs": 55600,
       "views": 2742073,
-      "videos": 666
+      "videos": 666,
+      "sub": "home",
+      "classifiedAt": "2026-10-23"
     },
     "UC8nJAtfHwnMTWgGR7T4mBaQ": {
       "seedName": null,
@@ -32515,8 +32793,8 @@
       "title": "친절한 부동산 선배",
       "description": "상업용 부동산 컨텐츠를 만들고 있는 민성식입니다. \n상업용 부동산 관련 취업, 직무, 회사, 트렌드, 자기계발 등에 대한 이야기를 나누고자 합니다.\n\n\n[학력]\n휘문 고등학교 (89회 졸업)\n숭실대학교 국제통상학과 (97학번)\n\n[경력]\n샘스, 메이트 플러스 : 2004~2009\n리치먼드자산운용 (구 마이어자산운용) : 2009~2011\nIFC Seoul 여의도 국제금융센터 PM팀 (SIFC Property Korea): 2011~2017.11\n여의도 파크원 복합개발프로젝트  : 2017.11~2019.12\n리판 (프롭테크 플랫폼)",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "realty",
+      "classifiedBy": "claude",
       "queryHint": "realty",
       "subHint": "home",
       "foundBy": "부동산",
@@ -32525,7 +32803,9 @@
       "tier": "active",
       "subs": 5970,
       "views": 285661,
-      "videos": 147
+      "videos": 147,
+      "sub": "home",
+      "classifiedAt": "2026-10-23"
     },
     "UCu9SkglGtbnwtht-fP75Nbw": {
       "seedName": null,
@@ -32533,8 +32813,8 @@
       "title": "한문도TV_부동산채널",
       "description": "경제ㆍ부동산,  분석과 뉴스 팩트체크ㆍ상식 관련 \n이야기를 다루는 채널입니다. ^^\n\n구독자 여러분이 부동산ㆍ경제 기초부터\n시장분석ㆍ전문가수준이 되실수 있도록 최선을 다하겠습니다.\n\n건전한 부동산 시장환경을 만들기 위해, \n청년ㆍ무주택자ㆍ성인자녀 있으신 유주택자 분들을 위해 \n부동산과 경제의 정확한 시장정보ㆍ분석, 전망 제공과 더불어 분양가격 낮추기 국민운동을 시작할 계획입니다.\n\n많은성원 부탁드립니다\n구독자 모든분이 행복하시길 기원드립니다\n\n감사합니다^^",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "realty",
+      "classifiedBy": "claude",
       "queryHint": "realty",
       "subHint": "home",
       "foundBy": "부동산",
@@ -32543,7 +32823,9 @@
       "tier": "active",
       "subs": 175000,
       "views": 18001685,
-      "videos": 318
+      "videos": 318,
+      "sub": "home",
+      "classifiedAt": "2026-10-23"
     },
     "UC_VdLw_BWolOzK_k77KEhNQ": {
       "seedName": null,
@@ -32551,8 +32833,8 @@
       "title": "랜드오브코리아 부동산중개 랜코",
       "description": "경기도 및 강원도 지역을 전문으로 토지, 주택, 펜션, 상가 등의 부동산을 정직하고 성실하게 중개하고 있습니다.\n부동산중개부터 인허가, 분석, 건축까지 안내를 드리고 있습니다.\n랜코와 함께 평생 함께하는 부동산 파트너가 되겠습니다.\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "realty",
+      "classifiedBy": "claude",
       "queryHint": "realty",
       "subHint": "home",
       "foundBy": "부동산",
@@ -32561,7 +32843,9 @@
       "tier": "active",
       "subs": 25400,
       "views": 2280834,
-      "videos": 308
+      "videos": 308,
+      "sub": "home",
+      "classifiedAt": "2026-10-23"
     },
     "UCICFOTz6PmIUCHOtLvBfxVg": {
       "seedName": null,
@@ -32569,8 +32853,8 @@
       "title": "박부동산TV",
       "description": "인제 대표 부동산\n박진호공인중개사의 박부동산TV 입니다\n정직하게 중개해 드립니다. \n계약시 법정중개보수를 받으며\n부당한 추가 중개보수를 받지 않습니다\n\"인제 최고 부동산 거래량 최고\"\n\"인제 제일 잘나가는 부동산\"\n\n📞 중개사무소 정보\n[ 박진호공인중개사사무소 ]\n대표: 박진호 (공인중개사)\n전화: 010-5036-5366\n사무실: 033-462-7005 / FAX: 033-462-6005\n소재지: 강원특별자치도 인제군 북면 원통로 162 (인제농협 원통지점 옆 건물)\n부동산중개업등록번호: 42810-2019-00001\n※ 법정 중",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "realty",
+      "classifiedBy": "claude",
       "queryHint": "realty",
       "subHint": "home",
       "foundBy": "부동산",
@@ -32579,7 +32863,9 @@
       "tier": "active",
       "subs": 56800,
       "views": 2393726,
-      "videos": 316
+      "videos": 316,
+      "sub": "home",
+      "classifiedAt": "2026-10-23"
     },
     "UC68Y4Lv-_kBWy_62mwoHiwg": {
       "seedName": null,
@@ -32587,8 +32873,8 @@
       "title": "재기소장",
       "description": "강남.서초 새아파트의 모든 공간을 읽어드립니다.\n부동산전망 부동산대책 강남아파트 매물과 입주 등을 하이부동산 재기소장이 읽어드립니다.\n재건축아파트 재건축투자의 길라잡이! \n✔안녕하세요. 재건축전문 하이공인중개사 재기소장입니다. \n저는 20년이상 다니던 법무법인을 그만두고 부동산 재건축의 새아파트를 전문으로  반포디에이치클래스트, 개포자이프레지던스 ,디에이치퍼스티어아이파크 ,디에이치아너힐즈 ,래미안블레스티지 ,래미안포레스트 ,래미안원베일리 ,래미안원펜타스 ,메이플자이 ,래미안트리니원 ,청담르엘 등 입주를 시작한 하이공인중개사 대표 재",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "realty",
+      "classifiedBy": "claude",
       "queryHint": "realty",
       "subHint": "home",
       "foundBy": "아파트 투자",
@@ -32597,7 +32883,9 @@
       "tier": "active",
       "subs": 66100,
       "views": 1890684,
-      "videos": 1963
+      "videos": 1963,
+      "sub": "home",
+      "classifiedAt": "2026-10-23"
     },
     "UC8iXWj6HlSfc9OslQpQvCow": {
       "seedName": null,
@@ -32605,8 +32893,8 @@
       "title": "고대장TV_캠프부동산스쿨_아파트, 토지, 건물",
       "description": "📢 고대장: \n🔹️20대부터 현재까지 아파트, 토지, 건물 등 100건 이상 풍부한 경험의 18년차 실전투자자로 활동 \n🔹️12년차 부동산 재테크 1타 강사\n🔹️저서: 토지투자 성공공식, 부동산투자입문서\n🔹️캠프부동산스쿨 교육 플랫폼 대표\n🔹️영산대학교 부동산학과 학사 졸업\n🔹️동의대 부동산대학원 석사 재학중\n🔹️삼성전자, 신세계아카데미 등 기업 출강 다수\n🔹️부산대학교, 동의대학교 평생교육원 출강 다수\n\n📢 캠프부동산스쿨 교육 플랫폼:\n부동산 재테크 실전 중심의 강의, 임장, 스터디 모임, 투자유망지역 분석\n",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "realty",
+      "classifiedBy": "claude",
       "queryHint": "realty",
       "subHint": "home",
       "foundBy": "아파트 투자",
@@ -32615,7 +32903,9 @@
       "tier": "active",
       "subs": 55400,
       "views": 19987652,
-      "videos": 3296
+      "videos": 3296,
+      "sub": "home",
+      "classifiedAt": "2026-10-23"
     },
     "UCRZldanVQ2rIQFPRZ2wxavw": {
       "seedName": null,
@@ -32623,8 +32913,8 @@
       "title": "부동산아저씨",
       "description": "부동산아저씨 #부동산흐름 # 부동산형태 #부린이가 들으면 좋은 부동산 #내 집 마련 #좋은 매물, 힘든 매물",
       "country": "KR",
-      "category": null,
-      "classifiedBy": null,
+      "category": "realty",
+      "classifiedBy": "claude",
       "queryHint": "realty",
       "subHint": "home",
       "foundBy": "전세 월세",
@@ -32633,7 +32923,9 @@
       "tier": "active",
       "subs": 4580,
       "views": 257174,
-      "videos": 124
+      "videos": 124,
+      "sub": "home",
+      "classifiedAt": "2026-10-23"
     }
   }
 }
