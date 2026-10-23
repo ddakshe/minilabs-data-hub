@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""최근 영상별 조회수 — **쇼츠와 롱폼을 가른다.**
+"""최근 영상 **집계** — 채널당 한 줄. 원본은 남기지 않는다.
+
+🚨 **영상 원본을 커밋하지 않는다.** 채널당 30행이라 1,466채널이면 하루 6MB,
+   1년이면 2.1GB 다(2026-10-23 실측). 허브가 git 이라 이력에 그대로 쌓이고
+   지워도 되돌아오지 않는다. 스냅샷(series)은 채널당 1행이라 하루 60KB 인데
+   영상은 100배다.
+   → 화면에 쓸 것만 남긴다: 최근 7일 영상 수 · 최고 조회수 · 길이 구간 분포.
+     영상 제목·링크는 쓸 데가 없는데 저장 비용이 100배다.
+
+원래 목적: **쇼츠와 롱폼을 가른다.**
 
 채널 단위 `viewCount` 는 합계 하나라 쪼갤 수 없다. 영상별로 봐야 하는데 전체 영상을
 매일 보는 것은 쿼터 낭비다 → **최근 7일 영상만** 본다. 일간 조회수는 거의 다 거기서 나온다.
@@ -45,7 +54,7 @@ import ytapi  # noqa: E402
 from snapshot import load_registry  # noqa: E402
 
 KST = timezone(timedelta(hours=9))
-OUT = ytapi.DATA / 'videos'
+OUT = ytapi.DATA / 'uploads.json'
 STATE = ytapi.DATA / 'uploads-state.json'
 RECENT_DAYS = 7
 MAX_PAGES = 10             # 50 × 10 = 500개. 하루 500개를 넘겨 올리는 채널은 포기한다
@@ -112,6 +121,14 @@ def main() -> int:
     start_units = ytapi.spent()['units']
     order = prioritize(active, chans)
 
+    # 기존 집계를 읽어 **덮어쓰지 않고 합친다.** 예산 때문에 한 번에 다 못 돌아서,
+    # 이번에 안 본 채널의 지난 집계를 날리면 화면에서 값이 사라졌다 나타났다 한다.
+    agg: dict[str, dict] = {}
+    if OUT.exists():
+        try:
+            agg = json.loads(OUT.read_text()).get('d', {})
+        except Exception:
+            agg = {}
     rows, done, stopped = [], 0, None
     for cid in order:
         if ytapi.spent()['units'] - start_units >= UPLOADS_BUDGET:
@@ -155,6 +172,7 @@ def main() -> int:
         if not recent:
             continue
 
+        mine: list[dict] = []
         try:
             for group in ytapi.chunks([v for v, _ in recent], 50):
                 vd = ytapi.call('videos', units=1, part='statistics,contentDetails',
@@ -163,38 +181,35 @@ def main() -> int:
                 for item in vd.get('items', []):
                     sec = duration_sec(item.get('contentDetails', {}).get('duration'))
                     st = item.get('statistics', {})
-                    rows.append({
-                        'd': stamp,
-                        'ch': cid,
-                        'vid': item['id'],
-                        'pub': pubmap.get(item['id']),
+                    mine.append({
                         'sec': sec,
-                        # 🚨 길이 구간이다. "쇼츠" 라고 단정하지 않는다
                         'form': bucket(sec),
-                        'v': int(st['viewCount']) if st.get('viewCount') else None,
-                        'l': int(st['likeCount']) if st.get('likeCount') else None,
+                        'v': int(st['viewCount']) if st.get('viewCount') else 0,
                     })
         except ytapi.QuotaGuard as e:
             stopped = str(e)
             break
 
+        if mine:
+            forms = {k: sum(1 for m in mine if m['form'] == k)
+                     for k in ('lt1m', 'lt3m', 'ge3m')}
+            agg[cid] = {
+                'at': stamp,                               # 언제 본 집계인지
+                'n': len(mine),                            # 최근 7일 영상 수
+                'top': max(m['v'] for m in mine),          # 그중 최고 조회수
+                **{k: v for k, v in forms.items() if v},   # 길이 구간 (0 은 담지 않는다)
+            }
+            rows.append(cid)
+
     STATE.parent.mkdir(parents=True, exist_ok=True)
     STATE.write_text(json.dumps({'ranAt': stamp, 'active': len(active), 'covered': done},
                                 ensure_ascii=False, indent=2) + '\n')
     if rows:
-        OUT.mkdir(parents=True, exist_ok=True)
-        p = OUT / f'{stamp}.jsonl'
-        # 같은 날 두 번 돌면 이어 붙인다 — 커서가 다른 채널을 보기 때문이다.
-        # 같은 (ch, vid) 가 두 번 들어가도 분석에서 마지막 것만 쓴다
-        with p.open('a') as f:
-            for r in rows:
-                f.write(json.dumps(r, ensure_ascii=False) + '\n')
-        tally = {}
-        for r in rows:
-            tally[r['form']] = tally.get(r['form'], 0) + 1
-        shape = ' · '.join(f'{k} {tally[k]}' for k in ('lt1m', 'lt3m', 'ge3m', 'unknown')
-                           if tally.get(k))
-        print(f'✓ {p.relative_to(ytapi.ROOT)} — 영상 {len(rows)}개 ({shape}) · 채널 {done}개')
+        OUT.write_text(json.dumps({'updatedAt': stamp, 'd': agg},
+                                  ensure_ascii=False, separators=(',', ':')) + '\n')
+        kb = OUT.stat().st_size // 1024
+        print(f'✓ {OUT.relative_to(ytapi.ROOT)} — 이번에 {len(rows)}채널 갱신 · '
+              f'누적 {len(agg)}채널 · {kb}KB')
     else:
         print(f'최근 {RECENT_DAYS}일 영상이 없다 (채널 {done}개 확인)')
     used = ytapi.spent()['units'] - start_units

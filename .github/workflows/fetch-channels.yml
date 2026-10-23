@@ -48,16 +48,23 @@ jobs:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: python3 scripts/channels/discover.py
 
-      # 🚧 영상 단위 수집(uploads.py)은 **2주 검증 동안 끈다** (2026-10-20).
-      #    판정 지표인 "조회수 일간 증가분" 은 채널 스냅샷에서 나오므로 영상 단위가
-      #    필요 없다. 끈 예산 2,500 units 를 발굴로 돌려 채널을 10배 속도로 쌓는다
-      #    (discover.py PER_RUN 6 → 50). 길이 구간(1분 미만·3분 이상) 분석이 필요해지면
-      #    이 단계를 되살린다 — 스크립트는 그대로 둔다.
-      # - name: 길이 구간 (최근 7일 영상)
-      #   continue-on-error: true
-      #   env:
-      #     YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
-      #   run: python3 scripts/channels/uploads.py
+      # 최근 7일 영상 **집계** — 채널당 한 줄(영상 수 · 최고 조회수 · 길이 구간).
+      # 🚨 영상 원본을 커밋하지 않는다. 채널당 30행이라 1,466채널이면 하루 6MB,
+      #    1년이면 2.1GB 다(2026-10-23 실측). 집계는 64KB 로 끝난다.
+      # 🚨 **주 1회(월요일)만** 돈다. 채널 성격(쇼츠 위주냐 롱폼이냐)은 느리게 변해
+      #    매일 볼 이유가 없고, 매일 돌리면 발굴 예산과 다툰다.
+      - name: 영상 집계 (주 1회)
+        if: github.event_name == 'workflow_dispatch' || fromJSON(format('[{0}]', 1)) == fromJSON('[1]')
+        continue-on-error: true
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: |
+          # 월요일(KST)에만. cron 은 UTC 라 KST 요일로 다시 센다
+          if [ "$(TZ=Asia/Seoul date +%u)" = "1" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            python3 scripts/channels/uploads.py
+          else
+            echo "월요일이 아니다 — 건너뜀"
+          fi
 
       # 앱이 읽을 정적 JSON. registry 를 그대로 내보내지 않는다(230KB → 홈 3KB)
       - name: 앱 데이터 빌드
