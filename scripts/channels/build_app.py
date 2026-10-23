@@ -96,6 +96,16 @@ def main() -> int:
             row['n'] = c['videos']
         if c.get('born'):
             row['b'] = c['born']
+        # 채널 설명 **첫 줄만, 60자까지.** 통째로 내리면 1.3MB 가 된다
+        # (설명에 이메일·링크·해시태그가 줄줄이 붙어 있다). 첫 줄 중앙값이 27자라
+        # 60자면 거의 잘리지 않으면서 목록 한 줄에 들어간다.
+        desc = (c.get('description') or '').strip().split('\n')[0].strip()
+        if desc:
+            row['d'] = desc[:60]
+        # 마지막 업로드일. 🚨 **우리가 관측을 시작한 뒤의 업로드만** 안다
+        # (videoCount 가 느는 걸로 잡는다). 2026-10-23 기준 36% 만 갖고 있고 날이 가면 찬다.
+        if c.get('lastUploadAt'):
+            row['lu'] = c['lastUploadAt']
         if subs >= MIN_SUBS:
             hist = []
             for a, bb in zip(frames, frames[1:]):
