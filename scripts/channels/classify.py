@@ -110,6 +110,23 @@ def auto_reject(c: dict) -> str | None:
     return None
 
 
+def seed_subs() -> dict[str, str]:
+    """seeds.tsv 가 세부의 출처다. 이미 꽂힌 씨앗에도 소급 적용한다.
+
+    seeds.tsv 를 4열로 바꾸기 전에 꽂힌 씨앗은 sub 가 비어 있다(2026-10-23).
+    하드코딩한 표를 또 만드는 대신 **씨앗 파일을 읽는다** — 출처가 하나여야 한다.
+    """
+    out = {}
+    f = Path(__file__).resolve().parent / 'seeds.tsv'
+    for line in f.read_text().splitlines():
+        if not line.strip() or line.lstrip().startswith('#'):
+            continue
+        parts = [x.strip() for x in line.split('\t')]
+        if len(parts) >= 3 and parts[1] and parts[1] != '-':
+            out[parts[2]] = parts[1]
+    return out
+
+
 def auto_review(c: dict) -> str | None:
     """떨어뜨리기엔 근거가 약한 것 — 사람이 본다. **추측으로 지우지 않는다.**
 
@@ -129,6 +146,15 @@ def main() -> int:
     chans = reg['channels']
     stamp = datetime.now(KST).date().isoformat()
     n = {'none': 0, 'review': 0, 'econ': 0}
+
+    # 씨앗의 세부를 seeds.tsv 에서 메운다 (4열 전환 이전에 꽂힌 것들)
+    sseed = seed_subs()
+    for c in chans.values():
+        if c.get('source') == 'seed' and not c.get('sub'):
+            sub = sseed.get(c.get('seedName') or '')
+            if sub:
+                c['sub'] = sub
+                n['seedsub'] = n.get('seedsub', 0) + 1
 
     # 세부 칸 교정을 먼저 적용한다 (밀도 지표가 걸어낸 얇은 칸 비우기)
     for cid, sub in RESUB.items():
