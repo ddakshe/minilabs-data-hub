@@ -92,10 +92,15 @@ def main() -> int:
         ids.sort(key=lambda i: -(channels[i]['s'] or 0))
         movers = [i for i in ids if channels[i].get('p')]
         movers.sort(key=lambda i: -channels[i]['p'])
+        # 🔑 얼굴 정보를 **map.json 에 박아 넣는다.** id 만 주면 홈이 썸네일을 그리려고
+        #    169KB 짜리 채널 목록을 받아야 한다. 20칸 × 3얼굴이면 5KB 뿐이다.
+        mv = movers[0] if movers else None
         mapping.append({
             'cat': cat, 'catName': CAT[cat], 'sub': sub, 'name': SUB.get(sub, sub),
-            'count': len(ids), 'faces': ids[:3],
-            'mover': movers[0] if movers else None,
+            'count': len(ids),
+            'faces': [{'g': channels[i].get('g')} for i in ids[:3] if channels[i].get('g')],
+            'mover': ({'id': mv, 't': channels[mv]['t'], 'p': channels[mv]['p'],
+                       'g': channels[mv].get('g')} if mv else None),
         })
     mapping.sort(key=lambda m: (-m['count'],))
 
