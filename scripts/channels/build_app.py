@@ -5,6 +5,7 @@ registry 는 설명문·검수 이력까지 들고 있어 230KB 가 넘는다. �
 앱은 이 파일들을 **런타임에 raw.githubusercontent.com 에서 fetch** 한다
 (이 시리즈 관례 — `stock-sector-mini/src/lib/data.ts` 참고).
 
+  app/config.json    🔑 **원격 설정.** 앱 배포 없이 노출을 바꾼다 (아래)
   app/map.json       분야 지도 — 카테고리·세부별 채널 수와 대표 채널
   app/channels.json  채널 목록 — 지도에서 한 칸을 열 때 쓴다
   app/growth.json    규모 구간별 성장 순위
@@ -13,6 +14,12 @@ registry 는 설명문·검수 이력까지 들고 있어 230KB 가 넘는다. �
    하루 창이 밀리면 수치가 몇 배로 튄다(2026-10-23 실측: 전 채널이 5~16배).
    그래서 절대 증가량 대신 **구독자 대비 퍼센트**만 내보내고, 갱신 시각을 같이 싣는다.
 🚨 규모가 다른 채널을 한 줄에 세우면 조회수가 500배 차이 난다. **구간을 나눠** 담는다.
+
+## 원격 설정 (config.json)
+앱이 탭 목록·추천 검색어를 **코드가 아니라 이 파일에서** 읽는다. 분야를 하나 더
+열려면 `LIVE` 에 키를 넣고 분류를 끝내면 끝이다 — **앱 배포가 필요 없다.**
+⚠️ 바꿀 수 있는 것은 **무엇을 보여줄지**지 기능 자체가 아니다. 심사는 번들을 보므로,
+   심사 때 없던 기능을 원격으로 켜는 식으로 쓰지 않는다. 콘텐츠·노출 범위만 다룬다.
 """
 from __future__ import annotations
 
@@ -25,10 +32,13 @@ import ytapi  # noqa: E402
 
 DATA = ytapi.DATA
 OUT = DATA / 'app'
+# 🔑 앱에 내보낼 카테고리. **여기에 한 줄 더하고 분류하면 앱에 탭이 생긴다** —
+#    앱은 map.json 에서 탭 목록을 읽으므로 **배포가 필요 없다.**
+#    `learn` 은 2026-10-23 에 수집을 시작했고, 분류가 끝나면 여기에 넣는다.
 LIVE = ('econ', 'realty', 'urban')
 MIN_SUBS = 1000            # 아래는 성장률 분모가 흔들려 순위가 튄다
 
-CAT = {'econ': '경제', 'realty': '부동산', 'urban': '도시·교통'}
+CAT = {'econ': '경제', 'realty': '부동산', 'urban': '도시·교통', 'learn': '배움·커리어'}
 SUB = {
     'macro': '거시경제', 'kr-stock': '국내주식', 'us-stock': '미국주식', 'etf': 'ETF',
     'dividend': '배당주', 'crypto': '코인', 'pension': '연금', 'personal': '재테크',
@@ -36,6 +46,7 @@ SUB = {
     'home': '아파트·주택', 'auction': '경매·공매', 'land': '토지', 'comm': '상가·빌딩',
     'redev': '재개발', 'rent': '임대사업',
     'transit': '교통·철도', 'plan': '도시계획', 'region': '지역개발',
+    'english': '영어', 'it': 'IT·개발', 'ai': 'AI', 'career': '직업·이직', 'cert': '자격증',
 }
 BANDS = (('big', '10만+', 100_000), ('mid', '1만~10만', 10_000), ('small', '1천~1만', 0))
 
@@ -128,6 +139,21 @@ def main() -> int:
     for cat in LIVE:
         dump(f'channels-{cat}',
              {cid: v for cid, v in channels.items() if live[cid]['category'] == cat})
+    # 🔑 원격 설정. 앱은 탭을 여기서 읽는다 — 분야 추가에 배포가 필요 없다
+    tabs = []
+    for cat in LIVE:
+        n = sum(m['count'] for m in mapping if m['cat'] == cat)
+        if n:
+            tabs.append({'cat': cat, 'name': CAT.get(cat, cat), 'count': n})
+    tabs.sort(key=lambda t: -t['count'])
+    dump('config', {
+        'tabs': tabs,
+        # 찾기 화면의 추천 주제. 손으로 고른다 — 사람이 실제로 칠 법한 말이어야 한다
+        'suggest': ['배당주', '경매', '연금', '청약', '절세', 'GTX', '미국주식', '재개발'],
+        # 공지 한 줄. null 이면 안 그린다. 데이터 사고가 났을 때 여기로 알린다
+        'notice': None,
+        'minSubs': MIN_SUBS,
+    })
     dump('map', mapping)
     dump('growth', {'bands': growth,
                     'ch': {cid: channels[cid]
