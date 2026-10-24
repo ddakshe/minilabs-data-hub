@@ -1,39 +1,18 @@
 {
-  "generatedAt": "2026-10-20T12:58:45+0900",
+  "generatedAt": "2026-10-24T10:33:49+0900",
   "year": "2025",
-  "count": 322,
+  "count": 326,
   "universe": 2532,
   "filled": {
-    "people": 320,
-    "financials": 320,
-    "owner": 320,
-    "audit": 302,
-    "flow": 316
+    "people": 324,
+    "financials": 324,
+    "owner": 324,
+    "audit": 306,
+    "flow": 320
   },
   "calls": {
-    "dart": 545,
-    "nps": 1115
+    "dart": 20,
+    "nps": 40
   },
-  "fails": [
-    {
-      "code": "001820",
-      "name": "삼화콘덴서",
-      "why": "URLError: <urlopen error timed out>"
-    },
-    {
-      "code": "115180",
-      "name": "큐리언트",
-      "why": "URLError: <urlopen error timed out>"
-    },
-    {
-      "code": "124500",
-      "name": "아이티센글로벌",
-      "why": "URLError: <urlopen error timed out>"
-    },
-    {
-      "code": "005300",
-      "name": "롯데칠성",
-      "why": "URLError: <urlopen error timed out>"
-    }
-  ]
+  "fails": []
 }
