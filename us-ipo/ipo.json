@@ -1,9 +1,38 @@
 {
-  "generatedAt": "2026-10-23T00:00:00Z",
+  "generatedAt": "2026-10-24T00:00:00Z",
   "source": "SEC EDGAR",
   "sourceUrl": "https://www.sec.gov/edgar",
-  "usdKrw": 1324.63,
+  "usdKrw": 1324.45,
   "listed": [
+    {
+      "cik": "0001806540",
+      "name": "Lycia Therapeutics, Inc.",
+      "ticker": null,
+      "exchange": "나스닥",
+      "offerPrice": 18.0,
+      "priceBandLow": 16.0,
+      "priceBandHigh": 18.0,
+      "bandPosition": "top",
+      "sharesOffered": 17640000,
+      "sharesAfterListing": 20893151,
+      "grossProceeds": 317520000,
+      "marketCap": 376076718,
+      "filedAt": "2026-10-23",
+      "isSpac": false,
+      "sic": "2836",
+      "industry": "제약·바이오",
+      "underwriters": [
+        "TD Cowen Evercore ISI Guggenheim Securities"
+      ],
+      "businessSummary": "We are a clinical-stage biotechnology company focused on the discovery and development of novel therapeutics designed to degrade disease-causing extracellular proteins, with an initial focus on addressing autoimmune, inflammatory and allergic diseases.",
+      "useOfProceeds": "We currently intend to use the net proceeds we receive from this offering, together with our existing cash, cash equivalents and marketable securities as follows approximately $80.",
+      "netResult": -36500000,
+      "netResultYear": "2025",
+      "lockupDays": null,
+      "location": "SOUTH SAN FRANCISCO, CA",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001806540&type=424B4"
+    },
     {
       "cik": "0002143850",
       "name": "CITY THERAPEUTICS, INC.",
@@ -285,6 +314,104 @@
   ],
   "upcoming": [
     {
+      "cik": "0002142627",
+      "name": "BHAV Acquisition Corp II",
+      "ticker": "BHAI",
+      "filedAt": "2026-10-23",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002142627&type=S-1"
+    },
+    {
+      "cik": "0001875655",
+      "name": "AEI CapForce II Investment Corp",
+      "ticker": "AEIB",
+      "filedAt": "2026-10-23",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001875655&type=S-1"
+    },
+    {
+      "cik": "0002092592",
+      "name": "Evernorth Holdings Inc.",
+      "ticker": "XRPN",
+      "filedAt": "2026-10-23",
+      "isSpac": false,
+      "sic": "6221",
+      "industry": "금융·부동산",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002092592&type=S-1"
+    },
+    {
+      "cik": "0002029297",
+      "name": "Grayscale Bittensor Trust (TAO)",
+      "ticker": "GTAO",
+      "filedAt": "2026-10-23",
+      "isSpac": false,
+      "sic": "6221",
+      "industry": "금융·부동산",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": null,
+        "netIncome": -6037000,
+        "assets": 7974000
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002029297&type=S-1"
+    },
+    {
+      "cik": "0001825452",
+      "name": "Onfolio Holdings, Inc",
+      "ticker": "ONFO",
+      "filedAt": "2026-10-23",
+      "isSpac": false,
+      "sic": "7374",
+      "industry": "소프트웨어·IT",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": 10730218,
+        "netIncome": -2588659,
+        "assets": 11360858
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001825452&type=S-1"
+    },
+    {
+      "cik": "0002152644",
+      "name": "Hometown Financial Group, Inc. MD",
+      "ticker": "HFG",
+      "filedAt": "2026-10-23",
+      "isSpac": false,
+      "sic": "6036",
+      "industry": "금융·부동산",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002152644&type=S-1"
+    },
+    {
+      "cik": "0002073616",
+      "name": "Canary Staked INJ ETF",
+      "ticker": null,
+      "filedAt": "2026-10-23",
+      "isSpac": false,
+      "sic": "6199",
+      "industry": "금융·부동산",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002073616&type=S-1"
+    },
+    {
+      "cik": "0002115027",
+      "name": "Cryptex Digital Market Cap ETF",
+      "ticker": "BAGZ",
+      "filedAt": "2026-10-23",
+      "isSpac": false,
+      "sic": "6221",
+      "industry": "금융·부동산",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002115027&type=S-1"
+    },
+    {
       "cik": "0002124080",
       "name": "Aspen Neuroscience, Inc.",
       "ticker": null,
@@ -408,17 +535,6 @@
       "industry": "SPAC",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002143060&type=S-1"
-    },
-    {
-      "cik": "0001806540",
-      "name": "Lycia Therapeutics, Inc.",
-      "ticker": null,
-      "filedAt": "2026-10-20",
-      "isSpac": false,
-      "sic": "2836",
-      "industry": "제약·바이오",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001806540&type=S-1"
     },
     {
       "cik": "0001070965",
@@ -1109,17 +1225,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001054102&type=S-1"
     },
     {
-      "cik": "0002142627",
-      "name": "BHAV Acquisition Corp II",
-      "ticker": null,
-      "filedAt": "2026-09-30",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002142627&type=S-1"
-    },
-    {
       "cik": "0002140589",
       "name": "Laris Growth Acquisition Corp.",
       "ticker": "LARS",
@@ -1145,17 +1250,6 @@
         "assets": 259856000
       },
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001891856&type=S-1"
-    },
-    {
-      "cik": "0002115027",
-      "name": "Cryptex Digital Market Cap ETF",
-      "ticker": "BAGZ",
-      "filedAt": "2026-09-30",
-      "isSpac": false,
-      "sic": "6221",
-      "industry": "금융·부동산",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002115027&type=S-1"
     },
     {
       "cik": "0002076561",
@@ -1278,17 +1372,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002148436&type=S-1"
     },
     {
-      "cik": "0002073616",
-      "name": "Canary Staked INJ ETF",
-      "ticker": null,
-      "filedAt": "2026-09-24",
-      "isSpac": false,
-      "sic": "6199",
-      "industry": "금융·부동산",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002073616&type=S-1"
-    },
-    {
       "cik": "0002125056",
       "name": "Wella Co",
       "ticker": "WELA",
@@ -1325,17 +1408,6 @@
       "industry": "SPAC",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002098410&type=S-1"
-    },
-    {
-      "cik": "0001875655",
-      "name": "AEI CapForce II Investment Corp",
-      "ticker": "AEIB",
-      "filedAt": "2026-09-22",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001875655&type=S-1"
     },
     {
       "cik": "0002078149",
@@ -1680,8 +1752,8 @@
       "ticker": "MFDB",
       "filedAt": "2026-09-14",
       "isSpac": false,
-      "sic": null,
-      "industry": "기타",
+      "sic": "6035",
+      "industry": "금융·부동산",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002152813&type=S-1"
     },
@@ -1695,17 +1767,6 @@
       "industry": "SPAC",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002105318&type=S-1"
-    },
-    {
-      "cik": "0002152644",
-      "name": "Hometown Financial Group, Inc. MD",
-      "ticker": "HFG",
-      "filedAt": "2026-09-10",
-      "isSpac": false,
-      "sic": null,
-      "industry": "기타",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002152644&type=S-1"
     },
     {
       "cik": "0002133939",
