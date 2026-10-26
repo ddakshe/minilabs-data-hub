@@ -1,0 +1,126 @@
+{
+  "code": "005380",
+  "name": "현대차",
+  "market": "KOSPI",
+  "basDt": "20261023",
+  "price": {
+    "code": "005380",
+    "name": "현대차",
+    "market": "KOSPI",
+    "basDt": "20261023",
+    "close": 295500,
+    "vs": -6000,
+    "fltRt": -1.99,
+    "open": 294000,
+    "high": 295500,
+    "low": 287500,
+    "prevClose": 301500,
+    "volume": 531721,
+    "tradeValue": 155082713000,
+    "week52": {
+      "low": 250500,
+      "high": 750000,
+      "position": 0.09009009009009009,
+      "days": 245,
+      "from": "20251023"
+    },
+    "recent5": [
+      {
+        "basDt": "20261019",
+        "fltRt": 4.49,
+        "open": 304500,
+        "high": 326000,
+        "low": 302500,
+        "close": 326000
+      },
+      {
+        "basDt": "20261020",
+        "fltRt": -4.91,
+        "open": 317500,
+        "high": 326000,
+        "low": 305500,
+        "close": 310000
+      },
+      {
+        "basDt": "20261021",
+        "fltRt": -0.16,
+        "open": 314000,
+        "high": 315000,
+        "low": 303000,
+        "close": 309500
+      },
+      {
+        "basDt": "20261022",
+        "fltRt": -2.58,
+        "open": 305500,
+        "high": 307500,
+        "low": 298500,
+        "close": 301500
+      },
+      {
+        "basDt": "20261023",
+        "fltRt": -1.99,
+        "open": 294000,
+        "high": 295500,
+        "low": 287500,
+        "close": 295500
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 537824,
+      "ratio": 0.99
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 528,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-26T07:12:23.638Z"
+  },
+  "facts": [
+    "코스피보다 2.29%p 낮았어요.",
+    "거래량은 20일 평균의 1.0배예요.",
+    "시가보다 1,500원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "[단독] LG그룹, 현대차 로봇사업 수장 품었다",
+      "source": "한국경제",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5WTUhKQm1haWpLN25XdEZTdTNEaTYzSmlYTkdWY2Nlc0E1VW5RRm9BQlVGRHkyZldRNm5SMF9WUFlDUXhiSlg4RzFmRXBDZkFUT21iNHEtNUVhQQ?oc=5",
+      "publishedAt": "2026-10-23T08:42:14.000Z"
+    },
+    {
+      "title": "현대차·GM… 2028년에 맞춰진 자율주행 시간표",
+      "source": "조선일보",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGNkpVb3FwQnV2NkFVSDNLSG1ZUlQtelhfMHREejdVenJkX21Ydnd3enNoY2tPbllPRTVsZlZ1bFRyX1pIc01pVGw2MGtKb0hNRnprOXB1aDJxUXYtVHA1c1pQeGZ5c3F6b2F0OVFpUF85SnprVXIzR3E0Vm1TakE?oc=5",
+      "publishedAt": "2026-10-22T21:42:34.000Z"
+    }
+  ],
+  "dart": [
+    {
+      "title": "특수관계인으로부터기타유가증권매수",
+      "filer": "현대자동차",
+      "receiptNo": "20261023000336",
+      "date": "20261023",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261023000336"
+    }
+  ],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 5550.3,
+    "vs": 16.53,
+    "fltRt": 0.3
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-26T07:14:27.438Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260427"
+}

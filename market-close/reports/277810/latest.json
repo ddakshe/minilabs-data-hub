@@ -2,37 +2,29 @@
   "code": "277810",
   "name": "레인보우로보틱스",
   "market": "KOSDAQ",
-  "basDt": "20261022",
+  "basDt": "20261023",
   "price": {
     "code": "277810",
     "name": "레인보우로보틱스",
     "market": "KOSDAQ",
-    "basDt": "20261022",
-    "close": 365000,
-    "vs": -9000,
-    "fltRt": -2.41,
-    "open": 374500,
-    "high": 385000,
-    "low": 361500,
-    "prevClose": 374000,
-    "volume": 63745,
-    "tradeValue": 23742266500,
+    "basDt": "20261023",
+    "close": 352500,
+    "vs": -12500,
+    "fltRt": -3.42,
+    "open": 350500,
+    "high": 355500,
+    "low": 342000,
+    "prevClose": 365000,
+    "volume": 40055,
+    "tradeValue": 13999056500,
     "week52": {
       "low": 332500,
       "high": 880000,
-      "position": 0.0593607305936073,
+      "position": 0.0365296803652968,
       "days": 245,
-      "from": "20251022"
+      "from": "20251023"
     },
     "recent5": [
-      {
-        "basDt": "20261016",
-        "fltRt": 2.03,
-        "open": 347000,
-        "high": 361000,
-        "low": 344000,
-        "close": 352500
-      },
       {
         "basDt": "20261019",
         "fltRt": 7.23,
@@ -64,42 +56,56 @@
         "high": 385000,
         "low": 361500,
         "close": 365000
+      },
+      {
+        "basDt": "20261023",
+        "fltRt": -3.42,
+        "open": 350500,
+        "high": 355500,
+        "low": 342000,
+        "close": 352500
       }
     ],
     "volumeVs20d": {
-      "avg20": 60907,
-      "ratio": 1.05
+      "avg20": 61570,
+      "ratio": 0.65
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 529,
+      "rows": 528,
       "rows52w": 245
     },
-    "generatedAt": "2026-10-23T06:42:34.532Z"
+    "generatedAt": "2026-10-26T07:12:49.833Z"
   },
   "facts": [
-    "코스닥보다 1.21%p 높았어요.",
-    "거래량은 20일 평균의 1.1배예요.",
-    "시가보다 9,500원 낮게 마감했어요."
+    "코스닥보다 1.8%p 낮았어요.",
+    "거래량은 20일 평균의 0.7배예요.",
+    "시가보다 2,000원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "[K-로봇, 확산의 조건 ②] 대기업 밖 AI로봇 생태계는 어떻게…‘데이터 주도권’이 협력 변수",
-      "source": "산업일보",
-      "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE54VkdQMWtkRWpiVUVhNlAyZzBicWJsY0hjNktjbUlPakNuemM2QVFkWW9fNnhMMXYzS2pVS1FIWVBwa1I2?oc=5",
-      "publishedAt": "2026-10-22T03:23:58.000Z"
+      "title": "로봇 관련주 일제히 하락…에브리봇 8% 급락, 레인보우로보틱스·두산로보틱스도 약세",
+      "source": "CBC뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1haGt0Z1lOemsxN3FYYzBmV2VtMXRKcm5HaVdJN2lRb0g4bjlKbXlvbXhzaDJTUVpHb1RvV25pVGIzdHZOQWRwVXhmN2ZCNFlLSGN0Uy1UQk9Kc0xyb0xPdG9Wd2dkWUVk?oc=5",
+      "publishedAt": "2026-10-23T02:34:05.000Z"
     },
     {
-      "title": "[포토] '2026 국가단위 긴급구조 종합훈련'에 등장한 레인보우로보틱스 사족보행 로봇",
-      "source": "이데일리",
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNejhJWExWT2J6dmpiN0d5MTJORmw1S2RQWXlxRXY1aU5sc0R1NTl6c0tSQVQtRGV3dENHT3VtdllVUDZoNTFrcW9LOXZ6bVJudF82RUVETU85OFlHTUV4QlZERXRrRUhHaFpXam1sVXdjb0N3ZjFzTWl0OWQ2R1NpVw?oc=5",
-      "publishedAt": "2026-10-22T06:19:09.000Z"
+      "title": "빅웨이브로보틱스, ‘빅웨이브 시프트 2026’ 개최…산업용 피지컬 AI에 큰 관심",
+      "source": "로봇신문",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBoNXhTN016UmRNbE5veUpQQUk5LUNleklxb21XQXBSanFmaTBWODFKV1BZRWpLbXNQdk02TjkzNTM5dDM0R19td1BuU3ltUHpFcEN0Wk0yVTVWN05IZVNpRU15cm1qa2pnOXRKaQ?oc=5",
+      "publishedAt": "2026-10-23T04:53:19.000Z"
     },
     {
-      "title": "“AI 로봇산업, 기술 개발 넘어 공공수요 창출·양산 생태계 구축 시급”",
-      "source": "티스토리",
-      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1CM01TV1lZeW94aXh6azRDUG1uVVA3aldtc05abTREbW9OZjNDbWRSVThaOXR3LWJkNUw4NE1SQkFfN1pscG04Nm4tZw?oc=5",
-      "publishedAt": "2026-10-22T07:12:13.000Z"
+      "title": "레인보우로보틱스 주가 12,500원 하락 후 마감",
+      "source": "아시아뉴스통신",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBNaFR1MHdFOWo4UWxJck11LXhwdm5rZGs2UTFVTTl0dGxfNUlKT0VpQ2FVRmkyaURCZTlLZG11YWNVbHRRT0llb1hUMlFJc2JXZ3R2eWhWeTBURzhyaVRVWmNBRFZnRVhoM25vbS1MQUdSWlp6?oc=5",
+      "publishedAt": "2026-10-23T06:46:20.000Z"
+    },
+    {
+      "title": "빅웨이브로보틱스, 피지컬 AI 기술 포럼 개최…'하이퍼 파운드리' 시연",
+      "source": "머니투데이",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBBcEZtandILWItMzI3NVhfbGdwclJ6eWlxRHdQZFp2QTZTX0FwU2RaTjVKUU5Lb3pDZzVFVFl2RmZ6aURxVFBjOXp3SXNaU2h2NXhqNklOTkdNU0Y4NFlpZy1ydlZPN1otdEHSAW9BVV95cUxQd2tvV0pDbUhTclYzejBibmpmbDNQam50WTIwVTRPdndlazNZT1cwQUZnQ0NJRWwzVW5mOG9MN0pTcHBjSS1TNWk4ZHNQeUF3Q0ZkcXNPNFVaaTJfSk5xVVZuM0RKS1pvdHBsOEZtazQ?oc=5",
+      "publishedAt": "2026-10-23T05:00:00.000Z"
     }
   ],
   "dart": [],
@@ -107,9 +113,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 764.1,
-    "vs": -28.66,
-    "fltRt": -3.62
+    "clpr": 751.69,
+    "vs": -12.41,
+    "fltRt": -1.62
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -118,7 +124,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-23T06:44:08.871Z",
+  "builtAt": "2026-10-26T07:14:27.528Z",
   "archiveDays": 120,
-  "archiveFrom": "20260424"
+  "archiveFrom": "20260427"
 }

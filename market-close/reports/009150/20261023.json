@@ -1,0 +1,118 @@
+{
+  "code": "009150",
+  "name": "삼성전기",
+  "market": "KOSPI",
+  "basDt": "20261023",
+  "price": {
+    "code": "009150",
+    "name": "삼성전기",
+    "market": "KOSPI",
+    "basDt": "20261023",
+    "close": 1122000,
+    "vs": -23000,
+    "fltRt": -2.01,
+    "open": 1095000,
+    "high": 1122000,
+    "low": 1048000,
+    "prevClose": 1145000,
+    "volume": 761075,
+    "tradeValue": 833175464000,
+    "week52": {
+      "low": 204000,
+      "high": 2270000,
+      "position": 0.4443368828654405,
+      "days": 245,
+      "from": "20251023"
+    },
+    "recent5": [
+      {
+        "basDt": "20261019",
+        "fltRt": -1.52,
+        "open": 1110000,
+        "high": 1175000,
+        "low": 1100000,
+        "close": 1170000
+      },
+      {
+        "basDt": "20261020",
+        "fltRt": -1.28,
+        "open": 1168000,
+        "high": 1206000,
+        "low": 1128000,
+        "close": 1155000
+      },
+      {
+        "basDt": "20261021",
+        "fltRt": 1.13,
+        "open": 1182000,
+        "high": 1215000,
+        "low": 1155000,
+        "close": 1168000
+      },
+      {
+        "basDt": "20261022",
+        "fltRt": -1.97,
+        "open": 1182000,
+        "high": 1234000,
+        "low": 1135000,
+        "close": 1145000
+      },
+      {
+        "basDt": "20261023",
+        "fltRt": -2.01,
+        "open": 1095000,
+        "high": 1122000,
+        "low": 1048000,
+        "close": 1122000
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 697619,
+      "ratio": 1.09
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 528,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-26T07:12:18.268Z"
+  },
+  "facts": [
+    "코스피보다 2.31%p 낮았어요.",
+    "거래량은 20일 평균의 1.1배예요.",
+    "시가보다 27,000원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "삼성전기, 4분기 영업익 8천억 돌파 전망 By 알파경제 alphabiz",
+      "source": "Investing.com 한국어",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBwTER1aTl1WmRXWEptUlJyV2hqZEdaUXdnTjZWQ3huY0ZFZlF3TmxFVUh4YzJlM0tVbHk5dTRIX19HMnN2TDQ1WVFFcHlYdXg0Q0dMZllNTHZfbHZDNEp3MVE3VHVTQk5QVzRITDBUXzQ?oc=5",
+      "publishedAt": "2026-10-23T05:16:00.000Z"
+    },
+    {
+      "title": "\"삼성전기, 엔비디아 공급망 진입…FC-BGA 시장 영향력 확대\"-하나",
+      "source": "한국경제",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1rVGJ5dGczVWlFa1VrcjJ0NGJXdFprZl9nZkg1dGx1YkpNQmJKNFUzejV0ZllpM0ZyM1FoVzdGX0h3VWt2dURDZmdiakROTk5KT1NHNS1XUHJ4dw?oc=5",
+      "publishedAt": "2026-10-22T23:34:46.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 5550.3,
+    "vs": 16.53,
+    "fltRt": 0.3
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-26T07:14:27.416Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260427"
+}

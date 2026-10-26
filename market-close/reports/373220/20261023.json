@@ -1,0 +1,124 @@
+{
+  "code": "373220",
+  "name": "LG에너지솔루션",
+  "market": "KOSPI",
+  "basDt": "20261023",
+  "price": {
+    "code": "373220",
+    "name": "LG에너지솔루션",
+    "market": "KOSPI",
+    "basDt": "20261023",
+    "close": 383000,
+    "vs": -7000,
+    "fltRt": -1.79,
+    "open": 386500,
+    "high": 387500,
+    "low": 373500,
+    "prevClose": 390000,
+    "volume": 354664,
+    "tradeValue": 135563529000,
+    "week52": {
+      "low": 300500,
+      "high": 514000,
+      "position": 0.3864168618266979,
+      "days": 245,
+      "from": "20251023"
+    },
+    "recent5": [
+      {
+        "basDt": "20261019",
+        "fltRt": 7.2,
+        "open": 397000,
+        "high": 433000,
+        "low": 394000,
+        "close": 432000
+      },
+      {
+        "basDt": "20261020",
+        "fltRt": -4.17,
+        "open": 425500,
+        "high": 432000,
+        "low": 411000,
+        "close": 414000
+      },
+      {
+        "basDt": "20261021",
+        "fltRt": -0.6,
+        "open": 417000,
+        "high": 420000,
+        "low": 404500,
+        "close": 411500
+      },
+      {
+        "basDt": "20261022",
+        "fltRt": -5.22,
+        "open": 407500,
+        "high": 409000,
+        "low": 389000,
+        "close": 390000
+      },
+      {
+        "basDt": "20261023",
+        "fltRt": -1.79,
+        "open": 386500,
+        "high": 387500,
+        "low": 373500,
+        "close": 383000
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 416917,
+      "ratio": 0.85
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 528,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-26T07:12:15.398Z"
+  },
+  "facts": [
+    "코스피보다 2.09%p 낮았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가보다 3,500원 낮게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "LG엔솔, 中 난징 9공장 본격 가동…테슬라향 원통형 2170 증산 속도",
+      "source": "지디넷코리아",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1DYTRNRFl1S0pCVEtBRVp6MnRPWkNaSzBUNGozRnh4b2lkT3NQb1Fsc1lxTUtGdFBUcjJRUkFDdEpHekU5aFdzcHZacFVZbGNzRDBnTm9B?oc=5",
+      "publishedAt": "2026-10-23T02:11:25.000Z"
+    },
+    {
+      "title": "LG에너지솔루션, 북미 공급망 강화 구축…`에너지 플랫폼 기업` 도약 속도",
+      "source": "디지털데일리",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1ENDA1V09OdGhFdVVlNFl3cjhidFIzSjdCVGhkNEdJb1B4Z2NDMTlDRHNrMEF1a3lRNGlZbkZHeDEtSVBrUlloVjhjT0xvRTZyYlJYdHN4VmYtNy1nTEI0OWY5bE4?oc=5",
+      "publishedAt": "2026-10-23T06:41:12.000Z"
+    },
+    {
+      "title": "LG에너지솔루션 주가, 10월 23일 장중 380,000원 2.56% 하락",
+      "source": "TopStarNews",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBONW9CdDBqRTJVTWpwV3RERDNQa3lSejl2VVQ5Q2N3Nk9SWEdfWkdKQnRuX0g5MU5pYk9BUm9reXFMb21FcU1wc09tdzdyckVKUnB0SWFlelc3SmFBc1Z3aEFSVkJneXZyTG96dk5PTHZYdw?oc=5",
+      "publishedAt": "2026-10-23T02:02:47.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 5550.3,
+    "vs": 16.53,
+    "fltRt": 0.3
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-26T07:14:27.408Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260427"
+}

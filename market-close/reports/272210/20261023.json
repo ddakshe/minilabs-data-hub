@@ -1,0 +1,137 @@
+{
+  "code": "272210",
+  "name": "한화시스템",
+  "market": "KOSPI",
+  "basDt": "20261023",
+  "price": {
+    "code": "272210",
+    "name": "한화시스템",
+    "market": "KOSPI",
+    "basDt": "20261023",
+    "close": 66300,
+    "vs": -7600,
+    "fltRt": -10.28,
+    "open": 70600,
+    "high": 71700,
+    "low": 65800,
+    "prevClose": 73900,
+    "volume": 938056,
+    "tradeValue": 63672789700,
+    "week52": {
+      "low": 45350,
+      "high": 162700,
+      "position": 0.17852577758841073,
+      "days": 245,
+      "from": "20251023"
+    },
+    "recent5": [
+      {
+        "basDt": "20261019",
+        "fltRt": 3.8,
+        "open": 77800,
+        "high": 82600,
+        "low": 73500,
+        "close": 82000
+      },
+      {
+        "basDt": "20261020",
+        "fltRt": -13.9,
+        "open": 79400,
+        "high": 79400,
+        "low": 70000,
+        "close": 70600
+      },
+      {
+        "basDt": "20261021",
+        "fltRt": 5.24,
+        "open": 70100,
+        "high": 75800,
+        "low": 67400,
+        "close": 74300
+      },
+      {
+        "basDt": "20261022",
+        "fltRt": -0.54,
+        "open": 73200,
+        "high": 77100,
+        "low": 72400,
+        "close": 73900
+      },
+      {
+        "basDt": "20261023",
+        "fltRt": -10.28,
+        "open": 70600,
+        "high": 71700,
+        "low": 65800,
+        "close": 66300
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 999244,
+      "ratio": 0.94
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 528,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-26T07:13:17.663Z"
+  },
+  "facts": [
+    "코스피보다 10.58%p 낮았어요.",
+    "거래량은 20일 평균의 0.9배예요.",
+    "시가보다 4,300원 낮게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "한화시스템, 우주·국방 AI에 23조…데이터 사업 승부수",
+      "source": "서울경제TV",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1FOWJPVXlmU2k3dXdOYWhRNENGeVRFdy05WllhaV92VjlvelNTYkhIck5Sb3RQUWhmcWNpMTVIX25XeEpDSUpNdHdNamZBcGd0WHllUmxLRzh1VzZjOHJjOHNfVHc?oc=5",
+      "publishedAt": "2026-10-23T09:38:22.000Z"
+    },
+    {
+      "title": "한화시스템 주가 하락 중",
+      "source": "아시아뉴스통신",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBjYklLN2U3NnJaRjEyRlI1VkNMNzhzWndCNnMxUmx1aURWWjJiUE1wVFVFSF9wRk9obVhzd3J1VkVIYzFqQlJ5enRHLXFvSGc1THRXWGQxcTN6cEVNYnFKYmNkTmNJWnBpRjA1eFVYRDFuV0JY?oc=5",
+      "publishedAt": "2026-10-23T00:28:24.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20261002",
+      "holder": "국민연금공단",
+      "ratio": 6.17,
+      "ratioChange": -1.02,
+      "reason": "단순추가취득/처분",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261002000420"
+    },
+    {
+      "kind": "major",
+      "date": "20260918",
+      "holder": "한화에어로스페이스",
+      "ratio": 59.53,
+      "ratioChange": -0.01,
+      "reason": "특별관계자 변동에 따른 보유주식등의 내역 변동 및 · 보유주식등에 관한 계약 변경보고",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260918000462"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 5550.3,
+    "vs": 16.53,
+    "fltRt": 0.3
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-26T07:14:27.617Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260427"
+}

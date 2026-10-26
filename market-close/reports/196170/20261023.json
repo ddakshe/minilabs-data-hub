@@ -1,0 +1,132 @@
+{
+  "code": "196170",
+  "name": "알테오젠",
+  "market": "KOSDAQ",
+  "basDt": "20261023",
+  "price": {
+    "code": "196170",
+    "name": "알테오젠",
+    "market": "KOSDAQ",
+    "basDt": "20261023",
+    "close": 224500,
+    "vs": -6500,
+    "fltRt": -2.81,
+    "open": 227500,
+    "high": 229000,
+    "low": 220500,
+    "prevClose": 231000,
+    "volume": 238029,
+    "tradeValue": 53294926500,
+    "week52": {
+      "low": 213500,
+      "high": 559000,
+      "position": 0.03183791606367583,
+      "days": 245,
+      "from": "20251023"
+    },
+    "recent5": [
+      {
+        "basDt": "20261019",
+        "fltRt": 2.14,
+        "open": 232000,
+        "high": 239000,
+        "low": 229000,
+        "close": 239000
+      },
+      {
+        "basDt": "20261020",
+        "fltRt": -3.35,
+        "open": 233500,
+        "high": 238000,
+        "low": 226000,
+        "close": 231000
+      },
+      {
+        "basDt": "20261021",
+        "fltRt": 3.9,
+        "open": 236000,
+        "high": 243500,
+        "low": 235000,
+        "close": 240000
+      },
+      {
+        "basDt": "20261022",
+        "fltRt": -3.75,
+        "open": 238500,
+        "high": 239000,
+        "low": 229000,
+        "close": 231000
+      },
+      {
+        "basDt": "20261023",
+        "fltRt": -2.81,
+        "open": 227500,
+        "high": 229000,
+        "low": 220500,
+        "close": 224500
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 313165,
+      "ratio": 0.76
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 528,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-26T07:12:38.665Z"
+  },
+  "facts": [
+    "코스닥보다 1.19%p 낮았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가보다 3,000원 낮게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "알테오젠부터 릴리·로슈까지…글로벌 신약 거래 살펴보니",
+      "source": "약사공론",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE4taElKLVA4OHR2Wm5qTkoybGd4THpOMmdfNWJzdzBON1Q3QlY4NW9CNG9tQmRSYXFsYmY0YWNjc21SZjNTbkh3QW54WDhtQ0cxN0pEcGxnLWRTaHZWbjJDMEl5Z1VQV0hlb3BEaQ?oc=5",
+      "publishedAt": "2026-10-23T03:05:00.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [
+    {
+      "kind": "insider",
+      "date": "20260813",
+      "holder": "박순재",
+      "position": "이사회의장",
+      "role": "10%이상주주",
+      "sharesAfter": 13267800,
+      "sharesChange": 3061800,
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260813001689"
+    },
+    {
+      "kind": "major",
+      "date": "20260807",
+      "holder": "BlackRockFundAdvisors",
+      "ratio": 5.03,
+      "ratioChange": 0.05,
+      "reason": "단순투자목적으로 장내에서 발행회사의 주식 매수",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260807000762"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 751.69,
+    "vs": -12.41,
+    "fltRt": -1.62
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-26T07:14:27.491Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260427"
+}

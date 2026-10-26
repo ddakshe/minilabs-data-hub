@@ -1,0 +1,118 @@
+{
+  "code": "105560",
+  "name": "KB금융",
+  "market": "KOSPI",
+  "basDt": "20261023",
+  "price": {
+    "code": "105560",
+    "name": "KB금융",
+    "market": "KOSPI",
+    "basDt": "20261023",
+    "close": 153000,
+    "vs": -5200,
+    "fltRt": -3.29,
+    "open": 156600,
+    "high": 156700,
+    "low": 149900,
+    "prevClose": 158200,
+    "volume": 916950,
+    "tradeValue": 139577436650,
+    "week52": {
+      "low": 113800,
+      "high": 186200,
+      "position": 0.5414364640883977,
+      "days": 245,
+      "from": "20251023"
+    },
+    "recent5": [
+      {
+        "basDt": "20261019",
+        "fltRt": 1.69,
+        "open": 158900,
+        "high": 163200,
+        "low": 156700,
+        "close": 162700
+      },
+      {
+        "basDt": "20261020",
+        "fltRt": -1.11,
+        "open": 160800,
+        "high": 163300,
+        "low": 159700,
+        "close": 160900
+      },
+      {
+        "basDt": "20261021",
+        "fltRt": -0.19,
+        "open": 164500,
+        "high": 164500,
+        "low": 159000,
+        "close": 160600
+      },
+      {
+        "basDt": "20261022",
+        "fltRt": -1.49,
+        "open": 159500,
+        "high": 161100,
+        "low": 157200,
+        "close": 158200
+      },
+      {
+        "basDt": "20261023",
+        "fltRt": -3.29,
+        "open": 156600,
+        "high": 156700,
+        "low": 149900,
+        "close": 153000
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 844059,
+      "ratio": 1.09
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 528,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-26T07:12:26.546Z"
+  },
+  "facts": [
+    "코스피보다 3.59%p 낮았어요.",
+    "거래량은 20일 평균의 1.1배예요.",
+    "시가보다 3,600원 낮게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "금감원, KB금융·국민은행 정기검사 2주 연장",
+      "source": "연합인포맥스",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBabVVSUm5JNm1SakQ3Vzg3TXhrWWU1LTFxNHA2T0ZhTm9QZFlfdi1WbUktMVB4ZzFHYjN5bmFBZmg3Z245STltakZEX3lSXzlQNVBkRFpRS2NPUmtFZUEwNEkyelkzbWxNYWNZczhia2I?oc=5",
+      "publishedAt": "2026-10-22T23:44:15.000Z"
+    },
+    {
+      "title": "우리금융 \"보험사 추가 출자 없어…비과세배당 재원 추가 검토\"",
+      "source": "KB Think",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE15QXJQc19pb1BxcHFkOGZpdlVHcGZqaFhhT0ZlcHJfSjNfNGFGbm9hZDJSaUtmNEZKU0lhdWZSeEhiS2J0OXdUZk4zZzl5bkhPTDZmbkRtUkF0azBUbnhxSGRLZXdwbHJnRHdoSjh5ak1aQQ?oc=5",
+      "publishedAt": "2026-10-23T08:29:25.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 5550.3,
+    "vs": 16.53,
+    "fltRt": 0.3
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-26T07:14:27.461Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260427"
+}

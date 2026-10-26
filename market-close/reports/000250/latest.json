@@ -2,37 +2,29 @@
   "code": "000250",
   "name": "삼천당제약",
   "market": "KOSDAQ",
-  "basDt": "20261022",
+  "basDt": "20261023",
   "price": {
     "code": "000250",
     "name": "삼천당제약",
     "market": "KOSDAQ",
-    "basDt": "20261022",
-    "close": 200500,
-    "vs": -12000,
-    "fltRt": -5.65,
-    "open": 213000,
-    "high": 213000,
-    "low": 200000,
-    "prevClose": 212500,
-    "volume": 72717,
-    "tradeValue": 14847523700,
+    "basDt": "20261023",
+    "close": 199200,
+    "vs": -1300,
+    "fltRt": -0.65,
+    "open": 197000,
+    "high": 204500,
+    "low": 194600,
+    "prevClose": 200500,
+    "volume": 78461,
+    "tradeValue": 15554272450,
     "week52": {
       "low": 126500,
       "high": 1184000,
-      "position": 0.06997635933806147,
+      "position": 0.06874704491725768,
       "days": 245,
-      "from": "20251022"
+      "from": "20251023"
     },
     "recent5": [
-      {
-        "basDt": "20261016",
-        "fltRt": 6.12,
-        "open": 199000,
-        "high": 214000,
-        "low": 193000,
-        "close": 204500
-      },
       {
         "basDt": "20261019",
         "fltRt": 2.93,
@@ -64,42 +56,38 @@
         "high": 213000,
         "low": 200000,
         "close": 200500
+      },
+      {
+        "basDt": "20261023",
+        "fltRt": -0.65,
+        "open": 197000,
+        "high": 204500,
+        "low": 194600,
+        "close": 199200
       }
     ],
     "volumeVs20d": {
-      "avg20": 170410,
-      "ratio": 0.43
+      "avg20": 171023,
+      "ratio": 0.46
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 529,
+      "rows": 528,
       "rows52w": 245
     },
-    "generatedAt": "2026-10-23T06:42:47.806Z"
+    "generatedAt": "2026-10-26T07:13:04.668Z"
   },
   "facts": [
-    "코스닥보다 2.03%p 낮았어요.",
-    "거래량은 20일 평균의 0.4배예요.",
-    "시가보다 12,500원 낮게 마감했어요."
+    "코스닥보다 0.97%p 높았어요.",
+    "거래량은 20일 평균의 0.5배예요.",
+    "시가보다 2,200원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "삼천당제약, 불성실공시법인 지정…“성과로 응답할 것”",
-      "source": "쿠키뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBoRHhwT2xFdkZtbmZEb2RHVVotdFc2ZGJSMmxrRENrU00xQzF0V1VPQXNNQjU4bUlzVmtOeks0Mi1sbTlYa0hnUTRNakp6dVUzRk1MR01xamhYanQ0b29QVmZiaw?oc=5",
-      "publishedAt": "2026-10-22T07:32:19.000Z"
-    },
-    {
-      "title": "10년 된 고지혈증약에 웬 '생동'?…삼천당의 노림수",
-      "source": "약사공론",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBBMWY3Nk5SYklwQzZ1WWxKWDI3TGZ2a1ZIYUJibzlseWpOY1hUWjNlcnljd3BZc21sZlZrOXExQWhIY3pIQnJRak56ZVB0dnFtOXZLTXBSVERTQ2FMVW0tYktWbDIxdDVvaHNEaw?oc=5",
-      "publishedAt": "2026-10-21T20:53:00.000Z"
-    },
-    {
-      "title": "삼천당제약, 반려동물 구강보조제 ‘",
-      "source": "이투데이",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBqUlA2cVRaVVNpcnQ5ZlJ4cFlzMzZSTTRVQjdlVUM1aWx0M3UwRmlGWlZELUJDeXdlUTRpcEtkMVNWRGQ2ZFpROWEyU2pDNVdTM1ROamV0alY5ZjBhZnJRbHYzakhwZHlH?oc=5",
-      "publishedAt": "2026-10-21T21:29:05.000Z"
+      "title": "삼천당제약 '먹는 인슐린' 임상 마쳐…흡수율·약효 시험대",
+      "source": "뉴스핌",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5wdjdyT0lWYTVhZ2tCZ3E3MVF3a29RTG1mUmEtSjRweTZKRHBNRzNIc1VyelA1Yi0xTkhyZ2RKT1BRM1diY2RudFk0TUZqc1RTOUhzelJTSUlzUlJk?oc=5",
+      "publishedAt": "2026-10-23T05:53:00.000Z"
     }
   ],
   "dart": [],
@@ -126,9 +114,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 764.1,
-    "vs": -28.66,
-    "fltRt": -3.62
+    "clpr": 751.69,
+    "vs": -12.41,
+    "fltRt": -1.62
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -137,7 +125,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-23T06:44:08.902Z",
+  "builtAt": "2026-10-26T07:14:27.579Z",
   "archiveDays": 120,
-  "archiveFrom": "20260424"
+  "archiveFrom": "20260427"
 }

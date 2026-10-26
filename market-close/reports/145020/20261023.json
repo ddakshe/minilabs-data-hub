@@ -1,0 +1,128 @@
+{
+  "code": "145020",
+  "name": "휴젤",
+  "market": "KOSDAQ",
+  "basDt": "20261023",
+  "price": {
+    "code": "145020",
+    "name": "휴젤",
+    "market": "KOSDAQ",
+    "basDt": "20261023",
+    "close": 180100,
+    "vs": -700,
+    "fltRt": -0.39,
+    "open": 180500,
+    "high": 182000,
+    "low": 176600,
+    "prevClose": 180800,
+    "volume": 58874,
+    "tradeValue": 10580420300,
+    "week52": {
+      "low": 168500,
+      "high": 296500,
+      "position": 0.090625,
+      "days": 245,
+      "from": "20251023"
+    },
+    "recent5": [
+      {
+        "basDt": "20261019",
+        "fltRt": 4.41,
+        "open": 179800,
+        "high": 187000,
+        "low": 177000,
+        "close": 187000
+      },
+      {
+        "basDt": "20261020",
+        "fltRt": -1.5,
+        "open": 184500,
+        "high": 190100,
+        "low": 182800,
+        "close": 184200
+      },
+      {
+        "basDt": "20261021",
+        "fltRt": 0.87,
+        "open": 184600,
+        "high": 188900,
+        "low": 184600,
+        "close": 185800
+      },
+      {
+        "basDt": "20261022",
+        "fltRt": -2.69,
+        "open": 186300,
+        "high": 186400,
+        "low": 180300,
+        "close": 180800
+      },
+      {
+        "basDt": "20261023",
+        "fltRt": -0.39,
+        "open": 180500,
+        "high": 182000,
+        "low": 176600,
+        "close": 180100
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 63602,
+      "ratio": 0.93
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 528,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-26T07:13:12.934Z"
+  },
+  "facts": [
+    "코스닥보다 1.23%p 높았어요.",
+    "거래량은 20일 평균의 0.9배예요.",
+    "시가보다 400원 낮게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "휴젤, '톡신 성장' 발판 삼아 포트폴리오 확장...9000억 매출 겨냥",
+      "source": "뉴스투데이",
+      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5xak01dEFrbktodG1hVnZQZ0hvdzNZeEtrcUtmNmVfT2EzRV9NLTNKS2tUTXNfd2pnT2VzUERBZU5adGRSN1QzQUYxeC01RE41a1VaWERxWlBXRDdyNGc?oc=5",
+      "publishedAt": "2026-10-23T07:00:00.000Z"
+    },
+    {
+      "title": "[데이터 뉴스룸] 제약 업종 50개 주식종목 올 하반기 시총 희비 교차…셀트리온 미소 vs 휴젤 한숨",
+      "source": "녹색경제신문",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1yM2NjWDI0SGM4V2VzeGh5UmhxLV9wc0x0akpqaVJYOHNjR3pUcEJ2cXpLbHhjMEZoa2ZobG5TMG1Zb1RodlcyWWY4WkxIOUVMWFdjQ3lZbS10X3U1b2FPcDE0dTZpSFVh?oc=5",
+      "publishedAt": "2026-10-23T09:13:37.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20260804",
+      "holder": "아프로디테애퀴지션홀딩스엘엘씨",
+      "ratio": 45.58,
+      "ratioChange": 0,
+      "reason": "특별관계자 및 보유주식등 수 변동에 따른 변동보고",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260804000276"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 751.69,
+    "vs": -12.41,
+    "fltRt": -1.62
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-26T07:14:27.605Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260427"
+}

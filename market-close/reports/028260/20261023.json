@@ -1,0 +1,120 @@
+{
+  "code": "028260",
+  "name": "삼성물산",
+  "market": "KOSPI",
+  "basDt": "20261023",
+  "price": {
+    "code": "028260",
+    "name": "삼성물산",
+    "market": "KOSPI",
+    "basDt": "20261023",
+    "close": 288000,
+    "vs": -500,
+    "fltRt": -0.17,
+    "open": 282500,
+    "high": 288500,
+    "low": 273500,
+    "prevClose": 288500,
+    "volume": 261404,
+    "tradeValue": 74062078000,
+    "week52": {
+      "low": 206000,
+      "high": 535000,
+      "position": 0.24924012158054712,
+      "days": 245,
+      "from": "20251023"
+    },
+    "recent5": [
+      {
+        "basDt": "20261019",
+        "fltRt": -0.52,
+        "open": 283000,
+        "high": 285000,
+        "low": 272500,
+        "close": 285000
+      },
+      {
+        "basDt": "20261020",
+        "fltRt": -3.51,
+        "open": 280500,
+        "high": 283500,
+        "low": 269000,
+        "close": 275000
+      },
+      {
+        "basDt": "20261021",
+        "fltRt": 5.45,
+        "open": 278500,
+        "high": 293500,
+        "low": 275000,
+        "close": 290000
+      },
+      {
+        "basDt": "20261022",
+        "fltRt": -0.52,
+        "open": 287500,
+        "high": 299000,
+        "low": 283500,
+        "close": 288500
+      },
+      {
+        "basDt": "20261023",
+        "fltRt": -0.17,
+        "open": 282500,
+        "high": 288500,
+        "low": 273500,
+        "close": 288000
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 360841,
+      "ratio": 0.72
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 528,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-26T07:12:35.840Z"
+  },
+  "facts": [
+    "코스피보다 0.47%p 낮았어요.",
+    "거래량은 20일 평균의 0.7배예요.",
+    "시가보다 5,500원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "삼성물산 패션, '멤버십 위크' 프로모션 실시, 신규고객에 추가 혜택 제공하고, 브랜드별 아우터 기획전 진행",
+      "source": "삼성물산 뉴스룸",
+      "link": "https://news.google.com/rss/articles/CBMirANBVV95cUxOZjZrMkowUmdkVnlnRGRKcWRnYktMOTVXZ19maXMtOHd4SDZBNG5nRTlYR2w1dm9YdzNIdlNzbllxMHVXTm8yZDFONEpTVWpFVmNHRXZqM0xuSDFabVV1Tk5VdDBPZW9qazlfYmhFS1VBSEQtU0swSWtDeE1XUDZjeUotZXVVRWRzQ213RlY2bzN2SWhSbkdja2JyMEVfM1p1aDlybGtjWS1zSUh5THp1d0pKY1RLUXB2cUY0Vm40LVdwcExsMm15N2t5QUpMVnh3c0xxTXY0NUMtS0o4S09TSU8xY0pMNmJ2WDJkenV0cXY1WWRaSkRRdzdlWkZsYkhaSTYzbDctTkdFdG5rb0lrbEticTRvNDMzMWkwbUZWYS1qb1ZKd3dGdzZVMzUyZzgwd2x2azh1bUg1VVFUOTNuRTVZUi1LTkNTanczS0Z2QXZUdE9CSVJORXBGUXFncksyUEI0Uk0yMndtM1Q3aUVOdE9WakJXSmhSTXFOTEZYOXVBNlc1QWdwU0RXMGYtdDItX2FicGNxQXI4c29GdnpKSW96aDlPM3ZzY28tVQ?oc=5",
+      "publishedAt": "2026-10-23T10:04:03.000Z"
+    }
+  ],
+  "dart": [
+    {
+      "title": "[기재정정]단일판매ㆍ공급계약체결              ",
+      "filer": "삼성물산",
+      "receiptNo": "20261023800847",
+      "date": "20261023",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261023800847"
+    }
+  ],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 5550.3,
+    "vs": 16.53,
+    "fltRt": 0.3
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-26T07:14:27.481Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260427"
+}

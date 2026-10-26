@@ -1,0 +1,142 @@
+{
+  "code": "000660",
+  "name": "SK하이닉스",
+  "market": "KOSPI",
+  "basDt": "20261023",
+  "price": {
+    "code": "000660",
+    "name": "SK하이닉스",
+    "market": "KOSPI",
+    "basDt": "20261023",
+    "close": 1277000,
+    "vs": 54000,
+    "fltRt": 4.42,
+    "open": 1200000,
+    "high": 1284000,
+    "low": 1171000,
+    "prevClose": 1223000,
+    "volume": 3941446,
+    "tradeValue": 4851382937000,
+    "week52": {
+      "low": 478500,
+      "high": 2919000,
+      "position": 0.32718705183364066,
+      "days": 245,
+      "from": "20251023"
+    },
+    "recent5": [
+      {
+        "basDt": "20261019",
+        "fltRt": 0.39,
+        "open": 1212000,
+        "high": 1277000,
+        "low": 1208000,
+        "close": 1277000
+      },
+      {
+        "basDt": "20261020",
+        "fltRt": -4.23,
+        "open": 1265000,
+        "high": 1267000,
+        "low": 1183000,
+        "close": 1223000
+      },
+      {
+        "basDt": "20261021",
+        "fltRt": 5.81,
+        "open": 1260000,
+        "high": 1329000,
+        "low": 1254000,
+        "close": 1294000
+      },
+      {
+        "basDt": "20261022",
+        "fltRt": -5.49,
+        "open": 1273000,
+        "high": 1297000,
+        "low": 1204000,
+        "close": 1223000
+      },
+      {
+        "basDt": "20261023",
+        "fltRt": 4.42,
+        "open": 1200000,
+        "high": 1284000,
+        "low": 1171000,
+        "close": 1277000
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 3420415,
+      "ratio": 1.15
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 528,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-26T07:12:10.080Z"
+  },
+  "facts": [
+    "코스피보다 4.12%p 높았어요.",
+    "거래량은 20일 평균의 1.1배예요.",
+    "시가보다 77,000원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "솔리다임 IPO 검토를 중단합니다 장기 성장과 주주가치 제고 노력은 이어갑니다",
+      "source": "SK hynix",
+      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBMZW9fZDVjQkxvZmpDMWNBSjBEdUgwelNGYUpmbzk2TE05WnlaMXh1QWEzWjB1VmoybG9wMkJaTUliM1QtdkRHZ2E3UQ?oc=5",
+      "publishedAt": "2026-10-22T22:33:41.000Z"
+    },
+    {
+      "title": "키옥시아 지분가치 41조 급감…\"SK하이닉스, 왜 팔지 않았나\"",
+      "source": "연합인포맥스",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE82eVI1ODhaalUyN3Z3MEtDN1M2QlJYWUh4cjRQaTFuUDlTeHpjSGg3bDNxMnBvNE1leEV5YjZJREdNZ1V3U2lLX045N2F6ZC1KNVlHZ054blV0NV9PTDdTaldTb1U2Ykg4QUVOei1aRHM?oc=5",
+      "publishedAt": "2026-10-23T01:18:09.000Z"
+    },
+    {
+      "title": "SK하이닉스, 솔리다임 미국 상장 계획 접는다",
+      "source": "한겨레",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFA4cjBiVkdZSHJJVXk5YTM1Ui1wSkJaU1RWNFhnUVh1SC0yUjdIZ3pfRzFFYmMxNTBIY0pFUmlEbnZMLW44aHNmRVQ4YVpyM0lMMUJKdFNhcVAzeFZMMjVDT2JBaUp1XzFxaUE?oc=5",
+      "publishedAt": "2026-10-22T23:59:00.000Z"
+    }
+  ],
+  "dart": [
+    {
+      "title": "풍문또는보도에대한해명              ",
+      "filer": "SK하이닉스",
+      "receiptNo": "20261023800002",
+      "date": "20261023",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261023800002"
+    }
+  ],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20260805",
+      "holder": "SK스퀘어",
+      "ratio": 20.01,
+      "ratioChange": -0.09,
+      "reason": "보유주식등의 수 및 특별관계자 변동",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260805000440"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 5550.3,
+    "vs": 16.53,
+    "fltRt": 0.3
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-26T07:14:27.388Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260427"
+}
