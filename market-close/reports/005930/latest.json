@@ -2,37 +2,29 @@
   "code": "005930",
   "name": "삼성전자",
   "market": "KOSPI",
-  "basDt": "20261023",
+  "basDt": "20261026",
   "price": {
     "code": "005930",
     "name": "삼성전자",
     "market": "KOSPI",
-    "basDt": "20261023",
-    "close": 215500,
-    "vs": 1000,
-    "fltRt": 0.47,
-    "open": 206000,
-    "high": 215500,
-    "low": 203500,
-    "prevClose": 214500,
-    "volume": 16145972,
-    "tradeValue": 3396837242750,
+    "basDt": "20261026",
+    "close": 213000,
+    "vs": -2500,
+    "fltRt": -1.16,
+    "open": 213500,
+    "high": 216000,
+    "low": 211500,
+    "prevClose": 215500,
+    "volume": 11376006,
+    "tradeValue": 2430729239364,
     "week52": {
       "low": 94800,
       "high": 362500,
-      "position": 0.45087784833769146,
-      "days": 245,
-      "from": "20251023"
+      "position": 0.44153903623459095,
+      "days": 244,
+      "from": "20251026"
     },
     "recent5": [
-      {
-        "basDt": "20261019",
-        "fltRt": 1.16,
-        "open": 207000,
-        "high": 219500,
-        "low": 206500,
-        "close": 218000
-      },
       {
         "basDt": "20261020",
         "fltRt": -2.98,
@@ -64,88 +56,53 @@
         "high": 215500,
         "low": 203500,
         "close": 215500
+      },
+      {
+        "basDt": "20261026",
+        "fltRt": -1.16,
+        "open": 213500,
+        "high": 216000,
+        "low": 211500,
+        "close": 213000
       }
     ],
     "volumeVs20d": {
-      "avg20": 18630464,
-      "ratio": 0.87
+      "avg20": 18324687,
+      "ratio": 0.62
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 528,
-      "rows52w": 245
+      "rows": 529,
+      "rows52w": 244
     },
-    "generatedAt": "2026-10-26T07:12:07.442Z"
+    "generatedAt": "2026-10-27T06:59:54.054Z"
   },
   "facts": [
-    "코스피보다 0.17%p 높았어요.",
-    "거래량은 20일 평균의 0.9배예요.",
-    "시가보다 9,500원 높게 마감했어요."
+    "코스피보다 0.3%p 높았어요.",
+    "거래량은 20일 평균의 0.6배예요.",
+    "시가보다 500원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "삼성 ‘엑시노스 2700’, 내부 시험서 퀄컴 최신 AP 앞서…멀티코어 성능 약 20% 우위 - 조선비즈",
-      "source": "Chosunbiz",
-      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNdWtRTVZOejB2dEQ4anFVM0loSkUxUFNxWEc2UmtCSW44dF9hYjV1RUFHSVJCbEVnb1dkV1k3ZHRNZF9JMm50ZEhTUGlfanF5SXRBdjZiYW1GWEZJSnpkUklJVFF0bmNWMUVYVjJ5TXBxazRwd1B5QlBPemhJeWQ2STFB0gGWAUFVX3lxTFBJeHI5WlBGa1lHUjR0RFNMQ3hqeTZBdDFhMFRpWGVjLWxwalRPa1NmVEtDbzBIM19tRl9MamlsWVNURjFsX0VFdVM1VlFxaVoyclNRY3RfTEdTWlNxX0cyby1OMWJlQUVacE40WU5BSHhvNUxmY09pSVR6eTFMcUEwdVotNzQyNlBHRjhwZ1lOMVU0YW5Tdw?oc=5",
-      "publishedAt": "2026-10-25T01:12:00.000Z"
+      "title": "삼성전자, 클립형 무선 이어폰 ‘갤럭시 버즈 온’ 국내 출시",
+      "source": "Samsung Global Newsroom",
+      "link": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxQdThLRHk3THlNYmEwS3BZcVlkU3B5SG0zZHJ2MVpjY0tUNDg2ZXFNTi1sandNQlJSTTdYblNkS0Ffd0g3VFJrRl9UOXlfc0E3dHM5bGRleXQya092NXVETC10OFdPbl9tWDAyU2Y3U1E5R3BWaV80YjFGbjNpNUc1b3pDWU85bjZPdGtMX2I2S3N2dFczNEJJdHZFV0Q4OTZiVmZLMkJjMU04U25FTXFIdGQxYzdlb2RXbGp0SzhKTnZxT0FvOFN5YkJlVGZBWllLa3lNR0JMQjRZMWVxY09wZ0NfdTdqWmtqVzhNbHhCMnY2N19fU1A5R3FHaHpYVVg2RTJKYUk4RTlCWEFFemw3MUpCQ0ExbDdLaWg4Y3d5dkQyRGJEamE5cnpZNDlaalNnNkRrOUxVc001Vkk?oc=5",
+      "publishedAt": "2026-10-25T23:00:00.000Z"
     },
     {
-      "title": "'이미 팔았는데'…삼성전자 100주 배당금 100만원이라고?",
+      "title": "[단독] \"연 4% 이자가 어디냐\"…삼성전자도 수십조 굴린다",
       "source": "한국경제",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9iTFd1MWpKckQ2a3R5bTIwSDBwUGFIVDlIX3JsaDVjSWxubVJCS1hfU0FNQ09VeHlqNkdmSzYwcktibF9GVlhJemNTNWVjSTRKbXBaSkRrZGQ1UQ?oc=5",
-      "publishedAt": "2026-10-25T02:43:36.000Z"
-    },
-    {
-      "title": "아이씨에이치, 삼성전자 1차 벤더코드 취득…해외 영업망 확장",
-      "source": "머니투데이",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5pS3NtS19PczlvUUJEOWJTdEFsdEtQaVBINjBjenNlS2diTlF5b2xoS2ZXVFRaY2RGenN2RU9GU2tTZWJZcTVFdHV2SjM0RkY1dGF6Z0UwRVViMnNuV2hfd3U4OXVYYWJ10gFuQVVfeXFMTS04S0ZOVU15Y2dwTVVGV2pmTjdnWHVhUGJRY2ZsUTgydkEzNHhOb1N5MWpSam1Zc3pVVkYxVkl6SnpwZ3JzaU5EbE1fU29MUzJqZFRNcUR1V1FuanhQMC1SNXFSWHl2YUhZWWZBMmc?oc=5",
-      "publishedAt": "2026-10-26T06:11:13.000Z"
-    },
-    {
-      "title": "삼성·하만, AI로 차·집·모바일 잇는다",
-      "source": "한국경제",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5yNmh0NWdNSXZlU1Y0YUJsWHNmQThBVktqenJWbV9VWnNrVjREeW84alR6XzVmQnRqUy1lVkNNR0V1SHhrQXNmQl9VMk5vaWdROERRcS0zdDRZUQ?oc=5",
-      "publishedAt": "2026-10-26T06:21:09.000Z"
-    },
-    {
-      "title": "삼성전자·하만, 모바일·차량 잇는 '커넥티드 경험' 확장",
-      "source": "뉴시스",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE10MFRSdmw1djBEWlZQNUJOQXliYThWclEzTHZTelNDTkg2RXlIT1JYM3hjc2Y4WWtsVnVHMThzS0JEWUN5djN1MlBwYTVhUDl6R1N5dkVudUI0bmtOSTlxctIBeEFVX3lxTE1PTm1JcHo5NUxnaF8yczB3Rno1LXRJb190TDB0RndxdFZFWnQ4R1dZSHdlWnZsTVltT3pmdmxVZEFzck9WdHRsS1QxcmtBWGs3VG9BX1Nvdm9jcGZXWjk1b05Qc2g3YXRDVzZIcjRldERmUzdYR2VPNQ?oc=5",
-      "publishedAt": "2026-10-26T02:29:33.000Z"
-    },
-    {
-      "title": "삼성·하만, AI로 집·차·모바일 잇는다…“기기 조작 없는 일상 구현”",
-      "source": "마켓인",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5oZ1pXWnVNUWdjQmFvT0lVQkNwTEozbnhoWnEtdlhmNF9Vd2tEdnJ1d0kzYjNBOWRsd1IwVXNPZExnUi1uSzMtLXBGaHl5TEQ1REFsS1JrdzJfRmdLeXpMeC1pTTNEaFBFNG5qY2k4cElZUE0?oc=5",
-      "publishedAt": "2026-10-26T06:54:47.000Z"
-    },
-    {
-      "title": "이재용 취임 4년, 반도체 부활 넘어 M&A 승부수…미래사업 확장 가속",
-      "source": "전자신문",
-      "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOY0RPeTc4VU5Fc2ViaFpNODNpSDlyeDFtUHc5aFdWLUREV3AzSWtYYldrNnB5a2g0eUpkV09nRkRXQVRWeXc4eUVqdngySlY1YkJ2MVJJanN6V2lCWDlEckxRTjRhdWFNNEluTVdFOTZLZWVoU3pSOGZPY1M5andDb3RSUko0UURKYkNlaV9Ic0FSQTk3LTZ0YTZFMUVVZHB3ajBPZnREcnU0VHMwYjJnY0Zaa2VuRWxmSXNBTnQ3cjdpVXJKSy04TUxjQ3ZvOGdQd0Z0VjlKYw?oc=5",
-      "publishedAt": "2026-10-26T07:00:00.000Z"
-    },
-    {
-      "title": "[ZD브리핑] 최대 실적 SK하이닉스‧삼성전자…주가 견인할까",
-      "source": "지디넷코리아",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE43YkthM2d2b2FWTU5hMm5PUmhwM2k3M1I0ZkQ3ZE84c0ZlOE44UVBWWmZKUmdMdXI0eWZRUlFvbVVMS2NSR2xUdWhKbDctRWVGSzY0Wjln?oc=5",
-      "publishedAt": "2026-10-25T04:56:42.000Z"
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1rZDlLWXNkQnpUZmZMQUJCVm5hdUVkSkdCSndDemZIUWtENHVZR0t1WFhEVmFhWVJ5ZmdESGloOUtqUEZiR3Z0UjNJaXlKZGZzVTZPbzRHOEJDQQ?oc=5",
+      "publishedAt": "2026-10-26T08:39:12.000Z"
     }
   ],
   "dart": [
     {
-      "title": "주식등의대량보유상황보고서(일반)",
-      "filer": "삼성물산",
-      "receiptNo": "20261023000484",
-      "date": "20261023",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261023000484"
-    },
-    {
       "title": "임원ㆍ주요주주특정증권등소유상황보고서",
-      "filer": "서경헌",
-      "receiptNo": "20261023000478",
-      "date": "20261023",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261023000478"
+      "filer": "이헌",
+      "receiptNo": "20261026000017",
+      "date": "20261026",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261026000017"
     }
   ],
   "ownership": [
@@ -208,9 +165,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5550.3,
-    "vs": 16.53,
-    "fltRt": 0.3
+    "clpr": 5469.47,
+    "vs": -80.83,
+    "fltRt": -1.46
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -219,7 +176,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-26T07:14:27.369Z",
+  "builtAt": "2026-10-27T07:01:56.749Z",
   "archiveDays": 120,
-  "archiveFrom": "20260427"
+  "archiveFrom": "20260428"
 }

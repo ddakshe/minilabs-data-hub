@@ -2,37 +2,29 @@
   "code": "000250",
   "name": "삼천당제약",
   "market": "KOSDAQ",
-  "basDt": "20261023",
+  "basDt": "20261026",
   "price": {
     "code": "000250",
     "name": "삼천당제약",
     "market": "KOSDAQ",
-    "basDt": "20261023",
-    "close": 199200,
-    "vs": -1300,
-    "fltRt": -0.65,
-    "open": 197000,
-    "high": 204500,
-    "low": 194600,
-    "prevClose": 200500,
-    "volume": 78461,
-    "tradeValue": 15554272450,
+    "basDt": "20261026",
+    "close": 188900,
+    "vs": -10300,
+    "fltRt": -5.17,
+    "open": 200500,
+    "high": 205000,
+    "low": 188900,
+    "prevClose": 199200,
+    "volume": 89240,
+    "tradeValue": 17243785700,
     "week52": {
       "low": 126500,
       "high": 1184000,
-      "position": 0.06874704491725768,
-      "days": 245,
-      "from": "20251023"
+      "position": 0.05900709219858156,
+      "days": 244,
+      "from": "20251026"
     },
     "recent5": [
-      {
-        "basDt": "20261019",
-        "fltRt": 2.93,
-        "open": 203000,
-        "high": 212000,
-        "low": 200000,
-        "close": 210500
-      },
       {
         "basDt": "20261020",
         "fltRt": -2.61,
@@ -64,30 +56,44 @@
         "high": 204500,
         "low": 194600,
         "close": 199200
+      },
+      {
+        "basDt": "20261026",
+        "fltRt": -5.17,
+        "open": 200500,
+        "high": 205000,
+        "low": 188900,
+        "close": 188900
       }
     ],
     "volumeVs20d": {
-      "avg20": 171023,
-      "ratio": 0.46
+      "avg20": 172524,
+      "ratio": 0.52
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 528,
-      "rows52w": 245
+      "rows": 529,
+      "rows52w": 244
     },
-    "generatedAt": "2026-10-26T07:13:04.668Z"
+    "generatedAt": "2026-10-27T07:00:40.709Z"
   },
   "facts": [
-    "코스닥보다 0.97%p 높았어요.",
+    "코스닥보다 1.91%p 낮았어요.",
     "거래량은 20일 평균의 0.5배예요.",
-    "시가보다 2,200원 높게 마감했어요."
+    "시가보다 11,600원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "삼천당제약 '먹는 인슐린' 임상 마쳐…흡수율·약효 시험대",
-      "source": "뉴스핌",
-      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5wdjdyT0lWYTVhZ2tCZ3E3MVF3a29RTG1mUmEtSjRweTZKRHBNRzNIc1VyelA1Yi0xTkhyZ2RKT1BRM1diY2RudFk0TUZqc1RTOUhzelJTSUlzUlJk?oc=5",
-      "publishedAt": "2026-10-23T05:53:00.000Z"
+      "title": "삼천당제약 주가, 10월 26일 장중 193,200원 3.01% 하락",
+      "source": "톱스타뉴스",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5GOVlwV3haZ0plTzNOa01pX1g2cXpzRUFpcTVQSkZKWkI5VmFTVUNtT1VNdkczdWR6Z2hFeVdTbGZjOGtBRnhLekVUd0ZDbi1EREVYanljNFZLTm9STk8zdEJEYkxLd1Voem9XT1Baa3E0Zw?oc=5",
+      "publishedAt": "2026-10-26T01:24:20.000Z"
+    },
+    {
+      "title": "삼천당제약 장중 3.11% 하락해 19만3000원",
+      "source": "비건뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1JOC1icDN0VXpQYUNMb0R3alVHdjJLVG1OREFLbURlZGVBRXEtQ0pWd0FSV29VSTV6TVJfMmRWdGVHWXNwZV91Q1JmcXZqS2g3Vm9LeEtuTW5UYkN1eDNxR0hsaUoxQQ?oc=5",
+      "publishedAt": "2026-10-26T04:37:29.000Z"
     }
   ],
   "dart": [],
@@ -114,9 +120,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 751.69,
-    "vs": -12.41,
-    "fltRt": -1.62
+    "clpr": 727.21,
+    "vs": -24.48,
+    "fltRt": -3.26
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -125,7 +131,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-26T07:14:27.579Z",
+  "builtAt": "2026-10-27T07:01:56.875Z",
   "archiveDays": 120,
-  "archiveFrom": "20260427"
+  "archiveFrom": "20260428"
 }

@@ -3,10 +3,18 @@
   "name": "SK스퀘어",
   "market": "KOSPI",
   "retainDays": 120,
-  "firstBasDt": "20260427",
-  "lastBasDt": "20261023",
+  "firstBasDt": "20260428",
+  "lastBasDt": "20261026",
   "count": 120,
   "days": [
+    {
+      "basDt": "20261026",
+      "close": 769000,
+      "fltRt": -0.77,
+      "headline": "코스피보다 0.69%p 높았어요.",
+      "newsCount": 6,
+      "dartCount": 1
+    },
     {
       "basDt": "20261023",
       "close": 775000,
@@ -1040,16 +1048,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260427",
-      "close": 789000,
-      "fltRt": 8.83,
-      "headline": "시가 747,000원보다 42,000원 높게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-10-26T07:14:27.401Z"
+  "updatedAt": "2026-10-27T07:01:56.769Z"
 }

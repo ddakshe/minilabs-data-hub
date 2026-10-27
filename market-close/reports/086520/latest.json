@@ -2,37 +2,29 @@
   "code": "086520",
   "name": "에코프로",
   "market": "KOSDAQ",
-  "basDt": "20261023",
+  "basDt": "20261026",
   "price": {
     "code": "086520",
     "name": "에코프로",
     "market": "KOSDAQ",
-    "basDt": "20261023",
-    "close": 72700,
-    "vs": -4500,
-    "fltRt": -5.83,
-    "open": 75700,
-    "high": 77000,
-    "low": 72100,
-    "prevClose": 77200,
-    "volume": 848189,
-    "tradeValue": 61991057350,
+    "basDt": "20261026",
+    "close": 69700,
+    "vs": -3000,
+    "fltRt": -4.13,
+    "open": 71100,
+    "high": 72500,
+    "low": 69700,
+    "prevClose": 72700,
+    "volume": 639266,
+    "tradeValue": 45113001700,
     "week52": {
       "low": 67400,
       "high": 185000,
-      "position": 0.045068027210884355,
-      "days": 245,
-      "from": "20251023"
+      "position": 0.0195578231292517,
+      "days": 244,
+      "from": "20251026"
     },
     "recent5": [
-      {
-        "basDt": "20261019",
-        "fltRt": 11.19,
-        "open": 78300,
-        "high": 90400,
-        "low": 78100,
-        "close": 90400
-      },
       {
         "basDt": "20261020",
         "fltRt": -7.74,
@@ -64,71 +56,83 @@
         "high": 77000,
         "low": 72100,
         "close": 72700
+      },
+      {
+        "basDt": "20261026",
+        "fltRt": -4.13,
+        "open": 71100,
+        "high": 72500,
+        "low": 69700,
+        "close": 69700
       }
     ],
     "volumeVs20d": {
-      "avg20": 811960,
-      "ratio": 1.04
+      "avg20": 827062,
+      "ratio": 0.77
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 528,
-      "rows52w": 245
+      "rows": 529,
+      "rows52w": 244
     },
-    "generatedAt": "2026-10-26T07:12:41.479Z"
+    "generatedAt": "2026-10-27T07:00:22.527Z"
   },
   "facts": [
-    "코스닥보다 4.21%p 낮았어요.",
-    "거래량은 20일 평균의 1.0배예요.",
-    "시가보다 3,000원 낮게 마감했어요."
+    "코스닥보다 0.87%p 낮았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가보다 1,400원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "삼원계 배터리 힘싣는 에코프로",
-      "source": "중앙일보",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBlQUxUTmFLSFNneWdJenZyRVJGcEJINzF5el8wTjZobGMzdWIwcXo1N01JM3RxejJaRlpLX2dOaE9Ec0cyaTV0aHlVbDJHM3JRRFdyWkhB?oc=5",
-      "publishedAt": "2026-10-22T15:01:01.000Z"
+      "title": "[단독] 에코프로, 中 배터리사에 양극재 조단위 납품",
+      "source": "한국경제",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE11Qzkyb3dTSFl0S0RBdEYyYjk1ZUdUTkhwNjlCQ2dobG9qUGx3UF9JN01TamhSMjRjelVkRnZYOWxiMk9QQWZESVBOVlFxbnVNVjhrbXBRN2QyUQ?oc=5",
+      "publishedAt": "2026-10-26T08:44:54.000Z"
     },
     {
-      "title": "에코프로 창립 28주년…“삼원계 배터리 미래 선점”",
-      "source": "경북신문",
-      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBjZ2dfdFBSZy1DYWR5ejE0NTZBOW5HZDFJcnUxSmFlN28zWlhEWUx4YTU2NnF5QjJQZ3ZudG1kd1RXX1p0WjhvTzRyeTR1bml2VG91Q2JDbUE?oc=5",
-      "publishedAt": "2026-10-23T04:41:22.000Z"
+      "title": "고성능 EV·로봇 타깃…LFP 대세에도 에코프로 '삼원계 뚝심'",
+      "source": "뉴스1",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE15bGhJcGdSVVZoaVF4VE4xVkRxeF9sT0YzN2NCckNUZXBENDN4bzVZVU9TV00xVjkzWWRRZzNpLTdIa3dKY01YYXFHZ1VBS0I2NXJQY0oxOVdRTFAybVFNQ2pDelo?oc=5",
+      "publishedAt": "2026-10-25T22:05:00.000Z"
     },
     {
-      "title": "오창서 출발한 에코프로, 창립 28주년 맞아 ‘도전’ 다짐",
-      "source": "충북인뉴스",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1mQTVuamhfampnM3RPeUFzV284UW9KbGNWTUhWeTNFR1dzZHRxclZLSFJnVmhBdlBpWm9QdVNSQTdQME9PdDBWU2drX01CMlN2LVFiMUo3X0pLdUw1WlVmc0h6YXNzakJJMmw3WNIBcEFVX3lxTFBORHcxQ1A5UDVheTAwWnVubktOd0VDUjVJOXppQkNGZmtiSkEtQm5oaUo4VkRyQmFXTGEyZ0laVW1ndWUxUnVyZlRyT2V6bWo2NXUzNTFfbFptWXU5UmNTUDlFNklqd3ZOQnBXcEczQms?oc=5",
-      "publishedAt": "2026-10-23T06:38:00.000Z"
+      "title": "[개장 전 주요 공시] 에코프로비엠·한성기업·포스코퓨처엠·아시아나항공 등",
+      "source": "글로벌이코노믹",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOc2F6ZkR0a25IeW8xTFpYdFNOU2FSdmxheEtIbG5rcEh0YU11WVlkTTdWSU02WE0wZS1YNkZ4dFNYV1BvZWVvSnZhYTh0VVFNQVBtUGZOamwwTEdPOWxYNEJaWDJVd2hsc21RaXBCVldLYmtVaWpRY24zeUNmNWgySjdYRkQ1ZTlL?oc=5",
+      "publishedAt": "2026-10-25T23:25:09.000Z"
     },
     {
-      "title": "에코프로, 주가 저점 다지는 구간...2차전지 업황 회복이 반등 열쇠",
-      "source": "증권일보",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE45TlcwZHZEZ3lRaS1xNUNjYkxGWXVrc20yUkNZTkJJVFNDdmlpNWZnM2xseUtxODB2a0JmQTNZcG56NG9RVGpiQjg3eGhnbldFLU4taWtLZ2tpam5RdGRhUQ?oc=5",
-      "publishedAt": "2026-10-23T00:12:00.000Z"
+      "title": "에코프로 주가 3,000원 하락 후 장마감",
+      "source": "아시아뉴스통신",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBQM3ptX0hISGxtWlJjdGZwM2lzSVd6REh5ZlFySmtfOFRHTl94WWpoVzRWbWNCczJtN2dodWx0NFJsTDUyRFlPUXpDMjVhN3dsSXd3dDcySWdzLUF2Q2pLdV94SG8tTDA0Z0p4Rlp4RjhjNkV3?oc=5",
+      "publishedAt": "2026-10-26T06:43:59.000Z"
     },
     {
-      "title": "삼원계 배터리 힘싣는 에코프로",
-      "source": "미주중앙일보",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1jVVFfSWFKN2h1a2JfSEFCaXM4ZDc3c2Q1dkN4U0lhZ1VlUnhpd0dQVzJPamE3Y2dMbnpEWFVFYzNkbjBPankyaDZKcE1TTHZ6dE1PaGRwa1gteXhoUXZjbkxR?oc=5",
-      "publishedAt": "2026-10-22T20:25:00.000Z"
+      "title": "[단독] 에코프로, 중국 배터리 회사에 조 단위 양극재 납품 추진",
+      "source": "한국경제",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9JX0oza1hKQkFpdU8zNDB4SUdZd2NtZnZFRHJwak03R2RWaFlNN284OXI5SlN1TlRMWGpzMHpLUVJobW15Um9rQUFMbGNYUWhFT3JINy12UTBpUQ?oc=5",
+      "publishedAt": "2026-10-26T06:26:21.000Z"
     },
     {
-      "title": "에코프로 7만3400원으로 하락…에코프로비엠도 약세",
-      "source": "CBC뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1zQkxtVUlkVjlPdi1BQ0FwcVJ6VWFjS25wd3ZpaXBSSl9nNGVKcDJiTHNucDRYdGJQQ2JWOWV1VEdxMmFNYmVlcWV2YU5zMnVOTWw1UGJWSkc4VktZbWZyd1hQZTh6bFRL?oc=5",
-      "publishedAt": "2026-10-23T00:38:43.000Z"
+      "title": "[단독] 中배터리도 줄서는 에코프로…\"유럽 양극재 장악\"",
+      "source": "한국경제",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5XQ2U5X2dqQUVCeWpUdG5BdWc1Z3F1cUxORFdJeVdjalFObGgwNnoyZlM3VVU2bng5OWE1THBHWWpNQ2x1SUxKZ1FubkJRdlhVb1RKY3ZzeUwxdw?oc=5",
+      "publishedAt": "2026-10-26T09:00:13.000Z"
+    },
+    {
+      "title": "전기차 다음은 휴머노이드…에코프로, 삼원계 배터리로 미래시장 공략",
+      "source": "충청시사신문",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB5UUFsN0I1NmEtNG5HUjdBdTRac3Bfa2hvbDhXZDVpVmdMQ2JBeFcyN1lOSXBvN3RudzNpVlk5YmxYT1lRMkVUNXg4Q0F3NFo3Mm1fbTZEaGpuSVg3dzV5c2VrTVVlZmxEemlR?oc=5",
+      "publishedAt": "2026-10-25T23:51:10.000Z"
+    },
+    {
+      "title": "에코프로, 삼원계 배터리 승부수…전기차 넘어 휴머노이드 시장 정조준",
+      "source": "충청메트로",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1OUlVGdEVtVTFHRmRac0w0YjJfQ0kzeTg2N3V6ZmhnOTFndzNROFA5ZDBveDdzbGZXNkFUWGl6MVhlWlNHY1I1SXVYb2xuSVp5eldLWV9vSEp0Z2NPTDM3QVh6N0hlNmdOcHZr?oc=5",
+      "publishedAt": "2026-10-25T23:49:15.000Z"
     }
   ],
-  "dart": [
-    {
-      "title": "교환사채(해외교환사채포함)발행후만기전사채취득              ",
-      "filer": "에코프로",
-      "receiptNo": "20261023900739",
-      "date": "20261023",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261023900739"
-    }
-  ],
+  "dart": [],
   "ownership": [
     {
       "kind": "major",
@@ -206,9 +210,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 751.69,
-    "vs": -12.41,
-    "fltRt": -1.62
+    "clpr": 727.21,
+    "vs": -24.48,
+    "fltRt": -3.26
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -217,7 +221,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-26T07:14:27.502Z",
+  "builtAt": "2026-10-27T07:01:56.832Z",
   "archiveDays": 120,
-  "archiveFrom": "20260427"
+  "archiveFrom": "20260428"
 }

@@ -2,37 +2,29 @@
   "code": "240810",
   "name": "원익IPS",
   "market": "KOSDAQ",
-  "basDt": "20261023",
+  "basDt": "20261026",
   "price": {
     "code": "240810",
     "name": "원익IPS",
     "market": "KOSDAQ",
-    "basDt": "20261023",
-    "close": 95600,
-    "vs": -900,
-    "fltRt": -0.93,
-    "open": 93500,
-    "high": 96300,
-    "low": 89200,
-    "prevClose": 96500,
-    "volume": 613318,
-    "tradeValue": 57092093400,
+    "basDt": "20261026",
+    "close": 89400,
+    "vs": -6200,
+    "fltRt": -6.49,
+    "open": 93300,
+    "high": 94600,
+    "low": 89100,
+    "prevClose": 95600,
+    "volume": 503239,
+    "tradeValue": 45745944300,
     "week52": {
       "low": 56700,
       "high": 183300,
-      "position": 0.30726698262243285,
-      "days": 245,
-      "from": "20251023"
+      "position": 0.25829383886255924,
+      "days": 244,
+      "from": "20251026"
     },
     "recent5": [
-      {
-        "basDt": "20261019",
-        "fltRt": -0.46,
-        "open": 103000,
-        "high": 110900,
-        "low": 102000,
-        "close": 108500
-      },
       {
         "basDt": "20261020",
         "fltRt": -4.88,
@@ -64,30 +56,50 @@
         "high": 96300,
         "low": 89200,
         "close": 95600
+      },
+      {
+        "basDt": "20261026",
+        "fltRt": -6.49,
+        "open": 93300,
+        "high": 94600,
+        "low": 89100,
+        "close": 89400
       }
     ],
     "volumeVs20d": {
-      "avg20": 1213913,
-      "ratio": 0.51
+      "avg20": 1167845,
+      "ratio": 0.43
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 528,
-      "rows52w": 245
+      "rows": 529,
+      "rows52w": 244
     },
-    "generatedAt": "2026-10-26T07:13:01.826Z"
+    "generatedAt": "2026-10-27T07:00:43.347Z"
   },
   "facts": [
-    "코스닥보다 0.69%p 높았어요.",
-    "거래량은 20일 평균의 0.5배예요.",
-    "시가보다 2,100원 높게 마감했어요."
+    "코스닥보다 3.23%p 낮았어요.",
+    "거래량은 20일 평균의 0.4배예요.",
+    "시가보다 3,900원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "원익ips 주가 6,200원 하락 후 마감",
-      "source": "아시아뉴스통신",
-      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBSZHA1OElGMTgxRVFjSy1HcVlfeTVrMDZYdXJvQUpwalBvN3pmc0xnd01vN2g0aC1BSng0LWxHY3lybXlSYXVVYWppTzhYZkJnWmpuMEJudElzM1dq?oc=5",
-      "publishedAt": "2026-10-26T06:36:24.000Z"
+      "title": "삼전닉스보다 더 빠진 반도체 장비주…주성엔지·원익IPS 6%대 하락[핫종목]",
+      "source": "뉴스1",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE8tQW5IeXdiUWVsYlVUSWpwSnpKQ3ZzRjJKNTNEYUY3dEFhR2VnQWJkdThFN3VaemZsT1NacW95Zjk4OHJVaEFWRE1jcE9FYW5sS0FyT2hHZkxfVmc?oc=5",
+      "publishedAt": "2026-10-26T07:40:47.000Z"
+    },
+    {
+      "title": "원익IPS 6.49% 하락…메모리 투자 회복과 장비 검수 시점 관건",
+      "source": "잡포스트",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFByZE9BRlhfVzQ0ZTEtSG40R3M1a2dTUXduRXBSRFVYZ0Q1OUtmTW5KQkthUk9nSHJKOGhXdWVjQVVmZFpfaHFydEZDVUlxSC1wODJIWHEwdjluRjU0dnFZczY5MWNGSkxOTjJpVVNkc2VxQdIBckFVX3lxTFByZE9BRlhfVzQ0ZTEtSG40R3M1a2dTUXduRXBSRFVYZ0Q1OUtmTW5KQkthUk9nSHJKOGhXdWVjQVVmZFpfaHFydEZDVUlxSC1wODJIWHEwdjluRjU0dnFZczY5MWNGSkxOTjJpVVNkc2VxQQ?oc=5",
+      "publishedAt": "2026-10-26T07:03:01.000Z"
+    },
+    {
+      "title": "[코스닥 외국인] 피에스케이·심텍 담고 원익홀딩스·로보티즈는 팔았다",
+      "source": "핀포인트뉴스",
+      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE4wVGt1cWwxQUV3MHJ1UElJYTIxZUc3VlhpUUl5M1N2cVdja25KUVRfNGJHUjVEc3hfc0ZfMjJaS0xpWjk3dERkeXZMZDlidC1RaC1rV0ZEV1dCU1FTZUtZQnhIY18zOG1kMjE3NkwtZC02bzhtXzVR0gF3QVVfeXFMTjBUa3VxbDFBRXcwcnVQSUlhMjFlRzdWWGlRSXkzU3ZxV2NrbkpRVF80YkdSNURzeF9zRl8yMlpLTGlaOTd0RGR5dkxkOWJ0LVFoLWtXRkRXV0JTUVNlS1lCeEhjXzM4bWQyMTc2TC1kLTZvOG1fNVE?oc=5",
+      "publishedAt": "2026-10-26T06:52:13.000Z"
     },
     {
       "title": "[특징주]원익홀딩스, 기관 순매수 속 6.08% 오른채 장 마감…장중 정적VI 발동",
@@ -96,40 +108,16 @@
       "publishedAt": "2026-10-26T06:38:26.000Z"
     },
     {
-      "title": "[코스닥 외국인] 피에스케이·심텍 담고 원익홀딩스·로보티즈는 팔았다",
-      "source": "핀포인트뉴스",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9jSnlYVnlXNTJvUlpxR2JtWVFmcGJGRmNyQndNX3laNGdBREVpUEZDYmRSMW9fUGwzOXB2N09zMk9rczZPMUdpZ2dtbjFMOGdoSGo1dU8tMGNPeVhFNU42UGs0MFNhQmdhZlVkM2FnQndGTW_SAXdBVV95cUxOMFRrdXFsMUFFdzBydVBJSWEyMWVHN1ZYaVFJeTNTdnFXY2tuSlFUXzRiR1I1RHN4X3NGXzIyWktMaVo5N3REZHl2TGQ5YnQtUWgta1dGRFdXQlNRU2VLWUJ4SGNfMzhtZDIxNzZMLWQtNm84bV81UQ?oc=5",
-      "publishedAt": "2026-10-26T06:48:11.000Z"
+      "title": "원익ips 주가 6,200원 하락 후 마감",
+      "source": "아시아뉴스통신",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9oXzBubVpHOHNFVGVVS1ZjX2tob1licDctcDhmS19NMnBhd1pXWURQanhFWGFVMkpHRlNVMUdYZkQyTTNxSXBER3cwZm5CbE1JX0huNEl3SS0wZ2JGUk1GNEExZWc2ZHNhbnZZNF9GWmFwOHpf?oc=5",
+      "publishedAt": "2026-10-26T06:36:24.000Z"
     },
     {
       "title": "주성엔지니어링 5%↓…코스닥 반도체 동반 약세 [이런국장 저런주식]",
       "source": "서울경제",
       "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5uZXIyVmRlZEJIM0FYbHp1aVNrRjBNZm9IR2hrYUUyZVFiMUZCV2RCZ0VkUGp3d3o3SWJaUDZIbV8wMkp6cGNLREZ3b29yYlA2aVE?oc=5",
       "publishedAt": "2026-10-26T05:17:02.000Z"
-    },
-    {
-      "title": "원익IPS, 올해 매출 1.2조 예상…\"메모리 투자 수혜 기대\"-NH",
-      "source": "머니투데이",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9QdG1RRzFmc0p6LThGN3BxVzFfN1kxYXZEMnZwMnBya2E4WVNEa2N4NFEwdl9rRjE0OWV2SGRSVHpObV9sMklfSEFUWWxROGdPZDFOcW55S3l5dmNDZG82MjAxOHYzZUNa0gFuQVVfeXFMT1U0Tl9CRnBaRVlLRTRPX3BvWmpCb3VYRGhRWmJqT0RINVA5Ry1IWTNhb1VtWU9UTDVTM3pkTzB5RWtXajlQSVJqRzVZTjNBZElkNUtYWWdKcmFXc0Y3NzRWWldoeFRfM0lvTTZCOFE?oc=5",
-      "publishedAt": "2026-09-30T07:00:00.000Z"
-    },
-    {
-      "title": "원익IPS 8.40% 하락…반도체 장비 검수 일정이 변수",
-      "source": "잡포스트",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBfNHBhdXhyalVURmtJaUhQNjNmdHVxQ2NCZnhMSUtqZG9acVdnUG5mMGxyM3BDUlNfYktIN0tBT21ETTFHTmloYXpRaGJjaWplUkFXcDN5LTRjM2xjYV9PZXNtb0piRTVHMVlNMkJ2MWZtUdIBckFVX3lxTFBfNHBhdXhyalVURmtJaUhQNjNmdHVxQ2NCZnhMSUtqZG9acVdnUG5mMGxyM3BDUlNfYktIN0tBT21ETTFHTmloYXpRaGJjaWplUkFXcDN5LTRjM2xjYV9PZXNtb0piRTVHMVlNMkJ2MWZtUQ?oc=5",
-      "publishedAt": "2026-10-22T08:04:27.000Z"
-    },
-    {
-      "title": "원익IPS, 22일 장중 6%대 하락…9만7900원",
-      "source": "비건뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5Dd2tTcGtjakxfclRjQ2l0aVVDX3ZKZ3dkV09VbHA0UVRoc3EzUGpWendSLWxLM3ByV1piX1l0VHZ6UnlkQWlJdlJFeGtsRkE2RmJCRElKNWtWeWxDeGg2dmMzZll2QQ?oc=5",
-      "publishedAt": "2026-10-22T05:54:06.000Z"
-    },
-    {
-      "title": "[종목 포커스] 원익IPS, 3분기 삼전닉스 신규 팹 장비 반입으로 영업이익 급증?",
-      "source": "데일리인베스트",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9rOF9Zd1l4cDJUTGlNd2RmNlpyLXktSTdESTFpcHIxeXA1akFxN3VmOXExSWU5QVBUeGg3RUM2STNuUk83WVliSmpxMk5GNUNXclI3U1pFV1hQVVZHR3VGemZwaS1kTzZPU1VN0gFvQVVfeXFMTkd5OGI0WDViTlliMWZNZ3FIeGFsTktZWGllb1hscjZvdW9LaThiQjZwVGlXMHV4SjQ4Sk90UnFkMU5aM0ZseWFJc2lyOTE5WERBNHVtVHRHX0tINFFtamJidC1CTEdZa3pwZ2xRbkZV?oc=5",
-      "publishedAt": "2026-10-13T07:00:00.000Z"
     }
   ],
   "dart": [],
@@ -156,9 +144,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 751.69,
-    "vs": -12.41,
-    "fltRt": -1.62
+    "clpr": 727.21,
+    "vs": -24.48,
+    "fltRt": -3.26
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -167,7 +155,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-26T07:14:27.571Z",
+  "builtAt": "2026-10-27T07:01:56.881Z",
   "archiveDays": 120,
-  "archiveFrom": "20260427"
+  "archiveFrom": "20260428"
 }

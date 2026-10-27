@@ -2,37 +2,29 @@
   "code": "005380",
   "name": "현대차",
   "market": "KOSPI",
-  "basDt": "20261023",
+  "basDt": "20261026",
   "price": {
     "code": "005380",
     "name": "현대차",
     "market": "KOSPI",
-    "basDt": "20261023",
-    "close": 295500,
-    "vs": -6000,
-    "fltRt": -1.99,
-    "open": 294000,
-    "high": 295500,
-    "low": 287500,
-    "prevClose": 301500,
-    "volume": 531721,
-    "tradeValue": 155082713000,
+    "basDt": "20261026",
+    "close": 288000,
+    "vs": -7500,
+    "fltRt": -2.54,
+    "open": 285000,
+    "high": 294000,
+    "low": 284000,
+    "prevClose": 295500,
+    "volume": 478114,
+    "tradeValue": 137905725348,
     "week52": {
       "low": 250500,
       "high": 750000,
-      "position": 0.09009009009009009,
-      "days": 245,
-      "from": "20251023"
+      "position": 0.07507507507507508,
+      "days": 244,
+      "from": "20251026"
     },
     "recent5": [
-      {
-        "basDt": "20261019",
-        "fltRt": 4.49,
-        "open": 304500,
-        "high": 326000,
-        "low": 302500,
-        "close": 326000
-      },
       {
         "basDt": "20261020",
         "fltRt": -4.91,
@@ -64,54 +56,90 @@
         "high": 295500,
         "low": 287500,
         "close": 295500
+      },
+      {
+        "basDt": "20261026",
+        "fltRt": -2.54,
+        "open": 285000,
+        "high": 294000,
+        "low": 284000,
+        "close": 288000
       }
     ],
     "volumeVs20d": {
-      "avg20": 537824,
-      "ratio": 0.99
+      "avg20": 541439,
+      "ratio": 0.88
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 528,
-      "rows52w": 245
+      "rows": 529,
+      "rows52w": 244
     },
-    "generatedAt": "2026-10-26T07:12:23.638Z"
+    "generatedAt": "2026-10-27T07:00:09.584Z"
   },
   "facts": [
-    "코스피보다 2.29%p 낮았어요.",
-    "거래량은 20일 평균의 1.0배예요.",
-    "시가보다 1,500원 높게 마감했어요."
+    "코스피보다 1.08%p 낮았어요.",
+    "거래량은 20일 평균의 0.9배예요.",
+    "시가보다 3,000원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "[단독] LG그룹, 현대차 로봇사업 수장 품었다",
-      "source": "한국경제",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5WTUhKQm1haWpLN25XdEZTdTNEaTYzSmlYTkdWY2Nlc0E1VW5RRm9BQlVGRHkyZldRNm5SMF9WUFlDUXhiSlg4RzFmRXBDZkFUT21iNHEtNUVhQQ?oc=5",
-      "publishedAt": "2026-10-23T08:42:14.000Z"
+      "title": "유럽 출격 앞둔 현대차 '신형 베이온'…\"가성비로 中 공세 뚫는다\"",
+      "source": "뉴시스",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE42R24yV2FYUktvdzlwNjJJTml0Rl8tY3AxZnJjUXk5SVNqdlZLUjRSVld2QkdTX0xBaVJsMDB2WktPQ1NYV0pRTkM2c3E5azVqaTJUZUZBcWZOcEUzT3BhV9IBeEFVX3lxTE1jbTFSVmhkbndRZmZtanN4UTVwckpBbW1EcTk1U3hqV0RINUp2eGdiU3lyazNjTjMxU0FRUlJEbnJYV2hLLWhxY01HQlZsWTY3ZEk3VTYyX1V3SWlBeGQ5YWFwRHVWSFZienhFM2lzQ1Q3UVVEV2xWZA?oc=5",
+      "publishedAt": "2026-10-26T08:41:53.000Z"
     },
     {
-      "title": "현대차·GM… 2028년에 맞춰진 자율주행 시간표",
-      "source": "조선일보",
-      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBGNkpVb3FwQnV2NkFVSDNLSG1ZUlQtelhfMHREejdVenJkX21Ydnd3enNoY2tPbllPRTVsZlZ1bFRyX1pIc01pVGw2MGtKb0hNRnprOXB1aDJxUXYtVHA1c1pQeGZ5c3F6b2F0OVFpUF85SnprVXIzR3E0Vm1TakE?oc=5",
-      "publishedAt": "2026-10-22T21:42:34.000Z"
-    }
-  ],
-  "dart": [
+      "title": "‘GV90만으론 부족’⋯ 현대차 울산 EV공장, ‘美 유턴’ GV70·아이오닉5 수혈",
+      "source": "브릿지경제",
+      "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5aNjBYdVh6cDdTV09VSF9maG9mMHVhLUxVVWxoM0hpZG5WaEpmQXhUZi1RZEN2QWh2d0RGV1VnY0hFRW9hWVFWcHAyWTFqUzRkSzUzLUcwMA?oc=5",
+      "publishedAt": "2026-10-26T06:22:00.000Z"
+    },
     {
-      "title": "특수관계인으로부터기타유가증권매수",
-      "filer": "현대자동차",
-      "receiptNo": "20261023000336",
-      "date": "20261023",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261023000336"
+      "title": "현대차 수소차 국내 누적 판매 5만대 돌파…보조금·충전망 확충 과제",
+      "source": "서울신문",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9ON1hKd21xM2xuQzI4X3IwSnM5aFpERGc4dkowR0ZxV0QwV05FbFQyZ1JEUGY1clE4NHlyQVFZNU91RHI5MVU2bVRLbTFYeExHcmxpcTFReWY4dkhES3BqdnZRajNacXVIX3JaTGJfd0ExcXhu?oc=5",
+      "publishedAt": "2026-10-26T08:27:49.000Z"
+    },
+    {
+      "title": "현대차 수소차, 국내 누적 판매 5만대 돌파",
+      "source": "조선일보",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFAxdWw4WGw4YUJUOUlqVlRRNElGVDFGMlpRU2hDdmZQbk9QZ2NjTmZOMFRXOXdUZWhWWmtPdjZJQ2t2VVFKelZESUNGOElQSkticnJBOWVFZ3RORjNCYVh2VElISG1MR2R5UzM2Qmw5OHVpSEhteGZrWjJLa244SmM?oc=5",
+      "publishedAt": "2026-10-26T01:22:58.000Z"
+    },
+    {
+      "title": "[특징주] 현대차 로봇 공급망 기대…나무가, 애프터마켓 20% 급등",
+      "source": "뉴스핌",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBoVW5zSVcydVFLSG9sbzA5QUJuaERjanJrbGlwTW1BQ29iQjFNRmZya09qRHFkQlF2di14OF9CalJjMmQ1SzF0ZXBwU3djUzhrU2RabE01eGNveTN0?oc=5",
+      "publishedAt": "2026-10-26T08:20:00.000Z"
+    },
+    {
+      "title": "현대차, 영남권 42조 투자… 첨단 거점 육성",
+      "source": "서울신문",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE44ZjMxSXFTTTdmZkRMNlk1R1E1ZDJ5OTR2c2l4cm1vWTdDd1A2bFdDUmowekFzemJPeXVKd01qWVYyZ2V0NkM4bWJ3Z1lDd3pzNVhzM2xFMXdVcDRGZWpUVXB5VFBwcm1KT0I2OHZKVzFnNDhmY0hpYWYzWQ?oc=5",
+      "publishedAt": "2026-10-26T11:25:37.000Z"
+    },
+    {
+      "title": "中 토종차에 밀린 현대차…전기차 승부수도 `역부족`",
+      "source": "디지털데일리",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBpQmxJN3AwNnBNa3hBSEVmTExBd0VRZ2I1YnRXUGlQOWw3LWlUUHBVVGlMQXlUQWRXRFV5Z1IyMkVfakItZlN4RVVQLVh4YlNzb3QyekNIUHFxdmp5QndoZmU0ZzM?oc=5",
+      "publishedAt": "2026-10-26T09:13:22.000Z"
+    },
+    {
+      "title": "현대차그룹, 인도 '제2 성장축'…생산 넘어 R&D·투자까지",
+      "source": "글로벌이코노믹",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQYXNVcXF3aWZfV2Fhd3g1ZjlhalNOUzJFcUltdmFkTlZ4QW5sV2xEcGItcjdsaG1ER1Z4ZmhFR0VWZ3JXTnMwY280Z1dEUTd4SnU5Q21qek90Wk9XZWtqWE0xRGVGRWp5S2cwWGt0Y01PejM4RllnVEpvcGlsRHRTeW5zRFBQdw?oc=5",
+      "publishedAt": "2026-10-26T08:00:00.000Z"
     }
   ],
+  "dart": [],
   "ownership": [],
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5550.3,
-    "vs": 16.53,
-    "fltRt": 0.3
+    "clpr": 5469.47,
+    "vs": -80.83,
+    "fltRt": -1.46
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -120,7 +148,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-26T07:14:27.438Z",
+  "builtAt": "2026-10-27T07:01:56.797Z",
   "archiveDays": 120,
-  "archiveFrom": "20260427"
+  "archiveFrom": "20260428"
 }

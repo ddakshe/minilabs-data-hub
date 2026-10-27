@@ -2,37 +2,29 @@
   "code": "272210",
   "name": "한화시스템",
   "market": "KOSPI",
-  "basDt": "20261023",
+  "basDt": "20261026",
   "price": {
     "code": "272210",
     "name": "한화시스템",
     "market": "KOSPI",
-    "basDt": "20261023",
-    "close": 66300,
-    "vs": -7600,
-    "fltRt": -10.28,
-    "open": 70600,
-    "high": 71700,
-    "low": 65800,
-    "prevClose": 73900,
-    "volume": 938056,
-    "tradeValue": 63672789700,
+    "basDt": "20261026",
+    "close": 63700,
+    "vs": -2600,
+    "fltRt": -3.92,
+    "open": 64300,
+    "high": 64600,
+    "low": 60100,
+    "prevClose": 66300,
+    "volume": 868042,
+    "tradeValue": 54351291350,
     "week52": {
       "low": 45350,
       "high": 162700,
-      "position": 0.17852577758841073,
-      "days": 245,
-      "from": "20251023"
+      "position": 0.15636983383042183,
+      "days": 244,
+      "from": "20251026"
     },
     "recent5": [
-      {
-        "basDt": "20261019",
-        "fltRt": 3.8,
-        "open": 77800,
-        "high": 82600,
-        "low": 73500,
-        "close": 82000
-      },
       {
         "basDt": "20261020",
         "fltRt": -13.9,
@@ -64,36 +56,80 @@
         "high": 71700,
         "low": 65800,
         "close": 66300
+      },
+      {
+        "basDt": "20261026",
+        "fltRt": -3.92,
+        "open": 64300,
+        "high": 64600,
+        "low": 60100,
+        "close": 63700
       }
     ],
     "volumeVs20d": {
-      "avg20": 999244,
-      "ratio": 0.94
+      "avg20": 963815,
+      "ratio": 0.9
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 528,
-      "rows52w": 245
+      "rows": 529,
+      "rows52w": 244
     },
-    "generatedAt": "2026-10-26T07:13:17.663Z"
+    "generatedAt": "2026-10-27T07:00:54.057Z"
   },
   "facts": [
-    "코스피보다 10.58%p 낮았어요.",
+    "코스피보다 2.46%p 낮았어요.",
     "거래량은 20일 평균의 0.9배예요.",
-    "시가보다 4,300원 낮게 마감했어요."
+    "시가보다 600원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "한화시스템, 우주·국방 AI에 23조…데이터 사업 승부수",
-      "source": "서울경제TV",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1FOWJPVXlmU2k3dXdOYWhRNENGeVRFdy05WllhaV92VjlvelNTYkhIck5Sb3RQUWhmcWNpMTVIX25XeEpDSUpNdHdNamZBcGd0WHllUmxLRzh1VzZjOHJjOHNfVHc?oc=5",
-      "publishedAt": "2026-10-23T09:38:22.000Z"
+      "title": "전투기용 OLED, 스마트폰보다 발광층 더 쌓는다",
+      "source": "디일렉",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9sZ2d2NkpkTHVBMmYwUEY2aUpuTXRUYVo5Zkx6WUFiYlNGYWNCejBIQk4xMEU1RHZ0NXZFRnI2WUF4VWR4Q2d6YVUxUXM5a1BqZlk5bngyVG5KSjB5VTVFR2hQdG56UQ?oc=5",
+      "publishedAt": "2026-10-26T10:19:34.000Z"
+    },
+    {
+      "title": "급등장에 주식 맡기고 돈 빌렸더니 … 한화·SK '2조 손실' 우려",
+      "source": "매일경제",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5leVZiUXhJczhoZ2dlRlp4WlNQQWlwLXlfbHBCNWpVU1RuZTM3TXNma09feDFPUW5iR0xLbjdTbk1pOEhiLVNRU2xFa0NXd0RFcGc?oc=5",
+      "publishedAt": "2026-10-26T08:34:41.000Z"
     },
     {
       "title": "한화시스템 주가 하락 중",
       "source": "아시아뉴스통신",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBjYklLN2U3NnJaRjEyRlI1VkNMNzhzWndCNnMxUmx1aURWWjJiUE1wVFVFSF9wRk9obVhzd3J1VkVIYzFqQlJ5enRHLXFvSGc1THRXWGQxcTN6cEVNYnFKYmNkTmNJWnBpRjA1eFVYRDFuV0JY?oc=5",
-      "publishedAt": "2026-10-23T00:28:24.000Z"
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFA1NUhvS1Azc3ZhaE9keE5VRzFTOWNYaVQ1SmVZS3dSbkw5dU56ejItN2ZHUVlteWtpQlliTXdSQzhiY2owS2d3bjlJaG5RZmZPMDVGZHdKNElWdlo1ekJPbnBGTEtMRFUzN2h4ZmxIVVozd3B4?oc=5",
+      "publishedAt": "2026-10-26T00:28:51.000Z"
+    },
+    {
+      "title": "한화시스템 주가, 10월 26일 장중 60,100원 9.35% 하락",
+      "source": "톱스타뉴스",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBmRHZ5bUlJRXl5Qy1FbUNSTlREUVFSSGxFTjFlRlk3RUZuZU9fYy1DOEN1Nzh4QXRPa3RiSkg0MGk4dldYSGZMZmZFcXdyaGd0cmRLMDNTbDBtT3IzZmQxc2V5VGtveHNVRXFUQUpUaWw4QQ?oc=5",
+      "publishedAt": "2026-10-26T01:26:08.000Z"
+    },
+    {
+      "title": "[한화 줌인③] 한화오션 지분 넘겨 '돈맥경화' 풀었지만…한화시스템, '차입금 1.4조·부채비율 189%' 전망",
+      "source": "빅데이터뉴스",
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9yRFdPVnVUbmVZRUVlOThoaHRrMlZsa3RpX1l6WlBDX3RUZ0tLdlBteS1rSXBramhpZ3haTW00SjlKTE1pWHRMV0RNOFBsVHhEVnBsWTVDMzBPNVBwcWRKQ2tWRVNZdm1PQVl3YUNGN3Q0cjlmVng2TTdIX2g?oc=5",
+      "publishedAt": "2026-10-25T23:24:46.000Z"
+    },
+    {
+      "title": "한화그룹 방산 3개사 대표 현충탑 참배",
+      "source": "뉴시스",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE94TEhLVFI0cVJEZHlJYzJ2eENQQldCSlRJV0ljSEFYTW14NkNkaE4yS3did01Xak5ENzRNcjZSUDQ3QlJYM3RtcmhoREpkV2NPLWNrLVo2bGNQU0J3NUdaaA?oc=5",
+      "publishedAt": "2026-10-26T08:03:37.000Z"
+    },
+    {
+      "title": "한화, KAI 민영화 공론화 시동 '반색'…인수 명분 쌓기",
+      "source": "딜사이트",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5TM0k2ZnFzV1hPUkd1RkVZZ1JOWVZFQmtocjljNDV2dGw3OGN1TWF4ekRwdW1zYlBvR3IzaldXRWJlV2FTV1ZuQjFBWS1rUU0?oc=5",
+      "publishedAt": "2026-10-25T21:19:53.000Z"
+    },
+    {
+      "title": "방산주 동반 약세…LIG D&A 9%대·한화에어로 5%대↓ [종목NOW]",
+      "source": "파이낸셜뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5JXzY0N3ZfS0QxUkg5R1J0WlpNMWg5M1FzMElaWkxsbF9IWGRiMnFoaHJsMGJidzNETXN1QmlwOU4zalF6TlFDUURfSXQxZ090a0REeGMzY2FQQQ?oc=5",
+      "publishedAt": "2026-10-26T02:05:11.000Z"
     }
   ],
   "dart": [],
@@ -120,9 +156,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5550.3,
-    "vs": 16.53,
-    "fltRt": 0.3
+    "clpr": 5469.47,
+    "vs": -80.83,
+    "fltRt": -1.46
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -131,7 +167,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-26T07:14:27.617Z",
+  "builtAt": "2026-10-27T07:01:56.909Z",
   "archiveDays": 120,
-  "archiveFrom": "20260427"
+  "archiveFrom": "20260428"
 }

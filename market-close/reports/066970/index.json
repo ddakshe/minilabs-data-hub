@@ -3,10 +3,18 @@
   "name": "엘앤에프",
   "market": "KOSPI",
   "retainDays": 120,
-  "firstBasDt": "20260427",
-  "lastBasDt": "20261023",
+  "firstBasDt": "20260428",
+  "lastBasDt": "20261026",
   "count": 120,
   "days": [
+    {
+      "basDt": "20261026",
+      "close": 83200,
+      "fltRt": -3.14,
+      "headline": "코스피보다 1.68%p 낮았어요.",
+      "newsCount": 8,
+      "dartCount": 0
+    },
     {
       "basDt": "20261023",
       "close": 85900,
@@ -1070,16 +1078,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260427",
-      "close": 204000,
-      "fltRt": 2.77,
-      "headline": "코스피보다 0.62%p 높았어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-10-26T07:14:27.599Z"
+  "updatedAt": "2026-10-27T07:01:56.898Z"
 }

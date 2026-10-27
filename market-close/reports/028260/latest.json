@@ -2,37 +2,29 @@
   "code": "028260",
   "name": "삼성물산",
   "market": "KOSPI",
-  "basDt": "20261023",
+  "basDt": "20261026",
   "price": {
     "code": "028260",
     "name": "삼성물산",
     "market": "KOSPI",
-    "basDt": "20261023",
-    "close": 288000,
-    "vs": -500,
-    "fltRt": -0.17,
-    "open": 282500,
-    "high": 288500,
-    "low": 273500,
-    "prevClose": 288500,
-    "volume": 261404,
-    "tradeValue": 74062078000,
+    "basDt": "20261026",
+    "close": 292000,
+    "vs": 4000,
+    "fltRt": 1.39,
+    "open": 283500,
+    "high": 296500,
+    "low": 283500,
+    "prevClose": 288000,
+    "volume": 289257,
+    "tradeValue": 84347563500,
     "week52": {
-      "low": 206000,
+      "low": 207000,
       "high": 535000,
-      "position": 0.24924012158054712,
-      "days": 245,
-      "from": "20251023"
+      "position": 0.25914634146341464,
+      "days": 244,
+      "from": "20251026"
     },
     "recent5": [
-      {
-        "basDt": "20261019",
-        "fltRt": -0.52,
-        "open": 283000,
-        "high": 285000,
-        "low": 272500,
-        "close": 285000
-      },
       {
         "basDt": "20261020",
         "fltRt": -3.51,
@@ -64,48 +56,105 @@
         "high": 288500,
         "low": 273500,
         "close": 288000
+      },
+      {
+        "basDt": "20261026",
+        "fltRt": 1.39,
+        "open": 283500,
+        "high": 296500,
+        "low": 283500,
+        "close": 292000
       }
     ],
     "volumeVs20d": {
-      "avg20": 360841,
-      "ratio": 0.72
+      "avg20": 358284,
+      "ratio": 0.81
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 528,
-      "rows52w": 245
+      "rows": 529,
+      "rows52w": 244
     },
-    "generatedAt": "2026-10-26T07:12:35.840Z"
+    "generatedAt": "2026-10-27T07:00:17.328Z"
   },
   "facts": [
-    "코스피보다 0.47%p 낮았어요.",
-    "거래량은 20일 평균의 0.7배예요.",
-    "시가보다 5,500원 높게 마감했어요."
+    "코스피보다 2.85%p 높았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가보다 8,500원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "삼성물산 패션, '멤버십 위크' 프로모션 실시, 신규고객에 추가 혜택 제공하고, 브랜드별 아우터 기획전 진행",
+      "title": "건설사 3Q 성적표 '원가율·물량'이 가른다…대우·삼성 웃고 DL·GS 뒷걸음",
+      "source": "뉴스1",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9VMEtfR2Rpb2IxWHE4a1I4TEdKOXFJcXpzU3MyeGpDZHRyZFVHWlJfcHJiVjAybi01Z0JwTDdidWp2eDhwYmdRQ1JoU2xHaTNxYkVKd2Q3NktxM2c?oc=5",
+      "publishedAt": "2026-10-25T21:11:00.000Z"
+    },
+    {
+      "title": "반포 푸르지오에 '래미안' 입힌다…삼성물산, 첫 '넥스트 리모델링' 수주",
+      "source": "신아일보",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFB5cGZZTjM4MzZHdkl5c2NqY01aMklaZnhBcXFhZzBwbzNVOEh0VUtwb2xHMEVKeC1obkh2TjlabHJrdVA2QWpsRVMxNHp2OW1xVVRvVHpZSFpKbmh6M1lMYzUyRTR2aExoYlpKRTA4R3M?oc=5",
+      "publishedAt": "2026-10-26T03:58:02.000Z"
+    },
+    {
+      "title": "[진단] 하이엔드 없이도 1위…삼성물산 ‘래미안’의 자신감",
+      "source": "이코노미톡뉴스",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5vQ2J2a1VlUDVaekxWMzM3RDd3Yk52QWpIVWpKbk9naWNlTEdYVGdyS0RFcFZiTml4WHZmenFDTEtOektGbEc3YUh5SnRvUUFxYmJDY1hITVpqblYxOTBrQUZYczVCUmFfakhYMA?oc=5",
+      "publishedAt": "2026-10-25T22:00:00.000Z"
+    },
+    {
+      "title": "삼성물산, 반포푸르지오아파트 리모델링 시공사 선정",
       "source": "삼성물산 뉴스룸",
-      "link": "https://news.google.com/rss/articles/CBMirANBVV95cUxOZjZrMkowUmdkVnlnRGRKcWRnYktMOTVXZ19maXMtOHd4SDZBNG5nRTlYR2w1dm9YdzNIdlNzbllxMHVXTm8yZDFONEpTVWpFVmNHRXZqM0xuSDFabVV1Tk5VdDBPZW9qazlfYmhFS1VBSEQtU0swSWtDeE1XUDZjeUotZXVVRWRzQ213RlY2bzN2SWhSbkdja2JyMEVfM1p1aDlybGtjWS1zSUh5THp1d0pKY1RLUXB2cUY0Vm40LVdwcExsMm15N2t5QUpMVnh3c0xxTXY0NUMtS0o4S09TSU8xY0pMNmJ2WDJkenV0cXY1WWRaSkRRdzdlWkZsYkhaSTYzbDctTkdFdG5rb0lrbEticTRvNDMzMWkwbUZWYS1qb1ZKd3dGdzZVMzUyZzgwd2x2azh1bUg1VVFUOTNuRTVZUi1LTkNTanczS0Z2QXZUdE9CSVJORXBGUXFncksyUEI0Uk0yMndtM1Q3aUVOdE9WakJXSmhSTXFOTEZYOXVBNlc1QWdwU0RXMGYtdDItX2FicGNxQXI4c29GdnpKSW96aDlPM3ZzY28tVQ?oc=5",
-      "publishedAt": "2026-10-23T10:04:03.000Z"
+      "link": "https://news.google.com/rss/articles/CBMitgNBVV95cUxPblVVYU00YU1zUVdGOFRPSzV5S0FJV2N1TVg3eFZvWm9DNUlMWEFLTUY2RTc0Q0VaLUZ2aWNhcENFZ29GMjFaOWlQejl2dnhRMEdKclFwMDBXN2Voams0ZGVua2ZzOHFoNllYYnlOVzhhYXhpaHg5d0prYWVtLVhIcm55VkRlZl83Ql9JMWdVdXNlLWY4MklGU1RVMFNhcmRCLUF1MEJPREs0Zy1lRmo0Q2pHbGF5NEcwaERkUVc0TzZVQkNwdVdEek5aRWlFVUI4NjQ1cl9NNHRuN2JsN3BJeUFCMEk1NGhVODU1RlI5YU1YakR2S3lwV3B2RVNkNTEzOHVPVGNZb0I5TGd5MzdBLWthNXVCaUQwcjAzOHB4QjI0RnNjbWpSVkJBeDBmMFpjS3h1dTRIT29RdkZKVEdTWkRZMEVvMGgzSDZXUGxkUFdLOGhkamVVeFBNREstMUc3aTdhN1V4TkhpWEQ5X3h5UFIyZW5oNnViT3hobzU5WmpKaVBnQ1VtbDg2cVgxM05RZzZuclU4aDRJcE90QnE0dTJfaktTc3hzd2RrQ3cxSWg3SEhLc2c?oc=5",
+      "publishedAt": "2026-10-26T02:07:47.000Z"
+    },
+    {
+      "title": "삼성물산, 7381억 창원 용호1구역 수주…최고 46층 '래미안 클리에르'",
+      "source": "머니투데이",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5JUG5NYmkzdlpBMWtWQWpJblp3ZEFVaGQxNmJFc3JLazVZWmsyZUwzQmNXTkI0ek9qM2c0VEtRYnVPVlFpbXFuNGpGTmloUlVFT2RBRm83SlA3TTFMejJOajZTc2hlRlhJRFHSAW9BVV95cUxQZzZPYl94cjJsSldTaEtqajByWklYN1A2azB1Qi1CVFBVaUdVaWhBdkxMYkw1RFg1WDVyWGdUMEFLUm9Nc2dKTDU2RGxGYXNtd2tvbHctVkYzV25QNHFHM21WTFZUNElGem5rRjY5ajA?oc=5",
+      "publishedAt": "2026-10-25T23:52:16.000Z"
+    },
+    {
+      "title": "삼성물산, 7381억 규모 경남 창원 용호1구역 재건축 시공사 선정 - 조선비즈",
+      "source": "Chosunbiz",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNZkN1VmVaY3RIVG5DUHlFcXltYTI2YlYxTldIanNJdEd3V2xOUkFoVjNON1owYzdzX2RpbzlMNWhTS2loTVFsQlM4Y0w3NXp6bmloWXhZOHpWMkUzSWFvUEZLQkVsTWZVZDlTOXZ3ZWNxUjNQQlY2Yml4aXU2RGdjbmpqQ0tzTl94VkdQQmNDV1dybG1sTnlqVNIBrAFBVV95cUxQeXdvMmdqRkl0VzFtTDBlZ0hwVDB0YnQ1dy1BelhUcGg0TlNhSWE4ckdvZVVidzROZ3BZTHN2LVUteW93ZkxLSTdrYklqLUc3Tl94d3VndEdIMndkSUVSR2VyWm1abkNwSWRXM2F1YktNSnZfSTBHM085cTFzM0taS0UtOTgwSVlvcHpSd0xWSXBtX0htQW5IWm0wQW82RWVfYkZqOUtpRmtfMkZl?oc=5",
+      "publishedAt": "2026-10-25T23:45:00.000Z"
+    },
+    {
+      "title": "창원 7천억 재건축 대어 품은 삼성물산…IPARK현산은 군포 4천억 재개발 수주",
+      "source": "파이낸셜뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5rN0tRMFJpV3A1Z29ieTV3ZlZWMXNxaS0ydTRLbTVXMlZGQ3lBdzlUTi13SjA1X3dYZy00alV6WWNxb09RQ3phQ3BDVkM2R3ZHZ2RMeDJnNDlVUQ?oc=5",
+      "publishedAt": "2026-10-26T09:48:14.000Z"
+    },
+    {
+      "title": "반포·창원서 연이어 수주…삼성물산, 연간 정비 수주 첫 10조",
+      "source": "한국경제",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9FMFo1MVRWNUVubk5VTE41RnRkdzFuWTFCVEFzdUU2TGVUTjFpakFzaS1yZEhQZUIyazBYWW91eG5TQlpWWVY3MzhjeHNMSGRDNV9pN3lpTDFodw?oc=5",
+      "publishedAt": "2026-10-26T04:30:48.000Z"
     }
   ],
   "dart": [
     {
-      "title": "[기재정정]단일판매ㆍ공급계약체결              ",
+      "title": "기업설명회(IR)개최(안내공시)              ",
       "filer": "삼성물산",
-      "receiptNo": "20261023800847",
-      "date": "20261023",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261023800847"
+      "receiptNo": "20261026800711",
+      "date": "20261026",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261026800711"
+    },
+    {
+      "title": "최대주주등소유주식변동신고서              ",
+      "filer": "삼성물산",
+      "receiptNo": "20261026800705",
+      "date": "20261026",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261026800705"
     }
   ],
   "ownership": [],
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5550.3,
-    "vs": 16.53,
-    "fltRt": 0.3
+    "clpr": 5469.47,
+    "vs": -80.83,
+    "fltRt": -1.46
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -114,7 +163,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-26T07:14:27.481Z",
+  "builtAt": "2026-10-27T07:01:56.818Z",
   "archiveDays": 120,
-  "archiveFrom": "20260427"
+  "archiveFrom": "20260428"
 }
