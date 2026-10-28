@@ -3,10 +3,18 @@
   "name": "HLB",
   "market": "KOSDAQ",
   "retainDays": 120,
-  "firstBasDt": "20260428",
-  "lastBasDt": "20261026",
+  "firstBasDt": "20260429",
+  "lastBasDt": "20261027",
   "count": 120,
   "days": [
+    {
+      "basDt": "20261027",
+      "close": 39900,
+      "fltRt": 1.66,
+      "headline": "코스닥보다 0.63%p 낮았어요.",
+      "newsCount": 8,
+      "dartCount": 0
+    },
     {
       "basDt": "20261026",
       "close": 39250,
@@ -1052,16 +1060,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260428",
-      "close": 62900,
-      "fltRt": 1.62,
-      "headline": "시가 62,000원보다 900원 높게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-10-27T07:01:56.858Z"
+  "updatedAt": "2026-10-28T07:44:45.034Z"
 }

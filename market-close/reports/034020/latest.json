@@ -2,37 +2,29 @@
   "code": "034020",
   "name": "두산에너빌리티",
   "market": "KOSPI",
-  "basDt": "20261026",
+  "basDt": "20261027",
   "price": {
     "code": "034020",
     "name": "두산에너빌리티",
     "market": "KOSPI",
-    "basDt": "20261026",
-    "close": 57600,
-    "vs": -1800,
-    "fltRt": -3.03,
-    "open": 58300,
-    "high": 59100,
-    "low": 57200,
-    "prevClose": 59400,
-    "volume": 1619072,
-    "tradeValue": 93775198500,
+    "basDt": "20261027",
+    "close": 58900,
+    "vs": 1300,
+    "fltRt": 2.26,
+    "open": 58600,
+    "high": 60500,
+    "low": 58500,
+    "prevClose": 57600,
+    "volume": 1371125,
+    "tradeValue": 81540272200,
     "week52": {
       "low": 57600,
       "high": 136400,
-      "position": 0,
-      "days": 244,
-      "from": "20251026"
+      "position": 0.01649746192893401,
+      "days": 245,
+      "from": "20251027"
     },
     "recent5": [
-      {
-        "basDt": "20261020",
-        "fltRt": -5.71,
-        "open": 65600,
-        "high": 65600,
-        "low": 61800,
-        "close": 62800
-      },
       {
         "basDt": "20261021",
         "fltRt": 1.11,
@@ -64,81 +56,89 @@
         "high": 59100,
         "low": 57200,
         "close": 57600
+      },
+      {
+        "basDt": "20261027",
+        "fltRt": 2.26,
+        "open": 58600,
+        "high": 60500,
+        "low": 58500,
+        "close": 58900
       }
     ],
     "volumeVs20d": {
-      "avg20": 2473306,
-      "ratio": 0.65
+      "avg20": 2403306,
+      "ratio": 0.57
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 529,
-      "rows52w": 244
+      "rows": 530,
+      "rows52w": 245
     },
-    "generatedAt": "2026-10-27T07:00:46.210Z"
+    "generatedAt": "2026-10-28T07:43:28.604Z"
   },
   "facts": [
-    "코스피보다 1.57%p 낮았어요.",
-    "거래량은 20일 평균의 0.7배예요.",
-    "시가보다 700원 낮게 마감했어요."
+    "코스피보다 0.83%p 낮았어요.",
+    "거래량은 20일 평균의 0.6배예요.",
+    "시가보다 300원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "두산에너빌리티 미국 원전 8기 판 깔렸다…수익은 언제",
-      "source": "자본시장뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFAxclRvRWdWbWpKTnFod0hRY25qOWJqZHRwWmFyS3I5ZE9xN19RTS1FeE5ZT21oZmlTZXdQZGxNemJ4OGVNMEpQWVdHMTVEOUNkZW4ySFNtVThhc1JNdXFYVlRLalktcWc?oc=5",
-      "publishedAt": "2026-10-26T01:51:57.000Z"
+      "title": "InvestingPro는 두산에너빌리티의 48% 하락을 어떻게 미리 포착했나 By Investing.com",
+      "source": "Investing.com 한국어",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE56MlV6Q3B5d3lXVm94SERFaGN6cXdKajFxUUVyMFk2V1pNTHJTa3h1MXh6MmM1RUdaSk5PaUZZa2FkWTlxem9Wem80c0pQLVkzeTdIdXpZSTFoZ0cwSWVVQVNMZUdJcmJLc0lZZnhyTzhDZnJXdEE?oc=5",
+      "publishedAt": "2026-10-27T11:43:00.000Z"
     },
     {
-      "title": "[2026 에너지 포럼]3대 메가 프로젝트 전력 수요 확대…두산에너빌리티, 원전·가스터빈 공급 기회",
-      "source": "메트로신문",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBBeDN4RXJfTHZWNVMzNi1FVE1pTUFEWW9XSzNLMnFuNE9SNmhlQ0NDVjVhR1Q1RkxCYWV3RGplb3pPUDJVd1RVQ3ZiMzNZYnNhanhLOUhjLXNSNi1RRmtlSA?oc=5",
-      "publishedAt": "2026-10-26T07:32:57.000Z"
+      "title": "두산에너빌리티, 영주 가흥동에 '트리븐 가흥' 공급",
+      "source": "경북매일",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1USDhNYzRRUF81Q3phUl84QlBaR0xCbExHbWVrWmd0M1BLSVMyZFE2QmlGN0hiUU9ad05mZFNoR3BPaTltM3hWcDhWc2VNTV9LdWI4aGstVmU5dw?oc=5",
+      "publishedAt": "2026-10-27T06:19:00.000Z"
     },
     {
-      "title": "두산에너빌리티 주가, 10월 26일 장중 58,700원 1.18% 하락",
+      "title": "두산에너빌리티 주가 3%대 상승…교보증권, 2027년 원전·가스터빈 이익 성장 전망",
+      "source": "CBC뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9XVW1jakpDSWNUU0xESDcxN1BseEg5aG1jVUJaSTdaX0N2UlJLN05DalFkWm9JR05RbFVaNUdWdW16WkE2NkRUbF9ibGhkNUNkbUtnVHBSS3FHMXRtTW5rLXdlT1FLZ2hJ?oc=5",
+      "publishedAt": "2026-10-27T00:27:33.000Z"
+    },
+    {
+      "title": "두산에너빌리티 주가, 연이은 약세에 '6만빌리티' 회복 주목…실적 발표 변수될까?",
+      "source": "CBC뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1aMFBwTUV3Q0RvNWtjaVhhNEFxZEZ6cFpiaDZidEN6RVRfNmx2QUNHYmZxZWVzX1g5WkdXRG0yV0VGNHV4ZFlSamh5RUdkMDExS0FLa1BVcWJmTUZINXhfMkdYYzZ1SlU4?oc=5",
+      "publishedAt": "2026-10-26T15:05:00.000Z"
+    },
+    {
+      "title": "두산에너빌리티 3%대 상승…미국·이란 전쟁 속 원전 관련주 동반 강세",
+      "source": "CBC뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBuLXA4VEFTTDJONnVvbWlpUzJIYVZndmdiSktneFhoazJ5MTJQX3JyLXpRZXhER1Bkcms4d2REVXRDZDlyNTNueDlWRmlIb0g3cG4tdFpyRUdPUTE1RGJjT2JSR1huZGp5?oc=5",
+      "publishedAt": "2026-10-27T00:21:38.000Z"
+    },
+    {
+      "title": "두산에너빌리티 주가, 10월 27일 장중 59,500원 3.30% 상승",
       "source": "톱스타뉴스",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBwWm5IRndNZU1CUm1sbEktaDdVNWpaLXllV1cyVDBxRDFoQ1dKSjJxd3FvU0JaeTBtUmJhMGxtb0J4MWtWeU53Yi13a3N0V1BhOXZNWDl3Y1gzc1liTWNIRkdIc3k3WWQ1Vm1kZWE4UmlwUQ?oc=5",
-      "publishedAt": "2026-10-26T00:44:00.000Z"
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBDWXN6elRPWG5yb0JRSDNlWGtjbUN3UUtwNUs1aExWMmliNHhBZmhiYzJhSFBRUGZWRTA4eGhuX1NMOTlLdDZZWG5MT3dwbU9TeHExenFGUmpLZDBxVXN0c1VaMm00SS1ya2pJY2FnVGM1dw?oc=5",
+      "publishedAt": "2026-10-27T00:42:03.000Z"
     },
     {
-      "title": "두산에너빌리티 주초장부터 약세…10월 마지막장까지 향방 주목",
-      "source": "CBC뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE11UVBueTRGdFdCUlVKSEYwWXIwTC05M1lwQVVRSURfTFozbzdLU2pNS2Y4cXNTU2htYWJjVHl3cXBtRVR5bG1oQXZpeGVYSmxEVjV0NXl3TmcyMDZmcUozNy1UcVdxdTFE?oc=5",
-      "publishedAt": "2026-10-26T02:38:38.000Z"
-    },
-    {
-      "title": "두산에너빌리티, 4%대 약세 후 새주 추이는?…미국 원전주 흐름 등 변수",
-      "source": "CBC뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1ld3YtdzRVVUhOQk9nMWk2Wjd5QlV4STZlZkQ1czhpWFh0d081M3RQOGFsOFB1d3pGdi05cURDdm9HLXM3elpwNXhDd2x1c0V3dDBKR0UwOURRUG10WUVRMGF4Y2tyanJf?oc=5",
-      "publishedAt": "2026-10-25T15:13:00.000Z"
-    },
-    {
-      "title": "두산에너빌리티 주가 1,800원 하락 후 마감",
+      "title": "두산에너빌리티 주가 상승 중",
       "source": "아시아뉴스통신",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9vNG9aSWtQOXVHMnlWenNjQ2hrZG5sUTdmck5kQ282endiSXgybXVVZzEtODZ0Q1I0ZlJQNkVRNC1TekVWeUNSa00zdzROeTBQQWt5SWNvejgyalpPM0xkTmQ2UjUxM29TajA3bTlOUGVZdEZG?oc=5",
-      "publishedAt": "2026-10-26T06:43:31.000Z"
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE03ODZJeU9KMDJzT3ktNGxQQklLa084UlEzXzhESzRDWnBIMHVVSVQyQXFnQmsxTTVWWk1OWl83RWJ3TXNpVUpfeHhYdjJNNm5uR1Z3RlgtTTd4Z1hxeUlfZE9abU9ISmxxSFVUb3BNaXB4TTVF?oc=5",
+      "publishedAt": "2026-10-27T00:30:31.000Z"
     },
     {
-      "title": "두산에너빌리티 주가 하락 중",
-      "source": "아시아뉴스통신",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBaQWNya1h0QXZFNjg0TWY1MTdiazZHVmZ0QUtNb0JfV3dfODBZNWZuUmRDZGNxN2VTUDJpSHQ0T29XU3VrN1BvQzhKbWNSeXRRbWJicTJyR2Y2X3VpQ28tbmJsRG9wWVI1VEdoandmdkVSQ1pS?oc=5",
-      "publishedAt": "2026-10-26T00:33:49.000Z"
-    },
-    {
-      "title": "두산에너빌리티 26일 장중 3%대 하락",
-      "source": "비건뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9RY2J5WEVIS2lpYll6bWNvYUhFNjdmX1dreEFvejdXNTlNVGkweF81N092eG9OMF9zZlNBOFNQSEMzRDdzVHdHaXBqQXhUNFcxdHJqbXYtcm9JdmhLX2tYMU40THdHdw?oc=5",
-      "publishedAt": "2026-10-26T03:01:39.000Z"
+      "title": "두산에너빌리티, 계열사 운용 두산신기술투자조합2호에 400억원 출자 결정",
+      "source": "디지털투데이",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9rdVo4UERlZTVqQWNCbVNLME5BUzRTTjVLNmZ3ZWFBRVJtY1J1Y19XaUVHWlVEVlpRcHgzbjBiQVdNcFFJcjFuYTJ5ZFlQYUtrUV8xalE5QVJ6eXMyNGRObmpRalZVQmdmNXpuVVRaYVIwSDh1c2ZiQXdWaw?oc=5",
+      "publishedAt": "2026-10-27T07:41:02.000Z"
     }
   ],
   "dart": [
     {
-      "title": "[기재정정]단일판매ㆍ공급계약체결              ",
+      "title": "특수관계인과의수익증권거래",
       "filer": "두산에너빌리티",
-      "receiptNo": "20261026800529",
-      "date": "20261026",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261026800529"
+      "receiptNo": "20261027000283",
+      "date": "20261027",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261027000283"
     }
   ],
   "ownership": [
@@ -164,9 +164,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5469.47,
-    "vs": -80.83,
-    "fltRt": -1.46
+    "clpr": 5638.34,
+    "vs": 168.87,
+    "fltRt": 3.09
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -175,7 +175,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-27T07:01:56.888Z",
+  "builtAt": "2026-10-28T07:44:45.075Z",
   "archiveDays": 120,
-  "archiveFrom": "20260428"
+  "archiveFrom": "20260429"
 }

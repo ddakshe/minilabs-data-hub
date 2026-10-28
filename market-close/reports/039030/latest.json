@@ -2,37 +2,29 @@
   "code": "039030",
   "name": "이오테크닉스",
   "market": "KOSDAQ",
-  "basDt": "20261026",
+  "basDt": "20261027",
   "price": {
     "code": "039030",
     "name": "이오테크닉스",
     "market": "KOSDAQ",
-    "basDt": "20261026",
-    "close": 379000,
-    "vs": -25000,
-    "fltRt": -6.19,
-    "open": 393000,
-    "high": 399000,
-    "low": 377500,
-    "prevClose": 404000,
-    "volume": 66643,
-    "tradeValue": 25678684250,
+    "basDt": "20261027",
+    "close": 395000,
+    "vs": 16000,
+    "fltRt": 4.22,
+    "open": 392000,
+    "high": 401500,
+    "low": 390500,
+    "prevClose": 379000,
+    "volume": 81703,
+    "tradeValue": 32380248250,
     "week52": {
       "low": 230000,
       "high": 612000,
-      "position": 0.3900523560209424,
-      "days": 244,
-      "from": "20251026"
+      "position": 0.4319371727748691,
+      "days": 245,
+      "from": "20251027"
     },
     "recent5": [
-      {
-        "basDt": "20261020",
-        "fltRt": -3.77,
-        "open": 430000,
-        "high": 437000,
-        "low": 413500,
-        "close": 421000
-      },
       {
         "basDt": "20261021",
         "fltRt": 2.14,
@@ -64,30 +56,38 @@
         "high": 399000,
         "low": 377500,
         "close": 379000
+      },
+      {
+        "basDt": "20261027",
+        "fltRt": 4.22,
+        "open": 392000,
+        "high": 401500,
+        "low": 390500,
+        "close": 395000
       }
     ],
     "volumeVs20d": {
-      "avg20": 104575,
-      "ratio": 0.64
+      "avg20": 103872,
+      "ratio": 0.79
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 529,
-      "rows52w": 244
+      "rows": 530,
+      "rows52w": 245
     },
-    "generatedAt": "2026-10-27T07:00:35.489Z"
+    "generatedAt": "2026-10-28T07:43:17.633Z"
   },
   "facts": [
-    "코스닥보다 2.93%p 낮았어요.",
-    "거래량은 20일 평균의 0.6배예요.",
-    "시가보다 14,000원 낮게 마감했어요."
+    "코스닥보다 1.93%p 높았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가보다 3,000원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "코스닥, 3%대 낙폭에 730선 밑으로...주성엔지니어링, 이오테크닉스 등 하락",
-      "source": "이코노뉴스",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE0temVzOExGMm1HQWJoV3BuT184UFA0LTVuNkZVODJxMTFfUnkzUG5IVjJnOXZvbjRCR2xPZW1fbUdELWtiSWt1ajFMYUtNbFgtdnB6OElCdnp5aDE1TGhMLWNjcFlldFFJcnJvemxMSQ?oc=5",
-      "publishedAt": "2026-10-26T12:30:00.000Z"
+      "title": "특징주, 이오테크닉스-반도체 장비 테마 상승세에 5.01% ↑",
+      "source": "매일경제 마켓",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE8tbUVHR2lQMVAyVEt3dmdRS3VxbTVZQ3pRRlA5bFpJbUtxRjhLQmFLR3QwdExCOVJzb25Gd2RBaDJEWEtRS2tHUThteHpsckZoV2c?oc=5",
+      "publishedAt": "2026-10-27T00:41:40.000Z"
     }
   ],
   "dart": [],
@@ -123,9 +123,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 727.21,
-    "vs": -24.48,
-    "fltRt": -3.26
+    "clpr": 743.83,
+    "vs": 16.62,
+    "fltRt": 2.29
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -134,7 +134,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-27T07:01:56.863Z",
+  "builtAt": "2026-10-28T07:44:45.040Z",
   "archiveDays": 120,
-  "archiveFrom": "20260428"
+  "archiveFrom": "20260429"
 }

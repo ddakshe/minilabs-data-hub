@@ -2,37 +2,29 @@
   "code": "145020",
   "name": "휴젤",
   "market": "KOSDAQ",
-  "basDt": "20261026",
+  "basDt": "20261027",
   "price": {
     "code": "145020",
     "name": "휴젤",
     "market": "KOSDAQ",
-    "basDt": "20261026",
-    "close": 176400,
-    "vs": -3700,
-    "fltRt": -2.05,
-    "open": 177000,
-    "high": 180800,
-    "low": 175900,
-    "prevClose": 180100,
-    "volume": 24728,
-    "tradeValue": 4399157900,
+    "basDt": "20261027",
+    "close": 179400,
+    "vs": 3000,
+    "fltRt": 1.7,
+    "open": 178100,
+    "high": 184900,
+    "low": 177300,
+    "prevClose": 176400,
+    "volume": 40392,
+    "tradeValue": 7321432250,
     "week52": {
       "low": 168500,
       "high": 296500,
-      "position": 0.06171875,
-      "days": 244,
-      "from": "20251026"
+      "position": 0.08515625,
+      "days": 245,
+      "from": "20251027"
     },
     "recent5": [
-      {
-        "basDt": "20261020",
-        "fltRt": -1.5,
-        "open": 184500,
-        "high": 190100,
-        "low": 182800,
-        "close": 184200
-      },
       {
         "basDt": "20261021",
         "fltRt": 0.87,
@@ -64,42 +56,38 @@
         "high": 180800,
         "low": 175900,
         "close": 176400
+      },
+      {
+        "basDt": "20261027",
+        "fltRt": 1.7,
+        "open": 178100,
+        "high": 184900,
+        "low": 177300,
+        "close": 179400
       }
     ],
     "volumeVs20d": {
-      "avg20": 62677,
-      "ratio": 0.39
+      "avg20": 53687,
+      "ratio": 0.75
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 529,
-      "rows52w": 244
+      "rows": 530,
+      "rows52w": 245
     },
-    "generatedAt": "2026-10-27T07:00:51.445Z"
+    "generatedAt": "2026-10-28T07:43:33.890Z"
   },
   "facts": [
-    "코스닥보다 1.21%p 높았어요.",
-    "거래량은 20일 평균의 0.4배예요.",
-    "시가보다 600원 낮게 마감했어요."
+    "코스닥보다 0.59%p 낮았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가보다 1,300원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "해외시장 침투 전략 먹혔다…대웅·휴젤·메디톡스, 올해도 톡신사업 키우나",
-      "source": "매경헬스",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5VaUk2dDZBNWpwNkRqMnNDY0xYOVQyc2dfRW1MLU94OF9acmxuUVREdU9CZTg2aG9EanItcHZLbGpKY05HeHpRMzIzRE1BTkI5RGw2ekhySWlMQ0pSRnNUUFJGd0NaQU80NTR3Ng?oc=5",
-      "publishedAt": "2026-10-26T07:00:58.000Z"
-    },
-    {
-      "title": "휴젤 주가 3,700원 하락 후 마감",
-      "source": "아시아뉴스통신",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5aQnAwUXdtTWNOajhJUThPMnVCOVEtbzZFN1R3U3ZVYTlLNm5kTHFLcUFaQXNLS1UydTJPRXRsMVJjRm5uMURiNEVsZkJONDZCX2k3UU05LXMyam1hOEFhVnZCZmhVTHdpdUIzVVU3RlR2bXB6?oc=5",
-      "publishedAt": "2026-10-26T06:37:03.000Z"
-    },
-    {
-      "title": "휴젤 주가 하락 중",
-      "source": "아시아뉴스통신",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE80TFBxUGt4RUhnd09DYlUzZ092NUdkM2l4ZmlSTjF2dzVfUUJvemFsS0dQYXpTSHY2NTNUT1ozMjNKV3MxWVZwbENzTmVCSXU3WXBJX0RRaWZLS1NpS3RkcEV1MkVHYWlPMWd4T0Y4a1NxeGNZ?oc=5",
-      "publishedAt": "2026-10-26T00:20:35.000Z"
+      "title": "휴젤 '레티보', 美 클리닉 침투…현지 언론 \"앨러간 보톡스 대항마\"",
+      "source": "한국신용신문",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5KbUhWcWdYeEJSUHB6Wk4zZGkySmxfX1IyNjZIekN2SWRiRVo3UlF3X3FoVmMzS3VFYVhCa2VydVZqeTBBVFZxWlFPNDc0Zml4c2ZtcFB6M2hzbFhnNEtDQkF2X3VjeGxUV2hj?oc=5",
+      "publishedAt": "2026-10-27T03:52:00.000Z"
     }
   ],
   "dart": [],
@@ -117,9 +105,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 727.21,
-    "vs": -24.48,
-    "fltRt": -3.26
+    "clpr": 743.83,
+    "vs": 16.62,
+    "fltRt": 2.29
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -128,7 +116,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-27T07:01:56.902Z",
+  "builtAt": "2026-10-28T07:44:45.093Z",
   "archiveDays": 120,
-  "archiveFrom": "20260428"
+  "archiveFrom": "20260429"
 }

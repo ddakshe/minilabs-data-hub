@@ -3,10 +3,18 @@
   "name": "한화시스템",
   "market": "KOSPI",
   "retainDays": 120,
-  "firstBasDt": "20260428",
-  "lastBasDt": "20261026",
+  "firstBasDt": "20260429",
+  "lastBasDt": "20261027",
   "count": 120,
   "days": [
+    {
+      "basDt": "20261027",
+      "close": 63100,
+      "fltRt": -0.94,
+      "headline": "코스피보다 4.03%p 낮았어요.",
+      "newsCount": 8,
+      "dartCount": 3
+    },
     {
       "basDt": "20261026",
       "close": 63700,
@@ -1069,16 +1077,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260428",
-      "close": 119900,
-      "fltRt": -4.92,
-      "headline": "코스피보다 5.31%p 낮았어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-10-27T07:01:56.911Z"
+  "updatedAt": "2026-10-28T07:44:45.106Z"
 }

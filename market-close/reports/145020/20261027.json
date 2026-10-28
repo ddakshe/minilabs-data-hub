@@ -1,0 +1,122 @@
+{
+  "code": "145020",
+  "name": "휴젤",
+  "market": "KOSDAQ",
+  "basDt": "20261027",
+  "price": {
+    "code": "145020",
+    "name": "휴젤",
+    "market": "KOSDAQ",
+    "basDt": "20261027",
+    "close": 179400,
+    "vs": 3000,
+    "fltRt": 1.7,
+    "open": 178100,
+    "high": 184900,
+    "low": 177300,
+    "prevClose": 176400,
+    "volume": 40392,
+    "tradeValue": 7321432250,
+    "week52": {
+      "low": 168500,
+      "high": 296500,
+      "position": 0.08515625,
+      "days": 245,
+      "from": "20251027"
+    },
+    "recent5": [
+      {
+        "basDt": "20261021",
+        "fltRt": 0.87,
+        "open": 184600,
+        "high": 188900,
+        "low": 184600,
+        "close": 185800
+      },
+      {
+        "basDt": "20261022",
+        "fltRt": -2.69,
+        "open": 186300,
+        "high": 186400,
+        "low": 180300,
+        "close": 180800
+      },
+      {
+        "basDt": "20261023",
+        "fltRt": -0.39,
+        "open": 180500,
+        "high": 182000,
+        "low": 176600,
+        "close": 180100
+      },
+      {
+        "basDt": "20261026",
+        "fltRt": -2.05,
+        "open": 177000,
+        "high": 180800,
+        "low": 175900,
+        "close": 176400
+      },
+      {
+        "basDt": "20261027",
+        "fltRt": 1.7,
+        "open": 178100,
+        "high": 184900,
+        "low": 177300,
+        "close": 179400
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 53687,
+      "ratio": 0.75
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 530,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-28T07:43:33.890Z"
+  },
+  "facts": [
+    "코스닥보다 0.59%p 낮았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가보다 1,300원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "휴젤 '레티보', 美 클리닉 침투…현지 언론 \"앨러간 보톡스 대항마\"",
+      "source": "한국신용신문",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5KbUhWcWdYeEJSUHB6Wk4zZGkySmxfX1IyNjZIekN2SWRiRVo3UlF3X3FoVmMzS3VFYVhCa2VydVZqeTBBVFZxWlFPNDc0Zml4c2ZtcFB6M2hzbFhnNEtDQkF2X3VjeGxUV2hj?oc=5",
+      "publishedAt": "2026-10-27T03:52:00.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20260804",
+      "holder": "아프로디테애퀴지션홀딩스엘엘씨",
+      "ratio": 45.58,
+      "ratioChange": 0,
+      "reason": "특별관계자 및 보유주식등 수 변동에 따른 변동보고",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260804000276"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 743.83,
+    "vs": 16.62,
+    "fltRt": 2.29
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-28T07:44:45.093Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260429"
+}

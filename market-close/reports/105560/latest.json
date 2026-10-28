@@ -2,37 +2,29 @@
   "code": "105560",
   "name": "KB금융",
   "market": "KOSPI",
-  "basDt": "20261026",
+  "basDt": "20261027",
   "price": {
     "code": "105560",
     "name": "KB금융",
     "market": "KOSPI",
-    "basDt": "20261026",
-    "close": 147200,
-    "vs": -5800,
-    "fltRt": -3.79,
-    "open": 152100,
-    "high": 154600,
-    "low": 146000,
-    "prevClose": 153000,
-    "volume": 872563,
-    "tradeValue": 129799336714,
+    "basDt": "20261027",
+    "close": 147600,
+    "vs": 400,
+    "fltRt": 0.27,
+    "open": 151000,
+    "high": 151500,
+    "low": 145300,
+    "prevClose": 147200,
+    "volume": 1078365,
+    "tradeValue": 158905109200,
     "week52": {
       "low": 115800,
       "high": 186200,
-      "position": 0.4460227272727273,
-      "days": 244,
-      "from": "20251026"
+      "position": 0.45170454545454547,
+      "days": 245,
+      "from": "20251027"
     },
     "recent5": [
-      {
-        "basDt": "20261020",
-        "fltRt": -1.11,
-        "open": 160800,
-        "high": 163300,
-        "low": 159700,
-        "close": 160900
-      },
       {
         "basDt": "20261021",
         "fltRt": -0.19,
@@ -64,97 +56,90 @@
         "high": 154600,
         "low": 146000,
         "close": 147200
+      },
+      {
+        "basDt": "20261027",
+        "fltRt": 0.27,
+        "open": 151000,
+        "high": 151500,
+        "low": 145300,
+        "close": 147600
       }
     ],
     "volumeVs20d": {
-      "avg20": 856098,
-      "ratio": 1.02
+      "avg20": 865420,
+      "ratio": 1.25
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 529,
-      "rows52w": 244
+      "rows": 530,
+      "rows52w": 245
     },
-    "generatedAt": "2026-10-27T07:00:12.123Z"
+    "generatedAt": "2026-10-28T07:42:52.963Z"
   },
   "facts": [
-    "코스피보다 2.33%p 낮았어요.",
-    "거래량은 20일 평균의 1.0배예요.",
-    "시가보다 4,900원 낮게 마감했어요."
+    "코스피보다 2.82%p 낮았어요.",
+    "거래량은 20일 평균의 1.3배예요.",
+    "시가보다 3,400원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "KB, AWS와 협력 강화한다…‘AI 금융’에 속도",
-      "source": "서울경제",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4xMENGcDNyZHE4Z1pBWmNVYVJxZlJWUk1Fbjl6RThITFd4MzZLcERKejJmNHZOcmF0Wlp1SDRwSmlWcDhrbXpnMk5hbEpYd3ltMUE?oc=5",
-      "publishedAt": "2026-10-26T08:54:12.000Z"
-    },
-    {
-      "title": "[속보] KB국민은행 “해킹 정보유출 2091명 추가 확인”",
+      "title": "해킹피해 발표는 119명, 실제 2210명…KB국민은행, 예금잔액·대출내역도 샜다",
       "source": "매일경제",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBvVnZXOV9kMFlBeVJiYm1yTUpRNlFNaFZqWktCa1E4emhFejVpd2J3N240UzQ0S3FGRFlocmtpbWJoUEo2M21qQXFIakVFc3Zjc3JGTA?oc=5",
-      "publishedAt": "2026-10-26T09:14:24.000Z"
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9kZkxxMF9tX1VEZlhKX1l2TW1KRWxwLURtUllWR2lORUlkaHlTd0p5OGJoQ2dYWUhIT0hzVHRlQjZ5aU11M2ZkZnJCS3NXaEZ5TGFGMg?oc=5",
+      "publishedAt": "2026-10-27T01:09:18.000Z"
     },
     {
-      "title": "[더밸류 브리핑] 오늘의 금융계 소식…KB금융·KB손해보험·IBK 기업은행",
-      "source": "더밸류뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE02ZFg0VzJfX2NCWHMtZUQtSzBkMUFhS3FHSHMxZmVnbEhfN3RieWNwWWNHODBiTW9XS0VGejFVLWx0YVE3b1VfMDBsU0MwNk5qYnl4cA?oc=5",
-      "publishedAt": "2026-10-26T07:45:17.000Z"
+      "title": "상생협력재단, ‘KB금융 에너지 절감 시설 지원’ MOU",
+      "source": "www.dt.co.kr",
+      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5QT09OR2JtLWpCQUNmQXlnOXJyT1pTMFJ4WjJqX0lPNmwyY2RaWWtlNkQ5WnNfMXhaOEZ5MU5nN296ZkQ1NDc4b3pfbC1mZw?oc=5",
+      "publishedAt": "2026-10-27T00:38:31.000Z"
     },
     {
-      "title": "[이슈체크] 은행연합회장 ‘2윤·박·은’ 하마평…국감발 견제론이 복병",
-      "source": "조세금융신문",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBVRzFqcDFHQ0J3RlMtLV9aQVFCcU9FNTFtc3pQeFRVMDZ4Rm93Zlc5WmdpWWdQSUpQRGowZjhqdnVQRUs3Zm5OWFNzNGExX2thV1VjWVhfcE80Vjd5NVhVb2x6cw?oc=5",
-      "publishedAt": "2026-10-26T06:01:36.000Z"
+      "title": "[거래소 기관] SK하이닉스·삼성전기 집중 매수…KB금융은 팔았다",
+      "source": "핀포인트뉴스",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5pM3Z6U3RMaGNDVndtMk5JU3U5SzFtc2RPSUlVcFU0blZPTWFuXzB3aHNFalRiTDNVRjlzeVNrRURiSnJxV0ZoaWNmREpSZUpZbDhtQnN6cW9OTXd2QWJUWkpwazNGTVpCREphZ1d4bDh1T0HSAXdBVV95cUxNU1F6X3FuRnp1X3hXM1NyOGRyRGM3SktKZ0draTE1ZWQzckxpdGNvamZVWFdsLXJ2WllwRlBmM0pEWmRtbnN1cDR6cVNVblVNdjNlOGRiMnFjZUR6Y1RjODBBY3FlOGVoc1A1c3VTVTNXTW9uZV9IVQ?oc=5",
+      "publishedAt": "2026-10-27T06:50:59.000Z"
     },
     {
-      "title": "KB금융 “한국인 건강 관리 중심, ‘몸’에서 ‘마음’으로 이동”",
-      "source": "디스커버리뉴스(DISCOVERYNEWS)",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5fTHI3RXVEMEJ1ckFLcmxwcnhHQWNnUnZvWDVjTUlVc0dmLVRhLXpmemlEbDZuVV9tY0RDQWNnV2lDRFQyOWExU25kU0hQdmhvNmlXQWhmSWNxdEUxSTBYRVV5VWdmT3ZfZmxoUVh2a1Itdw?oc=5",
-      "publishedAt": "2026-10-26T08:18:31.000Z"
+      "title": "앤트로픽 훈풍에 양 지수 동반↑",
+      "source": "KB Think",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE95QVVDR0pKYzdwOHNGSW85akctV3dzeTdDRlFhZ1A4LUF3RzNjcEVhVDhsNUpiX3dtbkpoR0lIbGNkNm5OVWhHbVRGV0pEbXlFR28zdGRXZ0Y5cmFGemNjbVJSU1RkTG82V0RrYw?oc=5",
+      "publishedAt": "2026-10-27T07:02:31.000Z"
     },
     {
-      "title": "KB금융, 6980억 규모 신탁계약 주식 취득 완료",
-      "source": "한스경제",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE00YmNSSkQtV1NmUVZYcFh1WW96dHpTN0habzlnM1ZESDAwRWltN0xTd3NXVVZBenJIUTg3UFRManVOdFY2MlY3UGQxWHAzakRpTEtUNVdhaFVWbndLbnNKLXppVE9oWDFYcEU00gFvQVVfeXFMUGNleTQ5Q2FvTlNQUXpxREsySVhLLXFhZENaTkZVM2xnRU9ScUhXcUJKVUQwRUVTYl9QeU0xM3FKRHFtOTBkcmhzaTZORU9VeWg4d1NXSnJYQlJWWlBmRnBlcm5HbFdOWFFDc3RWZWRv?oc=5",
-      "publishedAt": "2026-10-26T07:12:54.000Z"
+      "title": "KB금융 주가, 10월 27일 애프터마켓 147,400원 소폭 오름세",
+      "source": "톱스타뉴스",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9Eem9kakNHVjRhNDZVcFNiS0hTUEtNaGx6OUsyMVVWdjljR2NrY2FlMjFNQVQ2VUdrcEZESkVuMlk0V2NnSmFadDN1My0yX1R3NUs4Unk1WlBFWFFxaE05dW5Pa3RoR1RfdmVFMy1NTkNEUQ?oc=5",
+      "publishedAt": "2026-10-27T07:33:59.000Z"
     },
     {
-      "title": "KB금융, '2026 한국 웰니스 보고서' 발간",
-      "source": "일간투데이",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9GV0cxUEFUZk5EcTZFdG4wd2wtMkpDTGhsMGpUYW9LLURzbmNuOW1hZmpYeGo1YWdGNzczZlFBUDJPaGVaczdDODJfUENrdnZUcngzVjVoS2NrQXM2WnhBUGx1dktOMEZNYnM0?oc=5",
-      "publishedAt": "2026-10-26T00:22:51.000Z"
+      "title": "iM금융 \"비이자이익 부진 인정…내달 추가 자사주 매입 논의\"",
+      "source": "KB Think",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5sLWFMczlJbXE5UWNvc2hybU9PSFRQblR6RGRvTC1uTGNWdENvZ0dFZlctWWlPcDFMYkV3SmFreDF3RFNjSkI0OEtCX1VyR1Rkc3VQY2FRb09KUWNBMy14MlQxRDZwci00UDhJcHNyQ2cxQQ?oc=5",
+      "publishedAt": "2026-10-27T08:17:57.000Z"
     },
     {
-      "title": "\"몸보다 마음 돌본다\"… KB금융 《2026 한국 웰니스 보고서》 발간",
-      "source": "파이낸스투데이",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE8tR205UVA1dkM3UFpyOTZncmpUVFFvUXJ1WEFTT0NkZVY2aEptWWg4Mi1TM0RUUE5DZ0MzcG0yem5WSWpEQVJCamFJWEpneUkzVTNIdHYxbFM3cVVGWFZROV9WbzRRNlZaYXBsZw?oc=5",
-      "publishedAt": "2026-10-26T02:48:10.000Z"
+      "title": "한국씨티은행, 김경호 신임 은행장 선임…임기 3년",
+      "source": "KB Think",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1Ld2xSR3BIak5pMVJJbWg0MENYQ1Y4V09vZmI4aWQ2Y0NGSVF0NFdSX21rTy04aVZDaHFOSWkwMHlqaUJIQUhYaWxtcjdSc3FMOVdRS19PNzV1aFJVbUVOcE0zdFF4WHNla2piZVJJci1Idw?oc=5",
+      "publishedAt": "2026-10-27T06:55:55.000Z"
+    },
+    {
+      "title": "[환율 전망] 빅테크가 좋으면 원화도 좋아",
+      "source": "KB Think",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE53MzdPdXRkNGhWdld2NjZOYkNxV0xOUzVpR2dyZTZVdUcxaW9ZUTc4dE9MbS1DOWVrd2hlVVM1TFZjRzdyaUNlamdYeWFfSFp5Mm9JLTlYMDItalVYaDIyMA?oc=5",
+      "publishedAt": "2026-10-26T23:04:26.000Z"
     }
   ],
-  "dart": [
-    {
-      "title": "신탁계약에의한취득상황보고서",
-      "filer": "KB금융",
-      "receiptNo": "20261026000194",
-      "date": "20261026",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261026000194"
-    },
-    {
-      "title": "최대주주등소유주식변동신고서              ",
-      "filer": "KB금융",
-      "receiptNo": "20261026800368",
-      "date": "20261026",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261026800368"
-    }
-  ],
+  "dart": [],
   "ownership": [],
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5469.47,
-    "vs": -80.83,
-    "fltRt": -1.46
+    "clpr": 5638.34,
+    "vs": 168.87,
+    "fltRt": 3.09
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -163,7 +148,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-27T07:01:56.805Z",
+  "builtAt": "2026-10-28T07:44:44.968Z",
   "archiveDays": 120,
-  "archiveFrom": "20260428"
+  "archiveFrom": "20260429"
 }

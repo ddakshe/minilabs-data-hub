@@ -1,0 +1,137 @@
+{
+  "code": "240810",
+  "name": "원익IPS",
+  "market": "KOSDAQ",
+  "basDt": "20261027",
+  "price": {
+    "code": "240810",
+    "name": "원익IPS",
+    "market": "KOSDAQ",
+    "basDt": "20261027",
+    "close": 93800,
+    "vs": 4400,
+    "fltRt": 4.92,
+    "open": 92000,
+    "high": 97900,
+    "low": 91900,
+    "prevClose": 89400,
+    "volume": 648037,
+    "tradeValue": 61625292750,
+    "week52": {
+      "low": 56700,
+      "high": 183300,
+      "position": 0.2930489731437599,
+      "days": 245,
+      "from": "20251027"
+    },
+    "recent5": [
+      {
+        "basDt": "20261021",
+        "fltRt": 1.55,
+        "open": 105100,
+        "high": 107300,
+        "low": 102600,
+        "close": 104800
+      },
+      {
+        "basDt": "20261022",
+        "fltRt": -7.92,
+        "open": 103000,
+        "high": 104500,
+        "low": 96000,
+        "close": 96500
+      },
+      {
+        "basDt": "20261023",
+        "fltRt": -0.93,
+        "open": 93500,
+        "high": 96300,
+        "low": 89200,
+        "close": 95600
+      },
+      {
+        "basDt": "20261026",
+        "fltRt": -6.49,
+        "open": 93300,
+        "high": 94600,
+        "low": 89100,
+        "close": 89400
+      },
+      {
+        "basDt": "20261027",
+        "fltRt": 4.92,
+        "open": 92000,
+        "high": 97900,
+        "low": 91900,
+        "close": 93800
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 1124273,
+      "ratio": 0.58
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 530,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-28T07:43:23.177Z"
+  },
+  "facts": [
+    "코스닥보다 2.63%p 높았어요.",
+    "거래량은 20일 평균의 0.6배예요.",
+    "시가보다 1,800원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "원익ips 주가 상승 중",
+      "source": "아시아뉴스통신",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9IZFAzWVFMZDl1eW5OUWlTMUpCVVNETUs0aFdvMEZ1bUYzeTdVcjhIOHJrdGV6bG8wWU5NVUY2aU5yZ21JV2ZtUEowbnVXODdsNTBwb2dTQWw0YjJX?oc=5",
+      "publishedAt": "2026-10-27T00:05:37.000Z"
+    },
+    {
+      "title": "앤트로픽 IPO 훈풍에 반도체 급등…코스피 5,600선 돌파",
+      "source": "프리진경제",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1WNFVaZmZDZHFrTDhhaU15UWtsNVJOVGE4YkdwUDBmQk4wdHpETkZJUXpnbGkxRlFjMjM1d3ZDTG5lWUtOZFh3VVVtOTJDWTlPSE9WNGxNd0tLUmNVX01aUXZ1emxmT3FuQ2F0aA?oc=5",
+      "publishedAt": "2026-10-27T07:38:51.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20261007",
+      "holder": "삼성자산운용",
+      "ratio": 7.1,
+      "ratioChange": 1.18,
+      "reason": "매매로 인한 변동보고의무 발생(삼성액티브자산운용의 위탁운용분 포함)",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261007000302"
+    },
+    {
+      "kind": "major",
+      "date": "20260803",
+      "holder": "미래에셋자산운용",
+      "ratio": 7.31,
+      "ratioChange": -2.7,
+      "reason": "지분율 변동",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260803000366"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 743.83,
+    "vs": 16.62,
+    "fltRt": 2.29
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-28T07:44:45.056Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260429"
+}

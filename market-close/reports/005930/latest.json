@@ -2,37 +2,29 @@
   "code": "005930",
   "name": "삼성전자",
   "market": "KOSPI",
-  "basDt": "20261026",
+  "basDt": "20261027",
   "price": {
     "code": "005930",
     "name": "삼성전자",
     "market": "KOSPI",
-    "basDt": "20261026",
-    "close": 213000,
-    "vs": -2500,
-    "fltRt": -1.16,
-    "open": 213500,
-    "high": 216000,
-    "low": 211500,
-    "prevClose": 215500,
-    "volume": 11376006,
-    "tradeValue": 2430729239364,
+    "basDt": "20261027",
+    "close": 222000,
+    "vs": 9000,
+    "fltRt": 4.23,
+    "open": 222000,
+    "high": 225500,
+    "low": 220000,
+    "prevClose": 213000,
+    "volume": 14196879,
+    "tradeValue": 3162205846250,
     "week52": {
       "low": 94800,
       "high": 362500,
-      "position": 0.44153903623459095,
-      "days": 244,
-      "from": "20251026"
+      "position": 0.47515875980575273,
+      "days": 245,
+      "from": "20251027"
     },
     "recent5": [
-      {
-        "basDt": "20261020",
-        "fltRt": -2.98,
-        "open": 219500,
-        "high": 219500,
-        "low": 208750,
-        "close": 211500
-      },
       {
         "basDt": "20261021",
         "fltRt": 5.67,
@@ -64,47 +56,41 @@
         "high": 216000,
         "low": 211500,
         "close": 213000
+      },
+      {
+        "basDt": "20261027",
+        "fltRt": 4.23,
+        "open": 222000,
+        "high": 225500,
+        "low": 220000,
+        "close": 222000
       }
     ],
     "volumeVs20d": {
-      "avg20": 18324687,
-      "ratio": 0.62
+      "avg20": 17985617,
+      "ratio": 0.79
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 529,
-      "rows52w": 244
+      "rows": 530,
+      "rows52w": 245
     },
-    "generatedAt": "2026-10-27T06:59:54.054Z"
+    "generatedAt": "2026-10-28T07:42:33.368Z"
   },
   "facts": [
-    "코스피보다 0.3%p 높았어요.",
-    "거래량은 20일 평균의 0.6배예요.",
-    "시가보다 500원 낮게 마감했어요."
+    "코스피보다 1.14%p 높았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가 그대로 마감했어요."
   ],
   "news": [
     {
-      "title": "삼성전자, 클립형 무선 이어폰 ‘갤럭시 버즈 온’ 국내 출시",
-      "source": "Samsung Global Newsroom",
-      "link": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxQdThLRHk3THlNYmEwS3BZcVlkU3B5SG0zZHJ2MVpjY0tUNDg2ZXFNTi1sandNQlJSTTdYblNkS0Ffd0g3VFJrRl9UOXlfc0E3dHM5bGRleXQya092NXVETC10OFdPbl9tWDAyU2Y3U1E5R3BWaV80YjFGbjNpNUc1b3pDWU85bjZPdGtMX2I2S3N2dFczNEJJdHZFV0Q4OTZiVmZLMkJjMU04U25FTXFIdGQxYzdlb2RXbGp0SzhKTnZxT0FvOFN5YkJlVGZBWllLa3lNR0JMQjRZMWVxY09wZ0NfdTdqWmtqVzhNbHhCMnY2N19fU1A5R3FHaHpYVVg2RTJKYUk4RTlCWEFFemw3MUpCQ0ExbDdLaWg4Y3d5dkQyRGJEamE5cnpZNDlaalNnNkRrOUxVc001Vkk?oc=5",
-      "publishedAt": "2026-10-25T23:00:00.000Z"
-    },
-    {
-      "title": "[단독] \"연 4% 이자가 어디냐\"…삼성전자도 수십조 굴린다",
-      "source": "한국경제",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1rZDlLWXNkQnpUZmZMQUJCVm5hdUVkSkdCSndDemZIUWtENHVZR0t1WFhEVmFhWVJ5ZmdESGloOUtqUEZiR3Z0UjNJaXlKZGZzVTZPbzRHOEJDQQ?oc=5",
-      "publishedAt": "2026-10-26T08:39:12.000Z"
+      "title": "'삼성전자 기밀유출' 안승호 전 부사장 2심 징역 3년‥법정 구속",
+      "source": "MBC 뉴스",
+      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFAybmU1WnF4U2p6WTBJVGZoakhBbUFLNmozVldQUlRqOV9wdmlZSTBvSmhNM0ZnVHdZSmEyeEJ5V0pIRjRjbzl3Q1Q3XzEycklPX0xyQ25OV2JxS254UF9WajlNOTlhLTU4SENicWwtbnYwbURqVW5N0gF3QVVfeXFMTXFMQlZISWxWbGI1cUJRSnNidmZLNFM4QVR6OURaMzBmcFdUU1c2WXVsS2tMUl9GUmRBUmQyZE9qWEc3cGpIYkhrX0NvdzJoRV9pMkRxd1BvaWZ6SHdIYldxTlYtZFdadkg2cUtqODBiX3MyVFlOdDQ?oc=5",
+      "publishedAt": "2026-10-27T04:39:26.000Z"
     }
   ],
-  "dart": [
-    {
-      "title": "임원ㆍ주요주주특정증권등소유상황보고서",
-      "filer": "이헌",
-      "receiptNo": "20261026000017",
-      "date": "20261026",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261026000017"
-    }
-  ],
+  "dart": [],
   "ownership": [
     {
       "kind": "major",
@@ -165,9 +151,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5469.47,
-    "vs": -80.83,
-    "fltRt": -1.46
+    "clpr": 5638.34,
+    "vs": 168.87,
+    "fltRt": 3.09
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -176,7 +162,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-27T07:01:56.749Z",
+  "builtAt": "2026-10-28T07:44:44.884Z",
   "archiveDays": 120,
-  "archiveFrom": "20260428"
+  "archiveFrom": "20260429"
 }
