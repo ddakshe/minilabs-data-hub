@@ -1,0 +1,112 @@
+{
+  "code": "005380",
+  "name": "현대차",
+  "market": "KOSPI",
+  "basDt": "20261028",
+  "price": {
+    "code": "005380",
+    "name": "현대차",
+    "market": "KOSPI",
+    "basDt": "20261028",
+    "close": 296000,
+    "vs": 5500,
+    "fltRt": 1.89,
+    "open": 292500,
+    "high": 301500,
+    "low": 291000,
+    "prevClose": 290500,
+    "volume": 420188,
+    "tradeValue": 125151707250,
+    "week52": {
+      "low": 250500,
+      "high": 750000,
+      "position": 0.09109109109109109,
+      "days": 245,
+      "from": "20251028"
+    },
+    "recent5": [
+      {
+        "basDt": "20261022",
+        "fltRt": -2.58,
+        "open": 305500,
+        "high": 307500,
+        "low": 298500,
+        "close": 301500
+      },
+      {
+        "basDt": "20261023",
+        "fltRt": -1.99,
+        "open": 294000,
+        "high": 295500,
+        "low": 287500,
+        "close": 295500
+      },
+      {
+        "basDt": "20261026",
+        "fltRt": -2.54,
+        "open": 285000,
+        "high": 294000,
+        "low": 284000,
+        "close": 288000
+      },
+      {
+        "basDt": "20261027",
+        "fltRt": 0.87,
+        "open": 294000,
+        "high": 295500,
+        "low": 289000,
+        "close": 290500
+      },
+      {
+        "basDt": "20261028",
+        "fltRt": 1.89,
+        "open": 292500,
+        "high": 301500,
+        "low": 291000,
+        "close": 296000
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 550254,
+      "ratio": 0.76
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 530,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-29T07:46:34.058Z"
+  },
+  "facts": [
+    "코스피보다 4.74%p 낮았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가보다 3,500원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "현대차 브랜드 가치 250억달러…세계 車 브랜드 4위 기록",
+      "source": "조선일보",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBIUmJvRXlXd0kxdkg1TUlFUWFoWXU5aXYxRVJlaFhMYURrUkFRM3VoTXRFSGtIdHFCT2xVSkVFUm9TazJTZHpIY3d6VXpVaHIyS0JKaUxMV2VIQkF2MVJ6OHJmVGNMYWFkcE5sc2lsZGF3QWdsZGZmRWFLMlk5UFU?oc=5",
+      "publishedAt": "2026-10-28T06:48:00.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 6012.44,
+    "vs": 374.1,
+    "fltRt": 6.63
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-29T07:48:26.306Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260430"
+}

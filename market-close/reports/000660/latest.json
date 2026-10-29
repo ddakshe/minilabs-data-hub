@@ -2,37 +2,29 @@
   "code": "000660",
   "name": "SK하이닉스",
   "market": "KOSPI",
-  "basDt": "20261027",
+  "basDt": "20261028",
   "price": {
     "code": "000660",
     "name": "SK하이닉스",
     "market": "KOSPI",
-    "basDt": "20261027",
-    "close": 1341000,
-    "vs": 66000,
-    "fltRt": 5.18,
-    "open": 1346000,
-    "high": 1381000,
-    "low": 1336000,
-    "prevClose": 1275000,
-    "volume": 3136495,
-    "tradeValue": 4251523718200,
+    "basDt": "20261028",
+    "close": 1487000,
+    "vs": 146000,
+    "fltRt": 10.89,
+    "open": 1390000,
+    "high": 1495000,
+    "low": 1358000,
+    "prevClose": 1341000,
+    "volume": 4244800,
+    "tradeValue": 6113005443220,
     "week52": {
       "low": 519000,
       "high": 2919000,
-      "position": 0.3425,
+      "position": 0.4033333333333333,
       "days": 245,
-      "from": "20251027"
+      "from": "20251028"
     },
     "recent5": [
-      {
-        "basDt": "20261021",
-        "fltRt": 5.81,
-        "open": 1260000,
-        "high": 1329000,
-        "low": 1254000,
-        "close": 1294000
-      },
       {
         "basDt": "20261022",
         "fltRt": -5.49,
@@ -64,36 +56,68 @@
         "high": 1381000,
         "low": 1336000,
         "close": 1341000
+      },
+      {
+        "basDt": "20261028",
+        "fltRt": 10.89,
+        "open": 1390000,
+        "high": 1495000,
+        "low": 1358000,
+        "close": 1487000
       }
     ],
     "volumeVs20d": {
-      "avg20": 3450180,
-      "ratio": 0.91
+      "avg20": 3459619,
+      "ratio": 1.23
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
       "rows": 530,
       "rows52w": 245
     },
-    "generatedAt": "2026-10-28T07:42:36.159Z"
+    "generatedAt": "2026-10-29T07:46:21.007Z"
   },
   "facts": [
-    "코스피보다 2.09%p 높았어요.",
-    "거래량은 20일 평균의 0.9배예요.",
-    "시가보다 5,000원 낮게 마감했어요."
+    "코스피보다 4.26%p 높았어요.",
+    "거래량은 20일 평균의 1.2배예요.",
+    "시가보다 97,000원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "[속보] SK하이닉스 3분기 영업익 83조…분기배당 주당 2만원",
-      "source": "중앙일보",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBJbXVJUWhxWDVEd2JJbndUTG4xVzMyVUl6dXhfNU1kR0JqNmI4SHF0SG9qSDVRMnJhR29PZjVoS2FtQlN2aUxqMTZ2dTB4NTAwZEdrRWdB?oc=5",
-      "publishedAt": "2026-10-27T23:34:34.000Z"
+      "title": "SK하이닉스, 2026년 3분기 경영실적 발표",
+      "source": "SK hynix",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1RbWFPRmUyMjltVDdGN0JoYnVham1kVHJuLWY0NmxVYUxMckNGWTl3NUdDcFlma1k1RTBwZmFZNWVPb25oQWpPR09BRkFxMEM1a0NzYlhwR3hmcFFCdGFoallB?oc=5",
+      "publishedAt": "2026-10-27T23:29:00.000Z"
     },
     {
-      "title": "추미애, 삼성전자·SK하이닉스에 ‘방류수 수질 개선’ 행정지도",
-      "source": "KBS 뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5SQVB5TTdsb0VWa2szbDBEQURLei03UHZZVkhOUkE2NnM0SXB4Rms1REVnSThCdUhwVXRhZ0VHLTVYLU1rWnpPdE1hR0NLaEdfcVliLUdpdDNIUHc?oc=5",
-      "publishedAt": "2026-10-28T07:16:00.000Z"
+      "title": "SK하이닉스 \"2029년까지 HBM·D램 다 팔렸다\"",
+      "source": "지디넷코리아",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5jVS1Ma0pyZVVEaEgzZEhQYmFZVUw1WGRpSno0RFpCSG5EUC01bE43RFlubllqOGdnSFJGQXJXUDRVYlNRZnd1SUR0RGJ0a0tacGdUcUtR?oc=5",
+      "publishedAt": "2026-10-28T02:22:30.000Z"
+    },
+    {
+      "title": "SK하이닉스 \"2029년까지 3년간 D램·HBM 사실상 완판\"",
+      "source": "연합뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5JaE5JUUtSbEZtM2UyTHM0RUQzRllHSnA1SU5NanhBTHQyV1Rra0VGM1ZLSkFWanFqdElhWTRzWk84S2pMNVEwaEVNME9qRGQxWlQyamhNMGoydEnSAWBBVV95cUxPeGRlWFdkZjZKT1ZFa0owaGhrbnp4eEVtZGFqYld6a0dpWGw1SEhwYVk2amVWa18zcXFwQzViMDdmR1dsYXplOW1vejZ2OHpmcTI4N3FkY0lVWnZXT083Mkk?oc=5",
+      "publishedAt": "2026-10-28T01:07:48.000Z"
+    },
+    {
+      "title": "앤트로픽이 끌고 SK하이닉스가 밀고…반도체 투심 되살아나나(종합)",
+      "source": "연합뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5FSWp4ekViN25MU1JBOVNJVGh4eWY0OGRFTnBHZGlGaFRrNERXVWFPZWVLSmZFdFM5RkZhc0VzQUpvQ094N3NyQ2M3SXFrSlE2N2FXYVg3b2FfdTjSAWBBVV95cUxNMm1Hcld1eG52VG1IQTkxTDRScnExYTJUdks2ZVI4cnVSbE5NM0tmeU05ZlFIVldEMFBkbDF6a0Q1X3RvUjdjVGFJaE5rTW5YZzNaeklUVW9obDZmdFF1UU0?oc=5",
+      "publishedAt": "2026-10-28T07:39:28.000Z"
+    },
+    {
+      "title": "“남부 쏠림 넘어 북부로”…류기준 경기도의원, SK하이닉스와 ‘반도체 교실’",
+      "source": "서울경제",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBzSk1ud2k0VlRkYmdZVnRJWGg2M1NYQnBPRV9ReVpaWmxJdE8wRFNvcXJDNjBMaTZQc1REU2w1QU5NQVB1a0dZRFBJMDl5OEQ2MVHSAVNBVV95cUxNa2FlTmdURVZva1RlMUpPVFJ2anRJUmhDNzhlelBsYVB0dkl3Mnk0LUprNVVBV084alc2X000dXYwSTdvMmFVZlZfd1hNY0NfWWZQSQ?oc=5",
+      "publishedAt": "2026-10-28T11:01:22.000Z"
+    },
+    {
+      "title": "추미애, 삼성전자·SK하이닉스에 행정지도···“방류수 수질 개선 요구”",
+      "source": "경향신문",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9mcGxGVUkyRWhnTVFwNzZucmxxNGZJRDd1MlRKTWpfalVMODhDUmx0NldFVVdvNVZOcFJpTHhrcnpuUzdtZHJpNnlNV1dsRks4VUo1ZDZ4d2RiZ9IBX0FVX3lxTE1zNTVvd2Y2b1dQMEcwZm80TUtPQ3Vnd2xkTzhOZXpjeDJ3TjkyeXFjVnpyUTBQdTBuV1RsNy1WMW5aVmU1Q2hJMnNjTWJFb2NFd0xPYU5iVEd5UHM3dWhJ?oc=5",
+      "publishedAt": "2026-10-28T05:54:00.000Z"
     },
     {
       "title": "SK하이닉스 2026년 3분기 실적발표 컨퍼런스콜 전문",
@@ -102,37 +126,56 @@
       "publishedAt": "2026-10-28T04:11:14.000Z"
     },
     {
-      "title": "SK하이닉스, 3분기 영업이익 83조 ‘어닝 서프라이즈’",
-      "source": "한겨레",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE45THZxNnRhaDNXakthcXpUNUY0TC1uRGpKU3RrTTRvSEhNck5sQmxld0lKNjFVMkpqb3cyb1VxN1JacTh2SVJRLWFNQ0lhM3drdHhMNjBrclRmNDlzUlpUREVwbFdld3ZEa2c?oc=5",
-      "publishedAt": "2026-10-28T02:34:00.000Z"
-    },
-    {
-      "title": "SK하이닉스, 올해 100조 주주환원…지난해 7배 규모 '파격'",
-      "source": "연합인포맥스",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFA3dnhHY3c1bWpSc3M3Smt6eUdITHItSTA4Nnk3ZFVndDM3UlpMaWd2TW9sOXNLaTJSQ3FFOUdCTlRCbVNUcGlNeVBNcnViYnJJbWF2SXpITEdtYlR6YUpST21LZ2JsOVktd1BiRG5KTzU?oc=5",
-      "publishedAt": "2026-10-28T00:12:00.000Z"
-    },
-    {
-      "title": "[속보] SK하이닉스, 60조원 추가 주주환원…분기배당금 주당 2만원",
-      "source": "경향신문",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1SSjh3QzdLRXNDMUZPZlRXcm5Ra0VlVFZ0NnUwTjZhS2Vwd2w4TGlJbVNyTDZOekdRd0FncndWbzZ2T0RSNWJFM1BfZm4zQlg0V2pnYUdHMmxwUdIBX0FVX3lxTFAtWlYzWlhfN2dDWE5neXhjOHh2Mi1qSUEyRV9JeUUybnFIWGNLQVNwdVpJX0NWTXhLellMeGgyRHd5SjFPT3VrQ29RdU5wQ2JiODRrQU4tMlR0cTI5T1NB?oc=5",
-      "publishedAt": "2026-10-27T23:46:00.000Z"
-    },
-    {
-      "title": "SK하이닉스, 영업이익률 80% '기염'…주주에 100조 푼다",
-      "source": "비즈워치",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1sRFBqVlBlQnJYUTNBbkgyNl9ZM0VFcC1OVFd3RWxUMUlJMXlDeFlONkNDWl9rSVdiTnRxdk1GeThxNUdxRTFRMXQ5UmVYZEVoaEM2aGhVZDl3bXN4RXR1ajRJbERFR2prRXgxNw?oc=5",
-      "publishedAt": "2026-10-28T02:05:03.000Z"
-    },
-    {
-      "title": "SK하이닉스의 주주 달래기…\"3년치 메모리 완판, 주주환원 100조 추진\"",
-      "source": "인베스트조선",
-      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxORzYxMUdhRnZPODNsMTZxV21rTUJfQkJPXzRWMU56VkU5S0ZNbnd3clhDMTFHYmYyMDl6RHRxZVM3ZExQSG9pMVZIMV82THBMcFhwWU1Kd0M2emsyWmY3d2tia1d4V3h1aVJGRkdSMnBnSDFLVWVtOGptdjY4S05hbnVQYw?oc=5",
-      "publishedAt": "2026-10-28T02:21:00.000Z"
+      "title": "SK하이닉스, 3분기 영업이익 83조원...60조원 이상 추가 주주환원",
+      "source": "조선일보",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNZk1DanUtTnNsakItckJaTWtRZ3FuR1VvaTd3MVNxMGFQTTlGRWJPMFpfWlB2eW0xSDRkUFJIU2hINU5vd2lvWWtvY3JKWUZjellQTko5Z1V5emkxaF95bzk0YWdVa1loQ2Fuem5saGFKSWNDWGJWTENFNjg5MXZXSzl3OA?oc=5",
+      "publishedAt": "2026-10-27T23:51:59.000Z"
     }
   ],
-  "dart": [],
+  "dart": [
+    {
+      "title": "[기재정정]기업설명회(IR)개최(안내공시)              ",
+      "filer": "SK하이닉스",
+      "receiptNo": "20261028800052",
+      "date": "20261028",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261028800052"
+    },
+    {
+      "title": "주요사항보고서(자기주식취득결정)",
+      "filer": "SK하이닉스",
+      "receiptNo": "20261028000014",
+      "date": "20261028",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261028000014"
+    },
+    {
+      "title": "현금ㆍ현물배당을위한주주명부폐쇄(기준일)결정              ",
+      "filer": "SK하이닉스",
+      "receiptNo": "20261028800048",
+      "date": "20261028",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261028800048"
+    },
+    {
+      "title": "현금ㆍ현물배당결정              ",
+      "filer": "SK하이닉스",
+      "receiptNo": "20261028800045",
+      "date": "20261028",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261028800045"
+    },
+    {
+      "title": "연결재무제표기준영업(잠정)실적(공정공시)              ",
+      "filer": "SK하이닉스",
+      "receiptNo": "20261028800036",
+      "date": "20261028",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261028800036"
+    },
+    {
+      "title": "수시공시의무관련사항(공정공시)              ",
+      "filer": "SK하이닉스",
+      "receiptNo": "20261028800040",
+      "date": "20261028",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261028800040"
+    }
+  ],
   "ownership": [
     {
       "kind": "major",
@@ -147,9 +190,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5638.34,
-    "vs": 168.87,
-    "fltRt": 3.09
+    "clpr": 6012.44,
+    "vs": 374.1,
+    "fltRt": 6.63
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -158,7 +201,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-28T07:44:44.902Z",
+  "builtAt": "2026-10-29T07:48:26.279Z",
   "archiveDays": 120,
-  "archiveFrom": "20260429"
+  "archiveFrom": "20260430"
 }

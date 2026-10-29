@@ -1,0 +1,140 @@
+{
+  "code": "039030",
+  "name": "이오테크닉스",
+  "market": "KOSDAQ",
+  "basDt": "20261028",
+  "price": {
+    "code": "039030",
+    "name": "이오테크닉스",
+    "market": "KOSDAQ",
+    "basDt": "20261028",
+    "close": 418500,
+    "vs": 23500,
+    "fltRt": 5.95,
+    "open": 408500,
+    "high": 421000,
+    "low": 408000,
+    "prevClose": 395000,
+    "volume": 99259,
+    "tradeValue": 41127996000,
+    "week52": {
+      "low": 230000,
+      "high": 612000,
+      "position": 0.49345549738219896,
+      "days": 245,
+      "from": "20251028"
+    },
+    "recent5": [
+      {
+        "basDt": "20261022",
+        "fltRt": -4.65,
+        "open": 426000,
+        "high": 436500,
+        "low": 408000,
+        "close": 410000
+      },
+      {
+        "basDt": "20261023",
+        "fltRt": -1.46,
+        "open": 398500,
+        "high": 404000,
+        "low": 383000,
+        "close": 404000
+      },
+      {
+        "basDt": "20261026",
+        "fltRt": -6.19,
+        "open": 393000,
+        "high": 399000,
+        "low": 377500,
+        "close": 379000
+      },
+      {
+        "basDt": "20261027",
+        "fltRt": 4.22,
+        "open": 392000,
+        "high": 401500,
+        "low": 390500,
+        "close": 395000
+      },
+      {
+        "basDt": "20261028",
+        "fltRt": 5.95,
+        "open": 408500,
+        "high": 421000,
+        "low": 408000,
+        "close": 418500
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 104364,
+      "ratio": 0.95
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 530,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-29T07:46:59.925Z"
+  },
+  "facts": [
+    "코스닥보다 2.26%p 높았어요.",
+    "거래량은 20일 평균의 0.9배예요.",
+    "시가보다 10,000원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "특징주, 이오테크닉스-HBM(고대역폭메모리) 테마 상승세에 3.3% ↑",
+      "source": "매일경제 마켓",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5GZXhmVFc3eU1UYTNzTE5iNThxSjNlOHU0cFVYbEpCQ0VhRG5rR2ZGSXh2OVpPaDAwNUsxemJYYzRYUlJrSG9rTklTRFVTWlFZMlE?oc=5",
+      "publishedAt": "2026-10-28T00:45:25.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20261007",
+      "holder": "삼성자산운용",
+      "ratio": 8.7,
+      "ratioChange": 2.32,
+      "reason": "매매로 인한 변동보고의무 발생(삼성액티브자산운용의 위탁운용분 포함)",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261007000310"
+    },
+    {
+      "kind": "major",
+      "date": "20260901",
+      "holder": "미래에셋자산운용",
+      "ratio": 7.75,
+      "ratioChange": 1.05,
+      "reason": "지분율 변동",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260901000188"
+    },
+    {
+      "kind": "major",
+      "date": "20260803",
+      "holder": "미래에셋자산운용",
+      "ratio": 6.7,
+      "ratioChange": -4.01,
+      "reason": "지분율 변동",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260803000358"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 771.28,
+    "vs": 27.45,
+    "fltRt": 3.69
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-29T07:48:26.358Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260430"
+}

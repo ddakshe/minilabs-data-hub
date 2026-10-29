@@ -2,37 +2,29 @@
   "code": "039030",
   "name": "이오테크닉스",
   "market": "KOSDAQ",
-  "basDt": "20261027",
+  "basDt": "20261028",
   "price": {
     "code": "039030",
     "name": "이오테크닉스",
     "market": "KOSDAQ",
-    "basDt": "20261027",
-    "close": 395000,
-    "vs": 16000,
-    "fltRt": 4.22,
-    "open": 392000,
-    "high": 401500,
-    "low": 390500,
-    "prevClose": 379000,
-    "volume": 81703,
-    "tradeValue": 32380248250,
+    "basDt": "20261028",
+    "close": 418500,
+    "vs": 23500,
+    "fltRt": 5.95,
+    "open": 408500,
+    "high": 421000,
+    "low": 408000,
+    "prevClose": 395000,
+    "volume": 99259,
+    "tradeValue": 41127996000,
     "week52": {
       "low": 230000,
       "high": 612000,
-      "position": 0.4319371727748691,
+      "position": 0.49345549738219896,
       "days": 245,
-      "from": "20251027"
+      "from": "20251028"
     },
     "recent5": [
-      {
-        "basDt": "20261021",
-        "fltRt": 2.14,
-        "open": 429000,
-        "high": 440500,
-        "low": 421000,
-        "close": 430000
-      },
       {
         "basDt": "20261022",
         "fltRt": -4.65,
@@ -64,30 +56,38 @@
         "high": 401500,
         "low": 390500,
         "close": 395000
+      },
+      {
+        "basDt": "20261028",
+        "fltRt": 5.95,
+        "open": 408500,
+        "high": 421000,
+        "low": 408000,
+        "close": 418500
       }
     ],
     "volumeVs20d": {
-      "avg20": 103872,
-      "ratio": 0.79
+      "avg20": 104364,
+      "ratio": 0.95
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
       "rows": 530,
       "rows52w": 245
     },
-    "generatedAt": "2026-10-28T07:43:17.633Z"
+    "generatedAt": "2026-10-29T07:46:59.925Z"
   },
   "facts": [
-    "코스닥보다 1.93%p 높았어요.",
-    "거래량은 20일 평균의 0.8배예요.",
-    "시가보다 3,000원 높게 마감했어요."
+    "코스닥보다 2.26%p 높았어요.",
+    "거래량은 20일 평균의 0.9배예요.",
+    "시가보다 10,000원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "특징주, 이오테크닉스-반도체 장비 테마 상승세에 5.01% ↑",
+      "title": "특징주, 이오테크닉스-HBM(고대역폭메모리) 테마 상승세에 3.3% ↑",
       "source": "매일경제 마켓",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE8tbUVHR2lQMVAyVEt3dmdRS3VxbTVZQ3pRRlA5bFpJbUtxRjhLQmFLR3QwdExCOVJzb25Gd2RBaDJEWEtRS2tHUThteHpsckZoV2c?oc=5",
-      "publishedAt": "2026-10-27T00:41:40.000Z"
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5GZXhmVFc3eU1UYTNzTE5iNThxSjNlOHU0cFVYbEpCQ0VhRG5rR2ZGSXh2OVpPaDAwNUsxemJYYzRYUlJrSG9rTklTRFVTWlFZMlE?oc=5",
+      "publishedAt": "2026-10-28T00:45:25.000Z"
     }
   ],
   "dart": [],
@@ -123,9 +123,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 743.83,
-    "vs": 16.62,
-    "fltRt": 2.29
+    "clpr": 771.28,
+    "vs": 27.45,
+    "fltRt": 3.69
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -134,7 +134,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-28T07:44:45.040Z",
+  "builtAt": "2026-10-29T07:48:26.358Z",
   "archiveDays": 120,
-  "archiveFrom": "20260429"
+  "archiveFrom": "20260430"
 }

@@ -2,37 +2,29 @@
   "code": "105560",
   "name": "KB금융",
   "market": "KOSPI",
-  "basDt": "20261027",
+  "basDt": "20261028",
   "price": {
     "code": "105560",
     "name": "KB금융",
     "market": "KOSPI",
-    "basDt": "20261027",
-    "close": 147600,
-    "vs": 400,
-    "fltRt": 0.27,
-    "open": 151000,
-    "high": 151500,
-    "low": 145300,
-    "prevClose": 147200,
-    "volume": 1078365,
-    "tradeValue": 158905109200,
+    "basDt": "20261028",
+    "close": 154000,
+    "vs": 6400,
+    "fltRt": 4.34,
+    "open": 149000,
+    "high": 155600,
+    "low": 148700,
+    "prevClose": 147600,
+    "volume": 985276,
+    "tradeValue": 151277718260,
     "week52": {
       "low": 115800,
       "high": 186200,
-      "position": 0.45170454545454547,
+      "position": 0.5426136363636364,
       "days": 245,
-      "from": "20251027"
+      "from": "20251028"
     },
     "recent5": [
-      {
-        "basDt": "20261021",
-        "fltRt": -0.19,
-        "open": 164500,
-        "high": 164500,
-        "low": 159000,
-        "close": 160600
-      },
       {
         "basDt": "20261022",
         "fltRt": -1.49,
@@ -64,82 +56,105 @@
         "high": 151500,
         "low": 145300,
         "close": 147600
+      },
+      {
+        "basDt": "20261028",
+        "fltRt": 4.34,
+        "open": 149000,
+        "high": 155600,
+        "low": 148700,
+        "close": 154000
       }
     ],
     "volumeVs20d": {
-      "avg20": 865420,
-      "ratio": 1.25
+      "avg20": 885379,
+      "ratio": 1.11
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
       "rows": 530,
       "rows52w": 245
     },
-    "generatedAt": "2026-10-28T07:42:52.963Z"
+    "generatedAt": "2026-10-29T07:46:39.069Z"
   },
   "facts": [
-    "코스피보다 2.82%p 낮았어요.",
-    "거래량은 20일 평균의 1.3배예요.",
-    "시가보다 3,400원 낮게 마감했어요."
+    "코스피보다 2.29%p 낮았어요.",
+    "거래량은 20일 평균의 1.1배예요.",
+    "시가보다 5,000원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "해킹피해 발표는 119명, 실제 2210명…KB국민은행, 예금잔액·대출내역도 샜다",
-      "source": "매일경제",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9kZkxxMF9tX1VEZlhKX1l2TW1KRWxwLURtUllWR2lORUlkaHlTd0p5OGJoQ2dYWUhIT0hzVHRlQjZ5aU11M2ZkZnJCS3NXaEZ5TGFGMg?oc=5",
-      "publishedAt": "2026-10-27T01:09:18.000Z"
+      "title": "KB증권 3분기 영업익 3천810억원…약세장에 전분기보다 37%↓(종합)",
+      "source": "연합뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE0xeGc5Umk1SndNWkozaTZVMzJwbk1CYnpzTzFidzFfcDROVFEyQUhCbVRuOXJZenpQenB0bm9jRmt2OTgwMkthTTdYUWpQMEhjR2NHY1hVdElHVE3SAWBBVV95cUxOMExNa2lFaTZSNGhKdnJvSjBTNzZJQ0tmYWJSNGc0OGhwR1FNU0tFTFZpZkhQYm9qd1FWeG91c2NEV0dhdW1SZ0czZEJDV3VKRi1SSXltQ0tMNHQyVlR6QXY?oc=5",
+      "publishedAt": "2026-10-29T07:13:22.000Z"
     },
     {
-      "title": "상생협력재단, ‘KB금융 에너지 절감 시설 지원’ MOU",
-      "source": "www.dt.co.kr",
-      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5QT09OR2JtLWpCQUNmQXlnOXJyT1pTMFJ4WjJqX0lPNmwyY2RaWWtlNkQ5WnNfMXhaOEZ5MU5nN296ZkQ1NDc4b3pfbC1mZw?oc=5",
-      "publishedAt": "2026-10-27T00:38:31.000Z"
+      "title": "KB금융, 3분기 누적 순익 5조7921억원…'6조 클럽' 눈앞에",
+      "source": "머니투데이",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5wV0RaMDNRamJqZVA5Y0NOdnZUUE5ITTJQSFBLbzcySTNyX2ZkRkctbVVXR0tPeFJ1dzByVUZoU1J0ZzBqUE4xNW5zYXZZQ3otYzdFZmxVemFGbjlGaEhzUW1UdlhWN08ybXdN0gFwQVVfeXFMTVZka0ZZX0x2WXY1UVBKU0ljOXc4aVVqbGVzbnJ6SWVnTGRIbUxmMFR5SktydUw4LWgtZGp4anVlMU4wYl9qbVpwSlJPd3ZyYTI4clNFQURHemJVOVhlc3hvQVMyVE9OZ2lSYjd6LU9rTw?oc=5",
+      "publishedAt": "2026-10-29T06:48:52.000Z"
     },
     {
-      "title": "[거래소 기관] SK하이닉스·삼성전기 집중 매수…KB금융은 팔았다",
-      "source": "핀포인트뉴스",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5pM3Z6U3RMaGNDVndtMk5JU3U5SzFtc2RPSUlVcFU0blZPTWFuXzB3aHNFalRiTDNVRjlzeVNrRURiSnJxV0ZoaWNmREpSZUpZbDhtQnN6cW9OTXd2QWJUWkpwazNGTVpCREphZ1d4bDh1T0HSAXdBVV95cUxNU1F6X3FuRnp1X3hXM1NyOGRyRGM3SktKZ0draTE1ZWQzckxpdGNvamZVWFdsLXJ2WllwRlBmM0pEWmRtbnN1cDR6cVNVblVNdjNlOGRiMnFjZUR6Y1RjODBBY3FlOGVoc1A1c3VTVTNXTW9uZV9IVQ?oc=5",
-      "publishedAt": "2026-10-27T06:50:59.000Z"
+      "title": "KB금융, 수수료 수입 급증으로 9개월 순이익 13% 증가",
+      "source": "Investing.com 한국어",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBKZ1JCUXMyU2h0MjRrQ09rSHd0ekpGSGIzVFE2bG9QZ1puR0w2Vm14ZElhdFgxNS1XTnZ5b2ZoVFVIY3RKUGpDOFQ2M3RhMFhpWHF3VmFjSjR4SlFHaFlUeW10MnY?oc=5",
+      "publishedAt": "2026-10-29T07:22:00.000Z"
     },
     {
-      "title": "앤트로픽 훈풍에 양 지수 동반↑",
-      "source": "KB Think",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE95QVVDR0pKYzdwOHNGSW85akctV3dzeTdDRlFhZ1A4LUF3RzNjcEVhVDhsNUpiX3dtbkpoR0lIbGNkNm5OVWhHbVRGV0pEbXlFR28zdGRXZ0Y5cmFGemNjbVJSU1RkTG82V0RrYw?oc=5",
-      "publishedAt": "2026-10-27T07:02:31.000Z"
+      "title": "KB손해보험, 3분기 누적 순익 6811억원…보유 CSM 16% 증가",
+      "source": "전자신문",
+      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1QcDhSLXR5MS1oaTNJTzc3SlVYRVltNzlNRFVfT2lhY29SSUJJTEwzRjl4X2RqX0UtdWl4SmFqQk1BRV9nTmprcmEyM0RiUQ?oc=5",
+      "publishedAt": "2026-10-29T07:00:00.000Z"
     },
     {
-      "title": "KB금융 주가, 10월 27일 애프터마켓 147,400원 소폭 오름세",
-      "source": "톱스타뉴스",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9Eem9kakNHVjRhNDZVcFNiS0hTUEtNaGx6OUsyMVVWdjljR2NrY2FlMjFNQVQ2VUdrcEZESkVuMlk0V2NnSmFadDN1My0yX1R3NUs4Unk1WlBFWFFxaE05dW5Pa3RoR1RfdmVFMy1NTkNEUQ?oc=5",
-      "publishedAt": "2026-10-27T07:33:59.000Z"
+      "title": "KB라이프, 3Q 누적 순익 2106억 전년比 17.3% 줄어",
+      "source": "IT조선",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBFY2NmeUxrNUJHeTZEZ1dOQTJfS1VCVnVvRmFaUHB5Um0xNzRfVUpzUFh4ZVZBd1NBeU9BYzFwUVdONGJFa1hJc0NhOV9rLUt4SWRzVUdiN0FISnNZOTRnY3J3LUgweGpfdWp2ZHc4SjPSAXRBVV95cUxQeXd4UzNiRlJLOE9mTUxSV1FOTnZ5T2pyNWZEbk13cWlCd0VqZ1g0WUpzN2hsVFV0ejFhQVliSV9YcnY0bEhlb245cXhrR3NiQlVPdUpReDVhdG9IR0xDakJQZ3hxZ1N6VTdIVFY3eC1MU3FiVg?oc=5",
+      "publishedAt": "2026-10-29T07:24:52.000Z"
     },
     {
-      "title": "iM금융 \"비이자이익 부진 인정…내달 추가 자사주 매입 논의\"",
-      "source": "KB Think",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5sLWFMczlJbXE5UWNvc2hybU9PSFRQblR6RGRvTC1uTGNWdENvZ0dFZlctWWlPcDFMYkV3SmFreDF3RFNjSkI0OEtCX1VyR1Rkc3VQY2FRb09KUWNBMy14MlQxRDZwci00UDhJcHNyQ2cxQQ?oc=5",
-      "publishedAt": "2026-10-27T08:17:57.000Z"
+      "title": "본업은 선방했는데···KB손보·라이프, 투자손익이 발목",
+      "source": "파이낸셜뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5BWVhVR21iX1hNWGFtX3pzZ1JsNFNPbGZKWUlRTl9JVnMzMHp5eVNDM3U0QWdTbXpkNmpkZWUxcHJBeEtNM3Q5Q1FYRjNCcHFSOVZnalNjUUp3Zw?oc=5",
+      "publishedAt": "2026-10-29T07:18:28.000Z"
     },
     {
-      "title": "한국씨티은행, 김경호 신임 은행장 선임…임기 3년",
-      "source": "KB Think",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1Ld2xSR3BIak5pMVJJbWg0MENYQ1Y4V09vZmI4aWQ2Y0NGSVF0NFdSX21rTy04aVZDaHFOSWkwMHlqaUJIQUhYaWxtcjdSc3FMOVdRS19PNzV1aFJVbUVOcE0zdFF4WHNla2piZVJJci1Idw?oc=5",
-      "publishedAt": "2026-10-27T06:55:55.000Z"
+      "title": "5대 금융, 3분기까지 순익만 20조… 너도나도 사상 최대 (종합)",
+      "source": "IT조선",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBxOHBQeFViU0dzdE5fcG9yNGxGVUdWQ1JXVWE4SG5hZlp2YmJVN2hEWi1xREcyVjFMa0liZWRvSzk2VWFpR18tZEozVGFQSlYtdkI0d1Fqc2ZoWFoyWi1UOE42WmNSX2UtNEthSHFGQmLSAXRBVV95cUxOamRFLUlRYk9DN3VfTmFpU21CclltS1Z0YUd1OXFiZjZ0MWhfc1dweUloYXVWWVdtVEZCa3l3eElZOUhJUTJPWjZvTjByckRINnFCUE1rVmZLV0k0LVM5YU9XSlBzcmtSUThVTlpZZWhrVXhQag?oc=5",
+      "publishedAt": "2026-10-29T07:10:00.000Z"
     },
     {
-      "title": "[환율 전망] 빅테크가 좋으면 원화도 좋아",
-      "source": "KB Think",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE53MzdPdXRkNGhWdld2NjZOYkNxV0xOUzVpR2dyZTZVdUcxaW9ZUTc4dE9MbS1DOWVrd2hlVVM1TFZjRzdyaUNlamdYeWFfSFp5Mm9JLTlYMDItalVYaDIyMA?oc=5",
-      "publishedAt": "2026-10-26T23:04:26.000Z"
+      "title": "KB증권, 3분기 영업익 69% 급증…순이익도 70% 늘어",
+      "source": "브릿지경제",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE0tbFgweE03WGgzRFBJZFFORGcxc3RFZEVkUVVIVzNNLUxCdUo1VlhEXzk5TV9ySHZlalJuaFo1WllVMjRkVUxVYmlEeTBMWHBpS2dFQ0VVeTlsUQ?oc=5",
+      "publishedAt": "2026-10-29T07:09:00.000Z"
     }
   ],
-  "dart": [],
+  "dart": [
+    {
+      "title": "의결권대리행사권유참고서류",
+      "filer": "KB금융",
+      "receiptNo": "20261028000453",
+      "date": "20261028",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261028000453"
+    },
+    {
+      "title": "주주총회소집공고",
+      "filer": "KB금융",
+      "receiptNo": "20261028000439",
+      "date": "20261028",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261028000439"
+    }
+  ],
   "ownership": [],
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5638.34,
-    "vs": 168.87,
-    "fltRt": 3.09
+    "clpr": 6012.44,
+    "vs": 374.1,
+    "fltRt": 6.63
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -148,7 +163,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-28T07:44:44.968Z",
+  "builtAt": "2026-10-29T07:48:26.316Z",
   "archiveDays": 120,
-  "archiveFrom": "20260429"
+  "archiveFrom": "20260430"
 }

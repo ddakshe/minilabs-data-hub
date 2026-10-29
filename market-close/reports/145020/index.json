@@ -3,10 +3,18 @@
   "name": "휴젤",
   "market": "KOSDAQ",
   "retainDays": 120,
-  "firstBasDt": "20260429",
-  "lastBasDt": "20261027",
+  "firstBasDt": "20260430",
+  "lastBasDt": "20261028",
   "count": 120,
   "days": [
+    {
+      "basDt": "20261028",
+      "close": 181500,
+      "fltRt": 1.17,
+      "headline": "코스닥보다 2.52%p 낮았어요.",
+      "newsCount": 4,
+      "dartCount": 2
+    },
     {
       "basDt": "20261027",
       "close": 179400,
@@ -1068,16 +1076,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260429",
-      "close": 263000,
-      "fltRt": -0.94,
-      "headline": "코스닥보다 1.33%p 낮았어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-10-28T07:44:45.095Z"
+  "updatedAt": "2026-10-29T07:48:26.389Z"
 }

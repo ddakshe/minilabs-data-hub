@@ -2,37 +2,29 @@
   "code": "005930",
   "name": "삼성전자",
   "market": "KOSPI",
-  "basDt": "20261027",
+  "basDt": "20261028",
   "price": {
     "code": "005930",
     "name": "삼성전자",
     "market": "KOSPI",
-    "basDt": "20261027",
-    "close": 222000,
-    "vs": 9000,
-    "fltRt": 4.23,
-    "open": 222000,
-    "high": 225500,
-    "low": 220000,
-    "prevClose": 213000,
-    "volume": 14196879,
-    "tradeValue": 3162205846250,
+    "basDt": "20261028",
+    "close": 242000,
+    "vs": 20000,
+    "fltRt": 9.01,
+    "open": 231000,
+    "high": 243000,
+    "low": 228000,
+    "prevClose": 222000,
+    "volume": 17840544,
+    "tradeValue": 4268609384500,
     "week52": {
       "low": 94800,
       "high": 362500,
-      "position": 0.47515875980575273,
+      "position": 0.5498692566305566,
       "days": 245,
-      "from": "20251027"
+      "from": "20251028"
     },
     "recent5": [
-      {
-        "basDt": "20261021",
-        "fltRt": 5.67,
-        "open": 217000,
-        "high": 228000,
-        "low": 217000,
-        "close": 223500
-      },
       {
         "basDt": "20261022",
         "fltRt": -4.03,
@@ -64,30 +56,80 @@
         "high": 225500,
         "low": 220000,
         "close": 222000
+      },
+      {
+        "basDt": "20261028",
+        "fltRt": 9.01,
+        "open": 231000,
+        "high": 243000,
+        "low": 228000,
+        "close": 242000
       }
     ],
     "volumeVs20d": {
-      "avg20": 17985617,
-      "ratio": 0.79
+      "avg20": 17652242,
+      "ratio": 1.01
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
       "rows": 530,
       "rows52w": 245
     },
-    "generatedAt": "2026-10-28T07:42:33.368Z"
+    "generatedAt": "2026-10-29T07:46:18.388Z"
   },
   "facts": [
-    "코스피보다 1.14%p 높았어요.",
-    "거래량은 20일 평균의 0.8배예요.",
-    "시가 그대로 마감했어요."
+    "코스피보다 2.38%p 높았어요.",
+    "거래량은 20일 평균의 1.0배예요.",
+    "시가보다 11,000원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "'삼성전자 기밀유출' 안승호 전 부사장 2심 징역 3년‥법정 구속",
+      "title": "삼성전자 3분기 영업익 107.4조…현금배당 30조 푼다",
+      "source": "중앙일보",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFAwTUxEbTdreHozeklEVm5jZEE1WlNVemYwc04wUE1HWkFxY1gyWklpZnR4V1RzeU84N2FBekZUWWstWTZveWo5NS15cUY0WkZoSUZYNm5R?oc=5",
+      "publishedAt": "2026-10-29T00:58:57.000Z"
+    },
+    {
+      "title": "삼성전자 3분기 영업이익 107조 4천 원‥현금배당 30조 원",
       "source": "MBC 뉴스",
-      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFAybmU1WnF4U2p6WTBJVGZoakhBbUFLNmozVldQUlRqOV9wdmlZSTBvSmhNM0ZnVHdZSmEyeEJ5V0pIRjRjbzl3Q1Q3XzEycklPX0xyQ25OV2JxS254UF9WajlNOTlhLTU4SENicWwtbnYwbURqVW5N0gF3QVVfeXFMTXFMQlZISWxWbGI1cUJRSnNidmZLNFM4QVR6OURaMzBmcFdUU1c2WXVsS2tMUl9GUmRBUmQyZE9qWEc3cGpIYkhrX0NvdzJoRV9pMkRxd1BvaWZ6SHdIYldxTlYtZFdadkg2cUtqODBiX3MyVFlOdDQ?oc=5",
-      "publishedAt": "2026-10-27T04:39:26.000Z"
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBIbjh2SlRNc3hELXZvbUpqeHFDUGNtLVVHMjlMTi03Unpzd3ZfckNPblFSc1RfeVltZW43QTFpMFNHVE5fM0Q1b0FXeURDVFIteE5fM3NOb0JjbzBKTWFNdE9GWFdhNmFkMGplUy1aQmZpd1RE0gF0QVVfeXFMT2V6VUM3R3lLWHE0TUI0ZXp3SjdqeFF0V2VTY2VxY1BVYXg2c0NJSDBuSnQwNHIxY29pU1N0ZFZ6dTZ3Q3RnVXJzbHFFZnBRR1lPVFRkOTg0eWZwODRTdWhLSWhiWWEzODFNc2pqV1pjdndWV2I?oc=5",
+      "publishedAt": "2026-10-29T00:57:20.000Z"
+    },
+    {
+      "title": "퀄컴 최신 AP '성능 부진' 평가 잇달아, 삼성전자 갤럭시S27 울트라에도 엑시노스 탑재하나",
+      "source": "비즈니스포스트",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1XRy0zZmxRamw0QkxUY3UwUnlDTEZuUnk3a0N6RWN2R3hzN2Q2T01JWmhReXh6SjV0eEg3RzlfRGRjeU1zczFsVzQzdWpsSDd4UjkyM1h4N3REN0l5RVJHSVhjWWgyclVseWh2RXprdHVHV2M?oc=5",
+      "publishedAt": "2026-10-29T07:05:42.000Z"
+    },
+    {
+      "title": "[ETF 시황] 삼성전자 낙폭에 인버스 8%대↑…은행·금융株 '상승'",
+      "source": "뉴스핌",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFA4VHFiV0NUXzMwalRXc3BOSFNDZGxLMHo1Z3lmVk9PNmQxa1hiQVBrMTJWTmR4aE5LN0M3TklkVFFQWHBlQXBvZklrZVUyWGFpYkJ4bXE1cS1qZFJy?oc=5",
+      "publishedAt": "2026-10-29T07:08:00.000Z"
+    },
+    {
+      "title": "삼성전자 \"메모리, 2028년까지 수급 빠듯...내년 HBM 완판\"",
+      "source": "지디넷코리아",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBpRFJMVXEyRmNLa3phYngxVU1Gakw1SGpsY1BheFNGWWp1V2doQTVJYm9HN3B1VENiRS1hN0RkeTdJLUVQSHJrUFJnWGhmSlpMNWtZUVNR?oc=5",
+      "publishedAt": "2026-10-29T03:21:58.000Z"
+    },
+    {
+      "title": "[속보] 삼성전자 \"AI 에이전트 도입 가속…반도체 전반 강한 수요 지속\"",
+      "source": "연합뉴스TV",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBhWC1JZHA1ekFHc2tLRWl2Q3dGQUkxYzd4eUtTQkZFbWpmYkpFaGZ4ak1ucEUzVVo5cFBKcm1RMFU3eHdNS3hCRWJveC1sVTYzc2FoSWxVcVhLcElKLXZnZHdKNHM5QnM?oc=5",
+      "publishedAt": "2026-10-29T01:20:00.000Z"
+    },
+    {
+      "title": "삼성전자 \"내추럴 환헤지로 환율 변동성 최소화\"(종합)",
+      "source": "연합인포맥스",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBDRmZLVmxmYmdWOFd5ZUZtZVlSOXZqaFVZQkRIaW5GX29ldTZiV1FPd3pXckQyc251ODRZVndqT2ctcFhvWk5CUy1aaDdsMzJKUHZrTTl1ZlJ4ZDk2eXg3Rl94UVh1V1c4ZF95YXRZdkY?oc=5",
+      "publishedAt": "2026-10-29T02:29:50.000Z"
+    },
+    {
+      "title": "[컨콜] 삼성전자 \"2나노 수주 전년비 2배 이상↑\"…AI 수요에 생산능력 확충",
+      "source": "녹색경제신문",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE53QUNPV0NTZGlFS0pjdS1STjRyZEpHdjVaaWE1bGttd2NqODhOekFPR1pXMHoyckU2N2N6SHY4Z2phb19kd285MElsUTllUm1SaGpBRTkwcUdLSWNqOFpJYV9ieWcxa3lr?oc=5",
+      "publishedAt": "2026-10-29T03:41:40.000Z"
     }
   ],
   "dart": [],
@@ -151,9 +193,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5638.34,
-    "vs": 168.87,
-    "fltRt": 3.09
+    "clpr": 6012.44,
+    "vs": 374.1,
+    "fltRt": 6.63
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -162,7 +204,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-28T07:44:44.884Z",
+  "builtAt": "2026-10-29T07:48:26.270Z",
   "archiveDays": 120,
-  "archiveFrom": "20260429"
+  "archiveFrom": "20260430"
 }
