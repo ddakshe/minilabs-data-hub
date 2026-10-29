@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-28",
+  "updatedAt": "2026-10-29",
   "source": "KOSIS Open API",
   "categories": [
     {
@@ -1654,17 +1654,13 @@
       "id": "pop_birth",
       "category": "population",
       "title": "출생아 수",
-      "value": 24275,
+      "value": 23703,
       "unit": "명",
-      "changePct": 11.1,
+      "changePct": 13,
       "frequency": "M",
       "source": "통계청 인구동향조사",
-      "period": "2026.07",
+      "period": "2026.08",
       "history": [
-        {
-          "prd": "202308",
-          "value": 18974
-        },
         {
           "prd": "202309",
           "value": 18706
@@ -1804,6 +1800,10 @@
         {
           "prd": "202607",
           "value": 24275
+        },
+        {
+          "prd": "202608",
+          "value": 23703
         }
       ]
     },
@@ -1811,17 +1811,13 @@
       "id": "soc_marriage",
       "category": "society",
       "title": "혼인 건수",
-      "value": 22282,
+      "value": 19218,
       "unit": "건",
-      "changePct": 9.3,
+      "changePct": -1.2,
       "frequency": "M",
       "source": "통계청 인구동향조사",
-      "period": "2026.07",
+      "period": "2026.08",
       "history": [
-        {
-          "prd": "202308",
-          "value": 14610
-        },
         {
           "prd": "202309",
           "value": 12940
@@ -1961,6 +1957,10 @@
         {
           "prd": "202607",
           "value": 22282
+        },
+        {
+          "prd": "202608",
+          "value": 19218
         }
       ]
     },
@@ -1968,17 +1968,13 @@
       "id": "soc_divorce",
       "category": "society",
       "title": "이혼 건수",
-      "value": 7764,
+      "value": 7510,
       "unit": "건",
-      "changePct": -0.8,
+      "changePct": 4.4,
       "frequency": "M",
       "source": "통계청 인구동향조사",
-      "period": "2026.07",
+      "period": "2026.08",
       "history": [
-        {
-          "prd": "202308",
-          "value": 8056
-        },
         {
           "prd": "202309",
           "value": 7503
@@ -2118,6 +2114,10 @@
         {
           "prd": "202607",
           "value": 7764
+        },
+        {
+          "prd": "202608",
+          "value": 7510
         }
       ]
     },
