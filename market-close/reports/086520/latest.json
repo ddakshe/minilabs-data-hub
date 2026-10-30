@@ -2,37 +2,29 @@
   "code": "086520",
   "name": "에코프로",
   "market": "KOSDAQ",
-  "basDt": "20261028",
+  "basDt": "20261029",
   "price": {
     "code": "086520",
     "name": "에코프로",
     "market": "KOSDAQ",
-    "basDt": "20261028",
-    "close": 76700,
-    "vs": 2300,
-    "fltRt": 3.09,
-    "open": 76300,
-    "high": 78800,
-    "low": 75000,
-    "prevClose": 74400,
-    "volume": 671840,
-    "tradeValue": 51432251350,
+    "basDt": "20261029",
+    "close": 73300,
+    "vs": -3400,
+    "fltRt": -4.43,
+    "open": 76100,
+    "high": 77400,
+    "low": 72100,
+    "prevClose": 76700,
+    "volume": 775128,
+    "tradeValue": 57295521700,
     "week52": {
       "low": 67400,
       "high": 185000,
-      "position": 0.07908163265306123,
+      "position": 0.050170068027210885,
       "days": 245,
-      "from": "20251028"
+      "from": "20251029"
     },
     "recent5": [
-      {
-        "basDt": "20261022",
-        "fltRt": -7.54,
-        "open": 83300,
-        "high": 83900,
-        "low": 77000,
-        "close": 77200
-      },
       {
         "basDt": "20261023",
         "fltRt": -5.83,
@@ -64,60 +56,68 @@
         "high": 78800,
         "low": 75000,
         "close": 76700
+      },
+      {
+        "basDt": "20261029",
+        "fltRt": -4.43,
+        "open": 76100,
+        "high": 77400,
+        "low": 72100,
+        "close": 73300
       }
     ],
     "volumeVs20d": {
-      "avg20": 863475,
-      "ratio": 0.78
+      "avg20": 865889,
+      "ratio": 0.9
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
       "rows": 530,
       "rows52w": 245
     },
-    "generatedAt": "2026-10-29T07:46:46.773Z"
+    "generatedAt": "2026-10-30T07:52:59.958Z"
   },
   "facts": [
-    "코스닥보다 0.6%p 낮았어요.",
-    "거래량은 20일 평균의 0.8배예요.",
-    "시가보다 400원 높게 마감했어요."
+    "코스닥보다 2.09%p 낮았어요.",
+    "거래량은 20일 평균의 0.9배예요.",
+    "시가보다 2,800원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "[전날 애프터마켓] 삼성전자·SK하이닉스 오름폭 확대⋯에코프로도 강세",
-      "source": "이투데이",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBFY1ZQcHhUMEE4RVpEME12cXpqOHJSYW1sYXIyYlFlSy1oejJlWUV6a0M1NkNHNWY5b1NWbW9kUU04eURHd1oyZWlyQTg2MVFGTzhJVw?oc=5",
-      "publishedAt": "2026-10-27T23:22:00.000Z"
+      "title": "[마켓파워]해외사업 비엠에 모은 에코프로…‘선택과 집중’ 약일까 독일까",
+      "source": "아시아투데이",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBNRkpEcVI2ZTd4TXBHT2NIc3BUVEJkWEVJNGktTUFjeEpkbWh0M2o1Zjd5VFVYTzdWQWxQYzA2czdzWFJuMEt0U2hKWnRfOHQ3bFBNcU5MVHpkWkZTdlA0c1JZXzhSSEVGZE50eFN3?oc=5",
+      "publishedAt": "2026-10-28T23:00:01.000Z"
     },
     {
-      "title": "에코프로 주가 2,300원 상승 후 장마감",
+      "title": "에코프로 주가 3,400원 하락 후 장마감",
       "source": "아시아뉴스통신",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBNMm9LdWFkZ2NieUU4Z2huTFB3WkhIbE9WZkYwZ3RtSEdMcDQ3TVlQREZWTFk0RFJrR3RmenF1X2tSdlNQNnZhaFVrQmJQNlNIdjRSc2Q5VlZfT2xBZHMzVnAyb3JVMW5KX3E4eEZCZ3ZGZTNL?oc=5",
-      "publishedAt": "2026-10-28T06:49:24.000Z"
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9pLVBTRWs2eWVqaWRFM1NrY1lVLUFLSnpmZU5TVWFUQzJNU3hWS29DN1lYQW1IRlNnV2VaMmx1MGlKMzB0bjUwRkhWSUQwUnRZTDhaZF9xOVBMYnJlQzBOVmxpLU9WQzN6U1EzbWFjS212d0RO?oc=5",
+      "publishedAt": "2026-10-29T06:50:21.000Z"
     },
     {
-      "title": "에코프로 3%대 상승…에코프로머티·에코프로비엠·에코프로에이치엔 동반 상승커브",
-      "source": "CBC뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1feHhWa2I5Zk0yZUxSYk96NXp2SUFpOExsSmRYbDAtcE1KZ2dpTTRjT1JjTmZtd1VjT3czTnFVRzdQSzJjUG5TOFZzOHFLNWZXSWpJdE9yR1ZBRW9zc2UwR1NiTS1tcjRa?oc=5",
-      "publishedAt": "2026-10-28T01:24:33.000Z"
+      "title": "에코프로 주가 하락 중",
+      "source": "아시아뉴스통신",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFA1YTZrR0xJTU00QTNpZUN2ajBpaEdPd2tjVXJWWGJ4ajFMbnRNM0VQSXllZEpvWkp3NVBVQlR6WEZNV2dGdm96SDVOeU1NMTNWSERMYkR2THhTNnBuU2J3aVFpVi10UGZEc1pYWDhhUzViYVJy?oc=5",
+      "publishedAt": "2026-10-29T00:32:23.000Z"
     },
     {
-      "title": "에코프로비엠, 사채권자 청구로 전환사채 140억원 취득",
-      "source": "비건뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9JUlZiUXRRQ2ZGcVFvODNwOGx4bWItSVVoQUdVOEk2WWVrd250M2U4Ri1WTE5TU1pwdl9LLVIzZXY3R0xFZXdqZWdmRmF4U2x3UFBKRE9UUm1rTjg4UDVlV2hsM2dWZw?oc=5",
-      "publishedAt": "2026-10-28T13:33:42.000Z"
+      "title": "코스닥, 2%대 낙폭에 760선 밑으로...레인보우로보틱스, 에코프로비엠 등 하락",
+      "source": "이코노뉴스",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE96QzFQSkdoZXFzdUl4UVhSZmcySU5NSjN6N2tNclpjN3B6ZHdvNXR3OU83akxiRDAxWXd4UDdHTmtac081N0JndjVoRUhBSGpUSDFMcVVfVmJWQ0s3SFZoOEhlN2tRSGNYZ1I3Mzd3?oc=5",
+      "publishedAt": "2026-10-29T12:30:00.000Z"
     },
     {
-      "title": "에코프로비엠 주가, 10월 28일 장중 97,000원 2.54% 상승",
+      "title": "에코프로 주가, 10월 29일 장중 72,700원 5.22% 하락",
       "source": "톱스타뉴스",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1VWWtNRmdmSEIzUVNOWDRqWmZjb083YmhTMDY1QzItNEFfUV82OHZINzIyaFhYR195V3NJdS1mUy1BcjhrQnlzcGY5MjhaMEc4ZTV0ZnFsb2lGaG9PREgwTmVEVm1SUzJpS25IdkpFZ05EQQ?oc=5",
-      "publishedAt": "2026-10-28T02:07:26.000Z"
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE0tRGtzMjZwUG9PRFdJYzhncVNwN2Q2SkdfZThtdWo1aHdvcE45ZWVnX2djWnlPMnFxOFFwTjBkRV9xSnBrVlVMY0FESFJnYTVpNGppMUdyTkpTQ3V4UGdRZUQwUzRweTV2bC00dlV1Ylc2QQ?oc=5",
+      "publishedAt": "2026-10-29T01:23:54.000Z"
     },
     {
-      "title": "에코프로 주가, 10월 28일 장중 76,800원 3.23% 상승",
+      "title": "에코프로비엠 주가, 10월 29일 장중 90,800원 6.87% 하락",
       "source": "톱스타뉴스",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5oMHBsQVdzczczRW1FaUd1NHBKZG5xcmxvcWgyQUpvNTB4RDNyWkNBUjAwbHRGNVJzem1xZUJ3TE5KakFmN2U2UVhMcGU4bVNzcWpYbTdqUHhJckdEdHZQOHpNbzl2NUpkNjN3UGF6dFN3dw?oc=5",
-      "publishedAt": "2026-10-28T01:28:44.000Z"
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5xM2ZEVDlpLUREdHVXXzRfYVg1X0N2elNGcmZOVVl5WGd3SVlqakY0R1FxYml5c3pvaExSZHpaa2NxOWFDdVlYd3p6UDNDSmhSR0JPazNJU2NhTzhrZ01MaGo4Nzc0Y3VXaUFlWUZDaEJPUQ?oc=5",
+      "publishedAt": "2026-10-29T01:54:43.000Z"
     }
   ],
   "dart": [],
@@ -198,9 +198,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 771.28,
-    "vs": 27.45,
-    "fltRt": 3.69
+    "clpr": 753.23,
+    "vs": -18.05,
+    "fltRt": -2.34
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -209,7 +209,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-29T07:48:26.335Z",
+  "builtAt": "2026-10-30T07:54:43.385Z",
   "archiveDays": 120,
-  "archiveFrom": "20260430"
+  "archiveFrom": "20260504"
 }

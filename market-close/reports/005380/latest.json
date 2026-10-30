@@ -2,37 +2,29 @@
   "code": "005380",
   "name": "현대차",
   "market": "KOSPI",
-  "basDt": "20261028",
+  "basDt": "20261029",
   "price": {
     "code": "005380",
     "name": "현대차",
     "market": "KOSPI",
-    "basDt": "20261028",
-    "close": 296000,
-    "vs": 5500,
-    "fltRt": 1.89,
-    "open": 292500,
-    "high": 301500,
-    "low": 291000,
-    "prevClose": 290500,
-    "volume": 420188,
-    "tradeValue": 125151707250,
+    "basDt": "20261029",
+    "close": 292500,
+    "vs": -3500,
+    "fltRt": -1.18,
+    "open": 293000,
+    "high": 309500,
+    "low": 286500,
+    "prevClose": 296000,
+    "volume": 884595,
+    "tradeValue": 262286534250,
     "week52": {
-      "low": 250500,
+      "low": 254500,
       "high": 750000,
-      "position": 0.09109109109109109,
+      "position": 0.07669021190716448,
       "days": 245,
-      "from": "20251028"
+      "from": "20251029"
     },
     "recent5": [
-      {
-        "basDt": "20261022",
-        "fltRt": -2.58,
-        "open": 305500,
-        "high": 307500,
-        "low": 298500,
-        "close": 301500
-      },
       {
         "basDt": "20261023",
         "fltRt": -1.99,
@@ -64,40 +56,133 @@
         "high": 301500,
         "low": 291000,
         "close": 296000
+      },
+      {
+        "basDt": "20261029",
+        "fltRt": -1.18,
+        "open": 293000,
+        "high": 309500,
+        "low": 286500,
+        "close": 292500
       }
     ],
     "volumeVs20d": {
-      "avg20": 550254,
-      "ratio": 0.76
+      "avg20": 549098,
+      "ratio": 1.61
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
       "rows": 530,
       "rows52w": 245
     },
-    "generatedAt": "2026-10-29T07:46:34.058Z"
+    "generatedAt": "2026-10-30T07:52:46.878Z"
   },
   "facts": [
-    "코스피보다 4.74%p 낮았어요.",
-    "거래량은 20일 평균의 0.8배예요.",
-    "시가보다 3,500원 높게 마감했어요."
+    "코스피보다 0.06%p 높았어요.",
+    "거래량은 20일 평균의 1.6배예요.",
+    "시가보다 500원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "현대차 브랜드 가치 250억달러…세계 車 브랜드 4위 기록",
-      "source": "조선일보",
-      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBIUmJvRXlXd0kxdkg1TUlFUWFoWXU5aXYxRVJlaFhMYURrUkFRM3VoTXRFSGtIdHFCT2xVSkVFUm9TazJTZHpIY3d6VXpVaHIyS0JKaUxMV2VIQkF2MVJ6OHJmVGNMYWFkcE5sc2lsZGF3QWdsZGZmRWFLMlk5UFU?oc=5",
-      "publishedAt": "2026-10-28T06:48:00.000Z"
+      "title": "현대차, 포티투닷에 2852억 추가 출자…'라이선스' 잡음 속 지원 지속",
+      "source": "인베스트조선",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPUUtVZnZKSVM3bkNuZlkya0xRN09tME1sV3lsQ1hlVVhKWUZHVnBMT0toRF91NWlkYUhRU1g1ZXAyVW9mbGdtZmJBeXR0Rmp2aEhCUlNINF90N2MwdkFBbkMyRGh2TVJVZWpHLTMzcmY5LWd2bjhXd19DdXFGN3d6MWg4aw?oc=5",
+      "publishedAt": "2026-10-29T08:43:00.000Z"
     }
   ],
-  "dart": [],
+  "dart": [
+    {
+      "title": "공정거래자율준수프로그램운영현황(안내공시)              ",
+      "filer": "현대자동차",
+      "receiptNo": "20261029800592",
+      "date": "20261029",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800592"
+    },
+    {
+      "title": "특수관계인으로부터채권매수",
+      "filer": "현대자동차",
+      "receiptNo": "20261029000483",
+      "date": "20261029",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029000483"
+    },
+    {
+      "title": "특수관계인에대한출자",
+      "filer": "현대자동차",
+      "receiptNo": "20261029000476",
+      "date": "20261029",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029000476"
+    },
+    {
+      "title": "특수관계인에대한부동산임대",
+      "filer": "현대자동차",
+      "receiptNo": "20261029000463",
+      "date": "20261029",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029000463"
+    },
+    {
+      "title": "특수관계인과의내부거래",
+      "filer": "현대자동차",
+      "receiptNo": "20261029000456",
+      "date": "20261029",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029000456"
+    },
+    {
+      "title": "약관에의한금융거래시계열금융회사의거래상대방의공시",
+      "filer": "현대자동차",
+      "receiptNo": "20261029000447",
+      "date": "20261029",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029000447"
+    },
+    {
+      "title": "현금ㆍ현물배당결정              ",
+      "filer": "현대자동차",
+      "receiptNo": "20261029800269",
+      "date": "20261029",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800269"
+    },
+    {
+      "title": "현금ㆍ현물배당을위한주주명부폐쇄(기준일)결정              ",
+      "filer": "현대자동차",
+      "receiptNo": "20261029800264",
+      "date": "20261029",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800264"
+    },
+    {
+      "title": "주요사항보고서(자기주식처분결정)",
+      "filer": "현대자동차",
+      "receiptNo": "20261029000247",
+      "date": "20261029",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029000247"
+    },
+    {
+      "title": "[기재정정]영업실적등에대한전망(공정공시)              ",
+      "filer": "현대자동차",
+      "receiptNo": "20261029800240",
+      "date": "20261029",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800240"
+    },
+    {
+      "title": "[기재정정]장래사업ㆍ경영계획(공정공시)              ",
+      "filer": "현대자동차",
+      "receiptNo": "20261029800231",
+      "date": "20261029",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800231"
+    },
+    {
+      "title": "연결재무제표기준영업(잠정)실적(공정공시)              ",
+      "filer": "현대자동차",
+      "receiptNo": "20261029800228",
+      "date": "20261029",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800228"
+    }
+  ],
   "ownership": [],
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 6012.44,
-    "vs": 374.1,
-    "fltRt": 6.63
+    "clpr": 5937.66,
+    "vs": -74.78,
+    "fltRt": -1.24
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -106,7 +191,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-29T07:48:26.306Z",
+  "builtAt": "2026-10-30T07:54:43.364Z",
   "archiveDays": 120,
-  "archiveFrom": "20260430"
+  "archiveFrom": "20260504"
 }

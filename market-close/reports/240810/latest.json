@@ -2,37 +2,29 @@
   "code": "240810",
   "name": "원익IPS",
   "market": "KOSDAQ",
-  "basDt": "20261028",
+  "basDt": "20261029",
   "price": {
     "code": "240810",
     "name": "원익IPS",
     "market": "KOSDAQ",
-    "basDt": "20261028",
-    "close": 99500,
-    "vs": 5700,
-    "fltRt": 6.08,
-    "open": 96900,
-    "high": 99900,
-    "low": 95300,
-    "prevClose": 93800,
-    "volume": 725930,
-    "tradeValue": 71410818950,
+    "basDt": "20261029",
+    "close": 95900,
+    "vs": -3600,
+    "fltRt": -3.62,
+    "open": 97700,
+    "high": 98800,
+    "low": 93200,
+    "prevClose": 99500,
+    "volume": 473707,
+    "tradeValue": 45332148550,
     "week52": {
       "low": 56700,
       "high": 183300,
-      "position": 0.3380726698262243,
+      "position": 0.30963665086887837,
       "days": 245,
-      "from": "20251028"
+      "from": "20251029"
     },
     "recent5": [
-      {
-        "basDt": "20261022",
-        "fltRt": -7.92,
-        "open": 103000,
-        "high": 104500,
-        "low": 96000,
-        "close": 96500
-      },
       {
         "basDt": "20261023",
         "fltRt": -0.93,
@@ -64,48 +56,80 @@
         "high": 99900,
         "low": 95300,
         "close": 99500
+      },
+      {
+        "basDt": "20261029",
+        "fltRt": -3.62,
+        "open": 97700,
+        "high": 98800,
+        "low": 93200,
+        "close": 95900
       }
     ],
     "volumeVs20d": {
-      "avg20": 1027475,
-      "ratio": 0.71
+      "avg20": 1011675,
+      "ratio": 0.47
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
       "rows": 530,
       "rows52w": 245
     },
-    "generatedAt": "2026-10-29T07:47:05.146Z"
+    "generatedAt": "2026-10-30T07:53:18.004Z"
   },
   "facts": [
-    "코스닥보다 2.39%p 높았어요.",
-    "거래량은 20일 평균의 0.7배예요.",
-    "시가보다 2,600원 높게 마감했어요."
+    "코스닥보다 1.28%p 낮았어요.",
+    "거래량은 20일 평균의 0.5배예요.",
+    "시가보다 1,800원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "원익IPS, 동탄 연구소 확장 ‘헛돈’…3년간 빈 사무실 임대료만",
-      "source": "딜사이트",
-      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5NTjMwVkV6TjFZSGRRa0RpZEE1cnFSS1l0SE51M3RuYlk4MFd6YkRraDNGQVg2RDdXMlZ3b19PRXI4c1c4N04xRmZFZXcxdVE?oc=5",
-      "publishedAt": "2026-10-27T21:25:28.000Z"
+      "title": "원익IPS, 반도체 증착장비 '제미니' 누적 출하 800대 육박",
+      "source": "www.ebn.co.kr",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5pUGpnUTJxdDFHN2k2SUF2bkxyWmxOVTFnV0JCTlcxdG9NanNNWGo1WUsxTzBrYWMyUlJPZ0d0T1llOTZCOW5HN21BZFowQWRxamFuYTJubG9mbkdTWTc1NkNTdUlpei01?oc=5",
+      "publishedAt": "2026-10-29T07:03:59.000Z"
     },
     {
-      "title": "원익IPS 9만8200원으로 4.69% 상승…반도체 장비 수주 기대",
-      "source": "잡포스트",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1xX2tSaXdWcDRtd29hNmJkYWRMdzNvWS00T1JRYWJmS3llQUxsRWtwWGZpLTB3NGEtZXJJY2l2OHlxOW1aM21OYzRLY3F6SGRZb3hrak1PWGZFX2d6SmZIdlkwR2w2ZTFmVzIwODhNVmNzZ9IBckFVX3lxTE1xX2tSaXdWcDRtd29hNmJkYWRMdzNvWS00T1JRYWJmS3llQUxsRWtwWGZpLTB3NGEtZXJJY2l2OHlxOW1aM21OYzRLY3F6SGRZb3hrak1PWGZFX2d6SmZIdlkwR2w2ZTFmVzIwODhNVmNzZw?oc=5",
-      "publishedAt": "2026-10-28T05:40:16.000Z"
+      "title": "원익IPS, 제미니 첫 출하 10년…누적 800대 육박",
+      "source": "뉴스타운",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBILU5vLXMwLWNsTEdKT0xOUTdzSkR6N0xPYzA4OE9xd0J1Z3hHU3pJYnJKeW15S2NBVS1UenFwdm05TnptRTJabGdzYzBYOGdjUlJndGJjQ2dYU21PWHF3eG5HelJPRXVRYWFhQnNn?oc=5",
+      "publishedAt": "2026-10-29T13:52:57.000Z"
     },
     {
-      "title": "신재생에너지 관련주 상승커브…주성엔지니어링·원익IPS·혜인 강세, 지투파워도 상승",
-      "source": "CBC뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9RcUo0MUhMaFNQQUd0cjItOFlmS0lXWmJjaU1HdTktZVg1Z3NCUWcyMEdtem0wazhYdG1KZUJvMjQ0Q2ZLX2lldEtuVU4tU0NWa09JN1NzSVREY2tJZUo2bmUwVDJLeE5n?oc=5",
-      "publishedAt": "2026-10-28T01:22:48.000Z"
+      "title": "원익IPS, GEMINI 누적 출하량 800대 육박... \"글로벌 시장 공략\"",
+      "source": "시사캐스트",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE44dktkWW41djA0X2ZqUVlLQXpGc1hicXJBcVF5OGk3bHhHS3ROdE9meXF3NUpERWJuZXlGWFExSV9QWG9VRVJyVF82R2EyYW1QQmJpc2JmTXQ2VHFBcWJ0NDRjOU5Wc3k2?oc=5",
+      "publishedAt": "2026-10-29T07:28:09.000Z"
     },
     {
-      "title": "원익ips 주가 상승 중",
+      "title": "원익IPS, 반도체 증착장비 ‘GEMINI’ 누적 출하 800대 육박…글로벌 시장 확대",
+      "source": "중앙뉴스타임스",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBqdjRvUU8xOUhVVDBCQVc0dk8tZElkempOQW84NUY5aGpMdkRybmxfaHVhcURWUjY1OXF1Ynp6VUE3TFlGNk9UT1RpX0poSDFoU3lIbHNBY0Jnanh2azVaYjF4MDE?oc=5",
+      "publishedAt": "2026-10-29T07:24:40.000Z"
+    },
+    {
+      "title": "원익IPS, 반도체 증착장비 ‘GEMINI’ 누적 출하 800대 근접...해외 공급 확대",
+      "source": "워크투데이",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1vdEstYXM2ZzdSNEtLZDVtOGw2VmRwakF0WVNJU1ZHVl9vM29QeFNlbUxGbGhkUzJnQkpXeXlabm1pZFdNclo3M0VXcTNaeXd1R2IxbGdDRlhraHpNRlNtWFktN0k3LVRmLS1Mbw?oc=5",
+      "publishedAt": "2026-10-29T06:53:42.000Z"
+    },
+    {
+      "title": "원익IPS, 증착장비 출하 800대 육박",
+      "source": "한스경제",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE13R2dJa1hvbTJiUGYxZ3NPYUVHUFFBSjctSldtSENsRUtGR3VUTks1RWN5SG5IdFhpcmpvYzNob2FobHlid0hHcnIyQnVJN01CSWlrT1lidE5zd0xkMk12ODlhaHprUVgzTkpF0gFvQVVfeXFMTTA1ZlgwVnRuSC1Md1JFd0R5a0NNTVY1d3FXZVZ4Vl9RQWJVaHdzM3RsZGtOWkxyQjhTMUVyX3pGcU9XZ0RMY01GSXZWRGppY1ZEcVlrcTVhZFVKTC14UE13enZtX3NmS2JfalV6WTdz?oc=5",
+      "publishedAt": "2026-10-29T07:53:52.000Z"
+    },
+    {
+      "title": "원익IPS, 주력 증착장비 ‘GEMINI’ 누적 출하 800대 눈앞",
+      "source": "SR타임스",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFAwRmhMMzZRRWFTaWlNcjV6U3hEN3lmWW44Qi11RDVwa21pQTNCVDlJV21qQWJBNS16MVVOM0FjazY4OUhpYm10V3FTdzNQZmRWaU5Zd3ZqX21WUFhWV2E1SnozVWFhTjVr?oc=5",
+      "publishedAt": "2026-10-29T08:09:16.000Z"
+    },
+    {
+      "title": "원익ips 주가 하락 중",
       "source": "아시아뉴스통신",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1tOVlzOWVwTjdoU2laTWdUVkRXd3UxSE1GdUwwd2p5UnZOazQ3WGoycllNSEtpRmNhZy1kdldRak9HVXIwYzBvTF9jYXpBdVFVYm1OeVA4aDBqN0VBODB5a3Ftd1VnYjJBbU9XVkxtQ2tiblhU?oc=5",
-      "publishedAt": "2026-10-28T00:06:06.000Z"
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1uVWlrLU1iczY3aXdLQTBlZHVQTk1Tb1dkZGRrNllla29STVNiMEk0cEhPdUYtUXB6OVBReHV4SDB5b2twbnFKc3h2LUZ0ZkJ5RVdSaWZEVGRNOWxZLUZHNERmUDBnNkNHWTRQUzNSTEFGOExF?oc=5",
+      "publishedAt": "2026-10-29T00:15:11.000Z"
     }
   ],
   "dart": [],
@@ -132,9 +156,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 771.28,
-    "vs": 27.45,
-    "fltRt": 3.69
+    "clpr": 753.23,
+    "vs": -18.05,
+    "fltRt": -2.34
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -143,7 +167,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-10-29T07:48:26.368Z",
+  "builtAt": "2026-10-30T07:54:43.411Z",
   "archiveDays": 120,
-  "archiveFrom": "20260430"
+  "archiveFrom": "20260504"
 }

@@ -1,0 +1,122 @@
+{
+  "code": "145020",
+  "name": "휴젤",
+  "market": "KOSDAQ",
+  "basDt": "20261029",
+  "price": {
+    "code": "145020",
+    "name": "휴젤",
+    "market": "KOSDAQ",
+    "basDt": "20261029",
+    "close": 183300,
+    "vs": 1800,
+    "fltRt": 0.99,
+    "open": 183200,
+    "high": 183600,
+    "low": 178000,
+    "prevClose": 181500,
+    "volume": 42903,
+    "tradeValue": 7749962900,
+    "week52": {
+      "low": 168500,
+      "high": 296500,
+      "position": 0.115625,
+      "days": 245,
+      "from": "20251029"
+    },
+    "recent5": [
+      {
+        "basDt": "20261023",
+        "fltRt": -0.39,
+        "open": 180500,
+        "high": 182000,
+        "low": 176600,
+        "close": 180100
+      },
+      {
+        "basDt": "20261026",
+        "fltRt": -2.05,
+        "open": 177000,
+        "high": 180800,
+        "low": 175900,
+        "close": 176400
+      },
+      {
+        "basDt": "20261027",
+        "fltRt": 1.7,
+        "open": 178100,
+        "high": 184900,
+        "low": 177300,
+        "close": 179400
+      },
+      {
+        "basDt": "20261028",
+        "fltRt": 1.17,
+        "open": 179400,
+        "high": 183000,
+        "low": 179400,
+        "close": 181500
+      },
+      {
+        "basDt": "20261029",
+        "fltRt": 0.99,
+        "open": 183200,
+        "high": 183600,
+        "low": 178000,
+        "close": 183300
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 50619,
+      "ratio": 0.85
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 530,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-30T07:53:28.445Z"
+  },
+  "facts": [
+    "코스닥보다 3.33%p 높았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가보다 100원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "휴젤·휴온스 이어 3번째…이니바이오 ‘이니보’, 中 톡신 시장 뚫었다",
+      "source": "헤럴드경제",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5fVGZsWkFKeGlGcm5CTGFhUHkxVWtuR2loZHk0MUYtMGJoOWRSQWJmcl8zNm5IS3k4QWloSGppa3QtMXR6TmxmdEwzeTdXRFNLVHVZSlpn?oc=5",
+      "publishedAt": "2026-10-28T23:56:10.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20260804",
+      "holder": "아프로디테애퀴지션홀딩스엘엘씨",
+      "ratio": 45.58,
+      "ratioChange": 0,
+      "reason": "특별관계자 및 보유주식등 수 변동에 따른 변동보고",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260804000276"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 753.23,
+    "vs": -18.05,
+    "fltRt": -2.34
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-30T07:54:43.426Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260504"
+}

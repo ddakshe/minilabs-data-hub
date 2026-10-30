@@ -1,0 +1,136 @@
+{
+  "code": "000660",
+  "name": "SK하이닉스",
+  "market": "KOSPI",
+  "basDt": "20261029",
+  "price": {
+    "code": "000660",
+    "name": "SK하이닉스",
+    "market": "KOSPI",
+    "basDt": "20261029",
+    "close": 1526000,
+    "vs": 39000,
+    "fltRt": 2.62,
+    "open": 1511000,
+    "high": 1587000,
+    "low": 1479000,
+    "prevClose": 1487000,
+    "volume": 4549384,
+    "tradeValue": 6947048283382,
+    "week52": {
+      "low": 519000,
+      "high": 2919000,
+      "position": 0.4195833333333333,
+      "days": 245,
+      "from": "20251029"
+    },
+    "recent5": [
+      {
+        "basDt": "20261023",
+        "fltRt": 4.42,
+        "open": 1200000,
+        "high": 1284000,
+        "low": 1171000,
+        "close": 1277000
+      },
+      {
+        "basDt": "20261026",
+        "fltRt": -0.16,
+        "open": 1279000,
+        "high": 1315000,
+        "low": 1267000,
+        "close": 1275000
+      },
+      {
+        "basDt": "20261027",
+        "fltRt": 5.18,
+        "open": 1346000,
+        "high": 1381000,
+        "low": 1336000,
+        "close": 1341000
+      },
+      {
+        "basDt": "20261028",
+        "fltRt": 10.89,
+        "open": 1390000,
+        "high": 1495000,
+        "low": 1358000,
+        "close": 1487000
+      },
+      {
+        "basDt": "20261029",
+        "fltRt": 2.62,
+        "open": 1511000,
+        "high": 1587000,
+        "low": 1479000,
+        "close": 1526000
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 3506722,
+      "ratio": 1.3
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 530,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-30T07:52:34.068Z"
+  },
+  "facts": [
+    "코스피보다 3.86%p 높았어요.",
+    "거래량은 20일 평균의 1.3배예요.",
+    "시가보다 15,000원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "“이러니 SK하이닉스로 가지”…투자자들, 삼성전자에 실망한 이유는 [머니+]",
+      "source": "에너지경제신문",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9QRlhWN2t1Y2RqZUoyZUNVOXoxZkJjYnU2bnR4dnpxLXhmQ1lnWS1sZXRzN18wRGhBZUwzdUhiWTc5RDBmMXg3S2doa21EZGQ4SGIwNGwzMGlCaVk?oc=5",
+      "publishedAt": "2026-10-29T06:45:15.000Z"
+    },
+    {
+      "title": "'삼성전자·SK하이닉스'가 고객사…세 달 만에 168% 급등",
+      "source": "한국경제",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFA4MzNsaC0zUUpwNU5YczFfaEJ1VVU4cjA5UU1fQ2tRZmFTSk9ueENfVDRQR0JwZGtDV2JBN3ZrTW9qTndVSlh3WmdhRUZXblFMcmE1cVprX1JtQQ?oc=5",
+      "publishedAt": "2026-10-29T05:21:12.000Z"
+    }
+  ],
+  "dart": [
+    {
+      "title": "풍문또는보도에대한해명(미확정)              ",
+      "filer": "SK하이닉스",
+      "receiptNo": "20261029800130",
+      "date": "20261029",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800130"
+    }
+  ],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20260805",
+      "holder": "SK스퀘어",
+      "ratio": 20.01,
+      "ratioChange": -0.09,
+      "reason": "보유주식등의 수 및 특별관계자 변동",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260805000440"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 5937.66,
+    "vs": -74.78,
+    "fltRt": -1.24
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-30T07:54:43.343Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260504"
+}

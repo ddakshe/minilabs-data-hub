@@ -1,0 +1,155 @@
+{
+  "code": "066970",
+  "name": "엘앤에프",
+  "market": "KOSPI",
+  "basDt": "20261029",
+  "price": {
+    "code": "066970",
+    "name": "엘앤에프",
+    "market": "KOSPI",
+    "basDt": "20261029",
+    "close": 83400,
+    "vs": -5600,
+    "fltRt": -6.29,
+    "open": 87900,
+    "high": 89700,
+    "low": 83000,
+    "prevClose": 89000,
+    "volume": 331448,
+    "tradeValue": 28046032500,
+    "week52": {
+      "low": 65600,
+      "high": 213000,
+      "position": 0.12075983717774763,
+      "days": 245,
+      "from": "20251029"
+    },
+    "recent5": [
+      {
+        "basDt": "20261023",
+        "fltRt": -5.81,
+        "open": 88100,
+        "high": 89300,
+        "low": 83900,
+        "close": 85900
+      },
+      {
+        "basDt": "20261026",
+        "fltRt": -3.14,
+        "open": 83300,
+        "high": 87000,
+        "low": 81300,
+        "close": 83200
+      },
+      {
+        "basDt": "20261027",
+        "fltRt": 1.2,
+        "open": 84300,
+        "high": 86500,
+        "low": 82700,
+        "close": 84200
+      },
+      {
+        "basDt": "20261028",
+        "fltRt": 5.7,
+        "open": 85500,
+        "high": 91300,
+        "low": 84600,
+        "close": 89000
+      },
+      {
+        "basDt": "20261029",
+        "fltRt": -6.29,
+        "open": 87900,
+        "high": 89700,
+        "low": 83000,
+        "close": 83400
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 487661,
+      "ratio": 0.68
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 530,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-30T07:53:25.943Z"
+  },
+  "facts": [
+    "코스피보다 5.05%p 낮았어요.",
+    "거래량은 20일 평균의 0.7배예요.",
+    "시가보다 4,500원 낮게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "미국 ESS 소재 견제에도 중국산 LFP 가격 경쟁력 탄탄, 포스코퓨처엠 엘앤에프 양극재 시험대 올라",
+      "source": "비즈니스포스트",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5UX25WTnpfQnBrNWdfX01ZckYyTjFCLVhEWFY2aks5bWJPVFg2cnBET0huU214LXZoYm0tZF91R016dWdZN1h1Y2d6SFRvdEtkaVY1ZHEwTDJreE5vSHJQeWtaUHhTM04xbEtabTU5TnVwTG8?oc=5",
+      "publishedAt": "2026-10-29T06:26:24.000Z"
+    },
+    {
+      "title": "엘앤에프 주가, 10월 29일 애프터마켓 83,400원 6.29% 하락",
+      "source": "톱스타뉴스",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1pVzR5RGl2U1VQQl9fMDVRVkFjVHVMZXQwUzZ5WGZBQXFUWHZIS3pMNUxJYkwzbVU4TTZVeVNUZGhjbzRKU2ZtcmVzaTAycVFYSEN1aUpiSHJKdkpuR1FBejFCUFZsaXhmNXRUcFAzQUFnUQ?oc=5",
+      "publishedAt": "2026-10-29T07:13:04.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20261002",
+      "holder": "국민연금공단",
+      "ratio": 8.58,
+      "ratioChange": -0.05,
+      "reason": "단순추가취득/처분",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261002000292"
+    },
+    {
+      "kind": "major",
+      "date": "20261002",
+      "holder": "새로닉스",
+      "ratio": 22.08,
+      "ratioChange": 0,
+      "reason": "주식담보대출 연장",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261002000082"
+    },
+    {
+      "kind": "major",
+      "date": "20260826",
+      "holder": "새로닉스",
+      "ratio": 22.08,
+      "ratioChange": 0,
+      "reason": "주식담보대출 연장",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260826000546"
+    },
+    {
+      "kind": "major",
+      "date": "20260805",
+      "holder": "새로닉스",
+      "ratio": 22.08,
+      "ratioChange": 0,
+      "reason": "주식담보수량 변경 및 주식담보대출 신규 계약 체결",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260805000396"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 5937.66,
+    "vs": -74.78,
+    "fltRt": -1.24
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-30T07:54:43.423Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260504"
+}

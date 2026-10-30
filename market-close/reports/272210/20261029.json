@@ -1,0 +1,143 @@
+{
+  "code": "272210",
+  "name": "한화시스템",
+  "market": "KOSPI",
+  "basDt": "20261029",
+  "price": {
+    "code": "272210",
+    "name": "한화시스템",
+    "market": "KOSPI",
+    "basDt": "20261029",
+    "close": 64600,
+    "vs": -1600,
+    "fltRt": -2.42,
+    "open": 65400,
+    "high": 66700,
+    "low": 63600,
+    "prevClose": 66200,
+    "volume": 671207,
+    "tradeValue": 43560091250,
+    "week52": {
+      "low": 45350,
+      "high": 162700,
+      "position": 0.16403919897741798,
+      "days": 245,
+      "from": "20251029"
+    },
+    "recent5": [
+      {
+        "basDt": "20261023",
+        "fltRt": -10.28,
+        "open": 70600,
+        "high": 71700,
+        "low": 65800,
+        "close": 66300
+      },
+      {
+        "basDt": "20261026",
+        "fltRt": -3.92,
+        "open": 64300,
+        "high": 64600,
+        "low": 60100,
+        "close": 63700
+      },
+      {
+        "basDt": "20261027",
+        "fltRt": -0.94,
+        "open": 64300,
+        "high": 69700,
+        "low": 62600,
+        "close": 63100
+      },
+      {
+        "basDt": "20261028",
+        "fltRt": 4.91,
+        "open": 64000,
+        "high": 67500,
+        "low": 60300,
+        "close": 66200
+      },
+      {
+        "basDt": "20261029",
+        "fltRt": -2.42,
+        "open": 65400,
+        "high": 66700,
+        "low": 63600,
+        "close": 64600
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 1008706,
+      "ratio": 0.67
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 530,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-10-30T07:53:31.001Z"
+  },
+  "facts": [
+    "코스피보다 1.18%p 낮았어요.",
+    "거래량은 20일 평균의 0.7배예요.",
+    "시가보다 800원 낮게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "[컨콜] 한화에어로, 3Q ‘숨고르기’에도 4Q 반등 자신…“폴란드 천무 인도 60대 이상으로 상향”",
+      "source": "에너지경제신문",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE8zX1JEWTVrOGNlOWhndlo3aFhFRlVlUTlUSy12UmFGZXFCRXdkdGFLeDVNQjVtbTBTWmxHZEtfQVJWdzRGZkh6bURsQWx1WTk2SklDODlyaDA2NVk?oc=5",
+      "publishedAt": "2026-10-29T07:57:21.000Z"
+    },
+    {
+      "title": "한화시스템 주가 하락 중",
+      "source": "아시아뉴스통신",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9NZTAwWXdtMjNjNHJVdDZTR0V5ZXNTMThIbk5qQ0xpQk1xams4NTBhR0RsYTBueHNyZDlvWjNWY2VWdmRKNUJNTnpKZVpTNmZqb2h6ZHUzcHl4cUhqWjQwZVJkUHlYYklaRUhwSmNGVjlIUkRf?oc=5",
+      "publishedAt": "2026-10-29T00:43:37.000Z"
+    },
+    {
+      "title": "한화에어로, 3분기 영업익 4520억…4분기 반등 기대",
+      "source": "디일렉",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5LcjczcjBVOG9JZlVVdGpUc29yMUxWWnBmalM1ZW42c3pDbGdXMk9tYTBSUW1rMTZCQWJiclhwSUFuWnJPNEt2OXFzQUNPMjdEaXloam9WQ0tFaGhBRkF6YVNyXzlOQQ?oc=5",
+      "publishedAt": "2026-10-29T12:35:33.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20261002",
+      "holder": "국민연금공단",
+      "ratio": 6.17,
+      "ratioChange": -1.02,
+      "reason": "단순추가취득/처분",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261002000420"
+    },
+    {
+      "kind": "major",
+      "date": "20260918",
+      "holder": "한화에어로스페이스",
+      "ratio": 59.53,
+      "ratioChange": -0.01,
+      "reason": "특별관계자 변동에 따른 보유주식등의 내역 변동 및 · 보유주식등에 관한 계약 변경보고",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260918000462"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 5937.66,
+    "vs": -74.78,
+    "fltRt": -1.24
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-10-30T07:54:43.430Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260504"
+}
