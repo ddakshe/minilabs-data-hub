@@ -1,9 +1,63 @@
 {
-  "generatedAt": "2026-10-30T00:00:00Z",
+  "generatedAt": "2026-10-31T00:00:00Z",
   "source": "SEC EDGAR",
   "sourceUrl": "https://www.sec.gov/edgar",
-  "usdKrw": 1337.29,
+  "usdKrw": 1335.27,
   "listed": [
+    {
+      "cik": "0002044950",
+      "name": "Bambusa Therapeutics, Inc.",
+      "ticker": null,
+      "exchange": "뉴욕증권거래소",
+      "offerPrice": 16.0,
+      "priceBandLow": 15.0,
+      "priceBandHigh": 17.0,
+      "bandPosition": "within",
+      "sharesOffered": 10555555,
+      "sharesAfterListing": 50942430,
+      "grossProceeds": 168888880,
+      "marketCap": 815078880,
+      "filedAt": "2026-10-30",
+      "isSpac": false,
+      "sic": "2836",
+      "industry": "제약·바이오",
+      "underwriters": [],
+      "businessSummary": "We are a clinical-stage biopharmaceutical company developing next-generation, long-acting precision bispecific antibodies designed to redefine standards of care in immunology and inflammation (&#8220;I&#38;I&#8221;) and fundamentally improve patient quality of life.",
+      "useOfProceeds": "We intend to use the net proceeds from this offering, together with our existing cash, cash equivalents, and marketable securities, primarily as follows approximately $90.",
+      "netResult": null,
+      "netResultYear": null,
+      "lockupDays": null,
+      "location": "BOSTON, MA",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002044950&type=424B4"
+    },
+    {
+      "cik": "0002124080",
+      "name": "Aspen Neuroscience, Inc.",
+      "ticker": "ASPE",
+      "exchange": "나스닥",
+      "offerPrice": 15.0,
+      "priceBandLow": 15.0,
+      "priceBandHigh": 17.0,
+      "bandPosition": "bottom",
+      "sharesOffered": 9375000,
+      "sharesAfterListing": 29078600,
+      "grossProceeds": 140625000,
+      "marketCap": 436179000,
+      "filedAt": "2026-10-30",
+      "isSpac": false,
+      "sic": "2834",
+      "industry": "제약·바이오",
+      "underwriters": [],
+      "businessSummary": "We are a clinical-stage regenerative medicine biotechnology company with a limited operating history and no history of commercializing products, which may make it difficult to evaluate our approach to the discovery and development of product candidates and the prospects for our future viability.",
+      "useOfProceeds": "We currently intend to use the net proceeds from this offering, together with our existing cash, cash equivalents, and marketable securities, as follows: approximately $8.",
+      "netResult": null,
+      "netResultYear": null,
+      "lockupDays": null,
+      "location": "SAN DIEGO, CA",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002124080&type=424B4"
+    },
     {
       "cik": "0001806540",
       "name": "Lycia Therapeutics, Inc.",
@@ -258,6 +312,151 @@
   ],
   "upcoming": [
     {
+      "cik": "0002147831",
+      "name": "UCSB Acquisition Corp.",
+      "ticker": null,
+      "filedAt": "2026-10-30",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002147831&type=S-1"
+    },
+    {
+      "cik": "0002016072",
+      "name": "Velos Acquisition I Corp.",
+      "ticker": "VLOS",
+      "filedAt": "2026-10-30",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": null,
+        "netIncome": 5778750,
+        "assets": 308181330
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002016072&type=S-1"
+    },
+    {
+      "cik": "0002109869",
+      "name": "Exascale Labs Holdings Inc.",
+      "ticker": "XLAB",
+      "filedAt": "2026-10-30",
+      "isSpac": false,
+      "sic": "7372",
+      "industry": "소프트웨어·IT",
+      "financials": {
+        "fiscalEnd": "2026-06-30",
+        "revenue": 14822799,
+        "netIncome": -12162391,
+        "assets": 6726725
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002109869&type=S-1"
+    },
+    {
+      "cik": "0002092592",
+      "name": "Evernorth Holdings Inc.",
+      "ticker": "XRPN",
+      "filedAt": "2026-10-30",
+      "isSpac": false,
+      "sic": "6221",
+      "industry": "금융·부동산",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002092592&type=S-1"
+    },
+    {
+      "cik": "0002108121",
+      "name": "Ionetix Corp   DE",
+      "ticker": null,
+      "filedAt": "2026-10-30",
+      "isSpac": false,
+      "sic": "2835",
+      "industry": "제약·바이오",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": 6012000,
+        "netIncome": -39671000,
+        "assets": 25490
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002108121&type=S-1"
+    },
+    {
+      "cik": "0002079000",
+      "name": "Duke Holding Inc.",
+      "ticker": null,
+      "filedAt": "2026-10-30",
+      "isSpac": false,
+      "sic": "4220",
+      "industry": "운수·통신",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002079000&type=S-1"
+    },
+    {
+      "cik": "0001855467",
+      "name": "MOBIX LABS, INC",
+      "ticker": "MOBX",
+      "filedAt": "2026-10-30",
+      "isSpac": false,
+      "sic": "3674",
+      "industry": "반도체·전자",
+      "financials": {
+        "fiscalEnd": "2024-09-30",
+        "revenue": 6442000,
+        "netIncome": -20034000,
+        "assets": 39088000
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001855467&type=S-1"
+    },
+    {
+      "cik": "0001054102",
+      "name": "INTERPACE BIOSCIENCES, INC.",
+      "ticker": "IDXG",
+      "filedAt": "2026-10-30",
+      "isSpac": false,
+      "sic": "3841",
+      "industry": "제조",
+      "financials": {
+        "fiscalEnd": "2022-12-31",
+        "revenue": 5678000,
+        "netIncome": -21958000,
+        "assets": 15979000
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001054102&type=S-1"
+    },
+    {
+      "cik": "0001826011",
+      "name": "Parabolic Technologies, Inc.",
+      "ticker": "PARA",
+      "filedAt": "2026-10-30",
+      "isSpac": false,
+      "sic": "7372",
+      "industry": "소프트웨어·IT",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": 12161419,
+        "netIncome": -22492075,
+        "assets": 31631514
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001826011&type=S-1"
+    },
+    {
+      "cik": "0001793497",
+      "name": "VS Trust",
+      "ticker": "UVIX",
+      "filedAt": "2026-10-30",
+      "isSpac": false,
+      "sic": "6221",
+      "industry": "금융·부동산",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": null,
+        "netIncome": -623535934,
+        "assets": 551040983
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001793497&type=S-1"
+    },
+    {
       "cik": "0002133939",
       "name": "Football Manager SPAC Inc.",
       "ticker": "FBLL",
@@ -443,17 +642,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002130357&type=S-1"
     },
     {
-      "cik": "0002124080",
-      "name": "Aspen Neuroscience, Inc.",
-      "ticker": "ASPE",
-      "filedAt": "2026-10-26",
-      "isSpac": false,
-      "sic": "2834",
-      "industry": "제약·바이오",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002124080&type=S-1"
-    },
-    {
       "cik": "0002045931",
       "name": "Aimei Health Technology II Co., Ltd.",
       "ticker": null,
@@ -474,17 +662,6 @@
       "industry": "금융·부동산",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002091680&type=S-1"
-    },
-    {
-      "cik": "0002044950",
-      "name": "Bambusa Therapeutics, Inc.",
-      "ticker": null,
-      "filedAt": "2026-10-26",
-      "isSpac": false,
-      "sic": "2836",
-      "industry": "제약·바이오",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002044950&type=S-1"
     },
     {
       "cik": "0001070965",
@@ -540,17 +717,6 @@
       "industry": "SPAC",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001875655&type=S-1"
-    },
-    {
-      "cik": "0002092592",
-      "name": "Evernorth Holdings Inc.",
-      "ticker": "XRPN",
-      "filedAt": "2026-10-23",
-      "isSpac": false,
-      "sic": "6221",
-      "industry": "금융·부동산",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002092592&type=S-1"
     },
     {
       "cik": "0002029297",
@@ -1128,22 +1294,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001954227&type=S-1"
     },
     {
-      "cik": "0001793497",
-      "name": "VS Trust",
-      "ticker": "UVIX",
-      "filedAt": "2026-10-07",
-      "isSpac": false,
-      "sic": "6221",
-      "industry": "금융·부동산",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": null,
-        "netIncome": -623535934,
-        "assets": 551040983
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001793497&type=S-1"
-    },
-    {
       "cik": "0001604191",
       "name": "GridAI Technologies Corp.",
       "ticker": "GRDX",
@@ -1322,22 +1472,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001864531&type=S-1"
     },
     {
-      "cik": "0001054102",
-      "name": "INTERPACE BIOSCIENCES, INC.",
-      "ticker": "IDXG",
-      "filedAt": "2026-10-01",
-      "isSpac": false,
-      "sic": "3841",
-      "industry": "제조",
-      "financials": {
-        "fiscalEnd": "2022-12-31",
-        "revenue": 5678000,
-        "netIncome": -21958000,
-        "assets": 15979000
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001054102&type=S-1"
-    },
-    {
       "cik": "0002140589",
       "name": "Laris Growth Acquisition Corp.",
       "ticker": "LARS",
@@ -1374,22 +1508,6 @@
       "industry": "SPAC",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002076561&type=S-1"
-    },
-    {
-      "cik": "0002016072",
-      "name": "Velos Acquisition I Corp.",
-      "ticker": "VLOS",
-      "filedAt": "2026-09-29",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": null,
-        "netIncome": 5778750,
-        "assets": 308181330
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002016072&type=S-1"
     },
     {
       "cik": "0002116517",
@@ -2179,22 +2297,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001938571&type=S-1"
     },
     {
-      "cik": "0001855467",
-      "name": "MOBIX LABS, INC",
-      "ticker": "MOBX",
-      "filedAt": "2026-08-28",
-      "isSpac": false,
-      "sic": "3674",
-      "industry": "반도체·전자",
-      "financials": {
-        "fiscalEnd": "2024-09-30",
-        "revenue": 6442000,
-        "netIncome": -20034000,
-        "assets": 39088000
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001855467&type=S-1"
-    },
-    {
       "cik": "0001947016",
       "name": "Starfighters Space, Inc.",
       "ticker": "FJET",
@@ -2643,22 +2745,6 @@
       "industry": "SPAC",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002143156&type=S-1"
-    },
-    {
-      "cik": "0002108121",
-      "name": "Ionetix Corp   DE",
-      "ticker": null,
-      "filedAt": "2026-08-07",
-      "isSpac": false,
-      "sic": "2835",
-      "industry": "제약·바이오",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 6012000,
-        "netIncome": -39671000,
-        "assets": 25490
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002108121&type=S-1"
     },
     {
       "cik": "0002083125",
