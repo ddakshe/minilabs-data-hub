@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-30",
+  "updatedAt": "2026-10-31",
   "source": "KOSIS Open API",
   "categories": [
     {
@@ -32,11 +32,11 @@
       "category": "society"
     },
     {
-      "id": "i_hea_smoke",
-      "emoji": "📉",
-      "title": "현재 흡연율 · 10년 최저",
-      "description": "2024년 기준",
-      "category": "health"
+      "id": "i_eco_export",
+      "emoji": "📈",
+      "title": "수출액 · 36개월 최고",
+      "description": "2026.09 기준",
+      "category": "economy"
     }
   ],
   "stats": [
@@ -1391,17 +1391,13 @@
       "id": "eco_export",
       "category": "economy",
       "title": "수출액",
-      "value": 98282,
+      "value": 121050,
       "unit": "백만$",
-      "changePct": 68.7,
+      "changePct": 83.7,
       "frequency": "M",
       "source": "통계청 시도별 수출입 현황",
-      "period": "2026.08",
+      "period": "2026.09",
       "history": [
-        {
-          "prd": "202309",
-          "value": 54651
-        },
         {
           "prd": "202310",
           "value": 54990
@@ -1512,11 +1508,11 @@
         },
         {
           "prd": "202601",
-          "value": 65844
+          "value": 65843
         },
         {
           "prd": "202602",
-          "value": 67644
+          "value": 67640
         },
         {
           "prd": "202603",
@@ -1524,23 +1520,27 @@
         },
         {
           "prd": "202604",
-          "value": 85751
+          "value": 85738
         },
         {
           "prd": "202605",
-          "value": 87553
+          "value": 87551
         },
         {
           "prd": "202606",
-          "value": 101960
+          "value": 101958
         },
         {
           "prd": "202607",
-          "value": 99190
+          "value": 99205
         },
         {
           "prd": "202608",
-          "value": 98282
+          "value": 98374
+        },
+        {
+          "prd": "202609",
+          "value": 121050
         }
       ]
     },
