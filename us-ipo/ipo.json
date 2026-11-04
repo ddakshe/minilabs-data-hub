@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-03T00:00:00Z",
+  "generatedAt": "2026-11-04T00:00:00Z",
   "source": "SEC EDGAR",
   "sourceUrl": "https://www.sec.gov/edgar",
-  "usdKrw": 1342.9,
+  "usdKrw": 1344.59,
   "listed": [
     {
       "cik": "0002044950",
       "name": "Bambusa Therapeutics, Inc.",
-      "ticker": null,
+      "ticker": "BBTX",
       "exchange": "뉴욕증권거래소",
       "offerPrice": 16.0,
       "priceBandLow": 15.0,
@@ -287,7 +287,7 @@
     {
       "cik": "0002130357",
       "name": "Anthropic, PBC",
-      "ticker": null,
+      "ticker": "ANT",
       "filedAt": "2026-11-02",
       "isSpac": false,
       "sic": "7372",
@@ -1907,17 +1907,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002125355&type=S-1"
     },
     {
-      "cik": "0002109823",
-      "name": "Leader's Advantage Acquisition Corp.",
-      "ticker": "LEDR",
-      "filedAt": "2026-09-14",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002109823&type=S-1"
-    },
-    {
       "cik": "0002088082",
       "name": "Electra Therapeutics, Inc.",
       "ticker": "ETRA",
@@ -1938,6 +1927,17 @@
       "industry": "제조",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002065821&type=S-1"
+    },
+    {
+      "cik": "0002109823",
+      "name": "Leader's Advantage Acquisition Corp.",
+      "ticker": "LEDR",
+      "filedAt": "2026-09-14",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002109823&type=S-1"
     },
     {
       "cik": "0002143067",
@@ -2826,17 +2826,6 @@
         "assets": 7727000
       },
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001883984&type=S-1"
-    },
-    {
-      "cik": "0002123955",
-      "name": "Pinnacle Acquisition Corp",
-      "ticker": "PNAQ",
-      "filedAt": "2026-08-05",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002123955&type=S-1"
     }
   ]
 }
