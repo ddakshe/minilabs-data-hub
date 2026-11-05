@@ -1,9 +1,36 @@
 {
-  "generatedAt": "2026-11-04T00:00:00Z",
+  "generatedAt": "2026-11-05T00:00:00Z",
   "source": "SEC EDGAR",
   "sourceUrl": "https://www.sec.gov/edgar",
-  "usdKrw": 1344.59,
+  "usdKrw": 1338.58,
   "listed": [
+    {
+      "cik": "0002118032",
+      "name": "Research Alliance Corp III",
+      "ticker": "RACC",
+      "exchange": "뉴욕증권거래소",
+      "offerPrice": 10.0,
+      "priceBandLow": null,
+      "priceBandHigh": null,
+      "bandPosition": null,
+      "sharesOffered": null,
+      "sharesAfterListing": null,
+      "grossProceeds": null,
+      "marketCap": null,
+      "filedAt": "2026-11-04",
+      "isSpac": false,
+      "sic": "2834",
+      "industry": "제약·바이오",
+      "underwriters": [],
+      "businessSummary": "We are an exempted company incorporated under the laws of the Cayman Islands.",
+      "useOfProceeds": null,
+      "netResult": -15600000,
+      "netResultYear": "2025",
+      "lockupDays": null,
+      "location": "NEW YORK, NY",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002118032&type=424B4"
+    },
     {
       "cik": "0002044950",
       "name": "Bambusa Therapeutics, Inc.",
@@ -285,6 +312,17 @@
   ],
   "upcoming": [
     {
+      "cik": "0002128984",
+      "name": "Churchill Capital Corp XIV",
+      "ticker": null,
+      "filedAt": "2026-11-04",
+      "isSpac": true,
+      "sic": null,
+      "industry": "기타",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002128984&type=S-1"
+    },
+    {
       "cik": "0002130357",
       "name": "Anthropic, PBC",
       "ticker": "ANT",
@@ -514,7 +552,7 @@
     {
       "cik": "0001620704",
       "name": "MED-X, INC.",
-      "ticker": null,
+      "ticker": "MXRX",
       "filedAt": "2026-10-29",
       "isSpac": false,
       "sic": "2870",
@@ -2783,49 +2821,6 @@
         "assets": 152619000
       },
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001827635&type=S-1"
-    },
-    {
-      "cik": "0002140030",
-      "name": "Thunder Bridge Capital Partners V, Ltd.",
-      "ticker": "TBCV",
-      "filedAt": "2026-08-06",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002140030&type=S-1"
-    },
-    {
-      "cik": "0001911545",
-      "name": "Global Interactive Technologies, Inc.",
-      "ticker": "GITS",
-      "filedAt": "2026-08-06",
-      "isSpac": false,
-      "sic": "7370",
-      "industry": "소프트웨어·IT",
-      "financials": {
-        "fiscalEnd": "2023-12-31",
-        "revenue": 794166,
-        "netIncome": -9285910,
-        "assets": 20544956
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001911545&type=S-1"
-    },
-    {
-      "cik": "0001883984",
-      "name": "Alternus Clean Energy, Inc.",
-      "ticker": "ALCE",
-      "filedAt": "2026-08-06",
-      "isSpac": false,
-      "sic": "4931",
-      "industry": "에너지·유틸리티",
-      "financials": {
-        "fiscalEnd": "2024-12-31",
-        "revenue": 311000,
-        "netIncome": 21078000,
-        "assets": 7727000
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001883984&type=S-1"
     }
   ]
 }
