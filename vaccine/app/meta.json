@@ -1,6 +1,6 @@
 {
-  "fetchedAt": "2026-11-02T01:09:16.302Z",
-  "baseDate": "20261102",
+  "fetchedAt": "2026-11-05T01:46:24.571Z",
+  "baseDate": "20261105",
   "localSupport": {
     "fetched": 127,
     "items": 105,
@@ -9,7 +9,7 @@
     "unmatched": []
   },
   "prices": {
-    "hospitalRows": 199435,
+    "hospitalRows": 199419,
     "vaccineRows": 18457,
     "products": {
       "zoster": {
@@ -71,12 +71,12 @@
           "rows": 157,
           "latestFrom": 20261027
         },
-        "가다실9주": {
-          "rows": 166,
-          "latestFrom": 20261030
-        },
         "가다실 주": {
           "rows": 69,
+          "latestFrom": 20261030
+        },
+        "가다실9주": {
+          "rows": 166,
           "latestFrom": 20261030
         }
       },
@@ -93,29 +93,29 @@
           "rows": 338,
           "latestFrom": 20261030
         },
-        "보령플루백신V주(프리필드시린지)": {
-          "rows": 129,
-          "latestFrom": 20261030
-        },
         "보령플루백신VIII-TF주(프리필드시린지)": {
           "rows": 29,
           "latestFrom": 20261029
         },
-        "일양플루백신프리필드시린지주 0.5mL": {
-          "rows": 124,
+        "보령플루백신V주(프리필드시린지)": {
+          "rows": 129,
+          "latestFrom": 20261030
+        },
+        "코박스플루PF주(프리필드시린지)": {
+          "rows": 136,
           "latestFrom": 20261030
         },
         "에플루엘다프리필드시린지": {
           "rows": 20,
           "latestFrom": 20261028
         },
-        "코박스플루PF주(프리필드시린지)": {
-          "rows": 136,
-          "latestFrom": 20261030
-        },
         "플루미스트인트라나잘스프레이": {
           "rows": 5,
           "latestFrom": 20261027
+        },
+        "일양플루백신프리필드시린지주 0.5mL": {
+          "rows": 124,
+          "latestFrom": 20261030
         },
         "코박스인플루PF주(프리필드시린지)": {
           "rows": 13,
@@ -286,16 +286,16 @@
           "latestFrom": 20261028
         }
       },
-      "hfrs": {
-        "한타박스주 0.5ml": {
-          "rows": 16,
-          "latestFrom": 20261030
-        }
-      },
       "flu-senior": {
         "플루아드쿼드프리필드시린지": {
           "rows": 56,
           "latestFrom": 20261029
+        }
+      },
+      "hfrs": {
+        "한타박스주 0.5ml": {
+          "rows": 16,
+          "latestFrom": 20261030
         }
       }
     }
