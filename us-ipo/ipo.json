@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-05T00:00:00Z",
+  "generatedAt": "2026-11-06T00:00:00Z",
   "source": "SEC EDGAR",
   "sourceUrl": "https://www.sec.gov/edgar",
-  "usdKrw": 1338.58,
+  "usdKrw": 1344.69,
   "listed": [
     {
       "cik": "0002118032",
@@ -312,6 +312,77 @@
   ],
   "upcoming": [
     {
+      "cik": "0002160422",
+      "name": "Kartoon Studios Acquisition Corp",
+      "ticker": null,
+      "filedAt": "2026-11-05",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002160422&type=S-1"
+    },
+    {
+      "cik": "0002111009",
+      "name": "American Ventures Acquisition Corp. I",
+      "ticker": null,
+      "filedAt": "2026-11-05",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002111009&type=S-1"
+    },
+    {
+      "cik": "0002141583",
+      "name": "Rezera Inc.",
+      "ticker": "RZRA",
+      "filedAt": "2026-11-05",
+      "isSpac": false,
+      "sic": "2834",
+      "industry": "제약·바이오",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002141583&type=S-1"
+    },
+    {
+      "cik": "0001620704",
+      "name": "MED-X, INC.",
+      "ticker": "MXRX",
+      "filedAt": "2026-11-05",
+      "isSpac": false,
+      "sic": "2870",
+      "industry": "제조",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001620704&type=S-1"
+    },
+    {
+      "cik": "0001973276",
+      "name": "LIS Technologies Inc",
+      "ticker": "LIS",
+      "filedAt": "2026-11-05",
+      "isSpac": false,
+      "sic": "2810",
+      "industry": "제조",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001973276&type=S-1"
+    },
+    {
+      "cik": "0000720762",
+      "name": "NON INVASIVE MONITORING SYSTEMS INC  FL",
+      "ticker": "NIMU",
+      "filedAt": "2026-11-05",
+      "isSpac": false,
+      "sic": "3760",
+      "industry": "제조",
+      "financials": {
+        "fiscalEnd": "2017-07-31",
+        "revenue": 6000,
+        "netIncome": -488000,
+        "assets": 21000
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000720762&type=S-1"
+    },
+    {
       "cik": "0002128984",
       "name": "Churchill Capital Corp XIV",
       "ticker": null,
@@ -363,7 +434,7 @@
     {
       "cik": "0002073616",
       "name": "Canary Staked INJ ETF",
-      "ticker": null,
+      "ticker": "INJC",
       "filedAt": "2026-11-02",
       "isSpac": false,
       "sic": "6199",
@@ -426,22 +497,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002092592&type=S-1"
     },
     {
-      "cik": "0002108121",
-      "name": "Ionetix Corp   DE",
-      "ticker": null,
-      "filedAt": "2026-10-30",
-      "isSpac": false,
-      "sic": "2835",
-      "industry": "제약·바이오",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 6012000,
-        "netIncome": -39671000,
-        "assets": 25490
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002108121&type=S-1"
-    },
-    {
       "cik": "0002079000",
       "name": "Duke Holding Inc.",
       "ticker": null,
@@ -467,6 +522,22 @@
         "assets": 39088000
       },
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001855467&type=S-1"
+    },
+    {
+      "cik": "0002108121",
+      "name": "Ionetix Corp   DE",
+      "ticker": null,
+      "filedAt": "2026-10-30",
+      "isSpac": false,
+      "sic": "2835",
+      "industry": "제약·바이오",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": 6012000,
+        "netIncome": -39671000,
+        "assets": 25490
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002108121&type=S-1"
     },
     {
       "cik": "0001054102",
@@ -548,17 +619,6 @@
       "industry": "제조",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002142104&type=S-1"
-    },
-    {
-      "cik": "0001620704",
-      "name": "MED-X, INC.",
-      "ticker": "MXRX",
-      "filedAt": "2026-10-29",
-      "isSpac": false,
-      "sic": "2870",
-      "industry": "제조",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001620704&type=S-1"
     },
     {
       "cik": "0002152549",
@@ -724,17 +784,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001070965&type=S-1"
     },
     {
-      "cik": "0001973276",
-      "name": "LIS Technologies Inc",
-      "ticker": null,
-      "filedAt": "2026-10-26",
-      "isSpac": false,
-      "sic": "2810",
-      "industry": "제조",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001973276&type=S-1"
-    },
-    {
       "cik": "0002146369",
       "name": "Londonla Inc.",
       "ticker": null,
@@ -871,17 +920,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002142699&type=S-1"
     },
     {
-      "cik": "0002141583",
-      "name": "Rezera Inc.",
-      "ticker": "RZRA",
-      "filedAt": "2026-10-21",
-      "isSpac": false,
-      "sic": "2834",
-      "industry": "제약·바이오",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002141583&type=S-1"
-    },
-    {
       "cik": "0001953988",
       "name": "Helio Corp  FL",
       "ticker": "HLEO",
@@ -934,22 +972,6 @@
       "industry": "SPAC",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002143060&type=S-1"
-    },
-    {
-      "cik": "0000720762",
-      "name": "NON INVASIVE MONITORING SYSTEMS INC  FL",
-      "ticker": "NIMU",
-      "filedAt": "2026-10-20",
-      "isSpac": false,
-      "sic": "3760",
-      "industry": "제조",
-      "financials": {
-        "fiscalEnd": "2017-07-31",
-        "revenue": 6000,
-        "netIncome": -488000,
-        "assets": 21000
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000720762&type=S-1"
     },
     {
       "cik": "0001826892",
@@ -2772,55 +2794,6 @@
         "assets": 566842
       },
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000930245&type=S-1"
-    },
-    {
-      "cik": "0002088286",
-      "name": "Danneskjold & Galt Acquisition Co",
-      "ticker": null,
-      "filedAt": "2026-08-07",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002088286&type=S-1"
-    },
-    {
-      "cik": "0002143156",
-      "name": "Lucens Capital Acquisition Corp I",
-      "ticker": null,
-      "filedAt": "2026-08-07",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002143156&type=S-1"
-    },
-    {
-      "cik": "0002083125",
-      "name": "PRESIDIO PRODUCTION Co",
-      "ticker": "FTW",
-      "filedAt": "2026-08-07",
-      "isSpac": false,
-      "sic": "1311",
-      "industry": "광업·자원",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002083125&type=S-1"
-    },
-    {
-      "cik": "0001827635",
-      "name": "Veradermics, Inc",
-      "ticker": "MANE",
-      "filedAt": "2026-08-07",
-      "isSpac": false,
-      "sic": "2834",
-      "industry": "제약·바이오",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": null,
-        "netIncome": -69995000,
-        "assets": 152619000
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001827635&type=S-1"
     }
   ]
 }
