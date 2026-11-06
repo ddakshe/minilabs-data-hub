@@ -1,0 +1,101 @@
+{
+  "code": "058470",
+  "name": "리노공업",
+  "market": "KOSDAQ",
+  "basDt": "20261104",
+  "price": {
+    "code": "058470",
+    "name": "리노공업",
+    "market": "KOSDAQ",
+    "basDt": "20261104",
+    "close": 55600,
+    "vs": 2100,
+    "fltRt": 3.93,
+    "open": 55100,
+    "high": 56100,
+    "low": 53000,
+    "prevClose": 53500,
+    "volume": 652167,
+    "tradeValue": 35617250150,
+    "week52": {
+      "low": 53500,
+      "high": 127000,
+      "position": 0.02857142857142857,
+      "days": 245,
+      "from": "20251104"
+    },
+    "recent5": [
+      {
+        "basDt": "20261029",
+        "fltRt": -2.83,
+        "open": 62900,
+        "high": 63400,
+        "low": 60500,
+        "close": 61700
+      },
+      {
+        "basDt": "20261030",
+        "fltRt": -9.08,
+        "open": 59700,
+        "high": 59700,
+        "low": 55400,
+        "close": 56100
+      },
+      {
+        "basDt": "20261102",
+        "fltRt": 1.6,
+        "open": 55400,
+        "high": 57700,
+        "low": 55200,
+        "close": 57000
+      },
+      {
+        "basDt": "20261103",
+        "fltRt": -6.14,
+        "open": 55500,
+        "high": 56100,
+        "low": 53200,
+        "close": 53500
+      },
+      {
+        "basDt": "20261104",
+        "fltRt": 3.93,
+        "open": 55100,
+        "high": 56100,
+        "low": 53000,
+        "close": 55600
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 877118,
+      "ratio": 0.74
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 530,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-11-06T08:45:14.605Z"
+  },
+  "facts": [
+    "코스닥보다 2.43%p 높았어요.",
+    "거래량은 20일 평균의 0.7배예요.",
+    "시가보다 500원 높게 마감했어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 714.95,
+    "vs": 10.56,
+    "fltRt": 1.5
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null,
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-11-06T08:45:14.605Z"
+}

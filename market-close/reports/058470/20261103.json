@@ -1,0 +1,101 @@
+{
+  "code": "058470",
+  "name": "리노공업",
+  "market": "KOSDAQ",
+  "basDt": "20261103",
+  "price": {
+    "code": "058470",
+    "name": "리노공업",
+    "market": "KOSDAQ",
+    "basDt": "20261103",
+    "close": 53500,
+    "vs": -3500,
+    "fltRt": -6.14,
+    "open": 55500,
+    "high": 56100,
+    "low": 53200,
+    "prevClose": 57000,
+    "volume": 541782,
+    "tradeValue": 29267399150,
+    "week52": {
+      "low": 53500,
+      "high": 127000,
+      "position": 0,
+      "days": 245,
+      "from": "20251103"
+    },
+    "recent5": [
+      {
+        "basDt": "20261028",
+        "fltRt": 3.42,
+        "open": 62900,
+        "high": 65400,
+        "low": 62400,
+        "close": 63500
+      },
+      {
+        "basDt": "20261029",
+        "fltRt": -2.83,
+        "open": 62900,
+        "high": 63400,
+        "low": 60500,
+        "close": 61700
+      },
+      {
+        "basDt": "20261030",
+        "fltRt": -9.08,
+        "open": 59700,
+        "high": 59700,
+        "low": 55400,
+        "close": 56100
+      },
+      {
+        "basDt": "20261102",
+        "fltRt": 1.6,
+        "open": 55400,
+        "high": 57700,
+        "low": 55200,
+        "close": 57000
+      },
+      {
+        "basDt": "20261103",
+        "fltRt": -6.14,
+        "open": 55500,
+        "high": 56100,
+        "low": 53200,
+        "close": 53500
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 963696,
+      "ratio": 0.56
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 530,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-11-06T08:45:14.605Z"
+  },
+  "facts": [
+    "코스닥보다 2.06%p 낮았어요.",
+    "거래량은 20일 평균의 0.6배예요.",
+    "시가보다 2,000원 낮게 마감했어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 704.39,
+    "vs": -29.97,
+    "fltRt": -4.08
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null,
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-11-06T08:45:14.605Z"
+}

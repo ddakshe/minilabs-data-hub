@@ -1,0 +1,145 @@
+{
+  "code": "272210",
+  "name": "한화시스템",
+  "market": "KOSPI",
+  "basDt": "20261105",
+  "price": {
+    "code": "272210",
+    "name": "한화시스템",
+    "market": "KOSPI",
+    "basDt": "20261105",
+    "close": 53900,
+    "vs": -8500,
+    "fltRt": -13.62,
+    "open": 61800,
+    "high": 61900,
+    "low": 53000,
+    "prevClose": 62400,
+    "volume": 1072429,
+    "tradeValue": 60107051500,
+    "week52": {
+      "low": 45350,
+      "high": 162700,
+      "position": 0.07285896889646357,
+      "days": 245,
+      "from": "20251105"
+    },
+    "recent5": [
+      {
+        "basDt": "20261030",
+        "fltRt": -6.35,
+        "open": 62500,
+        "high": 63100,
+        "low": 59800,
+        "close": 60500
+      },
+      {
+        "basDt": "20261102",
+        "fltRt": 8.1,
+        "open": 59000,
+        "high": 66400,
+        "low": 58800,
+        "close": 65400
+      },
+      {
+        "basDt": "20261103",
+        "fltRt": -2.75,
+        "open": 64700,
+        "high": 66500,
+        "low": 62500,
+        "close": 63600
+      },
+      {
+        "basDt": "20261104",
+        "fltRt": -1.89,
+        "open": 63500,
+        "high": 65800,
+        "low": 59400,
+        "close": 62400
+      },
+      {
+        "basDt": "20261105",
+        "fltRt": -13.62,
+        "open": 61800,
+        "high": 61900,
+        "low": 53000,
+        "close": 53900
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 973250,
+      "ratio": 1.1
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 530,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-11-06T08:44:10.610Z"
+  },
+  "facts": [
+    "코스피보다 8.34%p 낮았어요.",
+    "거래량은 20일 평균의 1.1배예요.",
+    "시가보다 7,900원 낮게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "한화시스템, 차세대 스마트 전투함 핵심 ‘콕핏형 통합함교체계’ 국산화 선언",
+      "source": "주간현대",
+      "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE05eGpFN2llY3pUandTOWYwcUtBMU44emVza1FaZkVaV1FscnlfcXRQeDZhR2FhTEp2NC1lQnBjRmRVNEE?oc=5",
+      "publishedAt": "2026-11-05T06:04:00.000Z"
+    },
+    {
+      "title": "한화시스템 주가, 11월 5일 애프터마켓 54,000원 13.46% 하락",
+      "source": "중앙이코노미뉴스",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5YWkZLcFljbDdWeUl4VjlYQ1l2RWZjUF90MlNMZWdySUtWLXN1NFhXTVBUSGRwTjlNM3N4MVNEWGZGM3NRYVJsLVJfS3NPXzZ2cV9help3Wll6cHZfUVdaV05UR1V3SUlsVjNxdHI0dndrUQ?oc=5",
+      "publishedAt": "2026-11-05T07:17:42.000Z"
+    }
+  ],
+  "dart": [
+    {
+      "title": "동일인등출자계열회사와의상품ㆍ용역거래변경",
+      "filer": "한화시스템",
+      "receiptNo": "20261105000487",
+      "date": "20261105",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105000487"
+    }
+  ],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20261002",
+      "holder": "국민연금공단",
+      "ratio": 6.17,
+      "ratioChange": -1.02,
+      "reason": "단순추가취득/처분",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261002000420"
+    },
+    {
+      "kind": "major",
+      "date": "20260918",
+      "holder": "한화에어로스페이스",
+      "ratio": 59.53,
+      "ratioChange": -0.01,
+      "reason": "특별관계자 변동에 따른 보유주식등의 내역 변동 및 · 보유주식등에 관한 계약 변경보고",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260918000462"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 5383.8,
+    "vs": -300,
+    "fltRt": -5.28
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-11-06T08:45:14.619Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260512"
+}
