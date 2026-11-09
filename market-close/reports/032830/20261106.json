@@ -1,0 +1,137 @@
+{
+  "code": "032830",
+  "name": "삼성생명",
+  "market": "KOSPI",
+  "basDt": "20261106",
+  "price": {
+    "code": "032830",
+    "name": "삼성생명",
+    "market": "KOSPI",
+    "basDt": "20261106",
+    "close": 234500,
+    "vs": -10000,
+    "fltRt": -4.09,
+    "open": 226000,
+    "high": 237500,
+    "low": 219500,
+    "prevClose": 244500,
+    "volume": 384784,
+    "tradeValue": 88730197250,
+    "week52": {
+      "low": 144800,
+      "high": 497000,
+      "position": 0.25468483816013626,
+      "days": 245,
+      "from": "20251106"
+    },
+    "recent5": [
+      {
+        "basDt": "20261102",
+        "fltRt": 0.55,
+        "open": 263000,
+        "high": 275750,
+        "low": 260000,
+        "close": 272000
+      },
+      {
+        "basDt": "20261103",
+        "fltRt": -3.86,
+        "open": 261500,
+        "high": 263500,
+        "low": 255500,
+        "close": 261500
+      },
+      {
+        "basDt": "20261104",
+        "fltRt": -0.57,
+        "open": 263500,
+        "high": 268000,
+        "low": 253500,
+        "close": 260000
+      },
+      {
+        "basDt": "20261105",
+        "fltRt": -5.96,
+        "open": 259000,
+        "high": 259500,
+        "low": 240500,
+        "close": 244500
+      },
+      {
+        "basDt": "20261106",
+        "fltRt": -4.09,
+        "open": 226000,
+        "high": 237500,
+        "low": 219500,
+        "close": 234500
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 291520,
+      "ratio": 1.32
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 528,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-11-09T08:50:25.311Z"
+  },
+  "facts": [
+    "코스피보다 1.93%p 높았어요.",
+    "거래량은 20일 평균의 1.3배예요.",
+    "시가보다 8,500원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "삼성생명, 부채 넷 중 하나는 6% 이상 고금리…'역마진 리스크'",
+      "source": "연합인포맥스",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE41a3ZNd0xpTTE5Q3dpUlpISFdDWm9VTkpNWDNJMjEtUm5nWWtkWmhWWlIzZlFMRUYzbERNbzZGNndOcS1OTUVPak5tVTl3N2lkTml5RVFEdzI0azdCd0F5aGdZZmpKWDJsREJkY0lhTWPSAXRBVV95cUxOZ19PWndwOUlkbjlVcUJ4OFRyMzJXYVQ0WlFqR2VIbDktU3VBYTVGaXhlaDZrOERKT1VTc2JfZlA3MVBBQVk2eEtTRWlGWXd4TW4yYUtTQ0tqbVdmRl9XNDZSSU02Y2tkN002a0U2Zi1kb2dQSg?oc=5",
+      "publishedAt": "2026-11-05T23:40:10.000Z"
+    },
+    {
+      "title": "삼전 배당 2.3조 안은 삼성생명…1.5조 국채 직행, 주주환원 '안갯속'",
+      "source": "인베스트조선",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOcnVHY2dGaFhaamU1UDNydURUSUdTX3hQZDJfR2lkVXg4YUlWQm1pOTIzcC1McmdpSWgyV0VtUXNrRUJFRHJZWExzZjlTanBobkJvYTB3SnlvbDBLMjJVaHNaYVZpUndpbS11TU1fRTh3MEpNZFdCREJRNXhaNWVsaF9TVQ?oc=5",
+      "publishedAt": "2026-11-05T22:00:00.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20261030",
+      "holder": "삼성물산",
+      "ratio": 43.56,
+      "ratioChange": 0,
+      "reason": "보유주식 등에 대한 계약의 변경",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261030000688"
+    },
+    {
+      "kind": "major",
+      "date": "20261023",
+      "holder": "삼성물산",
+      "ratio": 43.56,
+      "ratioChange": 0,
+      "reason": "보유주식 등에 대한 계약의 변경",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261023000469"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 5059.69,
+    "vs": -324.11,
+    "fltRt": -6.02
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-11-09T08:52:02.900Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260513"
+}

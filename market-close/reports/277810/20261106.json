@@ -1,0 +1,124 @@
+{
+  "code": "277810",
+  "name": "레인보우로보틱스",
+  "market": "KOSDAQ",
+  "basDt": "20261106",
+  "price": {
+    "code": "277810",
+    "name": "레인보우로보틱스",
+    "market": "KOSDAQ",
+    "basDt": "20261106",
+    "close": 321000,
+    "vs": -13500,
+    "fltRt": -4.04,
+    "open": 301000,
+    "high": 337000,
+    "low": 300500,
+    "prevClose": 334500,
+    "volume": 116427,
+    "tradeValue": 37262712250,
+    "week52": {
+      "low": 321000,
+      "high": 880000,
+      "position": 0,
+      "days": 245,
+      "from": "20251106"
+    },
+    "recent5": [
+      {
+        "basDt": "20261102",
+        "fltRt": -0.14,
+        "open": 354000,
+        "high": 366000,
+        "low": 353000,
+        "close": 362500
+      },
+      {
+        "basDt": "20261103",
+        "fltRt": -4,
+        "open": 355000,
+        "high": 358000,
+        "low": 343000,
+        "close": 348000
+      },
+      {
+        "basDt": "20261104",
+        "fltRt": -0.29,
+        "open": 354500,
+        "high": 359000,
+        "low": 330000,
+        "close": 347000
+      },
+      {
+        "basDt": "20261105",
+        "fltRt": -3.6,
+        "open": 347500,
+        "high": 352000,
+        "low": 325500,
+        "close": 334500
+      },
+      {
+        "basDt": "20261106",
+        "fltRt": -4.04,
+        "open": 301000,
+        "high": 337000,
+        "low": 300500,
+        "close": 321000
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 69588,
+      "ratio": 1.67
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 528,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-11-09T08:50:35.797Z"
+  },
+  "facts": [
+    "코스닥보다 0.99%p 높았어요.",
+    "거래량은 20일 평균의 1.7배예요.",
+    "시가보다 20,000원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "[2026 로보월드] 레인보우로보틱스, 1m 단상 성큼 오르는 사족보행 로봇 RBQ",
+      "source": "로봇신문",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBwN2pUTVA3WFFYVWFzamRnY3VJTXJmbTVDOGxHVmlocVAyRmFadnUycmtmRjQwTHhicE03bkRwdUNJeXZuXzRMcjdWbUxyQ1BieHVobHJkeVJPNHVqci1yTENsOFpxSlg1UUFOYg?oc=5",
+      "publishedAt": "2026-11-06T05:53:48.000Z"
+    },
+    {
+      "title": "삼성전자 자회사 레인보우로보틱스, 로보월드 2026서 차세대 로보틱스 기술력 과시",
+      "source": "리버티코리아포스트",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE91MW1QNnZqNW8tRlFENXN2b0dCTVducF94REYwOXQtM1M3dUdZMnladUtqWWhUOHY5UHY0RVBMQzhxZG9samM5WXgzbk11UEJjV2FvLXVEMk9oaTU2dWJuOG43UdIBZ0FVX3lxTFBXakN5SXZYVmJyWUdLV2hONDlxb0hZMjE2QkFsam5GQXdPdWhjZ3hEOXB1UjEwaDYwdlZNRVNuTVpHVmZ4cUpyUGI0V3VLR2N1ei1qSlZMWG5DOWRFTWx0OFNQSE40bzQ?oc=5",
+      "publishedAt": "2026-11-06T07:58:06.000Z"
+    },
+    {
+      "title": "DN솔루션즈, '로보월드 2026'서 공작기계·협동로봇 결합 무인 자동화 셀 공개",
+      "source": "리버티코리아포스트",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9JQmpsaGtqUnhzc0RHRWpYTmRHc1E4eXlfS29MU0lkamRnYzNoVktfVFJfck5SdG9oM0s0bWR6OW1sN3l0UlltdXVJVFhxSU0wM2xPZUM4ZG1YaUhNMERaLUV1d9IBZ0FVX3lxTE5OSUpNTzBaUjcyN1hUX0VHUHNLMDlneVc3dDdTZ1ZnMXUyc3FOcmRIMmlZbHlFZ2lOOUE0TnhMMHktb3U1SlFoZnNXMFFqV0hqeGNuVi1HVnkzZ0pMLVVaOThOVWdzNW8?oc=5",
+      "publishedAt": "2026-11-06T07:59:08.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 644.27,
+    "vs": -34.14,
+    "fltRt": -5.03
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-11-09T08:52:02.921Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260513"
+}

@@ -3,10 +3,18 @@
   "name": "셀트리온",
   "market": "KOSPI",
   "retainDays": 120,
-  "firstBasDt": "20260512",
-  "lastBasDt": "20261105",
+  "firstBasDt": "20260513",
+  "lastBasDt": "20261106",
   "count": 120,
   "days": [
+    {
+      "basDt": "20261106",
+      "close": 211000,
+      "fltRt": -1.86,
+      "headline": "코스피보다 4.16%p 높았어요.",
+      "newsCount": 2,
+      "dartCount": 0
+    },
     {
       "basDt": "20261105",
       "close": 215000,
@@ -1075,16 +1083,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260512",
-      "close": 193300,
-      "fltRt": 1.05,
-      "headline": "코스피보다 3.34%p 높았어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-11-06T08:45:14.564Z"
+  "updatedAt": "2026-11-09T08:52:02.897Z"
 }

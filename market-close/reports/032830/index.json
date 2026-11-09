@@ -3,10 +3,18 @@
   "name": "삼성생명",
   "market": "KOSPI",
   "retainDays": 120,
-  "firstBasDt": "20260512",
-  "lastBasDt": "20261105",
+  "firstBasDt": "20260513",
+  "lastBasDt": "20261106",
   "count": 120,
   "days": [
+    {
+      "basDt": "20261106",
+      "close": 234500,
+      "fltRt": -4.09,
+      "headline": "코스피보다 1.93%p 높았어요.",
+      "newsCount": 2,
+      "dartCount": 0
+    },
     {
       "basDt": "20261105",
       "close": 244500,
@@ -1036,16 +1044,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260512",
-      "close": 299500,
-      "fltRt": 0,
-      "headline": "시가 306,500원보다 7,000원 낮게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-11-06T08:45:14.568Z"
+  "updatedAt": "2026-11-09T08:52:02.903Z"
 }

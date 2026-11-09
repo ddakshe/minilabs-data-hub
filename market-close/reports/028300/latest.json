@@ -2,37 +2,29 @@
   "code": "028300",
   "name": "HLB",
   "market": "KOSDAQ",
-  "basDt": "20261105",
+  "basDt": "20261106",
   "price": {
     "code": "028300",
     "name": "HLB",
     "market": "KOSDAQ",
-    "basDt": "20261105",
-    "close": 32400,
-    "vs": -1100,
-    "fltRt": -3.28,
-    "open": 33800,
-    "high": 35400,
-    "low": 31900,
-    "prevClose": 33500,
-    "volume": 1060743,
-    "tradeValue": 35257797725,
+    "basDt": "20261106",
+    "close": 31250,
+    "vs": -1150,
+    "fltRt": -3.55,
+    "open": 30250,
+    "high": 32700,
+    "low": 30000,
+    "prevClose": 32400,
+    "volume": 902022,
+    "tradeValue": 28486748875,
     "week52": {
       "low": 25650,
       "high": 68200,
-      "position": 0.15863689776733256,
+      "position": 0.13160987074030553,
       "days": 245,
-      "from": "20251105"
+      "from": "20251106"
     },
     "recent5": [
-      {
-        "basDt": "20261030",
-        "fltRt": 0.76,
-        "open": 39300,
-        "high": 40350,
-        "low": 38800,
-        "close": 40000
-      },
       {
         "basDt": "20261102",
         "fltRt": 4.25,
@@ -64,72 +56,74 @@
         "high": 35400,
         "low": 31900,
         "close": 32400
+      },
+      {
+        "basDt": "20261106",
+        "fltRt": -3.55,
+        "open": 30250,
+        "high": 32700,
+        "low": 30000,
+        "close": 31250
       }
     ],
     "volumeVs20d": {
-      "avg20": 683321,
-      "ratio": 1.55
+      "avg20": 682829,
+      "ratio": 1.32
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 530,
+      "rows": 528,
       "rows52w": 245
     },
-    "generatedAt": "2026-11-06T08:43:52.523Z"
+    "generatedAt": "2026-11-09T08:50:40.959Z"
   },
   "facts": [
-    "코스닥보다 1.83%p 높았어요.",
-    "거래량은 20일 평균의 1.6배예요.",
-    "시가보다 1,400원 낮게 마감했어요."
+    "코스닥보다 1.48%p 높았어요.",
+    "거래량은 20일 평균의 1.3배예요.",
+    "시가보다 1,000원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "HLB이노베이션 美서 CAR-T 전임상 데이터 공개",
-      "source": "팜이데일리",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE90RnpqUXhNNDZISUlaVEhpVk14bWNWTHhXZWh1UkhHemVlSlJadDhPZERRbmFlWERNN1k5VE1jdFpDaVlXVFVqeFBaTEFLUlJwYXlzUFNqc2hESURHS01mUlJNQnRkSFdpZm5SeUFn?oc=5",
-      "publishedAt": "2026-11-05T00:41:04.000Z"
+      "title": "[단독] HLB 이뮤노믹 'R&D 총괄' 퇴직…연구인력 5년 새 반토막",
+      "source": "블로터",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1EOEExaHZRbVF0Qk5lVTN1QmNCcTE1RU5ldDY5czdDVTdHSzFwSzRCX19ZQUFXdFNUT0RxeXBYTW10QWM1TDQtbjhncVRCNHU5ck1QVUR6MkhSN2tJcExRWmp0QkFTWTVl0gFsQVVfeXFMUHBUdkNmRzQyVGEyQ3lzS1RjbGYxaHVYS045aUdxZm5SYjZfZF9sMWdIdy02TzE5U1BUSk1BbkpvSWZEeExUV3I1am9rYW5qd00wblJubi0zdmR4bXluQ3FNQzRrQU51LWswUDF6?oc=5",
+      "publishedAt": "2026-11-06T02:14:54.000Z"
     },
     {
-      "title": "HLB 베리스모, 혈액암 CAR-T 임상서 반응률 80% 확인 By EBN",
-      "source": "Investing.com 한국어",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5mT0tGd1ZpSGN6eUtyejAwNW5oU0x0TVVILVM0YU9XX3B5U2N3RUh6T3ZoY1Rad0pVRHo1Mjk3Z041QzV1d2tWd2VLWHIzOXg5RmlZbERxeXZBUFJOd0RQcU0xeVJudi1GQzkyWEpqcnE?oc=5",
-      "publishedAt": "2026-11-05T05:54:00.000Z"
+      "title": "HLB테라퓨틱스 RGN-259, 3상 'Completed' 갱신...데이터 공개 초읽기",
+      "source": "PRESS9",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE41R3lGNGZNMjZYSy1kUXVBRkNNbkNscXBsanZDVjhjOHBLaUlReTFnNGlHWThudUhSdnFQSklaQnlfZGg3WVZGVktXQk12cGVndWxiMkJIRmNXYXI2czFldUdNaEg?oc=5",
+      "publishedAt": "2026-11-06T02:10:13.000Z"
     },
     {
-      "title": "[BioS]HLB 베리스모, 'MSLN CAR-T' 전임상 \"SITC 초록공개\"",
-      "source": "이투데이",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE95bC1ZU24wVFlhdGVFM0RsVE1yLWNUMlltWW5JVkFWc3pOaDJtQ3d2ai1LVlozT3NFZVBiM3lIUEREcXlaSHNuUkx2cjJ2SGdab1BTMg?oc=5",
-      "publishedAt": "2026-11-04T23:20:00.000Z"
+      "title": "HLB F&B, 진안 홍삼빌호텔 운영 1년 만 고객평가 120위서 1위로",
+      "source": "약사공론",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE15c1hIeDB6d1VfM2dXckpFZ1drOThvZVNGODBXT1p2RTFISzJab1IxYk5MZDV6V0lpcUJIeHROaVZCbEJHWDE1eDhTSU9KTnV0V1JNVG9KZXJvRXUtQm1fdG82eTdmV3lhU2RGbA?oc=5",
+      "publishedAt": "2026-11-06T05:41:49.000Z"
     },
     {
-      "title": "HLB, '리보세라닙' 허가 내년으로 넘어간다…18%대 하락",
-      "source": "머니투데이",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1HaFRrNTUwTzN5RWJDdmU2UlVKRHpPY01OSDhybC1OVkpYQmQ5R2UyMl9leVJrZGhzckttcjEwUEZFUURZQk1NcVVPcGI1WlZwY1ZyQ05JaG5KT292MWdZV1htOHVoWTZG0gFuQVVfeXFMTllpcDk3bHZuX3ZDcEczX1UxVFlQMnhSRmR4alpyRlYtMzVaLXYzVmM2NXpQcnJtTlBOQTA2N210WWdPZVY3RF9idFI0RmFZRjdDM0Rad0NoaVUydjU5RWFBM01IY2g3eFo1Q0V6cGc?oc=5",
-      "publishedAt": "2026-11-05T14:55:24.000Z"
+      "title": "[숏폼] HLB 간암 신약, FDA 허가 재도전…4월 9일 심사 결론",
+      "source": "히트뉴스",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9VcjB2dHRncUtMY3RnMlUzTWdCUEEtdnBWZVNxX1pIXzZQaXI4TVZ0ZXhfcTYtTi1hdUMwc05yU0l3RGlma2NOV2dkOXFVUXlYUjc5VUdzekcwTDdOcHNmN2VJOTBOX1N4NWxN?oc=5",
+      "publishedAt": "2026-11-05T21:01:00.000Z"
     },
     {
-      "title": "HLB, 간암 신약 세번째…재심사도 6개월",
-      "source": "데일리메디",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE0tRHFJN2JkY0RrVzVBcnA2blJrMHRYWmlNMHNXbXFiMTZzal9uT2lWRGVucDlEUk9DSmtBSndfaWRiRU85RDNyTnFtUGNacDZmZlVJNVlEUHR1OHNQci0xWVZ0R0duVzZM?oc=5",
-      "publishedAt": "2026-11-04T20:21:00.000Z"
+      "title": "HLB그룹주 대부분 하락…HLB바이오스텝 상승·이노베이션 6.08% 내려",
+      "source": "CBC뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5OeTVrQTRrZ0dDQ1NXbW9sNTVaOWZWSERjYi1TdjJaMGhBNnVyaGRERWNVNE5RV2NvN3ZFc0dhdU1BXzgwZG1EMTV5ZVNDYmlvYWtETm0xenRWclZ2WElMVEg3SVlqaXdT?oc=5",
+      "publishedAt": "2026-11-06T01:16:54.000Z"
     },
     {
-      "title": "HLB 베리스모, 'CD19 CAR-T' 혈액암 1상 \"ORR 80%\"",
-      "source": "바이오스펙테이터",
-      "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBDZV9vRHE2RWtjNkc3dFFRX3lmQ180LW50b0RnSFdYWFhtUERLUnZCZTd3Yll5WGFNa3lYSEZSVEtTbm5pbXBROGNHRzF3NU5NOWEtWjRrcw?oc=5",
-      "publishedAt": "2026-11-05T02:33:00.000Z"
+      "title": "HLB, 장전 동적 VI 괴리율 -6.40%…발동가 29,950원 기록",
+      "source": "CBC뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE0wbXFzTWRNZ2VaRG15NWNzVjNScmE1NUdvbDZFcFc3VklFWVRjcGpIdEp0SnhQRmh0Y28xNTdZVmkwODF0dUtmUE9VZnd5UHZlQ01IaDB6ZlBUQU1sUGloc3k4VHREdlE1?oc=5",
+      "publishedAt": "2026-11-06T01:12:14.000Z"
     },
     {
-      "title": "HLB 베리스모, 'MSLN CAR-T' 전임상 \"SITC 초록공개\"",
-      "source": "바이오스펙테이터",
-      "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFAtNVRVdmlBd1hRa0tjTl90ZDQxaEhkVEEtcXlTQVBjVXAySEFiNWtvVC1VTi0tR2o2OVl4NkZsaURGRWMwOXV2b3ZvWm1YekREVzVxaWNMNA?oc=5",
-      "publishedAt": "2026-11-04T23:19:00.000Z"
-    },
-    {
-      "title": "[ASH 2026]HLB이노베이션 혈액암 CAR-T, 완전관해 60%…12개월 지속 사례 확인",
-      "source": "메디코파마",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE80Q3dPZjlBXzBCNENhYUVOZmVkMXZTWV9CdExFMEloenBhYjJCdmluVUFBclRCNURfeHNOYWU0UG1BOVA1N3R2bS1jeGdNeE9qQW83M2pVZnR3cnRJZ1l6d2xlbXo4ZEx6eUxnU1Jqc2hVZw?oc=5",
-      "publishedAt": "2026-11-04T21:00:00.000Z"
+      "title": "HLB 3만1250원으로 3.55% 하락…임상 일정 재점검",
+      "source": "잡포스트",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFB1dGhUTEdrS2NkOERLT0pZVzMyM3BTUGFjMkF4MnZJeEdCMklGdjlGLWhOOWQ3dU9LWUxhb28wQlQtM2lOMGJtajZzXzBCOEEwV2MxdHN4NXBfN2oweHpRdHBHUGs1Z3NKQnZHRFRB0gFyQVVfeXFMUHFMWmN0MWVESUxIaFlEUm05LWRqUGpXQ1B1YXc0bE9BczB1NkRfTi0xbFVVRmlKVG4tVTBYazF2akJwVlQ2UHh3dThiMmx2QTZhcFFiS3FKamIxYUZwWkgxNmJMTndKMGszelU1ekdBWWxB?oc=5",
+      "publishedAt": "2026-11-06T07:08:56.000Z"
     }
   ],
   "dart": [],
@@ -156,9 +150,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 678.41,
-    "vs": -36.54,
-    "fltRt": -5.11
+    "clpr": 644.27,
+    "vs": -34.14,
+    "fltRt": -5.03
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -167,7 +161,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-06T08:45:14.592Z",
+  "builtAt": "2026-11-09T08:52:02.931Z",
   "archiveDays": 120,
-  "archiveFrom": "20260512"
+  "archiveFrom": "20260513"
 }

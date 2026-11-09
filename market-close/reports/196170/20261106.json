@@ -1,0 +1,123 @@
+{
+  "code": "196170",
+  "name": "알테오젠",
+  "market": "KOSDAQ",
+  "basDt": "20261106",
+  "price": {
+    "code": "196170",
+    "name": "알테오젠",
+    "market": "KOSDAQ",
+    "basDt": "20261106",
+    "close": 200500,
+    "vs": -11000,
+    "fltRt": -5.2,
+    "open": 194400,
+    "high": 204000,
+    "low": 193600,
+    "prevClose": 211500,
+    "volume": 447539,
+    "tradeValue": 89547513300,
+    "week52": {
+      "low": 200500,
+      "high": 559000,
+      "position": 0,
+      "days": 245,
+      "from": "20251106"
+    },
+    "recent5": [
+      {
+        "basDt": "20261102",
+        "fltRt": 0.71,
+        "open": 206500,
+        "high": 216500,
+        "low": 206500,
+        "close": 213000
+      },
+      {
+        "basDt": "20261103",
+        "fltRt": 0.23,
+        "open": 209500,
+        "high": 220500,
+        "low": 209500,
+        "close": 213500
+      },
+      {
+        "basDt": "20261104",
+        "fltRt": -4.45,
+        "open": 213500,
+        "high": 213500,
+        "low": 193100,
+        "close": 204000
+      },
+      {
+        "basDt": "20261105",
+        "fltRt": 3.68,
+        "open": 213500,
+        "high": 224000,
+        "low": 209500,
+        "close": 211500
+      },
+      {
+        "basDt": "20261106",
+        "fltRt": -5.2,
+        "open": 194400,
+        "high": 204000,
+        "low": 193600,
+        "close": 200500
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 339966,
+      "ratio": 1.32
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 528,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-11-09T08:50:27.841Z"
+  },
+  "facts": [
+    "코스닥보다 0.17%p 낮았어요.",
+    "거래량은 20일 평균의 1.3배예요.",
+    "시가보다 6,100원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "SK바이오팜·알테오젠 실적 성장…LG화학은 기술수출 확대 [주간 바이오리듬]",
+      "source": "조세일보",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFB2b3BPRkdPeXFMWnpkXzBFaU9Zc2l3MzJWM2ZFcHhVSU9RSlliZS1BcmFQVWx5dkZLaE1TRW5ZUG54U3dGOGxSMDFBbW1zcE1fNm56UUpvamhlU1ZFODdJ?oc=5",
+      "publishedAt": "2026-11-06T00:36:12.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [
+    {
+      "kind": "insider",
+      "date": "20260813",
+      "holder": "박순재",
+      "position": "이사회의장",
+      "role": "10%이상주주",
+      "sharesAfter": 13267800,
+      "sharesChange": 3061800,
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260813001689"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 644.27,
+    "vs": -34.14,
+    "fltRt": -5.03
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-11-09T08:52:02.906Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260513"
+}

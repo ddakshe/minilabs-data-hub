@@ -1,0 +1,131 @@
+{
+  "code": "272210",
+  "name": "한화시스템",
+  "market": "KOSPI",
+  "basDt": "20261106",
+  "price": {
+    "code": "272210",
+    "name": "한화시스템",
+    "market": "KOSPI",
+    "basDt": "20261106",
+    "close": 50300,
+    "vs": -3600,
+    "fltRt": -6.68,
+    "open": 49200,
+    "high": 51500,
+    "low": 47800,
+    "prevClose": 53900,
+    "volume": 710993,
+    "tradeValue": 35540943900,
+    "week52": {
+      "low": 45350,
+      "high": 162700,
+      "position": 0.04218150830847891,
+      "days": 245,
+      "from": "20251106"
+    },
+    "recent5": [
+      {
+        "basDt": "20261102",
+        "fltRt": 8.1,
+        "open": 59000,
+        "high": 66400,
+        "low": 58800,
+        "close": 65400
+      },
+      {
+        "basDt": "20261103",
+        "fltRt": -2.75,
+        "open": 64700,
+        "high": 66500,
+        "low": 62500,
+        "close": 63600
+      },
+      {
+        "basDt": "20261104",
+        "fltRt": -1.89,
+        "open": 63500,
+        "high": 65800,
+        "low": 59400,
+        "close": 62400
+      },
+      {
+        "basDt": "20261105",
+        "fltRt": -13.62,
+        "open": 61800,
+        "high": 61900,
+        "low": 53000,
+        "close": 53900
+      },
+      {
+        "basDt": "20261106",
+        "fltRt": -6.68,
+        "open": 49200,
+        "high": 51500,
+        "low": 47800,
+        "close": 50300
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 992145,
+      "ratio": 0.72
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 528,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-11-09T08:50:59.168Z"
+  },
+  "facts": [
+    "코스피보다 0.66%p 낮았어요.",
+    "거래량은 20일 평균의 0.7배예요.",
+    "시가보다 1,100원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "K-방산 울린 원화 강세 … 3분기 영업익 10% '반납'",
+      "source": "뉴데일리",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBrbER2eVlvMUxrWnhBckNUNEJHTG1aeVRlZUFNTTlfTWlJZld5LV85emxaOFhjM1BPTDlwOFV3NXZmQ19hTjZraDVKWUFhYlp6dmNKNWFRZE9xVHJpU1NWUU1FY19qNFVvOG9GdDh1N1RfOVNqSnJQaXVYTdIBgAFBVV95cUxQVVEtVkdtTndLaTNsUFlvTE1BUzNhV1Q5VEdfajF4Tk1Rb2R3Z2c1Y0gyM3Z6YkdOUEZIMlFrcEZXR05nQjlQa1FxSmdjaVh2YkxaODRfV2Q2VDc2bkdnYk52MnNTUFlqWFo0Nl9LX1JEd2FuZWZuSnNJX2JDdGdIaA?oc=5",
+      "publishedAt": "2026-11-06T02:09:00.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20261002",
+      "holder": "국민연금공단",
+      "ratio": 6.17,
+      "ratioChange": -1.02,
+      "reason": "단순추가취득/처분",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261002000420"
+    },
+    {
+      "kind": "major",
+      "date": "20260918",
+      "holder": "한화에어로스페이스",
+      "ratio": 59.53,
+      "ratioChange": -0.01,
+      "reason": "특별관계자 변동에 따른 보유주식등의 내역 변동 및 · 보유주식등에 관한 계약 변경보고",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260918000462"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 5059.69,
+    "vs": -324.11,
+    "fltRt": -6.02
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-11-09T08:52:02.963Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260513"
+}
