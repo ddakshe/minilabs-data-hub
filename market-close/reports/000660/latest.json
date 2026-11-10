@@ -2,37 +2,29 @@
   "code": "000660",
   "name": "SK하이닉스",
   "market": "KOSPI",
-  "basDt": "20261106",
+  "basDt": "20261109",
   "price": {
     "code": "000660",
     "name": "SK하이닉스",
     "market": "KOSPI",
-    "basDt": "20261106",
-    "close": 1132000,
-    "vs": -132000,
-    "fltRt": -10.44,
-    "open": 1089000,
-    "high": 1217000,
-    "low": 1089000,
-    "prevClose": 1264000,
-    "volume": 7907029,
-    "tradeValue": 9095204011505,
+    "basDt": "20261109",
+    "close": 1136000,
+    "vs": 4000,
+    "fltRt": 0.35,
+    "open": 1130000,
+    "high": 1193000,
+    "low": 1116000,
+    "prevClose": 1132000,
+    "volume": 4380339,
+    "tradeValue": 5058042680498,
     "week52": {
       "low": 519000,
       "high": 2919000,
-      "position": 0.2554166666666667,
-      "days": 245,
-      "from": "20251106"
+      "position": 0.25708333333333333,
+      "days": 244,
+      "from": "20251109"
     },
     "recent5": [
-      {
-        "basDt": "20261102",
-        "fltRt": 3.81,
-        "open": 1402000,
-        "high": 1498000,
-        "low": 1389000,
-        "close": 1472000
-      },
       {
         "basDt": "20261103",
         "fltRt": -5.03,
@@ -64,30 +56,44 @@
         "high": 1217000,
         "low": 1089000,
         "close": 1132000
+      },
+      {
+        "basDt": "20261109",
+        "fltRt": 0.35,
+        "open": 1130000,
+        "high": 1193000,
+        "low": 1116000,
+        "close": 1136000
       }
     ],
     "volumeVs20d": {
-      "avg20": 3821370,
-      "ratio": 2.07
+      "avg20": 4056560,
+      "ratio": 1.08
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 528,
-      "rows52w": 245
+      "rows": 529,
+      "rows52w": 244
     },
-    "generatedAt": "2026-11-09T08:50:04.367Z"
+    "generatedAt": "2026-11-10T08:55:59.292Z"
   },
   "facts": [
-    "코스피보다 4.42%p 낮았어요.",
-    "거래량은 20일 평균의 2.1배예요.",
-    "시가보다 43,000원 높게 마감했어요."
+    "코스피보다 1.16%p 높았어요.",
+    "거래량은 20일 평균의 1.1배예요.",
+    "시가보다 6,000원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "데이터로 증명한 10년의 노력… SK하이닉스, 산업보건 선진화위 운영 성과 공유",
-      "source": "SK hynix",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE15OWw3MHJZeTJVam5QcGFMOExQSG4xUzk5WW9ReGp4ZDIzM2NWeDNzemFBd29pc1kwdjBxY2U3OTJSNjgtMUJaRHdab25TTXV5ZGpUTmpuMlJ6VFpzdjZ2a29DU2l3aGZGQTRPNnlXYw?oc=5",
-      "publishedAt": "2026-11-06T00:59:04.000Z"
+      "title": "삼성·SK하이닉스, R&D 전문가에 美 반도체 사업 맡겼다",
+      "source": "매일일보",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9xbkJXVFFlQ3p3djJuUVhCUEFrNF9ra0dvSmpYTkljN1ZpTmR6N0VodG8zWEFpNjdoS19COUd3ZVY0VmZ3bVNJT1Jka1dWQ3JmM2l2bDJrZEhkZjVHeFdZWlQyZ0U?oc=5",
+      "publishedAt": "2026-11-09T05:00:17.000Z"
+    },
+    {
+      "title": "젠슨 황 불륜 스캔들·중국 스파이 의혹…삼성전자·SK하이닉스 주가는 왜 올랐나",
+      "source": "톱스타뉴스",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1mOFdRMXd3dE1CZ3FGeUxxTEVjc05hQzdIUDNGS0dMSTMzOHdyRHpDX3B6ZWtvRjhTMmE5YmxRSWMwaV9DY1BiYjBXUkJsNFdBUDZQVnFvUDNtU24zUV9KTktUUHk5TDFfeEFuZjdoZW0yUQ?oc=5",
+      "publishedAt": "2026-11-09T04:29:08.000Z"
     }
   ],
   "dart": [],
@@ -95,9 +101,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5059.69,
-    "vs": -324.11,
-    "fltRt": -6.02
+    "clpr": 5018.85,
+    "vs": -40.84,
+    "fltRt": -0.81
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -106,7 +112,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-09T08:52:02.843Z",
+  "builtAt": "2026-11-10T08:57:54.951Z",
   "archiveDays": 120,
-  "archiveFrom": "20260513"
+  "archiveFrom": "20260514"
 }

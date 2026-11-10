@@ -1,0 +1,124 @@
+{
+  "code": "145020",
+  "name": "휴젤",
+  "market": "KOSDAQ",
+  "basDt": "20261109",
+  "price": {
+    "code": "145020",
+    "name": "휴젤",
+    "market": "KOSDAQ",
+    "basDt": "20261109",
+    "close": 187100,
+    "vs": -400,
+    "fltRt": -0.21,
+    "open": 186600,
+    "high": 190900,
+    "low": 179500,
+    "prevClose": 187500,
+    "volume": 45416,
+    "tradeValue": 8512045750,
+    "week52": {
+      "low": 168500,
+      "high": 296500,
+      "position": 0.1453125,
+      "days": 244,
+      "from": "20251109"
+    },
+    "recent5": [
+      {
+        "basDt": "20261103",
+        "fltRt": 3.55,
+        "open": 181200,
+        "high": 191700,
+        "low": 180600,
+        "close": 189500
+      },
+      {
+        "basDt": "20261104",
+        "fltRt": -2.9,
+        "open": 189600,
+        "high": 191000,
+        "low": 167400,
+        "close": 184000
+      },
+      {
+        "basDt": "20261105",
+        "fltRt": 1.9,
+        "open": 186100,
+        "high": 194500,
+        "low": 186100,
+        "close": 187500
+      },
+      {
+        "basDt": "20261106",
+        "fltRt": 0,
+        "open": 181000,
+        "high": 193000,
+        "low": 178400,
+        "close": 187500
+      },
+      {
+        "basDt": "20261109",
+        "fltRt": -0.21,
+        "open": 186600,
+        "high": 190900,
+        "low": 179500,
+        "close": 187100
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 54848,
+      "ratio": 0.83
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 529,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-11-10T08:56:50.841Z"
+  },
+  "facts": [
+    "코스닥보다 0.61%p 높았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가보다 500원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "기로에 선 딜들 .. 평당가 기대치 못 미친 르네스퀘어, 휴젤빌딩은 13일 입찰",
+      "source": "SPI - 상업용 부동산 콘텐츠 & 데이터 애널리틱스",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1UbU5paFlaaUNuZEw2anI4aTBXaHZjZEo1aW4wOF94eWdRaHRpd0M4NHFHUWZuTm1uN2ZnbTViVi1DZVRUYXJHZDFydXVvU1N2OThZWHE3emtaNDg?oc=5",
+      "publishedAt": "2026-11-08T22:08:47.000Z"
+    },
+    {
+      "title": "“휴젤 출신 대표의 구조조정 잔혹사?…파마리서치, 해외 체질 개선 속 성장통 우려”",
+      "source": "뉴스퀘스트",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1pTnVuMWRkci14NGIwREN4WTVJWXhvTzB2bnAxS3Uxc0d2LUVUalV2eDkycm5Cem9vZzYzb010dWluUS1NX211eFVZQWVRUjJxRmJmbVZhNmxQaGtkLTNLX0lxaDJ6WFBOLVFZYWVNYw?oc=5",
+      "publishedAt": "2026-11-09T04:17:16.000Z"
+    },
+    {
+      "title": "휴젤 주가 하락 중",
+      "source": "아시아뉴스통신",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9wNXNwTmFLZFZBVm8zSjUyRGtxQnY2S0JMcjJkekQ2UnNHTlJFQldFd3NwcmlTY1duWGdoMU5MQkFtVy1iUzU3eXRuVXdXYXNjOTNJcTlWWENGYndHVms5ZVdNa2xDUkViZGxhY2h5bmFJV2hR?oc=5",
+      "publishedAt": "2026-11-09T00:15:36.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 638.97,
+    "vs": -5.3,
+    "fltRt": -0.82
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-11-10T08:57:55.058Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260514"
+}

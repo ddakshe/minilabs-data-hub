@@ -3,10 +3,18 @@
   "name": "심텍",
   "market": "KOSDAQ",
   "retainDays": 120,
-  "firstBasDt": "20260513",
-  "lastBasDt": "20261106",
+  "firstBasDt": "20260514",
+  "lastBasDt": "20261109",
   "count": 120,
   "days": [
+    {
+      "basDt": "20261109",
+      "close": 99900,
+      "fltRt": 6.84,
+      "headline": "코스닥보다 7.66%p 높았어요.",
+      "newsCount": 8,
+      "dartCount": 2
+    },
     {
       "basDt": "20261106",
       "close": 93500,
@@ -1041,16 +1049,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260513",
-      "close": 114200,
-      "fltRt": 2.42,
-      "headline": "코스닥이 0.2% 내린 날 2.42% 올랐어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-11-09T08:52:02.943Z"
+  "updatedAt": "2026-11-10T08:57:55.043Z"
 }

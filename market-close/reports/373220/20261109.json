@@ -1,0 +1,124 @@
+{
+  "code": "373220",
+  "name": "LG에너지솔루션",
+  "market": "KOSPI",
+  "basDt": "20261109",
+  "price": {
+    "code": "373220",
+    "name": "LG에너지솔루션",
+    "market": "KOSPI",
+    "basDt": "20261109",
+    "close": 318000,
+    "vs": -19500,
+    "fltRt": -5.78,
+    "open": 333500,
+    "high": 337000,
+    "low": 317500,
+    "prevClose": 337500,
+    "volume": 427765,
+    "tradeValue": 139005591750,
+    "week52": {
+      "low": 300500,
+      "high": 484500,
+      "position": 0.09510869565217392,
+      "days": 244,
+      "from": "20251109"
+    },
+    "recent5": [
+      {
+        "basDt": "20261103",
+        "fltRt": -5.06,
+        "open": 356000,
+        "high": 361000,
+        "low": 335500,
+        "close": 338000
+      },
+      {
+        "basDt": "20261104",
+        "fltRt": 5.03,
+        "open": 339000,
+        "high": 357500,
+        "low": 314500,
+        "close": 355000
+      },
+      {
+        "basDt": "20261105",
+        "fltRt": -2.54,
+        "open": 355500,
+        "high": 357500,
+        "low": 339000,
+        "close": 346000
+      },
+      {
+        "basDt": "20261106",
+        "fltRt": -2.46,
+        "open": 335000,
+        "high": 348500,
+        "low": 329000,
+        "close": 337500
+      },
+      {
+        "basDt": "20261109",
+        "fltRt": -5.78,
+        "open": 333500,
+        "high": 337000,
+        "low": 317500,
+        "close": 318000
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 517122,
+      "ratio": 0.83
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 529,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-11-10T08:56:04.328Z"
+  },
+  "facts": [
+    "코스피보다 4.97%p 낮았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가보다 15,500원 낮게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "LG엔솔 폴란드 공장 턱밑에… 킨테라, 배터리 소재 기지 짓는다",
+      "source": "글로벌이코노믹",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOTVRvNTN2a3FaU2EtNVlLemlaZ3Q4VGdBX01nd2ttc3dVb1A1dVhzM0V6ZHpWNzFQZDdVTmJ0cTZkSTJXUUJrbVNOMjQxV1hQc3dMZ1RNU1VtMGxPS1pYalhjN1JHR29laDhQYmp4VUtMcTBGdVV4MTZXcmlrdEhlb0NZNFI3UlZ1?oc=5",
+      "publishedAt": "2026-11-09T10:50:19.000Z"
+    },
+    {
+      "title": "[단독] ESS ‘장주기 수명 경쟁’ 점화 ... SK온, 후발주자 딛고 ‘20년 이상 보증’",
+      "source": "매일경제",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBJUEUxUzFxX1kyVC1WT2N5ejFEWEpHLUVyaWMza2VJaDJ1c3p1Yzdnb1VLektodHM4d3BjeDNZQlk0VVA1cmJGQjRfeE1ob2xreGhkdVZn?oc=5",
+      "publishedAt": "2026-11-09T08:45:00.000Z"
+    },
+    {
+      "title": "BMW, 삼성SDI·LG에너지솔루션과 차세대 배터리 공급망 확대…유럽·미국 현지 생산 강화",
+      "source": "인공지능신문",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB4bnlTc2RMNGdqNG0tY0szWktOdEhBNHJQeE12X2toTUI0RzRiQ3Bhc0g4OWFYdmR3a2FKbFBTUXM5ZjVJa3dqMlg2UWpkZFd4ZUZwQVFFMEprRlBVWVVnaXY4QUdIb1k?oc=5",
+      "publishedAt": "2026-11-09T07:58:07.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 5018.85,
+    "vs": -40.84,
+    "fltRt": -0.81
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-11-10T08:57:54.960Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260514"
+}

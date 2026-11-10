@@ -1,0 +1,146 @@
+{
+  "code": "039030",
+  "name": "이오테크닉스",
+  "market": "KOSDAQ",
+  "basDt": "20261109",
+  "price": {
+    "code": "039030",
+    "name": "이오테크닉스",
+    "market": "KOSDAQ",
+    "basDt": "20261109",
+    "close": 300500,
+    "vs": 17000,
+    "fltRt": 6,
+    "open": 283500,
+    "high": 315000,
+    "low": 282000,
+    "prevClose": 283500,
+    "volume": 85097,
+    "tradeValue": 25586184250,
+    "week52": {
+      "low": 237000,
+      "high": 612000,
+      "position": 0.16933333333333334,
+      "days": 244,
+      "from": "20251109"
+    },
+    "recent5": [
+      {
+        "basDt": "20261103",
+        "fltRt": -8.56,
+        "open": 379500,
+        "high": 379500,
+        "low": 350000,
+        "close": 358000
+      },
+      {
+        "basDt": "20261104",
+        "fltRt": 2.51,
+        "open": 368500,
+        "high": 376500,
+        "low": 353000,
+        "close": 367000
+      },
+      {
+        "basDt": "20261105",
+        "fltRt": -16.21,
+        "open": 348000,
+        "high": 348000,
+        "low": 303000,
+        "close": 307500
+      },
+      {
+        "basDt": "20261106",
+        "fltRt": -7.8,
+        "open": 272500,
+        "high": 301500,
+        "low": 272000,
+        "close": 283500
+      },
+      {
+        "basDt": "20261109",
+        "fltRt": 6,
+        "open": 283500,
+        "high": 315000,
+        "low": 282000,
+        "close": 300500
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 97666,
+      "ratio": 0.87
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 529,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-11-10T08:56:43.137Z"
+  },
+  "facts": [
+    "코스닥보다 6.82%p 높았어요.",
+    "거래량은 20일 평균의 0.9배예요.",
+    "시가보다 17,000원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "특징주, 이오테크닉스-반도체 장비 테마 상승세에 5.47% ↑",
+      "source": "매일경제 마켓",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1zTzNMZ0FVd3lBSkJrdzczYWpZSGZ6N2xMcGpSdU1OSUNFWkRKOVJqWW9Hcm9meEFCLWU0N29vUkJ6Y2c4SXhyempsOG4walVnekE?oc=5",
+      "publishedAt": "2026-11-09T02:28:18.000Z"
+    },
+    {
+      "title": "[삼성전자 밸류체인 시리즈 06] 이오테크닉스(039030),전공정과 후공정을 모두 꿰찬 레이저 장비의 '슈퍼 을',30만 원 돌파의 의미는?",
+      "source": "네이버 프리미엄콘텐츠",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQTmFhRWRDbkRGU3JNNTBaaDAzS0dYYTFtR21ObG9JVTl3U1pCWTNDNFlUMTlobDFXZnRMNFB6VktoME1xVzBVUVVjREpuZUREV01SZzRoS1pqT1dqVFhoN0ZuUFNNbXVuXzFuTzhSN1BJblBITnNzMUZxcnNwNEJqekZaYw?oc=5",
+      "publishedAt": "2026-11-09T05:00:00.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20261102",
+      "holder": "미래에셋자산운용",
+      "ratio": 7.48,
+      "ratioChange": -0.27,
+      "reason": "지분율 변동",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261102000296"
+    },
+    {
+      "kind": "major",
+      "date": "20261007",
+      "holder": "삼성자산운용",
+      "ratio": 8.7,
+      "ratioChange": 2.32,
+      "reason": "매매로 인한 변동보고의무 발생(삼성액티브자산운용의 위탁운용분 포함)",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261007000310"
+    },
+    {
+      "kind": "major",
+      "date": "20260901",
+      "holder": "미래에셋자산운용",
+      "ratio": 7.75,
+      "ratioChange": 1.05,
+      "reason": "지분율 변동",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260901000188"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 638.97,
+    "vs": -5.3,
+    "fltRt": -0.82
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-11-10T08:57:55.046Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260514"
+}

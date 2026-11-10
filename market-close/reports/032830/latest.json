@@ -2,37 +2,29 @@
   "code": "032830",
   "name": "삼성생명",
   "market": "KOSPI",
-  "basDt": "20261106",
+  "basDt": "20261109",
   "price": {
     "code": "032830",
     "name": "삼성생명",
     "market": "KOSPI",
-    "basDt": "20261106",
-    "close": 234500,
-    "vs": -10000,
-    "fltRt": -4.09,
-    "open": 226000,
-    "high": 237500,
-    "low": 219500,
-    "prevClose": 244500,
-    "volume": 384784,
-    "tradeValue": 88730197250,
+    "basDt": "20261109",
+    "close": 237000,
+    "vs": 2500,
+    "fltRt": 1.07,
+    "open": 228000,
+    "high": 243000,
+    "low": 228000,
+    "prevClose": 234500,
+    "volume": 307547,
+    "tradeValue": 73082903053,
     "week52": {
       "low": 144800,
       "high": 497000,
-      "position": 0.25468483816013626,
-      "days": 245,
-      "from": "20251106"
+      "position": 0.2617830777967064,
+      "days": 244,
+      "from": "20251109"
     },
     "recent5": [
-      {
-        "basDt": "20261102",
-        "fltRt": 0.55,
-        "open": 263000,
-        "high": 275750,
-        "low": 260000,
-        "close": 272000
-      },
       {
         "basDt": "20261103",
         "fltRt": -3.86,
@@ -64,36 +56,80 @@
         "high": 237500,
         "low": 219500,
         "close": 234500
+      },
+      {
+        "basDt": "20261109",
+        "fltRt": 1.07,
+        "open": 228000,
+        "high": 243000,
+        "low": 228000,
+        "close": 237000
       }
     ],
     "volumeVs20d": {
-      "avg20": 291520,
-      "ratio": 1.32
+      "avg20": 293968,
+      "ratio": 1.05
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 528,
-      "rows52w": 245
+      "rows": 529,
+      "rows52w": 244
     },
-    "generatedAt": "2026-11-09T08:50:25.311Z"
+    "generatedAt": "2026-11-10T08:56:19.989Z"
   },
   "facts": [
-    "코스피보다 1.93%p 높았어요.",
-    "거래량은 20일 평균의 1.3배예요.",
-    "시가보다 8,500원 높게 마감했어요."
+    "코스피보다 1.88%p 높았어요.",
+    "거래량은 20일 평균의 1.1배예요.",
+    "시가보다 9,000원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "삼성생명, 부채 넷 중 하나는 6% 이상 고금리…'역마진 리스크'",
-      "source": "연합인포맥스",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE41a3ZNd0xpTTE5Q3dpUlpISFdDWm9VTkpNWDNJMjEtUm5nWWtkWmhWWlIzZlFMRUYzbERNbzZGNndOcS1OTUVPak5tVTl3N2lkTml5RVFEdzI0azdCd0F5aGdZZmpKWDJsREJkY0lhTWPSAXRBVV95cUxOZ19PWndwOUlkbjlVcUJ4OFRyMzJXYVQ0WlFqR2VIbDktU3VBYTVGaXhlaDZrOERKT1VTc2JfZlA3MVBBQVk2eEtTRWlGWXd4TW4yYUtTQ0tqbVdmRl9XNDZSSU02Y2tkN002a0U2Zi1kb2dQSg?oc=5",
-      "publishedAt": "2026-11-05T23:40:10.000Z"
+      "title": "삼성전자 '5조 보험' 납입…삼성생명 실익 가를 운용수익·비용",
+      "source": "메트로신문",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBRU0RzMWlCeFZDQVJTTXVRZkxkT1djSnNOOXBTVDBHQVE1Z0xUeXhwcy1JMlJmUEFPZEFNM2xJSTE1djdCbGRCaU9hbTktWDB0cXE2ZzhDbTFETDFpNFBTWg?oc=5",
+      "publishedAt": "2026-11-09T05:28:29.000Z"
     },
     {
-      "title": "삼전 배당 2.3조 안은 삼성생명…1.5조 국채 직행, 주주환원 '안갯속'",
-      "source": "인베스트조선",
-      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOcnVHY2dGaFhaamU1UDNydURUSUdTX3hQZDJfR2lkVXg4YUlWQm1pOTIzcC1McmdpSWgyV0VtUXNrRUJFRHJZWExzZjlTanBobkJvYTB3SnlvbDBLMjJVaHNaYVZpUndpbS11TU1fRTh3MEpNZFdCREJRNXhaNWVsaF9TVQ?oc=5",
-      "publishedAt": "2026-11-05T22:00:00.000Z"
+      "title": "[장중수급포착] 삼성생명, 기관 16일 연속 순매수행진... 주가 +1.07%",
+      "source": "뉴스핌",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBPMzJleEtoVFRZeHVVSURfRXAxaTlya1B3T2pKRGNnanNCekNYRmZIa1JQMmEyUEhkcjR6dWQ1NVFIcnJvS1NWYkVGRnNyUjJTMjV3ekFxeWRDekdu?oc=5",
+      "publishedAt": "2026-11-09T01:17:00.000Z"
+    },
+    {
+      "title": "[디깅노트] 삼성생명 가세에 재조명받는 'ALM'",
+      "source": "블로터",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB2VFA5VlU5MFNMdl9hLXdhNlppRldTejFIVC1rZHlEcDFZODF4VGp1TjIwVGNOaVFkbnpGT0xOWTkxU2l0eDlUdjZjUmRvWEk1RXZSSnM0NDhWVktnanFwVXVQOHZ2VVhF0gFsQVVfeXFMUDFuUlplYlAtQWpKLXgwY2Y2MVYxbE1IUzQ3X2ZuNEVDSVA3VFgwaHJ0S2NncHVvcXE5NnNPdmFuX0VUR041RjdOb2Flck82QmlQT3lpQ0txaDJNbGR6ZW5fTHplQi1FcnJKWmNw?oc=5",
+      "publishedAt": "2026-11-08T23:20:00.000Z"
+    },
+    {
+      "title": "축구 1부리그 복귀·안세영 11승…'스포츠 명가' 삼성, 부활 청신호",
+      "source": "한국경제",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5TdDJ3c3lfSnNmNlNHanFMU282azVjLUNQbEQ0cDdzcG53Mnc5bUp4ZkZ4d1h3V1E5dXlOSndvU3B4NkN6dTJHb1V3WHlla0JOR3M4dXh0Mm5Jdw?oc=5",
+      "publishedAt": "2026-11-09T09:21:18.000Z"
+    },
+    {
+      "title": "상품판매 위험 감지하면 중단 요구… 고객피해 사전 예방",
+      "source": "조선일보",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNeU9QeFJpOC00eEF0a1psT1FCVTljdHU2NUlsNzZXLWJhcktSZDQyS2psSVRZaVMzYjA4QURUMGVGTlNodlg2Rm1ncUhDclNQUGVYdU5LZmc3bGgwNW5wVHJFbGdpY3doTUZ4dURQY3RJeUpfYUpCbERfc2JKdnk5OXJXTFBkbzkwYlA3dU9yZw?oc=5",
+      "publishedAt": "2026-11-08T15:35:30.000Z"
+    },
+    {
+      "title": "삼성생명 퇴직연금 54%가 계열사 자금…기금형 도입에 '그룹 금고' 논란",
+      "source": "비즈중앙",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE13UkZlaEdudUFfcWRzWXFEZVFSTjFSQjZodE94Z3lDbGZmaXNOZ25hb0t1LWtZQ2NQaVY1OUtMRnBxVEJHM1RwQ285dDhPNzNBeVdKYlNSWXYxSFJPbHQ3OEIxNkd2dFp6Z0pPMEdUNm4?oc=5",
+      "publishedAt": "2026-11-09T00:28:03.000Z"
+    },
+    {
+      "title": "야구·축구에 안세영까지 ‘지금은 삼성 시대’···농구·배구도 ‘푸른 피의 전설’ 계보 잇나",
+      "source": "경향신문",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE8yb01SZW1XWVBETURfeks0NTkyRGlBYmd3UkxuN2k3RVNSSHV2aExfTGVNNWFPNkQ0MmZqanFTT042SzNQdEpBUHpHTWgxU2dWRjZBUXVQWFlZaWNxQnU00gFfQVVfeXFMTzJvTVJlbVdZUERNRF96SzQ1OTJEaUFiZ3dSTG43aTdFU1JIdXZoTF9MZU01YU82RDQyZmpqcVNPTjZLM1B0SkFQekdNaDFTZ1ZGNkFRdVBYWVlpY3FCdTQ?oc=5",
+      "publishedAt": "2026-11-09T08:19:00.000Z"
+    },
+    {
+      "title": "차기 생보협회장 '민간' 무게",
+      "source": "DFT 대한금융신문",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1fUWk2bXZHbTdXX1lmOHVJdzczcDg5YTFoMmlSU3lOLTZTVUJSZGtLTmJzUkYzSm9PWmEzdUtCd0xjNjFDV3o3cEFRMlRMektvMXlNdWRtSEZ0bUVQQzR1VkgwUGxfVHJKcFZvZdIBcEFVX3lxTFA5aTJFc2xqQTROMGRPWG9JN2JBUTM5X21DMW43UEZ1YlA4ZjZwdHJQRll2NkR3T0UxczhnVU91NFRjdWQ4TUpVejJ2bUdDT1dyN0EySnNUS2tBWG5EeTR6VElUcTdiaXc3SFpyXzV3d1Y?oc=5",
+      "publishedAt": "2026-11-09T06:49:00.000Z"
     }
   ],
   "dart": [],
@@ -120,9 +156,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5059.69,
-    "vs": -324.11,
-    "fltRt": -6.02
+    "clpr": 5018.85,
+    "vs": -40.84,
+    "fltRt": -0.81
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -131,7 +167,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-09T08:52:02.900Z",
+  "builtAt": "2026-11-10T08:57:54.994Z",
   "archiveDays": 120,
-  "archiveFrom": "20260513"
+  "archiveFrom": "20260514"
 }

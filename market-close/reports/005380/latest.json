@@ -2,37 +2,29 @@
   "code": "005380",
   "name": "현대차",
   "market": "KOSPI",
-  "basDt": "20261106",
+  "basDt": "20261109",
   "price": {
     "code": "005380",
     "name": "현대차",
     "market": "KOSPI",
-    "basDt": "20261106",
-    "close": 279500,
-    "vs": -14000,
-    "fltRt": -4.77,
-    "open": 271000,
-    "high": 286000,
-    "low": 267500,
-    "prevClose": 293500,
-    "volume": 651478,
-    "tradeValue": 180952350750,
+    "basDt": "20261109",
+    "close": 271500,
+    "vs": -8000,
+    "fltRt": -2.86,
+    "open": 275000,
+    "high": 279500,
+    "low": 270000,
+    "prevClose": 279500,
+    "volume": 490847,
+    "tradeValue": 134634302250,
     "week52": {
       "low": 254500,
       "high": 750000,
-      "position": 0.050454086781029264,
-      "days": 245,
-      "from": "20251106"
+      "position": 0.034308779011099896,
+      "days": 244,
+      "from": "20251109"
     },
     "recent5": [
-      {
-        "basDt": "20261102",
-        "fltRt": 1.77,
-        "open": 275000,
-        "high": 289000,
-        "low": 270500,
-        "close": 287000
-      },
       {
         "basDt": "20261103",
         "fltRt": -3.31,
@@ -64,82 +56,98 @@
         "high": 286000,
         "low": 267500,
         "close": 279500
+      },
+      {
+        "basDt": "20261109",
+        "fltRt": -2.86,
+        "open": 275000,
+        "high": 279500,
+        "low": 270000,
+        "close": 271500
       }
     ],
     "volumeVs20d": {
-      "avg20": 612445,
-      "ratio": 1.06
+      "avg20": 610730,
+      "ratio": 0.8
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 528,
-      "rows52w": 245
+      "rows": 529,
+      "rows52w": 244
     },
-    "generatedAt": "2026-11-09T08:50:17.718Z"
+    "generatedAt": "2026-11-10T08:56:12.210Z"
   },
   "facts": [
-    "코스피보다 1.25%p 높았어요.",
-    "거래량은 20일 평균의 1.1배예요.",
-    "시가보다 8,500원 높게 마감했어요."
+    "코스피보다 2.05%p 낮았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가보다 3,500원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "'이병철-정주영' 이후 3대째…삼성·현대차, '원팀' 첨단산업 선점",
-      "source": "머니투데이",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5ibmZWTm9lSWhTZGlCSTFYT2diZFBqR1ExTTloTlJIeEh3bE1TWUEwUzE4ZkV0anJPTUluWk55ejJKWThJTnJQeEtGLU9ndHM0M3lHTTVydTF6OEJFVXk0Y3loRHFoN0JrQmpzZ9IBckFVX3lxTE4wMXM3NlJWQnV6bnBJa09pZzcxODloMll3NkxLc1BjT3hILUplWktzMWJQa3pZUnJjaTUyR1NpMXhBRnRscnZMamZpV2xKbml2YUg3QXRCUVdEajJFVGRWWXZxTHYtcHlMS1BUSEt4eW1Qdw?oc=5",
+      "title": "삼성-현대차, 미래 모빌리티 '원팀' 선언",
+      "source": "전자신문",
+      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBYa3N6WE9TTDFUSHFtb0hXdFlFcGZLU3NNS1ExUUhfWHFKdkhpZDJUdmRNcVY1ak5QdlQxNVhJVElsNHg0NjVneEprM0Y5UQ?oc=5",
       "publishedAt": "2026-11-09T08:00:00.000Z"
     },
     {
-      "title": "현대차·기아 전기차 10월에 두배 팔렸다…EV5 판매 '껑충'",
-      "source": "연합뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5WcmpPWHdxTXNDREJGYTlVY1pmRmk3X0diRjJ3Y1p1SVhBd3JqZnRkemprUm56TExueWdncUxVZmVvUURaNUhUVEdLb2xTX3ktMnNUelNOUUNXRE3SAWBBVV95cUxQT2E2VmNYM2t5MlY4R2ZZSlFqVUFYVUNBenpYM3l5VV9IWGJKbG91R0N3bmNJdGRQaTdiTnNIWVc3ekhubjJpb05zSmM5TTFkREdjSk9qYUVIckxUNFhBN1Q?oc=5",
-      "publishedAt": "2026-11-08T21:15:00.000Z"
+      "title": "“국민 차 맞아?”… 현대차 신형 아반떼, 배기량 올려 ‘세금 폭탄’",
+      "source": "경기신문",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5qeWlzalpVTmhGY21oODQ0a28yTXh0ZGJtQm9ER2VqTVl0bVh0Z3NRVFE1V21XYlNqZHgwS2NDZm5sZjlINmlTeHpvMy1sRnplOThwcXo1NlFBcnJDR1J6NzhR?oc=5",
+      "publishedAt": "2026-11-09T07:24:57.000Z"
     },
     {
-      "title": "'현대차 다니는 뚜벅이' 르르르, 보행 안전 알린다",
-      "source": "지디넷코리아",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9MNnZuclJHQmppT3plb1Bmc2pONDJ4R25zd194MTB6ZzZncTdMMnFzVkxtSVNDQ2lDX0UwcDNoMW1YYzdrTU5TWFdCMlZGYkp5cWFNNFBR?oc=5",
-      "publishedAt": "2026-11-08T23:56:00.000Z"
+      "title": "현대차, 차세대 수소 프로젝트 '코랄' 닻 올렸다",
+      "source": "디일렉",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9pLUxrWXFYaTJ3MzZRazRaVHdUaHgwMGcyUlF0N0s4eHVlbTNvRHFoeTUzVXNtRFoxUF82V1BtY2xQWmxaT1BJYnVQR1UzbjhONTJ2MmZ6VHBndmhmMEdLakktMHJPUQ?oc=5",
+      "publishedAt": "2026-11-09T07:48:30.000Z"
     },
     {
-      "title": "수소차의 미래, 보조금·현대차 없이 설 수 있나?",
-      "source": "경향신문",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBCdmk0NkpDekUxSWU3MG9YM19Ha0h3RlIzc3VKd1dGb3oydFJmSDdtZHAydUFDV1Y3dTBCQnN3ejdZVDZ4TW80Ny1qU3o1dGIwRHh4WFRJNjNCd9IBX0FVX3lxTFBzQm41UXNOR21YaXhfNkczcU8yX1A4Y2xZSG16a0cwOXotUU52SmViMlNQc1ViTlZ2VmhPdXc5ZUlDbFR0R0pucmFabGNGbE1ndlJNdFJwbFNvdTlPNWJF?oc=5",
-      "publishedAt": "2026-11-07T23:00:00.000Z"
+      "title": "현대차그룹 ‘기프트카 플레이온 시즌2’",
+      "source": "문화일보",
+      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1tb3ZwUDU2LXU5UlEyUFNaeG5KeW9jZkNPd2lRSDduc1pJcC03dG9Wb1RFWEFfNWYtMnlvVTQxLXZhaGRhLXU1a3VldlUxMHE4?oc=5",
+      "publishedAt": "2026-11-09T02:46:52.000Z"
     },
     {
-      "title": "현대차·기아, 협력사 온실가스 규제 대응 지원 강화",
-      "source": "서울경제",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE15aE1uOEVpYTk2V3lGQmJVbTF1ODlObWJrWWJvOEVEVHVXZi14SDJoTTFsdXRQNWpwcVFwZFV2YjRVeFFSeEZaUHNqYTBFZDNRU1HSAVNBVV95cUxNbGl4SDBZcFU3RkNCbDQyd3lQT2g5czVFZFJBbXFYb3M3SW1nMjBiLWJZcXNYTHREM085ZDVUdWRkdms1WTVlUkZPOUQtWENxakc3RQ?oc=5",
-      "publishedAt": "2026-11-09T01:03:39.000Z"
+      "title": "현대차그룹-삼성, ‘원팀’으로 미래 첨단 산업 선점 | 뉴스 | 현대자동차그룹",
+      "source": "Hyundai Motor Group",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQOHV1NDlzckQ2QjNyUFh3UXlFWkROM0EtN2RqRUxsZ0RMZGxlcU1kV1J6Z2VvMTZTZDNtaUhsX09UVzdaS1htclg1QVM3aHdZRUx5RnhuY0FaUlRqZk83Qk1LR0ItSnVjeVpCNFlhR1F4NV9nR19UaExIMTI0anBFZzRkbVN4bWxFcXJUeklNb0RPT1gzUlVZODlLMS0xVzVIT0lSVzRB?oc=5",
+      "publishedAt": "2026-11-09T08:08:00.000Z"
     },
     {
-      "title": "현대차그룹, 유소년 스포츠단에 차량·훈련비 지원…\"참가 학교 모집\"",
-      "source": "뉴스1",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1YM1FlbEtfSHJVdUk5X09nZV9Ub2xOUGZwd0twZzhEVFQteG81V0NmOTlMdnRyTjBGWmc0RHdFek81c1ZCbFFCVUphNm1xWngzZm9TR0ZzUGZfaEFOVVN2ZA?oc=5",
-      "publishedAt": "2026-11-09T00:52:27.000Z"
+      "title": "삼성·현대차그룹, 미래 모빌리티·피지컬 AI 선점 위해 ‘원팀’ 구축…반도체·배터리·로봇 기술 결집",
+      "source": "인공지능신문",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBZMGlDWV9ub1hmcV93ZnBNc3NxU2U1YWJROXhadlhIZDNFSldBYWxYXzR0M3VxWlZzRWdDeEdpLUVJbHYzaVczVGFUV1ZNRElYY2FQSjhEREZqZWZSTnRuZkpFODctX2c?oc=5",
+      "publishedAt": "2026-11-09T14:51:39.000Z"
     },
     {
-      "title": "[기자수첩] 중국산 테슬라 FSD '임박'…현대차, 아직 멀었다",
-      "source": "파이낸셜포스트",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFA3dDlMd3gza3p5a2JxRk5NVVhzRWpPbnc3WnNMeUdxQkFhLUtQZFNoMVdFSTcyMDdIYU56ZmtYZXVfY0haV2daLVllbzZXMmNfeVh5YUJhQTFMRFJJZ1FxQ3A4eHFfdHBmSDVOSEhhZmRLLU92?oc=5",
-      "publishedAt": "2026-11-07T21:00:00.000Z"
+      "title": "협력사 수천개 삼성, 왜 유독 현대차 위해 ‘감사의날’ 행사 열까?",
+      "source": "조선일보",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNRzN2S3ItMUpmaS1mS3hhS2MxaDREby1ZNmZlb2FCZVlua1FUNWhWTUg2YTZ4WTRka3h4aVNrNGgtNWsyb2N2WXlSZkczUnRSMUJJYWo3elNuamVqbzk5aTdlZEViOEZGcW5WZUI2SHMweFRGeGNQZm12MUhRbVduTTFNTzRoTE9JbGhObWhYQQ?oc=5",
+      "publishedAt": "2026-11-09T04:44:50.000Z"
     },
     {
-      "title": "테슬라·BYD 공습 속 현대차·기아, 10개월 만에 전용 EV 11만대 돌파",
-      "source": "마이데일리",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9mNy11eUVSWkR3ai1pdHU2Tjkya3lmallWU1RCR1d5c1M3dFA1Y1EzaVJlZk04Qy1LZjEzenFheEpESkZEdDBoSkVaSGJkcnVnZy1pbDB3Ml9KeGd1MVpqNg?oc=5",
-      "publishedAt": "2026-11-09T02:10:37.000Z"
+      "title": "삼성·현대차, 경영진 대규모 교류…미래산업 ’원팀’ 행보",
+      "source": "연합뉴스TV",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5ic0Nwb0hiMEE1b1JGMldLNURNWlFFOTZBcGVHQmRXbUJyY1RlNENnME5DRzcxM1JQbE1mUDRqdTNxM2xJYU1KYk5SWGI0WVlvdXQza2pfamVBTkxqM3dXR0dFN2Y5M00?oc=5",
+      "publishedAt": "2026-11-09T12:00:00.000Z"
     }
   ],
-  "dart": [],
+  "dart": [
+    {
+      "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+      "filer": "이승애",
+      "receiptNo": "20261109000357",
+      "date": "20261109",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261109000357"
+    }
+  ],
   "ownership": [],
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5059.69,
-    "vs": -324.11,
-    "fltRt": -6.02
+    "clpr": 5018.85,
+    "vs": -40.84,
+    "fltRt": -0.81
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -148,7 +156,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-09T08:52:02.873Z",
+  "builtAt": "2026-11-10T08:57:54.978Z",
   "archiveDays": 120,
-  "archiveFrom": "20260513"
+  "archiveFrom": "20260514"
 }
