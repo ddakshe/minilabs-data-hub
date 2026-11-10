@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-09T00:00:00Z",
+  "generatedAt": "2026-11-10T00:00:00Z",
   "source": "SEC EDGAR",
   "sourceUrl": "https://www.sec.gov/edgar",
-  "usdKrw": 1358.73,
+  "usdKrw": 1346.79,
   "listed": [
     {
       "cik": "0002118032",
@@ -258,6 +258,71 @@
   ],
   "upcoming": [
     {
+      "cik": "0002127714",
+      "name": "ZA Acquisition Corp. I",
+      "ticker": null,
+      "filedAt": "2026-11-09",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002127714&type=S-1"
+    },
+    {
+      "cik": "0002137779",
+      "name": "Research Alliance Corp V",
+      "ticker": null,
+      "filedAt": "2026-11-09",
+      "isSpac": false,
+      "sic": null,
+      "industry": "기타",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002137779&type=S-1"
+    },
+    {
+      "cik": "0002141583",
+      "name": "Rezera Inc.",
+      "ticker": "RZRA",
+      "filedAt": "2026-11-09",
+      "isSpac": false,
+      "sic": "2834",
+      "industry": "제약·바이오",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002141583&type=S-1"
+    },
+    {
+      "cik": "0001938570",
+      "name": "Blue Laser Fusion, Inc.",
+      "ticker": null,
+      "filedAt": "2026-11-09",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": 56000,
+        "netIncome": -196149,
+        "assets": 886
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001938570&type=S-1"
+    },
+    {
+      "cik": "0001895249",
+      "name": "ConnectM Technology Solutions, Inc.",
+      "ticker": "CNTM",
+      "filedAt": "2026-11-09",
+      "isSpac": false,
+      "sic": "1700",
+      "industry": "건설",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": 35836809,
+        "netIncome": -16245050,
+        "assets": 36170124
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001895249&type=S-1"
+    },
+    {
       "cik": "0002114402",
       "name": "AParadise III Acquisition Corp.",
       "ticker": null,
@@ -354,17 +419,6 @@
       "industry": "SPAC",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002111009&type=S-1"
-    },
-    {
-      "cik": "0002141583",
-      "name": "Rezera Inc.",
-      "ticker": "RZRA",
-      "filedAt": "2026-11-05",
-      "isSpac": false,
-      "sic": "2834",
-      "industry": "제약·바이오",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002141583&type=S-1"
     },
     {
       "cik": "0001620704",
@@ -621,17 +675,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002133939&type=S-1"
     },
     {
-      "cik": "0001966126",
-      "name": "NuvOx Therapeutics, Inc.",
-      "ticker": "NUOX",
-      "filedAt": "2026-10-29",
-      "isSpac": false,
-      "sic": "2834",
-      "industry": "제약·바이오",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001966126&type=S-1"
-    },
-    {
       "cik": "0002142104",
       "name": "KAT Construction Services, Inc.",
       "ticker": null,
@@ -641,6 +684,17 @@
       "industry": "제조",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002142104&type=S-1"
+    },
+    {
+      "cik": "0001966126",
+      "name": "NuvOx Therapeutics, Inc.",
+      "ticker": "NUOX",
+      "filedAt": "2026-10-29",
+      "isSpac": false,
+      "sic": "2834",
+      "industry": "제약·바이오",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001966126&type=S-1"
     },
     {
       "cik": "0002152549",
@@ -1647,22 +1701,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002125056&type=S-1"
     },
     {
-      "cik": "0001895249",
-      "name": "ConnectM Technology Solutions, Inc.",
-      "ticker": "CNTM",
-      "filedAt": "2026-09-23",
-      "isSpac": false,
-      "sic": "1700",
-      "industry": "건설",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 35836809,
-        "netIncome": -16245050,
-        "assets": 36170124
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001895249&type=S-1"
-    },
-    {
       "cik": "0002098410",
       "name": "Bluerock Acquisition Corp. II",
       "ticker": "BRRK",
@@ -2664,55 +2702,6 @@
       "industry": "제조",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002132582&type=S-1"
-    },
-    {
-      "cik": "0002134856",
-      "name": "Karman Line Acquisition Corp.",
-      "ticker": "XTER",
-      "filedAt": "2026-08-11",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002134856&type=S-1"
-    },
-    {
-      "cik": "0002133719",
-      "name": "NorthStrive Acquisition Corp I.",
-      "ticker": "NSAI",
-      "filedAt": "2026-08-11",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002133719&type=S-1"
-    },
-    {
-      "cik": "0001976923",
-      "name": "YOUNEEQAI TECHNICAL SERVICES, INC.",
-      "ticker": "YQAI",
-      "filedAt": "2026-08-11",
-      "isSpac": false,
-      "sic": "7371",
-      "industry": "소프트웨어·IT",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001976923&type=S-1"
-    },
-    {
-      "cik": "0001828161",
-      "name": "FTC Solar, Inc.",
-      "ticker": "FTCI",
-      "filedAt": "2026-08-11",
-      "isSpac": false,
-      "sic": "3674",
-      "industry": "반도체·전자",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 99687000,
-        "netIncome": -79577000,
-        "assets": 111812000
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001828161&type=S-1"
     }
   ]
 }
