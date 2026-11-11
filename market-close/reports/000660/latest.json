@@ -2,37 +2,29 @@
   "code": "000660",
   "name": "SK하이닉스",
   "market": "KOSPI",
-  "basDt": "20261109",
+  "basDt": "20261110",
   "price": {
     "code": "000660",
     "name": "SK하이닉스",
     "market": "KOSPI",
-    "basDt": "20261109",
-    "close": 1136000,
-    "vs": 4000,
-    "fltRt": 0.35,
-    "open": 1130000,
-    "high": 1193000,
-    "low": 1116000,
-    "prevClose": 1132000,
-    "volume": 4380339,
-    "tradeValue": 5058042680498,
+    "basDt": "20261110",
+    "close": 1212000,
+    "vs": 76000,
+    "fltRt": 6.69,
+    "open": 1214000,
+    "high": 1242000,
+    "low": 1190000,
+    "prevClose": 1136000,
+    "volume": 3419722,
+    "tradeValue": 4149676748000,
     "week52": {
       "low": 519000,
       "high": 2919000,
-      "position": 0.25708333333333333,
-      "days": 244,
-      "from": "20251109"
+      "position": 0.28875,
+      "days": 245,
+      "from": "20251110"
     },
     "recent5": [
-      {
-        "basDt": "20261103",
-        "fltRt": -5.03,
-        "open": 1410000,
-        "high": 1433000,
-        "low": 1379000,
-        "close": 1398000
-      },
       {
         "basDt": "20261104",
         "fltRt": -0.14,
@@ -64,36 +56,50 @@
         "high": 1193000,
         "low": 1116000,
         "close": 1136000
+      },
+      {
+        "basDt": "20261110",
+        "fltRt": 6.69,
+        "open": 1214000,
+        "high": 1242000,
+        "low": 1190000,
+        "close": 1212000
       }
     ],
     "volumeVs20d": {
-      "avg20": 4056560,
-      "ratio": 1.08
+      "avg20": 4119894,
+      "ratio": 0.83
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 529,
-      "rows52w": 244
+      "rows": 530,
+      "rows52w": 245
     },
-    "generatedAt": "2026-11-10T08:55:59.292Z"
+    "generatedAt": "2026-11-11T08:36:21.436Z"
   },
   "facts": [
-    "코스피보다 1.16%p 높았어요.",
-    "거래량은 20일 평균의 1.1배예요.",
-    "시가보다 6,000원 높게 마감했어요."
+    "코스피보다 2.3%p 높았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가보다 2,000원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "삼성·SK하이닉스, R&D 전문가에 美 반도체 사업 맡겼다",
-      "source": "매일일보",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9xbkJXVFFlQ3p3djJuUVhCUEFrNF9ra0dvSmpYTkljN1ZpTmR6N0VodG8zWEFpNjdoS19COUd3ZVY0VmZ3bVNJT1Jka1dWQ3JmM2l2bDJrZEhkZjVHeFdZWlQyZ0U?oc=5",
-      "publishedAt": "2026-11-09T05:00:17.000Z"
+      "title": "\"반도체 돈잔치 끝이 보인다\"…삼전닉스에 날아든 경고장 [분석+]",
+      "source": "한국경제",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9zZzY5ZmF0SjczYVlMbnoxMS1ZY2dpNUtJLU1QVElzT2xVd3paZjFxcVBRRDJQLTJJTmVGeWxaTEhwVElQTEh4NFRZYWVVOGZ0Y2FGeVNOWXcwdw?oc=5",
+      "publishedAt": "2026-11-10T13:00:02.000Z"
     },
     {
-      "title": "젠슨 황 불륜 스캔들·중국 스파이 의혹…삼성전자·SK하이닉스 주가는 왜 올랐나",
-      "source": "톱스타뉴스",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1mOFdRMXd3dE1CZ3FGeUxxTEVjc05hQzdIUDNGS0dMSTMzOHdyRHpDX3B6ZWtvRjhTMmE5YmxRSWMwaV9DY1BiYjBXUkJsNFdBUDZQVnFvUDNtU24zUV9KTktUUHk5TDFfeEFuZjdoZW0yUQ?oc=5",
-      "publishedAt": "2026-11-09T04:29:08.000Z"
+      "title": "SK하이닉스 목표가 '천지 차이'…노무라 470만원 vs 모건스탠리 160만원",
+      "source": "매일경제 마켓",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBieFBPRGhBOGY0UUpTRlJSTXkzVzlHZk0zcjRWNDltbTk5SjYtaV9zNVJzQmVGdDBUWklhYzFUUnNDMUpRcDNCMk9ydmQ1U3gzVnc?oc=5",
+      "publishedAt": "2026-11-10T08:39:17.000Z"
+    },
+    {
+      "title": "SK하이닉스 세금만 2조 육박…이천시 곳간의 변화",
+      "source": "연합인포맥스",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5oWV9VRDl5dnRYcUoyN1lpX0ZwVWp0WkYwc05JZDRsdlNhMHJPYUQweUlTSm5qRXc0RkxhSXFVbS1EczlaUTFEQ1cwSE80Wjk4bHYyM09vc1N6R2hCYjk1RUdQTXdMWUNaMXRZVWpqQUs?oc=5",
+      "publishedAt": "2026-11-10T03:21:00.000Z"
     }
   ],
   "dart": [],
@@ -101,9 +107,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5018.85,
-    "vs": -40.84,
-    "fltRt": -0.81
+    "clpr": 5239.13,
+    "vs": 220.28,
+    "fltRt": 4.39
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -112,7 +118,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-10T08:57:54.951Z",
+  "builtAt": "2026-11-11T08:38:16.145Z",
   "archiveDays": 120,
-  "archiveFrom": "20260514"
+  "archiveFrom": "20260515"
 }

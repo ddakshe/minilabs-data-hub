@@ -2,37 +2,29 @@
   "code": "009150",
   "name": "삼성전기",
   "market": "KOSPI",
-  "basDt": "20261109",
+  "basDt": "20261110",
   "price": {
     "code": "009150",
     "name": "삼성전기",
     "market": "KOSPI",
-    "basDt": "20261109",
-    "close": 843000,
-    "vs": -27000,
-    "fltRt": -3.1,
-    "open": 847000,
-    "high": 885000,
-    "low": 834000,
-    "prevClose": 870000,
-    "volume": 907642,
-    "tradeValue": 773809622000,
+    "basDt": "20261110",
+    "close": 882000,
+    "vs": 39000,
+    "fltRt": 4.63,
+    "open": 911000,
+    "high": 918000,
+    "low": 862000,
+    "prevClose": 843000,
+    "volume": 691261,
+    "tradeValue": 611511985000,
     "week52": {
       "low": 204000,
       "high": 2270000,
-      "position": 0.3092933204259439,
-      "days": 244,
-      "from": "20251109"
+      "position": 0.3281703775411423,
+      "days": 245,
+      "from": "20251110"
     },
     "recent5": [
-      {
-        "basDt": "20261103",
-        "fltRt": -7.38,
-        "open": 1155000,
-        "high": 1169000,
-        "low": 1097000,
-        "close": 1105000
-      },
       {
         "basDt": "20261104",
         "fltRt": 0.9,
@@ -64,72 +56,80 @@
         "high": 885000,
         "low": 834000,
         "close": 843000
+      },
+      {
+        "basDt": "20261110",
+        "fltRt": 4.63,
+        "open": 911000,
+        "high": 918000,
+        "low": 862000,
+        "close": 882000
       }
     ],
     "volumeVs20d": {
-      "avg20": 859408,
-      "ratio": 1.06
+      "avg20": 873269,
+      "ratio": 0.79
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 529,
-      "rows52w": 244
+      "rows": 530,
+      "rows52w": 245
     },
-    "generatedAt": "2026-11-10T08:56:09.596Z"
+    "generatedAt": "2026-11-11T08:36:31.565Z"
   },
   "facts": [
-    "코스피보다 2.29%p 낮았어요.",
-    "거래량은 20일 평균의 1.1배예요.",
-    "시가보다 4,000원 낮게 마감했어요."
+    "코스피보다 0.24%p 높았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가보다 29,000원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "스마트폰 부품사 엇갈린 이익률…LG이노텍 1.5% Vs. 삼성전기 18.4%",
+      "title": "NH아문디운용, ‘HANARO 삼성전기고정AI핵심기판’ ETF 상장",
+      "source": "서울경제",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBkdGQ3cWZxRG1vbkNMd21RNDBaNnI4emltZzZJclFLNE9DWC00QlJsN295WjNYcDhjakduQWFieEhvQms4aExXMVhmTm5uOFlhcEHSAVNBVV95cUxOallDRC05elFfV3ROSGlhOGRBRFBwNnF5eEFXZ0dHcjRKVnZUZjQ3emZDaGdGYVA4RGpsakw3VGJSYUtHOUJ1MWV6eFh5RGhmeVZKaw?oc=5",
+      "publishedAt": "2026-11-10T00:26:24.000Z"
+    },
+    {
+      "title": "NH아문디운용, '삼성전기 주축' 기판 ETF 출시",
+      "source": "머니투데이",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5tRWZldnpWeDQ2UHRjVEhaOXk2UjlJN3BRY3d6b2tBX0I3YXEyR1RSdFZkd2FuQXhGMklobFhFeWpEQms2MWZaaEF4djByZW5naUJONEZ5a3ViRTdfcDd5c3FxUFdQeW9E0gFuQVVfeXFMTmN4N2twT2VVa09LQS1OWGtaSnlVZFcyekJDOFBGWTVteGhYU3RXaW1sVE1Nanh3N0ZtSUtzWlpuUDAxdVF3NDh4bUJXb3dTNzFiaDJSN0QyTE1lRGxsODVmaDNkOVdzNlQtT3UzS1E?oc=5",
+      "publishedAt": "2026-11-10T08:33:06.000Z"
+    },
+    {
+      "title": "NH아문디자산운용 'HANARO 삼성전기고정AI핵심기판 ETF' 상장, 삼성전기 비중 25% 고정",
+      "source": "비즈니스포스트",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9WLUoyRFhHYXBLZlctRy1UbldmZGtORUljWlJpaTJOTG9icm5DN1ZRdDYzVlBISy1wU0U2ZWlMei1aSFBzLWpJcmlXSFdLbll5SnZKX1laTU9fRHhZX3V1WWZwZzR1eXBRSjFheUZFdndFZ0k?oc=5",
+      "publishedAt": "2026-11-10T08:47:04.000Z"
+    },
+    {
+      "title": "특징주, 삼성전기-반도체 기판(FC-BGA/PCB/MLB 등) 테마 상승세에 7.46% ↑",
+      "source": "매일경제 마켓",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBYUkRRdzZPbTF0Ym8wNnhDVDVNaENOWlJiODJwTUw5ZVprUFgzLXl1aHZwZ2JqYXM1UlhDSDIxV3BJMUo5blZrbFlGQlhwbkxpb3c?oc=5",
+      "publishedAt": "2026-11-10T00:48:42.000Z"
+    },
+    {
+      "title": "삼전·하닉 팔고…한 달 새 40% 빠진 삼성전기 담았다 [주식 초고수는 지금]",
+      "source": "서울경제",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9vME53b0o4d0l5bVQ0TDJLODZoYXdPcEFNbkFJMnRpLVJsQnhXU1JoQU1IajM2NkpoTEtOLXFsNW9laGhwMXFRYVp0S0RYOC1yc3fSAVNBVV95cUxQR2cwNElWNlM0ZjNUTERWcmR2bm14UUtKS19xd2J2NWJ3ZlROVDMxSVdiWnlQYmxPbjFuZGUtSWdnQjlGdmtDeUtMMGhzQjExR01DWQ?oc=5",
+      "publishedAt": "2026-11-10T02:53:29.000Z"
+    },
+    {
+      "title": "[박병률의 더-이코노미스트]“필리핀 ‘법인세 감면’법 혜택받은 첫 해외기업은 삼성전기 현지 법인”",
+      "source": "경향신문",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1YcnhFTnhYOWxHd3lqb2twSENpSmlObWtvX05OdU93Vi1QT29Sd0RUQ19QVldvMUdzdkpPUGlwSkpCMVNUTGRBaVhSbkEyVUZsTjJNQS1iUUc5Z9IBX0FVX3lxTE9hdEJscGpWQVU1aXZQMjFBZEhhXzRueS1QS0EzWDF2ak1zMHd3MzU0NkJrUDRLRC1DeTV5b2VqanZSZjRDNi0zZWItNVZTSmlrZmZVdHRBeGxncDBTVzRz?oc=5",
+      "publishedAt": "2026-11-10T11:15:00.000Z"
+    },
+    {
+      "title": "삼성전기 최재열, 인사 거취 주목…전사 영업익 60% 'MLCC 사령관'",
       "source": "톱데일리",
-      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9CRFZicUlGNm1DNUhoOTN2b2h1QTBqRDJEOU9fYVNZN0E0RVl4dTdjVGFzQWNCckRQZjAtLXFNR1BQODhZbW5TbWNGcHdlX3pV?oc=5",
-      "publishedAt": "2026-11-08T23:30:00.000Z"
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9JWFE3bFJxZEYtaEdMcWd1WXpMSHhYYml0YTFwSnFQcGNMS3Y0TjNMRDJPNzdWNV81T21oQnp5SkE5WUFiSnJiMTlQSDhiV01yWVU5N2dSQWRrQjRrb1E1eHJB?oc=5",
+      "publishedAt": "2026-11-10T06:26:00.000Z"
     },
     {
-      "title": "\"한국시리즈 우승 기념 삼성 가전 아닌 주식 세일?\"...개미들 '씁쓸한 농담'",
-      "source": "조세일보",
-      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE04ZEluSHhQa1BvN2Y0TmViZFN0YWMxaUVILThac0pDWDczOXVMemk4MnZ4T0FxYW1sYkhjZk1BNklYT1Fja01SWEdIU3NyaWZBZEwyWXJaMzNSaVhTQ3BN?oc=5",
-      "publishedAt": "2026-11-09T07:10:00.000Z"
-    },
-    {
-      "title": "삼성전기, MLCC 장기계약 비중 50% 눈앞…\"시장 룰 바꿨다\"",
-      "source": "리드경제",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBXRnQzMjRkOUtqbHc0dGRySkJHSk5KQWRkZ195ank5a0s0ekJzLWJBTUNmSmJJb0NRLWtPQmQ2Z0VBZ3N2aTR6Yzl1aC0yS2ZTQ0cxU2pYNTkzcWVPZEtFQ1dnb0NrQ1RpaTJpNWhWQzk?oc=5",
-      "publishedAt": "2026-11-09T00:38:00.000Z"
-    },
-    {
-      "title": "“삼성 우승기념, 48% 파격세일…전기는 63%!” 개미들의 웃픈 풍자",
-      "source": "문화일보",
-      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFB1UnBPMUc4Z2IycGF6R0l0cFhVWERqb3hkYy1lXzFDRFFnRXRjNHVKcHc1NUhfaEN6V2tCV1NZRndSbzVGcHZHQlNkcmpwS040?oc=5",
-      "publishedAt": "2026-11-08T23:41:43.000Z"
-    },
-    {
-      "title": "[전날 애프터마켓] SK하이닉스 9.6% 급락…삼성전기 14.8%↓",
-      "source": "이투데이",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1zbVdsSW9rVnE0OXZkekt2UUZwWkVsUjd6SGNmQlREM3lqV3VjWlRzWWRkcEJNeHp0enhzcGV0Wmx3SW1GUlNuZ0lzMlBVZ2xYWWJRcw?oc=5",
-      "publishedAt": "2026-11-08T23:40:00.000Z"
-    },
-    {
-      "title": "삼성, 감사의 날 행사에 현대차 초청",
-      "source": "디일렉",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE94SU1sTVpJVFF5UVM3OFlqY09xM1V0OWNRWXhVNUx1ZGdWQjM1OGt3Mi1LbFptSzJNVDlCNE1lMEpEajBhdnJkazNZWTlUUXEyN1k5di1VT1BHellBYnJwQkxLaVhBdw?oc=5",
-      "publishedAt": "2026-11-09T09:00:07.000Z"
-    },
-    {
-      "title": "AI 수요 변동 대비…삼성, 장기계약으로 실적 굳히기",
-      "source": "동행미디어 시대",
-      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9iamxRODQySTJocFIwXzJRU3Z4UGlaUXE5bmZxNHRKd3dtRElmdFBmUjRaODNPQnA5MnRkZS1GTlZKdG45Yk9KS1JNZW1xYUxkSGRZN3ZCRlNlVW4wVXc?oc=5",
-      "publishedAt": "2026-11-09T09:42:11.000Z"
-    },
-    {
-      "title": "삼성전기 주가 27,000원 하락 후 장마감",
-      "source": "아시아뉴스통신",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE4xb1FoTjRXUEl1R0ZoN1hCWnhYQWtNV1ZKb1R6ZExhSXUzMlJVbjlZRGhQWXQtbmI1WVdGQWFqUGtTdy1rWUdOQjJRZEpzaW5uYUVCeVVLM19PNWZ1RDVURUI0WEUtYVpYejJXd0ZlLVNMVEl1?oc=5",
-      "publishedAt": "2026-11-09T06:42:24.000Z"
+      "title": "NH아문디, 'HANARO 삼성전기고정AI핵심기판' ETF 상장",
+      "source": "한국경제",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFAxN2JkQUJXdDV1SEllZ2FsSy04X1MwM3A2eDltanp4aXJwLVIybEUxMndPV1hDRm5mVV8yM3ZMNnhTVWgzOGJBcmtJTHB3U08zdnA3dlB6U3hXZw?oc=5",
+      "publishedAt": "2026-11-10T03:44:25.000Z"
     }
   ],
   "dart": [],
@@ -137,9 +137,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5018.85,
-    "vs": -40.84,
-    "fltRt": -0.81
+    "clpr": 5239.13,
+    "vs": 220.28,
+    "fltRt": 4.39
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -148,7 +148,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-10T08:57:54.973Z",
+  "builtAt": "2026-11-11T08:38:16.166Z",
   "archiveDays": 120,
-  "archiveFrom": "20260514"
+  "archiveFrom": "20260515"
 }

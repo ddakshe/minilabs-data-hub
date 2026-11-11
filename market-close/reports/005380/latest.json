@@ -2,37 +2,29 @@
   "code": "005380",
   "name": "현대차",
   "market": "KOSPI",
-  "basDt": "20261109",
+  "basDt": "20261110",
   "price": {
     "code": "005380",
     "name": "현대차",
     "market": "KOSPI",
-    "basDt": "20261109",
-    "close": 271500,
-    "vs": -8000,
-    "fltRt": -2.86,
-    "open": 275000,
-    "high": 279500,
-    "low": 270000,
-    "prevClose": 279500,
-    "volume": 490847,
-    "tradeValue": 134634302250,
+    "basDt": "20261110",
+    "close": 275000,
+    "vs": 3500,
+    "fltRt": 1.29,
+    "open": 280000,
+    "high": 286000,
+    "low": 272000,
+    "prevClose": 271500,
+    "volume": 376264,
+    "tradeValue": 104257581000,
     "week52": {
       "low": 254500,
       "high": 750000,
-      "position": 0.034308779011099896,
-      "days": 244,
-      "from": "20251109"
+      "position": 0.04137235116044399,
+      "days": 245,
+      "from": "20251110"
     },
     "recent5": [
-      {
-        "basDt": "20261103",
-        "fltRt": -3.31,
-        "open": 283000,
-        "high": 288500,
-        "low": 274500,
-        "close": 277500
-      },
       {
         "basDt": "20261104",
         "fltRt": 2.16,
@@ -64,90 +56,78 @@
         "high": 279500,
         "low": 270000,
         "close": 271500
+      },
+      {
+        "basDt": "20261110",
+        "fltRt": 1.29,
+        "open": 280000,
+        "high": 286000,
+        "low": 272000,
+        "close": 275000
       }
     ],
     "volumeVs20d": {
-      "avg20": 610730,
-      "ratio": 0.8
+      "avg20": 601463,
+      "ratio": 0.63
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 529,
-      "rows52w": 244
+      "rows": 530,
+      "rows52w": 245
     },
-    "generatedAt": "2026-11-10T08:56:12.210Z"
+    "generatedAt": "2026-11-11T08:36:34.072Z"
   },
   "facts": [
-    "코스피보다 2.05%p 낮았어요.",
-    "거래량은 20일 평균의 0.8배예요.",
-    "시가보다 3,500원 낮게 마감했어요."
+    "코스피보다 3.1%p 낮았어요.",
+    "거래량은 20일 평균의 0.6배예요.",
+    "시가보다 5,000원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "삼성-현대차, 미래 모빌리티 '원팀' 선언",
-      "source": "전자신문",
-      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBYa3N6WE9TTDFUSHFtb0hXdFlFcGZLU3NNS1ExUUhfWHFKdkhpZDJUdmRNcVY1ak5QdlQxNVhJVElsNHg0NjVneEprM0Y5UQ?oc=5",
-      "publishedAt": "2026-11-09T08:00:00.000Z"
+      "title": "車 넘어 로봇까지…삼성과 현대차가 ‘원팀’ 된 이유 [biz-플러스]",
+      "source": "서울경제",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE53bWlpQVpZZG12R29URDBKeks4bENYb3VfYlRGeDFyNmstd0Z5d0hGS1lVVkczdDRuY0lJMUJ2RUkyRHQ1bk4ydnc1SHVCVmRDZFHSAVNBVV95cUxPdWVuOVcyV3loOXBMc2xuZEpMWENTZVhvX3B0Q0RzVGI3SHQzbVFEQ0VLM013U1ZRTkdYa3Y2Si0zcUVRWmR6UEU3QUJzd2U4VC1mWQ?oc=5",
+      "publishedAt": "2026-11-09T21:30:00.000Z"
     },
     {
-      "title": "“국민 차 맞아?”… 현대차 신형 아반떼, 배기량 올려 ‘세금 폭탄’",
-      "source": "경기신문",
-      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5qeWlzalpVTmhGY21oODQ0a28yTXh0ZGJtQm9ER2VqTVl0bVh0Z3NRVFE1V21XYlNqZHgwS2NDZm5sZjlINmlTeHpvMy1sRnplOThwcXo1NlFBcnJDR1J6NzhR?oc=5",
-      "publishedAt": "2026-11-09T07:24:57.000Z"
+      "title": "위기의 현대차, 미래맡긴 박민우 포티투닷 사장에 83억 황제사택 지원",
+      "source": "인베스트조선",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNN1dQdUtmNC1velU4b09RaVVzUjl4cVJOZVRucFQwa2I2c0F1RjJkU3FzdVpSdGxwN3l6cEFfcG5ESDdUNGx4UnQ0UExkNUhRT21xNWRGSVMydHdGc2g5R0xhRkhzRFFCT2xOaDduWnNGOGtFVDRqdEF0WnNrdWc4UWJuNA?oc=5",
+      "publishedAt": "2026-11-10T05:01:00.000Z"
     },
     {
-      "title": "현대차, 차세대 수소 프로젝트 '코랄' 닻 올렸다",
-      "source": "디일렉",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9pLUxrWXFYaTJ3MzZRazRaVHdUaHgwMGcyUlF0N0s4eHVlbTNvRHFoeTUzVXNtRFoxUF82V1BtY2xQWmxaT1BJYnVQR1UzbjhONTJ2MmZ6VHBndmhmMEdLakktMHJPUQ?oc=5",
-      "publishedAt": "2026-11-09T07:48:30.000Z"
+      "title": "현대차, 사내하청 원청 사용자성 인정한 중노위 판정에 행정소송",
+      "source": "IT조선",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5tWHBmeUdRMVJ1Y0E4cWVYSmtVUkltOXh4Yi1kclF4cEpSYm9IdjVZN3V3UWZ3SDNnajFfcks1am5hUDcwMnNMY1h4TjNWdmJlaGRBUDhfSUFkWTZWMzRRS3JvR1k1QWNSdnBRaGdwV2TSAXRBVV95cUxPOTNERDViOWhtZXhPLU1Kd2pOZzFQZkRZRG9ZS1lWX0Z1ZklDZmtXMmR6UHE0Nk5FOC1xM2xaandYVlE2WXJtSmREcFRfNkU0ZWV6TnhuX0JSMlpfU3pCQVBmWjRhb2t5N19QN1N6SmNwcDRGUg?oc=5",
+      "publishedAt": "2026-11-10T09:55:46.000Z"
     },
     {
-      "title": "현대차그룹 ‘기프트카 플레이온 시즌2’",
-      "source": "문화일보",
-      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1tb3ZwUDU2LXU5UlEyUFNaeG5KeW9jZkNPd2lRSDduc1pJcC03dG9Wb1RFWEFfNWYtMnlvVTQxLXZhaGRhLXU1a3VldlUxMHE4?oc=5",
-      "publishedAt": "2026-11-09T02:46:52.000Z"
+      "title": "현대차, 중노위에 행정소송…하청 ‘사용자성 인정’ 결정에 불복",
+      "source": "서울경제",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5HdDVXSUJUZEJhVVB3OVlESnBMVGZMb2lONTRNdE5vZV9hN3NjWDJncWlnc1NlMFlvOUpuckRHblZlUmJpdFoteVo0OWUxaDlQWnfSAVNBVV95cUxOUjlsQmpYbHJBUEJhYXlJV1cxYUIwRHVxWm9UM3RZdU95RHMtTnVIcUZwS0RfaGJTN3pVVFdRUTRxdUgtUldRdDBFMGlpMlFMc1ZwQQ?oc=5",
+      "publishedAt": "2026-11-10T08:56:12.000Z"
     },
     {
-      "title": "현대차그룹-삼성, ‘원팀’으로 미래 첨단 산업 선점 | 뉴스 | 현대자동차그룹",
-      "source": "Hyundai Motor Group",
-      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQOHV1NDlzckQ2QjNyUFh3UXlFWkROM0EtN2RqRUxsZ0RMZGxlcU1kV1J6Z2VvMTZTZDNtaUhsX09UVzdaS1htclg1QVM3aHdZRUx5RnhuY0FaUlRqZk83Qk1LR0ItSnVjeVpCNFlhR1F4NV9nR19UaExIMTI0anBFZzRkbVN4bWxFcXJUeklNb0RPT1gzUlVZODlLMS0xVzVIT0lSVzRB?oc=5",
-      "publishedAt": "2026-11-09T08:08:00.000Z"
+      "title": "[현대차그룹 피벗③] '글로벌 톱' 위해…'SDV·관세·지배구조' 장벽 넘어야",
+      "source": "뉴스웍스",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9LTUtMMmwtbzZIRmFxSk0yVzNnZHYzVXp2TjB5ZXVmVU15MEZFMDc5LTE4Y21meHdCczk4eXFiQVVBbkZ1aU1CMXhqM0tDSWhXSGNEOHo4aEVlX3gwbGJ2V1ktV0hPeHBxdVhVazNrTdIBc0FVX3lxTE50SkswWWxtMXRDV1ZnSEg3QWFQZmFCTWpEalVuaV96TEwwaHhRQUw1cU1zNzJudEV2bXRYX2pBeDdKTFVINXAzemNPczIwVzMycE0ydjRLaEZXWnBiUFNRR181LWZ0Rm9YNmR6ZHFfNU1ZWFE?oc=5",
+      "publishedAt": "2026-11-10T01:54:38.000Z"
     },
     {
-      "title": "삼성·현대차그룹, 미래 모빌리티·피지컬 AI 선점 위해 ‘원팀’ 구축…반도체·배터리·로봇 기술 결집",
-      "source": "인공지능신문",
-      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBZMGlDWV9ub1hmcV93ZnBNc3NxU2U1YWJROXhadlhIZDNFSldBYWxYXzR0M3VxWlZzRWdDeEdpLUVJbHYzaVczVGFUV1ZNRElYY2FQSjhEREZqZWZSTnRuZkpFODctX2c?oc=5",
-      "publishedAt": "2026-11-09T14:51:39.000Z"
-    },
-    {
-      "title": "협력사 수천개 삼성, 왜 유독 현대차 위해 ‘감사의날’ 행사 열까?",
-      "source": "조선일보",
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNRzN2S3ItMUpmaS1mS3hhS2MxaDREby1ZNmZlb2FCZVlua1FUNWhWTUg2YTZ4WTRka3h4aVNrNGgtNWsyb2N2WXlSZkczUnRSMUJJYWo3elNuamVqbzk5aTdlZEViOEZGcW5WZUI2SHMweFRGeGNQZm12MUhRbVduTTFNTzRoTE9JbGhObWhYQQ?oc=5",
-      "publishedAt": "2026-11-09T04:44:50.000Z"
-    },
-    {
-      "title": "삼성·현대차, 경영진 대규모 교류…미래산업 ’원팀’ 행보",
-      "source": "연합뉴스TV",
-      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5ic0Nwb0hiMEE1b1JGMldLNURNWlFFOTZBcGVHQmRXbUJyY1RlNENnME5DRzcxM1JQbE1mUDRqdTNxM2xJYU1KYk5SWGI0WVlvdXQza2pfamVBTkxqM3dXR0dFN2Y5M00?oc=5",
-      "publishedAt": "2026-11-09T12:00:00.000Z"
+      "title": "미 전기차 수요 회복에도…앞세울 현대차 ‘아이오닉5’뿐",
+      "source": "경향신문",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1rdFJxd2hLWUloeWhyV3FON1NsaE9Jd09xdkVtOHkxcW1UZXNlRE1tX0NRa3RkY3A0QzJSZTRCRHhDLS1NZmhhUW9wMC1rcjBqNHVPQkRSLVRDQdIBX0FVX3lxTE8ycFdwZ2VnMG9FVnk4b0ozM01uSHNPTTk3R3gzQ0dVRFNxYnpVT2VfTUNLUWwyTVBSTzhiaVJCTHBTLVkzdElnZWZzMEhLVjlPSWJjQ0hsZVNxc00xa3Rj?oc=5",
+      "publishedAt": "2026-11-10T11:35:00.000Z"
     }
   ],
-  "dart": [
-    {
-      "title": "임원ㆍ주요주주특정증권등소유상황보고서",
-      "filer": "이승애",
-      "receiptNo": "20261109000357",
-      "date": "20261109",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261109000357"
-    }
-  ],
+  "dart": [],
   "ownership": [],
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5018.85,
-    "vs": -40.84,
-    "fltRt": -0.81
+    "clpr": 5239.13,
+    "vs": 220.28,
+    "fltRt": 4.39
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -156,7 +136,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-10T08:57:54.978Z",
+  "builtAt": "2026-11-11T08:38:16.169Z",
   "archiveDays": 120,
-  "archiveFrom": "20260514"
+  "archiveFrom": "20260515"
 }

@@ -2,37 +2,29 @@
   "code": "028300",
   "name": "HLB",
   "market": "KOSDAQ",
-  "basDt": "20261109",
+  "basDt": "20261110",
   "price": {
     "code": "028300",
     "name": "HLB",
     "market": "KOSDAQ",
-    "basDt": "20261109",
-    "close": 30150,
-    "vs": -1100,
-    "fltRt": -3.52,
-    "open": 30900,
-    "high": 31350,
-    "low": 29800,
-    "prevClose": 31250,
-    "volume": 594926,
-    "tradeValue": 18146284275,
+    "basDt": "20261110",
+    "close": 30250,
+    "vs": 100,
+    "fltRt": 0.33,
+    "open": 30850,
+    "high": 30900,
+    "low": 29600,
+    "prevClose": 30150,
+    "volume": 608152,
+    "tradeValue": 18357720925,
     "week52": {
       "low": 25650,
       "high": 68200,
-      "position": 0.10575793184488837,
-      "days": 244,
-      "from": "20251109"
+      "position": 0.10810810810810811,
+      "days": 245,
+      "from": "20251110"
     },
     "recent5": [
-      {
-        "basDt": "20261103",
-        "fltRt": -2.4,
-        "open": 41150,
-        "high": 41550,
-        "low": 40150,
-        "close": 40700
-      },
       {
         "basDt": "20261104",
         "fltRt": -17.69,
@@ -64,72 +56,80 @@
         "high": 31350,
         "low": 29800,
         "close": 30150
+      },
+      {
+        "basDt": "20261110",
+        "fltRt": 0.33,
+        "open": 30850,
+        "high": 30900,
+        "low": 29600,
+        "close": 30250
       }
     ],
     "volumeVs20d": {
-      "avg20": 681638,
-      "ratio": 0.87
+      "avg20": 663220,
+      "ratio": 0.92
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 529,
-      "rows52w": 244
+      "rows": 530,
+      "rows52w": 245
     },
-    "generatedAt": "2026-11-10T08:56:35.489Z"
+    "generatedAt": "2026-11-11T08:37:05.067Z"
   },
   "facts": [
-    "코스닥보다 2.7%p 낮았어요.",
+    "코스닥보다 4.15%p 낮았어요.",
     "거래량은 20일 평균의 0.9배예요.",
-    "시가보다 750원 낮게 마감했어요."
+    "시가보다 600원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "HLB이노베이션, AI·스마트제조 지원사업 3건 선정 '생산공정 고도화'",
-      "source": "약사공론",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE00dHZCdXpJbEtUdE91SEJYajdhUFo0eHZySmpmbFpBcVlSZDQ1OG5ieURjbERZU1BXcUFLaHJpTlVqU2xsOGVsTDNoQjB0VUNNS0g0V29FbXN5WFFFTFFyejFTOV9VTXRGMzUtSA?oc=5",
-      "publishedAt": "2026-11-09T14:22:15.000Z"
+      "title": "\"FDA 허가가 끝 아니다\"…HLB, 신약개발 '허브&스포크' 모델 추진",
+      "source": "뉴스1",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE03ZFZwRWVPNGtBd1E0RFJCRGZfekFNTTluSjRLU0piRnR1c1pHMVBHQ0hJLTlaSXRJQmxnSTN6UUxmeEsxVjN3TWVCc1lsRnZBa1ZHMjlaMV92Zzl0Y1Q1eg?oc=5",
+      "publishedAt": "2026-11-10T03:07:22.000Z"
     },
     {
-      "title": "HLB제약, 영업시스템 개편···지급수수료↑·판관비율과 직원 숫자↓",
-      "source": "시사저널e",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5QajhxdHA2Z1J3Z2swcWYzb3hTOGZvdmVjQXFpcnVOX0Jqak5CSVliRFZGNHFUWEhyaUFmdHBzYUZGTnN5SXpSMkcyZlAwMkhfQlNPZFBuWm5kM3ZsZXl6SXVsX1RqUjloVkNNQlZXSzdhZ9IBdkFVX3lxTE5YcmRaaFhWbV9HdWNKc05HOXhfdHVPM0FEUktHYnF4QTFSTHd2TFhGSUFLYmxQNDdCQUU3NHowQjJ0Mk5OQ1U3dWh4VjA2aS1VRC0xZ05Ba3d1Q3BUdjEwdGJHdFBBTUV3Wm1oNW8zeHU1cEdtNmc?oc=5",
-      "publishedAt": "2026-11-09T07:43:07.000Z"
-    },
-    {
-      "title": "HLB이노베이션, AI·스마트제조 지원사업 3건 선정…스마트 제조체계 구축",
-      "source": "www.ebn.co.kr",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE4yMzFvQ1hpT0FZMjZvUkJYU1BFNTdKb0hWU2VCVDZWYndmMG1CNDVmRWMxaUZ4RDFUTnlxVk5TWDNWZFBLZnQyd0RUc05waUs4eUpNa1hxbkNPbGYtOVByLURzd0I4Yjl2?oc=5",
-      "publishedAt": "2026-11-09T02:17:44.000Z"
-    },
-    {
-      "title": "HLB이노베이션, 정부·지자체 지원사업 3건 선정...\"스마트 제조체계 구축\"",
-      "source": "팍스경제TV",
-      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1Qc3docy1vNWlTMF9LaG02WTJUaTlNRDl5S2FIQXBqVG9tZWZZbjh2aVdzTHhLak1tc3NEaThJcmRsblo3a3c1SXZaSUxLM0VUUDZmc2FIV0ZIOWNNU0JNVnIxY1dhMms?oc=5",
-      "publishedAt": "2026-11-09T14:38:39.000Z"
-    },
-    {
-      "title": "“반도체 공정에 AI 얹는다”… HLB이노베이션, 36억 스마트제조 사업",
-      "source": "지이코노미",
-      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE4xdTNvU1gwdWR0QlFOV0Y1U3NCc2ZteWpqc0NUOERvNUlaZUhkYjFXcXl4MTRBTWdfOWR3RnRCd0tpdG5JZ2FJTGVwRThtc2gxU1liNTU0QTJBZWhyLU5ndWxRdUIzWFk?oc=5",
-      "publishedAt": "2026-11-09T12:11:21.000Z"
-    },
-    {
-      "title": "HLB이노베이션, AI·스마트제조 지원사업 선정",
+      "title": "HLB펩 원료 적용 완제의약품 멕시코 품목허가",
       "source": "아시아경제",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE8xZkU4RTRhckU1WDJpX1VicHZ3Q0UzT3dOTHVoQnphUHJZVGVmX2ZYZHN1dUNMVGpsOHItaWt4YmVzcDVDdjcwNlQ5TGdCbURibGpGb0dZZkVXbTE0OElBUw?oc=5",
-      "publishedAt": "2026-11-08T23:57:33.000Z"
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9ZdllRRUtUcnB2c1E1LVh2UE9VYnFDQ1hULWhEY3hXTVRJZmF6bkxudTNXWXRhTzFndWhnVEF6UElmWmZyMXVFaXFQRlNDbmExVVFjR2cyYTV6Y2JwM0RqNQ?oc=5",
+      "publishedAt": "2026-11-10T05:29:07.000Z"
     },
     {
-      "title": "HLB이노베이션, AI·스마트제조 지원사업 3건 선정…스마트 제조체계 구축 By EBN",
-      "source": "Investing.com 한국어",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9BSWRNWEVOSDJLSDJQVFRzZ0t0RnMwMHRTTmVwT3A3a3VFazN0MF9yZzc3YVRwQzlGQTd2SWU3X1dtc1c2Rm8tcmVreHpWZms2QmJsTEhrZi0xeU9YdGJOdWFrR0dWV08zS0ZHYnZoN2w?oc=5",
-      "publishedAt": "2026-11-09T04:37:00.000Z"
-    },
-    {
-      "title": "HLB이노베이션, AI·스마트제조 지원사업 3건 선정",
+      "title": "HLB펩, 류프로렐린 원료의약품 적용 완제의약품 멕시코 품목허가 획득",
       "source": "뉴스핌",
-      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE85V3R1ckFqcEJYSVhsZlpLMDlNZGpRTUNnV1B5RlRrX3JHWUdnS3NzZE9TV0xyU1B5YjIzQU40WWd4WmhDY3ZKSjdoUEhSdGgzSkFfSFJqZWIyTVZX?oc=5",
-      "publishedAt": "2026-11-08T23:53:00.000Z"
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBtQ3dCMlNkM1ZxQU1iLW45ZEV3QU12bUwxQnNrNjgxNjJlZlg2bklFWmtmcGNKOGJDdXJTT1NBaFoxcHRndVJnWHY2a3RFVFhRM2JBQ0dJT05MQXhH?oc=5",
+      "publishedAt": "2026-11-10T05:26:00.000Z"
+    },
+    {
+      "title": "한국에서 받은 허가, 멕시코에서도 '유효'…HLB펩 원료 첫 해외 허가",
+      "source": "파이낸셜뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1yLXUtWV9vczZOS2dZaFhTX1dwZ2NZQ21KY3RBck5nT0VxbHg2NXJpMzRwYjBHS1NIcml0ZnNUeFE1cG5Ca0lZX0JBeHBZQ1RONU5XbEtmUWJyQQ?oc=5",
+      "publishedAt": "2026-11-10T06:54:28.000Z"
+    },
+    {
+      "title": "HLB Pep Reports Mexican Approval of Leuprolide Drug Made With Its API",
+      "source": "한국면세뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBQRjREUk9qQVZEZEktSTl6MC1JVVZ5YnQ5UmtsSEh2NzBIQXdQQ3FOY1pRenMweWVhZFU1RjZDdVZQY012N0pld052UEo4Z2JaUDFyNVhIMjlPbVpBRjAxWGdIQUUyaUYydnc?oc=5",
+      "publishedAt": "2026-11-10T08:17:56.000Z"
+    },
+    {
+      "title": "HLB펩 \"류프로렐린 원료 의약품, 해외서 첫 허가\"",
+      "source": "뉴시스",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA1RlVRcnduSUhodTdIRTFRWkFvcE51TnJzMGotSzN6MWN3M3AteHZIRktrWHg0ZUcyQ0hEQ2xHbnlfeWdQR3N3WGp6Vm5UYlNmTjdkd1RhbTBHb1gwVXVaZdIBeEFVX3lxTE5Tcnh0anFxMm9SS2FnRFVoeFFqZTRxR3R0UzFjWXZxUVZoTUpMWUlFdTMwN0VjWlczcDJkX2U2NmVwdGxpZzBYUHpvTVFidlhsZmNUbVpUVnU4TjIzeUY1SkVQa0ZaZkNCTDJheUFhb3BZTWU5eXM5cw?oc=5",
+      "publishedAt": "2026-11-10T07:10:36.000Z"
+    },
+    {
+      "title": "HLB펩 원료 적용 의약품, 멕시코 품목허가",
+      "source": "서울경제TV",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBqMzJXQlJKNjR6LW5sd3g3Q2x1ZllZbjBQWmk4bFl6alVqaXF6SHUzdDJZN3J3Vi13MTNYT1NaRVRBMk11azhaVTNaNzZua3dPVWl4SDZWeVJMX0huNWVnVG01bnM?oc=5",
+      "publishedAt": "2026-11-10T08:01:51.000Z"
+    },
+    {
+      "title": "HLB펩 원료 적용한 완제의약품, 멕시코 품목허가 획득",
+      "source": "금융신문",
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5vTG1rQ29zNTJFZ29xMEVBRVpxekhKYjBwU1NZQ19DQmdsd3JpZk1wNUpLYlR3V0ZwMFNHX2RnOUcwOHBNTGRJdUpBRTFuN0dVSFVZOUo4RXRMMFhyblF0Y092YnVoMTJpcG9LTUhNZ1pfemFLOU9WY3FpVGo?oc=5",
+      "publishedAt": "2026-11-10T06:54:47.000Z"
     }
   ],
   "dart": [],
@@ -156,9 +156,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 638.97,
-    "vs": -5.3,
-    "fltRt": -0.82
+    "clpr": 667.61,
+    "vs": 28.64,
+    "fltRt": 4.48
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -167,7 +167,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-10T08:57:55.028Z",
+  "builtAt": "2026-11-11T08:38:16.222Z",
   "archiveDays": 120,
-  "archiveFrom": "20260514"
+  "archiveFrom": "20260515"
 }

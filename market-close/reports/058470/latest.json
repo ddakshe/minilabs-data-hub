@@ -2,37 +2,29 @@
   "code": "058470",
   "name": "리노공업",
   "market": "KOSDAQ",
-  "basDt": "20261109",
+  "basDt": "20261110",
   "price": {
     "code": "058470",
     "name": "리노공업",
     "market": "KOSDAQ",
-    "basDt": "20261109",
-    "close": 46450,
-    "vs": -150,
-    "fltRt": -0.32,
-    "open": 45700,
-    "high": 48350,
-    "low": 45550,
-    "prevClose": 46600,
-    "volume": 477535,
-    "tradeValue": 22389227100,
+    "basDt": "20261110",
+    "close": 48600,
+    "vs": 2150,
+    "fltRt": 4.63,
+    "open": 48750,
+    "high": 50200,
+    "low": 47400,
+    "prevClose": 46450,
+    "volume": 570574,
+    "tradeValue": 27795463375,
     "week52": {
       "low": 46450,
       "high": 127000,
-      "position": 0,
-      "days": 244,
-      "from": "20251109"
+      "position": 0.02669149596523898,
+      "days": 245,
+      "from": "20251110"
     },
     "recent5": [
-      {
-        "basDt": "20261103",
-        "fltRt": -6.14,
-        "open": 55500,
-        "high": 56100,
-        "low": 53200,
-        "close": 53500
-      },
       {
         "basDt": "20261104",
         "fltRt": 3.93,
@@ -64,23 +56,31 @@
         "high": 48350,
         "low": 45550,
         "close": 46450
+      },
+      {
+        "basDt": "20261110",
+        "fltRt": 4.63,
+        "open": 48750,
+        "high": 50200,
+        "low": 47400,
+        "close": 48600
       }
     ],
     "volumeVs20d": {
-      "avg20": 788813,
-      "ratio": 0.61
+      "avg20": 712392,
+      "ratio": 0.8
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 529,
-      "rows52w": 244
+      "rows": 530,
+      "rows52w": 245
     },
-    "generatedAt": "2026-11-10T08:56:45.786Z"
+    "generatedAt": "2026-11-11T08:37:07.629Z"
   },
   "facts": [
-    "코스닥보다 0.5%p 높았어요.",
-    "거래량은 20일 평균의 0.6배예요.",
-    "시가보다 750원 높게 마감했어요."
+    "코스닥보다 0.15%p 높았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가보다 150원 낮게 마감했어요."
   ],
   "news": [
     {
@@ -132,7 +132,15 @@
       "publishedAt": "2026-07-28T07:00:00.000Z"
     }
   ],
-  "dart": [],
+  "dart": [
+    {
+      "title": "[기재정정]신규시설투자등              ",
+      "filer": "리노공업",
+      "receiptNo": "20261110900420",
+      "date": "20261110",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261110900420"
+    }
+  ],
   "ownership": [
     {
       "kind": "major",
@@ -156,9 +164,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 638.97,
-    "vs": -5.3,
-    "fltRt": -0.82
+    "clpr": 667.61,
+    "vs": 28.64,
+    "fltRt": 4.48
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -167,7 +175,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-10T08:57:55.050Z",
+  "builtAt": "2026-11-11T08:38:16.226Z",
   "archiveDays": 120,
-  "archiveFrom": "20260514"
+  "archiveFrom": "20260515"
 }
