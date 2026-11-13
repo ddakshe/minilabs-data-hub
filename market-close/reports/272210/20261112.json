@@ -1,0 +1,145 @@
+{
+  "code": "272210",
+  "name": "한화시스템",
+  "market": "KOSPI",
+  "basDt": "20261112",
+  "price": {
+    "code": "272210",
+    "name": "한화시스템",
+    "market": "KOSPI",
+    "basDt": "20261112",
+    "close": 55400,
+    "vs": -1300,
+    "fltRt": -2.29,
+    "open": 55900,
+    "high": 56600,
+    "low": 53900,
+    "prevClose": 56700,
+    "volume": 596839,
+    "tradeValue": 32927498400,
+    "week52": {
+      "low": 45350,
+      "high": 162700,
+      "position": 0.08564124414145718,
+      "days": 245,
+      "from": "20251112"
+    },
+    "recent5": [
+      {
+        "basDt": "20261106",
+        "fltRt": -6.68,
+        "open": 49200,
+        "high": 51500,
+        "low": 47800,
+        "close": 50300
+      },
+      {
+        "basDt": "20261109",
+        "fltRt": -0.6,
+        "open": 48700,
+        "high": 51700,
+        "low": 48650,
+        "close": 50000
+      },
+      {
+        "basDt": "20261110",
+        "fltRt": 9,
+        "open": 51600,
+        "high": 54800,
+        "low": 51400,
+        "close": 54500
+      },
+      {
+        "basDt": "20261111",
+        "fltRt": 4.04,
+        "open": 54000,
+        "high": 57000,
+        "low": 54000,
+        "close": 56700
+      },
+      {
+        "basDt": "20261112",
+        "fltRt": -2.29,
+        "open": 55900,
+        "high": 56600,
+        "low": 53900,
+        "close": 55400
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 879488,
+      "ratio": 0.68
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 530,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-11-13T08:53:55.779Z"
+  },
+  "facts": [
+    "코스피보다 1.68%p 낮았어요.",
+    "거래량은 20일 평균의 0.7배예요.",
+    "시가보다 500원 낮게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "한화 방산3사, 동반성장 첫 '최우수'⋯삼성전자는 15년 연속 최고등급",
+      "source": "엠투데이",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE0yd083dVJGTzZ5NWlXZnI2SGFURVdRYzFTbVBDNk8yWF9QZkFUejIwTGpZZWxqZ29Nb1hLUkktWXZ6dDlGWHV2T0NFTUgtV3REQ1I4b3FINmx6RjFaYjZpOVN5R25CMWFyMkplb1Nzcw?oc=5",
+      "publishedAt": "2026-11-12T04:14:21.000Z"
+    },
+    {
+      "title": "\"中 제재 2개월 시한부 유예\"…한화오션, '만성 적자' 필리조선소 4.9조 보증 \"뇌관\"",
+      "source": "청년일보",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE45NmctbzBzUU42RVU2TGhZNm1NeGhycDN2b2ZmUENsbEhrV1NBY3EwbnFuN2NRdXZyMmI5VHc4RkJZNXQ5OUtlR2hVUUh4TmJvNVdmOG9Mbi1PUmlVdWVJcjl6ZFFCUVU?oc=5",
+      "publishedAt": "2026-11-11T23:00:06.000Z"
+    }
+  ],
+  "dart": [
+    {
+      "title": "분기보고서 (2026.09)",
+      "filer": "한화시스템",
+      "receiptNo": "20261112000663",
+      "date": "20261112",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261112000663"
+    }
+  ],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20261002",
+      "holder": "국민연금공단",
+      "ratio": 6.17,
+      "ratioChange": -1.02,
+      "reason": "단순추가취득/처분",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261002000420"
+    },
+    {
+      "kind": "major",
+      "date": "20260918",
+      "holder": "한화에어로스페이스",
+      "ratio": 59.53,
+      "ratioChange": -0.01,
+      "reason": "특별관계자 변동에 따른 보유주식등의 내역 변동 및 · 보유주식등에 관한 계약 변경보고",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260918000462"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 5342.73,
+    "vs": -32.63,
+    "fltRt": -0.61
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-11-13T08:55:03.451Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260519"
+}

@@ -2,45 +2,29 @@
   "code": "000250",
   "name": "삼천당제약",
   "market": "KOSDAQ",
-  "basDt": "20261110",
+  "basDt": "20261112",
   "price": {
     "code": "000250",
     "name": "삼천당제약",
     "market": "KOSDAQ",
-    "basDt": "20261110",
-    "close": 179200,
-    "vs": 9500,
-    "fltRt": 5.6,
-    "open": 175100,
-    "high": 182900,
-    "low": 173100,
-    "prevClose": 169700,
-    "volume": 88243,
-    "tradeValue": 15728141200,
+    "basDt": "20261112",
+    "close": 182200,
+    "vs": -4000,
+    "fltRt": -2.15,
+    "open": 187000,
+    "high": 192000,
+    "low": 181200,
+    "prevClose": 186200,
+    "volume": 86004,
+    "tradeValue": 15801145100,
     "week52": {
       "low": 126500,
       "high": 1184000,
-      "position": 0.04983451536643026,
+      "position": 0.052671394799054375,
       "days": 245,
-      "from": "20251110"
+      "from": "20251112"
     },
     "recent5": [
-      {
-        "basDt": "20261104",
-        "fltRt": 2.57,
-        "open": 173200,
-        "high": 176900,
-        "low": 166100,
-        "close": 175800
-      },
-      {
-        "basDt": "20261105",
-        "fltRt": 0.46,
-        "open": 180100,
-        "high": 188200,
-        "low": 171400,
-        "close": 176600
-      },
       {
         "basDt": "20261106",
         "fltRt": -3.68,
@@ -64,30 +48,64 @@
         "high": 182900,
         "low": 173100,
         "close": 179200
+      },
+      {
+        "basDt": "20261111",
+        "fltRt": 3.91,
+        "open": 176400,
+        "high": 190500,
+        "low": 176400,
+        "close": 186200
+      },
+      {
+        "basDt": "20261112",
+        "fltRt": -2.15,
+        "open": 187000,
+        "high": 192000,
+        "low": 181200,
+        "close": 182200
       }
     ],
     "volumeVs20d": {
-      "avg20": 99802,
-      "ratio": 0.88
+      "avg20": 96037,
+      "ratio": 0.9
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
       "rows": 530,
       "rows52w": 245
     },
-    "generatedAt": "2026-11-11T08:36:59.857Z"
+    "generatedAt": "2026-11-13T08:53:42.659Z"
   },
   "facts": [
-    "코스닥보다 1.12%p 높았어요.",
+    "코스닥보다 0.93%p 낮았어요.",
     "거래량은 20일 평균의 0.9배예요.",
-    "시가보다 4,100원 높게 마감했어요."
+    "시가보다 4,800원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "적정가치 분석으로 제약주 47% 급락 피한 투자자들",
-      "source": "Investing.com 한국어",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9FVm5feVZydkRCY2o0TzFyVGF1QzB5dm5xUjJ0LWZWakJJbmxCckY2aEVEZTg4ei1MVUNvdDNNRXN3TndiMExWRTl0M0g0SWNrQndvZEdNbTl5V050amRqbzVab19vWVNOdE5iSk9TLWFHM3duUXc?oc=5",
-      "publishedAt": "2026-11-10T11:42:00.000Z"
+      "title": "'53억 승부수' 삼천당제약, 日 약가 등재 … 셀트리온과 맞대결",
+      "source": "뉴데일리",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5GMVl1dkF2eUVnUElLUkxJaFJiRktwTWo3MGpZYnlJb1RnT0RGN1Vmc055ZGp5NjNKX2xDY2JCRTFOdm10OVlQQVNVODdyd29BUHVERmdHdVZaZWw0NVJPZHFDRG1Vc0dsT1FGZzViQ3UyUnR1aTAwTXY2ONIBgAFBVV95cUxNc2tXeUg4WE1xUTdqY2FZSnAyaUJJSF9rZFA0TElObmc1UWRsU2ZTQXQ5a1hwaWNMTjYwanJrSUJ4MHAtOEd4VUYtZ2sxRjh0ZVFlLXYxZHh1ZE4wc3BrV3lfR1JEY0Q5MTJKQ3JCZ1k1S0Y4NFlXX2FDQlJPbDdNdg?oc=5",
+      "publishedAt": "2026-11-12T07:32:00.000Z"
+    },
+    {
+      "title": "제약바이오 ESG 성적표 온도차… 중소 제약업계 무더기 ‘낙제점’",
+      "source": "매일일보",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5aSE00NEtaMmZFM3p2cUtqNzc5a0xDakFMazZQQkNtRGtXeG5ZVUdUTGNCU05sRndEYmRlam1ScGxSTFNQN3RtRGlqa3hBWHdrQmhsSHBMOHljSkd1aDJzVFdLTEI?oc=5",
+      "publishedAt": "2026-11-12T03:00:00.000Z"
+    },
+    {
+      "title": "ESG 저평가, 제일·동화·현대약품 `C`‥삼천당·이연·일양·일성 `D`",
+      "source": "뉴스맥",
+      "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTFA0LXZjSjZrSHpOMWFmQ1VqN2YzY0lFTWJKZ3l0SnFMYm5rYzhmRFQ4NVZSbFp4dTFNdlNfUm9fUEcxY1RU?oc=5",
+      "publishedAt": "2026-11-11T22:11:00.000Z"
+    },
+    {
+      "title": "삼천당제약 0.38% 강보합…주식시장 변동성 확대 속 주가 향방 촉각",
+      "source": "CBC뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBDcUtqY0JEZjF6NThTZnFBT2NpSVBkQXdEdDJvT3k0VElxZDFyRmdxVVZnMlQ4b0xaOFR6TVpVVmkzNjJSa3FnanIyN3lmLU1kOEt3ZS12R2RndjZob0lubzJ0ZnV4UGR5?oc=5",
+      "publishedAt": "2026-11-12T00:34:21.000Z"
     }
   ],
   "dart": [],
@@ -114,9 +132,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 667.61,
-    "vs": 28.64,
-    "fltRt": 4.48
+    "clpr": 696.53,
+    "vs": -8.57,
+    "fltRt": -1.22
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -125,7 +143,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-11T08:38:16.215Z",
+  "builtAt": "2026-11-13T08:55:03.407Z",
   "archiveDays": 120,
-  "archiveFrom": "20260515"
+  "archiveFrom": "20260519"
 }

@@ -1,0 +1,131 @@
+{
+  "code": "058470",
+  "name": "리노공업",
+  "market": "KOSDAQ",
+  "basDt": "20261112",
+  "price": {
+    "code": "058470",
+    "name": "리노공업",
+    "market": "KOSDAQ",
+    "basDt": "20261112",
+    "close": 52500,
+    "vs": 500,
+    "fltRt": 0.96,
+    "open": 52100,
+    "high": 53800,
+    "low": 51300,
+    "prevClose": 52000,
+    "volume": 573145,
+    "tradeValue": 30029359900,
+    "week52": {
+      "low": 46450,
+      "high": 127000,
+      "position": 0.07510862818125388,
+      "days": 245,
+      "from": "20251112"
+    },
+    "recent5": [
+      {
+        "basDt": "20261106",
+        "fltRt": -7.36,
+        "open": 46550,
+        "high": 48150,
+        "low": 45150,
+        "close": 46600
+      },
+      {
+        "basDt": "20261109",
+        "fltRt": -0.32,
+        "open": 45700,
+        "high": 48350,
+        "low": 45550,
+        "close": 46450
+      },
+      {
+        "basDt": "20261110",
+        "fltRt": 4.63,
+        "open": 48750,
+        "high": 50200,
+        "low": 47400,
+        "close": 48600
+      },
+      {
+        "basDt": "20261111",
+        "fltRt": 7,
+        "open": 48200,
+        "high": 52100,
+        "low": 48050,
+        "close": 52000
+      },
+      {
+        "basDt": "20261112",
+        "fltRt": 0.96,
+        "open": 52100,
+        "high": 53800,
+        "low": 51300,
+        "close": 52500
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 656067,
+      "ratio": 0.87
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 530,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-11-13T08:53:45.206Z"
+  },
+  "facts": [
+    "코스닥보다 2.18%p 높았어요.",
+    "거래량은 20일 평균의 0.9배예요.",
+    "시가보다 400원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "리노공업 신축공장 준공 예정일 20일 연기",
+      "source": "비건뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBxZjk4b3JqQ09VLVdWX1kwQzI4OGh2SGZmQXhRc3hGYldCNXdCTkVMMWV4Y2U4eGx4WVkzR3ItSUxqbW5zVGhTWmpRb1FoMjNQWHp4V3Z3MWV2cFVFX1RpaEYtUHplQQ?oc=5",
+      "publishedAt": "2026-11-12T14:41:03.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20261007",
+      "holder": "삼성자산운용",
+      "ratio": 8.64,
+      "ratioChange": 2.22,
+      "reason": "매매로 인한 변동보고의무 발생(삼성액티브자산운용의 위탁운용분 포함)",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261007000297"
+    },
+    {
+      "kind": "major",
+      "date": "20261001",
+      "holder": "미래에셋자산운용",
+      "ratio": 6.95,
+      "ratioChange": 1.04,
+      "reason": "지분율 변동",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261001000503"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 696.53,
+    "vs": -8.57,
+    "fltRt": -1.22
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-11-13T08:55:03.417Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260519"
+}

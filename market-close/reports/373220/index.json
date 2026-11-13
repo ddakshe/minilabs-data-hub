@@ -3,10 +3,27 @@
   "name": "LG에너지솔루션",
   "market": "KOSPI",
   "retainDays": 120,
-  "firstBasDt": "20260515",
-  "lastBasDt": "20261110",
+  "firstBasDt": "20260519",
+  "lastBasDt": "20261112",
   "count": 120,
   "days": [
+    {
+      "basDt": "20261112",
+      "close": 329500,
+      "fltRt": -1.79,
+      "headline": "코스피보다 1.18%p 낮았어요.",
+      "newsCount": 5,
+      "dartCount": 0
+    },
+    {
+      "basDt": "20261111",
+      "close": 335500,
+      "fltRt": 1.51,
+      "headline": "코스피보다 1.09%p 낮았어요.",
+      "newsCount": 0,
+      "dartCount": 0,
+      "priceOnly": true
+    },
     {
       "basDt": "20261110",
       "close": 330500,
@@ -1023,25 +1040,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260518",
-      "close": 408000,
-      "fltRt": -2.16,
-      "headline": "시가 414,500원보다 6,500원 낮게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
-    },
-    {
-      "basDt": "20260515",
-      "close": 417000,
-      "fltRt": -5.66,
-      "headline": "시가 450,000원보다 33,000원 낮게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-11-11T08:38:16.158Z"
+  "updatedAt": "2026-11-13T08:55:03.272Z"
 }

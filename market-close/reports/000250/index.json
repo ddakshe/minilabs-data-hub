@@ -3,10 +3,27 @@
   "name": "삼천당제약",
   "market": "KOSDAQ",
   "retainDays": 120,
-  "firstBasDt": "20260515",
-  "lastBasDt": "20261110",
+  "firstBasDt": "20260519",
+  "lastBasDt": "20261112",
   "count": 120,
   "days": [
+    {
+      "basDt": "20261112",
+      "close": 182200,
+      "fltRt": -2.15,
+      "headline": "코스닥보다 0.93%p 낮았어요.",
+      "newsCount": 4,
+      "dartCount": 0
+    },
+    {
+      "basDt": "20261111",
+      "close": 186200,
+      "fltRt": 3.91,
+      "headline": "코스닥보다 1.71%p 낮았어요.",
+      "newsCount": 0,
+      "dartCount": 0,
+      "priceOnly": true
+    },
     {
       "basDt": "20261110",
       "close": 179200,
@@ -1058,25 +1075,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260518",
-      "close": 373500,
-      "fltRt": -3.74,
-      "headline": "코스닥보다 2.08%p 낮았어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
-    },
-    {
-      "basDt": "20260515",
-      "close": 388000,
-      "fltRt": -4.2,
-      "headline": "코스닥보다 0.94%p 높았어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-11-11T08:38:16.216Z"
+  "updatedAt": "2026-11-13T08:55:03.413Z"
 }

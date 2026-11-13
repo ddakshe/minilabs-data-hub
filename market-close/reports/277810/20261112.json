@@ -1,0 +1,130 @@
+{
+  "code": "277810",
+  "name": "레인보우로보틱스",
+  "market": "KOSDAQ",
+  "basDt": "20261112",
+  "price": {
+    "code": "277810",
+    "name": "레인보우로보틱스",
+    "market": "KOSDAQ",
+    "basDt": "20261112",
+    "close": 345500,
+    "vs": -2500,
+    "fltRt": -0.72,
+    "open": 348000,
+    "high": 363000,
+    "low": 342500,
+    "prevClose": 348000,
+    "volume": 75549,
+    "tradeValue": 26529584500,
+    "week52": {
+      "low": 302500,
+      "high": 880000,
+      "position": 0.07445887445887446,
+      "days": 245,
+      "from": "20251112"
+    },
+    "recent5": [
+      {
+        "basDt": "20261106",
+        "fltRt": -4.04,
+        "open": 301000,
+        "high": 337000,
+        "low": 300500,
+        "close": 321000
+      },
+      {
+        "basDt": "20261109",
+        "fltRt": -5.76,
+        "open": 311500,
+        "high": 319000,
+        "low": 301500,
+        "close": 302500
+      },
+      {
+        "basDt": "20261110",
+        "fltRt": 7.44,
+        "open": 315000,
+        "high": 326500,
+        "low": 306500,
+        "close": 325000
+      },
+      {
+        "basDt": "20261111",
+        "fltRt": 7.08,
+        "open": 330000,
+        "high": 352000,
+        "low": 325000,
+        "close": 348000
+      },
+      {
+        "basDt": "20261112",
+        "fltRt": -0.72,
+        "open": 348000,
+        "high": 363000,
+        "low": 342500,
+        "close": 345500
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 69301,
+      "ratio": 1.09
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 530,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-11-13T08:53:34.969Z"
+  },
+  "facts": [
+    "코스닥보다 0.5%p 높았어요.",
+    "거래량은 20일 평균의 1.1배예요.",
+    "시가보다 2,500원 낮게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "레인보우로보틱스, 두 발 대신 바퀴 택했다",
+      "source": "지디넷코리아",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE81cmFxRl9IS0tmekYyak1XNW5MRWI0S1ZEdmZoT082bWFmNmItS3hfRk83Z3N2QUF2VFVaVlliSUJ2dElNWUpuejBtYkVtTmRFSHkxV3Z3?oc=5",
+      "publishedAt": "2026-11-12T05:08:20.000Z"
+    },
+    {
+      "title": "충남교육청, 레인보우로보틱스와 미래 로봇인재 양성 협력",
+      "source": "교육연합신문",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1lSGkzeEtBV0lSSXd0UDZ5eFRoMHBsbWhETTRDc3F6dTAtSXlzek5DTzFKYmlFZ1AxampUMWhWTXdoSHlQVVFpaWNGUktWZGNLcW1rZl83eFlfZTlw?oc=5",
+      "publishedAt": "2026-11-12T11:45:00.000Z"
+    },
+    {
+      "title": "레인보우로보틱스 주가 상승 중",
+      "source": "아시아뉴스통신",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5udFJWeVk1WVozQlRqV3NnNDctbkQ2OFlrLUg0TC1FQzZpNktRX1lpRTg1bHVXQWJKai1Jb3BnWnktdl9feEtYTU9Tbzk4TGpQMnlIR21USUdNLTJ4OENrUThKa2NaaFBIUUcyM2VPdzkxZDdu?oc=5",
+      "publishedAt": "2026-11-12T00:27:38.000Z"
+    },
+    {
+      "title": "로봇 관련주 희비 엇갈려…휴림로봇·레인보우로보틱스 상승, 두산로보틱스·유진로봇 하락",
+      "source": "CBC뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1SMUVDc1pVVWNCbU1fMXl5LTBnTVNnU1dwdHVDR2pCOHBxelVOcUZXdEZCNFNkVFlYMFNEaUd5TzBvTWszckVZVmRkZEloM1FrRXAtd0t2UzBqNUtZc2NUTExaMTFGY0s3?oc=5",
+      "publishedAt": "2026-11-12T00:58:15.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 696.53,
+    "vs": -8.57,
+    "fltRt": -1.22
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-11-13T08:55:03.385Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260519"
+}

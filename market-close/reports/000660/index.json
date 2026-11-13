@@ -3,10 +3,27 @@
   "name": "SK하이닉스",
   "market": "KOSPI",
   "retainDays": 120,
-  "firstBasDt": "20260515",
-  "lastBasDt": "20261110",
+  "firstBasDt": "20260519",
+  "lastBasDt": "20261112",
   "count": 120,
   "days": [
+    {
+      "basDt": "20261112",
+      "close": 1254000,
+      "fltRt": -1.8,
+      "headline": "코스피보다 1.19%p 낮았어요.",
+      "newsCount": 8,
+      "dartCount": 0
+    },
+    {
+      "basDt": "20261111",
+      "close": 1277000,
+      "fltRt": 5.36,
+      "headline": "코스피보다 2.76%p 높았어요.",
+      "newsCount": 0,
+      "dartCount": 0,
+      "priceOnly": true
+    },
     {
       "basDt": "20261110",
       "close": 1212000,
@@ -1025,25 +1042,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260518",
-      "close": 1840000,
-      "fltRt": 1.15,
-      "headline": "시가 1,780,000원보다 60,000원 높게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
-    },
-    {
-      "basDt": "20260515",
-      "close": 1819000,
-      "fltRt": -7.66,
-      "headline": "시가 1,950,000원보다 131,000원 낮게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-11-11T08:38:16.147Z"
+  "updatedAt": "2026-11-13T08:55:03.258Z"
 }

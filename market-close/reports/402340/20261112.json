@@ -1,0 +1,112 @@
+{
+  "code": "402340",
+  "name": "SK스퀘어",
+  "market": "KOSPI",
+  "basDt": "20261112",
+  "price": {
+    "code": "402340",
+    "name": "SK스퀘어",
+    "market": "KOSPI",
+    "basDt": "20261112",
+    "close": 791000,
+    "vs": -5000,
+    "fltRt": -0.63,
+    "open": 819000,
+    "high": 828000,
+    "low": 775000,
+    "prevClose": 796000,
+    "volume": 890250,
+    "tradeValue": 706044766000,
+    "week52": {
+      "low": 266000,
+      "high": 1970000,
+      "position": 0.30809859154929575,
+      "days": 245,
+      "from": "20251112"
+    },
+    "recent5": [
+      {
+        "basDt": "20261106",
+        "fltRt": -10.51,
+        "open": 690000,
+        "high": 757000,
+        "low": 686000,
+        "close": 724000
+      },
+      {
+        "basDt": "20261109",
+        "fltRt": -0.28,
+        "open": 702000,
+        "high": 750000,
+        "low": 695000,
+        "close": 722000
+      },
+      {
+        "basDt": "20261110",
+        "fltRt": 5.26,
+        "open": 773000,
+        "high": 795000,
+        "low": 741000,
+        "close": 760000
+      },
+      {
+        "basDt": "20261111",
+        "fltRt": 4.74,
+        "open": 755000,
+        "high": 800000,
+        "low": 737000,
+        "close": 796000
+      },
+      {
+        "basDt": "20261112",
+        "fltRt": -0.63,
+        "open": 819000,
+        "high": 828000,
+        "low": 775000,
+        "close": 791000
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 701351,
+      "ratio": 1.27
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 530,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-11-13T08:53:03.428Z"
+  },
+  "facts": [
+    "코스피보다 0.02%p 낮았어요.",
+    "거래량은 20일 평균의 1.3배예요.",
+    "시가보다 28,000원 낮게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "SK스퀘어, 고가 828,000원 찍고 781,000원",
+      "source": "잡포스트",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9YaVNNc1pKR3gwRzBWRmllcXU5R05IbTUteGJwUDBFYzIyXy1zZkJzcGUwRE1mbF80bHotdFNZT0ZYN2Nwalh3SVNqelFjNlRCSUhacEtsZmdPNlJ5c3NtQ1BSMnhlZmJSdmphd01R0gFyQVVfeXFMTTNUUHJKcnhxREhqdGo4aGJadVNIZUN1OU1zbTVrUlNYZ3MtdGhoMXpSekMybTMzM2UxLWdtU2lGcnprdXJNY3dUczBmSTVFR1hncWFHbHZzeHM3ZWlYR2tkUFN3eG5zbkdtSDVVYW0yQTRn?oc=5",
+      "publishedAt": "2026-11-12T06:07:07.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 5342.73,
+    "vs": -32.63,
+    "fltRt": -0.61
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-11-13T08:55:03.263Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260519"
+}

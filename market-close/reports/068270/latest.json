@@ -2,45 +2,29 @@
   "code": "068270",
   "name": "셀트리온",
   "market": "KOSPI",
-  "basDt": "20261110",
+  "basDt": "20261112",
   "price": {
     "code": "068270",
     "name": "셀트리온",
     "market": "KOSPI",
-    "basDt": "20261110",
-    "close": 203000,
-    "vs": -7000,
-    "fltRt": -3.33,
-    "open": 211000,
+    "basDt": "20261112",
+    "close": 209500,
+    "vs": 2500,
+    "fltRt": 1.21,
+    "open": 208500,
     "high": 213000,
-    "low": 202000,
-    "prevClose": 210000,
-    "volume": 869506,
-    "tradeValue": 179379269000,
+    "low": 205000,
+    "prevClose": 207000,
+    "volume": 569041,
+    "tradeValue": 118592072250,
     "week52": {
       "low": 159400,
       "high": 248500,
-      "position": 0.489337822671156,
+      "position": 0.5622895622895623,
       "days": 245,
-      "from": "20251110"
+      "from": "20251112"
     },
     "recent5": [
-      {
-        "basDt": "20261104",
-        "fltRt": 5.32,
-        "open": 190700,
-        "high": 201000,
-        "low": 187500,
-        "close": 200000
-      },
-      {
-        "basDt": "20261105",
-        "fltRt": 7.5,
-        "open": 207500,
-        "high": 216000,
-        "low": 206000,
-        "close": 215000
-      },
       {
         "basDt": "20261106",
         "fltRt": -1.86,
@@ -64,72 +48,88 @@
         "high": 213000,
         "low": 202000,
         "close": 203000
+      },
+      {
+        "basDt": "20261111",
+        "fltRt": 1.97,
+        "open": 205500,
+        "high": 216000,
+        "low": 205000,
+        "close": 207000
+      },
+      {
+        "basDt": "20261112",
+        "fltRt": 1.21,
+        "open": 208500,
+        "high": 213000,
+        "low": 205000,
+        "close": 209500
       }
     ],
     "volumeVs20d": {
-      "avg20": 672879,
-      "ratio": 1.29
+      "avg20": 706414,
+      "ratio": 0.81
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
       "rows": 530,
       "rows52w": 245
     },
-    "generatedAt": "2026-11-11T08:36:41.680Z"
+    "generatedAt": "2026-11-13T08:53:21.708Z"
   },
   "facts": [
-    "코스피보다 7.72%p 낮았어요.",
-    "거래량은 20일 평균의 1.3배예요.",
-    "시가보다 8,000원 낮게 마감했어요."
+    "코스피보다 1.82%p 높았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가보다 1,000원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "[숏폼] K바이오 5사, 3분기 실적 누가 앞섰나...셀트리온 매출 1위",
-      "source": "히트뉴스",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9lb0NZemRSZjFUd1pienpibl9ZRllPVVlTY3hPMTBPY2czOUtfWDJRRDFsR21Fa1dXWXBLVUI2Ul9MQk1vXy1CSWFhQzY1SkF2Vl9jUDhuQlRpaWNCSHRfaEJpdmJJNFBQUVBZ?oc=5",
-      "publishedAt": "2026-11-09T21:01:00.000Z"
+      "title": "셀트리온 ‘코센틱스’ 바이오시밀러 ‘비세큐마’ 호주 품목허가 신청",
+      "source": "팜이데일리",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE0tVFlLNVNUdXBGbTUyRlE1VVhyNGhwN043a3M2TzFZYkZQclNybklHd2VWSTJwWS1nQk40MU53eUt2b0hVNWtGV3VfcmZKbEpaMjhGTWYzcUZFVVJMeHZ0cWJWc0JQTDJ4YWp5ZFBR?oc=5",
+      "publishedAt": "2026-11-12T00:32:59.000Z"
     },
     {
-      "title": "셀트리온, 유럽서 ‘스테키마’ 소아 적응증 변경허가 승인 권고…처방 범위 확대",
-      "source": "경기일보",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1zdEVTZk1MNGxTcXpYRjZDbzR2RVBvcXNPc1d2NENqQmtoUGZQc2FSTkI2VHZpODRISDV6RHVCNDJsOUlXRndQTjJhSjduUUlTV0ZWS2ZLYVpfVE0?oc=5",
-      "publishedAt": "2026-11-10T02:17:14.000Z"
+      "title": "'53억 승부수' 삼천당제약, 日 약가 등재 … 셀트리온과 맞대결",
+      "source": "뉴데일리",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5GMVl1dkF2eUVnUElLUkxJaFJiRktwTWo3MGpZYnlJb1RnT0RGN1Vmc055ZGp5NjNKX2xDY2JCRTFOdm10OVlQQVNVODdyd29BUHVERmdHdVZaZWw0NVJPZHFDRG1Vc0dsT1FGZzViQ3UyUnR1aTAwTXY2ONIBgAFBVV95cUxNc2tXeUg4WE1xUTdqY2FZSnAyaUJJSF9rZFA0TElObmc1UWRsU2ZTQXQ5a1hwaWNMTjYwanJrSUJ4MHAtOEd4VUYtZ2sxRjh0ZVFlLXYxZHh1ZE4wc3BrV3lfR1JEY0Q5MTJKQ3JCZ1k1S0Y4NFlXX2FDQlJPbDdNdg?oc=5",
+      "publishedAt": "2026-11-12T07:32:00.000Z"
     },
     {
-      "title": "셀트리온제약, 3분기 매출 1619억·영업이익 239억원 기록",
-      "source": "메드월드뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE11REozdS1tNzY4em1VaVROSVRLTUNjMFJNTnc4eWtneVMtNW9fWTNlNHhQX3VUczV4OFFsNEt4WGxIWnFxYXl3di1tN01GRHljMWNSZzVPMHV1ckRJYmtucEUyOS0zdDQ?oc=5",
-      "publishedAt": "2026-11-10T13:40:55.000Z"
+      "title": "'먹는 약' 넘보는 아젠엑스…한올·셀트리온, FcRn 차별화 과제",
+      "source": "아시아경제",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBTQTZSVEN2d05yTHNKdFlncGJGbmJvNjA1ZVRwSDhlWWdwR29tYzFUQmN5NzZYeUxUSnlpbUpUX1lHRXI5VGttZ3VJaVN4eXAwWm1ENGU3RlJXOTVKbUNtUw?oc=5",
+      "publishedAt": "2026-11-12T02:54:31.000Z"
     },
     {
-      "title": "셀트리온 스테키마, 유럽서 2세 이상 소아 적응증 확대 승인 권고",
+      "title": "셀트리온, 비세큐마 호주 품목허가 신청",
       "source": "메디포뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9wU0IxWWp4RHREQWZLSmE4VV9IdERDQVZUaDNaTF9EMUNVSHVNcjZZaU5GeHBNR25sM1FDX1pDeWJlNkVad3pBRHBORjNZYWhuZXpVUjUyVWtZQXhkbkdXSUVKQzc?oc=5",
-      "publishedAt": "2026-11-09T15:20:33.000Z"
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE94UEpvTVpqVlR0TjJfTFVnZ1BZaVBSb3dqRVVMLUJfZGRRNnRmZ1E2NHdSbUh6UE80NXVkQmtWWFF2b0FkbDhXNENJS2lJdUU2M0dlR0Jmc2ZEZkJFY0VKaTJmTVI?oc=5",
+      "publishedAt": "2026-11-12T12:43:37.000Z"
     },
     {
-      "title": "[바이오 마감 브리핑]증시 반등에도 대형주 약세…삼성바이오·셀트리온 하락, 한올 급등",
-      "source": "메디코파마",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE8wLVB2RmxyMU5rN004VTVCMWtzNE9EOEFkZmhHcUdNeDBFTDVFNHlxby1RcWxpaElLN0pZUExYRzN1TGx6ek9OWHY1dHZwS0ZvTUg3Q2JnZ1ZqdDdCTVpYNm1wQVo0amxoSUhNTTRkZzR0dw?oc=5",
-      "publishedAt": "2026-11-10T09:00:00.000Z"
+      "title": "셀트리온, 바이오시밀러 ‘비세큐마’ 호주 허가 신청",
+      "source": "의학신문",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1Vc0hvVm9naFJzU0ktRzBObFhQc3dsSHFoVXVqVGlaOUN3TFk0akNsQ3ZxQjdNaS0tUXRlSGFMb0pKY3FhWnZyZXpfOVdnWV91dkt6YmxtQ28wRF9yaW5SN2xUNTJwV2owa2c?oc=5",
+      "publishedAt": "2026-11-12T06:00:22.000Z"
     },
     {
-      "title": "셀트리온제약, 3분기 영업익 239억…역대 최대 분기 실적 By EBN",
-      "source": "Investing.com 한국어",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE8yZ3hjUUplT0paOWsxYS1KQ1NpZUcxbXZJZURRLXIwSHVfS1NvdjUzbUdmYUFodW9UUkdQd3NiQzR6REtDSDBCaXJZUnNLcWVTdHc1eGxvSTU4SUtWN1dBOTZLdEJUUkowQk1OUHQ4dWw?oc=5",
-      "publishedAt": "2026-11-09T23:19:00.000Z"
+      "title": "셀트리온, 자가면역질환 치료제 ‘비세큐마’ 호주 허가 신청",
+      "source": "바이오타임즈",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1MVkZ3M3BiS3hwcnZxSzFZckZxVkJibGsxZENZenVQZ0luMF9ZU2pSUnV4SWtuS0daUzZXZzVoRjVOSlJLd0x5eHE1VkdXYUFBMHFGa3pqZUV2eC1kM3RWSTN4dFBxMkNSakhMSg?oc=5",
+      "publishedAt": "2026-11-12T01:33:14.000Z"
     },
     {
-      "title": "셀트리온제약, 3분기 매출 1619억원···전년比 17%↑",
-      "source": "메디칼업저버",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB0OHIwVmJSLXF5d2lJeDd1YXFDRE1CcHItOUdxUHdra3BPRS02NndYS0NrVXJyaHZLdlZlVW1JTlJPZkp1aW1FVnZXWGloZXMwc3VWa2ZRMHZlOGZXYWl1V3FDZi1FbXEtRXBN?oc=5",
-      "publishedAt": "2026-11-09T20:56:42.000Z"
+      "title": "셀트리온, '비세큐마' 호주 품목허가 신청…\"9조 시장 공략 확대\"",
+      "source": "머니투데이",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9GVXZ1a2xzSDFwWE9SWENSMjJVdW11S001UUk5cFRHWnZzYVdGb1ZaamJYekl4OF8zb2xmWksxdEFrTHJaMGI5SkY2Mjdnd2otVzRVZzRPcmsyRTZ0V2lfM2hjZmJrUlRLVWfSAW9BVV95cUxNZ05LeXNqbl9zT1F4WFF6T2ZYTUFaMDdxR2VfaGJvVElJanhvVmNBcnVNRWVaMTU4MEsyTjVkcVRBd2UxX05EN2dTeEprVDNRSWJ2dmJueE5jMUNaZTlsNExWNnFuSFdyNHpWczd2dm8?oc=5",
+      "publishedAt": "2026-11-12T00:24:51.000Z"
     },
     {
-      "title": "코스피 악몽의 40일…한진·셀트리온만 생존",
-      "source": "뉴스토마토",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5scUswdUNzOWxRSnNveHF4a2o4X0Jwb291X0pacVM5MGJGcTFWcWg3OGhfUFlGdGk5R3RiclpqcmNtanVodnlqTnllSmUzMWlGSFRiM3ZKZnduWUdlYm1VSg?oc=5",
-      "publishedAt": "2026-11-10T04:48:01.000Z"
+      "title": "셀트리온, 코센틱스 바이오시밀러 '비세큐마' 호주 품목허가 신청",
+      "source": "메트로신문",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5DSF9DNmMtMWgzTEV3RzktVEo2VUhHa0xoQ1JWTFZTTXg2cXJ5aktJSUtlbWJianZ2Ym5aZklUeEhpemh3YXk3cXRKTEppSGg5R2NoOVRsOTZMUml5dFJvVw?oc=5",
+      "publishedAt": "2026-11-12T01:49:49.000Z"
     }
   ],
   "dart": [],
@@ -165,9 +165,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5239.13,
-    "vs": 220.28,
-    "fltRt": 4.39
+    "clpr": 5342.73,
+    "vs": -32.63,
+    "fltRt": -0.61
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -176,7 +176,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-11T08:38:16.182Z",
+  "builtAt": "2026-11-13T08:55:03.335Z",
   "archiveDays": 120,
-  "archiveFrom": "20260515"
+  "archiveFrom": "20260519"
 }
