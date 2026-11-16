@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T00:00:00Z",
+  "generatedAt": "2026-11-16T00:00:00Z",
   "source": "SEC EDGAR",
   "sourceUrl": "https://www.sec.gov/edgar",
   "usdKrw": 1337.13,
@@ -113,66 +113,6 @@
       "location": "SOUTH SAN FRANCISCO, CA",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001806540&type=424B4"
-    },
-    {
-      "cik": "0002143850",
-      "name": "CITY THERAPEUTICS, INC.",
-      "ticker": "CTY",
-      "exchange": "뉴욕증권거래소",
-      "offerPrice": 18.0,
-      "priceBandLow": null,
-      "priceBandHigh": null,
-      "bandPosition": null,
-      "sharesOffered": 11111111,
-      "sharesAfterListing": 51721168,
-      "grossProceeds": 199999998,
-      "marketCap": 930981024,
-      "filedAt": "2026-10-16",
-      "isSpac": false,
-      "sic": "2834",
-      "industry": "제약·바이오",
-      "underwriters": [
-        "Goldman Sachs & Co.",
-        "Jefferies LLC",
-        "Oppenheimer & Co."
-      ],
-      "businessSummary": "We are a clinical-stage biotechnology company developing the next generation of RNA interference (&#8220;RNAi&#8221;) therapeutics designed to silence the expression of disease-relevant proteins, with the aim of delivering meaningful and durable benefits for patients in need.",
-      "useOfProceeds": "We currently intend to use the net proceeds from this offering, together with our existing cash and cash equivalents, as follows: approximately $30.",
-      "netResult": null,
-      "netResultYear": null,
-      "lockupDays": null,
-      "location": "CAMBRIDGE, MA",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002143850&type=424B4"
-    },
-    {
-      "cik": "0002149916",
-      "name": "TCGX Acquisition Corp. II",
-      "ticker": "TCXB",
-      "exchange": "뉴욕증권거래소",
-      "offerPrice": 10.0,
-      "priceBandLow": null,
-      "priceBandHigh": null,
-      "bandPosition": null,
-      "sharesOffered": null,
-      "sharesAfterListing": null,
-      "grossProceeds": null,
-      "marketCap": null,
-      "filedAt": "2026-10-16",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "underwriters": [
-        "Guggenheim Securities"
-      ],
-      "businessSummary": "We are a newly organized blank check company incorporated as a Cayman Islands exempted company formed for the purpose of effecting a merger, amalgamation, share exchange, asset acquisition, share purchase, reorganization or similar business combination with one or more businesses or entities.",
-      "useOfProceeds": null,
-      "netResult": null,
-      "netResultYear": null,
-      "lockupDays": null,
-      "location": "GRAND CAYMAN",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002149916&type=424B4"
     }
   ],
   "upcoming": [
@@ -1316,6 +1256,17 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002131124&type=S-1"
     },
     {
+      "cik": "0002143850",
+      "name": "CITY THERAPEUTICS, INC.",
+      "ticker": "CTY",
+      "filedAt": "2026-10-09",
+      "isSpac": false,
+      "sic": "2834",
+      "industry": "제약·바이오",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002143850&type=S-1"
+    },
+    {
       "cik": "0002148546",
       "name": "Patriot Mobile Inc.",
       "ticker": null,
@@ -1732,6 +1683,17 @@
         "assets": 221000000
       },
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001468327&type=S-1"
+    },
+    {
+      "cik": "0002149916",
+      "name": "TCGX Acquisition Corp. II",
+      "ticker": "TCXB",
+      "filedAt": "2026-09-25",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002149916&type=S-1"
     },
     {
       "cik": "0002153598",
@@ -2638,65 +2600,6 @@
         "assets": 92779988
       },
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002017526&type=S-1"
-    },
-    {
-      "cik": "0002109801",
-      "name": "VARSAL TECH, INC.",
-      "ticker": "VAT",
-      "filedAt": "2026-08-17",
-      "isSpac": false,
-      "sic": "2800",
-      "industry": "제조",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002109801&type=S-1"
-    },
-    {
-      "cik": "0001317685",
-      "name": "Alliance Laundry Holdings Inc.",
-      "ticker": "ALH",
-      "filedAt": "2026-08-17",
-      "isSpac": false,
-      "sic": "3580",
-      "industry": "제조",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 1709237000,
-        "netIncome": 101755000,
-        "assets": 2885888000
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001317685&type=S-1"
-    },
-    {
-      "cik": "0001893657",
-      "name": "Rubber Leaf Inc",
-      "ticker": "RLEA",
-      "filedAt": "2026-08-17",
-      "isSpac": false,
-      "sic": "3714",
-      "industry": "제조",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 4904381,
-        "netIncome": 2867644,
-        "assets": 6083266
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001893657&type=S-1"
-    },
-    {
-      "cik": "0002065708",
-      "name": "Andersen Group Inc.",
-      "ticker": "ANDG",
-      "filedAt": "2026-08-17",
-      "isSpac": false,
-      "sic": "7389",
-      "industry": "기타",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 838692000,
-        "netIncome": -2324000,
-        "assets": 565140000
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002065708&type=S-1"
     }
   ]
 }
