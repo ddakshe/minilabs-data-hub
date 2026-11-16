@@ -2,37 +2,29 @@
   "code": "247540",
   "name": "에코프로비엠",
   "market": "KOSDAQ",
-  "basDt": "20261112",
+  "basDt": "20261113",
   "price": {
     "code": "247540",
     "name": "에코프로비엠",
     "market": "KOSDAQ",
-    "basDt": "20261112",
-    "close": 89900,
-    "vs": -2000,
-    "fltRt": -2.18,
+    "basDt": "20261113",
+    "close": 90800,
+    "vs": 900,
+    "fltRt": 1,
     "open": 90700,
-    "high": 91600,
-    "low": 87300,
-    "prevClose": 91900,
-    "volume": 837115,
-    "tradeValue": 74718996700,
+    "high": 96400,
+    "low": 90100,
+    "prevClose": 89900,
+    "volume": 379906,
+    "tradeValue": 35185085000,
     "week52": {
       "low": 75900,
       "high": 246000,
-      "position": 0.0823045267489712,
+      "position": 0.08759553203997648,
       "days": 245,
-      "from": "20251112"
+      "from": "20251113"
     },
     "recent5": [
-      {
-        "basDt": "20261106",
-        "fltRt": -7.36,
-        "open": 82700,
-        "high": 88000,
-        "low": 80400,
-        "close": 83100
-      },
       {
         "basDt": "20261109",
         "fltRt": -8.66,
@@ -64,39 +56,65 @@
         "high": 91600,
         "low": 87300,
         "close": 89900
+      },
+      {
+        "basDt": "20261113",
+        "fltRt": 1,
+        "open": 90700,
+        "high": 96400,
+        "low": 90100,
+        "close": 90800
       }
     ],
     "volumeVs20d": {
-      "avg20": 519066,
-      "ratio": 1.61
+      "avg20": 531814,
+      "ratio": 0.71
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 530,
+      "rows": 528,
       "rows52w": 245
     },
-    "generatedAt": "2026-11-13T08:53:29.654Z"
+    "generatedAt": "2026-11-16T08:46:05.608Z"
   },
   "facts": [
-    "코스닥보다 0.96%p 낮았어요.",
-    "거래량은 20일 평균의 1.6배예요.",
-    "시가보다 800원 낮게 마감했어요."
+    "코스닥보다 0.55%p 높았어요.",
+    "거래량은 20일 평균의 0.7배예요.",
+    "시가보다 100원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "에코프로 등, 에코프로비엠 주식 담보 등 계약 비율 11.27%로 확대",
-      "source": "데이터투자",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5FWjl3MlJWY2tmV3V0Uk9GTWtCaHI1SmQxMW9wLUdZd2hUSElxTFVUdlJjOVVvVmwzaFNYMDZXVHFsQXNvcE44N242SlVnRVpERzItY2xSaEtHeXpZQzNXRVJRbGIxeW9SVVN2Nk9OODEyMkE?oc=5",
-      "publishedAt": "2026-11-12T07:53:26.000Z"
+      "title": "코스닥, 강보합에 700선 회복 눈앞...레인보우로보틱스, 에코프로비엠 등 상승",
+      "source": "이코노뉴스",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE15TnlFTXpmYkFKSzJ4dkZoUmdWemdsTFhpMlZKbUo3ZUlnTUlfcHdZSnY4VU5XR1pUWklrSTB5M25zRU96Z1NnMzNFMHVHSUtIYlRlYTN6cm1RMl9ISFNXU0FaTk5XbGo3OFFyRVNsTQ?oc=5",
+      "publishedAt": "2026-11-13T12:30:00.000Z"
+    },
+    {
+      "title": "[주간 코스닥 기관] 심텍 주성엔지니어링 RFHIC 에코프로비엠 쓸어 담았다",
+      "source": "핀포인트뉴스",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1pYVpkTEhNRGhoZ1BFWW1oUjdlSWJ0WlpVODZVU25jMnBWSUdqQ1F5dlBybTV5MWV5bVo5a2Z3WE1LVDIxM1JHNnp3dnI1NnhDTWt0VzNsVWVaalU1UThFTmFiOFVkVG5neGZfSGEwbzg5MmPSAXdBVV95cUxPV05odWhGVGk0VUxLMF9NSi1QdDlkT3Q4eTBkb1Jmd2IzWkFiR01BMHJpQ0JhOFY5QVc1QUtSZWZ4YVpUeDd0ejU0em94QmJzM0xCOG45d3ZCenc5UFRiek1WZ19OdXh2RXREZjNwR3NPbnRJSlNvcw?oc=5",
+      "publishedAt": "2026-11-13T11:23:14.000Z"
+    },
+    {
+      "title": "코스피·코스닥 하락…삼성전기·에코프로비엠·주성엔지니어링 등 약세",
+      "source": "CBC뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1EM2c5T1BkaEc1Yjh0bFpLWjdyM1hRenZDQ29kUzV4aFBFcFRRZ2JRQUFxb09XNnJnNmZYdjN0WlZoLUlUakRVd3FVdHBFR0VIWnpsUXIxdEVFTF91NVU4ak9QN3RCQk5k?oc=5",
+      "publishedAt": "2026-11-12T21:20:00.000Z"
+    },
+    {
+      "title": "“에코프로 그룹, 내년 1분기 실적 회복·3분기 본격 반등 전망” [찐코노미]",
+      "source": "이투데이",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9PQ0pGSHB1S3RBd3lGVUdpVVpHUDAwV2FOTmh3UE1rclhrUEZ6c1ZzOFhrTnBpUkJHUVpGMnMzU1owT3NoTHY2dURrdVBpUWdNeWpDVw?oc=5",
+      "publishedAt": "2026-11-13T07:38:00.000Z"
     }
   ],
   "dart": [
     {
-      "title": "주식등의대량보유상황보고서(일반)",
-      "filer": "에코프로",
-      "receiptNo": "20261112000622",
-      "date": "20261112",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261112000622"
+      "title": "특수관계인으로부터자산양수",
+      "filer": "에코프로비엠",
+      "receiptNo": "20261113001055",
+      "date": "20261113",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001055"
     }
   ],
   "ownership": [
@@ -177,9 +195,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 696.53,
-    "vs": -8.57,
-    "fltRt": -1.22
+    "clpr": 699.66,
+    "vs": 3.13,
+    "fltRt": 0.45
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -188,7 +206,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-13T08:55:03.367Z",
+  "builtAt": "2026-11-16T08:47:25.988Z",
   "archiveDays": 120,
-  "archiveFrom": "20260519"
+  "archiveFrom": "20260520"
 }

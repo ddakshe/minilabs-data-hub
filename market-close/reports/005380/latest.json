@@ -2,37 +2,29 @@
   "code": "005380",
   "name": "현대차",
   "market": "KOSPI",
-  "basDt": "20261112",
+  "basDt": "20261113",
   "price": {
     "code": "005380",
     "name": "현대차",
     "market": "KOSPI",
-    "basDt": "20261112",
-    "close": 266500,
-    "vs": -6000,
-    "fltRt": -2.2,
-    "open": 272000,
-    "high": 273000,
-    "low": 264000,
-    "prevClose": 272500,
-    "volume": 658751,
-    "tradeValue": 176142094750,
+    "basDt": "20261113",
+    "close": 269500,
+    "vs": 3000,
+    "fltRt": 1.13,
+    "open": 269000,
+    "high": 279000,
+    "low": 268000,
+    "prevClose": 266500,
+    "volume": 505173,
+    "tradeValue": 137883488250,
     "week52": {
       "low": 254500,
       "high": 750000,
-      "position": 0.024217961654894045,
+      "position": 0.030272452068617558,
       "days": 245,
-      "from": "20251112"
+      "from": "20251113"
     },
     "recent5": [
-      {
-        "basDt": "20261106",
-        "fltRt": -4.77,
-        "open": 271000,
-        "high": 286000,
-        "low": 267500,
-        "close": 279500
-      },
       {
         "basDt": "20261109",
         "fltRt": -2.86,
@@ -64,42 +56,38 @@
         "high": 273000,
         "low": 264000,
         "close": 266500
+      },
+      {
+        "basDt": "20261113",
+        "fltRt": 1.13,
+        "open": 269000,
+        "high": 279000,
+        "low": 268000,
+        "close": 269500
       }
     ],
     "volumeVs20d": {
-      "avg20": 571760,
-      "ratio": 1.15
+      "avg20": 566917,
+      "ratio": 0.89
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 530,
+      "rows": 528,
       "rows52w": 245
     },
-    "generatedAt": "2026-11-13T08:53:13.994Z"
+    "generatedAt": "2026-11-16T08:45:51.286Z"
   },
   "facts": [
-    "코스피보다 1.59%p 낮았어요.",
-    "거래량은 20일 평균의 1.1배예요.",
-    "시가보다 5,500원 낮게 마감했어요."
+    "코스피보다 2.11%p 높았어요.",
+    "거래량은 20일 평균의 0.9배예요.",
+    "시가보다 500원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "현대차, 전·현직 카마스터와 함께 소아암 환아에 후원금 6200만원 전달",
-      "source": "서울경제",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9wM1c1d0hjdHR3N3lhMzZFX25JMWMyZGVpR2M2TC1wWHNnOTQ3MUZ1SnlrSVJ0SGR1WTVPQUdydTJyb3lnS0FqN3psZzJJUzZjcFHSAVNBVV95cUxQdVhOOFZQVzlGTHZZaVYxWmxFNmxVb3RybFktelBfOTRvLThQN3NKaGxId2lNbFNERm1CY0RQWHI5Y1lvZ3RZbGFscXAzOFg1RjFWUQ?oc=5",
-      "publishedAt": "2026-11-12T00:23:07.000Z"
-    },
-    {
-      "title": "현대차, 월드 하이드로젠 엑스포 2026서 ‘베스트 픽(대상)’ 수상",
-      "source": "부산일보",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE43b050WGdueHN4TzAyTlZkUWVtbUNrVEFoMWszSndjR1FlVFA2d2dZYVBRdEdNb1YwbGEyWHlucjB2Q3J4MkJfVU5ITm9saExyajFxSDBRMmxRWl84aFRReXlZc1dXNEpVUEIzSnNra05XRG11?oc=5",
-      "publishedAt": "2026-11-11T23:19:06.000Z"
-    },
-    {
-      "title": "새만금, 2035년까지 첨단산업 거점 전환…현대차 9조 투자 · 특구 지정 추진",
-      "source": "국제뉴스",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5kTzYyYVh1QkFiYld3TXhrd1lHRGRxZFJJVVhCd3hlNGpobXFhcXhTd1RrSEdIYTRFeXN1STlLSHNEMEpXcjhqRkpGaUVPNDUyLXdnT19PM1hoNUR2aTVKWTdVYkhuUTA5Ymt2N3dn?oc=5",
-      "publishedAt": "2026-11-12T02:12:47.000Z"
+      "title": "[단독] 현대차 AVP본부, 조직개편 단행",
+      "source": "매일경제",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBjSE16LW1ZdWZnN1NTaUF3OU9qZ1VFUnR3ZWJyQUZiM0ZNQ0tpNWJjdlB3ZG9mYVZILWdvOFkycEYyT082aDF5c3FhaVBpQmFqT1BEWVZR?oc=5",
+      "publishedAt": "2026-11-13T07:30:21.000Z"
     }
   ],
   "dart": [],
@@ -107,9 +95,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5342.73,
-    "vs": -32.63,
-    "fltRt": -0.61
+    "clpr": 5290.53,
+    "vs": -52.2,
+    "fltRt": -0.98
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -118,7 +106,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-13T08:55:03.295Z",
+  "builtAt": "2026-11-16T08:47:25.953Z",
   "archiveDays": 120,
-  "archiveFrom": "20260519"
+  "archiveFrom": "20260520"
 }

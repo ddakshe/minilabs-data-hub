@@ -2,37 +2,29 @@
   "code": "105560",
   "name": "KB금융",
   "market": "KOSPI",
-  "basDt": "20261112",
+  "basDt": "20261113",
   "price": {
     "code": "105560",
     "name": "KB금융",
     "market": "KOSPI",
-    "basDt": "20261112",
-    "close": 151800,
-    "vs": -1500,
-    "fltRt": -0.98,
-    "open": 154800,
-    "high": 154800,
-    "low": 149700,
-    "prevClose": 153300,
-    "volume": 1186948,
-    "tradeValue": 180257118550,
+    "basDt": "20261113",
+    "close": 159000,
+    "vs": 7200,
+    "fltRt": 4.74,
+    "open": 151900,
+    "high": 159900,
+    "low": 151900,
+    "prevClose": 151800,
+    "volume": 651807,
+    "tradeValue": 102775056800,
     "week52": {
       "low": 120300,
       "high": 186200,
-      "position": 0.4779969650986343,
+      "position": 0.5872534142640364,
       "days": 245,
-      "from": "20251112"
+      "from": "20251113"
     },
     "recent5": [
-      {
-        "basDt": "20261106",
-        "fltRt": -3.82,
-        "open": 152300,
-        "high": 153500,
-        "low": 145100,
-        "close": 151000
-      },
       {
         "basDt": "20261109",
         "fltRt": -0.07,
@@ -64,97 +56,90 @@
         "high": 154800,
         "low": 149700,
         "close": 151800
+      },
+      {
+        "basDt": "20261113",
+        "fltRt": 4.74,
+        "open": 151900,
+        "high": 159900,
+        "low": 151900,
+        "close": 159000
       }
     ],
     "volumeVs20d": {
-      "avg20": 936400,
-      "ratio": 1.27
+      "avg20": 930913,
+      "ratio": 0.7
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 530,
+      "rows": 528,
       "rows52w": 245
     },
-    "generatedAt": "2026-11-13T08:53:16.501Z"
+    "generatedAt": "2026-11-16T08:45:48.110Z"
   },
   "facts": [
-    "코스피보다 0.37%p 낮았어요.",
-    "거래량은 20일 평균의 1.3배예요.",
-    "시가보다 3,000원 낮게 마감했어요."
+    "코스피보다 5.72%p 높았어요.",
+    "거래량은 20일 평균의 0.7배예요.",
+    "시가보다 7,100원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "[데스크시각] KB금융이 새겨야 할 'ELS 교훈'",
-      "source": "Daum",
-      "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1yN2F3WmdoVURxOF9ZcTdPTzVlRVdBMUpVQ1dZZGc4aGFxOWdVWFNIQk9OcTFFNlpadmFiQUVRbzM3MFhQYVE?oc=5",
-      "publishedAt": "2026-11-11T23:47:32.000Z"
+      "title": "KB금융 내년 주주환원 4조 기대…자사주 소각에 주당순익도 ‘껑충’ [스타즈IR]",
+      "source": "서울경제",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9vTDhub21Kb3pUdGJTa2ljQ2FEak1wbmpGWjROd3dndGxxXzFGQWhQM1NjSlVkeHNWSVJMV19ET245NG9JWjc3OEt6Y3NRdHFhd0HSAVNBVV95cUxOR1lhMm5RSXZfMVRFSXpZNTBDcmE0RGExWDNQWnowYXlHZHVhdTQ4NGpyOHJlVHdtVUgxeVg0Vm9VUzhBUVhyUHVoLWNqY0tRWTVaMA?oc=5",
+      "publishedAt": "2026-11-15T08:40:51.000Z"
     },
     {
-      "title": "[리포트 브리핑]KB금융, '내년에도 기대되는 이유' 목표가 228,000원 - 메리츠증권",
-      "source": "뉴스핌",
-      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBWZFdKczhiZ1FRQjlhTmU0ekQ3OGo3dEFvcDlkOWR3X3ZXTW1yTEt5Zl9OWC1nSUxZX2tQazBIcEc5aUl2bFJWRTFwUkowMy0xVy1XNy0zUlczMlo4?oc=5",
-      "publishedAt": "2026-11-12T06:20:00.000Z"
+      "title": "[500조 연금 새 판]①KB금융 '기금형' 솔루션…수탁법인 차별화는",
+      "source": "블로터",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5XVXVVN0ZkbUM1V0dQVFRXRTFNR201NThUREo5LWZIU2g0OEpwWGxHemVYMkNLUl9XdXBmbjB4Mm4zMXFLRlZvc20yVTZHLW4tV25VTEY4UFBHSjdhV3lwMUkwangydi1o0gFsQVVfeXFMTmRQb0xIWUZqOTVWd0hyelR1NEJTQS1MM2hibmpVTlpZekdaTHBuMzZHRWxvamRIc3NfZ2RaSlIxTHZJeTVfQi1VdFg1LUFKeHFYQU9ra3RDSFZjeEQ0ekxuZ29KdmxYeUZEOXlq?oc=5",
+      "publishedAt": "2026-11-16T02:00:52.000Z"
     },
     {
-      "title": "KB금융, 「한국ESG기준원 ESG평가」 통합 A+등급 획득",
-      "source": "내외뉴스통신",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9OaHpfUmdyMkpjODZ5N0xVd0FwZm9aekJIZVkxUTY3UnpSVHpZS2paZVY5TFNvajhacldPRTYxck12dTRRdXkxSVNPenp0ZEZSQm5EMGY0WEtHUDJRMEE5Y2xISU9naWl5cUxIX9IBcEFVX3lxTE03Y3dwSEdNX0x6ZFpVdnFuZjFTdVM5UE5mWGR1QWk3UlRmZ3NMSEZYc0l4emZlQ1JTODczU2lNYjRWN2I3YjJOdjBWaWtPZFBleGM3dW9LbWk3T1VZT0JVNGFUOVVrRDBreno5ajNmREI?oc=5",
-      "publishedAt": "2026-11-12T07:49:57.000Z"
+      "title": "KB손보, 한국ESG기준원 금융사 지배구조 평가 8년 연속 ‘A’",
+      "source": "헤럴드경제",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE4tYm95ZUZteGpuVXRQWHU3T3JBM1Q4M1hNanVtLWNnNEEteEMxY0FlZk4ySUs5VXhUS0poM2tsSmlxcHpUalpkSURMUGw3ZVdaRFVvWC13?oc=5",
+      "publishedAt": "2026-11-16T01:23:25.000Z"
     },
     {
-      "title": "은행·증권 과징금에 희비…KB금융 3분기 순익 1486억 깎였다",
-      "source": "비즈워치",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE96RlZRbmRoUW5ZSXpVVG84NEZtVHFaVS1SMGJvbFVHYkxKa0thZ21uQnVfcTczMll5RWd1Qlp3VU1vS3hXRkp0NDF0WHNtNWt1S0FtWGdDcDRtdGtPX2ZsUDM3T3lGNXo1Mmtz?oc=5",
-      "publishedAt": "2026-11-12T00:31:02.000Z"
-    },
-    {
-      "title": "KB금융, 한국ESG기준원 ESG평가 통합 A+등급",
+      "title": "KB금융 ‘쇄신’·우리은행 ‘유임’… 금융권 연말 CEO 인사태풍 본게임 돌입",
       "source": "매일일보",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9XQ09yY0JuQXd2YkJhUzFZdVZ6eW05QXpkZ1JMWW5YT0VSaDFWWnFKaVBhS2Nrdnd4dFo2bExEakxjaG11QkQ2V2Rral9jLXRJZXF1WEhpUmZZZGN4eDRyMW5sekU?oc=5",
-      "publishedAt": "2026-11-12T01:24:31.000Z"
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5VWi1XdkFMYTdWNkV3aHRFN3BfX3pXYmJuY25UY3AwRVhZUUxCY0FvUHJSQ3RmU3RHaVl3VWlXV1g5blV5aGJHZTl3bFZvV3ZaOUM0Y0xFekNwak11OTNnUy02dDc?oc=5",
+      "publishedAt": "2026-11-16T06:22:14.000Z"
     },
     {
-      "title": "KB금융 \"한국ESG기준원 평가서 통합 A+ 등급 획득\"",
-      "source": "연합뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA4YmE2eUhMM1ZuM0xja3ZwMzJibzBvU3lJTGM5cDI2M0FoY1VQamN3OVZhbHNFdUlCeVFRN2FnMmI3Q3o1ZjdEYzQwcnFlcXpOWXNlRGdGazNEdDMzVmlzctIBYEFVX3lxTFA4YmE2eUhMM1ZuM0xja3ZwMzJibzBvU3lJTGM5cDI2M0FoY1VQamN3OVZhbHNFdUlCeVFRN2FnMmI3Q3o1ZjdEYzQwcnFlcXpOWXNlRGdGazNEdDMzVmlzcg?oc=5",
-      "publishedAt": "2026-11-12T00:31:39.000Z"
+      "title": "주주추천 사외이사 '0'…KB·하나금융 이사회 문턱 낮아진다",
+      "source": "www.ebn.co.kr",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1PUmpKNjBQN0dCYWd1aHMxTkhncUo0UVZXQ3FraFZvU1p3aFZXeWlpR3FyM0d4QjhUZUdlYzkxRkVyUnhYdXpxVnlpT0dWRks3UFYyYVdhcy1vRXdyLTNIb1FHMENRZEJC?oc=5",
+      "publishedAt": "2026-11-16T05:21:07.000Z"
     },
     {
-      "title": "이재근 회장 취임 앞두고…KB금융, 회계 불확실성 털었다",
-      "source": "연합인포맥스",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBnNEU0N2hwRjdpU1dhTzVsaEZWNFA4UVJkTGthTDlieFdsbk1jM3BKeFk5UDJlU2c1eVBGeGhSdzZGMy1XNl90WVlKd3BmYWxvejhvbHd6QWlGRERhT0lXdW1xTkVVZ1g5Tk9DZExzSTE?oc=5",
-      "publishedAt": "2026-11-11T23:42:13.000Z"
+      "title": "윤종규 후보, KB 승계구조 고도화 성과···CFO·CRO·CEO '올라운더' [은행연합회장 레이스]",
+      "source": "한국금융신문",
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1jVFNfWFd5Z29TMUZtSE9QVVVRZ2NBZXRxNHVJdkFEajBnU1FGcC1Bb05TWXdOUTUxanJpT0hXWERqQ1lmZ2Y3U3I0MDNScFNQN09YVHIzNExJRU1jWDhUQWxwS3VJVDFWd1ZJMGtXVVo4V3hwclNDcTVWMDI?oc=5",
+      "publishedAt": "2026-11-15T22:00:00.000Z"
     },
     {
-      "title": "KB금융그룹, 한국ESG기준원 ESG평가 통합 'A+' 등급 획득",
-      "source": "한국NGO신문",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5wc0xMalVNdzhTYlBTT0twQ1hfaWVXS3dYOUhfS1VYbmNtLWF2YmZQa0liTGx5STVoeUpvZ3oxaWhHdFR3YTNnVldFOExBWHVyS2dzc09ncnYtT2JTZmlWdk50cU1FaV9N?oc=5",
-      "publishedAt": "2026-11-12T09:21:40.000Z"
+      "title": "[투데이 Pick] 은행연합회장 6인 경쟁 본격화…윤종규·박종복·윤종원 3강 구도",
+      "source": "뉴스투데이",
+      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1NaXR5RUhWV0ZEVS1HTGwxYWgyaUk5UkZyaXJERTc0VlhSejRPcFRzSUl5U01GdE9lVjktYl90bDhGM2p4cGZaYU41Qk9zVWpOSnB4bnJWYjAwQVRfaVE?oc=5",
+      "publishedAt": "2026-11-15T21:59:47.000Z"
+    },
+    {
+      "title": "KB손해보험, KCGS 지배구조 평가 8년 연속 A등급",
+      "source": "이코리아",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9GSXEyMnBzVS1KQVo2dkRQM1pIbW0yUTV6aEhidEY0aTQ4cUNLWkh0RUVuRkIzNjhuX2FvRm9fX3dXUFFRU2Y2VkQ4U29PWHo2SlBDQnRCTGRsT08teXBBRWJ5YkJjWEVtVXRXd0FNaw?oc=5",
+      "publishedAt": "2026-11-16T08:29:41.000Z"
     }
   ],
-  "dart": [
-    {
-      "title": "증권발행실적보고서",
-      "filer": "KB금융",
-      "receiptNo": "20261112000614",
-      "date": "20261112",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261112000614"
-    },
-    {
-      "title": "투자설명서",
-      "filer": "KB금융",
-      "receiptNo": "20261112000011",
-      "date": "20261112",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261112000011"
-    }
-  ],
+  "dart": [],
   "ownership": [],
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5342.73,
-    "vs": -32.63,
-    "fltRt": -0.61
+    "clpr": 5290.53,
+    "vs": -52.2,
+    "fltRt": -0.98
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -163,7 +148,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-13T08:55:03.300Z",
+  "builtAt": "2026-11-16T08:47:25.946Z",
   "archiveDays": 120,
-  "archiveFrom": "20260519"
+  "archiveFrom": "20260520"
 }

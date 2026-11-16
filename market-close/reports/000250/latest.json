@@ -2,37 +2,29 @@
   "code": "000250",
   "name": "삼천당제약",
   "market": "KOSDAQ",
-  "basDt": "20261112",
+  "basDt": "20261113",
   "price": {
     "code": "000250",
     "name": "삼천당제약",
     "market": "KOSDAQ",
-    "basDt": "20261112",
-    "close": 182200,
-    "vs": -4000,
-    "fltRt": -2.15,
-    "open": 187000,
-    "high": 192000,
-    "low": 181200,
-    "prevClose": 186200,
-    "volume": 86004,
-    "tradeValue": 15801145100,
+    "basDt": "20261113",
+    "close": 179000,
+    "vs": -3200,
+    "fltRt": -1.76,
+    "open": 184500,
+    "high": 191400,
+    "low": 177600,
+    "prevClose": 182200,
+    "volume": 92646,
+    "tradeValue": 17002331250,
     "week52": {
       "low": 126500,
       "high": 1184000,
-      "position": 0.052671394799054375,
+      "position": 0.04964539007092199,
       "days": 245,
-      "from": "20251112"
+      "from": "20251113"
     },
     "recent5": [
-      {
-        "basDt": "20261106",
-        "fltRt": -3.68,
-        "open": 160000,
-        "high": 175600,
-        "low": 159900,
-        "close": 170100
-      },
       {
         "basDt": "20261109",
         "fltRt": -0.24,
@@ -64,52 +56,66 @@
         "high": 192000,
         "low": 181200,
         "close": 182200
+      },
+      {
+        "basDt": "20261113",
+        "fltRt": -1.76,
+        "open": 184500,
+        "high": 191400,
+        "low": 177600,
+        "close": 179000
       }
     ],
     "volumeVs20d": {
-      "avg20": 96037,
-      "ratio": 0.9
+      "avg20": 93023,
+      "ratio": 1
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 530,
+      "rows": 528,
       "rows52w": 245
     },
-    "generatedAt": "2026-11-13T08:53:42.659Z"
+    "generatedAt": "2026-11-16T08:46:19.777Z"
   },
   "facts": [
-    "코스닥보다 0.93%p 낮았어요.",
-    "거래량은 20일 평균의 0.9배예요.",
-    "시가보다 4,800원 낮게 마감했어요."
+    "코스닥보다 2.21%p 낮았어요.",
+    "거래량은 20일 평균의 1.0배예요.",
+    "시가보다 5,500원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "'53억 승부수' 삼천당제약, 日 약가 등재 … 셀트리온과 맞대결",
-      "source": "뉴데일리",
-      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5GMVl1dkF2eUVnUElLUkxJaFJiRktwTWo3MGpZYnlJb1RnT0RGN1Vmc055ZGp5NjNKX2xDY2JCRTFOdm10OVlQQVNVODdyd29BUHVERmdHdVZaZWw0NVJPZHFDRG1Vc0dsT1FGZzViQ3UyUnR1aTAwTXY2ONIBgAFBVV95cUxNc2tXeUg4WE1xUTdqY2FZSnAyaUJJSF9rZFA0TElObmc1UWRsU2ZTQXQ5a1hwaWNMTjYwanJrSUJ4MHAtOEd4VUYtZ2sxRjh0ZVFlLXYxZHh1ZE4wc3BrV3lfR1JEY0Q5MTJKQ3JCZ1k1S0Y4NFlXX2FDQlJPbDdNdg?oc=5",
-      "publishedAt": "2026-11-12T07:32:00.000Z"
-    },
-    {
-      "title": "제약바이오 ESG 성적표 온도차… 중소 제약업계 무더기 ‘낙제점’",
-      "source": "매일일보",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5aSE00NEtaMmZFM3p2cUtqNzc5a0xDakFMazZQQkNtRGtXeG5ZVUdUTGNCU05sRndEYmRlam1ScGxSTFNQN3RtRGlqa3hBWHdrQmhsSHBMOHljSkd1aDJzVFdLTEI?oc=5",
-      "publishedAt": "2026-11-12T03:00:00.000Z"
-    },
-    {
-      "title": "ESG 저평가, 제일·동화·현대약품 `C`‥삼천당·이연·일양·일성 `D`",
-      "source": "뉴스맥",
-      "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTFA0LXZjSjZrSHpOMWFmQ1VqN2YzY0lFTWJKZ3l0SnFMYm5rYzhmRFQ4NVZSbFp4dTFNdlNfUm9fUEcxY1RU?oc=5",
-      "publishedAt": "2026-11-11T22:11:00.000Z"
-    },
-    {
-      "title": "삼천당제약 0.38% 강보합…주식시장 변동성 확대 속 주가 향방 촉각",
-      "source": "CBC뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBDcUtqY0JEZjF6NThTZnFBT2NpSVBkQXdEdDJvT3k0VElxZDFyRmdxVVZnMlQ4b0xaOFR6TVpVVmkzNjJSa3FnanIyN3lmLU1kOEt3ZS12R2RndjZob0lubzJ0ZnV4UGR5?oc=5",
-      "publishedAt": "2026-11-12T00:34:21.000Z"
+      "title": "경구 위고비, SNAC 따라 흡수 차이…삼천당 ‘SNAC-Free’ 제형 주목",
+      "source": "메디코파마",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE53NE5hZHJ1LXRad0tkOF81NnFyM1E1WGdnM2NJMGFudlFFYktPSV9zc2o0VjdBVHVOMkVQZTBSTm1aeXN1VlA0VmFDejhLazNyTmVQd0djSjVwSWNzOXM0ZmhnQ1J2RFAyd2F1T2xtUVMzdw?oc=5",
+      "publishedAt": "2026-11-12T22:51:56.000Z"
     }
   ],
-  "dart": [],
+  "dart": [
+    {
+      "title": "주식등의대량보유상황보고서(일반)",
+      "filer": "윤대인",
+      "receiptNo": "20261113001479",
+      "date": "20261113",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001479"
+    },
+    {
+      "title": "분기보고서 (2026.09)",
+      "filer": "삼천당제약",
+      "receiptNo": "20261113001330",
+      "date": "20261113",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001330"
+    }
+  ],
   "ownership": [
+    {
+      "kind": "major",
+      "date": "20261113",
+      "holder": "윤대인",
+      "ratio": 37.61,
+      "ratioChange": 0,
+      "reason": "특별관계자(전인석)의 주식 담보 계약기간 연장",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001479"
+    },
     {
       "kind": "major",
       "date": "20261020",
@@ -118,23 +124,14 @@
       "ratioChange": 0,
       "reason": "특별관계자(전인석, 윤은화)의 · 주식 담보 계약기간 연장 및 추가 주식 담보 제공",
       "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261020000330"
-    },
-    {
-      "kind": "major",
-      "date": "20260814",
-      "holder": "윤대인",
-      "ratio": 37.61,
-      "ratioChange": 0,
-      "reason": "특별관계자(전인석)의 연부연납을 위한 주식 담보계약 체결 및 · 특별관계자(전인석, 윤은화)의 납세담보 제공",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260814003962"
     }
   ],
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 696.53,
-    "vs": -8.57,
-    "fltRt": -1.22
+    "clpr": 699.66,
+    "vs": 3.13,
+    "fltRt": 0.45
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -143,7 +140,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-13T08:55:03.407Z",
+  "builtAt": "2026-11-16T08:47:26.024Z",
   "archiveDays": 120,
-  "archiveFrom": "20260519"
+  "archiveFrom": "20260520"
 }

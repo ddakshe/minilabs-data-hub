@@ -2,37 +2,29 @@
   "code": "058470",
   "name": "리노공업",
   "market": "KOSDAQ",
-  "basDt": "20261112",
+  "basDt": "20261113",
   "price": {
     "code": "058470",
     "name": "리노공업",
     "market": "KOSDAQ",
-    "basDt": "20261112",
-    "close": 52500,
-    "vs": 500,
-    "fltRt": 0.96,
-    "open": 52100,
-    "high": 53800,
-    "low": 51300,
-    "prevClose": 52000,
-    "volume": 573145,
-    "tradeValue": 30029359900,
+    "basDt": "20261113",
+    "close": 51600,
+    "vs": -900,
+    "fltRt": -1.71,
+    "open": 53400,
+    "high": 54700,
+    "low": 50000,
+    "prevClose": 52500,
+    "volume": 644517,
+    "tradeValue": 34004753350,
     "week52": {
       "low": 46450,
       "high": 127000,
-      "position": 0.07510862818125388,
+      "position": 0.06393544382371198,
       "days": 245,
-      "from": "20251112"
+      "from": "20251113"
     },
     "recent5": [
-      {
-        "basDt": "20261106",
-        "fltRt": -7.36,
-        "open": 46550,
-        "high": 48150,
-        "low": 45150,
-        "close": 46600
-      },
       {
         "basDt": "20261109",
         "fltRt": -0.32,
@@ -64,33 +56,61 @@
         "high": 53800,
         "low": 51300,
         "close": 52500
+      },
+      {
+        "basDt": "20261113",
+        "fltRt": -1.71,
+        "open": 53400,
+        "high": 54700,
+        "low": 50000,
+        "close": 51600
       }
     ],
     "volumeVs20d": {
-      "avg20": 656067,
-      "ratio": 0.87
+      "avg20": 631907,
+      "ratio": 1.02
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 530,
+      "rows": 528,
       "rows52w": 245
     },
-    "generatedAt": "2026-11-13T08:53:45.206Z"
+    "generatedAt": "2026-11-16T08:46:22.626Z"
   },
   "facts": [
-    "코스닥보다 2.18%p 높았어요.",
-    "거래량은 20일 평균의 0.9배예요.",
-    "시가보다 400원 높게 마감했어요."
+    "코스닥보다 2.16%p 낮았어요.",
+    "거래량은 20일 평균의 1.0배예요.",
+    "시가보다 1,800원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "리노공업 신축공장 준공 예정일 20일 연기",
-      "source": "비건뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBxZjk4b3JqQ09VLVdWX1kwQzI4OGh2SGZmQXhRc3hGYldCNXdCTkVMMWV4Y2U4eGx4WVkzR3ItSUxqbW5zVGhTWmpRb1FoMjNQWHp4V3Z3MWV2cFVFX1RpaEYtUHplQQ?oc=5",
-      "publishedAt": "2026-11-12T14:41:03.000Z"
+      "title": "리노공업: 파업 여파로 하락한 지금, 회복 가능성이 보이는지 지켜봐야",
+      "source": "데일리바이트(DAILY BYTE)",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBvLUx1ODljZjI0ZHZtbUNlMlZ4bVlaYlYyQ1BHUFA1UjBRTE1YNjlsWW5HdUdNWHpJYWp0UUcwcXNyM09yVE9PUk01aWZORDU3UkdROERxcmJtbC1yb3FoX0MyTjVpQjlKOVZ1UXpVU0hfMnFtRXNndzRvNA?oc=5",
+      "publishedAt": "2026-11-13T05:07:57.000Z"
+    },
+    {
+      "title": "리노공업 주가 숨 고르기…종가 51,600원, 1.71% 약세",
+      "source": "잡포스트",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBpcll2bGtjWlQ5VEV3Vy12bEpMRExPdE1mM19KRnZGaHhiNmlzWDFTYjhqanR0a1RITFlVVUd0UG56ZVhpdXByVVBlZEwzcWY4STlETC1ySFowd1llb08zLVotT3FYWVBEeE1uZ09B0gFyQVVfeXFMUHBYeDFKYnlVc0E3S3BGWS1OaXlXUXVObHhmVW14UUpxYVV5S3lGMDhneE5kNVVrYzNCeHNEZmM4U0RWMEx6YzhHaXpKQzdhMXBEZkhZMGFFYW5lcUNxSVh3UkZBVkFXaFRMUWFwdUtRaEZB?oc=5",
+      "publishedAt": "2026-11-13T07:06:24.000Z"
+    },
+    {
+      "title": "리노공업 52,000원, 장중 흐름 가른 검사용 핀·소켓 수요",
+      "source": "잡포스트",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5Eb3dqTWdHRTc0TFFrcU9wbXdDdDZuVkJSZDRvSkZVdDcyUGNjYkZMYXBFc1I3QXRyWk5yRUZTdmFvXzZQXzhEdXE5ZHRkdGxZTE5SUzcyZk5FMXEyVHprd0lrWjA0N0thOVBfbi1R0gFyQVVfeXFMUC1Mb0tucHRhb0dGeU5yczNlOGdYa3cwOTZOaUZoS3gyQ3lOSjVBVkV1LUppOTFKR0ptRFZTcTRXS21yX181V0l1eFAxV2w3ZzdUZW02SnVMbXdyY0JRcTZoMlJ4WFlpOVRtTE56ZTZtUkt3?oc=5",
+      "publishedAt": "2026-11-13T06:11:34.000Z"
     }
   ],
-  "dart": [],
+  "dart": [
+    {
+      "title": "분기보고서 (2026.09)",
+      "filer": "리노공업",
+      "receiptNo": "20261113000396",
+      "date": "20261113",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000396"
+    }
+  ],
   "ownership": [
     {
       "kind": "major",
@@ -114,9 +134,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 696.53,
-    "vs": -8.57,
-    "fltRt": -1.22
+    "clpr": 699.66,
+    "vs": 3.13,
+    "fltRt": 0.45
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -125,7 +145,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-13T08:55:03.417Z",
+  "builtAt": "2026-11-16T08:47:26.031Z",
   "archiveDays": 120,
-  "archiveFrom": "20260519"
+  "archiveFrom": "20260520"
 }

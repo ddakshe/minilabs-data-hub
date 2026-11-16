@@ -1,0 +1,122 @@
+{
+  "code": "240810",
+  "name": "원익IPS",
+  "market": "KOSDAQ",
+  "basDt": "20261113",
+  "price": {
+    "code": "240810",
+    "name": "원익IPS",
+    "market": "KOSDAQ",
+    "basDt": "20261113",
+    "close": 77700,
+    "vs": -1500,
+    "fltRt": -1.89,
+    "open": 81400,
+    "high": 84400,
+    "low": 77100,
+    "prevClose": 79200,
+    "volume": 967141,
+    "tradeValue": 78030231700,
+    "week52": {
+      "low": 56700,
+      "high": 183300,
+      "position": 0.16587677725118483,
+      "days": 245,
+      "from": "20251113"
+    },
+    "recent5": [
+      {
+        "basDt": "20261109",
+        "fltRt": 0.9,
+        "open": 64500,
+        "high": 70000,
+        "low": 64100,
+        "close": 67300
+      },
+      {
+        "basDt": "20261110",
+        "fltRt": 1.63,
+        "open": 71100,
+        "high": 71500,
+        "low": 66700,
+        "close": 68400
+      },
+      {
+        "basDt": "20261111",
+        "fltRt": 16.52,
+        "open": 68100,
+        "high": 79700,
+        "low": 68100,
+        "close": 79700
+      },
+      {
+        "basDt": "20261112",
+        "fltRt": -0.63,
+        "open": 79900,
+        "high": 80900,
+        "low": 76300,
+        "close": 79200
+      },
+      {
+        "basDt": "20261113",
+        "fltRt": -1.89,
+        "open": 81400,
+        "high": 84400,
+        "low": 77100,
+        "close": 77700
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 723904,
+      "ratio": 1.34
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 528,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-11-16T08:46:25.285Z"
+  },
+  "facts": [
+    "코스닥보다 2.34%p 낮았어요.",
+    "거래량은 20일 평균의 1.3배예요.",
+    "시가보다 3,700원 낮게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "노동장관, 반도체 기업 간담회",
+      "source": "전파신문",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9IR1ROSHgyLXN2TVhZcnpibXJ2SzVkU0h4TllOOW5fVGpQbVBjbURyZlZ5Sm02bnpXUHB3N0dadFZyTEZMWVFBbF92TXdLYmhZUFlrb3k4YTRNT25JNUNDNkRnQ3Y2NmJWZFE?oc=5",
+      "publishedAt": "2026-11-13T00:50:00.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20261007",
+      "holder": "삼성자산운용",
+      "ratio": 7.1,
+      "ratioChange": 1.18,
+      "reason": "매매로 인한 변동보고의무 발생(삼성액티브자산운용의 위탁운용분 포함)",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261007000302"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 699.66,
+    "vs": 3.13,
+    "fltRt": 0.45
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-11-16T08:47:26.041Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260520"
+}

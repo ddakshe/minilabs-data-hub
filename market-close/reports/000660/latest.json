@@ -2,37 +2,29 @@
   "code": "000660",
   "name": "SK하이닉스",
   "market": "KOSPI",
-  "basDt": "20261112",
+  "basDt": "20261113",
   "price": {
     "code": "000660",
     "name": "SK하이닉스",
     "market": "KOSPI",
-    "basDt": "20261112",
-    "close": 1254000,
-    "vs": -23000,
-    "fltRt": -1.8,
-    "open": 1280000,
-    "high": 1310000,
-    "low": 1245000,
-    "prevClose": 1277000,
-    "volume": 4238276,
-    "tradeValue": 5379926581000,
+    "basDt": "20261113",
+    "close": 1216000,
+    "vs": -38000,
+    "fltRt": -3.03,
+    "open": 1292000,
+    "high": 1317000,
+    "low": 1201000,
+    "prevClose": 1254000,
+    "volume": 3215511,
+    "tradeValue": 4013966109000,
     "week52": {
       "low": 519000,
       "high": 2919000,
-      "position": 0.30625,
+      "position": 0.29041666666666666,
       "days": 245,
-      "from": "20251112"
+      "from": "20251113"
     },
     "recent5": [
-      {
-        "basDt": "20261106",
-        "fltRt": -10.44,
-        "open": 1089000,
-        "high": 1217000,
-        "low": 1089000,
-        "close": 1132000
-      },
       {
         "basDt": "20261109",
         "fltRt": 0.35,
@@ -64,72 +56,80 @@
         "high": 1310000,
         "low": 1245000,
         "close": 1254000
+      },
+      {
+        "basDt": "20261113",
+        "fltRt": -3.03,
+        "open": 1292000,
+        "high": 1317000,
+        "low": 1201000,
+        "close": 1216000
       }
     ],
     "volumeVs20d": {
-      "avg20": 4003146,
-      "ratio": 1.06
+      "avg20": 3920141,
+      "ratio": 0.82
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 530,
+      "rows": 528,
       "rows52w": 245
     },
-    "generatedAt": "2026-11-13T08:53:00.772Z"
+    "generatedAt": "2026-11-16T08:45:33.559Z"
   },
   "facts": [
-    "코스피보다 1.19%p 낮았어요.",
-    "거래량은 20일 평균의 1.1배예요.",
-    "시가보다 26,000원 낮게 마감했어요."
+    "코스피보다 2.05%p 낮았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가보다 76,000원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "[영상] SK하이닉스 ‘킹산직’ 채용 개시…학력 제한 철폐에 지원 열기 ‘후끈’",
-      "source": "서울경제",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9BMzBESFp1VzM4QUFTVy1kZzhoakszUVFBcXRWcjZiaTIxUHVaeDF6emlMdTNfcElINTVTTnZ1VU9IY0RfbGxfdVliN0o3RUdWY2c?oc=5",
-      "publishedAt": "2026-11-12T04:22:21.000Z"
+      "title": "SK하이닉스, 3분기 미국 매출 1년새 102조↑…엔비디아 35조",
+      "source": "연합뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1vQXhkSEpyZ1FkLXVYMzNHQU9HQkYtNDN0WGhFODVRSF9Vb3dEX095RUctamdTQnYzM3BTWGduUS1IZG9Ub3hWbU5ESVEzVGNJYzctMm9GakU0ZlXSAWBBVV95cUxPTzRzemhuNDM4Y3RSQWFvRWthWVk5SWdNT0hBVGdIMGpTNVdZSlZqUnZzNkRWQUo1TnZKSlR0OWpRUllWM3o5NmlfdmY3MDFPUy1ac0piczdnX1NxWnJxdUs?oc=5",
+      "publishedAt": "2026-11-16T08:10:13.000Z"
     },
     {
-      "title": "2600억 매도 예상했는데 5800억 매수로…MSCI가 바꾼 SK하이닉스 수급 By EBN",
-      "source": "Investing.com 한국어",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBYMFEwNUQ1VEdZY1lnS2pkODI0NFAzVzJMZ2JVLVZCdXNVSl9vSldlOTM4ZVNXWlVsQS12bnRFaXVuYUpjNHMzYktZTFZZaXlVV1VEZHNmYkVfWGw4bnRLWUlYQVhQd09TRjNQS3J5MEc?oc=5",
-      "publishedAt": "2026-11-12T08:58:00.000Z"
+      "title": "SK하이닉스, 엔비디아 추정 매출 35조 눈앞…석 달 새 17조↑",
+      "source": "머니투데이",
+      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5pZjRZTEN3dnVyWmJRNVV6UEtOTkVoSS1ObWhSN2VtdG9sR3NJOTRHWW9oN2JHa1ZxT25pdEhvZ05mdGktYTFfdTQ2YUZRbU1lcG5MZG5IOGNJSFJtbDlKSG9DQW90aUhNR1Axb1Y1R0hOT2IzZUhSLXV30gF_QVVfeXFMT2loR3VWNlZjSTRYVWphZThCLUlNMGFjbDJ5MHJGNU1mQXdfT1JYYlFENVMtY01fdm5Ed25ENUVRel9IR0VpaEFVZzRDSkZGeVlGSm1ISDRvQWFpb1JmbWJrQjJ6R3RoSjBpNlNISUhYLXZNT2lpaEVqMk5mZlZyNA?oc=5",
+      "publishedAt": "2026-11-16T08:27:30.000Z"
     },
     {
-      "title": "SK하이닉스, 메모리 장벽 해결책으로 '거대 메모리 풀' 제안",
-      "source": "연합인포맥스",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1iN3BlRFNMQkpBdVRQYjloYjByLWJxcnlmcEY3SFFabS0wQWdaR21sMUNiVGZaVGZYU3pYcDIyYUl0dGp1RVVSQ3ZIXzV0Qll3VWdQektIelhBd2Y3Q3NtNUdqNkdNNnZuX2hRYzBfUDE?oc=5",
-      "publishedAt": "2026-11-12T04:36:22.000Z"
+      "title": "“AI 불확실 우려에도 수요 견고”…SK하이닉스, HBM4 생산능력 더 키운다",
+      "source": "전자신문",
+      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE12dGhnZ3RNdW53R3pGNXdWUUdiRmlPLV9vMVNNQXVBNGlKNkozUWZVWFRtaVBBb25LcTQwTUhadjZfYWgwSjd0VEFIMkZldw?oc=5",
+      "publishedAt": "2026-11-15T07:30:00.000Z"
     },
     {
-      "title": "SK하이닉스, 국내 팹리스와 차세대 메모리 협력 확대···HBF·3D IC 개발 속도",
-      "source": "시사저널e",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE45RmdJZ1JfOG5heDlwcENLUlM3cFNxS3dYUy0wMU43VzRUMGJQUjBfeVNPSlFMc1NzZ0R1SjFiOC1ENnhBTVZMbUM2bG9zR2RvclB6M2gtWmF3TDNaOENyekx6Rlk1TGJqS1NzaWI1MGJ4QdIBdkFVX3lxTE5GRmtiZHkyWnplYmlHTVdsRnEzd0cwdHFkYUpid0ZCVG1YdWdpVHZvdWtSZWlkTnFhZ2gtRGowdjJ5cjhfTXNYSU0tQ24yeEtLOHdnTnpJN0g0eVBXVl93eko2b3VVVllnRjB6UVlEZzdRdGpDN2c?oc=5",
-      "publishedAt": "2026-11-12T04:26:44.000Z"
+      "title": "[단독] 美법원, 삼성·SK하이닉스 '되돌리기 어려운 D램 감산' 주목…판결문 입수",
+      "source": "뉴스핌",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9EeHpuNXlqWW1nU1RJMVhtc2tsVXJLeWRpNlVPQkNPWGpXWmdmR0NsckVkWEtkRGg3dy1IdGRhR2dndDB2dFBtbE9aWlA5OG8zdl8yUmRlYWR1Q3I0?oc=5",
+      "publishedAt": "2026-11-16T05:13:00.000Z"
     },
     {
-      "title": "SK하이닉스 ADR 9.7% 폭등…파격 주주환원책에 화답",
-      "source": "글로벌이코노믹",
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQM255Mnh0Y241OGtHSkxOOERtMzNPRGRlQ0oxMTNZa3RwbDZud0MxbTNqb2tYclMxMlRVaEpVR012RkdFU09YcnFYbmpFcXB6MFJrcmZBWFZIMW4yT3RXcFZYeVJJWG13ZUxidDd3RHhIYlFtVG1xYkdIaW1UVk9SaUJoX04wWUFj?oc=5",
-      "publishedAt": "2026-11-11T21:54:35.000Z"
+      "title": "[속보]SK하이닉스, 올 3Q 누적 시설투자 31.2조·R&D 10.1조 '역대 최대'",
+      "source": "뉴시스",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9jTk1LNk40VDA1VDBxRHpzVjJoa3ZaazVRcmdCRk9GZWRmSHRDYzd5eVlFTHpOeHNCTFczRmdPaWpmVTNNZndMcERuNUYwRjc3ekRseHJsNnF3MXNFMWZ0QtIBeEFVX3lxTFBsOW54bEpaeGR3RUJ5aTY5Y2V2TU4xRWNnaEZjRnFxdEN1d18tOVRTODVLX0xrSHdGOGQ5S0JoaUFrOXdYM0NEYUc2TjRVZXQ3akdNVUdFZkVDaDBJNVJXVHhfZ3FOalZZRUJfSnlaQzd5dkhvQk1oRA?oc=5",
+      "publishedAt": "2026-11-16T07:56:52.000Z"
     },
     {
-      "title": "가스안전공사, SK하이닉스 청주공장 점검…동절기 가스사고 예방",
-      "source": "에너지데일리",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFAxNk8zak9XWDNsTzgxVFRyRXQwOGZqYXBlaGpPOFFkNWs0SzBHb08wU1FDdFNBdmFIb08wZ0gySDEybnZNMGs3WkV6THhqaVh4d213YVVaSkxqUk9iOEMxc3FBYTJLc1hBSU1KWHhnQ092UQ?oc=5",
-      "publishedAt": "2026-11-12T05:39:35.000Z"
+      "title": "[간추린 경제] 1. \"올림픽 계약 해지\" 2. 소부장과 '원팀'‥SK하이닉스 '트리니티팹' 공개",
+      "source": "MBC 뉴스",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE4yRnRva290d3h1T2NGSTdMcjhkQ2RSRjMtUlVWOWZQclRDVGJ2Z1BlNzRSSUxIbGM1SjM3WjFpMGlkbUpza0NMSjJnQ0x6T0otdDMwcDBnRUhWLU1LZW13TFd3YktzOHJ6T1BVVlFJUmxnMjJwVEdZUdIBeEFVX3lxTFBIU1RnUGdkMjFJX2c1UkJTbmp0VmFFQkRfYmpCeFFRRjByVnJYSGFQSHR1UHZPdjFZbnpJM1dTMDJoLXNOZkxmdmMySnlzUHRvMU0wVDRBTlZHRjRlTFRyQTZxWGJGRlMxOGd0V0dmNC1vdUwyams5cw?oc=5",
+      "publishedAt": "2026-11-16T08:04:05.000Z"
     },
     {
-      "title": "[특징주] 삼성전자·SK하이닉스, 코어위브 자금 우려 완화.. '상승세'",
-      "source": "글로벌이코노믹",
-      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNaEdVRjFkQ3JQY1cxTG42Z0lBQnlNNHViSXhJbHJ1dm03TlIyV2FwVmJHMW9XeU41VEN0N3UxZGJTWEV4bDlFbmhMekRZOTBJbnRXckpHSkRXM2JsbEY4VV9MMzFUdWhodmtwcERzYThEY1hmSzNnS2VmYkROMkNFQUFnemEyX3M?oc=5",
-      "publishedAt": "2026-11-12T01:10:30.000Z"
+      "title": "[SK하이닉스 JOB리포트] 디지털 인프라로 AI 시대의 기반을 다지다, 전사적 혁신을 이끄는 ‘IT’",
+      "source": "SK hynix",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5lSWVHYmJZUEtySzB3cXRtZExJQUV2UXJCdDRkczlTOUpya2ZEWHR6cVNqRWZPV1JSa3hISnR6Zk1DNWFmcXFEanBJY1VrenVOSDk5MlZPUkF1d0NHdzZrSV9Odw?oc=5",
+      "publishedAt": "2026-11-16T05:00:22.000Z"
     },
     {
-      "title": "SK하이닉스 재무 버팀목으로…그룹 곳곳에 ’현금 낙수효과’ By EBN",
-      "source": "Investing.com 한국어",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9rdmwzbWxFRTNxQUd0a19SVUNKVlpaSHliUVJkRDlQNHNDdEdQaEtlS0dMRE84eXp1TUNJZTM5ekFFcDM3ZUVLR05xSGphdVFjNFctWXdrWlo3SVBVdDVmT1VDNnZhWmNCZWV2UkkxUkM?oc=5",
-      "publishedAt": "2026-11-12T06:15:27.000Z"
+      "title": "110만원대까지 내려온 SK하이닉스…\"실적으로 증명해야\"",
+      "source": "한국경제",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE15U1dlbGtiU3Q2cEpaY05uNmdnUU9TTUNnM0RxS2trd2NkRDVuY2xIUkMyQTktTGJJRk5pVlZ4WkZZUXdPYUZhbDQzeDhWcWpHV3NDbklrT2JzQQ?oc=5",
+      "publishedAt": "2026-11-16T02:15:31.000Z"
     }
   ],
   "dart": [],
@@ -137,9 +137,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5342.73,
-    "vs": -32.63,
-    "fltRt": -0.61
+    "clpr": 5290.53,
+    "vs": -52.2,
+    "fltRt": -0.98
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -148,7 +148,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-13T08:55:03.249Z",
+  "builtAt": "2026-11-16T08:47:25.904Z",
   "archiveDays": 120,
-  "archiveFrom": "20260519"
+  "archiveFrom": "20260520"
 }
