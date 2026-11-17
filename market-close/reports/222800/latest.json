@@ -2,37 +2,29 @@
   "code": "222800",
   "name": "심텍",
   "market": "KOSDAQ",
-  "basDt": "20261113",
+  "basDt": "20261116",
   "price": {
     "code": "222800",
     "name": "심텍",
     "market": "KOSDAQ",
-    "basDt": "20261113",
-    "close": 124800,
-    "vs": 900,
-    "fltRt": 0.73,
-    "open": 128700,
-    "high": 132000,
-    "low": 123700,
-    "prevClose": 123900,
-    "volume": 1112375,
-    "tradeValue": 141481641100,
+    "basDt": "20261116",
+    "close": 108100,
+    "vs": -16700,
+    "fltRt": -13.38,
+    "open": 123400,
+    "high": 123900,
+    "low": 107100,
+    "prevClose": 124800,
+    "volume": 1038016,
+    "tradeValue": 116708235950,
     "week52": {
       "low": 42800,
       "high": 175000,
-      "position": 0.6202723146747352,
-      "days": 245,
-      "from": "20251113"
+      "position": 0.4939485627836611,
+      "days": 244,
+      "from": "20251116"
     },
     "recent5": [
-      {
-        "basDt": "20261109",
-        "fltRt": 6.84,
-        "open": 91900,
-        "high": 104900,
-        "low": 90100,
-        "close": 99900
-      },
       {
         "basDt": "20261110",
         "fltRt": 6.71,
@@ -64,66 +56,65 @@
         "high": 132000,
         "low": 123700,
         "close": 124800
+      },
+      {
+        "basDt": "20261116",
+        "fltRt": -13.38,
+        "open": 123400,
+        "high": 123900,
+        "low": 107100,
+        "close": 108100
       }
     ],
     "volumeVs20d": {
-      "avg20": 1001772,
-      "ratio": 1.11
+      "avg20": 1009587,
+      "ratio": 1.03
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 528,
-      "rows52w": 245
+      "rows": 529,
+      "rows52w": 244
     },
-    "generatedAt": "2026-11-16T08:46:14.154Z"
+    "generatedAt": "2026-11-17T09:53:16.560Z"
   },
   "facts": [
-    "코스닥보다 0.28%p 높았어요.",
-    "거래량은 20일 평균의 1.1배예요.",
-    "시가보다 3,900원 낮게 마감했어요."
+    "코스닥보다 8.52%p 낮았어요.",
+    "거래량은 20일 평균의 1.0배예요.",
+    "시가보다 15,300원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "특징주, 심텍홀딩스-반도체 기판(FC-BGA/PCB/MLB 등) 테마 상승세에 7.75% ↑",
-      "source": "매일경제 마켓",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBIalhiMDF4RjZyWFp1aU81OW5yV3lSel9NOS10OUpzWHQtbVJPOGZlNDhmUXlSRlVhT1FSNHZqOEpKaGpUbjNBcFRqdHJJVnZBX3c?oc=5",
-      "publishedAt": "2026-11-13T00:06:00.000Z"
+      "title": "코스닥, 4%대 낙폭에 670선 밑으로...주성엔지니어링, 심텍 하락",
+      "source": "이코노뉴스",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9iclpsd3BoS0kzVTBDampfcVNCdzJUMGgzZEVyejRSOFQ2NkxIS28tZlhRRjBDZDdmblBjLTdPV0NjSF8tczNrcW9XazNrcjN5X0JUMlFKc0c3czhLVzdpVkxnQWJFcnl5Z0tVRUZzbw?oc=5",
+      "publishedAt": "2026-11-16T12:30:00.000Z"
     },
     {
-      "title": "[주간 코스닥 기관] 심텍 주성엔지니어링 RFHIC 에코프로비엠 쓸어 담았다",
-      "source": "핀포인트뉴스",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1pYVpkTEhNRGhoZ1BFWW1oUjdlSWJ0WlpVODZVU25jMnBWSUdqQ1F5dlBybTV5MWV5bVo5a2Z3WE1LVDIxM1JHNnp3dnI1NnhDTWt0VzNsVWVaalU1UThFTmFiOFVkVG5neGZfSGEwbzg5MmPSAXdBVV95cUxPV05odWhGVGk0VUxLMF9NSi1QdDlkT3Q4eTBkb1Jmd2IzWkFiR01BMHJpQ0JhOFY5QVc1QUtSZWZ4YVpUeDd0ejU0em94QmJzM0xCOG45d3ZCenc5UFRiek1WZ19OdXh2RXREZjNwR3NPbnRJSlNvcw?oc=5",
-      "publishedAt": "2026-11-13T11:23:14.000Z"
+      "title": "코스닥 3%대 털썩…주성엔지니어링·심텍·이오테크닉스 급락, 시총 상위주 '파란불'",
+      "source": "CBC뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBwQkZsY2hyQ3pQYlZUSjFBdVVzelJlUXlkc0haN2JSMXdZY3o5MnU5YXRIenRFMno3a1BGcUJVb0ZxX3RRYnE4aDg1dDZtWkNxcU1vdEJkdDh0Z3kzN2dwd3RWVnVJWnJm?oc=5",
+      "publishedAt": "2026-11-16T04:02:46.000Z"
     },
     {
-      "title": "\"AI만 잘나가는 줄 알았는데\"…영업익 91% 뛴다는 '이 회사'",
-      "source": "한국경제",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFAzTm5LOW1SSk9iRDRQQ0tCdWd5UThzc3hncEk5YTRmNWVGUUwtZTVsdGpFNTVoTHE3V05KUzBZUDZWaEl0ZEZvajNpY3E0TExBeDhWM0JOQXZIQQ?oc=5",
-      "publishedAt": "2026-11-13T09:03:20.000Z"
+      "title": "[특징주] 심텍 장중 10%대 하락세 11만1800원 기록 : 기업주식정보",
+      "source": "재경일보",
+      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1jaUFTd1d1OTdMUnoteUo3WExwakFtLUg3b0hsM1lxX21aX2tXQ1JnaExhaVhhV0hueHJkMmlYQjdJaVBxa2JxazVoQQ?oc=5",
+      "publishedAt": "2026-11-16T01:26:55.000Z"
     },
     {
-      "title": "심텍 주가, 11월 13일 장중 130,700원 5.49% 상승",
+      "title": "[마감분석] 심텍, 13% 넘게 내리며 10만8100원에 마감 : 기업주식정보",
+      "source": "재경일보",
+      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE10R0s0V0FNbm9Zd05JODNuVFhTdEZLX0hXcGh1MHpja09OWmhDaUdici1KLV9qdTZkeDZIYnlweHB0ZWV0ZFV6MU4zRQ?oc=5",
+      "publishedAt": "2026-11-16T06:51:50.000Z"
+    },
+    {
+      "title": "심텍 주가, 11월 16일 장중 117,900원 5.53% 하락",
       "source": "중앙이코노미뉴스",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBtajRFUEhFZnc1VzhrZzF4dmFsWlhHdXAyR1NybW0xRW5yNmE2b3Z4ZWswNE9hdEl4WnhESUE3UWJ0b0ZPU1lFbmpPUVlHT01RemhmYTlJZVVUTFhxU0pSc0lfMUoyOXdyNUVHS011dWU1UQ?oc=5",
-      "publishedAt": "2026-11-13T01:31:18.000Z"
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1Ja2dfRkVHQ3AwYUUwSFYyaEpfYk11X1c4enEyWldUaTJ6R2tOcTdBLW80cGJ0N0doYlJWN1RVWmVtYi1CTDlhRWhab3M5M21mS3M2MzZGbHRSYURQWkZnUTNEamZXa3RITVFXWkdKMkF0UQ?oc=5",
+      "publishedAt": "2026-11-16T00:56:05.000Z"
     }
   ],
-  "dart": [
-    {
-      "title": "임원ㆍ주요주주특정증권등소유상황보고서",
-      "filer": "심텍홀딩스",
-      "receiptNo": "20261113001007",
-      "date": "20261113",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001007"
-    },
-    {
-      "title": "분기보고서 (2026.09)",
-      "filer": "심텍",
-      "receiptNo": "20261113000938",
-      "date": "20261113",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000938"
-    }
-  ],
+  "dart": [],
   "ownership": [
     {
       "kind": "insider",
@@ -186,9 +177,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 699.66,
-    "vs": 3.13,
-    "fltRt": 0.45
+    "clpr": 665.65,
+    "vs": -34.01,
+    "fltRt": -4.86
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -197,7 +188,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-16T08:47:26.009Z",
+  "builtAt": "2026-11-17T09:54:28.176Z",
   "archiveDays": 120,
-  "archiveFrom": "20260520"
+  "archiveFrom": "20260521"
 }

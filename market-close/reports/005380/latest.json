@@ -2,37 +2,29 @@
   "code": "005380",
   "name": "현대차",
   "market": "KOSPI",
-  "basDt": "20261113",
+  "basDt": "20261116",
   "price": {
     "code": "005380",
     "name": "현대차",
     "market": "KOSPI",
-    "basDt": "20261113",
-    "close": 269500,
-    "vs": 3000,
-    "fltRt": 1.13,
-    "open": 269000,
-    "high": 279000,
-    "low": 268000,
-    "prevClose": 266500,
-    "volume": 505173,
-    "tradeValue": 137883488250,
+    "basDt": "20261116",
+    "close": 265500,
+    "vs": -4000,
+    "fltRt": -1.48,
+    "open": 270000,
+    "high": 274000,
+    "low": 264000,
+    "prevClose": 269500,
+    "volume": 321955,
+    "tradeValue": 85951458250,
     "week52": {
       "low": 254500,
       "high": 750000,
-      "position": 0.030272452068617558,
-      "days": 245,
-      "from": "20251113"
+      "position": 0.022199798183652877,
+      "days": 244,
+      "from": "20251116"
     },
     "recent5": [
-      {
-        "basDt": "20261109",
-        "fltRt": -2.86,
-        "open": 275000,
-        "high": 279500,
-        "low": 270000,
-        "close": 271500
-      },
       {
         "basDt": "20261110",
         "fltRt": 1.29,
@@ -64,40 +56,99 @@
         "high": 279000,
         "low": 268000,
         "close": 269500
+      },
+      {
+        "basDt": "20261116",
+        "fltRt": -1.48,
+        "open": 270000,
+        "high": 274000,
+        "low": 264000,
+        "close": 265500
       }
     ],
     "volumeVs20d": {
-      "avg20": 566917,
-      "ratio": 0.89
+      "avg20": 551442,
+      "ratio": 0.58
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 528,
-      "rows52w": 245
+      "rows": 529,
+      "rows52w": 244
     },
-    "generatedAt": "2026-11-16T08:45:51.286Z"
+    "generatedAt": "2026-11-17T09:52:56.028Z"
   },
   "facts": [
     "코스피보다 2.11%p 높았어요.",
-    "거래량은 20일 평균의 0.9배예요.",
-    "시가보다 500원 높게 마감했어요."
+    "거래량은 20일 평균의 0.6배예요.",
+    "시가보다 4,500원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "[단독] 현대차 AVP본부, 조직개편 단행",
-      "source": "매일경제",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBjSE16LW1ZdWZnN1NTaUF3OU9qZ1VFUnR3ZWJyQUZiM0ZNQ0tpNWJjdlB3ZG9mYVZILWdvOFkycEYyT082aDF5c3FhaVBpQmFqT1BEWVZR?oc=5",
-      "publishedAt": "2026-11-13T07:30:21.000Z"
+      "title": "\"캐스퍼 잘 팔려도 못 만든다\"…현대차가 고민에 빠진 까닭",
+      "source": "한국경제",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE04dGM5N1c0TktBMkZMMG80Wk9Ra2tfYTB0RTdyWDZkeDJxNTIwV3Y1TUN3d0Jid25JRlhfTW0yM0E1RG9zMDNZVF9kNEN4WFR2Wl9wVHcxd3JtZw?oc=5",
+      "publishedAt": "2026-11-16T09:19:40.000Z"
+    },
+    {
+      "title": "현대차, 기아·포티투닷·모셔널 센서 표준화…자율주행 데이터 통합",
+      "source": "머니투데이",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1MUmlKWDhXSUQtV1ZsNlI2QW9WRXFteXJwNWx1WVdndTB6bXN2aVRCUzRIWGowMHBoTW9LRG1uczhXTE5XeUY3Z1hBNmpkVG1RVUNtTk15LWNrSG5Nd2tsUzRnZjVCVGllLUVqeNIBckFVX3lxTFAzcnRYaEpxUnR0VGRJVlFNdTdINU5UeURWSzQ2ajBUcGYxRGtzRW0wTnRpRXBaMnlMcjZCakRzbE12M25JeXA4T2x6V0pjWkxROXFzNWJpUm95RlRrN2ZjTnB4LUE4STNEbWdpTnZiX1ZkQQ?oc=5",
+      "publishedAt": "2026-11-16T08:36:49.000Z"
+    },
+    {
+      "title": "현대차, 전사 안전 캠페인 ‘세이프티 컬처 위크’ 진행",
+      "source": "서울경제",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1HR3NBYmtRbWk4cVk5Mm9mQUJUNjFUUXNzYUVYeXBScy1MVmhnekMtdDRWZEVXbFZHVm5oSlJzaGd0LTNEcFAzbGJsbGNGcHB4SFHSAVNBVV95cUxQQUJPaHdITVlUVGFKdTk4Q0lwN2NFOEF4emFhelJ5V3RhN0d3M3BhZE9PNkttNTFoZGZ2SEFHWS1WMTRxVnpzdkFXVVhlUlZrYTNQNA?oc=5",
+      "publishedAt": "2026-11-16T00:50:24.000Z"
+    },
+    {
+      "title": "\"안전, 기업문화로 뿌리내리도록\"..현대차 '세이프티 컬처 위크' 실시",
+      "source": "머니투데이",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE91RDhTTWEwek8xVVpSTk41SUc2ak1Za0psU1Jua1lJS1R4b3lfaXJyNEZkc3RSLVd0N3NMMjhwRlpDQmF5cmVwTF9KOFFWRE5GQzRlb05CS1lKNGFOeVUzcXptTXdNNDNJU0prWtIBckFVX3lxTE9HM1RsLVZDYmE1bGpRdlVGX3p3NnBDRldMMHJFX2psTTdMSTh6RnZGaEs4LUJiZFlNNmxIM0VucThyZTFLZGxzSW5DaVNpMVVxTzdzQjJIRzJSOGkyWXdfXzZ2c0dPYkVOeExBRWt0LXFIQQ?oc=5",
+      "publishedAt": "2026-11-16T01:29:14.000Z"
+    },
+    {
+      "title": "불타는 제네시스, 입 다문 현대차",
+      "source": "참세상",
+      "link": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE9EYUxhalZXSjIzamY3MkVMeGlUN29oVW5fXzhDZG5Lc3pEdldLWDhSSEdUQmk4UnhDT2VWdEt0Q0Rzdw?oc=5",
+      "publishedAt": "2026-11-16T08:17:22.000Z"
+    },
+    {
+      "title": "현대차 30년 아성에 도전장 낸 BYD…인도서 고급차 격돌",
+      "source": "디지털데일리",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE13QUtET0lOekJXcTA5Q29jLUszNlRvQTJ0bGRTWEhWY2ZnTGRoUWlDTC1paXk2Sk9oV1hvbzQtMmYwcy1ubzJPcHh0SlRlQkFrV3dOV1kwNEZ5bE5faWRqc1htd1E?oc=5",
+      "publishedAt": "2026-11-16T08:01:54.000Z"
+    },
+    {
+      "title": "현대자동차, 2026년 하반기 세이프티 컬처 위크 진행 | 뉴스 | 현대자동차그룹",
+      "source": "Hyundai Motor Group",
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNdWZ6VW96bG5OaFE3anY4a2dJbVVNd0laU3V6S25WbkRSZTRJWGNKSnZ1RFNpUXBOanNoaGRva2hFb0N2dG9adU93cF9KTkJkSGhiZTdYQnJ1RDFOY0VvQm9IR2lZU3EwMV9jczlDblRYNFNTajFhazJ1dXF1Z0x3NF9ZSzE2blNkcndjLVRJQmpWUQ?oc=5",
+      "publishedAt": "2026-11-15T23:30:00.000Z"
     }
   ],
-  "dart": [],
+  "dart": [
+    {
+      "title": "분기보고서 (2026.09)",
+      "filer": "현대자동차",
+      "receiptNo": "20261116001437",
+      "date": "20261116",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116001437"
+    },
+    {
+      "title": "임원ㆍ주요주주특정증권등소유상황보고서",
+      "filer": "박무곤",
+      "receiptNo": "20261116000767",
+      "date": "20261116",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116000767"
+    }
+  ],
   "ownership": [],
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5290.53,
-    "vs": -52.2,
-    "fltRt": -0.98
+    "clpr": 5100.5,
+    "vs": -190.03,
+    "fltRt": -3.59
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -106,7 +157,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-16T08:47:25.953Z",
+  "builtAt": "2026-11-17T09:54:28.144Z",
   "archiveDays": 120,
-  "archiveFrom": "20260520"
+  "archiveFrom": "20260521"
 }

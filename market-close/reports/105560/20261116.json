@@ -1,0 +1,132 @@
+{
+  "code": "105560",
+  "name": "KB금융",
+  "market": "KOSPI",
+  "basDt": "20261116",
+  "price": {
+    "code": "105560",
+    "name": "KB금융",
+    "market": "KOSPI",
+    "basDt": "20261116",
+    "close": 161600,
+    "vs": 2600,
+    "fltRt": 1.64,
+    "open": 162200,
+    "high": 162200,
+    "low": 155700,
+    "prevClose": 159000,
+    "volume": 824460,
+    "tradeValue": 132182323600,
+    "week52": {
+      "low": 120300,
+      "high": 186200,
+      "position": 0.6267071320182094,
+      "days": 244,
+      "from": "20251116"
+    },
+    "recent5": [
+      {
+        "basDt": "20261110",
+        "fltRt": 1.19,
+        "open": 158300,
+        "high": 158300,
+        "low": 152100,
+        "close": 152700
+      },
+      {
+        "basDt": "20261111",
+        "fltRt": 0.39,
+        "open": 153800,
+        "high": 155600,
+        "low": 151300,
+        "close": 153300
+      },
+      {
+        "basDt": "20261112",
+        "fltRt": -0.98,
+        "open": 154800,
+        "high": 154800,
+        "low": 149700,
+        "close": 151800
+      },
+      {
+        "basDt": "20261113",
+        "fltRt": 4.74,
+        "open": 151900,
+        "high": 159900,
+        "low": 151900,
+        "close": 159000
+      },
+      {
+        "basDt": "20261116",
+        "fltRt": 1.64,
+        "open": 162200,
+        "high": 162200,
+        "low": 155700,
+        "close": 161600
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 919514,
+      "ratio": 0.9
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 529,
+      "rows52w": 244
+    },
+    "generatedAt": "2026-11-17T09:52:53.467Z"
+  },
+  "facts": [
+    "코스피보다 5.23%p 높았어요.",
+    "거래량은 20일 평균의 0.9배예요.",
+    "시가보다 600원 낮게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "KB, 직원 AI 에이전트를 고객 창구로…그룹 공동 ‘GenAI 2.0’ 시동",
+      "source": "디지털데일리",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5MSURVQk53Vk10WHRZMFd2cEV6ZElKRUx0a3RUbDA3TUZQRFVuQXF5d29wRnB2NnJVOS1IdExMakdUZTJ5M3A4X0FxZnB6d09lQWUwZ24xSG5kQ0s4NUNoM2h3?oc=5",
+      "publishedAt": "2026-11-16T06:25:20.000Z"
+    },
+    {
+      "title": "KB금융 ‘쇄신’·우리은행 ‘유임’… 금융권 연말 CEO 인사태풍 본게임 돌입",
+      "source": "매일일보",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5VWi1XdkFMYTdWNkV3aHRFN3BfX3pXYmJuY25UY3AwRVhZUUxCY0FvUHJSQ3RmU3RHaVl3VWlXV1g5blV5aGJHZTl3bFZvV3ZaOUM0Y0xFekNwak11OTNnUy02dDc?oc=5",
+      "publishedAt": "2026-11-16T06:22:14.000Z"
+    },
+    {
+      "title": "KB금융, 지배·승계구조 ‘합격점ʼ…관건은 ‘절차 공개ʼ [8대 금융 지배구조 성적표]",
+      "source": "한국금융신문",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1ST21OUERwSU4tbGItTjlkNUhvUDU0SFo1Z29qTG5reFQ4M2pHQkgybUZFbWJwLTVDX00wU05oVWpudUU5WVJXTWxsc2RfdmhFRjRrZFFuQ1NZWHZyVUxLWVlfdHVFaU9yNXJzbmZQNm1PMXV3Wm90MUZjdw?oc=5",
+      "publishedAt": "2026-11-15T15:00:00.000Z"
+    }
+  ],
+  "dart": [
+    {
+      "title": "분기보고서 (2026.09)",
+      "filer": "KB금융",
+      "receiptNo": "20261116002225",
+      "date": "20261116",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116002225"
+    }
+  ],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 5100.5,
+    "vs": -190.03,
+    "fltRt": -3.59
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-11-17T09:54:28.140Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260521"
+}

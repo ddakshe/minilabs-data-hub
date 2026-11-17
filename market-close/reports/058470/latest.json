@@ -2,37 +2,29 @@
   "code": "058470",
   "name": "리노공업",
   "market": "KOSDAQ",
-  "basDt": "20261113",
+  "basDt": "20261116",
   "price": {
     "code": "058470",
     "name": "리노공업",
     "market": "KOSDAQ",
-    "basDt": "20261113",
-    "close": 51600,
-    "vs": -900,
-    "fltRt": -1.71,
-    "open": 53400,
-    "high": 54700,
-    "low": 50000,
-    "prevClose": 52500,
-    "volume": 644517,
-    "tradeValue": 34004753350,
+    "basDt": "20261116",
+    "close": 49000,
+    "vs": -2600,
+    "fltRt": -5.04,
+    "open": 51700,
+    "high": 52200,
+    "low": 48300,
+    "prevClose": 51600,
+    "volume": 615159,
+    "tradeValue": 30513421675,
     "week52": {
       "low": 46450,
       "high": 127000,
-      "position": 0.06393544382371198,
-      "days": 245,
-      "from": "20251113"
+      "position": 0.03165735567970205,
+      "days": 244,
+      "from": "20251116"
     },
     "recent5": [
-      {
-        "basDt": "20261109",
-        "fltRt": -0.32,
-        "open": 45700,
-        "high": 48350,
-        "low": 45550,
-        "close": 46450
-      },
       {
         "basDt": "20261110",
         "fltRt": 4.63,
@@ -64,53 +56,83 @@
         "high": 54700,
         "low": 50000,
         "close": 51600
+      },
+      {
+        "basDt": "20261116",
+        "fltRt": -5.04,
+        "open": 51700,
+        "high": 52200,
+        "low": 48300,
+        "close": 49000
       }
     ],
     "volumeVs20d": {
-      "avg20": 631907,
-      "ratio": 1.02
+      "avg20": 630526,
+      "ratio": 0.98
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 528,
-      "rows52w": 245
+      "rows": 529,
+      "rows52w": 244
     },
-    "generatedAt": "2026-11-16T08:46:22.626Z"
+    "generatedAt": "2026-11-17T09:53:26.857Z"
   },
   "facts": [
-    "코스닥보다 2.16%p 낮았어요.",
+    "코스닥보다 0.18%p 낮았어요.",
     "거래량은 20일 평균의 1.0배예요.",
-    "시가보다 1,800원 낮게 마감했어요."
+    "시가보다 2,700원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "리노공업: 파업 여파로 하락한 지금, 회복 가능성이 보이는지 지켜봐야",
-      "source": "데일리바이트(DAILY BYTE)",
-      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBvLUx1ODljZjI0ZHZtbUNlMlZ4bVlaYlYyQ1BHUFA1UjBRTE1YNjlsWW5HdUdNWHpJYWp0UUcwcXNyM09yVE9PUk01aWZORDU3UkdROERxcmJtbC1yb3FoX0MyTjVpQjlKOVZ1UXpVU0hfMnFtRXNndzRvNA?oc=5",
-      "publishedAt": "2026-11-13T05:07:57.000Z"
+      "title": "리노공업 노사, 183일 만에 임단협 잠정 합의",
+      "source": "서울경제TV",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE15R0dLcHBfTTJGM1N4NkJRSktycEZCQ3FrWld3WjQ4b3ZnN1cyVHp6V2lSUWZZMUp5WGtfOGdGQ2hMcGNJcWJFeWdOU2kwODVUcUNhUnVuZHJGMDM3dE9pN2VHOC0?oc=5",
+      "publishedAt": "2026-11-16T01:09:39.000Z"
     },
     {
-      "title": "리노공업 주가 숨 고르기…종가 51,600원, 1.71% 약세",
-      "source": "잡포스트",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBpcll2bGtjWlQ5VEV3Vy12bEpMRExPdE1mM19KRnZGaHhiNmlzWDFTYjhqanR0a1RITFlVVUd0UG56ZVhpdXByVVBlZEwzcWY4STlETC1ySFowd1llb08zLVotT3FYWVBEeE1uZ09B0gFyQVVfeXFMUHBYeDFKYnlVc0E3S3BGWS1OaXlXUXVObHhmVW14UUpxYVV5S3lGMDhneE5kNVVrYzNCeHNEZmM4U0RWMEx6YzhHaXpKQzdhMXBEZkhZMGFFYW5lcUNxSVh3UkZBVkFXaFRMUWFwdUtRaEZB?oc=5",
-      "publishedAt": "2026-11-13T07:06:24.000Z"
+      "title": "리노공업 노사, 183일 만에 임단협 잠정 합의… 생산 정상화 기대",
+      "source": "부산일보",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE05YnBUelhSUUZCVG14RFlHWTNLUE5mRVFjeU9wbXNDdE1aSXhGZUxDSmtVZ0lzc0laUEpCSElZTUZYb2FwV1VhUk5nSUhJQVBQU0JNZGVvUEpQZXlKMXlwRkZ5SVhlT3RlZW93OG0tYkV3cFB2N0NkdQ?oc=5",
+      "publishedAt": "2026-11-16T04:44:45.000Z"
     },
     {
-      "title": "리노공업 52,000원, 장중 흐름 가른 검사용 핀·소켓 수요",
-      "source": "잡포스트",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5Eb3dqTWdHRTc0TFFrcU9wbXdDdDZuVkJSZDRvSkZVdDcyUGNjYkZMYXBFc1I3QXRyWk5yRUZTdmFvXzZQXzhEdXE5ZHRkdGxZTE5SUzcyZk5FMXEyVHprd0lrWjA0N0thOVBfbi1R0gFyQVVfeXFMUC1Mb0tucHRhb0dGeU5yczNlOGdYa3cwOTZOaUZoS3gyQ3lOSjVBVkV1LUppOTFKR0ptRFZTcTRXS21yX181V0l1eFAxV2w3ZzdUZW02SnVMbXdyY0JRcTZoMlJ4WFlpOVRtTE56ZTZtUkt3?oc=5",
-      "publishedAt": "2026-11-13T06:11:34.000Z"
-    }
-  ],
-  "dart": [
+      "title": "리노공업 노사 183일 만에 손잡았다…첫 단체협약 눈앞",
+      "source": "매일경제",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5nbDZVeHhHb1JVZ1NyYXpVdElnbmFxcUdRTG4zeFk1aG00OWRQQjZiM1hnU0F4YUZ3WUNNLXlLSk5WMFVUbmNfNEFONTdMd0NkT1dZT2xn?oc=5",
+      "publishedAt": "2026-11-16T00:56:12.000Z"
+    },
     {
-      "title": "분기보고서 (2026.09)",
-      "filer": "리노공업",
-      "receiptNo": "20261113000396",
-      "date": "20261113",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000396"
+      "title": "[특징주] 리노공업 주가 4.46% 하락…2300원 떨어진 4만9300원",
+      "source": "CBC뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBQVTRIaFJaNDdJMkRGYXl1ZUJKeEtjMFc0QnNraS1Bc0xBeGtleWVmbzF3TEh1TTRpMTFpQ0JfcmNMajlWck9paEx1TzdzTjVHcDRuWHpXN1FXMUdkM1hydG0yS2ZzYXIx?oc=5",
+      "publishedAt": "2026-11-16T05:02:33.000Z"
+    },
+    {
+      "title": "리노공업 노사, 임금·단체협 잠정 합의",
+      "source": "헤럴드경제",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5leEl4NzNHU3M1djVYSTFhaVVpdXZSMWdYLVFJdlRlQVJQWVBEdXBsemtjY2NRQXA3NGppZlBPNVI3SlhVVmxkWEVFSThJbDRrcFJkR3lR?oc=5",
+      "publishedAt": "2026-11-16T01:36:40.000Z"
+    },
+    {
+      "title": "리노공업 노사, 183일 만에 임단협 잠정합의",
+      "source": "뉴시스",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5qbFVkbm9md0lUU3BxUHZ2eXcxelFsMUVEZW5UeTZFc1BobVFTS3Z1blJOYXFibFlEZUVaa3BlQ18xZm5BT1NIdEt0LWZYR2ZSTDNHNDROYzgxN0J5Qjd5dtIBeEFVX3lxTE9vZ1k0ZUhFa0ZSQVktcXlwQnpZX2xxRWVxTFduaDdVR0k2VHhDUUFrN3hwdE4wWjRfTzBiMDU2aTBob1B0RFo0MkktTGl3T3J6N1hnMDdJc2otbnZXVlZvbzlaUDZEOF9LRHRhTUVlMmYyOUYyb2UtOQ?oc=5",
+      "publishedAt": "2026-11-16T00:22:10.000Z"
+    },
+    {
+      "title": "리노공업 노사, ‘183일 만에 갈등 봉합’...임단협 첫 합의 눈앞",
+      "source": "CWN",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFA3cmJuVUJGdzk5eEdlbkpGYTdOblc4bmNJVnBSRGVsWmVfYWR4S0c3ZHBZMUZUUjhrZlpNVzdVWVN1bnBlSm1qeHA5UVktUlZueWRjX0RuVjNKbFZFa1RJTHpB?oc=5",
+      "publishedAt": "2026-11-16T02:35:00.000Z"
+    },
+    {
+      "title": "리노공업 노사 임단협 합의…첫 단체협약 문턱 : 기업·산업",
+      "source": "재경일보",
+      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE4wN1FFUE00cUlKX2xOWkRud3RIVloxUjM0b0Z0UTFrcDlwYVhFcGNVNVBxSFBMOTZwUGdFcUdMTW5BS3FjdDFJa2x3QQ?oc=5",
+      "publishedAt": "2026-11-16T00:35:23.000Z"
     }
   ],
+  "dart": [],
   "ownership": [
     {
       "kind": "major",
@@ -134,9 +156,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 699.66,
-    "vs": 3.13,
-    "fltRt": 0.45
+    "clpr": 665.65,
+    "vs": -34.01,
+    "fltRt": -4.86
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -145,7 +167,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-16T08:47:26.031Z",
+  "builtAt": "2026-11-17T09:54:28.192Z",
   "archiveDays": 120,
-  "archiveFrom": "20260520"
+  "archiveFrom": "20260521"
 }
