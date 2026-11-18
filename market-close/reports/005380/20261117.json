@@ -1,0 +1,124 @@
+{
+  "code": "005380",
+  "name": "현대차",
+  "market": "KOSPI",
+  "basDt": "20261117",
+  "price": {
+    "code": "005380",
+    "name": "현대차",
+    "market": "KOSPI",
+    "basDt": "20261117",
+    "close": 259000,
+    "vs": -6500,
+    "fltRt": -2.45,
+    "open": 262000,
+    "high": 262500,
+    "low": 257500,
+    "prevClose": 265500,
+    "volume": 306536,
+    "tradeValue": 79568178500,
+    "week52": {
+      "low": 254500,
+      "high": 750000,
+      "position": 0.009081735620585268,
+      "days": 245,
+      "from": "20251117"
+    },
+    "recent5": [
+      {
+        "basDt": "20261111",
+        "fltRt": -0.91,
+        "open": 273000,
+        "high": 278000,
+        "low": 269500,
+        "close": 272500
+      },
+      {
+        "basDt": "20261112",
+        "fltRt": -2.2,
+        "open": 272000,
+        "high": 273000,
+        "low": 264000,
+        "close": 266500
+      },
+      {
+        "basDt": "20261113",
+        "fltRt": 1.13,
+        "open": 269000,
+        "high": 279000,
+        "low": 268000,
+        "close": 269500
+      },
+      {
+        "basDt": "20261116",
+        "fltRt": -1.48,
+        "open": 270000,
+        "high": 274000,
+        "low": 264000,
+        "close": 265500
+      },
+      {
+        "basDt": "20261117",
+        "fltRt": -2.45,
+        "open": 262000,
+        "high": 262500,
+        "low": 257500,
+        "close": 259000
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 539836,
+      "ratio": 0.57
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 530,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-11-18T09:27:24.293Z"
+  },
+  "facts": [
+    "코스피보다 0.14%p 높았어요.",
+    "거래량은 20일 평균의 0.6배예요.",
+    "시가보다 3,000원 낮게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "현대차, 생산능력 늘었지만 공장은 멈췄다… 해외 가동률 80%대",
+      "source": "IT조선",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9nM2hIZU9XUkV3VnA3TmQ1THp6SV82YnRnZThDNG5RSVFyZVFuSFl1MzJEdE9oakRQWE5uZkQ3R0ZGMHlORjlmajRwZEVxeEV1ZExmMUJuV3FpblJhX3BaOEdna1Nnb05FaHMwdWZ3UFnSAXRBVV95cUxPaUZZR3lDczZiZ3ZJV0IwT1lxT3cweEMtam5pMHVpNy00S0k5OFdvSVJRU2hvdWZfWUV3NFNHTFJ0N2hFb1J2UFhKd0ZTN1pDNWtMRFZjRWhnMmFjX0NVc3pEc2ItQ2ZZYWtNUUNpdjc3Y0JfVA?oc=5",
+      "publishedAt": "2026-11-17T12:23:10.000Z"
+    },
+    {
+      "title": "현대차 해외법인, 9곳 중 5곳 이익 줄었다",
+      "source": "한국경제",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE54TWN3OGthRjM0Mkt1VGRXZVEzNkt4SFdyMDl0ZXQzYUh4dlJSVmdlNXhBVFlHMEMtbjVKMzB6bkxZTXN6YWczdmdMVWhqM1h5SG1RTnBZMDhiQQ?oc=5",
+      "publishedAt": "2026-11-17T08:29:57.000Z"
+    },
+    {
+      "title": "현대차그룹, 보스턴다이나믹스 100% 품었다…\"휴머노이드 로봇 상용화 속도\"",
+      "source": "뉴시스",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFAzQml2d0VwelJPLTk3V0NzWTFlX1BfZWN1eHdvX1NyZ0FZbFNRZjNKb2NkamNBSlhKRks3bkNLNDROUG1YOUVZdlFIZnlLSW4tY1dJV2ZuMVpLcXQzNU81LdIBeEFVX3lxTE9YbVV5eHRRcWFTc2FNeFd2ajJHUXhlM0x2ZXFLamdmZE5MUDdCcHhjcWdZQ0pzVS0xWnFUcFoxRGtlaXZQVlhDUVZTMkpuRzQ0QmpDbzQzVG9UbVFSTk5UcFI0bnJWSkJzbFJBNzh0eXUyMENoMXNjYg?oc=5",
+      "publishedAt": "2026-11-16T20:00:00.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 4968.48,
+    "vs": -132.02,
+    "fltRt": -2.59
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-11-18T09:28:46.869Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260522"
+}

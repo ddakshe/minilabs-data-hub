@@ -1,0 +1,124 @@
+{
+  "code": "277810",
+  "name": "레인보우로보틱스",
+  "market": "KOSDAQ",
+  "basDt": "20261117",
+  "price": {
+    "code": "277810",
+    "name": "레인보우로보틱스",
+    "market": "KOSDAQ",
+    "basDt": "20261117",
+    "close": 339000,
+    "vs": -19500,
+    "fltRt": -5.44,
+    "open": 347500,
+    "high": 354000,
+    "low": 334500,
+    "prevClose": 358500,
+    "volume": 63366,
+    "tradeValue": 21665974500,
+    "week52": {
+      "low": 302500,
+      "high": 880000,
+      "position": 0.0632034632034632,
+      "days": 245,
+      "from": "20251117"
+    },
+    "recent5": [
+      {
+        "basDt": "20261111",
+        "fltRt": 7.08,
+        "open": 330000,
+        "high": 352000,
+        "low": 325000,
+        "close": 348000
+      },
+      {
+        "basDt": "20261112",
+        "fltRt": -0.72,
+        "open": 348000,
+        "high": 363000,
+        "low": 342500,
+        "close": 345500
+      },
+      {
+        "basDt": "20261113",
+        "fltRt": 5.21,
+        "open": 351500,
+        "high": 402000,
+        "low": 351500,
+        "close": 363500
+      },
+      {
+        "basDt": "20261116",
+        "fltRt": -1.38,
+        "open": 374500,
+        "high": 386000,
+        "low": 357500,
+        "close": 358500
+      },
+      {
+        "basDt": "20261117",
+        "fltRt": -5.44,
+        "open": 347500,
+        "high": 354000,
+        "low": 334500,
+        "close": 339000
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 75767,
+      "ratio": 0.84
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 530,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-11-18T09:27:42.459Z"
+  },
+  "facts": [
+    "코스닥보다 3.1%p 낮았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가보다 8,500원 낮게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "국내 로봇 3社, 적자 늪 지속...외형은 성장",
+      "source": "지디넷코리아",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBUWC1WLU1FdkJPTGJRQl91ZVVSdVBIdm92OURjVWU4WFZkZzIxWEpaTzNvUDZ6NlB5TUJ3NjZjVXpndGxsQWtrYjZCQlVDSjItdGNmZjlR?oc=5",
+      "publishedAt": "2026-11-17T06:13:02.000Z"
+    },
+    {
+      "title": "레인보우로보틱스 주가 하락 중",
+      "source": "아시아뉴스통신",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE03RlUteUZLRFd5enFQT2N0NURQby1wX3lZTmJkcFFfcWRWZFlsSkZ1NUo1V1ItclpWbU5SUHliWVJQUklKeXV0dG5xZlRJWnFZSmp1TFU1SWpTSUtuUmlDS2hPOUw4T1oteUxSR2lpYnViNzZw?oc=5",
+      "publishedAt": "2026-11-17T00:23:30.000Z"
+    },
+    {
+      "title": "몸집 키우는 韓 로봇업계, 적자는 눈덩이⋯‘실속 없는 성장’ 딜레마",
+      "source": "엠투데이",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1kbzlIVHJtLWtycFY2UmVSRy1Ya0NlRXloNTFwekFLUXppVnJBUmRaeEREMU9tMDVUVS1yWjBISV9FRTlUN1EyQjlPMzJicjVacXZ2Y3FFTjhNWGNTVjdYdFdLejk5OTRXUHIySThpQQ?oc=5",
+      "publishedAt": "2026-11-17T02:15:11.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 650.06,
+    "vs": -15.59,
+    "fltRt": -2.34
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-11-18T09:28:46.898Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260522"
+}

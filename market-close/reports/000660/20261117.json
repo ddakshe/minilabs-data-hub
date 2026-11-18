@@ -1,0 +1,118 @@
+{
+  "code": "000660",
+  "name": "SK하이닉스",
+  "market": "KOSPI",
+  "basDt": "20261117",
+  "price": {
+    "code": "000660",
+    "name": "SK하이닉스",
+    "market": "KOSPI",
+    "basDt": "20261117",
+    "close": 1098000,
+    "vs": -22000,
+    "fltRt": -1.96,
+    "open": 1098000,
+    "high": 1150000,
+    "low": 1092000,
+    "prevClose": 1120000,
+    "volume": 3736935,
+    "tradeValue": 4159524356892,
+    "week52": {
+      "low": 519000,
+      "high": 2919000,
+      "position": 0.24125,
+      "days": 245,
+      "from": "20251117"
+    },
+    "recent5": [
+      {
+        "basDt": "20261111",
+        "fltRt": 5.36,
+        "open": 1206000,
+        "high": 1290000,
+        "low": 1193000,
+        "close": 1277000
+      },
+      {
+        "basDt": "20261112",
+        "fltRt": -1.8,
+        "open": 1280000,
+        "high": 1310000,
+        "low": 1245000,
+        "close": 1254000
+      },
+      {
+        "basDt": "20261113",
+        "fltRt": -3.03,
+        "open": 1292000,
+        "high": 1317000,
+        "low": 1201000,
+        "close": 1216000
+      },
+      {
+        "basDt": "20261116",
+        "fltRt": -7.89,
+        "open": 1216000,
+        "high": 1222000,
+        "low": 1113000,
+        "close": 1120000
+      },
+      {
+        "basDt": "20261117",
+        "fltRt": -1.96,
+        "open": 1098000,
+        "high": 1150000,
+        "low": 1092000,
+        "close": 1098000
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 3875469,
+      "ratio": 0.96
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 530,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-11-18T09:27:07.932Z"
+  },
+  "facts": [
+    "코스피보다 0.63%p 높았어요.",
+    "거래량은 20일 평균의 1.0배예요.",
+    "시가 그대로 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "키움證, SK하이닉스 목표가 180만원으로 하향…\"연말 조정 후 반등\"",
+      "source": "연합인포맥스",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE95SG5QbWRjRzBNWmo1U21ydUtfbkFSQnhIUnh3R0o2ZjcxMVRWaUhpQ0dZbW1HcFljUlcyZHRZR2pmYnhPQlZXN0R0ODZUbEtDbUdsU0lwTjhjaGdNRExOZmNUUW9xbFk2TFBUTFhQUFA?oc=5",
+      "publishedAt": "2026-11-16T23:35:00.000Z"
+    },
+    {
+      "title": "영업이익률 80% 찍은 SK하이닉스, 순이익 반토막 난 까닭은",
+      "source": "글로벌이코노믹",
+      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQeVBuN3dDNnVlZ1BmWlFJUlplR3RuNzd6Rzc5U1lwVFR2Z0ZYbjVIT1ZMRWgtMklRUVFCNUE3Sk95d3BFQzlJbjcxemJ1bFNwQjFaNkhfdXU0VHJKZUNSMG1nLXIwdlItSFpUMmtVQVNEckVNSDBkMDJTNXJvVzEybFNwNlM2dnNx?oc=5",
+      "publishedAt": "2026-11-16T21:22:05.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 4968.48,
+    "vs": -132.02,
+    "fltRt": -2.59
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-11-18T09:28:46.843Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260522"
+}

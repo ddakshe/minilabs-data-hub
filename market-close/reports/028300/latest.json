@@ -2,37 +2,29 @@
   "code": "028300",
   "name": "HLB",
   "market": "KOSDAQ",
-  "basDt": "20261116",
+  "basDt": "20261117",
   "price": {
     "code": "028300",
     "name": "HLB",
     "market": "KOSDAQ",
-    "basDt": "20261116",
-    "close": 28100,
-    "vs": -450,
-    "fltRt": -1.58,
-    "open": 28300,
-    "high": 29150,
-    "low": 28000,
-    "prevClose": 28550,
-    "volume": 491755,
-    "tradeValue": 14068372725,
+    "basDt": "20261117",
+    "close": 28300,
+    "vs": 200,
+    "fltRt": 0.71,
+    "open": 27500,
+    "high": 29050,
+    "low": 27400,
+    "prevClose": 28100,
+    "volume": 468257,
+    "tradeValue": 13300245900,
     "week52": {
       "low": 25650,
       "high": 68200,
-      "position": 0.057579318448883664,
-      "days": 244,
-      "from": "20251116"
+      "position": 0.06227967097532315,
+      "days": 245,
+      "from": "20251117"
     },
     "recent5": [
-      {
-        "basDt": "20261110",
-        "fltRt": 0.33,
-        "open": 30850,
-        "high": 30900,
-        "low": 29600,
-        "close": 30250
-      },
       {
         "basDt": "20261111",
         "fltRt": -1.16,
@@ -64,72 +56,80 @@
         "high": 29150,
         "low": 28000,
         "close": 28100
+      },
+      {
+        "basDt": "20261117",
+        "fltRt": 0.71,
+        "open": 27500,
+        "high": 29050,
+        "low": 27400,
+        "close": 28300
       }
     ],
     "volumeVs20d": {
-      "avg20": 645666,
-      "ratio": 0.76
+      "avg20": 646919,
+      "ratio": 0.72
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 529,
-      "rows52w": 244
+      "rows": 530,
+      "rows52w": 245
     },
-    "generatedAt": "2026-11-17T09:53:24.280Z"
+    "generatedAt": "2026-11-18T09:27:50.569Z"
   },
   "facts": [
-    "코스닥보다 3.28%p 높았어요.",
-    "거래량은 20일 평균의 0.8배예요.",
-    "시가보다 200원 낮게 마감했어요."
+    "코스닥보다 3.05%p 높았어요.",
+    "거래량은 20일 평균의 0.7배예요.",
+    "시가보다 800원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "HLB테라퓨틱스, 신경영양성각막염 신약 美 3상 실패",
+      "title": "HLB펩, 롯데바이오로직스 초대 대표 이원직 사장 영입",
+      "source": "IT조선",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1laUttRTFUZm1VS1VXeXFoNW9nbEtDUTVvQkNaOElOWTZZdzBmOFctU1lHdXh2bDdMa2o2cy1wcmNLM3FkcDc2V1Y4NWZDRV9vZFJqR1FGMi1QOWtMUjdKQjlYUU1xTUdnWFV3SUNkbmHSAXRBVV95cUxPTzR2N3hjNzJCYjJhVHZmQ090eXBDUFZJLVk0OVZsUDkxZkxGcGlmMG45NzgxQ3ExWV8tMGtmYVhqNjJwZDRDcW1wUC1vWHJBdzBESmNXZ2djRHVqVm5JQ0FSaHB5M0RFdG82dWhwOVl1NWw3YQ?oc=5",
+      "publishedAt": "2026-11-17T06:32:45.000Z"
+    },
+    {
+      "title": "HLB펩, 이원직 전 롯데바이오 대표 영입…해외 사업 확대",
       "source": "뉴스1",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBLeU1wT1NPRDhvY2dUOVBNd3NvYjlTZmhpY3N3YkJ3elp2SGZ2YTdLWlFxTGFaZ3lzR3M0UFlZMURWR2RONnEwTTByS0dqUjdwUlB2YUJlNVNyNTczdjVQOQ?oc=5",
-      "publishedAt": "2026-11-15T23:45:56.000Z"
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBwMFZmV3J4dl9QdjQ2RjJfUWxRUXNZVGxCVGtQOWlWcE5YaGRXa282ZjExYzBlc0hKU2J3TVdyTWRySHpVM1doVC14UXNSVldMaUdLd1lhZkVWSFdtTW1lWA?oc=5",
+      "publishedAt": "2026-11-17T04:39:57.000Z"
     },
     {
-      "title": "[이슈플러스] HLB 그룹, 신약 3상 또 고배…주주 불신 커져",
-      "source": "서울경제TV",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFA0cmtCTTdiOHFjSi1xMHpydkVyNDVFTUFPdkdUWTdtSG1HYUV1b0FtVXJmdWY5ODlKbHN3R3VoUWluR1gxYUNBS3NZVWotOUNvSVRfNjJrc2RWZmhxNXY2Y0JBVHQ?oc=5",
-      "publishedAt": "2026-11-16T09:32:12.000Z"
+      "title": "HLB, 각막염 신약 美 3상 실패…돌고 돌아 간암 신약 '시험대'",
+      "source": "아시아타임즈",
+      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE4zQXItMmFBcnpMSjNna0FyQ3YzZ3lyUG9FUzRUQUxnWVcwaDVPOUg5ZnBxTzlYWmhiTk10RjVkRzYtM3MzblRsa1I3WnY2ck1qTndUc0IxdU16S0docWc?oc=5",
+      "publishedAt": "2026-11-17T05:51:00.000Z"
     },
     {
-      "title": "HLB테라퓨틱스, RGN-259 3상 1차 평가변수 유의성 미확보",
-      "source": "메디포뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBMbWFrM0ZEVHY0eVozTnhMdEtmRGdhMk01V1FmX0RCT05vYXlFWVhYbHo4bWZZb2s0M2tlcWktd25DeGs1ODVoWGg2M0lkaXRqUXFwSU1lcVFQTWZyRmRrY29fODA?oc=5",
-      "publishedAt": "2026-11-15T22:49:08.000Z"
+      "title": "HLB파나진, MEDICA 2026 참가해 해외 판로 확대 추진",
+      "source": "로이슈",
+      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9VWWhqd19BOWhLbEp3Z0JOeTRVR1daTnQydnZMX3JnSFkzVDJ0OURFQzRhZlBkRDIwX0p6WnN1YVpUWWcyT1pjekNmMFQxRlZRaF9RVUUtS1ZqMjR0Zzdza2tyV0VnSlpjRzktY0VsU2RFMDZVcElEY1ln?oc=5",
+      "publishedAt": "2026-11-17T08:59:17.000Z"
     },
     {
-      "title": "美 임상 3상 1차 지표 미충족…HLB테라퓨틱스 하한가",
-      "source": "한국경제",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1kM2lvYVA3cGc1RF9GblNRamlDRE1mcXdiMUw1QmpmLUpQY29GeFNtMkE2NmNSRy1fa2ItYUJWSjV3UTN2UjJISEh3TGRkOU01ci1GTWIxbHowUQ?oc=5",
-      "publishedAt": "2026-11-16T00:19:39.000Z"
+      "title": "HLB에프앤비 더리버 다이닝 브랜드, 캐치테이블 연말 추천 리스트에 3곳 선정",
+      "source": "한국면세뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB1NjU0VTdoOUlnelZfWEFiLURSM01OQS1ZNEljOEJMZzJDbFctb1BjQ1l4eXg1NGxkUUViSmJGZmNYdXdnVGdGajNVNTdDTEN4bngyY2FvdlB6dHVBLVhVWTh5Um5fNVNsekE?oc=5",
+      "publishedAt": "2026-11-17T02:52:32.000Z"
     },
     {
-      "title": "HLB테라퓨틱스, 'Tβ4' 각막염 美3상 \"1차 미충족\"",
-      "source": "바이오스펙테이터",
-      "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1IRGFDWFZyb0dfeU56aWV0ZlRadmJzQ3lJWkFFcTRtNnZiWXliZFFqcXZOT3diQ2lqbHp3VlM3YVFNMmRuaTJPaGt3RUlEVzM0TnZWU1NScw?oc=5",
-      "publishedAt": "2026-11-15T23:50:00.000Z"
+      "title": "HLB펩, 이원직 전 롯데바이오 대표 영입…해외 공략 강화",
+      "source": "팜이데일리",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE51SmpZc1FXcGtJWnVLRHZyTkJEd292SUlQRU1EQldSSUo1enl2bUdCODdaVTRUR3owMFByM05GbkpzeTFTVTJ2UEMwSVpEZS05Sk93bm0takh3RlRUeEtkTWxaWFBLV2gxaHFNa0h3?oc=5",
+      "publishedAt": "2026-11-17T04:46:12.000Z"
     },
     {
-      "title": "HLB테라퓨틱스, RGN-259 미국 임상3상 실패…1차 평가변수 미충족 By EBN",
-      "source": "Investing.com 한국어",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE4tUEl6SzFGSnNxQUFNVTAtb3VTQnFWUTNBVXZhS013VWNEbnhiRWl6NDVCNGpIdWFBX2E4S2hMVU5LOWhITEg3T0tvNEVzNHZXdWxYMk9xV2dYWFZjX3RoY01MeFV0U0oyRVlHWDRBMEs?oc=5",
-      "publishedAt": "2026-11-16T05:37:00.000Z"
+      "title": "HLB펩, 이원직 전 롯데바이오 대표 신임 사장 영입",
+      "source": "히트뉴스",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9Ya01RZlE2WEZHc0lqN1VFTHNtcmhYR2NneWtNOVYxQXp6eVR4ejQycWZmS1UxcDFBYUVqaDIyNEh3ODJidnFORTQyMHItbmdxYjVJNll1Zkp6cVNNaFlpeFJxOUZrS0NYenNR?oc=5",
+      "publishedAt": "2026-11-17T04:23:09.000Z"
     },
     {
-      "title": "[바이오 마감 브리핑]임상 재료에 급등락…코아스템 상한가·HLB테라 하한가",
-      "source": "메디코파마",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE40LWdwc3JOcUR6ZnU3OUJQT2x4SmRoNTVxYlltd0xvazBhNXg2WDFTY29EaWxKbDJBWkI3SWVDZ0I1cXlzcXRlZ0JOS3RMR29YWk9oeGMtX0toWlNnQXl1TDNUMVVGUFNSV002NmdocTR4QQ?oc=5",
-      "publishedAt": "2026-11-16T07:35:00.000Z"
-    },
-    {
-      "title": "[ET특징주] HLB테라퓨틱스, 각막염 신약 미국 임상 3상 유효성 확인 실패… 주가 '하한가'",
-      "source": "전자신문",
-      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE11QkRKc20wcUtCcHRhMUszX0k0eWlibUU0SE9MRy1kQmtYSXhyUjZpdkljbTZjR1BkQ2VJUVpDUUstUW53Y3RNNDBjRGdtZw?oc=5",
-      "publishedAt": "2026-11-16T02:13:11.000Z"
+      "title": "AriBio Lab, Soar...HLB Therapeutics Hits Lower Limit[K-Bio Bulse]",
+      "source": "팜이데일리",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5IQy0zaDlhZzRUcENyWUQ4OG1yb1ZPU0hOVDFzWlVGUXdnQ0hMZXhVZDVTa2ZUWWhpUlJ1NmRxZHAyUS0yT2hqZnBZSjBvUEl3WnVWQ1dlNkhiSk0xS2dIdnhoNUE4Sm5uMFNmZk1n?oc=5",
+      "publishedAt": "2026-11-16T21:00:12.000Z"
     }
   ],
   "dart": [],
@@ -156,9 +156,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 665.65,
-    "vs": -34.01,
-    "fltRt": -4.86
+    "clpr": 650.06,
+    "vs": -15.59,
+    "fltRt": -2.34
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -167,7 +167,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-17T09:54:28.188Z",
+  "builtAt": "2026-11-18T09:28:46.909Z",
   "archiveDays": 120,
-  "archiveFrom": "20260521"
+  "archiveFrom": "20260522"
 }
