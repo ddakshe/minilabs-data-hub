@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-17T00:00:00Z",
+  "generatedAt": "2026-11-18T00:00:00Z",
   "source": "SEC EDGAR",
   "sourceUrl": "https://www.sec.gov/edgar",
-  "usdKrw": 1334.87,
+  "usdKrw": 1336.21,
   "listed": [
     {
       "cik": "0002145089",
@@ -176,6 +176,66 @@
   ],
   "upcoming": [
     {
+      "cik": "0002130357",
+      "name": "Anthropic, PBC",
+      "ticker": "ANT",
+      "filedAt": "2026-11-17",
+      "isSpac": false,
+      "sic": "7372",
+      "industry": "소프트웨어·IT",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002130357&type=S-1"
+    },
+    {
+      "cik": "0002147831",
+      "name": "UCSB Acquisition Corp.",
+      "ticker": "UCSB",
+      "filedAt": "2026-11-17",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002147831&type=S-1"
+    },
+    {
+      "cik": "0001620704",
+      "name": "MED-X, INC.",
+      "ticker": "MXRX",
+      "filedAt": "2026-11-17",
+      "isSpac": false,
+      "sic": "2870",
+      "industry": "제조",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001620704&type=S-1"
+    },
+    {
+      "cik": "0001894954",
+      "name": "Expion Energy, Inc.",
+      "ticker": "XPON",
+      "filedAt": "2026-11-17",
+      "isSpac": false,
+      "sic": "3690",
+      "industry": "제조",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": 9651870,
+        "netIncome": -6235187,
+        "assets": 8071362
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001894954&type=S-1"
+    },
+    {
+      "cik": "0002152975",
+      "name": "Bitwise Zcash ETF",
+      "ticker": null,
+      "filedAt": "2026-11-17",
+      "isSpac": false,
+      "sic": "6221",
+      "industry": "금융·부동산",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002152975&type=S-1"
+    },
+    {
       "cik": "0002074973",
       "name": "Agility Robotics, Inc.",
       "ticker": "AGLT",
@@ -337,17 +397,6 @@
         "assets": 25562849
       },
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001868419&type=S-1"
-    },
-    {
-      "cik": "0002130357",
-      "name": "Anthropic, PBC",
-      "ticker": "ANT",
-      "filedAt": "2026-11-10",
-      "isSpac": false,
-      "sic": "7372",
-      "industry": "소프트웨어·IT",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002130357&type=S-1"
     },
     {
       "cik": "0002113640",
@@ -578,17 +627,6 @@
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002111009&type=S-1"
     },
     {
-      "cik": "0001620704",
-      "name": "MED-X, INC.",
-      "ticker": "MXRX",
-      "filedAt": "2026-11-05",
-      "isSpac": false,
-      "sic": "2870",
-      "industry": "제조",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001620704&type=S-1"
-    },
-    {
       "cik": "0001973276",
       "name": "LIS Technologies Inc",
       "ticker": "LIS",
@@ -663,17 +701,6 @@
       "industry": "금융·부동산",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002073616&type=S-1"
-    },
-    {
-      "cik": "0002147831",
-      "name": "UCSB Acquisition Corp.",
-      "ticker": null,
-      "filedAt": "2026-10-30",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002147831&type=S-1"
     },
     {
       "cik": "0002016072",
@@ -2632,44 +2659,6 @@
         "assets": 133140150
       },
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002068385&type=S-1"
-    },
-    {
-      "cik": "0002133239",
-      "name": "Southern Cross Acquisition II Corp.",
-      "ticker": "SCAT",
-      "filedAt": "2026-08-19",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002133239&type=S-1"
-    },
-    {
-      "cik": "0002064768",
-      "name": "Canary Staked TRX ETF",
-      "ticker": "TRXS",
-      "filedAt": "2026-08-19",
-      "isSpac": false,
-      "sic": "6221",
-      "industry": "금융·부동산",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002064768&type=S-1"
-    },
-    {
-      "cik": "0002019793",
-      "name": "XCF Global, Inc.",
-      "ticker": "SAFX",
-      "filedAt": "2026-08-19",
-      "isSpac": false,
-      "sic": "2860",
-      "industry": "제조",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 0,
-        "netIncome": 74004768,
-        "assets": 419472575
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002019793&type=S-1"
     }
   ]
 }
