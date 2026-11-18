@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-11-17",
-  "week": "261117",
+  "updatedAt": "2026-11-18",
+  "week": "261118",
   "period": {
     "start": "2026-11-11",
     "end": "2026-11-17"
@@ -81,7 +81,7 @@
   ],
   "leaflets": [
     {
-      "id": "emart-261117",
+      "id": "emart-261118",
       "mart": "emart",
       "store": "이마트",
       "region": "national",
@@ -108,7 +108,7 @@
       "sourceUrl": "https://eapp.emart.com/leaflet/leafletView_EL.do"
     },
     {
-      "id": "homeplus-261117-805",
+      "id": "homeplus-261118-805",
       "mart": "homeplus",
       "store": "홈플러스 익스프레스",
       "region": null,
@@ -1733,6 +1733,18 @@
           "hours": "10:00~24:00",
           "dayoff": "11/22(일)",
           "tel": "031-391-8545"
+        },
+        {
+          "name": "홈플러스 익스프레스 삼선점",
+          "region": "seoul",
+          "coords": {
+            "lat": 37.5889834,
+            "lng": 127.0079601
+          },
+          "addr": "서울특별시 성북구 삼선교로 6",
+          "hours": "10:00~24:00",
+          "dayoff": "11/22(일)",
+          "tel": "02-3675-8543"
         },
         {
           "name": "홈플러스 익스프레스 삼전역점",
@@ -3513,7 +3525,7 @@
       ]
     },
     {
-      "id": "homeplus-261117-592",
+      "id": "homeplus-261118-592",
       "mart": "homeplus",
       "store": "홈플러스",
       "region": null,
@@ -3544,6 +3556,7 @@
       },
       "pages": [
         "https://mres.my.homeplus.co.kr/files/leaflet_thema/91RlNNQVfzyyk1DFiMStnpFA8KW4ZW-2405534.jpg",
+        "https://mres.my.homeplus.co.kr/files/leaflet_thema/A3DvwKTuAVeeo5dSjTzOcJs4rbeuom-3379439.jpg",
         "https://mres.my.homeplus.co.kr/files/leaflet_thema/h16ep5HddV8SGZvdsHdOoaLExH3uS1-5979927.jpg"
       ],
       "sourceUrl": "https://my.homeplus.co.kr/leaflet",
@@ -4355,7 +4368,7 @@
       ]
     },
     {
-      "id": "traders-261117",
+      "id": "traders-261118",
       "mart": "traders",
       "store": "트레이더스",
       "region": "national",
@@ -4409,21 +4422,137 @@
       "coords": null
     },
     {
-      "id": "nobrand-261117",
-      "mart": "nobrand",
-      "store": "노브랜드",
-      "region": "national",
+      "id": "megamart-20261118",
+      "mart": "megamart",
+      "store": "메가마트",
+      "region": null,
+      "regions": [
+        "ulsan",
+        "busan",
+        "gyeongnam",
+        "seoul",
+        "gyeongbuk"
+      ],
       "coords": null,
-      "regionGrade": "national",
+      "regionGrade": "exact",
+      "pages": [
+        "https://ebook.megamart.com/ebook2/catImage/3387/s002.jpg",
+        "https://ebook.megamart.com/ebook2/catImage/3387/s003.jpg",
+        "https://ebook.megamart.com/ebook2/catImage/3387/s004.jpg"
+      ],
+      "stores": [
+        {
+          "name": "메가마트 언양점",
+          "region": "ulsan",
+          "coords": {
+            "lat": 35.567,
+            "lng": 129.113
+          },
+          "cover": "https://ebook.megamart.com/ebook2/catImage/3387/s001.jpg",
+          "extras": [
+            "https://ebook.megamart.com/ebook2/catImage/3387/s005.jpg"
+          ]
+        },
+        {
+          "name": "메가마트 울산점",
+          "region": "ulsan",
+          "coords": {
+            "lat": 35.538,
+            "lng": 129.311
+          },
+          "cover": "https://ebook.megamart.com/ebook2/catImage/3388/s001.jpg",
+          "extras": []
+        },
+        {
+          "name": "메가마트 기장점",
+          "region": "busan",
+          "coords": {
+            "lat": 35.244,
+            "lng": 129.222
+          },
+          "cover": "https://ebook.megamart.com/ebook2/catImage/3389/s001.jpg",
+          "extras": []
+        },
+        {
+          "name": "메가마트 김해점",
+          "region": "gyeongnam",
+          "coords": {
+            "lat": 35.234,
+            "lng": 128.889
+          },
+          "cover": "https://ebook.megamart.com/ebook2/catImage/3390/s001.jpg",
+          "extras": [
+            "https://ebook.megamart.com/ebook2/catImage/3390/s005.jpg"
+          ]
+        },
+        {
+          "name": "메가마트 문현점",
+          "region": "busan",
+          "coords": {
+            "lat": 35.137,
+            "lng": 129.07
+          },
+          "cover": "https://ebook.megamart.com/ebook2/catImage/3392/s001.jpg",
+          "extras": []
+        },
+        {
+          "name": "메가마트 덕계점",
+          "region": "gyeongnam",
+          "coords": {
+            "lat": 35.416,
+            "lng": 129.135
+          },
+          "cover": "https://ebook.megamart.com/ebook2/catImage/3391/s001.jpg",
+          "extras": []
+        },
+        {
+          "name": "메가마트 덕천점",
+          "region": "busan",
+          "coords": {
+            "lat": 35.211,
+            "lng": 128.991
+          },
+          "cover": "https://ebook.megamart.com/ebook2/catImage/3394/s001.jpg",
+          "extras": []
+        },
+        {
+          "name": "메가마트 방이점",
+          "region": "seoul",
+          "coords": {
+            "lat": 37.512,
+            "lng": 127.115
+          },
+          "cover": "https://ebook.megamart.com/ebook2/catImage/3395/s001.jpg",
+          "extras": []
+        },
+        {
+          "name": "메가마트 외동점",
+          "region": "gyeongbuk",
+          "coords": {
+            "lat": 35.783,
+            "lng": 129.257
+          },
+          "cover": "https://ebook.megamart.com/ebook2/catImage/3393/s001.jpg",
+          "extras": []
+        },
+        {
+          "name": "메가마트 동래점",
+          "region": "busan",
+          "coords": {
+            "lat": 35.205,
+            "lng": 129.084
+          },
+          "cover": "https://ebook.megamart.com/ebook2/catImage/3396/s001.jpg",
+          "extras": [
+            "https://ebook.megamart.com/ebook2/catImage/3396/s005.jpg"
+          ]
+        }
+      ],
       "period": {
-        "start": "2026-11-11",
+        "start": "2026-11-18",
         "end": "2026-11-17"
       },
-      "pages": [
-        "https://d1ntfwso16v3fv.cloudfront.net/nb_campaign/20261111/26%E1%84%82%E1%85%A7%E1%86%AB%2011%E1%84%8B%E1%85%AF%E1%86%AF%2012%E1%84%8B%E1%85%B5%E1%86%AF%20%E1%84%82%E1%85%A9%E1%84%87%E1%85%B3%E1%84%85%E1%85%A2%E1%86%AB%E1%84%83%E1%85%B3%20%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%E1%84%87%E1%85%A7%E1%86%AF%20%E1%84%91%E1%85%A9%E1%84%89%E1%85%B3%E1%84%90%E1%85%A5_5%E1%84%8E%E1%85%A1(%E1%84%8C%E1%85%A2%E1%84%8E%E1%85%AE%E1%86%AF%E1%84%80%E1%85%A9%E1%84%92%E1%85%AA%E1%86%A8%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%8B%E1%85%AD%E1%86%BC)1%201.jpg",
-        "https://d1ntfwso16v3fv.cloudfront.net/nb_campaign/20261111/26%E1%84%82%E1%85%A7%E1%86%AB%2011%E1%84%8B%E1%85%AF%E1%86%AF%2012%E1%84%8B%E1%85%B5%E1%86%AF%20%E1%84%82%E1%85%A9%E1%84%87%E1%85%B3%E1%84%85%E1%85%A2%E1%86%AB%E1%84%83%E1%85%B3%20%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%E1%84%87%E1%85%A7%E1%86%AF%20%E1%84%91%E1%85%A9%E1%84%89%E1%85%B3%E1%84%90%E1%85%A5_5%E1%84%8E%E1%85%A1(%E1%84%8C%E1%85%A2%E1%84%8E%E1%85%AE%E1%86%AF%E1%84%80%E1%85%A9%E1%84%92%E1%85%AA%E1%86%A8%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%8B%E1%85%AD%E1%86%BC)2%201.jpg"
-      ],
-      "sourceUrl": "https://chatbot.emart.com/flyers"
+      "sourceUrl": "https://ebook.megamart.com/ebook2/ecatalog5.jsp?Cate=0100000000"
     },
     {
       "id": "hanaro-24187",
@@ -4435,7 +4564,7 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-daejeon-261117-1.jpg"
+        "hanaro-daejeon-261118-1.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
@@ -4455,8 +4584,8 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-busan-261117-1.jpg",
-        "hanaro-busan-261117-2.jpg"
+        "hanaro-busan-261118-1.jpg",
+        "hanaro-busan-261118-2.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
@@ -4476,8 +4605,8 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-jeonbuk-261117-1.jpg",
-        "hanaro-jeonbuk-261117-2.jpg"
+        "hanaro-jeonbuk-261118-1.jpg",
+        "hanaro-jeonbuk-261118-2.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
@@ -4497,8 +4626,8 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-chungbuk-261117-1.jpg",
-        "hanaro-chungbuk-261117-2.jpg"
+        "hanaro-chungbuk-261118-1.jpg",
+        "hanaro-chungbuk-261118-2.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
@@ -4518,8 +4647,8 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-seoul-261117-1.jpg",
-        "hanaro-seoul-261117-2.jpg"
+        "hanaro-seoul-261118-1.jpg",
+        "hanaro-seoul-261118-2.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
@@ -4529,5 +4658,8 @@
         "lng": 127.048
       }
     }
+  ],
+  "failed": [
+    "nobrand: 전단 이미지 0장 — 페이지 구조 변경 의심"
   ]
 }
