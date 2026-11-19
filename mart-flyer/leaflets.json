@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-11-18",
-  "week": "261118",
+  "updatedAt": "2026-11-19",
+  "week": "261119",
   "period": {
-    "start": "2026-11-11",
-    "end": "2026-11-17"
+    "start": "2026-11-18",
+    "end": "2026-11-24"
   },
   "regions": [
     {
@@ -81,34 +81,26 @@
   ],
   "leaflets": [
     {
-      "id": "emart-261118",
+      "id": "emart-261119",
       "mart": "emart",
       "store": "이마트",
       "region": "national",
       "coords": null,
       "regionGrade": "national",
       "period": {
-        "start": "2026-11-11",
-        "end": "2026-11-17"
+        "start": "2026-11-18",
+        "end": "2026-11-24"
       },
       "pages": [
-        "https://stimg.emart.com/upload/news_leaflet/20261110_1012055_002.jpg",
-        "https://stimg.emart.com/upload/news_leaflet/20261110_1012056_003.jpg",
-        "https://stimg.emart.com/upload/news_leaflet/20261110_1012057_004.jpg",
-        "https://stimg.emart.com/upload/news_leaflet/20261110_1012057_005.jpg",
-        "https://stimg.emart.com/upload/news_leaflet/20261110_1012058_006.jpg",
-        "https://stimg.emart.com/upload/news_leaflet/20261110_1012058_007.jpg",
-        "https://stimg.emart.com/upload/news_leaflet/20261110_1012059_008.jpg",
-        "https://stimg.emart.com/upload/news_leaflet/20261111_1513007_284.jpg",
-        "https://stimg.emart.com/upload/news_leaflet/20261110_1013000_010.jpg",
-        "https://stimg.emart.com/upload/news_leaflet/20261110_1013001_011.jpg",
-        "https://stimg.emart.com/upload/news_leaflet/20261110_1013001_012.jpg",
-        "https://stimg.emart.com/upload/news_leaflet/20261116_1010054_048.jpg"
+        "https://stimg.emart.com/upload/news_leaflet/20261116_1048049_049.jpg",
+        "https://stimg.emart.com/upload/news_leaflet/20261118_1440042_410.jpg",
+        "https://stimg.emart.com/upload/news_leaflet/20261116_1048050_051.jpg",
+        "https://stimg.emart.com/upload/news_leaflet/20261116_1048050_052.jpg"
       ],
       "sourceUrl": "https://eapp.emart.com/leaflet/leafletView_EL.do"
     },
     {
-      "id": "homeplus-261118-805",
+      "id": "homeplus-261119-805",
       "mart": "homeplus",
       "store": "홈플러스 익스프레스",
       "region": null,
@@ -130,11 +122,13 @@
       "coords": null,
       "regionGrade": "exact",
       "period": {
-        "start": "2026-11-11",
-        "end": "2026-11-17"
+        "start": "2026-11-18",
+        "end": "2026-11-24"
       },
       "pages": [
-        "https://mres.my.homeplus.co.kr/files/leaflet_thema/jOJtvvsHdpcGazmIblDpYk2Qlcsw8F-977986.jpg"
+        "https://mres.my.homeplus.co.kr/files/leaflet_thema/9koOhWDb2KFtalxeOBYUlivc9SzSZ9-3298629.jpg",
+        "https://mres.my.homeplus.co.kr/files/leaflet_thema/ELnnNMHMstZTpQLCjRXdRPbMj8Yv1H-774423.jpg",
+        "https://mres.my.homeplus.co.kr/files/leaflet_thema/iqa2JBGNNBhOI9UQJYEVpe3WyJkm1I-8886765.jpg"
       ],
       "sourceUrl": "https://my.homeplus.co.kr/leaflet",
       "stores": [
@@ -3525,7 +3519,7 @@
       ]
     },
     {
-      "id": "homeplus-261118-592",
+      "id": "homeplus-261119-591",
       "mart": "homeplus",
       "store": "홈플러스",
       "region": null,
@@ -3534,33 +3528,43 @@
         "seoul",
         "gangwon",
         "gyeongnam",
+        "gyeonggi",
         "gyeongbuk",
+        "chungnam",
         "jeonnam",
         "gwangju",
-        "gyeonggi",
+        "jeonbuk",
         "daegu",
-        "chungnam",
         "daejeon",
         "busan",
         "jeju",
         "sejong",
         "chungbuk",
-        "ulsan",
-        "jeonbuk"
+        "ulsan"
       ],
       "coords": null,
       "regionGrade": "exact",
       "period": {
-        "start": "2026-11-11",
-        "end": "2026-11-17"
+        "start": "2026-11-18",
+        "end": "2026-11-24"
       },
       "pages": [
-        "https://mres.my.homeplus.co.kr/files/leaflet_thema/91RlNNQVfzyyk1DFiMStnpFA8KW4ZW-2405534.jpg",
-        "https://mres.my.homeplus.co.kr/files/leaflet_thema/A3DvwKTuAVeeo5dSjTzOcJs4rbeuom-3379439.jpg",
-        "https://mres.my.homeplus.co.kr/files/leaflet_thema/h16ep5HddV8SGZvdsHdOoaLExH3uS1-5979927.jpg"
+        "https://mres.my.homeplus.co.kr/files/leaflet_thema/xCxqtBMS4J4z2uEwKKCDEbRMHMeAfq-9717156.jpg"
       ],
       "sourceUrl": "https://my.homeplus.co.kr/leaflet",
       "stores": [
+        {
+          "name": "홈플러스 가좌점",
+          "region": "incheon",
+          "coords": {
+            "lat": 37.498,
+            "lng": 126.671
+          },
+          "addr": "인천광역시 서구 가정로 151번길 11",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~21:00",
+          "dayoff": null,
+          "tel": "032-453-8000"
+        },
         {
           "name": "홈플러스 간석점",
           "region": "incheon",
@@ -3622,6 +3626,30 @@
           "tel": "055-686-8000"
         },
         {
+          "name": "홈플러스 경기하남점",
+          "region": "gyeonggi",
+          "coords": {
+            "lat": 37.53856286,
+            "lng": 127.21257090568542
+          },
+          "addr": "경기도 하남시 하남대로 747",
+          "hours": null,
+          "dayoff": null,
+          "tel": "031-777-7000"
+        },
+        {
+          "name": "홈플러스 경산점",
+          "region": "gyeongbuk",
+          "coords": {
+            "lat": 35.83299,
+            "lng": 128.7355109
+          },
+          "addr": "경상북도 경산시 경안로 288",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~21:00",
+          "dayoff": null,
+          "tel": "053-715-8000"
+        },
+        {
           "name": "홈플러스 경주점",
           "region": "gyeongbuk",
           "coords": {
@@ -3632,6 +3660,30 @@
           "hours": "10:00~22:00",
           "dayoff": "11/22(일)",
           "tel": "054-770-8000"
+        },
+        {
+          "name": "홈플러스 계룡점",
+          "region": "chungnam",
+          "coords": {
+            "lat": 36.274,
+            "lng": 127.257
+          },
+          "addr": "충청남도 계룡시 계룡대로 304",
+          "hours": "계룡점 영업종료로 단골매장을 변경해주세요.",
+          "dayoff": null,
+          "tel": "042-550-8000"
+        },
+        {
+          "name": "홈플러스 고양터미널점",
+          "region": "gyeonggi",
+          "coords": {
+            "lat": 37.643201,
+            "lng": 126.789722
+          },
+          "addr": "경기도 고양시 일산동구 중앙로 1036",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~21:00",
+          "dayoff": null,
+          "tel": "031-936-7800"
         },
         {
           "name": "홈플러스 광양점",
@@ -3694,6 +3746,18 @@
           "tel": "02-890-8000"
         },
         {
+          "name": "홈플러스 김제점",
+          "region": "jeonbuk",
+          "coords": {
+            "lat": 35.8,
+            "lng": 126.903
+          },
+          "addr": "전북특별자치도 김제시 금성로 114",
+          "hours": "감제점 영업종료로 단골매장을 변경해주세요.",
+          "dayoff": null,
+          "tel": "063-540-8000"
+        },
+        {
           "name": "홈플러스 김포점",
           "region": "gyeonggi",
           "coords": {
@@ -3718,6 +3782,18 @@
           "tel": "031-999-0000"
         },
         {
+          "name": "홈플러스 김해점",
+          "region": "gyeongnam",
+          "coords": {
+            "lat": 35.242,
+            "lng": 128.871
+          },
+          "addr": "경상남도 김해시 김해대로 2078",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~21:00",
+          "dayoff": null,
+          "tel": "055-320-8000"
+        },
+        {
           "name": "홈플러스 남대구점",
           "region": "daegu",
           "coords": {
@@ -3728,6 +3804,18 @@
           "hours": "10:00~22:00",
           "dayoff": "11/23(월)",
           "tel": "053-659-8000"
+        },
+        {
+          "name": "홈플러스 남양주진접점",
+          "region": "gyeonggi",
+          "coords": {
+            "lat": 37.721,
+            "lng": 127.188
+          },
+          "addr": "경기도 남양주시 진접읍 장현리 216-1",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~21:00",
+          "dayoff": null,
+          "tel": "031-570-8000"
         },
         {
           "name": "홈플러스 논산점",
@@ -3790,6 +3878,54 @@
           "tel": "051-559-8000"
         },
         {
+          "name": "홈플러스 동수원점",
+          "region": "gyeonggi",
+          "coords": {
+            "lat": 37.263,
+            "lng": 127.03
+          },
+          "addr": "경기도 수원시 팔달구 효원로 257",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~20:00",
+          "dayoff": null,
+          "tel": "031-231-8000"
+        },
+        {
+          "name": "홈플러스 마산점",
+          "region": "gyeongnam",
+          "coords": {
+            "lat": 35.222,
+            "lng": 128.585
+          },
+          "addr": "경상남도 창원시 마산회원구 삼호로 56",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~21:00",
+          "dayoff": null,
+          "tel": "055-259-8000"
+        },
+        {
+          "name": "홈플러스 면목점",
+          "region": "seoul",
+          "coords": {
+            "lat": 37.58,
+            "lng": 127.082
+          },
+          "addr": "서울시 중랑구 사가정로 332 (면목동)",
+          "hours": "면목점 영업종료로 단골매장을 변경해주세요.",
+          "dayoff": null,
+          "tel": "02-437-2080"
+        },
+        {
+          "name": "홈플러스 목포점",
+          "region": "jeonnam",
+          "coords": {
+            "lat": 34.805938,
+            "lng": 126.399654
+          },
+          "addr": "전라남도 목포시 영산로 313",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~21:00",
+          "dayoff": null,
+          "tel": "061-241-8000"
+        },
+        {
           "name": "홈플러스 문경점",
           "region": "gyeongbuk",
           "coords": {
@@ -3800,6 +3936,18 @@
           "hours": "10:00~22:00",
           "dayoff": "11/25(수)",
           "tel": "054-559-8000"
+        },
+        {
+          "name": "홈플러스 밀양점",
+          "region": "gyeongnam",
+          "coords": {
+            "lat": 35.489,
+            "lng": 128.741
+          },
+          "addr": "경상남도 밀양시 점필재로 45",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~21:00",
+          "dayoff": null,
+          "tel": "055-359-8000"
         },
         {
           "name": "홈플러스 방학점",
@@ -3838,6 +3986,18 @@
           "tel": "041-939-8000"
         },
         {
+          "name": "홈플러스 부산반여점",
+          "region": "busan",
+          "coords": {
+            "lat": 35.196474,
+            "lng": 129.115744
+          },
+          "addr": "부산광역시 해운대구 선수촌로21번길 37  (반여동)  ",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~20:00",
+          "dayoff": null,
+          "tel": "051-509-8000"
+        },
+        {
           "name": "홈플러스 부산정관점",
           "region": "busan",
           "coords": {
@@ -3848,6 +4008,18 @@
           "hours": "10:00~22:00",
           "dayoff": "11/23(월)",
           "tel": "051-519-8200"
+        },
+        {
+          "name": "홈플러스 부천소사점",
+          "region": "gyeonggi",
+          "coords": {
+            "lat": 37.485,
+            "lng": 126.814
+          },
+          "addr": "경기 부천시 소사구 경인로 532  ",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~20:00",
+          "dayoff": null,
+          "tel": "032-610-8000"
         },
         {
           "name": "홈플러스 부천여월점",
@@ -3874,6 +4046,18 @@
           "tel": "031-259-8000"
         },
         {
+          "name": "홈플러스 분당오리점",
+          "region": "gyeonggi",
+          "coords": {
+            "lat": 37.34,
+            "lng": 127.107
+          },
+          "addr": "경기도 성남시 분당구 구미동 159",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~20:00",
+          "dayoff": null,
+          "tel": "031-884-2080"
+        },
+        {
           "name": "홈플러스 삼척점",
           "region": "gangwon",
           "coords": {
@@ -3886,6 +4070,30 @@
           "tel": "033-571-8000"
         },
         {
+          "name": "홈플러스 삼천포점",
+          "region": "gyeongnam",
+          "coords": {
+            "lat": 34.94,
+            "lng": 128.08
+          },
+          "addr": "경상남도 사천시 중앙로 165",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~19:00",
+          "dayoff": null,
+          "tel": "055-831-8000"
+        },
+        {
+          "name": "홈플러스 스페셜 상인점",
+          "region": "daegu",
+          "coords": {
+            "lat": 35.818,
+            "lng": 128.533
+          },
+          "addr": "대구광역시 달서구 월배로 183",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~20:00",
+          "dayoff": null,
+          "tel": "053-380-8000"
+        },
+        {
           "name": "홈플러스 서귀포점",
           "region": "jeju",
           "coords": {
@@ -3896,6 +4104,18 @@
           "hours": "10:00~22:00",
           "dayoff": "11/28(토)",
           "tel": "064-731-8114"
+        },
+        {
+          "name": "홈플러스 서부산점",
+          "region": "busan",
+          "coords": {
+            "lat": 35.164,
+            "lng": 128.978
+          },
+          "addr": "부산광역시 사상구 광장로 7",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~21:00",
+          "dayoff": null,
+          "tel": "051-319-8000"
         },
         {
           "name": "홈플러스 서수원점",
@@ -3958,6 +4178,18 @@
           "tel": "044-715-8000"
         },
         {
+          "name": "홈플러스 센텀시티점",
+          "region": "busan",
+          "coords": {
+            "lat": 35.171,
+            "lng": 129.134
+          },
+          "addr": "부산광역시 해운대구 센텀동로 6",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~20:00",
+          "dayoff": null,
+          "tel": "051-709-8000"
+        },
+        {
           "name": "홈플러스 송탄점",
           "region": "gyeonggi",
           "coords": {
@@ -3982,6 +4214,18 @@
           "tel": "061-729-8000"
         },
         {
+          "name": "홈플러스 스페셜 순천풍덕점",
+          "region": "jeonnam",
+          "coords": {
+            "lat": 34.94,
+            "lng": 127.509
+          },
+          "addr": "전라남도 순천시 팔마로 222",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~21:00",
+          "dayoff": null,
+          "tel": "061-746-2080"
+        },
+        {
           "name": "홈플러스 시화점",
           "region": "gyeonggi",
           "coords": {
@@ -3992,6 +4236,18 @@
           "hours": "10:00~22:00",
           "dayoff": "11/22(일)",
           "tel": "031-310-8000"
+        },
+        {
+          "name": "홈플러스 신내점",
+          "region": "seoul",
+          "coords": {
+            "lat": 37.616,
+            "lng": 127.094
+          },
+          "addr": "서울특별시 중랑구 신내로 201",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~21:00",
+          "dayoff": null,
+          "tel": "02-2024-8000"
         },
         {
           "name": "홈플러스 신도림점",
@@ -4040,6 +4296,18 @@
           "hours": "10:00~22:00",
           "dayoff": "11/22(일)",
           "tel": "031-705-2080"
+        },
+        {
+          "name": "홈플러스 영도점",
+          "region": "busan",
+          "coords": {
+            "lat": 35.096,
+            "lng": 129.045
+          },
+          "addr": "부산광역시 영도구 대교로14번길 57",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~19:00",
+          "dayoff": null,
+          "tel": "051-419-8000"
         },
         {
           "name": "홈플러스 영등포점",
@@ -4186,6 +4454,66 @@
           "tel": "031-850-8000"
         },
         {
+          "name": "홈플러스 익산점",
+          "region": "jeonbuk",
+          "coords": {
+            "lat": 35.959,
+            "lng": 126.972
+          },
+          "addr": "전북특별자치도 익산시 무왕로 1035",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~20:00",
+          "dayoff": null,
+          "tel": "063-859-8000"
+        },
+        {
+          "name": "홈플러스 인천논현점",
+          "region": "incheon",
+          "coords": {
+            "lat": 37.40698278089545,
+            "lng": 126.73072814941406
+          },
+          "addr": "인천광역시 남동구 청능대로 596",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~21:00",
+          "dayoff": null,
+          "tel": "032-455-8000"
+        },
+        {
+          "name": "홈플러스 인천송도점",
+          "region": "incheon",
+          "coords": {
+            "lat": 37.3800986,
+            "lng": 126.656435
+          },
+          "addr": "인천광역시 연수구 송도동 168-3",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~20:00",
+          "dayoff": null,
+          "tel": "032-220-8000"
+        },
+        {
+          "name": "홈플러스 인천숭의점",
+          "region": "incheon",
+          "coords": {
+            "lat": 37.465286,
+            "lng": 126.643519
+          },
+          "addr": "인천광역시 미추홀구 석정로 51",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~21:00",
+          "dayoff": null,
+          "tel": "032-719-2000"
+        },
+        {
+          "name": "홈플러스 인천연수점",
+          "region": "incheon",
+          "coords": {
+            "lat": 37.405907,
+            "lng": 126.683604
+          },
+          "addr": "인천광역시 연수구 청능대로 210",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~22:00",
+          "dayoff": null,
+          "tel": "032-430-8000"
+        },
+        {
           "name": "홈플러스 인천청라점",
           "region": "incheon",
           "coords": {
@@ -4222,6 +4550,18 @@
           "tel": "032-540-8000"
         },
         {
+          "name": "홈플러스 잠실점",
+          "region": "seoul",
+          "coords": {
+            "lat": 37.516,
+            "lng": 127.103
+          },
+          "addr": "서울특별시 송파구 올림픽로35가길 16",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~21:00",
+          "dayoff": null,
+          "tel": "02-3468-8000"
+        },
+        {
           "name": "홈플러스 전주점",
           "region": "jeonbuk",
           "coords": {
@@ -4244,6 +4584,54 @@
           "hours": "10:00~22:00",
           "dayoff": "11/22(일)",
           "tel": "063-281-8000"
+        },
+        {
+          "name": "홈플러스 죽도점",
+          "region": "gyeongbuk",
+          "coords": {
+            "lat": 36.031,
+            "lng": 129.365
+          },
+          "addr": "경상북도 포항시 북구 중흥로 328",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~21:00",
+          "dayoff": null,
+          "tel": "054-288-8000"
+        },
+        {
+          "name": "홈플러스 중계점",
+          "region": "seoul",
+          "coords": {
+            "lat": 37.64,
+            "lng": 127.069
+          },
+          "addr": "서울특별시 노원구 동일로 204가길 12",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~21:00",
+          "dayoff": null,
+          "tel": "02-986-2080"
+        },
+        {
+          "name": "홈플러스 진주점",
+          "region": "gyeongnam",
+          "coords": {
+            "lat": 35.186,
+            "lng": 128.117
+          },
+          "addr": "경상남도 진주시 대신로 304",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~21:00",
+          "dayoff": null,
+          "tel": "055-771-8000"
+        },
+        {
+          "name": "홈플러스 진해점",
+          "region": "gyeongnam",
+          "coords": {
+            "lat": 35.153,
+            "lng": 128.691
+          },
+          "addr": "경상남도 창원시 진해구 충장로 356",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~21:00",
+          "dayoff": null,
+          "tel": "055-540-8000"
         },
         {
           "name": "홈플러스 창원점",
@@ -4306,6 +4694,18 @@
           "tel": "053-607-8000"
         },
         {
+          "name": "홈플러스 킨텍스점",
+          "region": "gyeonggi",
+          "coords": {
+            "lat": 37.668,
+            "lng": 126.752
+          },
+          "addr": "경기도 고양시 일산서구 호수로 817",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~21:00",
+          "dayoff": null,
+          "tel": "031-960-7000"
+        },
+        {
           "name": "홈플러스 파주문산점",
           "region": "gyeonggi",
           "coords": {
@@ -4316,6 +4716,18 @@
           "hours": "10:00~22:00",
           "dayoff": "11/25(수)",
           "tel": "031-960-8000"
+        },
+        {
+          "name": "홈플러스 파주운정점",
+          "region": "gyeonggi",
+          "coords": {
+            "lat": 37.731122,
+            "lng": 126.737877
+          },
+          "addr": "경기도 파주시 청암로 17번길 17 (목동동927번지)",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~22:00",
+          "dayoff": null,
+          "tel": "031-8035-1300"
         },
         {
           "name": "홈플러스 평촌점",
@@ -4340,6 +4752,30 @@
           "hours": "10:00~22:00",
           "dayoff": "11/22(일)",
           "tel": "031-8046-8200"
+        },
+        {
+          "name": "홈플러스 포천송우점",
+          "region": "gyeonggi",
+          "coords": {
+            "lat": 37.824,
+            "lng": 127.141
+          },
+          "addr": "경기도 포천시 소흘읍 솔모루로 9",
+          "hours": "마트 임시휴업. 몰영업시간 10:00~21:00",
+          "dayoff": null,
+          "tel": "031-540-7000"
+        },
+        {
+          "name": "홈플러스 포항점",
+          "region": "gyeongbuk",
+          "coords": {
+            "lat": 36.013,
+            "lng": 129.348
+          },
+          "addr": "경상북도 포항시 남구 중흥로 77",
+          "hours": "포항점 영업종료로 단골매장을 변경해주세요.",
+          "dayoff": null,
+          "tel": "054-249-2080"
         },
         {
           "name": "홈플러스 합정점",
@@ -4368,7 +4804,7 @@
       ]
     },
     {
-      "id": "traders-261118",
+      "id": "traders-261119",
       "mart": "traders",
       "store": "트레이더스",
       "region": "national",
@@ -4376,8 +4812,8 @@
       "priceBasis": "수원점",
       "regionGrade": "base",
       "period": {
-        "start": "2026-11-11",
-        "end": "2026-11-17"
+        "start": "2026-11-18",
+        "end": "2026-11-24"
       },
       "pages": [
         "https://eapp-cdn.emart.com/traders/banners/28d1acf5-579f-4839-b8b1-d983b58c00ae.jpg",
@@ -4395,8 +4831,8 @@
       "coords": null,
       "regionGrade": "national",
       "period": {
-        "start": "2026-11-11",
-        "end": "2026-11-17"
+        "start": "2026-11-18",
+        "end": "2026-11-24"
       },
       "pages": [
         "https://azure-na-images.contentstack.com/v3/assets/bltfc0c2adf9ebb4217/blt1558b623faa1927e/6ae04863259aa38f34aad1f9/FY27_P3_MVM_WebCoupon_1019_(2).jpg"
@@ -4404,22 +4840,40 @@
       "sourceUrl": "https://www.costco.co.kr/FY27P3MVM"
     },
     {
-      "id": "lotte-2000538",
+      "id": "lotte-2000546",
       "mart": "lotte",
-      "store": "롯데마트 충영호점",
+      "store": "롯데마트 창원무동점",
       "regionGrade": "exact",
       "period": {
-        "start": "2026-11-12",
-        "end": "2026-11-18"
+        "start": "2026-11-19",
+        "end": "2026-11-25"
       },
       "pages": [
-        "https://lottemartgo-prod-bucket.s3.ap-northeast-2.amazonaws.com/leaflet/1794375712292.jpg",
-        "https://lottemartgo-prod-bucket.s3.ap-northeast-2.amazonaws.com/leaflet/1794375712299.jpg",
-        "https://lottemartgo-prod-bucket.s3.ap-northeast-2.amazonaws.com/leaflet/1794375712305.jpg"
+        "https://lottemartgo-prod-bucket.s3.ap-northeast-2.amazonaws.com/leaflet/1794982833883.jpg",
+        "https://lottemartgo-prod-bucket.s3.ap-northeast-2.amazonaws.com/leaflet/1794982833890.jpg",
+        "https://lottemartgo-prod-bucket.s3.ap-northeast-2.amazonaws.com/leaflet/1794982833895.jpg",
+        "https://lottemartgo-prod-bucket.s3.ap-northeast-2.amazonaws.com/leaflet/1794982833901.jpg"
       ],
       "sourceUrl": "https://www.mlotte.net/",
       "region": null,
       "coords": null
+    },
+    {
+      "id": "nobrand-261119",
+      "mart": "nobrand",
+      "store": "노브랜드",
+      "region": "national",
+      "coords": null,
+      "regionGrade": "national",
+      "period": {
+        "start": "2026-11-18",
+        "end": "2026-11-24"
+      },
+      "pages": [
+        "https://d1ntfwso16v3fv.cloudfront.net/nb_campaign/20261118/26%E1%84%82%E1%85%A7%E1%86%AB%2011%E1%84%8B%E1%85%AF%E1%86%AF%2019%E1%84%8B%E1%85%B5%E1%86%AF%20%E1%84%82%E1%85%A9%E1%84%87%E1%85%B3%E1%84%85%E1%85%A2%E1%86%AB%E1%84%83%E1%85%B3%20%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%E1%84%87%E1%85%A7%E1%86%AF%20%E1%84%91%E1%85%A9%E1%84%89%E1%85%B3%E1%84%90%E1%85%A5_4%E1%84%8E%E1%85%A1(%E1%84%8E%E1%85%AE%E1%86%AF%E1%84%80%E1%85%A9%E1%84%92%E1%85%AA%E1%86%A8%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%8B%E1%85%AD%E1%86%BC).jpg",
+        "https://d1ntfwso16v3fv.cloudfront.net/nb_campaign/20261118/26%E1%84%82%E1%85%A7%E1%86%AB%2011%E1%84%8B%E1%85%AF%E1%86%AF%2012%E1%84%8B%E1%85%B5%E1%86%AF%20%E1%84%82%E1%85%A9%E1%84%87%E1%85%B3%E1%84%85%E1%85%A2%E1%86%AB%E1%84%83%E1%85%B3%20%E1%84%8C%E1%85%AE%E1%84%8E%E1%85%A1%E1%84%87%E1%85%A7%E1%86%AF%20%E1%84%91%E1%85%A9%E1%84%89%E1%85%B3%E1%84%90%E1%85%A5_5%E1%84%8E%E1%85%A1(%E1%84%8C%E1%85%A2%E1%84%8E%E1%85%AE%E1%86%AF%E1%84%80%E1%85%A9%E1%84%92%E1%85%AA%E1%86%A8%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%8B%E1%85%AD%E1%86%BC)2%201.jpg"
+      ],
+      "sourceUrl": "https://chatbot.emart.com/flyers"
     },
     {
       "id": "megamart-20261118",
@@ -4550,7 +5004,7 @@
       ],
       "period": {
         "start": "2026-11-18",
-        "end": "2026-11-17"
+        "end": "2026-11-24"
       },
       "sourceUrl": "https://ebook.megamart.com/ebook2/ecatalog5.jsp?Cate=0100000000"
     },
@@ -4564,7 +5018,7 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-daejeon-261118-1.jpg"
+        "hanaro-daejeon-261119-1.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
@@ -4584,8 +5038,8 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-busan-261118-1.jpg",
-        "hanaro-busan-261118-2.jpg"
+        "hanaro-busan-261119-1.jpg",
+        "hanaro-busan-261119-2.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
@@ -4605,8 +5059,8 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-jeonbuk-261118-1.jpg",
-        "hanaro-jeonbuk-261118-2.jpg"
+        "hanaro-jeonbuk-261119-1.jpg",
+        "hanaro-jeonbuk-261119-2.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
@@ -4626,8 +5080,8 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-chungbuk-261118-1.jpg",
-        "hanaro-chungbuk-261118-2.jpg"
+        "hanaro-chungbuk-261119-1.jpg",
+        "hanaro-chungbuk-261119-2.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
@@ -4647,8 +5101,8 @@
         "end": "2026-09-24"
       },
       "pages": [
-        "hanaro-seoul-261118-1.jpg",
-        "hanaro-seoul-261118-2.jpg"
+        "hanaro-seoul-261119-1.jpg",
+        "hanaro-seoul-261119-2.jpg"
       ],
       "hosted": true,
       "sourceUrl": "https://www.nhhanaro.co.kr/user/boardList.do?handle=61&siteId=nahh001&id=nahh001_020200000000",
@@ -4658,8 +5112,5 @@
         "lng": 127.048
       }
     }
-  ],
-  "failed": [
-    "nobrand: 전단 이미지 0장 — 페이지 구조 변경 의심"
   ]
 }
