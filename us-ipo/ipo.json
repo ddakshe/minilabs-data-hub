@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-18T00:00:00Z",
+  "generatedAt": "2026-11-19T00:00:00Z",
   "source": "SEC EDGAR",
   "sourceUrl": "https://www.sec.gov/edgar",
-  "usdKrw": 1336.21,
+  "usdKrw": 1332.33,
   "listed": [
     {
       "cik": "0002145089",
@@ -175,6 +175,33 @@
     }
   ],
   "upcoming": [
+    {
+      "cik": "0001973276",
+      "name": "LIS Technologies Inc",
+      "ticker": "LIS",
+      "filedAt": "2026-11-18",
+      "isSpac": false,
+      "sic": "2810",
+      "industry": "제조",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001973276&type=S-1"
+    },
+    {
+      "cik": "0001859836",
+      "name": "Yesway, Inc.",
+      "ticker": "YSWY",
+      "filedAt": "2026-11-18",
+      "isSpac": false,
+      "sic": "5411",
+      "industry": "유통·소매",
+      "financials": {
+        "fiscalEnd": "2025-12-31",
+        "revenue": null,
+        "netIncome": -79453,
+        "assets": 1
+      },
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001859836&type=S-1"
+    },
     {
       "cik": "0002130357",
       "name": "Anthropic, PBC",
@@ -625,17 +652,6 @@
       "industry": "SPAC",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002111009&type=S-1"
-    },
-    {
-      "cik": "0001973276",
-      "name": "LIS Technologies Inc",
-      "ticker": "LIS",
-      "filedAt": "2026-11-05",
-      "isSpac": false,
-      "sic": "2810",
-      "industry": "제조",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001973276&type=S-1"
     },
     {
       "cik": "0000720762",
@@ -2632,33 +2648,6 @@
       "industry": "SPAC",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002135163&type=S-1"
-    },
-    {
-      "cik": "0002073516",
-      "name": "ARC Group Acquisition II Corp.",
-      "ticker": null,
-      "filedAt": "2026-08-20",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002073516&type=S-1"
-    },
-    {
-      "cik": "0002068385",
-      "name": "SharonAI Holdings Inc.",
-      "ticker": "SHAZ",
-      "filedAt": "2026-08-20",
-      "isSpac": false,
-      "sic": "7374",
-      "industry": "소프트웨어·IT",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": 1566631,
-        "netIncome": -39623909,
-        "assets": 133140150
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002068385&type=S-1"
     }
   ]
 }
