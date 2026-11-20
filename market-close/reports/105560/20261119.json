@@ -1,0 +1,120 @@
+{
+  "code": "105560",
+  "name": "KB금융",
+  "market": "KOSPI",
+  "basDt": "20261119",
+  "price": {
+    "code": "105560",
+    "name": "KB금융",
+    "market": "KOSPI",
+    "basDt": "20261119",
+    "close": 152900,
+    "vs": -3500,
+    "fltRt": -2.24,
+    "open": 163700,
+    "high": 163700,
+    "low": 152600,
+    "prevClose": 156400,
+    "volume": 500515,
+    "tradeValue": 77567166250,
+    "week52": {
+      "low": 120300,
+      "high": 186200,
+      "position": 0.4946889226100152,
+      "days": 245,
+      "from": "20251119"
+    },
+    "recent5": [
+      {
+        "basDt": "20261113",
+        "fltRt": 4.74,
+        "open": 151900,
+        "high": 159900,
+        "low": 151900,
+        "close": 159000
+      },
+      {
+        "basDt": "20261116",
+        "fltRt": 1.64,
+        "open": 162200,
+        "high": 162200,
+        "low": 155700,
+        "close": 161600
+      },
+      {
+        "basDt": "20261117",
+        "fltRt": -2.97,
+        "open": 161700,
+        "high": 161700,
+        "low": 156300,
+        "close": 156800
+      },
+      {
+        "basDt": "20261118",
+        "fltRt": -0.26,
+        "open": 152900,
+        "high": 157400,
+        "low": 152800,
+        "close": 156400
+      },
+      {
+        "basDt": "20261119",
+        "fltRt": -2.24,
+        "open": 163700,
+        "high": 163700,
+        "low": 152600,
+        "close": 152900
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 925604,
+      "ratio": 0.54
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 530,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-11-20T09:23:01.993Z"
+  },
+  "facts": [
+    "코스피보다 3.63%p 낮았어요.",
+    "거래량은 20일 평균의 0.5배예요.",
+    "시가보다 10,800원 낮게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "KB금융, 10월 금융소비자 관심도 ‘1위’ 탈환…신한·하나금융 순",
+      "source": "조세일보",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5sb2dna19qU0pKZWNFYzRrUi0yUFlhR1hwMXlUYVVtM2JEajJWMDRBVk1MVmhPUDhJVzJXb2psX0pXZ1ZTQTJDZkYxc0h6Ti1Zakh0NmRrLXU2dHVmU1Rv?oc=5",
+      "publishedAt": "2026-11-19T04:14:29.000Z"
+    }
+  ],
+  "dart": [
+    {
+      "title": "최대주주등소유주식변동신고서              ",
+      "filer": "KB금융",
+      "receiptNo": "20261119800497",
+      "date": "20261119",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261119800497"
+    }
+  ],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 5137.89,
+    "vs": 70.45,
+    "fltRt": 1.39
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-11-20T09:24:31.542Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260527"
+}

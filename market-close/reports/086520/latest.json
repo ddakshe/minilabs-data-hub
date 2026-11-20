@@ -2,45 +2,29 @@
   "code": "086520",
   "name": "에코프로",
   "market": "KOSDAQ",
-  "basDt": "20261117",
+  "basDt": "20261119",
   "price": {
     "code": "086520",
     "name": "에코프로",
     "market": "KOSDAQ",
-    "basDt": "20261117",
-    "close": 67600,
-    "vs": -2200,
-    "fltRt": -3.15,
-    "open": 69900,
-    "high": 71300,
-    "low": 67300,
-    "prevClose": 69800,
-    "volume": 564114,
-    "tradeValue": 38957417650,
+    "basDt": "20261119",
+    "close": 69300,
+    "vs": 300,
+    "fltRt": 0.43,
+    "open": 69000,
+    "high": 69700,
+    "low": 66200,
+    "prevClose": 69000,
+    "volume": 549295,
+    "tradeValue": 37312626950,
     "week52": {
       "low": 60600,
       "high": 185000,
-      "position": 0.05627009646302251,
+      "position": 0.06993569131832797,
       "days": 245,
-      "from": "20251117"
+      "from": "20251119"
     },
     "recent5": [
-      {
-        "basDt": "20261111",
-        "fltRt": 10.03,
-        "open": 65600,
-        "high": 73500,
-        "low": 65600,
-        "close": 73500
-      },
-      {
-        "basDt": "20261112",
-        "fltRt": -1.5,
-        "open": 72200,
-        "high": 73300,
-        "low": 69500,
-        "close": 72400
-      },
       {
         "basDt": "20261113",
         "fltRt": 0.41,
@@ -64,48 +48,88 @@
         "high": 71300,
         "low": 67300,
         "close": 67600
+      },
+      {
+        "basDt": "20261118",
+        "fltRt": 2.07,
+        "open": 69000,
+        "high": 70300,
+        "low": 65700,
+        "close": 69000
+      },
+      {
+        "basDt": "20261119",
+        "fltRt": 0.43,
+        "open": 69000,
+        "high": 69700,
+        "low": 66200,
+        "close": 69300
       }
     ],
     "volumeVs20d": {
-      "avg20": 874447,
-      "ratio": 0.65
+      "avg20": 855454,
+      "ratio": 0.64
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
       "rows": 530,
       "rows52w": 245
     },
-    "generatedAt": "2026-11-18T09:27:34.744Z"
+    "generatedAt": "2026-11-20T09:23:12.526Z"
   },
   "facts": [
-    "코스닥보다 0.81%p 낮았어요.",
-    "거래량은 20일 평균의 0.7배예요.",
-    "시가보다 2,300원 낮게 마감했어요."
+    "코스닥보다 2.89%p 낮았어요.",
+    "거래량은 20일 평균의 0.6배예요.",
+    "시가보다 300원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "에코프로 그룹주 일제히 약세…에코프로비엠·에코프로머티 등 동반 하락",
-      "source": "CBC뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBRT05rYWNTaUtReUVNU3dHdExRUC1qUFRQV3lKazdsejFXX1doemlmWGp2eWpqQzk1TkFTQnFnS2xIWU40VWJkajJyX2tCVk9qbUZScWMxREtJbFZxb1FPOC1Hck9LdDRH?oc=5",
-      "publishedAt": "2026-11-17T04:10:13.000Z"
+      "title": "증권사들 \"에코프로비엠 4분기 실적도 부진할듯…목표가↓\"",
+      "source": "매일경제 마켓",
+      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBKcnNGRWlSdFAtdmtONDYzbHFoQ3dpd1RJZDhGcmhaSEZ3emZzeG13R3c3YldhNTRRbEJseVRSMkE4YXFQOFVieVlQLWExeDUw?oc=5",
+      "publishedAt": "2026-11-19T00:33:51.000Z"
     },
     {
-      "title": "에코프로 등, 에코프로머티 담보계약 주식 43만 9144주로 증가",
-      "source": "데이터투자",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9JQm53Nl81OXUtUlJQdzF6Q00wazFWSjkzOVMtTzNkdVFqaE1NUFJTZlJhVEhETE9NYzN5VHVrVWN2NmptS1M5Q1BJaDJNdl8xU2QxZXd5MWVxaEVxNURZWGxzaFAyckE4SUV6S21aLXY4XzA?oc=5",
-      "publishedAt": "2026-11-17T07:15:15.000Z"
+      "title": "연탄 나르고 난방유 채우고…에코프로, 포항 이웃에 겨울 온기",
+      "source": "경북일보",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9IaFBJUU9kSDhtZmZBUDI5Xy01bExvR0VoTXJ3dHhuSmxjaUJ0cllNZU1fRDJjdUd2RUhZeGxqakI2MHo1aWN6Y0d4cktuUlFNWWpVR0FVN3NCSzRHYWdzdDctV0pwdGhWamhqYWE5RQ?oc=5",
+      "publishedAt": "2026-11-19T09:38:38.000Z"
     },
     {
-      "title": "[종목 브리핑] 에코프로에이치엔, 美 온실가스 저감설비 200.2억원 공급",
-      "source": "비건뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5CejlNQXRkU0hBUXFFMlQwWEFOaV96cjNabXdfQThUZEtyN204WEJYc2hESGdzLUZZWWwzbmVfU1ctN0V2andTQmw0MDlHUlNrUEZkU1QtNG45SU1hSEdqVEo2M08xUQ?oc=5",
-      "publishedAt": "2026-11-16T16:02:13.000Z"
+      "title": "에코프로, ‘사랑의 연탄 나눔’에 담은 따뜻한 이웃사랑… 흥해읍 취약계층에 1000만 원 상당 난방 지원",
+      "source": "경북신문",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1hcGxIekFKc2lyekV2YTVqb2ctajhnMWh1azRYbGxOZW1CWUlqY0xwVy03MVlzZEdWTXliclV0M0lIZVI2SG1JcmpVTGhKbFlWMmc5VVlYQkI?oc=5",
+      "publishedAt": "2026-11-19T02:24:00.000Z"
     },
     {
-      "title": "에코프로비엠 약보합…ESS 수요와 전기차 양극재 부진이 엇갈려",
-      "source": "잡포스트",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9WTEY4cGFSZlNIUzlGVmhjMWJTb2lEOHJnZklxdFlxWlRrM0dWbk9mWWpnTVloVldIR3RCR2F6bWo1OFk3RTQ2TVI3dFlJZ2hqbDE2ZE1iX2dtazE3MDkwR3VWay1jc05IVlFvTWRB0gFyQVVfeXFMTTR2akNkTGUxZkhiYjRPb2VVcDFpenFKX3NqSzV3R3ZjcEttUmw1TmdBRHVPcHc3Sl9qOElKeXBFUkNpdDRsV1pjNmlBbzFmSmlJTlBQMUhTQ3BNUkdkWHR6dmhvcXMzaGIzX1JDZHBnQnVR?oc=5",
-      "publishedAt": "2026-11-17T05:24:31.000Z"
+      "title": "에코프로, 포항 32가구에 겨울 난방비 부담 덜어",
+      "source": "경북매일",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9nX2tWTjhvb2N6SkxodFVDUnlCR3RCS3hBSTNucVp2ZkVyUWR0dHpPRERkb3A0Rjk5akxZdUkzcjh5Z1JxVnk4a3RMcUY0eGRDVVpyODN6SUg4QQ?oc=5",
+      "publishedAt": "2026-11-19T01:44:00.000Z"
+    },
+    {
+      "title": "에코프로, 포항 취약계층에 연탄 9600장·난방유 지원",
+      "source": "프레시안",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1tT1RzMG9IOVd5dXdUR2FkcUxZenFWSnV2Z0JzdXVHY01mVDB0QUx1d2hMN09tQ1ZOUkVmdnZkQUZGMjlkc0tialRjYTQ5UkpqcHdDN2hwaFVCOGJLeWZkOFJVdWlvUWxxN2Zz?oc=5",
+      "publishedAt": "2026-11-19T01:02:22.000Z"
+    },
+    {
+      "title": "[포항소식] 에코프로 32가구에 사랑의 연탄 전달 등",
+      "source": "뉴시스",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBWM0I1SmU3RGdTTTF3cTh3TlFOdk84MTJsVGVicXdma3AxZ25MVnhOOGw5RjBzZDcwWFVCQl9tQnlxWVoxVFMwLWNLYldBemFkcTgyeVBXTF9nZ3JNeVhpLdIBeEFVX3lxTE0wUmJFVS1MazJmd0p4VjZvZ01abHVfZlRJam5qRXV5SEQwN0hHY1cxdnZGQUtPUnpfTll6MElUMGtRWEw1Q0lXZU1GTGc3UTJuUW9KaGswTjRFTmdDRkE5d3pXa01MNktwbnNMM0xTdVZWY2EzQm0wdA?oc=5",
+      "publishedAt": "2026-11-19T05:16:23.000Z"
+    },
+    {
+      "title": "에코프로, 포항 에너지 취약계층에 연탄·난방유 지원",
+      "source": "NSP통신",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE84MEpEdEFtSzU3cTAzNXktNE1KRW9LMmJBMFAzMVM5QjlFUXU2UEVjcDE0ZlhmTGp0cVpTZFNJVFdnXzBkNWtFc0gzeUNSWXd3aUp3dmRZc3h2ZkVsS2hocA?oc=5",
+      "publishedAt": "2026-11-19T10:30:12.000Z"
+    },
+    {
+      "title": "에코프로, 포항 흥해읍서 ‘사랑의 연탄 나눔’…겨울철 에너지 취약계층에 온정",
+      "source": "이투데이",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5ici12dFdoVy1YQjVacVQxbEZJRGR0T3BEY2doejJoYWp1OEFnTXplX09xZmd1MmRYOWl6V1FSYlV4cmw2UlNiR1lDNlNyaE9oWVZFMQ?oc=5",
+      "publishedAt": "2026-11-19T01:04:00.000Z"
     }
   ],
   "dart": [],
@@ -186,9 +210,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 650.06,
-    "vs": -15.59,
-    "fltRt": -2.34
+    "clpr": 684.81,
+    "vs": 22,
+    "fltRt": 3.32
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -197,7 +221,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-18T09:28:46.886Z",
+  "builtAt": "2026-11-20T09:24:31.555Z",
   "archiveDays": 120,
-  "archiveFrom": "20260522"
+  "archiveFrom": "20260527"
 }

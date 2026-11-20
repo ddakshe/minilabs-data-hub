@@ -2,45 +2,29 @@
   "code": "032830",
   "name": "삼성생명",
   "market": "KOSPI",
-  "basDt": "20261117",
+  "basDt": "20261119",
   "price": {
     "code": "032830",
     "name": "삼성생명",
     "market": "KOSPI",
-    "basDt": "20261117",
-    "close": 242000,
-    "vs": -11500,
-    "fltRt": -4.54,
-    "open": 249500,
-    "high": 249500,
-    "low": 239500,
-    "prevClose": 253500,
-    "volume": 163090,
-    "tradeValue": 39692270250,
+    "basDt": "20261119",
+    "close": 255500,
+    "vs": 500,
+    "fltRt": 0.2,
+    "open": 259500,
+    "high": 259500,
+    "low": 247000,
+    "prevClose": 255000,
+    "volume": 253311,
+    "tradeValue": 64107584000,
     "week52": {
       "low": 144800,
       "high": 497000,
-      "position": 0.27597955706984667,
+      "position": 0.3143100511073254,
       "days": 245,
-      "from": "20251117"
+      "from": "20251119"
     },
     "recent5": [
-      {
-        "basDt": "20261111",
-        "fltRt": 1.23,
-        "open": 246500,
-        "high": 249500,
-        "low": 240000,
-        "close": 247500
-      },
-      {
-        "basDt": "20261112",
-        "fltRt": 1.01,
-        "open": 249000,
-        "high": 262500,
-        "low": 244000,
-        "close": 250000
-      },
       {
         "basDt": "20261113",
         "fltRt": 0.8,
@@ -64,72 +48,88 @@
         "high": 249500,
         "low": 239500,
         "close": 242000
+      },
+      {
+        "basDt": "20261118",
+        "fltRt": 5.37,
+        "open": 244000,
+        "high": 255500,
+        "low": 242000,
+        "close": 255000
+      },
+      {
+        "basDt": "20261119",
+        "fltRt": 0.2,
+        "open": 259500,
+        "high": 259500,
+        "low": 247000,
+        "close": 255500
       }
     ],
     "volumeVs20d": {
-      "avg20": 274233,
-      "ratio": 0.59
+      "avg20": 271573,
+      "ratio": 0.93
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
       "rows": 530,
       "rows52w": 245
     },
-    "generatedAt": "2026-11-18T09:27:29.457Z"
+    "generatedAt": "2026-11-20T09:23:04.676Z"
   },
   "facts": [
-    "코스피보다 1.95%p 낮았어요.",
-    "거래량은 20일 평균의 0.6배예요.",
-    "시가보다 7,500원 낮게 마감했어요."
+    "코스피보다 1.19%p 낮았어요.",
+    "거래량은 20일 평균의 0.9배예요.",
+    "시가보다 4,000원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "‘빅3’ 생보사, 3분기 실적 희비…교보생명 홀로 역성장",
-      "source": "아시아투데이",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5ocGJaSnllTEMyaUNtTnh4WUV3R1oxUXBiVHBJRWJxREpzNmotbmhKSDZ1X0dyelZpbmEzdHM1S3dyRUZISXQ5VFZRS2NhR3U0bDlNb2tOVTB1T0RiVk13cTdiLWozalV5Z3JJT05n?oc=5",
-      "publishedAt": "2026-11-17T09:29:00.000Z"
+      "title": "웅진프리드라이프, 삼성생명과 간호사 동행 건강관리 서비스 선보여",
+      "source": "로이슈",
+      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9TNVhlLXM4MkxKaHAyV0VBUVh0Tkdabk9zMUd2NWxFQ3Zpbk9kU3ZBamJNb0hpQThVTkFYZmp6ZThhYUZyYlJYMk9TQWR0UlhxdDM4TEZsTWgwWTdvb25UY3V6X3dGNWZFVUtkYlJEWHFvZW4yRDJLZkdR?oc=5",
+      "publishedAt": "2026-11-19T06:09:14.000Z"
     },
     {
-      "title": "삼성생명, 생보업계 실적 한파 속 성장세 지속… 내년 밸류업 구체화 주목",
-      "source": "이코리아",
-      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9nTThseTV4QlNEbjgtdXBSOFR4ZUtrazlabmY1Q1dtVlpBVkdJRk1fZzBKa3RDNzd6enF6TzNGclU2aGFkRlE2QldZbEJPdkdQOThUZDNfb1ZGV3c1clF4NDlXUnRKckhFYVA3VHdUYw?oc=5",
-      "publishedAt": "2026-11-17T08:26:23.000Z"
+      "title": "웅진프리드라이프, 삼성생명과 건강케어 구독서비스 출시",
+      "source": "연합뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE93YndPeFVrX0c5dm5MMmx0cVE3d3VudXJRT1EySk13WFBYbi1lRFAtbi1DVldWck0wOVFYQmF2cl9meTRJbklKcElxWEVfWkVHRzlsOXBMQ0FuX2Y2UTQtYdIBYEFVX3lxTE93YndPeFVrX0c5dm5MMmx0cVE3d3VudXJRT1EySk13WFBYbi1lRFAtbi1DVldWck0wOVFYQmF2cl9meTRJbklKcElxWEVfWkVHRzlsOXBMQ0FuX2Y2UTQtYQ?oc=5",
+      "publishedAt": "2026-11-19T01:54:46.000Z"
     },
     {
-      "title": "[오늘Who] 삼성생명 생보업계서 '수익성 초격차' 입증, 홍원학 연임해 해외 M&A 힘 싣나",
-      "source": "비즈니스포스트",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9XVGFOSVdjQjhRZDFfQkZlOXZseTB5SXNtM2M0Z0I3ZHd2Wkg2VG9FU094djhBbG94cE9KSHpMb0dRWllHdnRPdl9sTUt0aE1ia2lEWGNIeV9lQ00ydEpmZjF0RnhuazNXQVE0ZVF6ZzBwMUU?oc=5",
-      "publishedAt": "2026-11-17T03:24:36.000Z"
+      "title": "삼성생명, '100년 기업 차세대 CEO 과정' 4기 수료식 개최",
+      "source": "뉴스1",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA4U0Fjcl9HU2tTUzZsZGVmal92U2dOVU5YSVd2RHhoTGJsNlhRX1c3SHNlc0ZMdDhVNzNyWE5pRWxQT1l5enhnZVpiUy14QUFjcmd3Q3ZXTjFhWm5YSmZiQQ?oc=5",
+      "publishedAt": "2026-11-18T23:49:34.000Z"
     },
     {
-      "title": "[K금융 리더] 홍원학, 시니어 시장 4700억 승부수… 삼성생명 ‘평생 돌봄’ 수익 다변화",
+      "title": "삼성생명, 컨설턴트 10명 중 7명 직업 만족…유연한 근무·성과 보상 강점",
+      "source": "이코노미톡뉴스",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1xb0lHSldDVWNTRkFtYldQNzNlQksyakpKb3RLYno0RjRqWmZUZE1BRWVqcXJGSWtHRW43cjJLOXJXMVExeHNZZXdfSU5GS1lWOVM2QlRyZVJENndjSGQ4Nkt0TktWVUFtaldfNw?oc=5",
+      "publishedAt": "2026-11-18T23:36:33.000Z"
+    },
+    {
+      "title": "삼성생명, ‘100년 기업 차세대 CEO 과정 4기 수료식’ 성료",
+      "source": "보험신보",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5lYl9pUkpIUmVfLXBza1EtN1FKd254MG40YVRSeEdyeDdteTIzZHJ2Rm5NYVZwUHB0bEhNbDV0MUhUcFNKQnd5cVlWN2thN3lDM0hLQ1VMeEl0Z0lyRjBjTjBkRjRpR2ZHdVNR?oc=5",
+      "publishedAt": "2026-11-19T00:50:00.000Z"
+    },
+    {
+      "title": "삼성생명, 차세대 CEO 4기 수료…가업승계·AI 경영 교육",
+      "source": "더트래커",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE4xckRGb0o5TWF4ZGJfSTJIX2dZOVdoM0ZOMndWSDMxeURaampCREZDWjl2djNFWXlXeHlIZTVFY3dxZDlyZ1ctMk9LSG9ndXNqeXNtTUc5aU4?oc=5",
+      "publishedAt": "2026-11-19T00:21:50.000Z"
+    },
+    {
+      "title": "삼성생명, '100년 기업 차세대 CEO 과정' 4기 수료…가업 승계부터 AI까지",
+      "source": "전자신문",
+      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBwX2lYQW04bEVXNDZNclhlaHpfS2YxZ3UteFE1UGVDOTFVNWRsZHhaRXJKS2NBclJZZVkwaVZITmNMRFhDaHFZVjdJQWNrQQ?oc=5",
+      "publishedAt": "2026-11-19T00:28:00.000Z"
+    },
+    {
+      "title": "삼성생명, 차세대 CEO에 10주간 경영 교육",
       "source": "글로벌이코노믹",
-      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOWnphZ3Q5T3JUeTVONTl2RXI2cnNBSXowaTlLNHVGOWVkUUJMQzhuSlJYT0tSYlpLUGE1cDhnZ1pKVC16X00xTFAteTBfbVQ0NFR2WG9RbDN3aGNteUJxZXE1SlJQbVVYM3IyQWFxUDJKaWtFTzQzSmlJX041MGU3aTJDY2U?oc=5",
-      "publishedAt": "2026-11-16T20:00:00.000Z"
-    },
-    {
-      "title": "‘국대’ 이해란 막아도 소용없다…용인 삼성생명, 고른 득점으로 선두 질주",
-      "source": "경기일보",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBMSnNibV9wWkVIRzRXNUFRNHUwZWRXdDFxeVR0RFBJdDJKTG85YWVScF96SjVUSHFxcTFlblFMSFhrX3NsQ001R2ZMMUg4VTJMMUJPMXEzZ3JzNTg?oc=5",
-      "publishedAt": "2026-11-17T05:18:53.000Z"
-    },
-    {
-      "title": "부상에 요동치는 여자농구 판도…삼성생명·신한은행 웃고 우승 후보들 울상",
-      "source": "조선일보",
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxORXJtS3JBakZ5VzA3NjlGT09nTzhyTzV2ejY1MmRYcFE3eUl3TU9COXN4R0s0aW8wVXB4ZDJla2NSSmdaeGNmZEUxY1hMZG9VZkwzQ0RDSkpxdkZyWXB4bDdMR2VPRWlZMDdPVU9DeHhsSndoQTltcGhfLUZJWjRpRkNIZXdSQQ?oc=5",
-      "publishedAt": "2026-11-17T02:51:14.000Z"
-    },
-    {
-      "title": "[증권言言] 메리츠증권 \"삼성생명, 내년 초 확인될 밸류업 계획 주목\"",
-      "source": "마일드경제",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9ZdmFqamM2S1dscmsxMldmSEs0ZnBzM2EtZGFXdmJjVmlKYThDbTM5NnEyRFppenZ2a1BHbG85aEllU1prVzFsVkpwQWVTenk3dWFqMHgzUFVIVHlMcThJN3lYWHVFbmdsR0ZR?oc=5",
-      "publishedAt": "2026-11-17T14:36:00.000Z"
-    },
-    {
-      "title": "금리·환율 변동에 투자 손익 '뚝'…교보·한화 줄줄이 적자",
-      "source": "KB Think",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBSSWg3dXVZSGFIR0ZWc29IVUVaZFRlcHdPY2ljMTlyRTlVU19oTFJNZ2ZKVUJibVBKZ1Jpa2E0QXAwYV9jR0JBaVFFUWVuOGdTV2U2M3ltZnVHRVdQb2pkeHpqVTk1OUlsOTljdnhBRG1XQQ?oc=5",
-      "publishedAt": "2026-11-16T23:20:05.000Z"
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNamQ2emc3SGRISTNEdVRCcU0zbzVwN3A5eE51TEdSdWQ4aGRUTkFNVWhLLURFeXZIdDNjclIwLUFOQ0hMdjFmOWVZMjMtVlNSeXhkNnNMVGlSMEExSEhvSU5QcE9zTmhrVE83ZU9IS25KdU9NRVFZTmdGeHlqYUlkRFZ5akk?oc=5",
+      "publishedAt": "2026-11-19T01:01:31.000Z"
     }
   ],
   "dart": [],
@@ -156,9 +156,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 4968.48,
-    "vs": -132.02,
-    "fltRt": -2.59
+    "clpr": 5137.89,
+    "vs": 70.45,
+    "fltRt": 1.39
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -167,7 +167,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-18T09:28:46.878Z",
+  "builtAt": "2026-11-20T09:24:31.545Z",
   "archiveDays": 120,
-  "archiveFrom": "20260522"
+  "archiveFrom": "20260527"
 }

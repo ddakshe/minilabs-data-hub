@@ -1,0 +1,118 @@
+{
+  "code": "005380",
+  "name": "현대차",
+  "market": "KOSPI",
+  "basDt": "20261119",
+  "price": {
+    "code": "005380",
+    "name": "현대차",
+    "market": "KOSPI",
+    "basDt": "20261119",
+    "close": 267500,
+    "vs": 500,
+    "fltRt": 0.19,
+    "open": 268500,
+    "high": 271500,
+    "low": 258500,
+    "prevClose": 267000,
+    "volume": 363033,
+    "tradeValue": 95978465750,
+    "week52": {
+      "low": 254500,
+      "high": 750000,
+      "position": 0.026236125126135216,
+      "days": 245,
+      "from": "20251119"
+    },
+    "recent5": [
+      {
+        "basDt": "20261113",
+        "fltRt": 1.13,
+        "open": 269000,
+        "high": 279000,
+        "low": 268000,
+        "close": 269500
+      },
+      {
+        "basDt": "20261116",
+        "fltRt": -1.48,
+        "open": 270000,
+        "high": 274000,
+        "low": 264000,
+        "close": 265500
+      },
+      {
+        "basDt": "20261117",
+        "fltRt": -2.45,
+        "open": 262000,
+        "high": 262500,
+        "low": 257500,
+        "close": 259000
+      },
+      {
+        "basDt": "20261118",
+        "fltRt": 3.09,
+        "open": 260000,
+        "high": 271500,
+        "low": 252000,
+        "close": 267000
+      },
+      {
+        "basDt": "20261119",
+        "fltRt": 0.19,
+        "open": 268500,
+        "high": 271500,
+        "low": 258500,
+        "close": 267500
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 534384,
+      "ratio": 0.68
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 530,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-11-20T09:22:59.341Z"
+  },
+  "facts": [
+    "코스피보다 1.2%p 낮았어요.",
+    "거래량은 20일 평균의 0.7배예요.",
+    "시가보다 1,000원 낮게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "현대차, 로봇 지배구조 개편…BD 사고 RAI 팔고",
+      "source": "비즈워치",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBMQ0RoUm8tNEhaV05PdElwQUc5emgyTGNLMFIzWFRjM1pZU2RNNi12Nk0ySmVzMEhCUWZQRHhpR2N4NC0xb25UWEptTEh3clBTYUhPUXBWc3Vra1J4S2UxdzJneXZ2NF9ZQS1mZg?oc=5",
+      "publishedAt": "2026-11-19T00:15:02.000Z"
+    },
+    {
+      "title": "현대차그룹, 기프트카 플레이온 시즌2 캠페인 진행",
+      "source": "모터그래프",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9pWURiSEt3c2dXTDRCal9rbDN4SzFKMnRGdGJoWWRwRmJTZXFEUjBzZmd2ZXRTUnRGZVBQWkx4WmdIR2RvREdRa0ZFYTk3MFQ5ekVCLVVWQjR2MHlNZ0dsckZiM0lTMHBaVFYwTw?oc=5",
+      "publishedAt": "2026-11-19T08:14:57.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 5137.89,
+    "vs": 70.45,
+    "fltRt": 1.39
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-11-20T09:24:31.538Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260527"
+}

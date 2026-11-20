@@ -1,0 +1,128 @@
+{
+  "code": "240810",
+  "name": "원익IPS",
+  "market": "KOSDAQ",
+  "basDt": "20261119",
+  "price": {
+    "code": "240810",
+    "name": "원익IPS",
+    "market": "KOSDAQ",
+    "basDt": "20261119",
+    "close": 76700,
+    "vs": 5900,
+    "fltRt": 8.33,
+    "open": 71100,
+    "high": 76700,
+    "low": 68000,
+    "prevClose": 70800,
+    "volume": 635157,
+    "tradeValue": 45639427550,
+    "week52": {
+      "low": 56700,
+      "high": 183300,
+      "position": 0.1579778830963665,
+      "days": 245,
+      "from": "20251119"
+    },
+    "recent5": [
+      {
+        "basDt": "20261113",
+        "fltRt": -1.89,
+        "open": 81400,
+        "high": 84400,
+        "low": 77100,
+        "close": 77700
+      },
+      {
+        "basDt": "20261116",
+        "fltRt": -9.78,
+        "open": 78200,
+        "high": 78200,
+        "low": 69400,
+        "close": 70100
+      },
+      {
+        "basDt": "20261117",
+        "fltRt": -1.71,
+        "open": 69300,
+        "high": 72200,
+        "low": 67500,
+        "close": 68900
+      },
+      {
+        "basDt": "20261118",
+        "fltRt": 2.76,
+        "open": 71200,
+        "high": 72900,
+        "low": 68100,
+        "close": 70800
+      },
+      {
+        "basDt": "20261119",
+        "fltRt": 8.33,
+        "open": 71100,
+        "high": 76700,
+        "low": 68000,
+        "close": 76700
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 734038,
+      "ratio": 0.87
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 530,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-11-20T09:23:30.814Z"
+  },
+  "facts": [
+    "코스닥보다 5.01%p 높았어요.",
+    "거래량은 20일 평균의 0.9배예요.",
+    "시가보다 5,600원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "사라지는 8인치 설비에 장비업계 분주…매출 공백 뭘로 채우나",
+      "source": "블로터",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9sLUNfVWVKZXBYVnBhTlREVXlOdmRwNHYxQUVPQmJBY3JxaWI3bXBoLURwcWVZSXZnSGxYSjRjRHVEeFhTbjlUMzZQczB4V1dNX094V1hPV1VqVWtTV1VQcG1STzduT2lR0gFsQVVfeXFMTS1CTExPRV84bS1XSGpZTGZHelBXN2hfNzNPY1BUcTZlblM4STIzNXQzNWtXS0dNZW53UWtXZF8tWEt1OTFKU04yRV9KZmJITHRjX2hMcmRnQ1J1S3B3Yk51UXZFSDJ2SFUzNU5X?oc=5",
+      "publishedAt": "2026-11-19T07:55:38.000Z"
+    },
+    {
+      "title": "[소액주주 현황｜코스닥 반도체] ‘소부장 개미’ 66만명 늘었는데 지분율 50% 턱걸이",
+      "source": "리더스팩트",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9UclRnc192dUNKWjBINnlNQ01pUF9rV0Z4bmI4T2xEeVotSTlnQXlmZFIyUllKRU12RFYxcjlCVkpZTXVaTjJPMXRzeXNpRy1NTHZKcHJOQ2czWDdvbnpCOHNGbzdBYzFxb2lYbEZqd3U?oc=5",
+      "publishedAt": "2026-11-19T01:30:00.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20261007",
+      "holder": "삼성자산운용",
+      "ratio": 7.1,
+      "ratioChange": 1.18,
+      "reason": "매매로 인한 변동보고의무 발생(삼성액티브자산운용의 위탁운용분 포함)",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261007000302"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 684.81,
+    "vs": 22,
+    "fltRt": 3.32
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-11-20T09:24:31.579Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260527"
+}

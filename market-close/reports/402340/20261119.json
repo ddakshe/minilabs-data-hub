@@ -1,0 +1,124 @@
+{
+  "code": "402340",
+  "name": "SK스퀘어",
+  "market": "KOSPI",
+  "basDt": "20261119",
+  "price": {
+    "code": "402340",
+    "name": "SK스퀘어",
+    "market": "KOSPI",
+    "basDt": "20261119",
+    "close": 739000,
+    "vs": 30000,
+    "fltRt": 4.23,
+    "open": 715000,
+    "high": 742000,
+    "low": 689000,
+    "prevClose": 709000,
+    "volume": 375617,
+    "tradeValue": 268650582500,
+    "week52": {
+      "low": 266000,
+      "high": 1970000,
+      "position": 0.2775821596244131,
+      "days": 245,
+      "from": "20251119"
+    },
+    "recent5": [
+      {
+        "basDt": "20261113",
+        "fltRt": -3.67,
+        "open": 805000,
+        "high": 819000,
+        "low": 743000,
+        "close": 762000
+      },
+      {
+        "basDt": "20261116",
+        "fltRt": -9.71,
+        "open": 762000,
+        "high": 762000,
+        "low": 677000,
+        "close": 688000
+      },
+      {
+        "basDt": "20261117",
+        "fltRt": -1.31,
+        "open": 674000,
+        "high": 712000,
+        "low": 665000,
+        "close": 679000
+      },
+      {
+        "basDt": "20261118",
+        "fltRt": 4.42,
+        "open": 700000,
+        "high": 716000,
+        "low": 683000,
+        "close": 709000
+      },
+      {
+        "basDt": "20261119",
+        "fltRt": 4.23,
+        "open": 715000,
+        "high": 742000,
+        "low": 689000,
+        "close": 739000
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 708550,
+      "ratio": 0.53
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 530,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-11-20T09:22:48.742Z"
+  },
+  "facts": [
+    "코스피보다 2.84%p 높았어요.",
+    "거래량은 20일 평균의 0.5배예요.",
+    "시가보다 24,000원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "SK스퀘어 주가 하락 중",
+      "source": "아시아뉴스통신",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5RWTVUMzAzc1cya2dpUWRwUVJOUl9xZVJBNWlrTHlWRVdHcTlVUjNYS2pjRUZuWi1DVlgyVFNxX1lKeFd0MHRIUnFObkktYnc1QlJRb1lmMUJOaV9ybDJsZE9WbHZ0NHRJaGZwU3NwT0xvQ25r?oc=5",
+      "publishedAt": "2026-11-19T01:07:15.000Z"
+    },
+    {
+      "title": "[특징주] SK스퀘어, 장중 약세 흐름 보이며 70만 2000원선 기록 : 기업주식정보",
+      "source": "재경일보",
+      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE14WW5rRHFZWUdZTG5rODNFcm5nSzBJa0dzZHFiQkdDMlk5czRwNHB5RmhQZXRVZk5QMm9vTlQ5TUxTUk1xTVI5UXA1cw?oc=5",
+      "publishedAt": "2026-11-19T01:20:48.000Z"
+    },
+    {
+      "title": "[마감분석] SK스퀘어 4%대 반등 73만9000원 마감 : 기업주식정보",
+      "source": "재경일보",
+      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1HRTc2cEpqa2JpRGg0ZDRBRHZFOC1aVUxpVXlhRmVsbkNzUzV0eXFDaVBUcnZwdHJKa0toZGEzLUlWS1BHTjdSWWdrdw?oc=5",
+      "publishedAt": "2026-11-19T06:45:51.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 5137.89,
+    "vs": 70.45,
+    "fltRt": 1.39
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-11-20T09:24:31.525Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260527"
+}

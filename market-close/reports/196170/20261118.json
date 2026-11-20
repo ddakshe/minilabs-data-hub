@@ -1,0 +1,101 @@
+{
+  "code": "196170",
+  "name": "알테오젠",
+  "market": "KOSDAQ",
+  "basDt": "20261118",
+  "price": {
+    "code": "196170",
+    "name": "알테오젠",
+    "market": "KOSDAQ",
+    "basDt": "20261118",
+    "close": 170900,
+    "vs": -2100,
+    "fltRt": -1.21,
+    "open": 173100,
+    "high": 177000,
+    "low": 168700,
+    "prevClose": 173000,
+    "volume": 283413,
+    "tradeValue": 48809441450,
+    "week52": {
+      "low": 168400,
+      "high": 559000,
+      "position": 0.006400409626216078,
+      "days": 245,
+      "from": "20251118"
+    },
+    "recent5": [
+      {
+        "basDt": "20261112",
+        "fltRt": -3.32,
+        "open": 181400,
+        "high": 184700,
+        "low": 174400,
+        "close": 177400
+      },
+      {
+        "basDt": "20261113",
+        "fltRt": -0.68,
+        "open": 177500,
+        "high": 187900,
+        "low": 175500,
+        "close": 176200
+      },
+      {
+        "basDt": "20261116",
+        "fltRt": -2.55,
+        "open": 178000,
+        "high": 180700,
+        "low": 171100,
+        "close": 171700
+      },
+      {
+        "basDt": "20261117",
+        "fltRt": 0.76,
+        "open": 169700,
+        "high": 177100,
+        "low": 168100,
+        "close": 173000
+      },
+      {
+        "basDt": "20261118",
+        "fltRt": -1.21,
+        "open": 173100,
+        "high": 177000,
+        "low": 168700,
+        "close": 170900
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 473463,
+      "ratio": 0.6
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 530,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-11-20T09:24:31.551Z"
+  },
+  "facts": [
+    "코스닥보다 3.17%p 낮았어요.",
+    "거래량은 20일 평균의 0.6배예요.",
+    "시가보다 2,200원 낮게 마감했어요."
+  ],
+  "news": [],
+  "dart": [],
+  "priceOnly": true,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 662.81,
+    "vs": 12.75,
+    "fltRt": 1.96
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": null,
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-11-20T09:24:31.551Z"
+}

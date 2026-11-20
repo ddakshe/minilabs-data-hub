@@ -2,45 +2,29 @@
   "code": "222800",
   "name": "심텍",
   "market": "KOSDAQ",
-  "basDt": "20261117",
+  "basDt": "20261119",
   "price": {
     "code": "222800",
     "name": "심텍",
     "market": "KOSDAQ",
-    "basDt": "20261117",
-    "close": 107500,
-    "vs": -600,
-    "fltRt": -0.56,
-    "open": 108100,
-    "high": 114400,
-    "low": 106200,
-    "prevClose": 108100,
-    "volume": 946854,
-    "tradeValue": 103986713050,
+    "basDt": "20261119",
+    "close": 112800,
+    "vs": 5200,
+    "fltRt": 4.83,
+    "open": 107900,
+    "high": 112800,
+    "low": 100550,
+    "prevClose": 107600,
+    "volume": 929852,
+    "tradeValue": 99115561000,
     "week52": {
       "low": 42800,
       "high": 175000,
-      "position": 0.48940998487140697,
+      "position": 0.529500756429652,
       "days": 245,
-      "from": "20251117"
+      "from": "20251119"
     },
     "recent5": [
-      {
-        "basDt": "20261111",
-        "fltRt": 14.07,
-        "open": 108000,
-        "high": 122000,
-        "low": 107600,
-        "close": 121600
-      },
-      {
-        "basDt": "20261112",
-        "fltRt": 1.89,
-        "open": 123300,
-        "high": 129800,
-        "low": 120500,
-        "close": 123900
-      },
       {
         "basDt": "20261113",
         "fltRt": 0.73,
@@ -64,72 +48,58 @@
         "high": 114400,
         "low": 106200,
         "close": 107500
+      },
+      {
+        "basDt": "20261118",
+        "fltRt": 0.09,
+        "open": 115400,
+        "high": 118200,
+        "low": 102500,
+        "close": 107600
+      },
+      {
+        "basDt": "20261119",
+        "fltRt": 4.83,
+        "open": 107900,
+        "high": 112800,
+        "low": 100550,
+        "close": 112800
       }
     ],
     "volumeVs20d": {
-      "avg20": 1026147,
-      "ratio": 0.92
+      "avg20": 1054227,
+      "ratio": 0.88
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
       "rows": 530,
       "rows52w": 245
     },
-    "generatedAt": "2026-11-18T09:27:45.326Z"
+    "generatedAt": "2026-11-20T09:23:22.925Z"
   },
   "facts": [
-    "코스닥보다 1.78%p 높았어요.",
+    "코스닥보다 1.51%p 높았어요.",
     "거래량은 20일 평균의 0.9배예요.",
-    "시가보다 600원 낮게 마감했어요."
+    "시가보다 4,900원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "심텍, SOCAMM·RDIMM·LPDDR 기판 3종 세계일류상품 선정",
-      "source": "디일렉",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFB6Y1ZhY3J6VEw5eVdWalJUZGZmbzA3amF1Z3hfdWg4czRWRmlZbEFIMjNhQVhSQTJ0Q0dGSkQteWF0enZLZGdyY0xPYUxPd2xuS3RGejJmVkdoTGJ1THlwcTU5R1dVdw?oc=5",
-      "publishedAt": "2026-11-17T08:29:45.000Z"
+      "title": "외국인, 코스닥 10일 연속 순매도···과반이 ‘반도체 소부장’",
+      "source": "시사저널e",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE4xV3dDUENqTmlQTG1oaW9TTE1kYktieFhNODRYN191M2w4dktYNGsxd0k4MWs5MXh2VjRkd1lEeWd5b3g1N2otNGptWnlwRWxVSFBiaU5XQlFHSnZyd1NEUU5ISWpaV1dGbnVMeGZZYy03d9IBdkFVX3lxTFAtSXI2bGdZWEM0SFY4SU5oVkw1bGQzZzVDN1Y0QkwwQ1RKVWhUYTF2OGhuZlFCTF9KWk1PS2pmbjY3LVc0Q0Vpay1ReW1tamdfY1Q3dUotZVp2NG5XSGNhVE9sQkw5ZC03cmM5OVZmMWNYTnZPc1E?oc=5",
+      "publishedAt": "2026-11-19T06:47:22.000Z"
     },
     {
-      "title": "심텍 AI 서버용 메모리 기판 3종 '세계일류상품' 뽑혀, 인증 품목 7개로 늘어",
-      "source": "비즈니스포스트",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBSLUh4eE9IZXI0SG5FYlgyRUhnaThTRzhzYTQwSnpRbDJGdXJlZml0T1otNTg0eWw4R3VpeFN4cWhNYzU0LTRZeW9jX1BUSkZORWhDYWgzYlNKMUQ0bWpKNVN4LVk5TFAxTHdSWTdjRHlnaTg?oc=5",
-      "publishedAt": "2026-11-17T06:53:10.000Z"
+      "title": "충북도 정책자문위 AI과학분과, 공정혁신 시뮬레이션센터·심텍 방문",
+      "source": "충북뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE92aGtfZzdsN0hxRzFreTN3eDFOSXV3OXFMcV85Ny1Ydnl1dWtuei1UTFgtTDlNUHhGS0NlcmhEcVVEWDVid0hKbEpoWGlTcy1mUVdBTlV4MzdGT2dYM2xLdnpSWXQxclk?oc=5",
+      "publishedAt": "2026-11-19T06:12:11.000Z"
     },
     {
-      "title": "심텍, SOCAMMㆍRDIMMㆍLPDDR 기판 ‘ 세계일류상품’ 신규 선정",
-      "source": "이투데이",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9WSExiakNmS3ltV0lvSW53RlZnOUtCMVpiNHJjVTBXSGwzM1I1SlpKalpiVm12T3hkb19pbTJTRzVnY1h1VUZSWm1JWmJPNHZMWHZhTw?oc=5",
-      "publishedAt": "2026-11-17T06:51:00.000Z"
-    },
-    {
-      "title": "심텍 AI 기판 3종 ‘세계일류상품’ 선정",
-      "source": "충청타임즈",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9OeTQ2OVV5dmNZVGhyQnNNMmdISGRLWDkxaTRyNDgtb3BrUnZKbVNIUDExaXNXcV9qdWNwZ2RFZ0FLbzN6WXI2VzEwRHFXcVd5YWJpeHVEN1NiSjVXQ1hwWjVaWDd3TS1n?oc=5",
-      "publishedAt": "2026-11-17T10:30:00.000Z"
-    },
-    {
-      "title": "심텍, SOCAMM·RDIMM·LPDDR 기판 3종 세계일류상품 선정",
-      "source": "블로터",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9fWU1VUmQ3cW1lVVR1MFhmakdzRGs3Z1RjQkI2eERxbVMzd3gzejFHcXQyWmRIMmwwWHhMSWVRQUpXa1Q3SnNoTmlKUExrR0tCMDBCYkV2QW1xSmRmRU9ZR0FQam1yVTVY0gFsQVVfeXFMTmNiOVdBNURVaXVua2tuQWlHS1dhRHRobWZXaWZHeExmUFF3eEd1QTQwMW9KcXppU2VZRWY4cUU1aV9YYmd2cmxVZ3RRaEpHNEhYNVN2RDlIbmlPdzB3VWdueEJVWVpNUTVab0lk?oc=5",
-      "publishedAt": "2026-11-17T07:02:08.000Z"
-    },
-    {
-      "title": "코오롱글로벌, 776억8510만원 규모 심텍 청주2지점 공장 신축공사 수주",
-      "source": "디지털투데이",
-      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5EUE9hT2l1SGFOU2RaTWl4VzdXYzhEZ2o3S05fS0EzWVFIbjZIUVpWaDI0OE9EN1QweDU5TDdlN1B3RWcxeFhlVkE1REpRZEVXMHlOdDdqMkIxQWswREc4UU90aHhaVUpicU8xZlA4WGhfTDk0bzJHdk03RQ?oc=5",
-      "publishedAt": "2026-11-17T06:50:04.000Z"
-    },
-    {
-      "title": "[마감분석] 심텍, 특별한 공시 없이 10만7500원 약보합 마감 : 기업주식정보",
-      "source": "재경일보",
-      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE4zVjFBU280QzFFdVUzcXUyc2puVlNjWThyVkp0SW9STTk0YzJQM3pVVnVsdWhyMlBoZzJpWWFUREd6a1I4STVBZ09PSQ?oc=5",
-      "publishedAt": "2026-11-17T06:51:54.000Z"
-    },
-    {
-      "title": "[장중수급포착] 심텍, 외국인/기관 동시 순매수… 주가 +2.41%",
-      "source": "뉴스핌",
-      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFB0cDBybm9OZWF0OVUyTTdSNWVtenI2UXkxYXozR281a3FMV0pUcF9zLVQ4U3pWeWZRaDE0XzhUcHR6aFNUa3RHVkJBR1lSNVJ0Ujh3QUltZHZVZU52?oc=5",
-      "publishedAt": "2026-11-17T01:21:00.000Z"
+      "title": "충북도, AI·반도체 산업현장 방문…지역 경쟁력·정책 방향 모색",
+      "source": "충청리뷰",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFAwNndFbjBBb3dOb1lpRWM0NnRDcEhCT1pjeHAzNDdudU9xSTFkMlNCVWc0Zy1jVTRUdC1oOGozaFlPdlloLWFxWHhMSjU0UDZPUUZGNEpjQ2t1M0QtMm90TlBveExLNXA0cnROZDJ3a0I3QdIBckFVX3lxTFAwNndFbjBBb3dOb1lpRWM0NnRDcEhCT1pjeHAzNDdudU9xSTFkMlNCVWc0Zy1jVTRUdC1oOGozaFlPdlloLWFxWHhMSjU0UDZPUUZGNEpjQ2t1M0QtMm90TlBveExLNXA0cnROZDJ3a0I3QQ?oc=5",
+      "publishedAt": "2026-11-19T07:17:55.000Z"
     }
   ],
   "dart": [],
@@ -195,9 +165,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 650.06,
-    "vs": -15.59,
-    "fltRt": -2.34
+    "clpr": 684.81,
+    "vs": 22,
+    "fltRt": 3.32
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -206,7 +176,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-18T09:28:46.902Z",
+  "builtAt": "2026-11-20T09:24:31.569Z",
   "archiveDays": 120,
-  "archiveFrom": "20260522"
+  "archiveFrom": "20260527"
 }
