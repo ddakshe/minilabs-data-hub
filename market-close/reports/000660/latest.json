@@ -2,37 +2,29 @@
   "code": "000660",
   "name": "SK하이닉스",
   "market": "KOSPI",
-  "basDt": "20261119",
+  "basDt": "20261120",
   "price": {
     "code": "000660",
     "name": "SK하이닉스",
     "market": "KOSPI",
-    "basDt": "20261119",
-    "close": 1183000,
-    "vs": 39000,
-    "fltRt": 3.41,
-    "open": 1154000,
-    "high": 1186000,
-    "low": 1115000,
-    "prevClose": 1144000,
-    "volume": 2730075,
-    "tradeValue": 3146772749000,
+    "basDt": "20261120",
+    "close": 1113000,
+    "vs": -70000,
+    "fltRt": -5.92,
+    "open": 1117000,
+    "high": 1124000,
+    "low": 1096000,
+    "prevClose": 1183000,
+    "volume": 3310840,
+    "tradeValue": 3668856112500,
     "week52": {
       "low": 519000,
       "high": 2919000,
-      "position": 0.27666666666666667,
+      "position": 0.2475,
       "days": 245,
-      "from": "20251119"
+      "from": "20251120"
     },
     "recent5": [
-      {
-        "basDt": "20261113",
-        "fltRt": -3.03,
-        "open": 1292000,
-        "high": 1317000,
-        "low": 1201000,
-        "close": 1216000
-      },
       {
         "basDt": "20261116",
         "fltRt": -7.89,
@@ -64,82 +56,98 @@
         "high": 1186000,
         "low": 1115000,
         "close": 1183000
+      },
+      {
+        "basDt": "20261120",
+        "fltRt": -5.92,
+        "open": 1117000,
+        "high": 1124000,
+        "low": 1096000,
+        "close": 1113000
       }
     ],
     "volumeVs20d": {
-      "avg20": 3855032,
-      "ratio": 0.71
+      "avg20": 3849478,
+      "ratio": 0.86
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 530,
+      "rows": 528,
       "rows52w": 245
     },
-    "generatedAt": "2026-11-20T09:22:46.194Z"
+    "generatedAt": "2026-11-23T09:58:14.964Z"
   },
   "facts": [
-    "코스피보다 2.02%p 높았어요.",
-    "거래량은 20일 평균의 0.7배예요.",
-    "시가보다 29,000원 높게 마감했어요."
+    "코스피보다 0.71%p 낮았어요.",
+    "거래량은 20일 평균의 0.9배예요.",
+    "시가보다 4,000원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "[단독] 美 대형 로펌, SK하이닉스 주가 급락 ’집단소송’ 조사 착수…투자자 손실 보상 추진 By The Guru",
+      "title": "\"삼성전자 SK하이닉스 내년에도 웃는다\"…무디스가 전망한 이유",
+      "source": "파이낸셜뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5Md3J0VzZqdUI5eGhVMVRiSGIteWVIT3laQVZOcHlVdjhpM2lWaFFKaGNZclRxOHF0aDVlaGZ1WVI0OEFQd1VlV3lRcmpSVFRxcExlbHozb3J1Zw?oc=5",
+      "publishedAt": "2026-11-21T23:22:50.000Z"
+    },
+    {
+      "title": "“손정의 회장, SK하이닉스 1조달러에 인수 검토”",
+      "source": "Chosunbiz",
+      "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPZFhxQWNnZXpGNEFfVWxnN2prWndYMmpOTmNRUDdWeTI2ZWtfM21iZU9Ra0czQmlpdlRxeVRPaWUtOENwaVFZbjItcjdoSjVscXJXXzBXT2Y3cjdKc25FTGFDcDlSRkI5Q1U3RVpGdFVVQ3NzT0d2ZHVoUHVtUnhkQ01aYUXSAZgBQVVfeXFMT0lwUzhncTQ0aWlxblEyUnpNOTFrbGVLbXhjRDhLdXpPMGZIblk2SlgwTjRrNWZBX2hqV3k0QVNGT3VCbGVreU5RLVhzSWZocDN5bk9FVFRpajVVX05xVmd4b2dTWHlnY1lLY0lSRWRIcTlUN3g0aTNCeUJQYjVQYWd1SDdVZ1NjYTVUUnBDYUhYbjg3Qkp0cW8?oc=5",
+      "publishedAt": "2026-11-21T05:01:00.000Z"
+    },
+    {
+      "title": "“소프트뱅크 손정의, 최근 SK하이닉스 1조달러 인수안 검토”",
+      "source": "경향신문",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9vUEFLNjBhZm9jQU5hQktKLXZ3aUZZZ0dua1UtQWE4TGlZc0hPeXRydUhqU0c5M3ZvUXpuQi1FRThPYk1Sb1d0ZUhmWGo5M2ozVnVDcDFaNVV4d9IBX0FVX3lxTE1hZkJWWlBRaTZaY3ZCLWJ5RThDM3VfNGFMN2ZrYXZzZTVRUy11OE8tUWdocTlKMGtpcnpxdjczSjN4UVNDTWE4VGRSLU9fN2ZhQm9IRmtfTFFndmVhWVA4?oc=5",
+      "publishedAt": "2026-11-21T04:09:00.000Z"
+    },
+    {
+      "title": "손정의, SK하이닉스 ’1조달러 인수’ 타진설…현실성은 ’글쎄’ By FinancialPost",
       "source": "Investing.com 한국어",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE0yVkVjelhXRFpDTWdzTml3SGJoSk1xZ1E3VlZGTlMwYVhVT2c2VGZjRmlEVlhxVDYzdkRSV0gxQ0t6VXppbzdKOUhTVlM5a0JtNXFLTzlrdGQ0UmplcEtGLWg2cHk5TUd1eVVnNG04TXE?oc=5",
-      "publishedAt": "2026-11-19T01:00:00.000Z"
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1tVWMxZjJPUVhSNjQ3TkNpMDlNcnZZQU9NcjUyRzQxcnBMdkQyeHNrTG1MZGVTSHBISC1IQm5HN3BDMzFuaFhxbHRJeEtuSmV2Y3RQNkMtOUdRSGw5VEFDRVg4dmRHXzg3WlRDMlloMFY?oc=5",
+      "publishedAt": "2026-11-23T08:16:00.000Z"
     },
     {
-      "title": "\"수출 1조 달러 주역, K-반도체 생태계\"…SK하이닉스, 소부장 협력 강화",
-      "source": "지디넷코리아",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE51bng2eVdXSjMxRmRmQWExNGJxblprZUh0TjlLSDdvc2lwUE5DRi1MZkcyMVpmdFhOTzRtSE81MmlrX3ZyWUM2U3lmZUJQZUs2LXI5N3dn?oc=5",
-      "publishedAt": "2026-11-19T07:46:35.000Z"
+      "title": "SK하이닉스 폭락 두 번 맞힌 애널리스트, 또 “더 떨어진다” 경고",
+      "source": "경향신문",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBRQWlVNUZZc1gxcnFxem5Za2dZQlFwRnRrRW42OGh6VUFIVmtDaEFudlk0Uk5tOHhtc0dYVHc1REVfekpYYnNOOUx2MnJmazZyQWdnUzBTalljQdIBX0FVX3lxTE9WcXZWMkx1dmVRWmU3OHhTQm8wekQtTWR0QVJfb21TQ3dRYzhVNTB1dHpIOG1CZEhJbXJSeG43WW5OVERWbm55TC16UEJXang1X1h0TFlrTUFraElrUFl3?oc=5",
+      "publishedAt": "2026-11-23T07:30:00.000Z"
     },
     {
-      "title": "‘수출 1조 달러’ 넘어 더 큰 도약으로… SK하이닉스와 소재 · 부품 · 장비 생태계가 함께 그리는 K-반도체의 미래",
-      "source": "SK hynix",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE81bjd3NUpmR3NpU3RPVTZiQUQ0ZzUyWW1icEdGb0YwSjJMTU5MeWFtY29XcV9kbF9QYTRoVUVXcWtRTUZEWEJ5ZGRkdzZZT0pxYzRmQUYwYW1UMUZyWUF2TzJjTGFYaVduX2c?oc=5",
-      "publishedAt": "2026-11-19T05:41:59.000Z"
-    },
-    {
-      "title": "반도체 훈풍에 수출 '1조 달러' 달성‥이 시각 SK하이닉스",
-      "source": "MBC 뉴스",
-      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1CaDJhOXZrWmpVRnBTWlYwQmcyb3lwNUFOcmtBdjVxTkR5N2F1TVB4N1VCdTFaeVRzUnMzbWRJbGZjZExLeEw0UEhHUFZHeGcwcmhDVXlUY180Vk5hYU42Tmw5MElWbEkzS3dqaGVDNzVVX1NyZ3Y0Qw?oc=5",
-      "publishedAt": "2026-11-19T11:36:51.000Z"
-    },
-    {
-      "title": "\"3년 동안 그 가격 안 옵니다\"…삼전닉스 주주들 '술렁' [분석+]",
+      "title": "반토막 났는데 \"주가 더 빠진다\"…하이닉스 결국 터졌다 [종목+]",
       "source": "한국경제",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFA4YjV4MkMyRVNJUS1JS3Fabkp5dXhSOUVrdFR2QUhCUG8yZjk4bjBCdUh1cC0xYmdPLXNrZ3h3cUVCOWdZdEVhaFNrQ255NHFpNnVWM1llZWREQQ?oc=5",
-      "publishedAt": "2026-11-19T00:54:18.000Z"
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBLMGJkY2x3ZVhKbzJFRUlmRGo4bXc3djRmLWhFeDZrMnBsYk16SmFHRWczVnhxSjR3clNsNmpiRjhCcHJIOEs5WkRJUkR6VGMzQ01MRWFuYVhtdw?oc=5",
+      "publishedAt": "2026-11-21T03:08:50.000Z"
     },
     {
-      "title": "마이크론 메모리반도체 불황 대비해 '방어 전략' 집중, 삼성전자 SK하이닉스와 새 경쟁 국면",
-      "source": "비즈니스포스트",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5BWUduNW55Q2M2SWFVU3JRNVc2Um8wNmhPQjZtblJqaERhUWlRZ0FKWktWbXg5M2NZbGVZUHdDekpQTm9wNTdMa1pHSXk1eWdkM29OeGdtM1RzYVFqR1NMVXRDQ0VYR0s4Z2pHS211TlhzdUE?oc=5",
-      "publishedAt": "2026-11-19T03:01:32.000Z"
+      "title": "SK하이닉스 폭락 두 번 맞힌 애널리스트 “105만원 간다”",
+      "source": "주간경향",
+      "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE44bWEtR1FYMGdNYWtoeWNwQnlNeDI2UENZX19PV0xhRmVNa3NhUUFFUF9jTFM5NTRiZTBPM3ZZLTNhZEhzYXFIMkpBU0tQbUtfV0RaXzZEQ3Blbkw5aXc?oc=5",
+      "publishedAt": "2026-11-23T09:22:00.000Z"
     },
     {
-      "title": "[단독]SK하이닉스, 20단 HBM 비밀병기 ‘하이브리드 본더’ 투입",
-      "source": "문화일보",
-      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5pN0l3UzRkbk5tUlV1eWZPRUdOMDRoMWY4S1BGTGdDQlY4RFVSeHc2RHNEdURfamJVNFRvZXMtN010X3M0bWVuYlJwRUlDMmtl?oc=5",
-      "publishedAt": "2026-11-19T02:55:25.000Z"
-    },
-    {
-      "title": "SK하이닉스 “수출 1조달러, 반도체 상생 협력 결실”",
-      "source": "전자신문",
-      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE01OEVMaTZVMEVBemdIZHdZSGJ2RHhrcUxWTGlVbmxMMFBWZUpJU05iNmk5ZmxjalE3OTJnYldjekQ1aGtVUi1wdHZwY0h4QQ?oc=5",
-      "publishedAt": "2026-11-19T07:10:02.000Z"
+      "title": "윤풍영 SK하이닉스 사장, 자사주 1500주 매입…16억 규모",
+      "source": "한국경제",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9SNUJhbjhxY0VMQlVmcDRKUndnNXJab1p2dzg4RXJuS3hjSGRocWFyYlk2UU1Ecnhmbk9PZHBqRTNqN3l3cjhmZkRhNmxsbkloS21QSGExZFdmQQ?oc=5",
+      "publishedAt": "2026-11-23T07:45:09.000Z"
     }
   ],
-  "dart": [],
+  "dart": [
+    {
+      "title": "[기재정정]타법인주식및출자증권취득결정              ",
+      "filer": "SK하이닉스",
+      "receiptNo": "20261120800721",
+      "date": "20261120",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261120800721"
+    }
+  ],
   "ownership": [],
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5137.89,
-    "vs": 70.45,
-    "fltRt": 1.39
+    "clpr": 4869.96,
+    "vs": -267.93,
+    "fltRt": -5.21
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -148,7 +156,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-20T09:24:31.521Z",
+  "builtAt": "2026-11-23T09:59:56.610Z",
   "archiveDays": 120,
-  "archiveFrom": "20260527"
+  "archiveFrom": "20260528"
 }

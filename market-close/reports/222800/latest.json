@@ -2,37 +2,29 @@
   "code": "222800",
   "name": "심텍",
   "market": "KOSDAQ",
-  "basDt": "20261119",
+  "basDt": "20261120",
   "price": {
     "code": "222800",
     "name": "심텍",
     "market": "KOSDAQ",
-    "basDt": "20261119",
-    "close": 112800,
-    "vs": 5200,
-    "fltRt": 4.83,
-    "open": 107900,
-    "high": 112800,
-    "low": 100550,
-    "prevClose": 107600,
-    "volume": 929852,
-    "tradeValue": 99115561000,
+    "basDt": "20261120",
+    "close": 99700,
+    "vs": -13100,
+    "fltRt": -11.61,
+    "open": 104600,
+    "high": 105900,
+    "low": 97600,
+    "prevClose": 112800,
+    "volume": 887671,
+    "tradeValue": 89932168050,
     "week52": {
       "low": 42800,
       "high": 175000,
-      "position": 0.529500756429652,
+      "position": 0.43040847201210286,
       "days": 245,
-      "from": "20251119"
+      "from": "20251120"
     },
     "recent5": [
-      {
-        "basDt": "20261113",
-        "fltRt": 0.73,
-        "open": 128700,
-        "high": 132000,
-        "low": 123700,
-        "close": 124800
-      },
       {
         "basDt": "20261116",
         "fltRt": -13.38,
@@ -64,42 +56,44 @@
         "high": 112800,
         "low": 100550,
         "close": 112800
+      },
+      {
+        "basDt": "20261120",
+        "fltRt": -11.61,
+        "open": 104600,
+        "high": 105900,
+        "low": 97600,
+        "close": 99700
       }
     ],
     "volumeVs20d": {
-      "avg20": 1054227,
-      "ratio": 0.88
+      "avg20": 1055420,
+      "ratio": 0.84
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 530,
+      "rows": 528,
       "rows52w": 245
     },
-    "generatedAt": "2026-11-20T09:23:22.925Z"
+    "generatedAt": "2026-11-23T09:58:50.930Z"
   },
   "facts": [
-    "코스닥보다 1.51%p 높았어요.",
-    "거래량은 20일 평균의 0.9배예요.",
-    "시가보다 4,900원 높게 마감했어요."
+    "코스닥보다 5.9%p 낮았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가보다 4,900원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "외국인, 코스닥 10일 연속 순매도···과반이 ‘반도체 소부장’",
-      "source": "시사저널e",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE4xV3dDUENqTmlQTG1oaW9TTE1kYktieFhNODRYN191M2w4dktYNGsxd0k4MWs5MXh2VjRkd1lEeWd5b3g1N2otNGptWnlwRWxVSFBiaU5XQlFHSnZyd1NEUU5ISWpaV1dGbnVMeGZZYy03d9IBdkFVX3lxTFAtSXI2bGdZWEM0SFY4SU5oVkw1bGQzZzVDN1Y0QkwwQ1RKVWhUYTF2OGhuZlFCTF9KWk1PS2pmbjY3LVc0Q0Vpay1ReW1tamdfY1Q3dUotZVp2NG5XSGNhVE9sQkw5ZC03cmM5OVZmMWNYTnZPc1E?oc=5",
-      "publishedAt": "2026-11-19T06:47:22.000Z"
+      "title": "심텍, 호실적 뒤 차익 매물에 12.41% 급락",
+      "source": "잡포스트",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1tbThjNGpja1MwN0hyZU5xUFJ1MlZETFpvRU1vX2pmWS1HeUp5WlhkQ2lNVTVORkpuTjlfWFQ1emNDdTNWUHZHUWFEZ0Rpd0xvcTVCRGhDU3BteXhETXpmR3pDWGVtM1RfNWNoaXh30gFyQVVfeXFMTnd4d1htbEhZYW1xZjRLbVY5UUpONmtIOThDMHo0YlhCeVRCYVFwZDZ1WmJCZDNfLWR5NHhVTTlfbkpHWnFqNjNIR3dfbFpRNl9XczNNN1IwSEVfT3MxeTZZd3YyRTJsOTZnTGxTSXVuemZR?oc=5",
+      "publishedAt": "2026-11-20T06:11:42.000Z"
     },
     {
-      "title": "충북도 정책자문위 AI과학분과, 공정혁신 시뮬레이션센터·심텍 방문",
-      "source": "충북뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE92aGtfZzdsN0hxRzFreTN3eDFOSXV3OXFMcV85Ny1Ydnl1dWtuei1UTFgtTDlNUHhGS0NlcmhEcVVEWDVid0hKbEpoWGlTcy1mUVdBTlV4MzdGT2dYM2xLdnpSWXQxclk?oc=5",
-      "publishedAt": "2026-11-19T06:12:11.000Z"
-    },
-    {
-      "title": "충북도, AI·반도체 산업현장 방문…지역 경쟁력·정책 방향 모색",
-      "source": "충청리뷰",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFAwNndFbjBBb3dOb1lpRWM0NnRDcEhCT1pjeHAzNDdudU9xSTFkMlNCVWc0Zy1jVTRUdC1oOGozaFlPdlloLWFxWHhMSjU0UDZPUUZGNEpjQ2t1M0QtMm90TlBveExLNXA0cnROZDJ3a0I3QdIBckFVX3lxTFAwNndFbjBBb3dOb1lpRWM0NnRDcEhCT1pjeHAzNDdudU9xSTFkMlNCVWc0Zy1jVTRUdC1oOGozaFlPdlloLWFxWHhMSjU0UDZPUUZGNEpjQ2t1M0QtMm90TlBveExLNXA0cnROZDJ3a0I3QQ?oc=5",
-      "publishedAt": "2026-11-19T07:17:55.000Z"
+      "title": "심텍 주가, 11월 20일 애프터마켓 99,800원 11.52% 하락",
+      "source": "중앙이코노미뉴스",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFA5aTdqbUR2bnRlSFA0bFVaZGEwUlp3aWR5dzdsTnl2cTJFY3Z6TUUxMTU4YjJiNDg0MHVPYnNNVVhrZGFCN1ZkMmp0RTNjVjIyVEItQWFnU3YwSEk2ekJpS0pvcFRJT091d2Y2VXQxaGVndw?oc=5",
+      "publishedAt": "2026-11-20T07:52:45.000Z"
     }
   ],
   "dart": [],
@@ -165,9 +159,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 684.81,
-    "vs": 22,
-    "fltRt": 3.32
+    "clpr": 645.68,
+    "vs": -39.13,
+    "fltRt": -5.71
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -176,7 +170,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-20T09:24:31.569Z",
+  "builtAt": "2026-11-23T09:59:56.664Z",
   "archiveDays": 120,
-  "archiveFrom": "20260527"
+  "archiveFrom": "20260528"
 }
