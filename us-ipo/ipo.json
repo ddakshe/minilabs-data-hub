@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-23T00:00:00Z",
+  "generatedAt": "2026-11-24T00:00:00Z",
   "source": "SEC EDGAR",
   "sourceUrl": "https://www.sec.gov/edgar",
-  "usdKrw": 1339.44,
+  "usdKrw": 1348.85,
   "listed": [
     {
       "cik": "0002130357",
@@ -180,6 +180,39 @@
     }
   ],
   "upcoming": [
+    {
+      "cik": "0002160422",
+      "name": "Kartoon Studios Acquisition Corp",
+      "ticker": "KACQ",
+      "filedAt": "2026-11-23",
+      "isSpac": true,
+      "sic": "6770",
+      "industry": "SPAC",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002160422&type=S-1"
+    },
+    {
+      "cik": "0002107904",
+      "name": "LIBERTYSTREAM INFRASTRUCTURE PARTNERS INC.",
+      "ticker": null,
+      "filedAt": "2026-11-23",
+      "isSpac": false,
+      "sic": "2810",
+      "industry": "제조",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002107904&type=S-1"
+    },
+    {
+      "cik": "0002053365",
+      "name": "Biointra, Corp",
+      "ticker": "BCRP",
+      "filedAt": "2026-11-23",
+      "isSpac": false,
+      "sic": "8731",
+      "industry": "제약·바이오",
+      "financials": null,
+      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002053365&type=S-1"
+    },
     {
       "cik": "0002101833",
       "name": "Forge Nano Holdings, Inc.",
@@ -738,17 +771,6 @@
       "industry": "금융·부동산",
       "financials": null,
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002152644&type=S-1"
-    },
-    {
-      "cik": "0002160422",
-      "name": "Kartoon Studios Acquisition Corp",
-      "ticker": null,
-      "filedAt": "2026-11-05",
-      "isSpac": true,
-      "sic": "6770",
-      "industry": "SPAC",
-      "financials": null,
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002160422&type=S-1"
     },
     {
       "cik": "0002111009",
@@ -2647,38 +2669,6 @@
         "assets": 28386884
       },
       "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001947016&type=S-1"
-    },
-    {
-      "cik": "0001094032",
-      "name": "QDM International Inc.",
-      "ticker": "QDMI",
-      "filedAt": "2026-08-25",
-      "isSpac": false,
-      "sic": "6411",
-      "industry": "금융·부동산",
-      "financials": {
-        "fiscalEnd": "2026-03-31",
-        "revenue": 21475746,
-        "netIncome": 7533321,
-        "assets": 17443441
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001094032&type=S-1"
-    },
-    {
-      "cik": "0001956439",
-      "name": "Enhanced Group Inc.",
-      "ticker": "ENHA",
-      "filedAt": "2026-08-25",
-      "isSpac": false,
-      "sic": "7990",
-      "industry": "기타",
-      "financials": {
-        "fiscalEnd": "2025-12-31",
-        "revenue": null,
-        "netIncome": 2568594,
-        "assets": 204154720
-      },
-      "secUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001956439&type=S-1"
     }
   ]
 }
