@@ -2,37 +2,29 @@
   "code": "247540",
   "name": "에코프로비엠",
   "market": "KOSDAQ",
-  "basDt": "20261120",
+  "basDt": "20261123",
   "price": {
     "code": "247540",
     "name": "에코프로비엠",
     "market": "KOSDAQ",
-    "basDt": "20261120",
-    "close": 82700,
-    "vs": -4000,
-    "fltRt": -4.61,
-    "open": 83100,
-    "high": 83900,
-    "low": 81000,
-    "prevClose": 86700,
-    "volume": 241564,
-    "tradeValue": 19892863050,
+    "basDt": "20261123",
+    "close": 79400,
+    "vs": -3300,
+    "fltRt": -3.99,
+    "open": 82700,
+    "high": 83800,
+    "low": 78300,
+    "prevClose": 82700,
+    "volume": 381362,
+    "tradeValue": 30741599050,
     "week52": {
       "low": 75900,
       "high": 246000,
-      "position": 0.03997648442092887,
-      "days": 245,
-      "from": "20251120"
+      "position": 0.0205761316872428,
+      "days": 244,
+      "from": "20251123"
     },
     "recent5": [
-      {
-        "basDt": "20261116",
-        "fltRt": -5.29,
-        "open": 92600,
-        "high": 95300,
-        "low": 85700,
-        "close": 86000
-      },
       {
         "basDt": "20261117",
         "fltRt": -1.51,
@@ -64,30 +56,68 @@
         "high": 83900,
         "low": 81000,
         "close": 82700
+      },
+      {
+        "basDt": "20261123",
+        "fltRt": -3.99,
+        "open": 82700,
+        "high": 83800,
+        "low": 78300,
+        "close": 79400
       }
     ],
     "volumeVs20d": {
-      "avg20": 498456,
-      "ratio": 0.48
+      "avg20": 485697,
+      "ratio": 0.79
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 528,
-      "rows52w": 245
+      "rows": 529,
+      "rows52w": 244
     },
-    "generatedAt": "2026-11-23T09:58:40.675Z"
+    "generatedAt": "2026-11-24T11:46:53.438Z"
   },
   "facts": [
-    "코스닥보다 1.1%p 높았어요.",
-    "거래량은 20일 평균의 0.5배예요.",
-    "시가보다 400원 낮게 마감했어요."
+    "코스닥보다 2.41%p 낮았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가보다 3,300원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "에코프로비엠·에코프로 동반 약세…에코프로 그룹주 일제히 하락, 주말 앞두고 낙폭 주목",
-      "source": "CBC뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1zN3oyYlhsUkktb0hwM0sxVmxmQjM3VzRtT0ktS3doYWFWVjdodm01LWZRYkl0NDlhUWNOOFV5czljM2J0dEczR2hodWtaREV1UlFkVlFZTnJBaEVfa1FkSnhGRjU2bUFD?oc=5",
-      "publishedAt": "2026-11-20T05:57:11.000Z"
+      "title": "[리포트 브리핑]에코프로비엠, '삼원계가 돌아설 때 가장 탄력적' 목표가 100,000원 - 흥국증권",
+      "source": "뉴스핌",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5MeHNVOFUxVDZKTFVtRWl5Q29jOU9IT1M0emJVV1VvRXZuYl9qaVhXOG9oRXNwUGs4NzZOdkpxYVFJVXFfdTVnMVhxbkhBQ0xwRW1FdE1QLWtlRld5?oc=5",
+      "publishedAt": "2026-11-23T03:05:00.000Z"
+    },
+    {
+      "title": "주가 반토막에 풋옵션 부담… 에코프로비엠, 기존 FI와 CB 재발행 추진",
+      "source": "Chosunbiz",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOM3RkM29YbE5idlNmaEc4eGVRbGdrQTVHS0RlY0NUN19mT1pCTFphdlh3UThCUFlPMlVMZHRuUEF6WEh4M1dZVlpCcGZvaU0wWDZBMmduSFVmRXBWYUxaenFBWlNMajJud1laQ1RNMzlpcngxVWNtTkhOWDdVelNCR3dtMklteVHSAZsBQVVfeXFMTUtqTzllYUxCX0I2X2pkVkJJYTFiN19qRWNvbjdISWxmZjNIUnlpQWNJQjhNclBOUks5dFNub3lLVWQ0STlscThDNHIyY3FVbkdxbWNzRkxuWGdtalZJTjE1bXhET0k2bEU4OFNNa1Vscjhzb2FldzNKNGsza2hpN0JlZV81X0NMT3dYWlBOOEVSeTJKRjRoZTRvaUU?oc=5",
+      "publishedAt": "2026-11-22T23:25:00.000Z"
+    },
+    {
+      "title": "코스닥, 1%대 낙폭에 640선 밑으로...로보티즈 상승 VS 에코프로비엠 하락",
+      "source": "이코노뉴스",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBGTGRDV05lMEN6OXpiNFE4RjRfeWFQYV9mNmZ4YXdsSVF1cFE1QWRkV0V5RDRzMG5oRGZ6Yno3N1I4VndfTUNTdndJa1NsZnVadFZ1SkhaX0NpNXB3SXJkWVRlV255UmVUN05KaDJUUQ?oc=5",
+      "publishedAt": "2026-11-23T12:30:00.000Z"
+    },
+    {
+      "title": "에코프로비엠, 4200억 CB 상환 후 재발행…풋옵션 압박에 이자율 상향 유력",
+      "source": "데이터투자",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFAxUl9LLVQtbEJfeTNJMm5FWWx4M2RtZVlTNnhLRS1wcmdPeG5vS2RYOThqWDF4a3N6eF9WZGwtYjUzM1Y1dWpZWWp4ei1pZGVoSm5hdWwzS0VaZ0lpVW1VTHZ4dThXMGp3RkRlVUQtcHM1bmc?oc=5",
+      "publishedAt": "2026-11-23T00:46:26.000Z"
+    },
+    {
+      "title": "‘8861억 증자’ 보탰는데 주주 몫 또 깎이나...에코프로비엠 CB 재발행 추진",
+      "source": "인사이트",
+      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9XamhMU3VIeDRrRHNEZUdiTmNpSWoxNUJCUlBuOVhWNU1JVVNCRzFWVHpYbHVsZ1p6RXN3RTAtNnpFX1UwQnRPM0tLRkZYdw?oc=5",
+      "publishedAt": "2026-11-23T01:04:00.000Z"
+    },
+    {
+      "title": "에코프로비엠 주가, 11월 23일 장중 81,400원 1.57% 하락",
+      "source": "톱스타뉴스",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1lTlVJcUdVbW1fd1ctVDRxYjdPQ19MWmthV2RNQVhWZGRZWEI0QXpMTGVQZVg3dzdkODFrcGtjY3pQX0swNzZSWlp1dTZ3NldtWkh2WlRVLWJ1Z002V1lUaDE1VkEwaVBsU0dud1hKck1TQQ?oc=5",
+      "publishedAt": "2026-11-23T01:53:16.000Z"
     }
   ],
   "dart": [],
@@ -169,9 +199,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 645.68,
-    "vs": -39.13,
-    "fltRt": -5.71
+    "clpr": 635.45,
+    "vs": -10.23,
+    "fltRt": -1.58
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -180,7 +210,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-23T09:59:56.649Z",
+  "builtAt": "2026-11-24T11:48:04.839Z",
   "archiveDays": 120,
-  "archiveFrom": "20260528"
+  "archiveFrom": "20260529"
 }

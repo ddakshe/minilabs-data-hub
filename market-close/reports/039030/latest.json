@@ -2,37 +2,29 @@
   "code": "039030",
   "name": "이오테크닉스",
   "market": "KOSDAQ",
-  "basDt": "20261120",
+  "basDt": "20261123",
   "price": {
     "code": "039030",
     "name": "이오테크닉스",
     "market": "KOSDAQ",
-    "basDt": "20261120",
-    "close": 288000,
-    "vs": -47000,
-    "fltRt": -14.03,
-    "open": 309000,
-    "high": 309500,
-    "low": 281000,
-    "prevClose": 335000,
-    "volume": 149101,
-    "tradeValue": 43567708750,
+    "basDt": "20261123",
+    "close": 290500,
+    "vs": 2500,
+    "fltRt": 0.87,
+    "open": 283000,
+    "high": 297000,
+    "low": 272000,
+    "prevClose": 288000,
+    "volume": 143296,
+    "tradeValue": 41551411500,
     "week52": {
       "low": 237000,
       "high": 612000,
-      "position": 0.136,
-      "days": 245,
-      "from": "20251120"
+      "position": 0.14266666666666666,
+      "days": 244,
+      "from": "20251123"
     },
     "recent5": [
-      {
-        "basDt": "20261116",
-        "fltRt": -9.79,
-        "open": 357500,
-        "high": 357500,
-        "low": 315500,
-        "close": 322500
-      },
       {
         "basDt": "20261117",
         "fltRt": -1.86,
@@ -64,25 +56,51 @@
         "high": 309500,
         "low": 281000,
         "close": 288000
+      },
+      {
+        "basDt": "20261123",
+        "fltRt": 0.87,
+        "open": 283000,
+        "high": 297000,
+        "low": 272000,
+        "close": 290500
       }
     ],
     "volumeVs20d": {
-      "avg20": 105082,
-      "ratio": 1.42
+      "avg20": 106981,
+      "ratio": 1.34
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 528,
-      "rows52w": 245
+      "rows": 529,
+      "rows52w": 244
     },
-    "generatedAt": "2026-11-23T09:58:55.995Z"
+    "generatedAt": "2026-11-24T11:47:06.500Z"
   },
   "facts": [
-    "코스닥보다 8.32%p 낮았어요.",
-    "거래량은 20일 평균의 1.4배예요.",
-    "시가보다 21,000원 낮게 마감했어요."
+    "코스닥보다 2.45%p 높았어요.",
+    "거래량은 20일 평균의 1.3배예요.",
+    "시가보다 7,500원 높게 마감했어요."
   ],
   "news": [
+    {
+      "title": "外人, 이오테크닉스 2000억 매수",
+      "source": "한국경제",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBJdHJia2p4LUJjSkhpOVFIUU45dHAyRE50RGhmdHZXckJGbFQyak8yaWhUSFJadnJ4c1BudWhUUzB1WkJ0WDNfUTJTUUJPbXF4YVJOeU1Nc0UtZw?oc=5",
+      "publishedAt": "2026-07-03T07:00:00.000Z"
+    },
+    {
+      "title": "코스닥 5%대 ‘털썩’…리노공업·이오테크닉스 두자릿수 하락률, 알테오젠은 강세",
+      "source": "CBC뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE11dFNqMDNCQ24xNHdySkptZkJRRElOaXRsek1XaU1zYzUxQnB4VnpqVTBUTXNSQ250WVZrV19rRkY4M0w2X0ZxZUlwUnB2djdBSTFUTjJJWFhuSTJfSWllM1g0N29CWEh3?oc=5",
+      "publishedAt": "2026-11-21T01:27:00.000Z"
+    },
+    {
+      "title": "코스닥, 5%대 낙폭에 650선 밑으로...이오테크닉스, 로보티즈 등 하락",
+      "source": "이코노뉴스",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1UdDc2SF9Dei1ERC1LY0RoZ09tdk9zdUs4UUU0RWpHZmVmSlZMNWZZbjNWR2ZoNEtDQ3FMaXVFQXA4elNGTWFQWnF1QnpTeWItQkpDdVFlcUFUWVdIOTBYUmpubkpENzNGS2Q3bXhxWQ?oc=5",
+      "publishedAt": "2026-11-20T12:30:00.000Z"
+    },
     {
       "title": "[특징주] AI 투자심리 냉각에 반도체 소부장 '와르르'…리노공업 15%↓·이오테크닉스 14%↓",
       "source": "https://www.moneystorm.kr/",
@@ -90,16 +108,28 @@
       "publishedAt": "2026-11-20T07:11:16.000Z"
     },
     {
-      "title": "[특징주] 이오테크닉스, 장중 10%대 하락하며 30만원선 밑돌아 : 기업주식정보",
-      "source": "재경일보",
-      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBrMGtSQkdOQzZlZnVMTThJc2VSVFgzVDdlSG03QmVtMklNR3huVVZFOGZZU01LWW5ZbFkwbnlfWXcyX0RlSGlpNGtMOA?oc=5",
-      "publishedAt": "2026-11-20T01:25:16.000Z"
+      "title": "반도체 장비업계 '슈퍼 을'…이오테크닉스, '마커→어닐링' 레벨업 [실적why]",
+      "source": "뉴스1",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE02b28yTnVQZ1BKdXpfaEl1UEZSdlQyVWpCaTVZTXJ1Q0RZbHhjWUVhQzh2UlRNZVk0V0I0djdRWVBJNzR1U0JVTEF6T1JadGZ4dXhSbTF0MURXNTZD?oc=5",
+      "publishedAt": "2026-08-19T07:00:00.000Z"
     },
     {
-      "title": "코스닥 650선까지 급락…알테오젠은 '홀로' 강세, 이오테크닉스·리노공업 13%대↓",
-      "source": "CBC뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5UeUg5SmZRRU1IeS1ZZFNGcWlad3k4NGNKZXdzVkUtelNyQkE5R0MyS3lVU3VXdEg3dm11Y0FvNWNBTVJfcWdyT2pxV1FoREZpZ290bWFWSWwwenpWY1BuVUlnVnROTnNr?oc=5",
-      "publishedAt": "2026-11-20T04:37:13.000Z"
+      "title": "이오테크닉스 \"올해 사상 최대 실적 전망\"",
+      "source": "지디넷코리아",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1nYW5RN0FDdnFYZjQwS0cwOXIzUVBGMXZ5bjIxY2hlRmo1LTRhWEtJcWxaVDlxUU85TVVmbFVIbjdsYkUzanB6UE1zNUx5bWxNMjAwYUZn?oc=5",
+      "publishedAt": "2026-03-31T07:00:00.000Z"
+    },
+    {
+      "title": "[서치 e종목] 이오테크닉스, PCB 장비군 매출 성장으로 실적 모멘텀 강화될까",
+      "source": "데일리인베스트",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE96Zmw1a2Zqa0R2aXZUMER4dXhpeHQ3WlRoX19meWlfcnozU1ZpeXRBTFZZT3lmQjVYZ01FbDE0ZXc4UlpINlNuLXg0djZ1WHhnRHg3Q3RCamJBeWhSM0daRnZzUFZleWtfbWZUQtIBb0FVX3lxTE1Ec2ZZNTVheU9lNHVjdk93SC1tMW1sblBzYnZZcFQzNUR1czNCUTZycTB6aWNXOUxrZUwyclhwY0M0YXhmYWlnVGM2RUNjTkFqajlQRXJlUFI1UU5Ob201bXF2eFJLQ0ZUbGszNW01Yw?oc=5",
+      "publishedAt": "2026-09-09T07:00:00.000Z"
+    },
+    {
+      "title": "[Who Is ?] 성규동 이오테크닉스 대표이사 회장",
+      "source": "비즈니스포스트",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5ScW54QkFTODc4U3oyb1BkZHBzSHlONEZoSEdhXzE1bm5UTjhRQ0NmY1JqbjEyZXlndlFSTWxsWG80OGlIQm1aTEIzTWM2d2ZGUHZlQzFVZnoxZjltSEY4Q0FwUUJEellBSnpjWlNzU3pJc3c?oc=5",
+      "publishedAt": "2026-04-13T07:00:00.000Z"
     }
   ],
   "dart": [],
@@ -135,9 +165,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 645.68,
-    "vs": -39.13,
-    "fltRt": -5.71
+    "clpr": 635.45,
+    "vs": -10.23,
+    "fltRt": -1.58
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -146,7 +176,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-23T09:59:56.672Z",
+  "builtAt": "2026-11-24T11:48:04.857Z",
   "archiveDays": 120,
-  "archiveFrom": "20260528"
+  "archiveFrom": "20260529"
 }

@@ -3,10 +3,18 @@
   "name": "삼성전자",
   "market": "KOSPI",
   "retainDays": 120,
-  "firstBasDt": "20260528",
-  "lastBasDt": "20261120",
+  "firstBasDt": "20260529",
+  "lastBasDt": "20261123",
   "count": 120,
   "days": [
+    {
+      "basDt": "20261123",
+      "close": 177500,
+      "fltRt": -3.06,
+      "headline": "코스피보다 0.25%p 높았어요.",
+      "newsCount": 2,
+      "dartCount": 0
+    },
     {
       "basDt": "20261120",
       "close": 183100,
@@ -1028,16 +1036,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260528",
-      "close": 299500,
-      "fltRt": -2.44,
-      "headline": "시가 305,000원보다 5,500원 낮게 마감했어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-11-23T09:59:56.604Z"
+  "updatedAt": "2026-11-24T11:48:04.794Z"
 }

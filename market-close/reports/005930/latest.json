@@ -2,37 +2,29 @@
   "code": "005930",
   "name": "삼성전자",
   "market": "KOSPI",
-  "basDt": "20261120",
+  "basDt": "20261123",
   "price": {
     "code": "005930",
     "name": "삼성전자",
     "market": "KOSPI",
-    "basDt": "20261120",
-    "close": 183100,
-    "vs": -13800,
-    "fltRt": -7.01,
-    "open": 188100,
-    "high": 189300,
-    "low": 181400,
-    "prevClose": 196900,
-    "volume": 17713847,
-    "tradeValue": 3268609013700,
+    "basDt": "20261123",
+    "close": 177500,
+    "vs": -5600,
+    "fltRt": -3.06,
+    "open": 177600,
+    "high": 179600,
+    "low": 171500,
+    "prevClose": 183100,
+    "volume": 19587800,
+    "tradeValue": 3456035825114,
     "week52": {
-      "low": 94800,
+      "low": 96700,
       "high": 362500,
-      "position": 0.32984684348150917,
-      "days": 245,
-      "from": "20251120"
+      "position": 0.3039879608728367,
+      "days": 244,
+      "from": "20251123"
     },
     "recent5": [
-      {
-        "basDt": "20261116",
-        "fltRt": -4.47,
-        "open": 206500,
-        "high": 208000,
-        "low": 195000,
-        "close": 196800
-      },
       {
         "basDt": "20261117",
         "fltRt": -3.3,
@@ -64,30 +56,44 @@
         "high": 189300,
         "low": 181400,
         "close": 183100
+      },
+      {
+        "basDt": "20261123",
+        "fltRt": -3.06,
+        "open": 177600,
+        "high": 179600,
+        "low": 171500,
+        "close": 177500
       }
     ],
     "volumeVs20d": {
-      "avg20": 18097771,
-      "ratio": 0.98
+      "avg20": 18176165,
+      "ratio": 1.08
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 528,
-      "rows52w": 245
+      "rows": 529,
+      "rows52w": 244
     },
-    "generatedAt": "2026-11-23T09:58:12.405Z"
+    "generatedAt": "2026-11-24T11:46:22.251Z"
   },
   "facts": [
-    "코스피보다 1.8%p 낮았어요.",
-    "거래량은 20일 평균의 1.0배예요.",
-    "시가보다 5,000원 낮게 마감했어요."
+    "코스피보다 0.25%p 높았어요.",
+    "거래량은 20일 평균의 1.1배예요.",
+    "시가보다 100원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "삼성전자 사장 승진자는 모두 반도체…전영현·노태문 미래사업 전면에",
-      "source": "인베스트조선",
-      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOODhuSG1GWEw3WGR0UjFsSjdteWJjSW5rYlVzeDMxN3Zic2trYm9nTGcyMW1qSWd6Vk5LS3NNUnRfMmtrR3pHZDFTSG1zb0t0T3NFSXNoVXdiLTRWeHB5MWhTdUFTZ3BEdDdXM0hTNDNFNTd6ZUFuRnc0OVB5SjV5M0FpQQ?oc=5",
-      "publishedAt": "2026-11-20T00:54:00.000Z"
+      "title": "[단독]삼성전자, 정부 '로봇 칩' 개발 요청에 신중 모드…국산화 해법은",
+      "source": "MTN 머니투데이방송",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5hbXUyQWk5Q3RBR3pNSkZFS1NNbE1fdU9wWjRjSmNPWnh1SHVHek1iS0MzMVk2SE9lN2l6ZEpDekRVX2ZjU3ZLeFpsdU9iMHdncUZqNFlKaFQ4WWpLT1hv?oc=5",
+      "publishedAt": "2026-11-23T08:40:32.000Z"
+    },
+    {
+      "title": "삼성 준감위, 삼성전자 주주환원·증여세 논란 이번 주 심의",
+      "source": "연합인포맥스",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBsYzdxYTRZQjVzMk80ajFQWVp5ZXo3RTlfa3J2R0pwUlFJSXFuOUZxZlF5YmpzR0g4YXpBSHdVT1dPVFFSR3E0RUx2RHh1Vzg0RWp2VDRjb3dvNVg3ckdPMnFGbURIWXNLYmxjS2JyYUc?oc=5",
+      "publishedAt": "2026-11-22T22:52:31.000Z"
     }
   ],
   "dart": [],
@@ -161,9 +167,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 4869.96,
-    "vs": -267.93,
-    "fltRt": -5.21
+    "clpr": 4708.54,
+    "vs": -161.42,
+    "fltRt": -3.31
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -172,7 +178,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-23T09:59:56.602Z",
+  "builtAt": "2026-11-24T11:48:04.792Z",
   "archiveDays": 120,
-  "archiveFrom": "20260528"
+  "archiveFrom": "20260529"
 }
