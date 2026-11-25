@@ -2,37 +2,29 @@
   "code": "207940",
   "name": "삼성바이오로직스",
   "market": "KOSPI",
-  "basDt": "20261123",
+  "basDt": "20261124",
   "price": {
     "code": "207940",
     "name": "삼성바이오로직스",
     "market": "KOSPI",
-    "basDt": "20261123",
-    "close": 1288000,
-    "vs": -67000,
-    "fltRt": -4.94,
-    "open": 1328000,
-    "high": 1329000,
-    "low": 1268000,
-    "prevClose": 1355000,
-    "volume": 48515,
-    "tradeValue": 62454166500,
+    "basDt": "20261124",
+    "close": 1290000,
+    "vs": 2000,
+    "fltRt": 0.16,
+    "open": 1263000,
+    "high": 1307000,
+    "low": 1260000,
+    "prevClose": 1288000,
+    "volume": 65063,
+    "tradeValue": 83928232500,
     "week52": {
       "low": 1182000,
       "high": 1965000,
-      "position": 0.13537675606641125,
-      "days": 244,
-      "from": "20251123"
+      "position": 0.13793103448275862,
+      "days": 245,
+      "from": "20251124"
     },
     "recent5": [
-      {
-        "basDt": "20261117",
-        "fltRt": -0.63,
-        "open": 1423000,
-        "high": 1445000,
-        "low": 1403000,
-        "close": 1414000
-      },
       {
         "basDt": "20261118",
         "fltRt": -3.39,
@@ -64,30 +56,38 @@
         "high": 1329000,
         "low": 1268000,
         "close": 1288000
+      },
+      {
+        "basDt": "20261124",
+        "fltRt": 0.16,
+        "open": 1263000,
+        "high": 1307000,
+        "low": 1260000,
+        "close": 1290000
       }
     ],
     "volumeVs20d": {
-      "avg20": 62572,
-      "ratio": 0.78
+      "avg20": 63302,
+      "ratio": 1.03
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 529,
-      "rows52w": 244
+      "rows": 530,
+      "rows52w": 245
     },
-    "generatedAt": "2026-11-24T11:46:32.725Z"
+    "generatedAt": "2026-11-25T11:14:12.721Z"
   },
   "facts": [
-    "코스피보다 1.63%p 낮았어요.",
-    "거래량은 20일 평균의 0.8배예요.",
-    "시가보다 40,000원 낮게 마감했어요."
+    "코스피보다 6.16%p 낮았어요.",
+    "거래량은 20일 평균의 1.0배예요.",
+    "시가보다 27,000원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "삼성바이오로직스·에피스, 구영한·정병인 부사장 등 임원 승진 인사",
-      "source": "팜이데일리",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1jeEFHOW95SmdWejloUkpKQ0FINi1PMUZEY3luck9qVHVUY2dGLWlQYkVta0pIR1RRR1MzdHp2ajNISmx6VnJZQzdFU0xwckV0RTVfek9taFBtOGx3bDVZcXRVcHpqalJ6SEtTbWRR?oc=5",
-      "publishedAt": "2026-11-24T02:32:36.000Z"
+      "title": "[인사]삼성바이오로직스, 2027년 정기 임원승진",
+      "source": "바이오스펙테이터",
+      "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE16NnB6MlRmaFVheWhOWFNDeTBmZzhTTWFFRE81TnBocXR3cFZLZ3NWc2pRemowdGRXbkpkWXp6MUxaWTFpWkhiU3RxUUdZb01EUERaRUlBQQ?oc=5",
+      "publishedAt": "2026-11-24T02:59:00.000Z"
     },
     {
       "title": "[인사] 삼성바이오로직스 By EBN",
@@ -96,10 +96,10 @@
       "publishedAt": "2026-11-24T04:56:00.000Z"
     },
     {
-      "title": "[인사]삼성바이오로직스, 2027년 정기 임원승진",
-      "source": "바이오스펙테이터",
-      "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE16NnB6MlRmaFVheWhOWFNDeTBmZzhTTWFFRE81TnBocXR3cFZLZ3NWc2pRemowdGRXbkpkWXp6MUxaWTFpWkhiU3RxUUdZb01EUERaRUlBQQ?oc=5",
-      "publishedAt": "2026-11-24T02:59:00.000Z"
+      "title": "삼성바이오로직스, 임원 7명 승진…30대 여성 상무 탄생",
+      "source": "신아일보",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBZWkZNaW5RU3RpUmJsSHBWQU0yZmxzN2EzZ1VFWi1hY2VjalhJTjk3V1Y0X1g0OGRLdnpBb2ZpazlUaWhQenJYTVFuaW51VHhtS1hyWXJrbVFhb0x4QXpDeGpEdmR4d2ttVVFwaVNOUWI?oc=5",
+      "publishedAt": "2026-11-24T04:48:49.000Z"
     },
     {
       "title": "삼성바이오로직스, 임원 7명 승진…30대 여성·외국인 임원 발탁",
@@ -108,88 +108,31 @@
       "publishedAt": "2026-11-24T08:07:44.000Z"
     },
     {
-      "title": "삼성바이오로직스, 부사장 2명·상무 5명 승진 인사…“전문성 강화”",
-      "source": "에너지경제신문",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFAwWWdGeHBxcmJJX0JpNE9nM0tFXzV5bk5WZzFVUkIzb3g4VlVxVTR1anRRYUQzMVZpTFZ3dnpFSlctWmZNeF9TcUNYN3YwSVd3VTE0YzZ0aVpzYzg?oc=5",
-      "publishedAt": "2026-11-24T08:27:15.000Z"
+      "title": "삼성바이오로직스·에피스, 구영한·정병인 부사장 등 임원 승진 인사",
+      "source": "팜이데일리",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1jeEFHOW95SmdWejloUkpKQ0FINi1PMUZEY3luck9qVHVUY2dGLWlQYkVta0pIR1RRR1MzdHp2ajNISmx6VnJZQzdFU0xwckV0RTVfek9taFBtOGx3bDVZcXRVcHpqalJ6SEtTbWRR?oc=5",
+      "publishedAt": "2026-11-24T02:32:36.000Z"
     },
     {
-      "title": "[인사] 삼성바이오로직스",
-      "source": "더바이오",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1DVEhpR3FNbUMtNU5lLWtfQlEyMWRUemxRY3hfV2FISU9TYXNuMFA1a09wQjlRYVZWa3BpZEdWSmNIdWRCclNGREF3OUpBV0pKLXV0ZU93andXVUpJSHVlT25ESURmUGUyQXRYWdIBcEFVX3lxTE9LUEo4ZjZPd0lBLXUzR0xqenFtS3ZkTU5SZ0FTR2ZDY2tFT1ZkcVVTSjdyNi1Wb090ZXEya2N4aGYwc1Y4WERNMC1HcXJyckNpbFBCSXZYbHd3RlFoOXRlTzJ5djZLLTBCbmVDZTNocGU?oc=5",
-      "publishedAt": "2026-11-24T02:35:58.000Z"
+      "title": "삼성바이오로직스, 임원 7명 발탁…여성 임원 2명 배출",
+      "source": "전자신문",
+      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1RbUREamtEYmRMQjloVEppWWN0NlV6MmhEVEhyY1dibzN1UmFOdGNwX0NzUVJkell2dkw0VzU5N0M2bUNkUERjakxWZ1ZfUQ?oc=5",
+      "publishedAt": "2026-11-24T03:24:19.000Z"
     },
     {
-      "title": "[인사] 삼성바이오로직스",
-      "source": "스마트투데이",
-      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5KVDFaYlBPQkptVVhtdDdBWjFPTTBxbTJTcmZoQjY2bW9aMy14c2ZLaUFHUl90SWNkQTlPNGh4b21mWHlrQ0NoWjJMZ2liR3NYcWR6NXNxZzZ5Tk15aGpR?oc=5",
-      "publishedAt": "2026-11-24T04:34:00.000Z"
+      "title": "삼성바이오로직스, 임원 7명 승진…30대 여성 상무 발탁",
+      "source": "Chosunbiz",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPRzFQNUp3eS1hdmdNV09zUnhSYldUczJQLUI4a2FPV2tWRmxjNjhXNVNOS2VFUEpuWW95QVJjSjdtZW9vYmt4T0dVb3dKWjBVa3dad3h6YTNzSU54M2R3WXJxNzhCWTdsbmhYNXFkM1dLSzdRa09oWWQ1aWhISEhJUldSc3YtbTjSAZsBQVVfeXFMT19LWS11dFhUWUdMZ1V6V19nSW5pdm01SEJKYTFITGoxSVViRl9mWGt5NTd4UjM3U19jLXdlb3FtMUdsN3VLZWJQcnhCYXh4c1QyN0FsVzNpQ0ZSUXJPczV3OG15U2hqc0FoMU51N21GQkdTYjZkVEp0NE9hRktnTGdWTmRPVTBBWlpSb2I5dXBYWGRQQXcyT0lqeFU?oc=5",
+      "publishedAt": "2026-11-24T02:56:00.000Z"
     },
     {
-      "title": "[인사] 삼성바이오로직스",
-      "source": "한스경제",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5OUVlBLU5CZ1hOVHhSVXRIaGhVT05GSkRYd1dqRVBLTDZPYzdkQ19VN3RRVG9NN1Q1WGcyOVJ0cDNlU2FVc3lpZG5uVXZwN293bHlPRk5PLWJxSVJKd1ZXZXNWMFFmZ2VpUExV0gFvQVVfeXFMTkVyQS1YZjNFUnJlaTgyelZSTGtLZDlLVVhvWWtMTGt3NVg4UmNzMVN3M3RISGlUM3VfMzczeVo1dWtsSjZIV09SMVpuSDRtNzU0WXN3LTE0ZU96ZlVHYUZWeFRmQnVtWmI4WGpOZkgw?oc=5",
-      "publishedAt": "2026-11-24T05:23:34.000Z"
+      "title": "삼성바이오로직스, 2027년 정기 임원 인사 단행…부사장 2명·상무 5명 승진",
+      "source": "팜뉴스",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE80MUNZeGJOX2txSVdPdUEweFljX3o2amZSLWQtSG1TQzVibmRHSm83ZjJRLVN2NVZqLXY1Q2NnbHdVc0lfRWpXYWZ1ZVFHRHpodUt0WUdEZ2xfQmVlT3Frc0J0OENlalpMeFNGbQ?oc=5",
+      "publishedAt": "2026-11-24T02:17:46.000Z"
     }
   ],
-  "dart": [
-    {
-      "title": "임원ㆍ주요주주특정증권등소유상황보고서",
-      "filer": "황인찬",
-      "receiptNo": "20261123000359",
-      "date": "20261123",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261123000359"
-    },
-    {
-      "title": "임원ㆍ주요주주특정증권등소유상황보고서",
-      "filer": "조영진",
-      "receiptNo": "20261123000352",
-      "date": "20261123",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261123000352"
-    },
-    {
-      "title": "임원ㆍ주요주주특정증권등소유상황보고서",
-      "filer": "이재선",
-      "receiptNo": "20261123000346",
-      "date": "20261123",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261123000346"
-    },
-    {
-      "title": "임원ㆍ주요주주특정증권등소유상황보고서",
-      "filer": "윤여완",
-      "receiptNo": "20261123000339",
-      "date": "20261123",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261123000339"
-    },
-    {
-      "title": "임원ㆍ주요주주특정증권등소유상황보고서",
-      "filer": "안소연",
-      "receiptNo": "20261123000328",
-      "date": "20261123",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261123000328"
-    },
-    {
-      "title": "임원ㆍ주요주주특정증권등소유상황보고서",
-      "filer": "서상원",
-      "receiptNo": "20261123000316",
-      "date": "20261123",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261123000316"
-    },
-    {
-      "title": "임원ㆍ주요주주특정증권등소유상황보고서",
-      "filer": "Kevin Sharp",
-      "receiptNo": "20261123000312",
-      "date": "20261123",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261123000312"
-    },
-    {
-      "title": "임원ㆍ주요주주특정증권등소유상황보고서",
-      "filer": "김동중",
-      "receiptNo": "20261123000306",
-      "date": "20261123",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261123000306"
-    }
-  ],
+  "dart": [],
   "ownership": [
     {
       "kind": "insider",
@@ -235,9 +178,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 4708.54,
-    "vs": -161.42,
-    "fltRt": -3.31
+    "clpr": 5006.03,
+    "vs": 297.49,
+    "fltRt": 6.32
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -246,7 +189,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-24T11:48:04.810Z",
+  "builtAt": "2026-11-25T11:15:47.647Z",
   "archiveDays": 120,
-  "archiveFrom": "20260529"
+  "archiveFrom": "20260601"
 }

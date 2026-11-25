@@ -2,37 +2,29 @@
   "code": "105560",
   "name": "KB금융",
   "market": "KOSPI",
-  "basDt": "20261123",
+  "basDt": "20261124",
   "price": {
     "code": "105560",
     "name": "KB금융",
     "market": "KOSPI",
-    "basDt": "20261123",
-    "close": 143700,
-    "vs": -8700,
-    "fltRt": -5.71,
-    "open": 153100,
-    "high": 153100,
-    "low": 143600,
-    "prevClose": 152400,
-    "volume": 1163730,
-    "tradeValue": 169123846900,
+    "basDt": "20261124",
+    "close": 151400,
+    "vs": 7700,
+    "fltRt": 5.36,
+    "open": 148300,
+    "high": 152300,
+    "low": 144400,
+    "prevClose": 143700,
+    "volume": 705069,
+    "tradeValue": 105693033500,
     "week52": {
       "low": 120300,
       "high": 186200,
-      "position": 0.3550834597875569,
-      "days": 244,
-      "from": "20251123"
+      "position": 0.47192716236722304,
+      "days": 245,
+      "from": "20251124"
     },
     "recent5": [
-      {
-        "basDt": "20261117",
-        "fltRt": -2.97,
-        "open": 161700,
-        "high": 161700,
-        "low": 156300,
-        "close": 156800
-      },
       {
         "basDt": "20261118",
         "fltRt": -0.26,
@@ -64,90 +56,90 @@
         "high": 153100,
         "low": 143600,
         "close": 143700
+      },
+      {
+        "basDt": "20261124",
+        "fltRt": 5.36,
+        "open": 148300,
+        "high": 152300,
+        "low": 144400,
+        "close": 151400
       }
     ],
     "volumeVs20d": {
-      "avg20": 917633,
-      "ratio": 1.27
+      "avg20": 932191,
+      "ratio": 0.76
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 529,
-      "rows52w": 244
+      "rows": 530,
+      "rows52w": 245
     },
-    "generatedAt": "2026-11-24T11:46:37.750Z"
+    "generatedAt": "2026-11-25T11:14:17.846Z"
   },
   "facts": [
-    "코스피보다 2.4%p 낮았어요.",
-    "거래량은 20일 평균의 1.3배예요.",
-    "시가보다 9,400원 낮게 마감했어요."
+    "코스피보다 0.96%p 낮았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가보다 3,100원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "이재근 KB금융지주 회장 취임…\"리딩뱅크 넘어 글로벌 플랫폼으로\"",
-      "source": "조선일보",
-      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQdU12dTZUblo3ckRpN3RSOXE2bEV1MmNpWkItcVhwcGpONnFSNEhLYnRET1Z2SVg1T21Ocm1VTVJlRTRtVUtIaEkzREU0QTdWYm94NG1nQmNwcEt4LWpNN1RDdFZYWHQ0M2M0YVJIRENOb3R3S1dyazd5TFYyTGxjT25DclNOZHFTVjY0?oc=5",
-      "publishedAt": "2026-11-23T00:39:18.000Z"
+      "title": "인니 금융시장 불안에…“KB뱅크 회복 각도 1~2도로”",
+      "source": "서울경제",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE96MEhLUDNFMUNPNG0wdFRvUmtGYnVNTzFfaGNCcUFNUE5INUJkb19IYU44M2JSVWx3NG10Vk9lU01fTEY1UVlMa2ZpaVNuYWdrcnfSAVNBVV95cUxNQTJMTWdLblRxWGlxLVJLV0h3OHNzRXZkUWlqbzFzbEVzNk55WHZoZmxINUp0aVhNQ1ljeGFfcW0tNkFaU1Fqc0k5YThpR3FONWZJQQ?oc=5",
+      "publishedAt": "2026-11-24T07:29:21.000Z"
     },
     {
-      "title": "이재근 KB금융 회장 \"지금 가장 위험한 순간…이익만으로 평가 않겠다\"",
-      "source": "비즈워치",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5VQ3dBQzM4NGhyYkhJOXBpSDNWWXN4TWNYa19PNTZ4WW1mNGVzWDhEZlRpU0gyTUZzSDV3UUZkVXVTUUJETFU2RmFRb2ZmSlJhelB6ODExWGdyUjVLcC1PSFU5anNuRDV6UHgw?oc=5",
-      "publishedAt": "2026-11-23T01:07:02.000Z"
-    },
-    {
-      "title": "이재근 KB금융 회장 \"리딩뱅크 넘어 리딩플랫폼으로…내년 대전환 원년\"",
-      "source": "KB Think",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBSN2l4djV1NXdqMDJyNmx4TW9mWnIwcUx2bHVGcERYTmU4bHRQNndhdGdfVFZZWDVpZVd2TXlRU0xoem54RUxkSVV2LVZiM3VXbUhrNnk3dno2TzNGbHFVdTk0ekdXNl8ydXdEVDB5dTFUdw?oc=5",
-      "publishedAt": "2026-11-23T00:25:46.000Z"
-    },
-    {
-      "title": "이재근 KB금융 회장, 첫 행보는 청년·소상공인 현장",
-      "source": "전자신문",
-      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1TVm5YN09vRFBBTkJwenBMcjZOQTY3Rl8yN2NjN1hWWGNNa0FjV0tpYnRQYjQycXNLOERfcU4wZXJqLW1YaEFTdkdWLUJQQQ?oc=5",
-      "publishedAt": "2026-11-23T07:32:58.000Z"
-    },
-    {
-      "title": "[뱅크 NOW] 하나금융·KB금융",
+      "title": "[뱅크 NOW] KB금융·KB국민은행·하나은행·하나금융",
       "source": "위키리크스한국",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1LaTdCVEJzdmgzLTlLcm1nU3ZkeXpza1R0OU4wTmhTeG5KcWhhTG8wYXpSblBPcFlyNDZINkxadnFhcjcxdUd3RjhuZS1HMTN5Yk9Cb2szNGdBVldOVDhvM0Y5NVU4bWdPOEx1QTBTTlg?oc=5",
-      "publishedAt": "2026-11-23T09:37:38.000Z"
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5nMF9BWWZzR0x0VnNvQzIxOUdldWVwNEF0QlhrR2psZnJ4Z2VMekpoWURUcDl5Y0lBWVhrN3FDLUxUREQ4RXJUU2JWVU1FNWV6ZkctX1ZRZVpkODFXZG1ZbFhEby1ITk9YMXV0MVdkbDU?oc=5",
+      "publishedAt": "2026-11-24T08:39:39.000Z"
     },
     {
-      "title": "이재근 KB금융 회장 취임…\"리딩뱅크에서 리딩플랫폼으로\"",
-      "source": "연합뉴스TV",
-      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1oS3c1YUs4SEF3bWxDMDJpejhHWGFkbG40b05hTUlhbDZOb1o4dlp4akRBTW9QX21rWThrdjE5Z0lDUmJtVGdoQlg1dHdGdlRKbkVPYWl3c00xSDNQZjRKRk5uSVJTOFk?oc=5",
-      "publishedAt": "2026-11-23T08:15:00.000Z"
+      "title": "희망제작소-KB금융그룹, 사회적가치투자대회 본선 10팀 확정",
+      "source": "라이프인",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBTbldneExWMENFUnFzSFowaVM1SnIwRmJsLUJhZlRtUzRqQUNiZjZ4eTh4NVEzcXRpX0JLUEtDR2FrVExsdUJoRjdnX0JHdUc2a0V4ejhvME5JNktZRFBHWDdkek16UnJq?oc=5",
+      "publishedAt": "2026-11-24T07:15:51.000Z"
     },
     {
-      "title": "이재근 KB금융 회장, 취임 직후 해킹 대응 회의…보안부터 챙긴다(종합)",
-      "source": "연합인포맥스",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBYRldick04SDNiRjhiRHd5QmxmdDFsQjlFSThubDk4b0FPX3RRY3laeW9fLWY0MS1SNWM2TnpHMU00VGVOMHhJejkyMjBoU0JuWFMyc2hpNDJxd1dBZVVHbDBqbW5jUXFjNWxpSmE3am0?oc=5",
-      "publishedAt": "2026-11-23T07:36:20.000Z"
+      "title": "이재근 KB금융 회장 취임…‘CET1 13.8%’ 주주환원 기조 속 ‘KB스타뱅킹·보안’ 방점",
+      "source": "CEO스코어데일리",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBDUURnZkVmamdjVXB5QjZRNEl3bDBEX1VwYlVNZEVnZUFfU2hNY3FrUkJYanBOZWVLME5vX0dwbTFnQ1RBMkxsejRNUHFSOVhUeDZ0Ni1IQ3Z2QVpXN25WMldDQ01UMmpEWEJv?oc=5",
+      "publishedAt": "2026-11-24T08:29:25.000Z"
     },
     {
-      "title": "이재근 KB금융 회장, 예금·대출보다 ‘플랫폼’·AI 활용 강조",
-      "source": "이투데이",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1mUmZJZ3BtcWdOMHNBS21GVlI0ako2SHA4bm1qS1AtTEJubm5KSzlkd3ZtcWVSRnUySXN2NHU5Z0dPcTR1cG1TTjJVOXB4UTBFUmZLcHAxaG9Sdw?oc=5",
-      "publishedAt": "2026-11-23T02:28:00.000Z"
+      "title": "이재근 KB금융 회장, 취임 첫 행보로 청년·소상공인 현장 소통",
+      "source": "일간투데이",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5fdVVmTVFjQmNPWTF3WHpjSUdGWFYxcTkwTzBNT0ZNem03anQ4NkZON0R4VVRoN0cxUTJwQ3BPcGROamloSDFQSE1jZTNudjlDNEpZN19pM0k3TjBoN2RzQXUwaWZwZXdBWnFr?oc=5",
+      "publishedAt": "2026-11-24T01:36:03.000Z"
+    },
+    {
+      "title": "닻 올린 KB금융 '이재근호'…'리딩플랫폼' 첫 시험대는 인사",
+      "source": "비즈워치",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1jZ2tSNmdGOE9OdXBpaTd1d0NoVFEzdWlRc0hvbnRGaEo4SFRuN1hRNFF4OTN1MVZndHladFdtaUVha3Exbkdkd2ZiYUdaWGNMS0JYNFdsODVFeHgwTDVLaF9iNDNNVHU3WTA0?oc=5",
+      "publishedAt": "2026-11-23T22:30:03.000Z"
+    },
+    {
+      "title": "\"국내 1위 넘어 세계로… KB금융 대전환\"",
+      "source": "머니투데이",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1BVkd5N3U1RjI1alF0QU8wMVBRUjlha2huUlk1WkFXQmlCUG5KMVlsd0RXVmVnRU1VdXRoZjQ4NGNsV0psWVZxRDZaVUNXWUUzd1ZsNjh5WHEyTjdGU2xBdmE1d3FhbXdyZDY1Z2JhYmXSAXBBVV95cUxNQVZHeTd1NUYyNWpRdEFPMDFQUVI5YWtoblJZNVpBV0JpQlBuSjFZbHdEV1ZlZ0VNVXV0aGY0ODRjbFdKbFlWcUQ2WlVDV1lFM3dWbDY4eVhxMk43RlNsQXZhNXdxYW13cmQ2NWdiYWJl?oc=5",
+      "publishedAt": "2026-11-23T18:50:00.000Z"
+    },
+    {
+      "title": "이재근 KB금융 국내 리딩 넘어 글로벌 확장 내걸어, 해외사업 열쇠는 여전히 인도네시아",
+      "source": "비즈니스포스트",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5tWHh3VnQ0Yk9fb0FQU09lTHhxb0FFRGp1V0QxQlo5RlB6X0p2V1Y3RmtJbDhNWk13RnBxc215cnNhX2NScXBxcWd2VndvdkhqdmF2N0JxMF9kX2w0LVdITzlodDNhU3dwQUlVSDBsdkJaWEU?oc=5",
+      "publishedAt": "2026-11-24T06:48:38.000Z"
     }
   ],
-  "dart": [
-    {
-      "title": "[기재정정]상각형조건부자본증권발행결정(자회사의 주요경영사항)              ",
-      "filer": "KB금융",
-      "receiptNo": "20261123800110",
-      "date": "20261123",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261123800110"
-    }
-  ],
+  "dart": [],
   "ownership": [],
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 4708.54,
-    "vs": -161.42,
-    "fltRt": -3.31
+    "clpr": 5006.03,
+    "vs": 297.49,
+    "fltRt": 6.32
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -156,7 +148,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-24T11:48:04.817Z",
+  "builtAt": "2026-11-25T11:15:47.654Z",
   "archiveDays": 120,
-  "archiveFrom": "20260529"
+  "archiveFrom": "20260601"
 }

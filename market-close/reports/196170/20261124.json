@@ -1,0 +1,112 @@
+{
+  "code": "196170",
+  "name": "알테오젠",
+  "market": "KOSDAQ",
+  "basDt": "20261124",
+  "price": {
+    "code": "196170",
+    "name": "알테오젠",
+    "market": "KOSDAQ",
+    "basDt": "20261124",
+    "close": 159700,
+    "vs": -8800,
+    "fltRt": -5.22,
+    "open": 170400,
+    "high": 172900,
+    "low": 158400,
+    "prevClose": 168500,
+    "volume": 1112600,
+    "tradeValue": 181897435350,
+    "week52": {
+      "low": 159700,
+      "high": 542000,
+      "position": 0,
+      "days": 245,
+      "from": "20251124"
+    },
+    "recent5": [
+      {
+        "basDt": "20261118",
+        "fltRt": -1.21,
+        "open": 173100,
+        "high": 177000,
+        "low": 168700,
+        "close": 170900
+      },
+      {
+        "basDt": "20261119",
+        "fltRt": 1.05,
+        "open": 172000,
+        "high": 174400,
+        "low": 166000,
+        "close": 172700
+      },
+      {
+        "basDt": "20261120",
+        "fltRt": 0.98,
+        "open": 172800,
+        "high": 181700,
+        "low": 171500,
+        "close": 174400
+      },
+      {
+        "basDt": "20261123",
+        "fltRt": -3.38,
+        "open": 170800,
+        "high": 173900,
+        "low": 164500,
+        "close": 168500
+      },
+      {
+        "basDt": "20261124",
+        "fltRt": -5.22,
+        "open": 170400,
+        "high": 172900,
+        "low": 158400,
+        "close": 159700
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 513230,
+      "ratio": 2.17
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 530,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-11-25T11:14:25.583Z"
+  },
+  "facts": [
+    "코스닥보다 10.01%p 낮았어요.",
+    "거래량은 20일 평균의 2.2배예요.",
+    "시가보다 10,700원 낮게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "알테오젠 파트너 다이이찌산쿄, ‘엔허투SC’ 1상 환자 등록 완료…후속 개발 검토",
+      "source": "더바이오",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5nVnFJS0Y1WkpsR0xNUmtOOFFrckM5VnF5MlI0VDl6dVBqeVUxTXRXX2dQVXRjSmVFS05IVzl1MU81LVpsdUV5bkp4azNscFQ3RFRSdy1jd0tJbGdGbllnNkVsNUVPRmUwNF9SbNIBcEFVX3lxTE1HTGtWVUgzQ2dsak1GZXJpTFpIdm5yak00UXA1VUp1WXJtQ1h2dUo3UXdjcm8tYmdCcno0T01ZeEVJX3ZqU2FRaENWUHROMWVtQWd5azZ6SVVSc3RVOEpQbk45ZFFJWE1YVWtkbVhOU3Q?oc=5",
+      "publishedAt": "2026-11-24T03:06:41.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 665.88,
+    "vs": 30.43,
+    "fltRt": 4.79
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-11-25T11:15:47.665Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260601"
+}

@@ -2,37 +2,29 @@
   "code": "058470",
   "name": "리노공업",
   "market": "KOSDAQ",
-  "basDt": "20261123",
+  "basDt": "20261124",
   "price": {
     "code": "058470",
     "name": "리노공업",
     "market": "KOSDAQ",
-    "basDt": "20261123",
-    "close": 44700,
-    "vs": -650,
-    "fltRt": -1.43,
-    "open": 44250,
-    "high": 46200,
-    "low": 43150,
-    "prevClose": 45350,
-    "volume": 673368,
-    "tradeValue": 30155473425,
+    "basDt": "20261124",
+    "close": 48500,
+    "vs": 3800,
+    "fltRt": 8.5,
+    "open": 47600,
+    "high": 49300,
+    "low": 47300,
+    "prevClose": 44700,
+    "volume": 691490,
+    "tradeValue": 33528043825,
     "week52": {
       "low": 44700,
       "high": 127000,
-      "position": 0,
-      "days": 244,
-      "from": "20251123"
+      "position": 0.046172539489671933,
+      "days": 245,
+      "from": "20251124"
     },
     "recent5": [
-      {
-        "basDt": "20261117",
-        "fltRt": -2.76,
-        "open": 47450,
-        "high": 49100,
-        "low": 47050,
-        "close": 47650
-      },
       {
         "basDt": "20261118",
         "fltRt": 1.36,
@@ -64,30 +56,44 @@
         "high": 46200,
         "low": 43150,
         "close": 44700
+      },
+      {
+        "basDt": "20261124",
+        "fltRt": 8.5,
+        "open": 47600,
+        "high": 49300,
+        "low": 47300,
+        "close": 48500
       }
     ],
     "volumeVs20d": {
-      "avg20": 614995,
-      "ratio": 1.09
+      "avg20": 627894,
+      "ratio": 1.1
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 529,
-      "rows52w": 244
+      "rows": 530,
+      "rows52w": 245
     },
-    "generatedAt": "2026-11-24T11:47:11.596Z"
+    "generatedAt": "2026-11-25T11:14:46.481Z"
   },
   "facts": [
-    "코스닥보다 0.15%p 높았어요.",
+    "코스닥보다 3.71%p 높았어요.",
     "거래량은 20일 평균의 1.1배예요.",
-    "시가보다 450원 높게 마감했어요."
+    "시가보다 900원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "[특징주] 리노공업, 11시 27분 4만3550원 거래",
-      "source": "비건뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE04QW5JWm0xU2FLSjFrX1R6TlNyb2dTNG1uakVxZkg2T0h1M1o5cTNBVnNBdUU2TjBNQWlWc29UcUxJUkhSaFhiX1lQcVNTa0NhZzJBMEQ2RmVXc051bWJXSTlQZEVpUQ?oc=5",
-      "publishedAt": "2026-11-23T05:02:53.000Z"
+      "title": "리노공업, 62일 파업에 실적·주가↓… 1717억 신공장 투자로 반등 모색",
+      "source": "더밸류뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1mcldUVHNfeHV0MWNkTHA5dDUta1RnVXBjNjI2TXM5eWVGZHNFXzZKRFpzci1JdmotMVI1bGNtRjMwc0tXeFAwUFlhb2RReTNfOHNZbA?oc=5",
+      "publishedAt": "2026-11-24T07:19:04.000Z"
+    },
+    {
+      "title": "리노공업 9.17% 상승…반도체 테스트 부품 수요 기대",
+      "source": "잡포스트",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5mU2JESG51MzFDQkh3VHVfQmM3cExaaFdKeEhBd1BnM29Hc2U4MFcyNkc0VnBRS1FYcW9vNjFMcjFnaTV2Q2pfcHVsRVQyd3I2YUh3bF9FdVRGX2g0bEo5LXVrUzV4Zzh3TFlXcWh30gFyQVVfeXFMUExPdnozcFpZeDRVSHB3cWNad2w0S3lCcF85bTZDVktScjNPRldraVUxdmF5ZGpCbWJtSHhHSlBxbFNmc2x3ZDhXZ0p3ZXNZbUdtV3l4dDNnaWluZjNacmlnOW9uSTBrLTllV25fWlM2Q2Jn?oc=5",
+      "publishedAt": "2026-11-24T05:23:00.000Z"
     }
   ],
   "dart": [],
@@ -114,9 +120,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 635.45,
-    "vs": -10.23,
-    "fltRt": -1.58
+    "clpr": 665.88,
+    "vs": 30.43,
+    "fltRt": 4.79
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -125,7 +131,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-24T11:48:04.864Z",
+  "builtAt": "2026-11-25T11:15:47.693Z",
   "archiveDays": 120,
-  "archiveFrom": "20260529"
+  "archiveFrom": "20260601"
 }

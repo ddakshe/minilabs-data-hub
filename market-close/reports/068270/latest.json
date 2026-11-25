@@ -2,37 +2,29 @@
   "code": "068270",
   "name": "셀트리온",
   "market": "KOSPI",
-  "basDt": "20261123",
+  "basDt": "20261124",
   "price": {
     "code": "068270",
     "name": "셀트리온",
     "market": "KOSPI",
-    "basDt": "20261123",
-    "close": 202000,
-    "vs": -11000,
-    "fltRt": -5.16,
-    "open": 208500,
-    "high": 209000,
-    "low": 199000,
-    "prevClose": 213000,
-    "volume": 451754,
-    "tradeValue": 91637343500,
+    "basDt": "20261124",
+    "close": 209000,
+    "vs": 7000,
+    "fltRt": 3.47,
+    "open": 201500,
+    "high": 211000,
+    "low": 200000,
+    "prevClose": 202000,
+    "volume": 389387,
+    "tradeValue": 80720182500,
     "week52": {
       "low": 159400,
       "high": 248500,
-      "position": 0.4781144781144781,
-      "days": 244,
-      "from": "20251123"
+      "position": 0.5566778900112234,
+      "days": 245,
+      "from": "20251124"
     },
     "recent5": [
-      {
-        "basDt": "20261117",
-        "fltRt": -0.7,
-        "open": 214000,
-        "high": 216500,
-        "low": 211000,
-        "close": 213000
-      },
       {
         "basDt": "20261118",
         "fltRt": -2.58,
@@ -64,72 +56,80 @@
         "high": 209000,
         "low": 199000,
         "close": 202000
+      },
+      {
+        "basDt": "20261124",
+        "fltRt": 3.47,
+        "open": 201500,
+        "high": 211000,
+        "low": 200000,
+        "close": 209000
       }
     ],
     "volumeVs20d": {
-      "avg20": 621484,
-      "ratio": 0.73
+      "avg20": 622476,
+      "ratio": 0.63
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 529,
-      "rows52w": 244
+      "rows": 530,
+      "rows52w": 245
     },
-    "generatedAt": "2026-11-24T11:46:42.938Z"
+    "generatedAt": "2026-11-25T11:14:23.014Z"
   },
   "facts": [
-    "코스피보다 1.85%p 낮았어요.",
-    "거래량은 20일 평균의 0.7배예요.",
-    "시가보다 6,500원 낮게 마감했어요."
+    "코스피보다 2.85%p 낮았어요.",
+    "거래량은 20일 평균의 0.6배예요.",
+    "시가보다 7,500원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "급락장 속 ‘고수’는 삼전·닉스 팔고 셀트리온·삼성SDS 담았다 [주식 초고수는 지금]",
-      "source": "서울경제",
-      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1kdTVVOGE5OXFfamhiOW03TTU2X25VSjU5UktZVHNKbFBiM09qd3JaZ0dmUVRxS2xPOWNJQzlWdG9ocFdIeDdFRFdXYjh2NnAyR2fSAVNBVV95cUxPRVZ0UExLRHVfT3pQaWFFU0g2OTFjWXI1QUU2azg2ZlhYakZLNHdqZDVSY0llaTEwSjVsMlV6VkxLLU45akphN2NFWHJDRmlYeGZvcw?oc=5",
-      "publishedAt": "2026-11-23T02:33:39.000Z"
+      "title": "[단독]셀트리온, 송도 대신 싱가포르에 4공장...글로벌 생산거점 다변화",
+      "source": "파이낸셜뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE56THBsbFRpZHg2WVdFVVlfU01EcWJ0cVhFamR1TWpfMHplUFJoYTllTXZJeTBGSzFlRWpSaldQSzRjLS0teTJKNWZnYlREMkozUFpQOXJETXBkUQ?oc=5",
+      "publishedAt": "2026-11-23T22:00:00.000Z"
     },
     {
-      "title": "셀트리온 주가 11,000원 하락 후 장마감",
-      "source": "아시아뉴스통신",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE4wUTBtSHZrSGRmNjVmUXpObWR0dlNPUmFrZ3JOMEo3X2lZd1k1MDFSemVLZ2lKdlNqOVlNVFBiZ2FJYTN2bk9ocjE0ZE9yNmdJUmQxWXNwTGVyc0ctSndpLUlSZ1VFbmFWei1tdlVLVGREczZk?oc=5",
-      "publishedAt": "2026-11-23T06:57:36.000Z"
+      "title": "인천TP·셀트리온, 바이오 스타트업 5곳 기술검증 성과 공유",
+      "source": "머니투데이",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBlNUVrMGJ5RE1sODVvNGR0RkpKSkxPVy1PNGlqUzR3T1Q2b2hXTXdKblFYLXVoOFVEaVBPZUJpTG4wVTdaSV82dnoyVXhFRV9EYUdJTXJQams0dnZIRk04QzNRTzhnaHc5RVHSAW9BVV95cUxOa3FIb0VQSjVSUGpSSm0xVEtuQ2dXNVBtUE1xeTZXY1FHdy0tSVFxV0tkNHphUlp0X3Zsa1pneU1MWHE5aUNDdzNTWVZpUUtRaG1VbjA4T3dlcTNTNno1UTZjUUpfc01ZR19BczJrNmM?oc=5",
+      "publishedAt": "2026-11-24T05:00:00.000Z"
     },
     {
-      "title": "셀트리온제약, 차세대 ADC 접합 기술·신규 약물 조합 공개",
-      "source": "데일리팜",
-      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1SMGJoRTJQWEFpdWljWGNpcXBuN1k2QXNobGxJaE8wUFpaN09Jb0FhLVUySEJ2bDdKa1VGYjUyYWtLaUsyU3loTHl6RlE0Um40?oc=5",
-      "publishedAt": "2026-11-23T06:55:54.000Z"
+      "title": "HLB, 제약바이오 브랜드지수 1위 … 셀트리온 2위·한미약품 3위",
+      "source": "IT조선",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9aOEJlSk95a1pXbm82ZER2eDFaamZ5RDNFcVpCR0llcXpzYmZ4eFZTcWhFQW5SY1UwRzJnbWVZcTR6Q1kzQ1ZjU3FKTWxSRHdXX211ZTRXOHJqSS1YS2NwLXd4bWo2NmNSeXJVZVFaMlnSAXRBVV95cUxNYjNiT2luNnd5NXVYSUR2TnlNcVo2RDhzd1FTNW56eVV5NTctRkJoSFNjR2tfckU2ZnZnT2lHV1haZzJoWWdCVTl0cWZVZjdaV2FTY3JkZ2tCV29BTUJ6SjZ0c3l0OTlwVzJaWWJDMW5ySjNXQQ?oc=5",
+      "publishedAt": "2026-11-24T00:09:38.000Z"
     },
     {
-      "title": "[바이오스냅] 셀트리온제약, 유럽서 ADC 연구 결과 발표",
-      "source": "연합뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1TUGVuR0dRcEJNazFyblFYQ1VqTng4OF95MHQ1dDF2Z0tsaU1UMlRaUXJHQl8zQ2hESUtLM0tUdTc2a2Vhc1BEV1RNNXp5ZTB1eTR0VlpJTnp5TE3SAWBBVV95cUxQLXdFaEZuT0JrZWFnVFF6SEh2WG4zRHFZUkt3blVSTHNVazVZN290eU5mbTI2RlhGTlRCaUVXLVM3RS0wSDAxVUlHdHdJNDhSX1JJUGVhUzhRZ2pZa01iQmY?oc=5",
-      "publishedAt": "2026-11-23T01:05:01.000Z"
+      "title": "셀트리온제약, 'MMAE+신규 페이로드' ADC \"ENA 발표\"",
+      "source": "바이오스펙테이터",
+      "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9aQUpSZkhGU2ZkcGRZeVg3NjRWZmY1akNDdjJweUtZT2ZyOWdVRTVtY2RPQkFzRFR0NFhqUU5rSWxicjVvcXFMQjEzM3lmRGtkbGczM1BRdw?oc=5",
+      "publishedAt": "2026-11-24T01:00:00.000Z"
     },
     {
-      "title": "셀트리온제약, ADC 접합 기술 고도화···듀얼페이로드 개발 확대",
-      "source": "메디칼업저버",
-      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5Eekw3V09NdWprRUVZWU0wcmptd0pZX1k1cUhaaWFLUjA5WmtTcHFTSkVXNjVGNmRfZWZNeTJORGMzQkt3dFg1ZF9iendjcmFxRDlULU9CWFVBc19XNEFvOWRiT0tlR2s5c1A0?oc=5",
-      "publishedAt": "2026-11-23T03:12:40.000Z"
+      "title": "인천TP·셀트리온, 글로벌 바이오 스타트업 5곳과 오픈이노베이션 성과공유회 개최",
+      "source": "헬로티",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1HOHBncFBtTWhRbFpkMFk5VW5Tak5Hb3cxSHdUbUtRbHlqLWFHM0NMSzFpU1Jxa3lXd1JJU2J6NnRsLVJveUJVRG0xSlNrVXNaR2J2WmdzdHlzLTVnMFNB?oc=5",
+      "publishedAt": "2026-11-24T07:44:03.000Z"
     },
     {
-      "title": "에이인비-셀트리온, AI 기반 항체 신약 발굴 계약 체결",
-      "source": "강원일보",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9iaE5LaTZuQmlVWXlKdDBvSEtZU1dlWDAyMktwNzZ1ZmRLUktPT1dmczNPZWpVcDNael9iX3U0Q0RpdkRjRUVGRXY1UTFuRElobWNQMi1VSEFza0U?oc=5",
-      "publishedAt": "2026-11-23T08:20:44.000Z"
-    },
-    {
-      "title": "셀트리온제약, 차세대 ADC 연구 성과 공개…듀얼페이로드 가능성 제시",
-      "source": "메디코파마",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE55NWRLRTFfQmdMekJvYVk3QTM4Q0NqekR0SGdzVUJXRGFHSWZ1VWpMcFpzU3g2NHJBM3g4WWx0X2dyTkNoQjQ4cWNqWTdOWFFQTnRGbGROX3RzOHNUMlYwUW9Idll3U2pxYkRpM0t4RGZQZw?oc=5",
-      "publishedAt": "2026-11-23T00:49:24.000Z"
-    },
-    {
-      "title": "셀트리온제약, ENA 2026서 차세대 ADC 연구 성과 발표",
+      "title": "“셀트리온, 내년 신제품 성장 지속…제약·바이오 톱픽”",
       "source": "한국경제",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBQNURQMnY1cG5nSmNUZ0k1ODRpTGFzM2RCaF9wUlBjU250dEZkNkkwanc1dGlyQVN0bC1YLUIwZkJ1YmtNR1V5RDk0dThmMFBmM3ZhYWMyM00tQQ?oc=5",
-      "publishedAt": "2026-11-23T00:02:15.000Z"
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5DbWM2cS1ZZVNXd0k1dGYtYmJjYmFieVFOcjNqQXJRc1NsSzBubjNXemF1R0l5UENpM0VidGZSVGNZRUdRRFV0WVR4aUZlMUs2ekVZaF9ia3hvdw?oc=5",
+      "publishedAt": "2026-11-24T05:10:35.000Z"
+    },
+    {
+      "title": "서정진 셀트리온 회장은 “1단계 1조, 2단계 1조 오송에 투자”",
+      "source": "굿모닝충청",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE4xeGh4S0FTREVDLXBtQXBYOExkWHh2THpueHIyRkIxaVZZdG5kdDhKRkJXN0FCWEVjazUwa1dZalVCQ2Z5aTNBa1NSc3hfSGxtR2tUb1NzdmU3a0syNW5uUEZyYS1YN1FWeUFkMU9zRzl4dw?oc=5",
+      "publishedAt": "2026-11-24T08:22:44.000Z"
+    },
+    {
+      "title": "인천TP-셀트리온, 글로벌 바이오 스타트업 5곳과 오픈이노베이션 성과 공유",
+      "source": "벤처타임즈",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE84cXp5QlhRUTE4SUR4Y1NDc2NrZGROQ2RUOUxXd3d3LWF5RU1FT2swekhnSm1TQ1BRS1Y4YWZ4aGpNNHFJY0dXMjNuckRQS0VNNXBpLUpkTkZvYXRJUTVGZnNXSjRTQQ?oc=5",
+      "publishedAt": "2026-11-24T00:00:00.000Z"
     }
   ],
   "dart": [],
@@ -165,9 +165,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 4708.54,
-    "vs": -161.42,
-    "fltRt": -3.31
+    "clpr": 5006.03,
+    "vs": 297.49,
+    "fltRt": 6.32
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -176,7 +176,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-24T11:48:04.825Z",
+  "builtAt": "2026-11-25T11:15:47.661Z",
   "archiveDays": 120,
-  "archiveFrom": "20260529"
+  "archiveFrom": "20260601"
 }

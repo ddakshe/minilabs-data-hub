@@ -2,37 +2,29 @@
   "code": "005930",
   "name": "삼성전자",
   "market": "KOSPI",
-  "basDt": "20261123",
+  "basDt": "20261124",
   "price": {
     "code": "005930",
     "name": "삼성전자",
     "market": "KOSPI",
-    "basDt": "20261123",
-    "close": 177500,
-    "vs": -5600,
-    "fltRt": -3.06,
-    "open": 177600,
-    "high": 179600,
-    "low": 171500,
-    "prevClose": 183100,
-    "volume": 19587800,
-    "tradeValue": 3456035825114,
+    "basDt": "20261124",
+    "close": 189400,
+    "vs": 11900,
+    "fltRt": 6.7,
+    "open": 193200,
+    "high": 193700,
+    "low": 187500,
+    "prevClose": 177500,
+    "volume": 17079045,
+    "tradeValue": 3257170019300,
     "week52": {
       "low": 96700,
       "high": 362500,
-      "position": 0.3039879608728367,
-      "days": 244,
-      "from": "20251123"
+      "position": 0.34875846501128666,
+      "days": 245,
+      "from": "20251124"
     },
     "recent5": [
-      {
-        "basDt": "20261117",
-        "fltRt": -3.3,
-        "open": 191400,
-        "high": 195900,
-        "low": 190100,
-        "close": 190300
-      },
       {
         "basDt": "20261118",
         "fltRt": 2.31,
@@ -64,36 +56,68 @@
         "high": 179600,
         "low": 171500,
         "close": 177500
+      },
+      {
+        "basDt": "20261124",
+        "fltRt": 6.7,
+        "open": 193200,
+        "high": 193700,
+        "low": 187500,
+        "close": 189400
       }
     ],
     "volumeVs20d": {
-      "avg20": 18176165,
-      "ratio": 1.08
+      "avg20": 18586755,
+      "ratio": 0.92
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 529,
-      "rows52w": 244
+      "rows": 530,
+      "rows52w": 245
     },
-    "generatedAt": "2026-11-24T11:46:22.251Z"
+    "generatedAt": "2026-11-25T11:14:00.067Z"
   },
   "facts": [
-    "코스피보다 0.25%p 높았어요.",
-    "거래량은 20일 평균의 1.1배예요.",
-    "시가보다 100원 낮게 마감했어요."
+    "코스피보다 0.38%p 높았어요.",
+    "거래량은 20일 평균의 0.9배예요.",
+    "시가보다 3,800원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "[단독]삼성전자, 정부 '로봇 칩' 개발 요청에 신중 모드…국산화 해법은",
-      "source": "MTN 머니투데이방송",
-      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5hbXUyQWk5Q3RBR3pNSkZFS1NNbE1fdU9wWjRjSmNPWnh1SHVHek1iS0MzMVk2SE9lN2l6ZEpDekRVX2ZjU3ZLeFpsdU9iMHdncUZqNFlKaFQ4WWpLT1hv?oc=5",
-      "publishedAt": "2026-11-23T08:40:32.000Z"
+      "title": "삼성전자, 임원 131명 승진 인사…HBM·로봇 핵심 인재 중용",
+      "source": "조선일보",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNQ0Zrczd0bkJKNmI2RUduT0h5Y1MxY0hJQUhzYzBLR1EtN2Y2MFg4SDVaRENzbGtUX2JFajBNZXdoTGxOdkVaQUR2RUlrY1NaSVM5N2NsdW43RXY3bUV6TzJydWZNTXoyZWRJcEYwRkc2S1BMUXF6dFBtNjVkX3RDQ1EtTQ?oc=5",
+      "publishedAt": "2026-11-24T05:48:00.000Z"
     },
     {
-      "title": "삼성 준감위, 삼성전자 주주환원·증여세 논란 이번 주 심의",
-      "source": "연합인포맥스",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBsYzdxYTRZQjVzMk80ajFQWVp5ZXo3RTlfa3J2R0pwUlFJSXFuOUZxZlF5YmpzR0g4YXpBSHdVT1dPVFFSR3E0RUx2RHh1Vzg0RWp2VDRjb3dvNVg3ckdPMnFGbURIWXNLYmxjS2JyYUc?oc=5",
-      "publishedAt": "2026-11-22T22:52:31.000Z"
+      "title": "삼성전자 여성 임원 역대 최다…현장 엔지니어 ‘파워우먼’ 돌풍",
+      "source": "매일경제",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE0teDZWTkdqRi1XWWxKWXhRQmhYRnVSWDVVTWVhVUl0WXAzZmNjdnJPcnlENWJGLUVuRVZFM1hsUnJnc0FVQmlFTkIxbTF2UTZjang2ZGZR?oc=5",
+      "publishedAt": "2026-11-24T07:08:03.000Z"
+    },
+    {
+      "title": "삼성전자, 임원인사 단행…부사장 39명 등 131명 승진",
+      "source": "한국경제",
+      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBvN3FTemNzcHk1S1BDbUhsakJBWl9wY083UGRIcGdhR2habzFyc1h2OEhMV25pRU9XRVJXWFRfOGFpenRaU0Nvei1tUThOX1p5NmE4TkhNeTZndw?oc=5",
+      "publishedAt": "2026-11-24T00:16:47.000Z"
+    },
+    {
+      "title": "삼성전자 초기업노조, DX 성과급 통합 검토…4개 노조 의견 수렴",
+      "source": "아이뉴스24",
+      "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBic1FxOG1KNzNYZ1hnelE0ZjhuaTB2d2lMQ1FDU0tXc3lTVDNtYnJObU91dU92cWNudGN4MkVMeHNXd0IxRHBhTEppRQ?oc=5",
+      "publishedAt": "2026-11-24T09:27:21.000Z"
+    },
+    {
+      "title": "삼성전자, CES 2027서 자체 개발 휴머노이드 첫 공개…한 손에 모터 20개 탑재",
+      "source": "Chosunbiz",
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPWkZ0Nm9DMExMMS1ka004d3dhajVrVEllbjlUVVpTT01HNXB0XzExZWlJVWJqZTYyNFYwQkZCMXNvU253b3NSSVJPbDVncHZ1VHpMT3gwRFhrdlRhOUNoczItZUtjb3RyQmNqRHJqOFVlaEx1NFRNcF9lQWNyM3ZDVkh30gGWAUFVX3lxTE1WR2d2TVRHbDVGUUFvbHNLTVpBNDBHZTdjd1JoaVhJUWREZTllanJxdHMtUFZ0aGlLRTVLTDdXUXlMMlA1dE0xQTllcWdESVZmNi1lZnNzR2dHS1YtM1d6SjB6UW1URE5ZbkJUbkxNZXdId2xoUmYzWDhHSUxwRFlPR3hpeVYtUW9nWmlrSUw4NW85dXphUQ?oc=5",
+      "publishedAt": "2026-11-24T01:26:00.000Z"
+    },
+    {
+      "title": "삼성전자 역대급 실적에도 임원 승진은 9년 만에 최소",
+      "source": "디일렉",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1aWVU0SzhmMVJkZ09fdGtUeVFrbVhMRTc4ckhQMVVYTmdpQmVDMUtnU2hvdkJkVnlqUFNMWmpIVHQ3a29tZlh4YXQybVpZbkY1d3dZMC1tVU0zNzBTTzVpREJxYjhGUQ?oc=5",
+      "publishedAt": "2026-11-24T02:20:31.000Z"
     }
   ],
   "dart": [],
@@ -167,9 +191,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 4708.54,
-    "vs": -161.42,
-    "fltRt": -3.31
+    "clpr": 5006.03,
+    "vs": 297.49,
+    "fltRt": 6.32
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -178,7 +202,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-24T11:48:04.792Z",
+  "builtAt": "2026-11-25T11:15:47.624Z",
   "archiveDays": 120,
-  "archiveFrom": "20260529"
+  "archiveFrom": "20260601"
 }
