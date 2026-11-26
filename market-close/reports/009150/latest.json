@@ -2,37 +2,29 @@
   "code": "009150",
   "name": "삼성전기",
   "market": "KOSPI",
-  "basDt": "20261124",
+  "basDt": "20261125",
   "price": {
     "code": "009150",
     "name": "삼성전기",
     "market": "KOSPI",
-    "basDt": "20261124",
-    "close": 858000,
-    "vs": 80000,
-    "fltRt": 10.28,
-    "open": 863000,
-    "high": 885000,
-    "low": 845000,
-    "prevClose": 778000,
-    "volume": 864961,
-    "tradeValue": 745088042000,
+    "basDt": "20261125",
+    "close": 755000,
+    "vs": -103000,
+    "fltRt": -12,
+    "open": 815000,
+    "high": 816000,
+    "low": 743000,
+    "prevClose": 858000,
+    "volume": 849712,
+    "tradeValue": 653269140000,
     "week52": {
-      "low": 226000,
+      "low": 241500,
       "high": 2270000,
-      "position": 0.30919765166340507,
+      "position": 0.2531427162928272,
       "days": 245,
-      "from": "20251124"
+      "from": "20251125"
     },
     "recent5": [
-      {
-        "basDt": "20261118",
-        "fltRt": 7.43,
-        "open": 793000,
-        "high": 817000,
-        "low": 747000,
-        "close": 810000
-      },
       {
         "basDt": "20261119",
         "fltRt": 9.26,
@@ -64,82 +56,119 @@
         "high": 885000,
         "low": 845000,
         "close": 858000
+      },
+      {
+        "basDt": "20261125",
+        "fltRt": -12,
+        "open": 815000,
+        "high": 816000,
+        "low": 743000,
+        "close": 755000
       }
     ],
     "volumeVs20d": {
-      "avg20": 923389,
-      "ratio": 0.94
+      "avg20": 927971,
+      "ratio": 0.92
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 530,
+      "rows": 531,
       "rows52w": 245
     },
-    "generatedAt": "2026-11-25T11:14:10.202Z"
+    "generatedAt": "2026-11-26T10:10:53.514Z"
   },
   "facts": [
-    "코스피보다 3.96%p 높았어요.",
+    "코스피보다 5.84%p 낮았어요.",
     "거래량은 20일 평균의 0.9배예요.",
-    "시가보다 5,000원 낮게 마감했어요."
+    "시가보다 60,000원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "기가비스, 한 달 새 작년 매출 3배 수주…절반은 삼성전기가",
-      "source": "디일렉",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFA1TGtnUE5IcnBveVRtZjM0dlAyWWxQTXFFUDJJcHZaYV9KVnBYZlR3N0JQNnhDSWktS21IdzVzWHhWUFhHeHFwMjlGRUxmOU1ZNlpuUm1wLVNfYmtpVVdGM3VvVzFQQQ?oc=5",
-      "publishedAt": "2026-11-24T07:49:11.000Z"
+      "title": "삼성전기, 1조7천억원 규모 자사주 전량 소각 결정",
+      "source": "연합인포맥스",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9JLTlqeDNWNWJOYS1zZmxzWVRHWjZVdXljRWN5S25ENUFzMWNXSHp6bUtvbHZxOTlfVTF6bzQ1cU90b3M5OU9nRmd2R3J2bGw3cUZ2MHN5UnpDUDE1YXFUWTdFdGh5cXZ6V3FwZkJmSmE?oc=5",
+      "publishedAt": "2026-11-25T09:22:06.000Z"
     },
     {
-      "title": "삼성전기, 부사장 5명 등 15명 승진… 기술 경쟁력 강화",
-      "source": "IT조선",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFByaHJvY2xkX1hLdUdndUdRTjgxVWhmVUYwbFFHQ1JWX1pWdFFoZWZHM3Ywa09ic1dSVDVYU3FIQWJzd290U2QzT040T1h0NkU1Q3ZjLWJ2S3dBZnU0NUotbG1UNlRSck40bkxlV2dpRELSAXRBVV95cUxOMVY3ZHkwX0pQU3RnRVpqTVo4YWJOdkhQeFR1OWNhX1pfOHlIR055TG1MOVpkVG8waGd0RFZOZEE5VE5zTVRRNW1NMExCbUNvRE1kU2xMMW40b3hQOFJpVXppSjhOQU9CdFVISTJXRW1DR2VsQg?oc=5",
-      "publishedAt": "2026-11-24T01:55:30.000Z"
-    },
-    {
-      "title": "삼성전기, AI 시대 성장동력 확보 초점…임원 15명 승진",
-      "source": "연합뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBVSnA3Q0tDOHY0dXRTTWEweExyODAxMVdrWU9uMzBBMEQtd2FmRlp2S19xcDBPRXAtaWphTEF5ZjdUNVJ3RXJkc0c4X1RnRnFRSzlNMmRab3FZVDTSAWBBVV95cUxPRF9VeXRCX1lqbXNTaTlMZmVxbHFJUU9PZEtycFpBRWp4LWd2c29GaWF1bS1Ca2RnRUdJNmxrbnlGQmRXOElJMXNJYmJUbTF2Wm0wa0JLQTh6STE4MUVuLVI?oc=5",
-      "publishedAt": "2026-11-24T01:21:54.000Z"
-    },
-    {
-      "title": "젠슨 황 복귀에 'S7' 동반 상승…삼성전기, 10%대 급등",
-      "source": "머니투데이",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE4zdUs4V0ZVVHJDa0t6Y2I4WU4zMmxET2VTdW5vSzg0YWF1d3dmNng4eGtzM245SnJ4MkxwOUc1cnJ0Z0pvM0UxVUEwUjhjOE1tRzA2cDVlQk9jY01xWWFRSFdpS1pxTllq0gFuQVVfeXFMTVpWc3BzakNucFU1VERsVnRwN21wakZubnJ2dkdYLWtrbFBNNVlxS2tkeE5DeGpZc1BVS2V3cjJ3Ti16XzAxY29kS3ZkRWtYdXFfOEpZUDRodEw0cVdvNGE1dTNhZW9WQTEzTEFrb3c?oc=5",
-      "publishedAt": "2026-11-24T00:26:06.000Z"
-    },
-    {
-      "title": "[인사] 삼성전기",
-      "source": "IT조선",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBobE1nR0gydktEeUNweWhPWWl2bDJnREVfVWhUb25oNjJfUHpOVk40aVdtUWNYUnVLT0pmYTU5aFQ4Xy1MSEVqTkRqR1QzVG1KYnY2anVzUDNlVVJFcEUzbmNZWkY3eGNaUkdWOE9aSXnSAXRBVV95cUxQWm1BSUotRW5VTG1uakVzU2Z5VE1EX3FGMWFJNlBXbnM0Z3FUR2hxVGxPR21lcEc5T0xGTmZKX2ZMM2FsQUhuOWVCY0V1RE95ZThQQTBUS3JfWWxHX29tQlJEUi00dGRDUTJLSnM2WHZqZ2p0cQ?oc=5",
-      "publishedAt": "2026-11-24T01:35:16.000Z"
-    },
-    {
-      "title": "[특징주] 삼성전기, 엔비디아 훈풍에 장 초반 11%대 급등… 86만원 돌파",
-      "source": "Chosunbiz",
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNZVpjVDJiLU9sYXZvWGxWaC1fWlAtUkttc2h0Z0NjRDE2eklwc2tkOVVkcXY0SUxtT0xEQXpSSTJTb2tYQW1uWUxOaElRc203OG40aEIxV0I4MUM3X0tfemlibFl2NWZTQUtHQnJ2Y2dQZmZXaUp3cy1mZkdVODdzdmJ4a3RVdU5l0gGcAUFVX3lxTE5nV0k2S1hQQmd1clpSTFBhOFp6OElwd1M5STB5a3VQRW83WWlESkpYemY0LU5MU3dOMDNSZHQ4a1FndnJQWE5rVHBxNFJ0UTY0al9xemhqM21iWFY4SEV3Rzh3ZXhhMkplM0lDbnpYQUtjaFJ5WF8xYndTaW9GUVp6TmhEOHk5UHo3VDhqbkVoT2l2Tl92cEVZNG1fWg?oc=5",
-      "publishedAt": "2026-11-24T00:50:00.000Z"
-    },
-    {
-      "title": "삼성전기 주가 장중 12%대 상승, 젠슨 황 엔비디아 복귀에 기판주 강세",
+      "title": "[오늘의 주목주] 'AI 투심 위축' 삼성전기 주가 12% 하락, 코스피 6%대 내려 4690선 마감",
       "source": "비즈니스포스트",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9mOGpWc3dPN1hBUXBWa2tQbEloQzNfSGJMY2lQMVY0eEVnclNDaEVoX1FjU2lMQi1xd2JRLXNKVEgxNWVwTjhDZVk2am9tSENiZlBmcVhJYzRjcEt5WVY4UEU2by01R2FBN3JsX3BDYk0ycHc?oc=5",
-      "publishedAt": "2026-11-24T01:19:24.000Z"
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBnSUg1Q3Q2UUljd3NKZWdMUTJ1Y1Y3Ymo1aW1hQU9xNUVTSm82aWRYUU1sRm5iZjBWU21WMDFxRWVGcS1pZHpoYjB1R3IyTklYdUgySTVCT2FQV3M4Tkc0alBYc1JfRXg3MXVKaFZGbnNudWs?oc=5",
+      "publishedAt": "2026-11-25T08:46:31.000Z"
     },
     {
-      "title": "[특징주] 삼성전기, 엔비디아 협력 확대에 실적 성장 기대…10%대 급등",
-      "source": "브릿지경제",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9MaldlMk5PZUs4M19zR1FYdnVOWHFPTkpIQlh6VTg1dXdtRUNnbFZ6ZE1HWWswM2o2Mi1lZThZc0ZPT2FfR2hoa0pVN0dGMHBHNjlWemozUkZCUQ?oc=5",
-      "publishedAt": "2026-11-24T00:23:00.000Z"
+      "title": "삼성전기, 1.7조 규모 자사주 소각…주주환원 강화",
+      "source": "뉴스핌",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFByRmFtQ1NZY0JINnFReC1hX0M2bDdweDdkc0pYYWVyUlZaSVEtVV8tc1hLal8xczhqRHI1ZTJxOVJxUldmTldqeE5XX3ZrU2JGNU01UGlQY1BKMjVj?oc=5",
+      "publishedAt": "2026-11-25T09:03:00.000Z"
+    },
+    {
+      "title": "삼성전기, 1조7000억원 자사주 전량 소각…취득가 대비 12배",
+      "source": "디일렉",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBxRUk1cncwbkl1Y01wbl9kSHNCZnZEd2dNRG5FQ1RMaXZISVNlWTBGQ2Y2SUNLZEM0VElrWktybFh3LXBIcmQ1amM0ZjZtLTV5NnZiQUdwelNhckQ4WGhLLTM5WUZJdw?oc=5",
+      "publishedAt": "2026-11-25T12:16:39.000Z"
+    },
+    {
+      "title": "삼성전기, 1.7조원 자사주 전량 소각",
+      "source": "지디넷코리아",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1MY0xsWm9vdGdPWlFCYTNSdXhCck4wMERjRmhKNmNiZk5XQ25CbGg4dFUwX2ZFM3hTc3FrMVUxZmJ3dmdpeFZORm9fSUYxRlJEVHFHb1J3?oc=5",
+      "publishedAt": "2026-11-25T13:18:22.000Z"
+    },
+    {
+      "title": "삼성전기, 11년만에 1.7조 규모 자사주 소각...\"주주환원 강화\"",
+      "source": "이데일리",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPOG9QYUZVaVpZZ0x3SjRvdS1VMDVkSlBobUxwQlhfMlJ2TEQ1a1Vkd2JnVkhTWGVRZUhxNVhCQkJCdXZha21yclJXZnhJX1FialhJdkVDc09PMi0yb0lQTUxNaDBsZHNXRXNzRGE5VExFbXE0QzlFdUctWXpnd3QzeQ?oc=5",
+      "publishedAt": "2026-11-25T08:50:55.000Z"
+    },
+    {
+      "title": "삼성전기, 1조7000억원대 자사주 소각…2015년 취득가보다 12배 커져",
+      "source": "스트레이트뉴스",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBXYzVESXliZjQzbkNzNThKMUt4eFFKR2RMN2VmQ1hpX0hnbFlHOWhGVG1Ib29jTkRUdG5Jd2RGd3VETW5ZNHhlYkZUZjJDOGg3TVVfMlRFZlhvMkNzRHpiYVpQZGhVdEZJVVJrcVpLSlA4QUHSAXdBVV95cUxPQ2JlclZnT0hmY09wTGowajZXdGFBMmFfdm1yLTIzWVZUS1ZsNW0wNGp0U25fQnp2Y0M4VF9oOFc3MFhnMFJlbTVOSlFQc0pqSGNHWThDeE9HaG5RZEhiME5Yd0dDM0hzekF5N1dVLUdjZTB5b0k2Zw?oc=5",
+      "publishedAt": "2026-11-25T11:45:14.000Z"
+    },
+    {
+      "title": "삼성전기, AI 시장 선점할 인재 중용…부사장 5명 승진 : 네이버 블로그",
+      "source": "Naver Blog",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNM3lHMDR2Ql9XZFgtLWREVktsaEd0NVcySkNidGN2S1VmWDA5ZVpDR2xTNU9MVS1TTmJDcWVDQlhCVHhIc21jcko1VFVNTmRWczlxSzdsdWNtTTRzN08zUUF3cGVGOHkwRWlHV3pnNWplUkZSTXN4MFFpN0lTbUlXSWF6eTNLdHdtdzlUeEN5aw?oc=5",
+      "publishedAt": "2026-11-25T14:10:31.000Z"
     }
   ],
-  "dart": [],
+  "dart": [
+    {
+      "title": "특수관계인과의보험거래",
+      "filer": "삼성전기",
+      "receiptNo": "20261125000781",
+      "date": "20261125",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125000781"
+    },
+    {
+      "title": "특수관계인과의보험거래",
+      "filer": "삼성전기",
+      "receiptNo": "20261125000780",
+      "date": "20261125",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125000780"
+    },
+    {
+      "title": "[기재정정]특수관계인과의보험거래",
+      "filer": "삼성전기",
+      "receiptNo": "20261125000778",
+      "date": "20261125",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125000778"
+    },
+    {
+      "title": "주식소각결정              ",
+      "filer": "삼성전기",
+      "receiptNo": "20261125800735",
+      "date": "20261125",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125800735"
+    }
+  ],
   "ownership": [],
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5006.03,
-    "vs": 297.49,
-    "fltRt": 6.32
+    "clpr": 4697.51,
+    "vs": -308.52,
+    "fltRt": -6.16
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -148,7 +177,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-25T11:15:47.643Z",
+  "builtAt": "2026-11-26T10:12:25.544Z",
   "archiveDays": 120,
-  "archiveFrom": "20260601"
+  "archiveFrom": "20260602"
 }

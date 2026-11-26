@@ -3,10 +3,18 @@
   "name": "로보티즈",
   "market": "KOSDAQ",
   "retainDays": 120,
-  "firstBasDt": "20260601",
-  "lastBasDt": "20261124",
+  "firstBasDt": "20260602",
+  "lastBasDt": "20261125",
   "count": 120,
   "days": [
+    {
+      "basDt": "20261125",
+      "close": 288500,
+      "fltRt": -1.87,
+      "headline": "코스닥보다 0.42%p 높았어요.",
+      "newsCount": 3,
+      "dartCount": 0
+    },
     {
       "basDt": "20261124",
       "close": 294000,
@@ -1066,16 +1074,7 @@
       "newsCount": 0,
       "dartCount": 0,
       "priceOnly": true
-    },
-    {
-      "basDt": "20260601",
-      "close": 402500,
-      "fltRt": 23.66,
-      "headline": "코스닥보다 25.96%p 높았어요.",
-      "newsCount": 0,
-      "dartCount": 0,
-      "priceOnly": true
     }
   ],
-  "updatedAt": "2026-11-25T11:15:47.688Z"
+  "updatedAt": "2026-11-26T10:12:25.581Z"
 }

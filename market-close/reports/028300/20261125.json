@@ -1,0 +1,123 @@
+{
+  "code": "028300",
+  "name": "HLB",
+  "market": "KOSDAQ",
+  "basDt": "20261125",
+  "price": {
+    "code": "028300",
+    "name": "HLB",
+    "market": "KOSDAQ",
+    "basDt": "20261125",
+    "close": 28250,
+    "vs": 550,
+    "fltRt": 1.99,
+    "open": 27800,
+    "high": 28550,
+    "low": 27450,
+    "prevClose": 27700,
+    "volume": 481527,
+    "tradeValue": 13470181800,
+    "week52": {
+      "low": 25650,
+      "high": 68200,
+      "position": 0.06110458284371328,
+      "days": 245,
+      "from": "20251125"
+    },
+    "recent5": [
+      {
+        "basDt": "20261119",
+        "fltRt": 2.21,
+        "open": 27150,
+        "high": 27750,
+        "low": 26550,
+        "close": 27750
+      },
+      {
+        "basDt": "20261120",
+        "fltRt": -2.52,
+        "open": 27100,
+        "high": 27950,
+        "low": 26850,
+        "close": 27050
+      },
+      {
+        "basDt": "20261123",
+        "fltRt": -1.11,
+        "open": 26800,
+        "high": 27550,
+        "low": 26300,
+        "close": 26750
+      },
+      {
+        "basDt": "20261124",
+        "fltRt": 3.55,
+        "open": 27050,
+        "high": 27800,
+        "low": 26600,
+        "close": 27700
+      },
+      {
+        "basDt": "20261125",
+        "fltRt": 1.99,
+        "open": 27800,
+        "high": 28550,
+        "low": 27450,
+        "close": 28250
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 669621,
+      "ratio": 0.72
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 531,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-11-26T10:11:24.852Z"
+  },
+  "facts": [
+    "코스닥보다 4.28%p 높았어요.",
+    "거래량은 20일 평균의 0.7배예요.",
+    "시가보다 450원 높게 마감했어요."
+  ],
+  "news": [],
+  "dart": [
+    {
+      "title": "기업설명회(IR)개최              ",
+      "filer": "HLB",
+      "receiptNo": "20261125900706",
+      "date": "20261125",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125900706"
+    }
+  ],
+  "ownership": [
+    {
+      "kind": "major",
+      "date": "20260907",
+      "holder": "BlackRockFundAdvisors",
+      "ratio": 3.37,
+      "ratioChange": -3.78,
+      "reason": "보유비율 변동",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260907000092"
+    }
+  ],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스닥",
+    "clpr": 650.64,
+    "vs": -15.24,
+    "fltRt": -2.29
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": null,
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-11-26T10:12:25.586Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260602"
+}

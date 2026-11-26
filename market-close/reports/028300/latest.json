@@ -2,37 +2,29 @@
   "code": "028300",
   "name": "HLB",
   "market": "KOSDAQ",
-  "basDt": "20261124",
+  "basDt": "20261125",
   "price": {
     "code": "028300",
     "name": "HLB",
     "market": "KOSDAQ",
-    "basDt": "20261124",
-    "close": 27700,
-    "vs": 950,
-    "fltRt": 3.55,
-    "open": 27050,
-    "high": 27800,
-    "low": 26600,
-    "prevClose": 26750,
-    "volume": 397434,
-    "tradeValue": 10881940275,
+    "basDt": "20261125",
+    "close": 28250,
+    "vs": 550,
+    "fltRt": 1.99,
+    "open": 27800,
+    "high": 28550,
+    "low": 27450,
+    "prevClose": 27700,
+    "volume": 481527,
+    "tradeValue": 13470181800,
     "week52": {
       "low": 25650,
       "high": 68200,
-      "position": 0.0481786133960047,
+      "position": 0.06110458284371328,
       "days": 245,
-      "from": "20251124"
+      "from": "20251125"
     },
     "recent5": [
-      {
-        "basDt": "20261118",
-        "fltRt": -4.06,
-        "open": 28350,
-        "high": 28500,
-        "low": 27050,
-        "close": 27150
-      },
       {
         "basDt": "20261119",
         "fltRt": 2.21,
@@ -64,63 +56,42 @@
         "high": 27800,
         "low": 26600,
         "close": 27700
+      },
+      {
+        "basDt": "20261125",
+        "fltRt": 1.99,
+        "open": 27800,
+        "high": 28550,
+        "low": 27450,
+        "close": 28250
       }
     ],
     "volumeVs20d": {
-      "avg20": 673025,
-      "ratio": 0.59
+      "avg20": 669621,
+      "ratio": 0.72
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 530,
+      "rows": 531,
       "rows52w": 245
     },
-    "generatedAt": "2026-11-25T11:14:48.991Z"
+    "generatedAt": "2026-11-26T10:11:24.852Z"
   },
   "facts": [
-    "코스닥보다 1.24%p 낮았어요.",
-    "거래량은 20일 평균의 0.6배예요.",
-    "시가보다 650원 높게 마감했어요."
+    "코스닥보다 4.28%p 높았어요.",
+    "거래량은 20일 평균의 0.7배예요.",
+    "시가보다 450원 높게 마감했어요."
   ],
-  "news": [
+  "news": [],
+  "dart": [
     {
-      "title": "큐로셀 ‘림카토’ 약가 책정에 上…HLB생명과학, 합병 재도전에도 16.8%↓[바이오 맥짚기]",
-      "source": "팜이데일리",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE0xQXlFQkg3WXI1VkNBTTc3a3lDWHNHZjVHQ0NHQ1JCZDBnZlkzZ05BNk0ydUwzNnNhejJzY0F2ZTd1RTFHelB3dGZpc2ZnT0xVYzBhMElOSjBvczhUVzhBbFNPdGQ5NUpGSVN2UUt3?oc=5",
-      "publishedAt": "2026-11-23T23:15:03.000Z"
-    },
-    {
-      "title": "HLB, 제약바이오 브랜드지수 1위 … 셀트리온 2위·한미약품 3위",
-      "source": "IT조선",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9aOEJlSk95a1pXbm82ZER2eDFaamZ5RDNFcVpCR0llcXpzYmZ4eFZTcWhFQW5SY1UwRzJnbWVZcTR6Q1kzQ1ZjU3FKTWxSRHdXX211ZTRXOHJqSS1YS2NwLXd4bWo2NmNSeXJVZVFaMlnSAXRBVV95cUxNYjNiT2luNnd5NXVYSUR2TnlNcVo2RDhzd1FTNW56eVV5NTctRkJoSFNjR2tfckU2ZnZnT2lHV1haZzJoWWdCVTl0cWZVZjdaV2FTY3JkZ2tCV29BTUJ6SjZ0c3l0OTlwVzJaWWJDMW5ySjNXQQ?oc=5",
-      "publishedAt": "2026-11-24T00:09:38.000Z"
-    },
-    {
-      "title": "HLB-HLB생명과학 합병 추진…통합법인의 ‘바이오 계열사 지분가치’ 부각",
-      "source": "이투데이",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9oNy1MTlhSUXZ1Q18xQVdLalg3Wm14Q3lxeTA4YUliWXVFdEx2U2dHWTJpNU12VkxYTF9OV1UySjNBMHBjRU02bGJIaDRwWktXSmkzZg?oc=5",
-      "publishedAt": "2026-11-24T00:52:00.000Z"
-    },
-    {
-      "title": "HLB·HLB생명과학 합병, 지난해와 무엇이 달라졌나?…주주 보호 장치 보완",
-      "source": "파이낸셜리뷰",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFAwZVI2Mkg4NV9DYjFwdkxPZ1A0Q0FYWDl6SUtHVUFxWVlCYk1mYnhYbTZlTkxXTjZDUmZoT1BlZFpFTnJza0pURUh3R1U1TmFCb2pCclFYOElvWGhpMmVLc3E4b0lHc3BOU1EtaHNZWG9xZDZq?oc=5",
-      "publishedAt": "2026-11-24T05:00:32.000Z"
-    },
-    {
-      "title": "HLB, K-브랜드지수 제약·바이오 부문 1위…셀트리온 제치고 선두",
-      "source": "파이낸셜리뷰",
-      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5DZXdmc0R6dGRxaUwyWDVIWkJzSThpc1lTUDZiSWtkbTFuRTBoOXFuOUpLN0ozUFdBWTBBTmliWE9uWUZTRzdsbklkQ3pob1M0NXpLeFhtbWx4d1NHUWVGbDExX1dYMmktT01rQzdvNUVSMzlq?oc=5",
-      "publishedAt": "2026-11-24T02:15:57.000Z"
-    },
-    {
-      "title": "HLB, 10월 제약·바이오 K-브랜드지수 1위…한미약품 3위로 상승",
-      "source": "한국면세뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5qSEd1R1JwVmd2R3lhZ3pPaEhRZnpZUEU5SlRpeUR5RlN2TFl0QzRWUlFLdzFHRlZRV1puR3MxbEdfX2lha1ZxYUtLMkY3RnZ4dGR5S2hOdi1rQ2sySVZiZy13WjJKdlRrWnc?oc=5",
-      "publishedAt": "2026-11-24T06:04:13.000Z"
+      "title": "기업설명회(IR)개최              ",
+      "filer": "HLB",
+      "receiptNo": "20261125900706",
+      "date": "20261125",
+      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125900706"
     }
   ],
-  "dart": [],
   "ownership": [
     {
       "kind": "major",
@@ -135,18 +106,18 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 665.88,
-    "vs": 30.43,
-    "fltRt": 4.79
+    "clpr": 650.64,
+    "vs": -15.24,
+    "fltRt": -2.29
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
-    "news": "구글 뉴스 RSS",
+    "news": null,
     "dart": "DART OpenAPI",
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-25T11:15:47.696Z",
+  "builtAt": "2026-11-26T10:12:25.586Z",
   "archiveDays": 120,
-  "archiveFrom": "20260601"
+  "archiveFrom": "20260602"
 }

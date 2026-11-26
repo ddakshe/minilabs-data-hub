@@ -1,0 +1,118 @@
+{
+  "code": "005380",
+  "name": "현대차",
+  "market": "KOSPI",
+  "basDt": "20261125",
+  "price": {
+    "code": "005380",
+    "name": "현대차",
+    "market": "KOSPI",
+    "basDt": "20261125",
+    "close": 269500,
+    "vs": -5500,
+    "fltRt": -2,
+    "open": 266000,
+    "high": 274500,
+    "low": 265500,
+    "prevClose": 275000,
+    "volume": 412722,
+    "tradeValue": 111245627000,
+    "week52": {
+      "low": 247500,
+      "high": 750000,
+      "position": 0.04378109452736319,
+      "days": 245,
+      "from": "20251125"
+    },
+    "recent5": [
+      {
+        "basDt": "20261119",
+        "fltRt": 0.19,
+        "open": 268500,
+        "high": 271500,
+        "low": 258500,
+        "close": 267500
+      },
+      {
+        "basDt": "20261120",
+        "fltRt": -4.67,
+        "open": 258500,
+        "high": 263000,
+        "low": 252500,
+        "close": 255000
+      },
+      {
+        "basDt": "20261123",
+        "fltRt": -2.94,
+        "open": 246000,
+        "high": 250500,
+        "low": 240500,
+        "close": 247500
+      },
+      {
+        "basDt": "20261124",
+        "fltRt": 11.11,
+        "open": 252500,
+        "high": 279000,
+        "low": 252500,
+        "close": 275000
+      },
+      {
+        "basDt": "20261125",
+        "fltRt": -2,
+        "open": 266000,
+        "high": 274500,
+        "low": 265500,
+        "close": 269500
+      }
+    ],
+    "volumeVs20d": {
+      "avg20": 519338,
+      "ratio": 0.79
+    },
+    "source": {
+      "api": "data.go.kr 금융위원회_주식시세정보",
+      "rows": 531,
+      "rows52w": 245
+    },
+    "generatedAt": "2026-11-26T10:10:56.092Z"
+  },
+  "facts": [
+    "코스피보다 4.16%p 높았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가보다 3,500원 높게 마감했어요."
+  ],
+  "news": [
+    {
+      "title": "현대차그룹, ‘HMG 글로벌 완속충전기’ 공개 | 뉴스 | 현대자동차그룹",
+      "source": "Hyundai Motor Group",
+      "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQUTVHZjI1Z0FrelFrQ04wOFBzbmxINXdTMTVmMGFjUnM5a040ZXRqb3dmX2pJdVMxcFdsSy00QU9iS0drc1ZRTy1UV3hTX3U1aHV5UHVPTDZhRVVfX2R6RXRUbzFHVFctR0xsd25ZdTF5SW5RMEFJZHpIVjdxMmVXLVFtWHYyZTUxUXloZVhscGRqclFwcUh0aExoNXJVQQ?oc=5",
+      "publishedAt": "2026-11-24T23:30:00.000Z"
+    },
+    {
+      "title": "\"진짜 큰일 난 느낌이 확\" 테슬라 'V15' 본 현대차 익명게시판에는‥",
+      "source": "MBC 뉴스",
+      "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5HZzRDUGlHVmw2c3Q1SFVFel9uSHhVRkhwbjBNYVI4cTFoS3FlMDc1VW0xSHEyVzBwa242ajdLS2J5b2FMQUZ2NlFKU2F4R1RGMmZSbnhsZ1JJbFVId3NPeGtBU2lncVJFRnVsZGxfTm5oTVVH0gF0QVVfeXFMT0NSRVREMkZla05UZS04UDFNZlNVdEdCd0JDeWhnNlVMZXFTTXlVQmstelBXMkRIUGFzbHd0SmdGbFBhQmVkYXBBbHZ6cEc3enhqUEFZWU9fUTFaY1kyX3VtSWt1RUNQdnZwQ1lDNlNLSTdMLXg?oc=5",
+      "publishedAt": "2026-11-25T05:18:06.000Z"
+    }
+  ],
+  "dart": [],
+  "ownership": [],
+  "ownershipWindowDays": 90,
+  "marketIndex": {
+    "name": "코스피",
+    "clpr": 4697.51,
+    "vs": -308.52,
+    "fltRt": -6.16
+  },
+  "sources": {
+    "price": "data.go.kr 금융위원회_주식시세정보",
+    "news": "구글 뉴스 RSS",
+    "dart": "DART OpenAPI",
+    "ownership": "DART 지분공시 (대량보유·임원주요주주)",
+    "marketIndex": "data.go.kr 금융위원회_지수시세정보"
+  },
+  "builtAt": "2026-11-26T10:12:25.547Z",
+  "archiveDays": 120,
+  "archiveFrom": "20260602"
+}

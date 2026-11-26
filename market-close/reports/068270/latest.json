@@ -2,37 +2,29 @@
   "code": "068270",
   "name": "셀트리온",
   "market": "KOSPI",
-  "basDt": "20261124",
+  "basDt": "20261125",
   "price": {
     "code": "068270",
     "name": "셀트리온",
     "market": "KOSPI",
-    "basDt": "20261124",
-    "close": 209000,
-    "vs": 7000,
-    "fltRt": 3.47,
-    "open": 201500,
-    "high": 211000,
-    "low": 200000,
-    "prevClose": 202000,
-    "volume": 389387,
-    "tradeValue": 80720182500,
+    "basDt": "20261125",
+    "close": 217000,
+    "vs": 8000,
+    "fltRt": 3.83,
+    "open": 212000,
+    "high": 217000,
+    "low": 211000,
+    "prevClose": 209000,
+    "volume": 663222,
+    "tradeValue": 142639562000,
     "week52": {
       "low": 159400,
       "high": 248500,
-      "position": 0.5566778900112234,
+      "position": 0.6464646464646465,
       "days": 245,
-      "from": "20251124"
+      "from": "20251125"
     },
     "recent5": [
-      {
-        "basDt": "20261118",
-        "fltRt": -2.58,
-        "open": 210000,
-        "high": 213000,
-        "low": 206500,
-        "close": 207500
-      },
       {
         "basDt": "20261119",
         "fltRt": 3.61,
@@ -64,72 +56,80 @@
         "high": 211000,
         "low": 200000,
         "close": 209000
+      },
+      {
+        "basDt": "20261125",
+        "fltRt": 3.83,
+        "open": 212000,
+        "high": 217000,
+        "low": 211000,
+        "close": 217000
       }
     ],
     "volumeVs20d": {
-      "avg20": 622476,
-      "ratio": 0.63
+      "avg20": 620246,
+      "ratio": 1.07
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 530,
+      "rows": 531,
       "rows52w": 245
     },
-    "generatedAt": "2026-11-25T11:14:23.014Z"
+    "generatedAt": "2026-11-26T10:11:01.237Z"
   },
   "facts": [
-    "코스피보다 2.85%p 낮았어요.",
-    "거래량은 20일 평균의 0.6배예요.",
-    "시가보다 7,500원 높게 마감했어요."
+    "코스피보다 9.99%p 높았어요.",
+    "거래량은 20일 평균의 1.1배예요.",
+    "시가보다 5,000원 높게 마감했어요."
   ],
   "news": [
     {
-      "title": "[단독]셀트리온, 송도 대신 싱가포르에 4공장...글로벌 생산거점 다변화",
-      "source": "파이낸셜뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE56THBsbFRpZHg2WVdFVVlfU01EcWJ0cVhFamR1TWpfMHplUFJoYTllTXZJeTBGSzFlRWpSaldQSzRjLS0teTJKNWZnYlREMkozUFpQOXJETXBkUQ?oc=5",
-      "publishedAt": "2026-11-23T22:00:00.000Z"
+      "title": "셀트리온, 인천 저어새 서식지 보전 활동…ESG 경영 실천",
+      "source": "경기일보",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5xZmxWaEVJSzRtaGxyNmNvVUpkbVdoODhBdlNFc0hZUW80U2ZFV3pPVUdqTFhVaHpFcUZvaTdyb2wya1J3a0Z4bFQyT21UY0FMVzBhN3plMTFILVk?oc=5",
+      "publishedAt": "2026-11-25T09:20:32.000Z"
     },
     {
-      "title": "인천TP·셀트리온, 바이오 스타트업 5곳 기술검증 성과 공유",
-      "source": "머니투데이",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBlNUVrMGJ5RE1sODVvNGR0RkpKSkxPVy1PNGlqUzR3T1Q2b2hXTXdKblFYLXVoOFVEaVBPZUJpTG4wVTdaSV82dnoyVXhFRV9EYUdJTXJQams0dnZIRk04QzNRTzhnaHc5RVHSAW9BVV95cUxOa3FIb0VQSjVSUGpSSm0xVEtuQ2dXNVBtUE1xeTZXY1FHdy0tSVFxV0tkNHphUlp0X3Zsa1pneU1MWHE5aUNDdzNTWVZpUUtRaG1VbjA4T3dlcTNTNno1UTZjUUpfc01ZR19BczJrNmM?oc=5",
-      "publishedAt": "2026-11-24T05:00:00.000Z"
+      "title": "\"ESG 실천\"… 셀트리온, 저어새 서식지 보전 활동",
+      "source": "뉴시스",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1RV1VYdkxpLWxJbElNZk4yQW1WLTFPeVB0Z3V5OHVzbHpMdzlSbXhIQk1rNVBYX3ZQc1lQZTdJUU5BSFZzODVnc0dfVE1RLWpUMEJCWUtzN0tsdUR4NTE3R9IBeEFVX3lxTFBXZGF2cEVhUGV3RjA2dW90LWdac1VrTERPWUk0WTNVcUJySnp0eXl3cW85QVhCUWJQSkRseHFCcF9sR1g5WlFxT1ZaX2g4ckU3c3hkRV9ZTm0tXzFUZ2R1Q2hGeTYzZHRhWWxweVVDOHI0WEdqTXJEZQ?oc=5",
+      "publishedAt": "2026-11-25T00:16:17.000Z"
     },
     {
-      "title": "HLB, 제약바이오 브랜드지수 1위 … 셀트리온 2위·한미약품 3위",
-      "source": "IT조선",
-      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9aOEJlSk95a1pXbm82ZER2eDFaamZ5RDNFcVpCR0llcXpzYmZ4eFZTcWhFQW5SY1UwRzJnbWVZcTR6Q1kzQ1ZjU3FKTWxSRHdXX211ZTRXOHJqSS1YS2NwLXd4bWo2NmNSeXJVZVFaMlnSAXRBVV95cUxNYjNiT2luNnd5NXVYSUR2TnlNcVo2RDhzd1FTNW56eVV5NTctRkJoSFNjR2tfckU2ZnZnT2lHV1haZzJoWWdCVTl0cWZVZjdaV2FTY3JkZ2tCV29BTUJ6SjZ0c3l0OTlwVzJaWWJDMW5ySjNXQQ?oc=5",
-      "publishedAt": "2026-11-24T00:09:38.000Z"
+      "title": "셀트리온, 인천 저어새 서식지 보전 활동",
+      "source": "전자신문",
+      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBiUXdodENZcjYxaTl5M2ROeGZFbndzeGRTSDFwNDZTSDh5clpjNDlvdXJmRVZ5RzVJbXhnR21ya2tSZXBjb1h2Ulk4bzdOQQ?oc=5",
+      "publishedAt": "2026-11-25T00:41:08.000Z"
     },
     {
-      "title": "셀트리온제약, 'MMAE+신규 페이로드' ADC \"ENA 발표\"",
-      "source": "바이오스펙테이터",
-      "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9aQUpSZkhGU2ZkcGRZeVg3NjRWZmY1akNDdjJweUtZT2ZyOWdVRTVtY2RPQkFzRFR0NFhqUU5rSWxicjVvcXFMQjEzM3lmRGtkbGczM1BRdw?oc=5",
-      "publishedAt": "2026-11-24T01:00:00.000Z"
+      "title": "셀트리온, 증권사 목표가 상향에 강세…3.11%",
+      "source": "매일경제",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9yWjNYbnVGU05jU254VWVhc29uT2x0ci05ZS0tZkt2dHctbEF2WlozaW5nSDZJMDluT3I4bjdCS0FGR1ZxNFNEanFPcnhSeDRJY0E?oc=5",
+      "publishedAt": "2026-11-25T01:44:05.000Z"
     },
     {
-      "title": "인천TP·셀트리온, 글로벌 바이오 스타트업 5곳과 오픈이노베이션 성과공유회 개최",
-      "source": "헬로티",
-      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1HOHBncFBtTWhRbFpkMFk5VW5Tak5Hb3cxSHdUbUtRbHlqLWFHM0NMSzFpU1Jxa3lXd1JJU2J6NnRsLVJveUJVRG0xSlNrVXNaR2J2WmdzdHlzLTVnMFNB?oc=5",
-      "publishedAt": "2026-11-24T07:44:03.000Z"
+      "title": "7%대 하락한 삼성전자·SK하이닉스 담은 초고수들…셀트리온은 순매도 1위 [주식 초고수는 지금]",
+      "source": "매일경제",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBKXzI4YjRhNmc4Tm94N0R5QjU0U05LUTJVMzlfbkpzaFdkb0ZNWDRNUGVyZEFGMTIyMEhZMTRoa3paVW1hRXJ4VHFxOXdub2ZHVkE?oc=5",
+      "publishedAt": "2026-11-25T01:18:24.000Z"
     },
     {
-      "title": "“셀트리온, 내년 신제품 성장 지속…제약·바이오 톱픽”",
-      "source": "한국경제",
-      "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5DbWM2cS1ZZVNXd0k1dGYtYmJjYmFieVFOcjNqQXJRc1NsSzBubjNXemF1R0l5UENpM0VidGZSVGNZRUdRRFV0WVR4aUZlMUs2ekVZaF9ia3hvdw?oc=5",
-      "publishedAt": "2026-11-24T05:10:35.000Z"
+      "title": "셀트리온, 후보물질 도입 이어 AI 발굴까지···신약 개발 전략 다각화",
+      "source": "뉴스웨이",
+      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE05Ylh3R3dPYk5zSjItRmFNelNQX3ZlQTdXbjVGNDU5UWhtbldrdmwtaERwaGI4bEU1bmwxb2QyVE10SFJIY2tXbVVJMWRJZ1oydlVISy1ld19Yb2poSnFQOW04VFd5alFpcGc?oc=5",
+      "publishedAt": "2026-11-25T07:47:23.000Z"
     },
     {
-      "title": "서정진 셀트리온 회장은 “1단계 1조, 2단계 1조 오송에 투자”",
-      "source": "굿모닝충청",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE4xeGh4S0FTREVDLXBtQXBYOExkWHh2THpueHIyRkIxaVZZdG5kdDhKRkJXN0FCWEVjazUwa1dZalVCQ2Z5aTNBa1NSc3hfSGxtR2tUb1NzdmU3a0syNW5uUEZyYS1YN1FWeUFkMU9zRzl4dw?oc=5",
-      "publishedAt": "2026-11-24T08:22:44.000Z"
+      "title": "[바이오 브리프] 셀트리온·HK이노엔·부광약품·앱티스",
+      "source": "ER 이코노믹리뷰",
+      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9vTFVNYVZZNGFFdUw3eF9kaFN2TFB0WjhsY0FmN2FGTkRWUjFFWFNHeG1ieVFSS0R5WGZxWnFMTDZOT3ZqRkxfQzFUM0RjVlJIZTJFbnhQbVJxejZHcktNZDJMUVNkY1NVcjZvNw?oc=5",
+      "publishedAt": "2026-11-25T09:29:02.000Z"
     },
     {
-      "title": "인천TP-셀트리온, 글로벌 바이오 스타트업 5곳과 오픈이노베이션 성과 공유",
-      "source": "벤처타임즈",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE84cXp5QlhRUTE4SUR4Y1NDc2NrZGROQ2RUOUxXd3d3LWF5RU1FT2swekhnSm1TQ1BRS1Y4YWZ4aGpNNHFJY0dXMjNuckRQS0VNNXBpLUpkTkZvYXRJUTVGZnNXSjRTQQ?oc=5",
-      "publishedAt": "2026-11-24T00:00:00.000Z"
+      "title": "셀트리온, 인천 저어새 서식지 정비…내년 10월까지 보전 활동",
+      "source": "메디포뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9GbWFQVWZGSmd5Z25fRlhLWVNfSWRyckRSeXJ2RjhFaVdaWDBuZEx6dmE0akZueHZ0UXBnVTl4dm5xazlMUTFNSTdtSDBVWUkzQ2Jtc2RvMGxGaUtnUFd0TkoyMmE?oc=5",
+      "publishedAt": "2026-11-25T00:02:23.000Z"
     }
   ],
   "dart": [],
@@ -165,9 +165,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스피",
-    "clpr": 5006.03,
-    "vs": 297.49,
-    "fltRt": 6.32
+    "clpr": 4697.51,
+    "vs": -308.52,
+    "fltRt": -6.16
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -176,7 +176,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-25T11:15:47.661Z",
+  "builtAt": "2026-11-26T10:12:25.555Z",
   "archiveDays": 120,
-  "archiveFrom": "20260601"
+  "archiveFrom": "20260602"
 }

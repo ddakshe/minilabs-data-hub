@@ -2,37 +2,29 @@
   "code": "222800",
   "name": "심텍",
   "market": "KOSDAQ",
-  "basDt": "20261124",
+  "basDt": "20261125",
   "price": {
     "code": "222800",
     "name": "심텍",
     "market": "KOSDAQ",
-    "basDt": "20261124",
-    "close": 109000,
-    "vs": 6900,
-    "fltRt": 6.76,
-    "open": 116900,
-    "high": 116900,
-    "low": 108600,
-    "prevClose": 102100,
-    "volume": 991504,
-    "tradeValue": 110755905350,
+    "basDt": "20261125",
+    "close": 101900,
+    "vs": -7100,
+    "fltRt": -6.51,
+    "open": 103800,
+    "high": 107600,
+    "low": 99800,
+    "prevClose": 109000,
+    "volume": 888017,
+    "tradeValue": 91326687300,
     "week52": {
       "low": 42800,
       "high": 175000,
-      "position": 0.5007564296520424,
+      "position": 0.4470499243570348,
       "days": 245,
-      "from": "20251124"
+      "from": "20251125"
     },
     "recent5": [
-      {
-        "basDt": "20261118",
-        "fltRt": 0.09,
-        "open": 115400,
-        "high": 118200,
-        "low": 102500,
-        "close": 107600
-      },
       {
         "basDt": "20261119",
         "fltRt": 4.83,
@@ -64,72 +56,68 @@
         "high": 116900,
         "low": 108600,
         "close": 109000
+      },
+      {
+        "basDt": "20261125",
+        "fltRt": -6.51,
+        "open": 103800,
+        "high": 107600,
+        "low": 99800,
+        "close": 101900
       }
     ],
     "volumeVs20d": {
-      "avg20": 1100851,
-      "ratio": 0.9
+      "avg20": 1098090,
+      "ratio": 0.81
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 530,
+      "rows": 531,
       "rows52w": 245
     },
-    "generatedAt": "2026-11-25T11:14:38.678Z"
+    "generatedAt": "2026-11-26T10:11:22.182Z"
   },
   "facts": [
-    "코스닥보다 1.97%p 높았어요.",
-    "거래량은 20일 평균의 0.9배예요.",
-    "시가보다 7,900원 낮게 마감했어요."
+    "코스닥보다 4.22%p 낮았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가보다 1,900원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "[특징주] 심텍, 반도체 기판 테마 매수세 유입에 급등...모듈 PCB·패키지 기판 경쟁력 부각",
-      "source": "와이드경제",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE0taVRDUUJDUXpCajJkMjJxTHlkaDFqZUpIQWFMcnJLS1c2c0ZySGtDQW93dXhZUEwzQmdMUTh5TVFxOFh1VTZ2UlpRLWNtZUlMT3ZIbjFqaDQwcGY0bmEwVURxYzFLNTRzQlNNeQ?oc=5",
-      "publishedAt": "2026-11-24T01:33:15.000Z"
+      "title": "코스닥, 2%대 낙폭에 650선 턱걸이...주성엔지니어링, 심텍 등 하락",
+      "source": "이코노뉴스",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBBdkhkQnpXZUV1amV1WDFfV09XR0RLM3VLVHdVZVp5aHkzaGlMQ3lnNTVkb0FNVi1HS2dFVFFPOC1MSVdteUJmbUJ6OXlDSkpvYnJVOG9hRl93bmhsSzdhSE9mVzlNdUo0eEZSSFNzVQ?oc=5",
+      "publishedAt": "2026-11-25T12:30:00.000Z"
     },
     {
-      "title": "[특징주] 외국인 대한광통신·휴림로봇, 기관 삼성전자·심텍홀딩스 순매수 상위",
-      "source": "뉴스티앤티",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9uWWJyclJjZjZiSnJvT1hoUXluX1dvVHdGeWhVenBfVm94YWdETmQtaFAwVnlNcW80MFNjLURtZnlNOTRReXdFRmdqd1UzdnYxUEdhTkJNS0tlWTNkcUV4bHZYNHBySWt3UlE?oc=5",
-      "publishedAt": "2026-11-24T02:29:28.000Z"
+      "title": "삼성전기 주식 2.65% 사라진다…대덕전자·심텍 반도체 기판주도 주목",
+      "source": "핀포인트뉴스",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBzWWxuWGp0SEFqMzFiVk5JWWNvajNnSUdNTTNkYk5JdmFsLXExc2lYQ3VwdzFmTkdCSGU2UklZT3JnV0o0bjM1S1ZlclV0R1dhaUVRdFVmNnNVMm12RmE5QUtucU9EU0laM2hQUDFXREl2VzTSAXdBVV95cUxQdG1zUjg2ek81Zl9adnNaS2MzTG5QV1QxNGxPZXV4dmgxQmprN3VlVy14eG50NFBNUXdRXzRWVVM4N2VNRloxZDM2bk9jSG9yR3VkcHYyWS01Um16WWw3dFpMUW5xMUpYcUdDWEtFWncwS29reE9Qaw?oc=5",
+      "publishedAt": "2026-11-25T10:24:05.000Z"
     },
     {
-      "title": "심텍 11만200원으로 올라…공식 실적에 쏠린 시선",
-      "source": "잡포스트",
-      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1FRndmLTNNMndObnMwTXpZbG1nZ2hwRWNJODZMSXZvSEp6SER4dXFRX3dhc0RoYlF4QVVWR2w4MzE2dEhGU1o2QV9ETGJLbVBPLW1FV055NG5pdjZfYnBRdm1IdU45Zjk2al9oZWpn0gFyQVVfeXFMTkk0R3FaSDZ6NW1jS1hSQmhQYnZ4Xy1XR2V3STFVUC1Bc3NFZkpGZkNJR0xha2lJemxMdEFaWFI0UURJc2FuOWstTlh4eElwcjNJa0tVZjNGT01rYW1JdTdXclRwdHNFcXRxNlU1dUNLQWxR?oc=5",
-      "publishedAt": "2026-11-24T04:46:57.000Z"
+      "title": "하나증권 \"공급은 부족하고 주문은 쌓인다…삼성전기·심텍까지 기판 슈퍼사이클\"",
+      "source": "핀포인트뉴스",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBtZWE3RFNYajlYSWIxS0VpQ3NWN3NoUHpTSUJQYXR0SE9CUEM5UjBMMGxEdzlJZnJtLV8waGNvaWVNQ1hGRTRrUmhtV3RMX2ROLXNtdERGQ3Fkemx0R1ByV1BEWGVjNTJNU1F0Mm5rWTVLUU0?oc=5",
+      "publishedAt": "2026-11-25T09:37:54.000Z"
     },
     {
-      "title": "심텍홀딩스, 장중 6800원 터치해 52주 신고가",
-      "source": "비건뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9OTi1vcGs3XzdzT25HNFZNcDZXNGhRT0FXSEVKZGhuN2wzeVl4djBLYXROVnpjdFYyQmVYZE9qSW5GV3p1cEF0TFh6VVR3dGxJazlqeE40bU41YTlzd1FXQUJCa1ctdw?oc=5",
-      "publishedAt": "2026-11-24T03:22:59.000Z"
+      "title": "[코스닥 기관] 레인보우로보틱스·에스피지 기관 매수 집중…심텍·HPSP는 폭풍 매도",
+      "source": "핀포인트뉴스",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9FczVKN29qVUs4SUN1VFlMV194bXM1em9UV0lobC1UT1EwczJDNVZXTmZEY0pKNnBjZmdPMlM5QkNRVjE5c2ZQSURKOTBDOEE4ZUZSRHhaWm8xeU5lbi1hNnpwcjk1M0lIUmVQcTd4RUhaT1nSAXdBVV95cUxPNjBPdV81bXM4cXBPQWw1OEJzRlVWUjBzTE5QbG91N3haeUh1eWhkT253bURRRXZPcEVzM05KQUF5VjZzOEltMnktaUNTX0Q3bDd2R2UyT29IWDE1SzNhN1pNVVBlVnpGUlZxdDRHOE1lbEphNkJINA?oc=5",
+      "publishedAt": "2026-11-25T07:02:51.000Z"
     },
     {
-      "title": "[표]11월 24일 52주 신고가 종목 및 최근 동향",
-      "source": "뉴스핌",
-      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5JVVVIYnBEWW45WGR5d3RWbXgzejA2OFZ6dHo5RkVWNVp2aEZUTDJJdWx4dTI1dnB4aFIyZDNVT2Z5YS15a08wRi1qY1Y0TDNBazFqc0NhbWZBM20y?oc=5",
-      "publishedAt": "2026-11-24T06:40:00.000Z"
-    },
-    {
-      "title": "기판株 모처럼 ‘훈풍’⋯하루만에 10% 뛴 삼성전기·LG이노텍",
-      "source": "이투데이",
-      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE0yQzMzUkE5V293a0xLbG1OZmhpSnY1Y0g3ZVdEYkNnY0d3MUNfSmFtdnd0WTZPN2FZdGlpb1BiYU9YQnFjRFhCcnc2WUxoVHZwNElzYg?oc=5",
-      "publishedAt": "2026-11-24T09:00:00.000Z"
-    },
-    {
-      "title": "심텍 주가, 11월 24일 장중 114,200원 11.85% 상승",
+      "title": "심텍 주가, 11월 25일 장중 107,200원 1.65% 하락",
       "source": "중앙이코노미뉴스",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1oYmNLYXRFYjV1MlBuYVZnYnZBV1RYdXIwWlA4UUZBMF95NFZ4TmhEeFdzTXJISHlZMTQyUGdDUW9QOVRKSHFFN1JibFkweXJfTF9nRVpQSU1OWVQ2eVhfbGQ5YzNlZHZZSkNvMldGOFBDUQ?oc=5",
-      "publishedAt": "2026-11-24T00:59:59.000Z"
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9mdnQ2b0YzTFg2b0I5QXlRZXNZYUk3cVp2cEhxdHlwYnN5T3lWZUlhNUJuWDd4enYwX01oQ1BnbkNvM1JvN1huX0huVTd3VGZSVWYzTHBHVXZnS1o0R0llZkpJMzFCd2M0RnVvR3pTRHQ1Zw?oc=5",
+      "publishedAt": "2026-11-25T00:54:43.000Z"
     },
     {
-      "title": "심텍 주가, 11월 24일 애프터마켓 105,800원 3.62% 상승 흐름",
+      "title": "심텍 주가, 11월 25일 애프터마켓 101,900원 6.51% 하락",
       "source": "톱스타뉴스",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1HTnhCdzRHdF9IZHV6VWVZTkY3WHBaNmhLYWVkVEpwWl80ejVfM1FncWtwUXM1V0l5VW1WUkE0SHdIVnpuS3lNUktZQTN1RWNSMjQtN0RPbzI4SEdNZ1NTTThRV1F4M3lQS3hGakllRGU1dw?oc=5",
-      "publishedAt": "2026-11-24T09:10:17.000Z"
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9fbFlULVhXWTBJN2M0YUJ6Q2Q3SVVuUmtHU04tRmxnVXVBM05sdTdOVTNzYThTdkpXa3Vqb0taeWotSzE5YmpBREFiWDB3XzlIVnBNdkpkdzNtcHFuVURMS3dfWVJZajNERUltT1JqbGxEZw?oc=5",
+      "publishedAt": "2026-11-25T07:03:19.000Z"
     }
   ],
   "dart": [],
@@ -195,9 +183,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 665.88,
-    "vs": 30.43,
-    "fltRt": 4.79
+    "clpr": 650.64,
+    "vs": -15.24,
+    "fltRt": -2.29
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -206,7 +194,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-25T11:15:47.683Z",
+  "builtAt": "2026-11-26T10:12:25.584Z",
   "archiveDays": 120,
-  "archiveFrom": "20260601"
+  "archiveFrom": "20260602"
 }

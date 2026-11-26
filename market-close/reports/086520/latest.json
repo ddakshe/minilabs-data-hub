@@ -2,37 +2,29 @@
   "code": "086520",
   "name": "에코프로",
   "market": "KOSDAQ",
-  "basDt": "20261124",
+  "basDt": "20261125",
   "price": {
     "code": "086520",
     "name": "에코프로",
     "market": "KOSDAQ",
-    "basDt": "20261124",
-    "close": 69800,
-    "vs": 6600,
-    "fltRt": 10.44,
-    "open": 65200,
-    "high": 70700,
-    "low": 65000,
-    "prevClose": 63200,
-    "volume": 863941,
-    "tradeValue": 59553863300,
+    "basDt": "20261125",
+    "close": 66300,
+    "vs": -3500,
+    "fltRt": -5.01,
+    "open": 67300,
+    "high": 68900,
+    "low": 65500,
+    "prevClose": 69800,
+    "volume": 571904,
+    "tradeValue": 38269677750,
     "week52": {
       "low": 60600,
       "high": 185000,
-      "position": 0.07395498392282958,
+      "position": 0.04581993569131833,
       "days": 245,
-      "from": "20251124"
+      "from": "20251125"
     },
     "recent5": [
-      {
-        "basDt": "20261118",
-        "fltRt": 2.07,
-        "open": 69000,
-        "high": 70300,
-        "low": 65700,
-        "close": 69000
-      },
       {
         "basDt": "20261119",
         "fltRt": 0.43,
@@ -64,90 +56,83 @@
         "high": 70700,
         "low": 65000,
         "close": 69800
+      },
+      {
+        "basDt": "20261125",
+        "fltRt": -5.01,
+        "open": 67300,
+        "high": 68900,
+        "low": 65500,
+        "close": 66300
       }
     ],
     "volumeVs20d": {
-      "avg20": 821485,
-      "ratio": 1.05
+      "avg20": 826545,
+      "ratio": 0.69
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 530,
+      "rows": 531,
       "rows52w": 245
     },
-    "generatedAt": "2026-11-25T11:14:30.601Z"
+    "generatedAt": "2026-11-26T10:11:11.731Z"
   },
   "facts": [
-    "코스닥보다 5.65%p 높았어요.",
-    "거래량은 20일 평균의 1.1배예요.",
-    "시가보다 4,600원 높게 마감했어요."
+    "코스닥보다 2.72%p 낮았어요.",
+    "거래량은 20일 평균의 0.7배예요.",
+    "시가보다 1,000원 낮게 마감했어요."
   ],
   "news": [
     {
-      "title": "에코프로비엠 \"종속회사 에코프로글로벌 주식 6천222억원에 추가취득\"",
+      "title": "\"위험 경고 여러 번 무시해\"…'4명 사상' 에코프로비엠 전 대표 집유",
+      "source": "머니투데이",
+      "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5VNXRCUFQ0N0VfOWdVVTk1dWpFZGROa2NvazFPU3NSTExiSW9iZ05MZlg3YUQxbldwRzMyajB0MGM5Zlg2NGRhampUMThoN09qNG1yckpmNVYwVlNOcmlSV3ZjR2hNVnBGOUxN0gFwQVVfeXFMTkZkRkdvX2xRWVJCbGh3amJmajVxaEw2bU5xTFBqdjBKMWo4RHVDeXFMTFkwMUxVYjVHeU4wNWxDakRPVWhfNV93RDhHOXM4SVh3WGEzWEl0ei1Rb1EwYnpFSkk1MjMzZ1kxMDJzUUtVcQ?oc=5",
+      "publishedAt": "2026-11-25T09:41:38.000Z"
+    },
+    {
+      "title": "에코프로, 온누리스포츠단 창단 이후 최다 금메달",
+      "source": "전자신문",
+      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5jYmc4aUhET0VTMEx0Q3phQUR4T0xKbHdNcTR4di1sLVZOWV91ZnZYeF9RMlF6Y016QzVUUm9CN0wxVWtPaXZGdFUtcGVZZw?oc=5",
+      "publishedAt": "2026-11-25T06:37:23.000Z"
+    },
+    {
+      "title": "'1명 사망 폭발사고' 에코프로비엠 전 대표, 1심 집유",
+      "source": "뉴시스",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFB0cWxRQ0g4ZloxMHFLM216eUVGc2VJbnJTLUhGZ1lBTnRGLU1NSlBWaUpyT01rQkNNNlc1TGVVUjgzMWZtLUlEaVREc3JlSjhnbVAxTGtsWXJrYXNRU01vLdIBeEFVX3lxTFBwa254ek1keVpwaU1hZXg5ekY4TVlfT25OeVpBVEpsRmxJLU8xZW1yUDZ1ZHRwaXhJRE5hdjZTQWt3QUhidVQ3YXJlMkFLZFZEUEFGNGtpWGRzWENHdk1BUW91YTFjLUVpa2VCVTFna1B1bXdaQnN3Vg?oc=5",
+      "publishedAt": "2026-11-25T06:12:55.000Z"
+    },
+    {
+      "title": "에코프로 `온누리스포츠단`, 전국장애인체전 역대 최다 금메달 20개 쾌거",
+      "source": "디지털데일리",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5tcHhDR2s1a0p3UnNDTDYtQUNXYXVxUVpPdTJvUkNpVXQ1cV9kOUhGb2M4eUdRNjRXT2xaVHU4UUhHVW9GRUdGTWdoY3J2ZThhM1c5SkxVcDlwbU1OTzkxUnFoc3Y?oc=5",
+      "publishedAt": "2026-11-25T06:52:39.000Z"
+    },
+    {
+      "title": "에코프로, 온누리스포츠단 전국장애인체전 역대 최다 금메달 성과 격려",
+      "source": "전기신문",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE01dWlYcHVWZ3FWUVpveXluV1VnT1ViNWh1aEFzRVhYemYzdXVfVnhGaXFReTFWd1Rhc1JTb0JWeHRMay1KSzloa3AyREV2VnhlanZPdjFwRDY1R1NiN184WTBlUDRwS1NvaDUtUFQySmTSAXBBVV95cUxNNXVpWHB1VmdxVlFab3l5bldVZ09VYjVodWhBc0VYWHpmM3V1X1Z4RmlxUXkxVndUYXNSU29CVnh0TGstSks5aGtwMkRFdlZ4ZWp2T3YxcEQ2NUdTYjdfOFkwZVA0cEtTb2g1LVBUMkpk?oc=5",
+      "publishedAt": "2026-11-25T05:55:45.000Z"
+    },
+    {
+      "title": "‘4명 사상’ 에코프로비엠 폭발 사고 전 대표 징역형 집유",
+      "source": "KBS 뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1jWFZqcFU0YTVwWDZta01jWHdrNmlZNTFPNjVwQWhQZUhNVkJGdWtTb1psYlM5Y2hBdm53UWtRMnREQmVTdElWNUNUX2UxdU40aV9qVkFpek5HZkE?oc=5",
+      "publishedAt": "2026-11-25T07:15:00.000Z"
+    },
+    {
+      "title": "'4명 사상' 폭발 사고 에코프로비엠 전 대표 징역형 집행유예",
       "source": "연합뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5QeWdpSHhmclROVDczYzlZS0lzcGpQQVJXeTQ2NUNQRmFjZGRtNnRQUXpreTFlTVJXTklHVzhOWkUwNDhHYmhHV1lEbkpZcnV0Y3B3ZVVpc1VzdUHSAWBBVV95cUxOLVZvdWZkeUVOdGtVZWlIOHpTcHMzSFRkc0NtSjlpMU5KZko1VzhLWUN3dGhja1BqdHhZRDM4WWMwMjZqT3FZUzVFN25xUFViSGRkU0U5QUdrNWxnVEFqMnA?oc=5",
-      "publishedAt": "2026-11-24T08:04:11.000Z"
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1MTWlaOVo0dWlJSEJrUnpJM3lFc0lZRHk5YzNkNVlUTUJhN3psa2xmSTFkbXdFVlA2YlVvYXhXcVliZmhiQXJZNTlaWDBTcVJjckcyR2FVa0JoaDTSAWBBVV95cUxQZFg3TjNGUWF6b1gwSE1MQTV1TWRvZ0c0MmZMaXZLMzhSLVJkZFhiMkxzMzVldGMycmNQdXQwdEN3LUFhWVRzbVpWUFhMVkxlT0p1cmVQTE8tUHN0dmtlVUU?oc=5",
+      "publishedAt": "2026-11-25T06:31:12.000Z"
     },
     {
-      "title": "에코프로비엠, 싱가포르 종속회사 주식 6222억 취득",
-      "source": "마켓인",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBMUGk1YkpUTWRITGFVc0x0QWg4MHpxUDlEOFdTR1VTRFFwUGVSYTRsd2J2c2hobXFRMFlUZHpQbjVveHppaU05cTQzdUFsVlBxZU9ybGwyeUktVE92N0F1Y19tSFFFeldPQlBKd3pfOTRicjg?oc=5",
-      "publishedAt": "2026-11-24T09:19:50.000Z"
-    },
-    {
-      "title": "에코프로비엠 헝가리 공장, 소성설비 정비 중 연기 발생…화재로 번지지 않아",
-      "source": "글로벌이코노믹",
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNRkNrNm1Na1NHUC1SS2tMaEdobVlXNHMwNjI2MVk0bTFaRHd1eVRKNkl3MzNkSmZrMy1yZ1lFOFZHeFNNbVB4d2U0Q0M5ZFlvTG5wS2dET3I4clh4bkp5WGN3LVcyZWRDZnlJVGh5UWJBVTgxekFfR04yblRXMmhTdm9RRUNuNWtF?oc=5",
-      "publishedAt": "2026-11-23T22:26:09.000Z"
-    },
-    {
-      "title": "[리포트 브리핑]에코프로비엠, '2027년 하반기 실적 기대감 확대' 목표가 94,000원 - 키움증권",
-      "source": "뉴스핌",
-      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE8xUG90ekF6Tnh0NmlIQl96Q2ZIVGM1Q0piRE1wMjBjR1FBSThjNGlvRFh6cmE4RHFNSHFRNE9ZaDgyc0J2cGRISDZjemNYVUYtWTU1UFIybW00aXRp?oc=5",
-      "publishedAt": "2026-11-24T08:10:00.000Z"
-    },
-    {
-      "title": "에코프로비엠 종속회사 에코프로글로벌 주식 6천222억원에 추가취득",
-      "source": "SBS Biz",
-      "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9WNGNXMWd1bXRnNzZkbUp1ZXVlRUhWN3cycWJpRHNtYVJEQ1gwY2VlSjF1d1VBSXBzc2lsYkFvXzZTLXRicUhCd3doeFk2VW5xdzRN0gFYQVVfeXFMUGFxWTVSTTk2ZDEzNEZaSHpFNU9RbFJ4YkJaSjJZVFJJdm51ZUllaGhURjBIU0hOQzJwVUVCZlNsandoUGNBZldiVjdmRDNDQVNXazhCai1UTQ?oc=5",
-      "publishedAt": "2026-11-24T08:11:00.000Z"
-    },
-    {
-      "title": "[속보] 에코프로비엠, 제련소 투자구조 변경…싱가포르 종속회사에 6221억원 출자",
-      "source": "CBC뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9FaHVoQVRLa3lhc3psd3Brd19UUERzLW0xa0hLcXFwRzRnVF85VmVjN1BVYTdpMktiOGgtc3dGcWdYY2oxanpJbTYtMzVSZ0J3RDVWak5ITkV3OFhObHRMYWgzRU9YRS13?oc=5",
-      "publishedAt": "2026-11-24T08:03:13.000Z"
-    },
-    {
-      "title": "에코프로비엠, 싱가포르 종속회사 주식 6222억 취득",
-      "source": "이데일리",
-      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQZVd0N2M4cTZ1SlMzRXdhVzlRTmZjSnRDN2N2WnI2MXd5elA5RzNxWEFuRXNHdEF4UVZORlJyRmpkLU1oY0xxVjFxRElrd1VPVWwxUVFZaUNuUUxnX2loVVNJYkhBNG45MktLcFV6VGRaRXpJSDhLODBMckJzMG9kag?oc=5",
-      "publishedAt": "2026-11-24T09:19:50.000Z"
-    },
-    {
-      "title": "에코프로·에코프로비엠 주가 동반 급등…그룹주 일제히 '껑충'",
-      "source": "CBC뉴스",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE4xQWVOak8tY0lUVUp0T3BKSlVkaFBHeWloQmYyeXY1dkpJWm9wUEJHdXJxdFZMQ2NnQ0lZT3lQQVBWUWRxaWpBeFpNTTB0UnQ3c1B1T25lMVVTNERHQy15cU5FODVYckRz?oc=5",
-      "publishedAt": "2026-11-24T01:11:42.000Z"
+      "title": "'4명 사상' 폭발사고 에코프로비엠 전 대표 집행유예",
+      "source": "세이프타임즈",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE45bUpsaGE4bDdsNEF4b3NZS1BCank4X0pLZk0xNF82YzB4cVl3R0E3dVhRQTZaM2xhZzY0cFpBSDdTNFlleDJObGpDN0ViRXlPWEwyVGRVMWdPS1piRUJIbjQ2LUFVMk5PMTNzejdXWdIBc0FVX3lxTE10Wk1sU0tQcnRNaF9fdzVOdFFQYWtFY2dLclQtTmU5Yl83RnJNYl8wOUlNMlpfdmxlY2luSC1rTUwyZGJCSGJTdU04TmZlcDB1QUJwbFMtZ3hBX2hMX3NCME9vRFh6MnBiRk42MlpkTTZXQWc?oc=5",
+      "publishedAt": "2026-11-25T07:14:56.000Z"
     }
   ],
-  "dart": [
-    {
-      "title": "유상증자결정(종속회사의주요경영사항)              ",
-      "filer": "에코프로",
-      "receiptNo": "20261124900892",
-      "date": "20261124",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124900892"
-    },
-    {
-      "title": "[기재정정]유상증자결정(종속회사의주요경영사항)              ",
-      "filer": "에코프로",
-      "receiptNo": "20261124900874",
-      "date": "20261124",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124900874"
-    }
-  ],
+  "dart": [],
   "ownership": [
     {
       "kind": "major",
@@ -225,9 +210,9 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 665.88,
-    "vs": 30.43,
-    "fltRt": 4.79
+    "clpr": 650.64,
+    "vs": -15.24,
+    "fltRt": -2.29
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
@@ -236,7 +221,7 @@
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-25T11:15:47.672Z",
+  "builtAt": "2026-11-26T10:12:25.570Z",
   "archiveDays": 120,
-  "archiveFrom": "20260601"
+  "archiveFrom": "20260602"
 }
