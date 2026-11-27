@@ -2,37 +2,29 @@
   "code": "028300",
   "name": "HLB",
   "market": "KOSDAQ",
-  "basDt": "20261125",
+  "basDt": "20261126",
   "price": {
     "code": "028300",
     "name": "HLB",
     "market": "KOSDAQ",
-    "basDt": "20261125",
-    "close": 28250,
-    "vs": 550,
-    "fltRt": 1.99,
-    "open": 27800,
-    "high": 28550,
-    "low": 27450,
-    "prevClose": 27700,
-    "volume": 481527,
-    "tradeValue": 13470181800,
+    "basDt": "20261126",
+    "close": 29000,
+    "vs": 750,
+    "fltRt": 2.65,
+    "open": 28400,
+    "high": 29700,
+    "low": 28350,
+    "prevClose": 28250,
+    "volume": 509489,
+    "tradeValue": 14898285200,
     "week52": {
       "low": 25650,
       "high": 68200,
-      "position": 0.06110458284371328,
+      "position": 0.07873090481786134,
       "days": 245,
-      "from": "20251125"
+      "from": "20251126"
     },
     "recent5": [
-      {
-        "basDt": "20261119",
-        "fltRt": 2.21,
-        "open": 27150,
-        "high": 27750,
-        "low": 26550,
-        "close": 27750
-      },
       {
         "basDt": "20261120",
         "fltRt": -2.52,
@@ -64,34 +56,83 @@
         "high": 28550,
         "low": 27450,
         "close": 28250
+      },
+      {
+        "basDt": "20261126",
+        "fltRt": 2.65,
+        "open": 28400,
+        "high": 29700,
+        "low": 28350,
+        "close": 29000
       }
     ],
     "volumeVs20d": {
-      "avg20": 669621,
-      "ratio": 0.72
+      "avg20": 669848,
+      "ratio": 0.76
     },
     "source": {
       "api": "data.go.kr 금융위원회_주식시세정보",
-      "rows": 531,
+      "rows": 532,
       "rows52w": 245
     },
-    "generatedAt": "2026-11-26T10:11:24.852Z"
+    "generatedAt": "2026-11-27T10:17:39.617Z"
   },
   "facts": [
-    "코스닥보다 4.28%p 높았어요.",
-    "거래량은 20일 평균의 0.7배예요.",
-    "시가보다 450원 높게 마감했어요."
+    "코스닥보다 1.87%p 높았어요.",
+    "거래량은 20일 평균의 0.8배예요.",
+    "시가보다 600원 높게 마감했어요."
   ],
-  "news": [],
-  "dart": [
+  "news": [
     {
-      "title": "기업설명회(IR)개최              ",
-      "filer": "HLB",
-      "receiptNo": "20261125900706",
-      "date": "20261125",
-      "link": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261125900706"
+      "title": "HLB·HLB생명과학 \"매수청구대금 200억원 초과 시 합병 진행 여부 협의\"",
+      "source": "뉴스핌",
+      "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBLekJQd3Z6dC1LQW1zQzB2WFJwQl9rMzJpWHZuaUZHeFcxd0hOdVYtQm9WeTExR1FPX1pTMExkY2ZNNUpKeXYzaWR5Z0xoeTQ5LVFLb0lOa1FFcmJW?oc=5",
+      "publishedAt": "2026-11-26T07:26:00.000Z"
+    },
+    {
+      "title": "‘리보세라닙’ 美 허가 심사일, 주식매수청구 기간과 겹쳐…HLB 합병 변수로",
+      "source": "쿠키뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBCYjZwQ2REeEpRTC1hSG1YaVhFaE8wX3FNQVlWbWFQNm5lMTFTd2NlY2xycHJDMXRySHRZSG40b2RrRW5jT0tMSnk4eXZlYzZFTjFmUFplUmZWanpVR080bWJUZw?oc=5",
+      "publishedAt": "2026-11-25T21:00:11.000Z"
+    },
+    {
+      "title": "HLB·HLB생명과학, 합병 관련 온라인 주주간담회 개최",
+      "source": "로이슈",
+      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBRc1d4Z3lWMWdIaXNnZzYwbFA5b3A4TFY3SGJUckZZb0tDWDdybUZmQTRrM0FyTENfSEZLLVlhU3d4RFphRG1iZUg4S0FEcFZYeGpqLUNSNU1EV1haalVqaW9ZVE9hQmR4NTluenJxaElrdzV0c01mMXRn?oc=5",
+      "publishedAt": "2026-11-26T08:48:00.000Z"
+    },
+    {
+      "title": "HLB, 생명과학과 합병 재추진…주주 설득·매수청구권 관건",
+      "source": "비즈워치",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBQMUotREJoTDAzQnEtUzREbUpjaHh6WThzbXpZQzBFeEZFLWZSWTgxUXItNTR3N3FSRnZQeVRqdDM1U2N0alNfeDZCRFlMOXFLN3ptVmtjSXM2bEZHZElIT3FCNHQzbHFPRUhZUTVIaw?oc=5",
+      "publishedAt": "2026-11-26T07:32:02.000Z"
+    },
+    {
+      "title": "HLB·HLB생명과학, 합병 관련 온라인 주주간담회 개최 \"신약 사업권, 연구개발 역량 통합\"",
+      "source": "MEDI:GATE NEWS",
+      "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9leVJQUXFIWFF5OTF0SElSQ3luV1hrTXE3MTU1OFFWOWFoTUJxU1RIMm8zMFZuLUZvenJ4ei1BVFQ2OEg2OG9yM3RpOWJMXy12a0d5SkNBTQ?oc=5",
+      "publishedAt": "2026-11-26T12:42:00.000Z"
+    },
+    {
+      "title": "HLB·HLB생명과학, 합병 관련 온라인 주주간담회 개최 外",
+      "source": "톱데일리",
+      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE8zOXVyaXN6RFhqWGJqdlppWm83Y1VJd3I4WWFQeXpvbWZDX1NLMGkzT3JyNGMySWhFUlYwd3k4Y003R05kNzlDLUMyaDRWUkpH?oc=5",
+      "publishedAt": "2026-11-26T06:33:00.000Z"
+    },
+    {
+      "title": "HLB \"생명과학 합병, 신약 상업화 시너지 극대화 목적\"",
+      "source": "딜사이트",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9vc2N6YXZucWJ1Z2ViU1FPUExHU3RqdzdpdVNDQ09LemNVc2dqbUhnb3ZPNUxXZDFOVFR0b1FJcVBRY05BV0pGWUZib1RWY0E?oc=5",
+      "publishedAt": "2026-11-26T03:54:42.000Z"
+    },
+    {
+      "title": "HLB·HLB생명과학 “주식매수청구대금 200억원 초과해도 합병 추진”",
+      "source": "전자신문",
+      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE83V3ZaYk5IUjFuZGNLYTdaZGo4T0hPNVJBRE5GOFQ3bmJNWXhVYVdIandZRFBvNTZ3TEV2XzdNQUk2ZHhmN25oTlR3a3gzdw?oc=5",
+      "publishedAt": "2026-11-26T05:54:42.000Z"
     }
   ],
+  "dart": [],
   "ownership": [
     {
       "kind": "major",
@@ -106,18 +147,18 @@
   "ownershipWindowDays": 90,
   "marketIndex": {
     "name": "코스닥",
-    "clpr": 650.64,
-    "vs": -15.24,
-    "fltRt": -2.29
+    "clpr": 655.71,
+    "vs": 5.07,
+    "fltRt": 0.78
   },
   "sources": {
     "price": "data.go.kr 금융위원회_주식시세정보",
-    "news": null,
+    "news": "구글 뉴스 RSS",
     "dart": "DART OpenAPI",
     "ownership": "DART 지분공시 (대량보유·임원주요주주)",
     "marketIndex": "data.go.kr 금융위원회_지수시세정보"
   },
-  "builtAt": "2026-11-26T10:12:25.586Z",
+  "builtAt": "2026-11-27T10:18:36.703Z",
   "archiveDays": 120,
-  "archiveFrom": "20260602"
+  "archiveFrom": "20260604"
 }
